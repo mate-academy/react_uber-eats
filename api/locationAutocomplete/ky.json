@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "ChIJ8yfp_B04lzgRM8SITrdYECg",
+      "provider": "google_places",
+      "addressLine1": "Kyrgyzstan",
+      "addressLine2": ""
+    },
+    {
+      "id": "ChIJ8cM8zdaoAWARPR27azYdlsA",
+      "provider": "google_places",
+      "addressLine1": "Kyoto",
+      "addressLine2": "Japan"
+    },
+    {
+      "id": "ChIJBUVa4U7P1EAR_kYBF9IxSXY",
+      "provider": "google_places",
+      "addressLine1": "Kyiv",
+      "addressLine2": "Ukraine"
+    },
+    {
+      "id": "ChIJ94pF_F3O1EARB10ge68K4KY",
+      "provider": "google_places",
+      "addressLine1": "Kyiv Oblast",
+      "addressLine2": "Ukraine"
+    },
+    {
+      "id": "ChIJT44p4O6gJ0ERrH1u4B6esSc",
+      "provider": "google_places",
+      "addressLine1": "Kyiv Medical University , Kharkiv Branch",
+      "addressLine2": "Kharkiv, Kharkiv Oblast, Ukraine"
+    }
+  ]
+}
