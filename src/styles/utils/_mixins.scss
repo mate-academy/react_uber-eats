@@ -1,0 +1,64 @@
+@import "vars";
+
+@mixin wrapper {
+  margin: 0 auto;
+  max-width: $wrapper-width;
+  @media (max-width: 1023px) {
+    max-width: 768px;
+    box-sizing: border-box;
+    padding: 0 8px;
+  }
+  @media (max-width: 639px) {
+    max-width: 320px;
+  }
+}
+
+@mixin grey-border {
+  border-bottom: 1px solid rgba(255,255,255, 0.4);
+}
+
+@mixin header-button {
+  box-sizing: border-box;
+  display: block;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 2px;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  @media (max-width: 639px) {
+    width: 72px;
+    font-size: 11px;
+  }
+}
+
+@mixin inputs {
+  padding: 8px 12px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  @media (max-width: 1023px) {
+    font-size: 13px;
+  }
+}
+
+@mixin footer-nav-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  width: $footer-col;
+  margin-right: 100px;
+  &:hover {
+    opacity: 0.5;
+  }
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+  @media (max-width: 639px) {
+    display: block;
+    margin-bottom: 25px;
+  }
+}

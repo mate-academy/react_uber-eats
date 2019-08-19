@@ -1,0 +1,29 @@
+@import "utils";
+
+.header {
+  height: 80px;
+
+  &-logo {
+    @media (max-width: 1023px) {
+      width: 105px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-wrapper {
+    @include wrapper;
+    $asap-width: 65px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__location {
+    &-button, &-form {
+      margin-left: 64px;
+    }
+  }
+
+}
