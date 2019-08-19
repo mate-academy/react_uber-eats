@@ -1,0 +1,1385 @@
+{
+  "status": "success",
+  "data": {
+    "supportedDiningModes": [
+      "DELIVERY"
+    ],
+    "sectionEntitiesMap": {
+      "a7b5fb32-6bce-4dc7-aa72-9344ba2dc408": {
+        "57a457ce-0a18-401e-b65e-ee06a59f8b67": {
+          "description": "bolognaise, chilli beans, jalapenos, cheddar",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/0e4db64a-4bb6-4c3f-a7c5-78da5d2ecfa7.jpeg",
+          "price": 695,
+          "title": "Chilli Dog",
+          "uuid": "57a457ce-0a18-401e-b65e-ee06a59f8b67",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "b096c211-fac8-4157-b3f2-f148657c269f": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/9d3f05df-72a1-4193-be18-32a1ed8744b4.jpeg",
+          "price": 100,
+          "title": "English Mustard",
+          "uuid": "b096c211-fac8-4157-b3f2-f148657c269f",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "ce7469a4-b406-4fbc-a7bb-41acbc2a9561": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/aca7a40e-ab56-4f41-89b8-b791de3fdf34.jpeg",
+          "price": 100,
+          "title": "Mayonnaise",
+          "uuid": "ce7469a4-b406-4fbc-a7bb-41acbc2a9561",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "0ae19745-f47c-4ad7-a47b-635e02a96884": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/75839346-511e-4294-87ac-af975ec56099.jpeg",
+          "price": 595,
+          "title": "Honeycomb Milkshake",
+          "uuid": "0ae19745-f47c-4ad7-a47b-635e02a96884",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "a27371c7-1087-4ca8-9481-df49a6063f22": {
+          "description": "",
+          "imageUrl": "",
+          "price": 350,
+          "title": "Hash Browns",
+          "uuid": "a27371c7-1087-4ca8-9481-df49a6063f22",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "a05f9bdd-3756-42c8-a646-8f97020f2244": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/6dbc9acf-ae88-40fc-9363-6068340f7119.jpeg",
+          "price": 595,
+          "title": "Nutella Milkshake",
+          "uuid": "a05f9bdd-3756-42c8-a646-8f97020f2244",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "2a2b189d-75c0-4049-af05-2a7d2e2c98b0": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/c674432f-5cf1-48fb-87c1-f8338e471fe8.jpeg",
+          "price": 595,
+          "title": "Breaded Butterfly King Prawns, Sweet Chilli",
+          "uuid": "2a2b189d-75c0-4049-af05-2a7d2e2c98b0",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "f8048bd5-f23e-467a-9537-faf7dd1b5ea2": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/1c2ade08-3a6d-415c-b01b-4667807b5eb2.jpeg",
+          "price": 100,
+          "title": "Sweet Chilli",
+          "uuid": "f8048bd5-f23e-467a-9537-faf7dd1b5ea2",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "adf682f0-e4f7-48bc-b4af-a01084808394": {
+          "description": "vanilla ice cream, toffee sauce",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/8597a651-c880-4eb4-b23f-64e62a920f90.jpeg",
+          "price": 650,
+          "title": "Sticky Toffee Pudding",
+          "uuid": "adf682f0-e4f7-48bc-b4af-a01084808394",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "13c7cdb5-af3c-4c12-8191-a8cb895579df": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/12139981-8cc2-4917-98bd-51a5b39417fa.jpeg",
+          "price": 200,
+          "title": "Ginger Ale",
+          "uuid": "13c7cdb5-af3c-4c12-8191-a8cb895579df",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "77e199a4-e60f-4ec0-9367-bca3fe7e53ad": {
+          "description": "onions, tomato ketchup, english mustard",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/0d6dc8b6-9881-4683-a216-a2ffbe02cd0c.jpeg",
+          "price": 595,
+          "title": "Classic Dog",
+          "uuid": "77e199a4-e60f-4ec0-9367-bca3fe7e53ad",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "901ae6cf-a4d8-4fd2-9b86-93e884a12a39": {
+          "description": "Carrot, Orange, Apple, Ginger.",
+          "imageUrl": "",
+          "price": 595,
+          "title": "Clean Carrot",
+          "uuid": "901ae6cf-a4d8-4fd2-9b86-93e884a12a39",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "74bca87a-e63e-40b6-bdb0-45f04808574d": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/3df6de24-6df2-468c-a847-a6eedfdb6735.jpeg",
+          "price": 250,
+          "title": "Macchiato",
+          "uuid": "74bca87a-e63e-40b6-bdb0-45f04808574d",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "2b4167e0-f8cb-4681-8289-f14d3d5a63b5": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/8eca3db0-ad24-4fd9-aa5f-9267fdae90c6.jpeg",
+          "price": 325,
+          "title": "Coke Zero",
+          "uuid": "2b4167e0-f8cb-4681-8289-f14d3d5a63b5",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "09332c16-9d38-4167-910a-bc595fe18c18": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/10f1b2d0-babe-4233-80eb-56f18135caf3.jpeg",
+          "price": 325,
+          "title": "Diet Coke",
+          "uuid": "09332c16-9d38-4167-910a-bc595fe18c18",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "ab3739ed-5cbe-43d2-bb2a-525c4e7d16da": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/1f562ad7-cbae-4565-b087-c2da121a0725.jpeg",
+          "price": 350,
+          "title": "French Fries",
+          "uuid": "ab3739ed-5cbe-43d2-bb2a-525c4e7d16da",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "79d07202-ccec-41a2-a574-7237539b48e4": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/27679142-edc0-42ad-88ea-717f45562edb.jpeg",
+          "price": 595,
+          "title": "Vanilla Milkshake",
+          "uuid": "79d07202-ccec-41a2-a574-7237539b48e4",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "e659a9e8-078e-4a18-b49b-78d58b03c7f3": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/dde91a82-cea8-469c-8a5b-92c6953a5830.jpeg",
+          "price": 325,
+          "title": "San Pellegrino Limonata",
+          "uuid": "e659a9e8-078e-4a18-b49b-78d58b03c7f3",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "87fc3b2f-7e69-417e-a491-44ef78a90002": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/8da23214-c701-464e-8af7-94b5af3adbd0.jpeg",
+          "price": 595,
+          "title": "Banana Milkshake",
+          "uuid": "87fc3b2f-7e69-417e-a491-44ef78a90002",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "d1be83b1-3157-4e6f-aeff-fcd79e76387d": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/c8b9882f-5489-4e5d-913b-09a84334d32b.jpeg",
+          "price": 300,
+          "title": "Double Espresso",
+          "uuid": "d1be83b1-3157-4e6f-aeff-fcd79e76387d",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "97721c07-82ce-465d-91cd-769ee5f71cb7": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/7f7dc1c0-f198-41f9-8542-33a8b167bdb8.jpeg",
+          "price": 595,
+          "title": "Chocolate Milkshake",
+          "uuid": "97721c07-82ce-465d-91cd-769ee5f71cb7",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "f401fb09-aaf1-4d18-bfdc-b3050f641850": {
+          "description": "Grape, blueberry, strawberry, and banana.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/69b6b3fd-3215-4fba-a6eb-c67bcddd4501.jpeg",
+          "price": 550,
+          "title": "Energiser",
+          "uuid": "f401fb09-aaf1-4d18-bfdc-b3050f641850",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "4d18f3b2-fe09-4345-bd79-767ec1dc705d": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/8ba73a02-ea6e-4441-acaf-7965e0408be5.jpeg",
+          "price": 350,
+          "title": "Tomato Juice",
+          "uuid": "4d18f3b2-fe09-4345-bd79-767ec1dc705d",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "0e951a21-52a7-49d1-925f-7e65735f5e32": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/6f270320-5c9f-4548-b49a-5ef68e792ea7.jpeg",
+          "price": 300,
+          "title": "Americano",
+          "uuid": "0e951a21-52a7-49d1-925f-7e65735f5e32",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "be731de3-aa67-4c32-84c5-b10d8d0a3cf8": {
+          "description": "Passion fruit, pineapple, and mango.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/131f9326-6c59-402c-a420-43340dc15195.jpeg",
+          "price": 550,
+          "title": "Tropical Kick",
+          "uuid": "be731de3-aa67-4c32-84c5-b10d8d0a3cf8",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "03c8c6e3-4227-472f-a69c-78d97f2854a5": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/709e7d43-b072-47f1-81a6-e67f0a838e15.jpeg",
+          "price": 595,
+          "title": "Oreo Milkshake",
+          "uuid": "03c8c6e3-4227-472f-a69c-78d97f2854a5",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "40118531-1a03-4e64-89e3-c0beaaf08202": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/df45a619-13cd-498a-9331-4516fc3ab440.jpeg",
+          "price": 350,
+          "title": "Cranberry Juice",
+          "uuid": "40118531-1a03-4e64-89e3-c0beaaf08202",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "5a9f5916-84d3-4e95-b681-28fcf49ab1ea": {
+          "description": "330 ml.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/08c1c66f-3898-4586-9109-e5e336e9bdab.jpeg",
+          "price": 250,
+          "title": "Sparkling Water",
+          "uuid": "5a9f5916-84d3-4e95-b681-28fcf49ab1ea",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "2b040d97-e71f-43c8-a69e-bf10be4582e3": {
+          "description": "gruyère, cheddar, roquefort",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/1cd83174-67ba-421b-801c-2fb8dbfece39.jpeg",
+          "price": 650,
+          "title": "3 Cheese Dog",
+          "uuid": "2b040d97-e71f-43c8-a69e-bf10be4582e3",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "bd63211d-62b0-4beb-aae7-c8213faa5f98": {
+          "description": "330 ml.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/e3d2fdab-aff8-436b-9376-274cd46c109e.jpeg",
+          "price": 250,
+          "title": "Still Water",
+          "uuid": "bd63211d-62b0-4beb-aae7-c8213faa5f98",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "fadb0071-f60a-4688-96b8-0745aeb881f0": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/e914151d-a40c-4473-bbb3-57e9c48b5511.jpeg",
+          "price": 500,
+          "title": "Mac 'n' Cheese",
+          "uuid": "fadb0071-f60a-4688-96b8-0745aeb881f0",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "9747d3a3-2312-4408-af66-49af8d7c6bf0": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/a7f3d7fc-0705-4fcd-a4ec-7bb03649218b.jpeg",
+          "price": 595,
+          "title": "Spicy Chicken Wings, Peri Peri Sauce (G)",
+          "uuid": "9747d3a3-2312-4408-af66-49af8d7c6bf0",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "857dc6c1-4f51-421a-96e1-5587ceb217aa": {
+          "description": "Blueberry, banana, carrot, courgette, and ginger.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/964994d0-75f1-47fc-9d1c-aa47fdb0d59e.jpeg",
+          "price": 550,
+          "title": "Detox",
+          "uuid": "857dc6c1-4f51-421a-96e1-5587ceb217aa",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "56381ba3-fe89-4be4-8186-a045ce4cb59e": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/2e91caff-a09e-4115-9434-8d08957bb558.jpeg",
+          "price": 100,
+          "title": "Ketchup",
+          "uuid": "56381ba3-fe89-4be4-8186-a045ce4cb59e",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "8ede1d94-4782-4e1e-9c28-10b8ec76ee51": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/5cf5c3b2-3ee4-439a-bfd5-47a9718dcafa.jpeg",
+          "price": 325,
+          "title": "Flat white",
+          "uuid": "8ede1d94-4782-4e1e-9c28-10b8ec76ee51",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "0682303a-f82c-4b84-ac50-435b40bd3c6b": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/bcf3800e-290b-4fd9-aadf-7fce152df2ea.jpeg",
+          "price": 595,
+          "title": "Salted Caramel Milkshake",
+          "uuid": "0682303a-f82c-4b84-ac50-435b40bd3c6b",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "e6f93e5e-df80-4b54-b918-20a72522fbed": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/3a2c9aa9-48ae-4e9d-95cd-a03f754b4beb.jpeg",
+          "price": 325,
+          "title": "San Pellegrino Aranciata",
+          "uuid": "e6f93e5e-df80-4b54-b918-20a72522fbed",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "fc7533de-18e6-4f0b-8ba0-26cd77a1bee5": {
+          "description": "Chantilly.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/b9a8dd84-3157-4fce-a948-ec26918755d7.jpeg",
+          "price": 395,
+          "title": "Hot Chocolate",
+          "uuid": "fc7533de-18e6-4f0b-8ba0-26cd77a1bee5",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "d68d26d5-22d0-4105-a9d0-bfa5f069b95f": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/7bfc4c1f-52b7-485b-b77c-03308675ae6f.jpeg",
+          "price": 300,
+          "title": "Latte",
+          "uuid": "d68d26d5-22d0-4105-a9d0-bfa5f069b95f",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "98b4c3e4-436b-48b5-bdd2-a7e75a062560": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/a09c63e5-a57c-489b-93e3-3733c9ba2346.jpeg",
+          "price": 250,
+          "title": "English Breakfast Organic Traditional Tea",
+          "uuid": "98b4c3e4-436b-48b5-bdd2-a7e75a062560",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "2a7675e8-327c-4cdd-af9e-95dd45b52f3d": {
+          "description": "cheddar, onions, gherkins, english mustard, yum yum sauce",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/469128da-5d53-4785-9ead-f9fc26ae1a3b.jpeg",
+          "price": 595,
+          "title": "Yum Dog",
+          "uuid": "2a7675e8-327c-4cdd-af9e-95dd45b52f3d",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "b3b7e9af-c428-4c4b-9f72-3edcbaeb7d78": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/e5af9ddc-1b33-498e-a166-524023b2961a.jpeg",
+          "price": 450,
+          "title": "Sweet Potato Fries",
+          "uuid": "b3b7e9af-c428-4c4b-9f72-3edcbaeb7d78",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "081189ba-e630-4f79-9bda-b41df349a5d2": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/e0efce60-f179-4d05-9fa5-30e025093b52.jpeg",
+          "price": 350,
+          "title": "Pineapple Juice",
+          "uuid": "081189ba-e630-4f79-9bda-b41df349a5d2",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "0a21f520-e713-4dde-b16b-ed7771368565": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/34fdaacc-b73e-4f7e-a41b-3aa408123203.jpeg",
+          "price": 400,
+          "title": "Chunky Chips",
+          "uuid": "0a21f520-e713-4dde-b16b-ed7771368565",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "be8d19de-caf9-4b05-9e25-def8981c6d3f": {
+          "description": "",
+          "imageUrl": "",
+          "price": 450,
+          "title": "Iced Mocha",
+          "uuid": "be8d19de-caf9-4b05-9e25-def8981c6d3f",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "c83bbe8c-0c07-4abd-9523-f927941110ab": {
+          "description": "",
+          "imageUrl": "",
+          "price": 450,
+          "title": "Iced Latte",
+          "uuid": "c83bbe8c-0c07-4abd-9523-f927941110ab",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "ec799c7c-39ad-4a27-aabd-24ca1ac8fd1c": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/91c785aa-34dd-4c3a-acc3-46f729c99cfc.jpeg",
+          "price": 450,
+          "title": "Squeezed Orange Juice",
+          "uuid": "ec799c7c-39ad-4a27-aabd-24ca1ac8fd1c",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "a73d2786-881a-4cdc-8a5f-7cd2b4230d0a": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/22d40470-2124-4ebc-a85d-1e00939712ed.jpeg",
+          "price": 100,
+          "title": "Brown Sauce",
+          "uuid": "a73d2786-881a-4cdc-8a5f-7cd2b4230d0a",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "653ac870-30f8-49fb-8b48-d088f702bd4d": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/bd2c5f07-5ab7-40e7-a78d-2a7b3b82f9a1.jpeg",
+          "price": 250,
+          "title": "Espresso",
+          "uuid": "653ac870-30f8-49fb-8b48-d088f702bd4d",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "83026d98-a212-41a1-8c1d-426add994c9c": {
+          "description": "crispy bacon, cheddar, onions, gherkins, english mustard, yum yum sauce",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/52c2bb43-fb71-44e4-a134-5424b2814894.jpeg",
+          "price": 695,
+          "title": "Bacon Yum Dog",
+          "uuid": "83026d98-a212-41a1-8c1d-426add994c9c",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "b46d150d-4bf3-4416-b553-0f927fc870b5": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/2a32f0da-1962-4dcb-8a8f-620e32663991.jpeg",
+          "price": 595,
+          "title": "Strawberry Milkshake",
+          "uuid": "b46d150d-4bf3-4416-b553-0f927fc870b5",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "7a562f26-299f-4228-9f0d-383d38986c48": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/89c9f608-0b43-4ab1-aca6-5250376e3027.jpeg",
+          "price": 450,
+          "title": "Onion Rings",
+          "uuid": "7a562f26-299f-4228-9f0d-383d38986c48",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "079dd401-fce5-491f-8d58-39357b328058": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/8ecc8799-9ab9-4968-81c1-ef508a1e47dd.jpeg",
+          "price": 595,
+          "title": "Halloumi Fries, Tzatziki (V)",
+          "uuid": "079dd401-fce5-491f-8d58-39357b328058",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "9525eef0-dd07-4079-aed2-4556e3ca0f73": {
+          "description": "Mango, pineapple, banana, broccoli, spinach, and celery.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/b84e425d-f7bb-4f16-a1bd-9b6c80c6e2fa.jpeg",
+          "price": 550,
+          "title": "Six a Day",
+          "uuid": "9525eef0-dd07-4079-aed2-4556e3ca0f73",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "1d03c8bb-e07f-4e4b-bb74-dc54f30b0424": {
+          "description": "vanilla ice cream, chocolate sauce",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/dc733ec8-289f-42ea-8521-2b7116a8dd09.jpeg",
+          "price": 650,
+          "title": "Warm Chocolate Brownie",
+          "uuid": "1d03c8bb-e07f-4e4b-bb74-dc54f30b0424",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "090110ce-a570-4ab0-aafa-f2682809c519": {
+          "description": "",
+          "imageUrl": "",
+          "price": 100,
+          "title": "Yum Yum Sauce",
+          "uuid": "090110ce-a570-4ab0-aafa-f2682809c519",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "ba601f25-b8f4-45fd-b6af-5d1249ece6e5": {
+          "description": "",
+          "imageUrl": "",
+          "price": 450,
+          "title": "Cheesy Fries",
+          "uuid": "ba601f25-b8f4-45fd-b6af-5d1249ece6e5",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "1794a9e6-b8b2-43cb-a2f7-5a83807966d6": {
+          "description": "",
+          "imageUrl": "",
+          "price": 450,
+          "title": "Coleslaw",
+          "uuid": "1794a9e6-b8b2-43cb-a2f7-5a83807966d6",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "1625bdfa-d165-474f-bfdf-c26869213c50": {
+          "description": "",
+          "imageUrl": "",
+          "price": 250,
+          "title": "Earl Grey Organic Traditional Tea",
+          "uuid": "1625bdfa-d165-474f-bfdf-c26869213c50",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "a8952bcd-c59b-446f-a3a0-e2c3f41100d2": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/5a482a4a-88c4-483d-97f7-3c4369f53064.jpeg",
+          "price": 325,
+          "title": "Coke",
+          "uuid": "a8952bcd-c59b-446f-a3a0-e2c3f41100d2",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "df2f5196-42b0-487f-bec0-3e5bf606008a": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/b59247f4-25fe-4aed-a535-1776252f7826.jpeg",
+          "price": 350,
+          "title": "Grapefruit Juice",
+          "uuid": "df2f5196-42b0-487f-bec0-3e5bf606008a",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "e5ce0fc4-f9fb-422a-be8c-8e51d089b510": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/24e79530-55e4-4766-86ea-e5485b41fa5e.jpeg",
+          "price": 100,
+          "title": "Barbecue",
+          "uuid": "e5ce0fc4-f9fb-422a-be8c-8e51d089b510",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "9c106457-5295-4a15-a81c-9c8aca7a848b": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/73a8df29-160c-48bc-b402-7da7d3a0c3a8.jpeg",
+          "price": 325,
+          "title": "Mocha",
+          "uuid": "9c106457-5295-4a15-a81c-9c8aca7a848b",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "4d702589-d30b-4d14-bb5e-906ff9c15035": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/557fe580-5e36-41f8-a0d2-af9e00226096.jpeg",
+          "price": 350,
+          "title": "Apple Juice",
+          "uuid": "4d702589-d30b-4d14-bb5e-906ff9c15035",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "34aebdd5-4904-4676-9ba5-ed797f345cfc": {
+          "description": "Orange, Lemon, Tangerine, Grapefruit, Turmeric, Cayenne, Black Pepper.",
+          "imageUrl": "",
+          "price": 595,
+          "title": "Sweet Citrus",
+          "uuid": "34aebdd5-4904-4676-9ba5-ed797f345cfc",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "f311a453-d5ba-418b-9c84-df6e7c83c042": {
+          "description": "onions, gherkins, english mustard, yum yum sauce",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/5a4dfed3-1c1c-43b6-93f3-0aa33e5dc82d.jpeg",
+          "price": 596,
+          "title": "Vegan Dog",
+          "uuid": "f311a453-d5ba-418b-9c84-df6e7c83c042",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "6c103ae7-225e-42de-929f-3774abd83080": {
+          "description": "Raspberry, blackberry, and strawberry.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/c96c1322-ab6b-43fd-a420-0da7da00f7e2.jpeg",
+          "price": 550,
+          "title": "Berry-Go-Around",
+          "uuid": "6c103ae7-225e-42de-929f-3774abd83080",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "6be9fea5-88ec-4dae-9888-e3aee4163436": {
+          "description": "Kale, spinach, celery, romaine, cucumber, apple, lemon.",
+          "imageUrl": "",
+          "price": 595,
+          "title": "Easy Green",
+          "uuid": "6be9fea5-88ec-4dae-9888-e3aee4163436",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "cb27819b-8675-4745-adc2-61e20fbef653": {
+          "description": "750 ml.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/8100535e-61f4-4178-a25d-d04a8b47c6e6.jpeg",
+          "price": 450,
+          "title": "Sparkling Water",
+          "uuid": "cb27819b-8675-4745-adc2-61e20fbef653",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "62b6d8de-9c19-442e-ad2b-91096607d62c": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/93f4cf6b-3b63-4a14-a0e5-97b11e6cb3b4.jpeg",
+          "price": 325,
+          "title": "Ginger Beer",
+          "uuid": "62b6d8de-9c19-442e-ad2b-91096607d62c",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "622fa310-9853-4f06-9d29-a681b4107d6e": {
+          "description": "750 ml.",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/5a85572a-76ab-40cb-b9e1-0466904edf0a.jpeg",
+          "price": 450,
+          "title": "Still Water",
+          "uuid": "622fa310-9853-4f06-9d29-a681b4107d6e",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "e3dcc775-02c4-4f24-baef-d7daf58dbbd9": {
+          "description": "crispy bacon, chilli jam, cheddar, gherkins, tomato ketchup, baconnaise",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/7a9b38c8-0893-4015-8876-158ebe2a9eb3.jpeg",
+          "price": 695,
+          "title": "Baconnaise Dog",
+          "uuid": "e3dcc775-02c4-4f24-baef-d7daf58dbbd9",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "88d59002-6439-4099-bdba-fdbf5c53bed8": {
+          "description": "Apple, Lemon, Ginger.",
+          "imageUrl": "",
+          "price": 595,
+          "title": "Orchard",
+          "uuid": "88d59002-6439-4099-bdba-fdbf5c53bed8",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "15cc92c7-b58f-4609-881c-8d0d3f9fac29": {
+          "description": "Strawberry, Apple, Lemon, Mint",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/a12f2d4e-e8ac-4fc0-b94f-c6d1dc40dc58.jpeg",
+          "price": 595,
+          "title": "Berry Boost",
+          "uuid": "15cc92c7-b58f-4609-881c-8d0d3f9fac29",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        },
+        "42b61d02-e70f-4c5f-978c-9ce5a9bed536": {
+          "description": "",
+          "imageUrl": "https://d1ralsognjng37.cloudfront.net/623880c9-c54d-4dcd-b589-3f2ec7de1265.jpeg",
+          "price": 300,
+          "title": "Cappuccino",
+          "uuid": "42b61d02-e70f-4c5f-978c-9ce5a9bed536",
+          "nutritionalInfo": {
+            "allergens": [
+              ""
+            ],
+            "displayString": ""
+          },
+          "suspendReason": null,
+          "suspendUntil": 0
+        }
+      }
+    },
+    "sections": [
+      {
+        "subsectionUuids": [
+          "8ecc124c-7226-4f92-bb12-d1110d063c83",
+          "1981253e-6621-4802-b2b1-4aa94f018460",
+          "7ccc7120-ee0a-4b20-8350-03fc7d0a85f4",
+          "ea1f828f-d5fd-428a-9978-c4d496e5281d",
+          "db965cf5-aea6-4314-9ba4-decd69ac21bf",
+          "4a4de1aa-0bb3-43ad-a6aa-c4e025dd8cf8",
+          "a3245713-2b75-414c-8eef-64f7b114bb2f",
+          "41e3da0b-4c87-4045-bb2e-7b88901deeee",
+          "71f931d5-9ced-4836-8d9d-e4d3d1b21ddc"
+        ],
+        "title": "Menu",
+        "subtitle": "8:00 AM – 10:00 PM",
+        "uuid": "a7b5fb32-6bce-4dc7-aa72-9344ba2dc408",
+        "isTop": true,
+        "isOnSale": false
+      }
+    ],
+    "subsectionsMap": {
+      "71f931d5-9ced-4836-8d9d-e4d3d1b21ddc": {
+        "itemUuids": [
+          "653ac870-30f8-49fb-8b48-d088f702bd4d",
+          "74bca87a-e63e-40b6-bdb0-45f04808574d",
+          "0e951a21-52a7-49d1-925f-7e65735f5e32",
+          "42b61d02-e70f-4c5f-978c-9ce5a9bed536",
+          "d68d26d5-22d0-4105-a9d0-bfa5f069b95f",
+          "d1be83b1-3157-4e6f-aeff-fcd79e76387d",
+          "8ede1d94-4782-4e1e-9c28-10b8ec76ee51",
+          "9c106457-5295-4a15-a81c-9c8aca7a848b",
+          "98b4c3e4-436b-48b5-bdd2-a7e75a062560",
+          "1625bdfa-d165-474f-bfdf-c26869213c50",
+          "fc7533de-18e6-4f0b-8ba0-26cd77a1bee5"
+        ],
+        "subtitle": "",
+        "title": "Hot Drinks",
+        "uuid": "71f931d5-9ced-4836-8d9d-e4d3d1b21ddc"
+      },
+      "8ecc124c-7226-4f92-bb12-d1110d063c83": {
+        "itemUuids": [
+          "2a7675e8-327c-4cdd-af9e-95dd45b52f3d",
+          "e3dcc775-02c4-4f24-baef-d7daf58dbbd9",
+          "2b040d97-e71f-43c8-a69e-bf10be4582e3",
+          "57a457ce-0a18-401e-b65e-ee06a59f8b67",
+          "f311a453-d5ba-418b-9c84-df6e7c83c042",
+          "77e199a4-e60f-4ec0-9367-bca3fe7e53ad",
+          "83026d98-a212-41a1-8c1d-426add994c9c"
+        ],
+        "subtitle": "",
+        "title": "Top Dogs",
+        "uuid": "8ecc124c-7226-4f92-bb12-d1110d063c83"
+      },
+      "1981253e-6621-4802-b2b1-4aa94f018460": {
+        "itemUuids": [
+          "079dd401-fce5-491f-8d58-39357b328058",
+          "2a2b189d-75c0-4049-af05-2a7d2e2c98b0",
+          "9747d3a3-2312-4408-af66-49af8d7c6bf0"
+        ],
+        "subtitle": "",
+        "title": "Smalls",
+        "uuid": "1981253e-6621-4802-b2b1-4aa94f018460"
+      },
+      "4a4de1aa-0bb3-43ad-a6aa-c4e025dd8cf8": {
+        "itemUuids": [
+          "79d07202-ccec-41a2-a574-7237539b48e4",
+          "0ae19745-f47c-4ad7-a47b-635e02a96884",
+          "b46d150d-4bf3-4416-b553-0f927fc870b5",
+          "97721c07-82ce-465d-91cd-769ee5f71cb7",
+          "87fc3b2f-7e69-417e-a491-44ef78a90002",
+          "a05f9bdd-3756-42c8-a646-8f97020f2244",
+          "03c8c6e3-4227-472f-a69c-78d97f2854a5",
+          "0682303a-f82c-4b84-ac50-435b40bd3c6b",
+          "c83bbe8c-0c07-4abd-9523-f927941110ab",
+          "be8d19de-caf9-4b05-9e25-def8981c6d3f"
+        ],
+        "subtitle": "",
+        "title": "Ice Drinks",
+        "uuid": "4a4de1aa-0bb3-43ad-a6aa-c4e025dd8cf8"
+      },
+      "a3245713-2b75-414c-8eef-64f7b114bb2f": {
+        "itemUuids": [
+          "ec799c7c-39ad-4a27-aabd-24ca1ac8fd1c",
+          "4d702589-d30b-4d14-bb5e-906ff9c15035",
+          "40118531-1a03-4e64-89e3-c0beaaf08202",
+          "df2f5196-42b0-487f-bec0-3e5bf606008a",
+          "081189ba-e630-4f79-9bda-b41df349a5d2",
+          "4d18f3b2-fe09-4345-bd79-767ec1dc705d",
+          "6c103ae7-225e-42de-929f-3774abd83080",
+          "f401fb09-aaf1-4d18-bfdc-b3050f641850",
+          "be731de3-aa67-4c32-84c5-b10d8d0a3cf8",
+          "857dc6c1-4f51-421a-96e1-5587ceb217aa",
+          "9525eef0-dd07-4079-aed2-4556e3ca0f73",
+          "15cc92c7-b58f-4609-881c-8d0d3f9fac29",
+          "34aebdd5-4904-4676-9ba5-ed797f345cfc",
+          "6be9fea5-88ec-4dae-9888-e3aee4163436",
+          "901ae6cf-a4d8-4fd2-9b86-93e884a12a39",
+          "88d59002-6439-4099-bdba-fdbf5c53bed8"
+        ],
+        "subtitle": "",
+        "title": "Juices, Smoothies & Cold Pressed Juices",
+        "uuid": "a3245713-2b75-414c-8eef-64f7b114bb2f"
+      },
+      "db965cf5-aea6-4314-9ba4-decd69ac21bf": {
+        "itemUuids": [
+          "1d03c8bb-e07f-4e4b-bb74-dc54f30b0424",
+          "adf682f0-e4f7-48bc-b4af-a01084808394"
+        ],
+        "subtitle": "",
+        "title": "Sweet Things",
+        "uuid": "db965cf5-aea6-4314-9ba4-decd69ac21bf"
+      },
+      "ea1f828f-d5fd-428a-9978-c4d496e5281d": {
+        "itemUuids": [
+          "56381ba3-fe89-4be4-8186-a045ce4cb59e",
+          "ce7469a4-b406-4fbc-a7bb-41acbc2a9561",
+          "a73d2786-881a-4cdc-8a5f-7cd2b4230d0a",
+          "b096c211-fac8-4157-b3f2-f148657c269f",
+          "e5ce0fc4-f9fb-422a-be8c-8e51d089b510",
+          "f8048bd5-f23e-467a-9537-faf7dd1b5ea2",
+          "090110ce-a570-4ab0-aafa-f2682809c519"
+        ],
+        "subtitle": "",
+        "title": "Sauces",
+        "uuid": "ea1f828f-d5fd-428a-9978-c4d496e5281d"
+      },
+      "7ccc7120-ee0a-4b20-8350-03fc7d0a85f4": {
+        "itemUuids": [
+          "fadb0071-f60a-4688-96b8-0745aeb881f0",
+          "ab3739ed-5cbe-43d2-bb2a-525c4e7d16da",
+          "ba601f25-b8f4-45fd-b6af-5d1249ece6e5",
+          "0a21f520-e713-4dde-b16b-ed7771368565",
+          "b3b7e9af-c428-4c4b-9f72-3edcbaeb7d78",
+          "7a562f26-299f-4228-9f0d-383d38986c48",
+          "a27371c7-1087-4ca8-9481-df49a6063f22",
+          "1794a9e6-b8b2-43cb-a2f7-5a83807966d6"
+        ],
+        "subtitle": "",
+        "title": "Sides",
+        "uuid": "7ccc7120-ee0a-4b20-8350-03fc7d0a85f4"
+      },
+      "41e3da0b-4c87-4045-bb2e-7b88901deeee": {
+        "itemUuids": [
+          "a8952bcd-c59b-446f-a3a0-e2c3f41100d2",
+          "2b4167e0-f8cb-4681-8289-f14d3d5a63b5",
+          "e6f93e5e-df80-4b54-b918-20a72522fbed",
+          "62b6d8de-9c19-442e-ad2b-91096607d62c",
+          "bd63211d-62b0-4beb-aae7-c8213faa5f98",
+          "5a9f5916-84d3-4e95-b681-28fcf49ab1ea",
+          "09332c16-9d38-4167-910a-bc595fe18c18",
+          "e659a9e8-078e-4a18-b49b-78d58b03c7f3",
+          "13c7cdb5-af3c-4c12-8191-a8cb895579df",
+          "622fa310-9853-4f06-9d29-a681b4107d6e",
+          "cb27819b-8675-4745-adc2-61e20fbef653"
+        ],
+        "subtitle": "",
+        "title": "Soft Drinks",
+        "uuid": "41e3da0b-4c87-4045-bb2e-7b88901deeee"
+      }
+    },
+    "title": "Top Dogs (Bloomsbury)",
+    "uuid": "17231840-0c52-40ae-9735-b37b6f113e4e",
+    "categories": [
+      "£",
+      "American",
+      "Fast Food",
+      "Comfort Food"
+    ],
+    "cuisineList": [
+      "American",
+      "Fast Food",
+      "Comfort Food"
+    ],
+    "priceBucket": "£",
+    "etaRange": null,
+    "ratingBadge": null,
+    "disclaimerBadge": null,
+    "fareBadge": null,
+    "fareInfo": {
+      "serviceFeeCents": null
+    },
+    "promotion": null,
+    "shouldIndex": false,
+    "heroImageUrls": [
+      {
+        "url": "https://d1ralsognjng37.cloudfront.net/f09aeaa6-ccd7-4256-b7b6-042406c38d73.jpeg",
+        "width": 240
+      },
+      {
+        "url": "https://d1ralsognjng37.cloudfront.net/bf537992-377c-4da2-98d6-b5825517a2bc.jpeg",
+        "width": 550
+      },
+      {
+        "url": "https://d1ralsognjng37.cloudfront.net/04c67e9d-bf9d-4c94-ba45-34ff99b474b0.jpeg",
+        "width": 640
+      },
+      {
+        "url": "https://d1ralsognjng37.cloudfront.net/febabd32-2628-457c-bc11-aec11f4f0cf8.jpeg",
+        "width": 750
+      },
+      {
+        "url": "https://d1ralsognjng37.cloudfront.net/ad061a23-eb69-47b2-b51d-98f2fa8e3bcb.jpeg",
+        "width": 1080
+      },
+      {
+        "url": "https://d1ralsognjng37.cloudfront.net/b0df5ea1-4537-447f-97db-badb01877e21.jpeg",
+        "width": 2880
+      }
+    ],
+    "isOpen": false,
+    "currencyCode": "GBP",
+    "closedMessage": "Opens at 8:00 AM",
+    "location": {
+      "address": "111a Great Russell St, Fitzrovia, London, London WC1B 3NQ",
+      "streetAddress": "111A Great Russell St, Fitzrovia",
+      "city": "London",
+      "country": "GB",
+      "postalCode": "WC1B 3NQ",
+      "region": "London",
+      "latitude": 51.5173601,
+      "longitude": -0.1299949
+    },
+    "isDeliveryThirdParty": false,
+    "hours": [
+      {
+        "dayRange": "Every day",
+        "sectionHours": [
+          {
+            "startTime": 480,
+            "endTime": 1320,
+            "sectionTitle": ""
+          }
+        ]
+      }
+    ],
+    "disableOrderInstruction": false,
+    "disableCheckoutInstruction": false,
+    "nuggets": [],
+    "isWithinDeliveryRange": true,
+    "slug": "top-dogs-bloomsbury",
+    "citySlug": "london",
+    "phoneNumber": "+446890545753",
+    "metaJson": "{\"@context\":\"http:\\u002F\\u002Fschema.org\",\"@type\":\"Restaurant\",\"@id\":\"https:\\u002F\\u002Fwww.ubereats.com\\u002Fen-US\\u002Flondon\\u002Ffood-delivery\\u002Ftop-dogs-bloomsbury\\u002FFyMYQAxSQK6XNbN7bxE-Tg\\u002F\",\"name\":\"Top Dogs (Bloomsbury)\",\"priceRange\":\"£\",\"potentialAction\":{\"@type\":\"OrderAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\u002F\\u002Fwww.ubereats.com\\u002Fen-US\\u002Flondon\\u002Ffood-delivery\\u002Ftop-dogs-bloomsbury\\u002FFyMYQAxSQK6XNbN7bxE-Tg\\u002F?utm_campaign=order-action&utm_medium=organic\",\"inLanguage\":\"English\",\"actionPlatform\":[\"http:\\u002F\\u002Fschema.org\\u002FDesktopWebPlatform\",\"http:\\u002F\\u002Fschema.org\\u002FMobileWebPlatform\"]},\"deliveryMethod\":[\"http:\\u002F\\u002Fpurl.org\\u002Fgoodrelations\\u002Fv1#DeliveryModeOwnFleet\"]},\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"London\",\"addressRegion\":\"London\",\"postalCode\":\"WC1B 3NQ\",\"addressCountry\":\"GB\",\"streetAddress\":\"111A Great Russell St, Fitzrovia\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":51.5173601,\"longitude\":-0.1299949}}",
+    "promoTrackings": [],
+    "suggestedPromotion": {
+      "text": "",
+      "promotionUuid": ""
+    }
+  }
+}
