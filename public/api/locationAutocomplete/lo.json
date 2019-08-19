@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "ChIJr1ZFdSTLG0cRrNshm2OufMs",
+      "provider": "google_places",
+      "addressLine1": "Łódź",
+      "addressLine2": "Poland"
+    },
+    {
+      "id": "ChIJdd4hrwug2EcRmSrV3Vo6llI",
+      "provider": "google_places",
+      "addressLine1": "London",
+      "addressLine2": "UK"
+    },
+    {
+      "id": "ChIJSZUK4PDTVw0RIHw9L5z2BgQ",
+      "provider": "google_places",
+      "addressLine1": "Lourdes",
+      "addressLine2": "France"
+    },
+    {
+      "id": "ChIJsZCzMEGrWg0RcIgWipFSgvk",
+      "provider": "google_places",
+      "addressLine1": "Logroño",
+      "addressLine2": "Spain"
+    },
+    {
+      "id": "ChIJRYHfiwkB6DsRWIbipWBKa2k",
+      "provider": "google_places",
+      "addressLine1": "Lonavala",
+      "addressLine2": "Maharashtra, India"
+    }
+  ]
+}
