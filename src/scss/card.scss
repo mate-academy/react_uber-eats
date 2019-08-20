@@ -1,0 +1,27 @@
+@import "./variables";
+
+.card{
+  box-sizing: border-box;
+  display: block;
+  transition: transform 1s;
+
+  &__picture {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__tags {
+    color: $text-color;
+    font-size: 14px;
+  }
+}
+
+.card:hover {
+  transform: scale(1.04);
+}

@@ -1,0 +1,32 @@
+$register-btn-color: #262626;
+$sing-in-btn-color: #E0E0E0;
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  &__button {
+
+    box-sizing: border-box;
+    padding: 7px 15.5px;
+    margin-right: 16px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+
+    text-decoration: none;
+    border: none;
+  }
+
+  &__sing-in-button {
+    color: #1D1D1D;
+    border: 1px solid $sing-in-btn-color;
+    transition: background-color 1s;
+  }
+
+  &__sing-in-button:hover {
+    background-color: $sing-in-btn-color;
+  }
+}

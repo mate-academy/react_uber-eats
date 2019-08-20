@@ -1,0 +1,114 @@
+@import "./variables";
+
+$footer-border: 1px solid rgba(255,255,255, 0.4);
+
+.footer {
+  max-width: 966px;
+  margin: 0 auto;
+  color: #fff;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 56px 0 40px;
+
+    border-bottom: $footer-border;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 25px;
+
+    border-bottom: $footer-border;
+  }
+
+  &__lang-select {
+    width: 227px;
+    padding: 12px 0 12px 48px;
+
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    background-color: #3B3B3B;
+    // background-image: url(img/world.svg), url(img/if_icon-ios7-arrow-back_211686.svg);
+    background-position: left 16px top 12px, right 8px top 16px;
+    background-repeat: no-repeat;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 2px;
+  }
+
+  &__hashtag {
+    margin: 33px 0 23px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__hashtag span {
+    color: #49A144;
+  }
+
+  &__lists {
+    list-style: none;
+  }
+
+  &__lists-link {
+    text-decoration: none;
+    color: #fff;
+    line-height: 15px;
+  }
+
+  &__social-networks {
+    display: flex;
+  }
+
+  &__social-networks-logo {
+    margin-right: 16px;
+    transition: transform 1s;
+  }
+
+  &__social-networks-logo:hover {
+    transform: $scale-tanform;
+  }
+
+  &__additional-info li{
+    margin-bottom: 23px;
+  }
+
+  &__apps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+
+    list-style: none;
+    border-bottom: $footer-border;
+  }
+
+  &__app-logo {
+    transition: transform 1s;
+  }
+
+  &__appstore-logo {
+    margin-right: 41px;
+  }
+
+  &__app-logo:hover {
+    transform: $scale-tanform;
+  }
+
+  &__policy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+  }
+}

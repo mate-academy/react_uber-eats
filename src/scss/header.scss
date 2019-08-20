@@ -1,0 +1,140 @@
+.header {
+  margin-bottom: 32px;
+
+  height: 80px;
+
+  &__wrapper {
+    height: 100%;
+
+    padding: 0 80px;
+    margin: 0 auto;
+
+    max-width: 1980px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  &__logo-and-delivery {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 60px;
+  }
+
+
+  &__delivery {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-wrapper {
+    box-sizing: border-box;
+    display: flex;
+
+    max-width: 540px;
+
+
+    padding-right: 16px;
+
+    flex-grow: 1;
+    transition: flex-grow 500ms;
+
+    background-color: #F5F5F5 !important;
+
+    border-bottom: 2px solid #000;
+    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
+  }
+
+  &__location {
+    padding-left: 46px;
+  }
+
+  &__location-input {
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0) !important;
+  }
+
+  &__location-clear-btn {
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #757575;
+  }
+
+  &__location-input,
+  &__location-btn {
+    background-image: url(img/Vector.png);
+    background-position: left 20px top 15px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+
+    outline: none;
+  }
+
+  &__location,
+  &__delivery-time,
+  &__search-input,
+  &__sign-in {
+    height: 48px;
+  }
+
+  &__delivery-time {
+    margin-left: 60px;
+
+    appearance: none;
+  }
+
+  &__delivery-time,
+  &__location-btn,
+  &__location-input,
+  &__location-clear-btn,
+  &__search-btn,
+  &__search-input {
+    background-color: #fff;
+    border: none;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  &__search-and-sign-in {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-input,
+  &_search-btn {
+    padding-left: 30px;
+
+    background-image: url(img/search-loop.svg);
+    background-position: left 0 top 15px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+  }
+
+  &__search-input {
+    max-width: 540px;
+
+    background-color: #F5F5F5 !important;
+    outline: none;
+
+  }
+
+  &__sign-in {
+    margin-left: 40px;
+
+    text-decoration: none;
+    color: #1F1F1F;
+
+    line-height: 48px;
+  }
+}

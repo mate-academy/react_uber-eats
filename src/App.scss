@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #1F1F1F;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 966px;
+
+  &__delivery-form {
+    display: none;
+  }
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+footer {
+  background-color: #262626;
+}
+
+
+
+@import "./scss/header.scss";
+@import "./scss/delivery.scss";
+@import "./scss/buttons.scss";
+@import "./scss/search-field.scss";
+@import "./scss/card-list.scss";
+@import "./scss/card.scss";
+@import "./scss/footer.scss";
+@import "./scss/up-button.scss";
+@import "./scss/media-1024px.scss";
+@import "./scss/media-640px.scss";
