@@ -3,57 +3,84 @@
 $footer-border: 1px solid rgba(255,255,255, 0.4);
 
 .footer {
-  max-width: 966px;
-  margin: 0 auto;
+  width: 100%;
+
+  margin-top: 80px;
+  padding: 72px 0 80px;
+
+  font-size: 16px;
+  line-height: 24px;
   color: #fff;
 
-  &__logo {
-    display: flex;
-    align-items: center;
+  background-color: #1F1F1F;
+
+  &__wrapper {
+    box-sizing: border-box;
     width: 100%;
-    margin-bottom: 32px;
-    padding: 56px 0 40px;
+
+    padding: 0 80px;
+  }
+
+  &__apps-and-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding-bottom: 40px;
 
     border-bottom: $footer-border;
   }
 
-  &__links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 25px;
+  &__logo-and-apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    border-bottom: $footer-border;
+    width: 445px;
   }
 
-  &__lang-select {
-    width: 227px;
-    padding: 12px 0 12px 48px;
+  &__apps {
+    display: flex;
 
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    background-color: #3B3B3B;
-    // background-image: url(img/world.svg), url(img/if_icon-ios7-arrow-back_211686.svg);
-    background-position: left 16px top 12px, right 8px top 16px;
-    background-repeat: no-repeat;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    border-radius: 2px;
+    list-style: none;
   }
 
-  &__hashtag {
-    margin: 33px 0 23px;
-
-    font-size: 16px;
-    line-height: 19px;
+  &__app-logo {
+    margin-right: 16px;
+    transition: transform 1s;
   }
 
-  &__hashtag span {
-    color: #49A144;
+  &__app-logo:hover {
+    transform: $scale-tanform;
+  }
+
+  &__additional-info-lists {
+    display: flex;
+  }
+
+  &__additional-info {
+    width: 220px;
+  }
+
+  &__additional-info li {
+    padding-bottom: 16px;
+  }
+
+  &__additional-info li:first-child {
+    padding-bottom: 24px;
+    font-weight: 700;
+  }
+
+  &__additional-info li:last-child {
+    padding-bottom: 0;
+  }
+
+  &__language::before {
+    content: url("img/language-icon.png")
+  }
+
+  &__language-link {
+    margin-left: 10px;
   }
 
   &__lists {
@@ -64,6 +91,10 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
     text-decoration: none;
     color: #fff;
     line-height: 15px;
+  }
+
+  &__lists-link:hover {
+    text-decoration: underline;
   }
 
   &__social-networks {
@@ -79,36 +110,26 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
     transform: $scale-tanform;
   }
 
-  &__additional-info li{
-    margin-bottom: 23px;
-  }
-
-  &__apps {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-
-    list-style: none;
-    border-bottom: $footer-border;
-  }
-
-  &__app-logo {
-    transition: transform 1s;
-  }
-
-  &__appstore-logo {
-    margin-right: 41px;
-  }
-
-  &__app-logo:hover {
-    transform: $scale-tanform;
-  }
-
   &__policy {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
+    padding-top: 40px;
+  }
+
+  &__policy-and-social-networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100px;
+    width: 445px;
+  }
+
+  &__policy-and-terms {
+    display: flex;
+  }
+
+  &__policy-paragraph {
+    margin-right: 48px;
   }
 }

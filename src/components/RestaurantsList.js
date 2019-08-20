@@ -1,45 +1,69 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const RestaurantsList = () => (
-  <main class="main">
-    <div class="main__delivery-form">
-      <form class="delivery" action="#">
-        <span class="delivery__span">Когда</span>
+const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2';
 
-        <select name="order-time" aria-label="select delivery time" class="delivery__time">
-          <option value="now" selected>Сейчас</option>
-          <option value="plan">Запланировать заказ</option>
-        </select>
+const RestaurantsList = ({ stores }) => (
+  <main className="main">
+    <div className="card-list">
+      {stores.map(store => (
+        <article className="card">
+          <a
+            href="/"
+            className="card__link"
+          >
+            <div className="card__picture-wrapper">
+              <img
+                src={store.heroImageUrl}
+                alt="fast food"
+                className="card__picture"
+              />
+            </div>
 
-        <span class="delivery__span">Кому</span>
+            <h2 className="card__title">{store.title}</h2>
 
-        <input type="text"
-          name="delivery-adress"
-          class="delivery__adress"
-          aria-label="choose delivery adress"
-          placeholder="ул. Тарасовская, 16"
-        />
-      </form>
-    </div>
+            <div className="card__tags">{store.categories.join(' • ')}</div>
 
-    <div class="card-list">
-      {function() {
-        const restaurants = [];
-        for (let i = 0; i < 19; i ++) {
-          restaurants[i] = (
-            <article class="card">
-              <a href="#"><img src="img/1-4.png" alt="fast food" class="card__picture" /></a>
-              <h2 class="card__title">McDonald's</h2>
-              <div class="card__tags">₴₴ • Burgers</div>
-              <div>25-35 Min</div>
-            </article>
-          )
-        }
+            <div className="card__range-and-feedback">
+              <span className="card__range">
+                {store.etaRange ? store.etaRange.text : '20-30 min'}
+              </span>
 
-        return restaurants;
-      }()}
+              <div className="card__feedback">
+                <span>
+                  {store.feedback ? store.feedback.rating : 'Rate this store'}
+                </span>
+
+                <span className="card__star-img">
+                  {store.feedback && store.feedback.rating > 4.5
+                    ? (
+                      <img
+                        src={`${IMG_URL}/92367108b11b8ee48b6f29cb3fef2d4d.svg`}
+                        alt="star"
+                      />
+                    ) : (
+                      <img
+                        src={`${IMG_URL}/972e1cb487b3a5c72c30a6635596f477.svg`}
+                        alt="star"
+                      />
+                    )
+                  }
+                </span>
+                <span>
+                  {store.feedback ? `(${store.feedback.ratingCount})` : ''}
+                </span>
+              </div>
+            </div>
+          </a>
+
+        </article>
+      ))}
     </div>
   </main>
 );
+
+RestaurantsList.propTypes = {
+  stores: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default RestaurantsList;

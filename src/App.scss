@@ -12,11 +12,7 @@ body {
 
 .main {
   margin: 0 auto;
-  max-width: 966px;
-
-  &__delivery-form {
-    display: none;
-  }
+  padding: 0 80px;
 }
 
 h1 {
@@ -25,12 +21,6 @@ h1 {
   font-size: 22px;
   line-height: 34px;
 }
-
-footer {
-  background-color: #262626;
-}
-
-
 
 @import "./scss/header.scss";
 @import "./scss/delivery.scss";
