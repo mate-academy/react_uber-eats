@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './styles/header.scss';
 
 class Header extends React.Component {
   state = {
@@ -10,12 +11,14 @@ class Header extends React.Component {
   handlerChoiceLocation = () => {
     this.setState(state => ({
       locationChoice: !state.locationChoice,
+      filterChoice: false,
     }));
   };
 
   handlerChoiceFilter = () => {
     this.setState(state => ({
       filterChoice: !state.filterChoice,
+      locationChoice: false,
     }));
   };
 
@@ -30,8 +33,8 @@ class Header extends React.Component {
     const { locationChoice, filterChoice } = this.state;
 
     return (
-      <header className="header">
-        <div className="header-container">
+      <header>
+        <div className="header">
           <div className="header-logo">
             <img
               src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/f8f0721f871b3704cce92eb96bc6e504.svg"
@@ -43,10 +46,10 @@ class Header extends React.Component {
               type="button"
               onClick={this.handlerChoiceLocation}
               className={locationChoice
-                ? 'header-location--hidden'
-                : 'header-location__city'}
+                ? 'header-location__city--hidden'
+                : 'header-location__city header-location__city--btn'}
             >
-              <div className="header-location__svg">
+              <div className="header-svg">
                 <img src="./images/location.svg" alt="location" />
               </div>
               <div className="header-location__name">
@@ -54,10 +57,10 @@ class Header extends React.Component {
               </div>
             </button>
             <form className={locationChoice
-              ? 'header-location__city'
-              : 'header-location--hidden'}
+              ? 'header-location__city header-location__city--form'
+              : 'header-location__city--hidden'}
             >
-              <div className="header-location__svg">
+              <div className="header-svg">
                 <img src="./images/location.svg" alt="location" />
               </div>
               <label htmlFor="choice-location">
@@ -69,80 +72,92 @@ class Header extends React.Component {
                 />
               </label>
               <button
-                className="header-location__city-close"
+                className="header-location__city-clear"
                 type="button"
                 onClick={() => onClearLocation}
               >
                 Clear
               </button>
               <button
-                className="header-location__city-end"
+                className="header-location__city-close"
                 type="button"
                 onClick={this.handlerChoiceLocation}
               >
-                <img src="./images/button-close.svg" alt="close" />
+                <img src="./images/button_close.svg" alt="close" />
               </button>
             </form>
           </div>
           <div className="header-time">
-            <label htmlFor="time-deliver">
-              <select id="time-deliver">
-                <option className="header-time__deliver">
-                  <img src="./images/clock.svg" alt="time" />
-                  <span>Deliver now</span>
+            <label
+              htmlFor="time-deliver"
+              className="header-time__deliver"
+            >
+              <img
+                src="./images/clock.svg"
+                className="header-time__deliver-clock"
+                alt="time"
+              />
+              <select
+                id="time-deliver"
+                className="header-time__deliver-choice header-time__deliver-choice--array"
+              >
+                <option className="header-time__deliver-choice">
+                  Deliver now
                 </option>
-                <option className="header-time__deliver">
-                  <img src="./images/calendar-today.svg" alt="time" />
-                  <span>Schedule for later</span>
+                <option className="header-time__deliver-choice">
+                  Schedule for later
                 </option>
               </select>
             </label>
           </div>
-          <div className="header-filter">
-            <button
-              type="button"
-              onClick={this.handlerChoiceLocation}
-              className={filterChoice
-                ? 'header-filter--hidden'
-                : 'header-filter__search'}
-            >
-              <div className="header-filter__svg">
-                <img src="./images/search.svg" alt="search" />
-              </div>
-              <div className="header-filter__name">
-                Search
-              </div>
-            </button>
-            <form className={filterChoice
-              ? 'header-filter--hidden'
-              : 'header-filter__search'}
-            >
-              <div className="header-filter__svg">
-                <img src="./images/location.svg" alt="location" />
-              </div>
-              <label htmlFor="filter-search">
-                <input
-                  className="header-filter__input"
-                  id="filter-search"
-                  value={filterValue}
-                  onChange={() => onHandlerFilter}
-                />
-              </label>
+          <div className="header__action">
+            <div className="header__action-filter">
               <button
-                className="header-filter__input-close"
                 type="button"
                 onClick={this.handlerChoiceFilter}
+                className={filterChoice
+                  ? 'header__action-filter-search header__action-filter-search--hidden'
+                  : 'header__action-filter-search'}
               >
-                <img src="./images/button-close.svg" alt="close" />
+                <div className="header-svg">
+                  <img src="./images/search.svg" alt="search"/>
+                </div>
+                <div className="header__action-filter-name">
+                  Search
+                </div>
               </button>
-            </form>
+              <form className={filterChoice
+                ? 'header__action-filter-search header__action-filter-search--form'
+                : 'header__action-filter-search header__action-filter-search--hidden'}
+              >
+                <div className="header-svg">
+                  <img src="./images/search.svg" alt="location" />
+                </div>
+                <label htmlFor="filter-search">
+                  <input
+                    className="header__action-filter-input"
+                    id="filter-search"
+                    value={filterValue}
+                    onChange={() => onHandlerFilter}
+                    placeholder="What are you craving?"
+                  />
+                </label>
+                <button
+                  className="header__action-filter-close"
+                  type="button"
+                  onClick={this.handlerChoiceFilter}
+                >
+                  <img src="./images/button_close.svg" alt="close" />
+                </button>
+              </form>
+            </div>
+            <a
+              className="header__action-registration"
+              href="#"
+            >
+              Sign in
+            </a>
           </div>
-          <a
-            className="header-registration"
-            href="#"
-          >
-            Sign in
-          </a>
         </div>
       </header>
     );

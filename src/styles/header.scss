@@ -1,0 +1,157 @@
+@import "variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: $size-16;
+  color: $black-color;
+
+  padding: 30px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &-svg {
+    position: absolute;
+    width: $width-svg;
+    left: $padding-left-right;
+    z-index: 100;
+  }
+
+  &-logo {
+    width: 120px;
+    display: flex;
+  }
+
+  &-location {
+    &__svg {
+      width: 19px;
+      margin-right: 13px;
+    }
+
+    &__city {
+      display: flex;
+      align-items: center;
+      font-size: $size-16;
+      position: relative;
+      padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right+$width-svg+$margin-svg;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--btn {
+        background: transparent;
+        border: none;
+      }
+
+      &--form {
+        flex: 1;
+        max-width: 540px;
+        background-color: $input-color;
+      }
+
+      &-choice {
+        background-color: $input-color;
+        flex: 1;
+        padding: 0;
+        border: 0;
+      }
+
+      &-clear {
+        color: $gray-input-color;
+        background-color: $input-color;
+      }
+
+      &-close {
+        padding-left: $padding-btn-close;
+        background-color: $input-color;
+        border-left: 1px solid $border-btn-close;
+      }
+    }
+
+  }
+
+  &-time {
+    padding: $padding-top-bottom $padding-left-right;
+
+    &__deliver {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &-clock {
+        width: $width-svg;
+        left: $padding-left-right;
+        position: absolute;
+        z-index: 1;
+      }
+
+      &-choice {
+        height: 36px;
+        padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
+        border: 0;
+        background: #fff;
+        font-size: $size-16;
+
+        &--array {
+          position: relative;
+
+          &:focus {
+            background-color: $input-color;
+            border: 0;
+          }
+        }
+      }
+
+      &:focus {
+        background-color: $input-color;
+
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+
+    &-filter {
+      margin-right: 24px;
+
+      &-search {
+        display: flex;
+        position: relative;
+        font-size: $size-16;
+        padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
+        background: transparent;
+
+        &--hidden {
+          display: none;
+        }
+
+        &--form {
+          background-color: $input-color;
+          border-bottom: 2px solid;
+        }
+      }
+
+      &-input {
+        background-color: $input-color;
+      }
+
+      &-close {
+        background-color: $input-color;
+      }
+    }
+
+    &-registration {
+      color: $black-color;
+      font-size: $size-16;
+    }
+  }
+}
