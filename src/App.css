@@ -1,1 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+main {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.header_items-position {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: white;
+  outline: none;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+.header_button-icon {
+  padding: 0 10px 0 16px;
+}
+
+.header_location {
+  margin-left: 120px;
+}
+
+.header_time-delovery {
+  margin-left: 60px;
+}
+
+.header_search {
+  margin-left: auto;
+}
+
+#wrap {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  position: relative;
+  outline: none;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .9s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+input[type="text"]:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+input[type="text"]:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  outline: none;
+  cursor: text;
+}
+
+input[type="submit"] {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  outline: none;
+  background-image: url(https://png.pngtree.com/element_origin_min_pic/00/00/07/165789f61e99eea.jpg) center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity .9s ease;
+}
+
+
+.header_sign-in {
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+}
+
+.catalog {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 365px);
+  justify-items: center;
+  padding: 0 100px;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.catalog_image {
+  height: 240px;
+  width: 365px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.catalog_image:hover {
+  box-shadow: 0 0 10px gray;
+  transform: scale(1.01)
+}
+
+.catalot_title  {
+  margin-top: 12px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.catalog_categories {
+  color: rgb(117, 117, 117);
+  line-height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.catalog_etaRange {
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #F5F5F5;
+  width: 75px;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.catalog_feedback-inline {
+  display: flex;
+  align-items: center;
+}
+
+.catalog_feedback {
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #F5F5F5;
+  padding: 5px 6px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.catalog_feedback-star {
+  height: 20px;
+  display: flex;
+  align-items: center
+}
+
+.catalog-none {
+  display: none;
+}
