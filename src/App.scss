@@ -1,0 +1,282 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+// HEADER //// HEADER //// HEADER //// HEADER //
+
+.header {
+  flex: 0 0 auto;
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-left: 60px;
+    border-width: 0;
+    background: none;
+    cursor: pointer;
+
+    &::before {
+      content: url('/images/location.svg');
+      // height: 24px;
+      padding: 0 10px;
+    }
+  }
+
+  &__delivery-time {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-left: 60px;
+    border-width: 0;
+    background: none;
+    cursor: pointer;
+
+    &::before {
+      content: url('/images/time.svg');
+      // height: 24px;
+      padding: 0 10px;
+    }
+
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-left: auto;
+    border-width: 0;
+    background: none;
+    cursor: pointer;
+
+    &::before {
+      content: url('/images/search.svg');
+      // height: 24px;
+      padding: 0 10px;
+    }
+
+  }
+
+  &__sign-in {
+    margin-left: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+
+  }
+}
+
+.header__container {
+  display: flex;
+  width: 1090px;
+  height: 80px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+// MAIN // // MAIN // // MAIN // // MAIN //
+
+.main__container {
+  flex: 1 0 auto;
+  height: 100%;
+  width: 1090px;
+  margin: 40px auto 80px;
+}
+
+.main__restourants {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
+  display: grid;
+  list-style-type: none;
+  padding: 0;
+}
+
+.main__restourants-photo {
+  width: 349px;
+  height: 278px;
+}
+
+.main__restourants-info-title {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.main__restourants-info-categories {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 16px;
+  color: #757575;
+  list-style-type: none;
+  padding: 0;
+
+  &-item {
+    padding-right: 5px;
+
+  }
+}
+
+.main__restourants-info-opening {
+  // text-align: end;
+  font-size: 14px;
+  line-height: 30px;
+  color: #757575;
+}
+
+
+
+// FOOTER //// FOOTER //// FOOTER //// FOOTER //
+
+.footer {
+  flex: 0 0 auto;
+  height: 460px;
+  background-color: #262626;
+}
+
+.footer__container {
+  width: 1090px;
+  margin: 80px auto 0;
+}
+
+.footer__container-upper-part {
+  display: flex;
+
+}
+
+
+.footer__container-logo-photo {
+  margin-bottom: 64px;
+  cursor: pointer;
+}
+
+.footer__container-stores {
+  display: flex;
+
+
+
+}
+
+.footer__container-stores-apple {
+  cursor: pointer;
+}
+.footer__container-stores-google {
+    width: 134px;
+    height: 40px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.footer__container-logo {
+flex: 2;
+}
+
+.footer__container-about {
+flex: 1;
+}
+
+.footer__container-get-help {
+flex: 1;
+}
+
+.footer__container-about-list{
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: #F5F5F5;
+
+}
+
+.footer__container-about-item-text,
+.footer__container-get-help-item-text {
+   cursor: pointer;
+}
+
+
+.footer__container-get-help-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: #F5F5F5;
+}
+
+.footer__container-line {
+  margin: 40px 0;
+  // border:none;
+  color: #F5F5F5;
+}
+
+.footer__container-about-item:first-child {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.footer__container-get-help-item:first-child {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.footer__container-get-help-item:last-child::before {
+  display: inline-block;
+  content: url('/images/lang.svg');
+  width: 16px;
+  height: 16px;
+  padding-right: 8px;
+   cursor: pointer;
+
+}
+
+.footer__container-lower-part-text {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.footer__container-inc {
+  flex:1;
+}
+
+.footer__container-rights {
+  flex:1;
+}
+
+.footer__container-rights-upper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer__container-rights-social-links {
+  flex: 0;
+}
+
+.footer__container-rights-lower {
+  margin-top: 50px;
+}
+
+.footer__container-rights-social-links-f,
+.footer__container-rights-social-links-t,
+.footer__container-rights-social-links-i {
+  width: 16px;
+  height: 16px;
+  margin-right: 25px;
+  cursor: pointer;
+}
