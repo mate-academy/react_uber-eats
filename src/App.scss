@@ -1,0 +1,85 @@
+html,
+body {
+  margin:0;
+  padding: 0;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  height: 80px;
+  padding: 0 80px;
+
+  &-content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+
+    .adress-box {
+      margin-left: 166px;
+      display: inline-flex;
+      align-items: center;
+      &::before {
+        content: url(/images/icons/location-img.svg);
+        padding-right: 18px;
+      }
+    }
+
+    .time {
+      margin-left: 94px;
+      display: inline-flex;
+      align-items: center;
+      &::before {
+        content: url(/images/icons/time-img.svg);
+        padding-right: 18px;
+      }
+    }
+
+    .search-box {
+      margin-right: 40px;
+      display: inline-flex;
+      align-items: center;
+      &::before {
+        content: url(/images/icons/search-icon.svg);
+        padding-right: 18px;
+      }
+    }
+  }
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  line-height: 19px;
+  img {
+    height: 23.35px;
+  }
+}
+
+.header-button {
+  font-size: 16px;
+  line-height: 19px;
+  background: none;
+  border: none;
+}
+
+.additional-block {
+  display: inline-flex;
+  align-items: center;
+}
+
+.card-list {
+  display: grid;
+  margin: 0 80px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 42px;
+  grid-column-gap: 20px;
+}
