@@ -138,7 +138,7 @@ class Header extends React.Component {
                     className="header__action-filter-input"
                     id="filter-search"
                     value={filterValue}
-                    onChange={() => onHandlerFilter}
+                    onChange={onHandlerFilter}
                     placeholder="What are you craving?"
                   />
                 </label>

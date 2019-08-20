@@ -4,14 +4,15 @@ import Footer from './Footer';
 import MainHomePage from './MainHomePage';
 
 const BASE_URL = `https://mate-academy.github.io/react_uber-eats/api`;
+const LONDON_URL = `/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json`;
 
-const getData = async () => {
-  const response = await fetch(`${BASE_URL}/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json`);
+const getData = async() => {
+  const response = await fetch(`${BASE_URL}${LONDON_URL}`);
   const result = await response.json();
 
-  return result.data.feedItems.map(item => {
-    return result.data.storesMap[item.uuid];
-  });
+  return result.data.feedItems.map(item => (
+    result.data.storesMap[item.uuid]
+  ));
 };
 
 class HomePage extends React.Component {
@@ -19,12 +20,16 @@ class HomePage extends React.Component {
     locationValue: 'London',
     filterValue: '',
     stores: [],
+    storesToShow: [],
   };
 
   async componentDidMount() {
     const stores = await getData();
 
-    this.setState({stores});
+    this.setState({
+      stores,
+      storesToShow: stores,
+    });
   }
 
   onHandlerChangeLocation = (event) => {
@@ -34,19 +39,23 @@ class HomePage extends React.Component {
   };
 
   onClearLocation = () => {
-    this.setState({
-      locationValue: '',
-    });
+    this.setState({ locationValue: '' });
   };
 
   onHandlerFilter = (event) => {
+    const { value } = event.target;
 
+    this.setState(state => ({
+      storesToShow: state.stores.filter(store => (
+        store.title.toLowerCase().includes(value.toLowerCase())
+      )),
+      filterValue: value,
+    }));
   };
 
   render() {
-    const { locationValue, filterValue, stores } = this.state;
+    const { locationValue, filterValue, storesToShow } = this.state;
 
-    console.log(stores);
     return (
       <>
         <Header
@@ -56,7 +65,7 @@ class HomePage extends React.Component {
           filterValue={filterValue}
           onHandlerFilter={this.onHandlerFilter}
         />
-        <MainHomePage stores={stores} />
+        <MainHomePage stores={storesToShow} />
         <Footer />
       </>
     );
