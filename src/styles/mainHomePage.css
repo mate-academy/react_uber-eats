@@ -1,0 +1,13 @@
+.main {
+  padding: 122px 0 82px;
+}
+
+.stores {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid: auto-flow/repeat(4, 1fr);
+  grid-gap: 40px 20px;
+}
+
+/*# sourceMappingURL=mainHomePage.css.map */
