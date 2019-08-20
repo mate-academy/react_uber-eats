@@ -78,8 +78,17 @@ button {
 
 .card-list {
   display: grid;
-  margin: 0 80px;
+  margin: 32px 80px;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 42px;
   grid-column-gap: 20px;
+}
+
+.product-card {
+  width: auto;
+  img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
 }
