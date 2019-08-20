@@ -11,7 +11,7 @@ using [this design](https://www.figma.com/file/j2sfk3XSjRf12SC27z0Ykf/Uber-eats-
 2. Implement footer
     - Pay attention to mobile version
     - Implement got to top arrow  
-3. Implement `HomePage` with the list of restaurants in [London](https://mate-academy.github.io/react_uber-eats/api/feed/ChIJdd4hrwug2EcRmSrV3Vo6llI.json)
+3. Implement `HomePage` with the list of restaurants in [London](https://mate-academy.github.io/react_uber-eats/api/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json)
     - `RestaurantCard` should be clickable fully (not only the image) 
 4. Implement `RestaurantPage` basing on [McDonald's® (Victoria)](https://mate-academy.github.io/react_uber-eats/api/restaurants/d7c942e8-d2b3-4004-b964-d8e008da75b0.json)
     - use `uuid` in the URL
