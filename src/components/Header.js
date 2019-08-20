@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header__wrapper">
         <div className="header__logo-and-delivery">
           <a
-            href="/"
+            href="/react_uber-eats"
             className="header__logo"
           >
             <img src="img/logo.svg" alt="Uber Eats" />
@@ -86,7 +86,7 @@ const Header = () => {
             </button>
           )}
 
-          <a href="/" className="header__sign-in">Sing in</a>
+          <a href="/react_uber-eats" className="header__sign-in">Sing in</a>
         </div>
       </div>
     </header>

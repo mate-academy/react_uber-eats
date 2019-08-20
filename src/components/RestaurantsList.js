@@ -9,7 +9,7 @@ const RestaurantsList = ({ stores }) => (
       {stores.map(store => (
         <article className="card">
           <a
-            href="/"
+            href="/react_uber-eats"
             className="card__link"
           >
             <div className="card__picture-wrapper">
