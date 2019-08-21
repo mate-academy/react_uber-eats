@@ -1,0 +1,46 @@
+
+$silver: #626262;
+$gridBlock: 329px;
+$gridColGap: 19px;
+$gridRowGap: 1px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+@mixin font($fs, $lh) {
+  font-family: "Roboto", sans-serif;
+  font-size: $fs + px;
+  line-height: $lh + px;
+}
+
+@mixin family {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+}
+
+@mixin image($icon) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 60px;
+  border-width: 0;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  @include family;
+  &::before {
+    display: inline-block;
+    margin-right: 13px;
+    content: "";
+    height: 24px;
+    width: 24px;
+    background: url($icon) no-repeat center;
+  }
+}

@@ -3,7 +3,6 @@ import { getData } from '../getData/getData';
 import './Main.css';
 
 class Main extends React.Component {
-
   state = {
     restaurants: [],
   };
@@ -21,7 +20,6 @@ class Main extends React.Component {
     const restaurantsList = restaurants.map(item => (
       <div className="catalog__row-block">
         <a href="#/" className="catalog__row-block--link">
-
           <img
             className="catalog__row-block--link--img"
             src={item.heroImageUrl}
@@ -63,15 +61,13 @@ class Main extends React.Component {
     ));
 
     return (
-      <div>
-        <main className="catalog">
-          <div className="container">
-            <div className="catalog__row">
-              {restaurantsList}
-            </div>
+      <main className="catalog">
+        <div className="container">
+          <div className="catalog__row">
+            {restaurantsList}
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     );
   }
 };

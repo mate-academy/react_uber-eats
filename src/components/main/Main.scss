@@ -1,14 +1,10 @@
-$silver: #626262;
-
-@mixin font($fs, $lh) {
-  font-family: "Roboto", sans-serif;
-  font-size: $fs + px;
-  line-height: $lh + px;
-}
+@import "../../../src/style/mixin-var";
+@import "../../../src/style/media";
 
 .container {
-  max-width: 1024px;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 34px;
 }
 
 .catalog {
@@ -21,10 +17,11 @@ $silver: #626262;
     color: #1d1d1d;
   }
   &__row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, $gridBlock);
+    grid-column-gap: $gridColGap;
+    grid-row-gap: $gridRowGap;
+    justify-content: center;
   }
   &__delivery {
     display: flex;
@@ -60,8 +57,6 @@ $silver: #626262;
 
 .catalog__row-block {
   position: relative;
-  display: flex;
-  min-width: 32%;
   padding-bottom: 110px;
   margin-bottom: 16px;
   flex-direction: column;
@@ -140,24 +135,28 @@ $silver: #626262;
       color: #1d1d1d;
     }
     .catalog-items {
-      display: flex;
-      text-overflow: ellipsis;
-      overflow: hidden;
+      display: inline-block;
       @include font(14,24);
       ul {
-        display: flex;
+        display: inline-block;
+        width: 345px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         .catalog-items__snack {
-          display: flex;
+          display: inline-block;
           justify-content: start;
           flex-direction: row;
           @include font(14, 21);
           align-items: center;
           color: $silver;
           list-style: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
           white-space: nowrap;
           &:not(:first-child)::before {
             content: "";
-            display: flex;
+            display: inline-block;
             justify-content: center;
             align-items: center;
             margin: 0 5px;
@@ -176,5 +175,4 @@ $silver: #626262;
     }
   }
 }
-
 

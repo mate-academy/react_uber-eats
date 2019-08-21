@@ -3,15 +3,22 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="header__wrapper container">
+    <header className="header container">
+      <div className="header__wrapper">
         <div className="header__wrapper__logo">
+
           <a className="header__wrapper__logo--link" aria-label="hidden" href="index.html">
-            <img
-              src="https://githubfordmitry.github.io/react_uber-eats/api/img/Logo.png"
-              alt="Logo Uber Eats"
-              className="header__wrapper__logo--link--img"
-            />
+            <div id="boxWrapper">
+              <div className="boxBlack">U</div>
+              <div className="boxBlack">b</div>
+              <div className="boxBlack">e</div>
+              <div className="boxBlack">r</div>
+              <div></div>
+              <div>E</div>
+              <div>a</div>
+              <div>t</div>
+              <div>s</div>
+            </div>
           </a>
         </div>
         <div className="header__wrapper__add--info">
@@ -31,6 +38,11 @@ const Header = () => {
           <button className="search">
             Search
           </button>
+          <input
+            className="search-sign--field"
+            type="search"
+            placeholder="Search for restaurant or cuisine"
+          />
           <div className="sign">
             <a href="#/">
               Sign

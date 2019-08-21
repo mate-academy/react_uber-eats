@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollUpButton from "react-scroll-up-button";
 import './footer.css';
 
 const Footer = () => {
@@ -102,6 +103,16 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      <ScrollUpButton
+        StopPosition={0}
+        ShowAtPosition={150}
+        EasingType="easeOutCubic"
+        AnimationDuration={500}
+        ContainerClassName="ScrollUpButton__Container"
+        TransitionClassName="ScrollUpButton__Toggled"
+        style={{ backgroundColor: '#59bd5a', outline: 'none', transition: '0.3s'}}
+        ToggledStyle={{}}
+      />
     </div>
   );
 };
