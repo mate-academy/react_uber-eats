@@ -406,7 +406,7 @@ footer {
     grid-template-columns: 50%  50%;
   }
   .btn_app_container {
-    max-width: 530px;
+    max-width: 150px;
   }
 }
 
@@ -428,6 +428,11 @@ footer {
     display: flex;
     margin-bottom: 0;
   }
+  .app_link {
+    padding: 0 5px;
+    display: block;
+    float: left;
+  }
   .big_navigation button {
     display: flex;
     align-items: center;
@@ -447,5 +452,8 @@ footer {
   }
   .product_cards {
     grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  .btn_app_container {
+    max-width: 530px;
   }
 }

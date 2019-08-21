@@ -411,7 +411,7 @@ footer {
   }
 
   .btn_app_container {
-    max-width: 530px;
+    max-width: 150px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -436,6 +436,12 @@ main {
     margin-bottom: 0;
   }
 
+  .app_link {
+    padding: 0 5px;
+    display: block;
+    float: left;
+  }
+
   .big_navigation button {
     display: flex;
     align-items: center;
@@ -458,6 +464,10 @@ main {
 
   .product_cards {
     grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .btn_app_container {
+    max-width: 530px;
   }
 }
 
