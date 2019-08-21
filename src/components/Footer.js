@@ -5,7 +5,15 @@ const Footer = () => (
     <div className="footer__wrapper">
       <div className="footer__apps-and-links">
         <div className="footer__logo-and-apps">
-          <a href="/react_uber-eats"><img src="img\footer-logo.svg" alt="UberEats" /></a>
+          <a
+            href="/react_uber-eats"
+            className="footer__logo"
+          >
+            <img
+              src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/12c47a69e1022b581a7e823e9bd45466.svg"
+              alt="UberEats"
+            />
+          </a>
 
           <ul className="footer__apps">
             <li>
@@ -61,16 +69,25 @@ const Footer = () => (
 
           <ul className="footer__additional-info footer__lists">
             <li>
-              <a href="/react_uber-eats" className="footer__lists-link">Get Help</a>
+              <a href="/react_uber-eats" className="footer__lists-link">
+                Get Help
+              </a>
             </li>
             <li>
-              <a href="/react_uber-eats" className="footer__lists-link">Read FAQs</a>
+              <a href="/react_uber-eats" className="footer__lists-link">
+                Read FAQs
+              </a>
             </li>
             <li>
-              <a href="/react_uber-eats" className="footer__lists-link">View all cities</a>
+              <a href="/react_uber-eats" className="footer__lists-link">
+                View all cities
+              </a>
             </li>
             <li className="footer__language">
-              <a href="/react_uber-eats" className="footer__lists-link footer__language-link">
+              <a
+                href="/react_uber-eats"
+                className="footer__lists-link footer__language-link"
+              >
                 English
               </a>
             </li>

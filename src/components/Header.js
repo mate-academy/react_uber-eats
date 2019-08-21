@@ -55,36 +55,39 @@ const Header = () => {
               name="order-time"
               aria-label="select delivery time"
               className="header__delivery-time"
+              defaultValue="Delivery now"
             >
-              <option value="now" selected>Delivery now</option>
+              <option value="now">Delivery now</option>
               <option value="plan">Schedule for later</option>
             </select>
           </div>
         </div>
 
         <div className="header__search-and-sign-in">
-          {searchIsActive ? (
-            <input
-              type="search"
-              name="restaurant-search-field"
-              autoFocus
-              onKeyPress={event => (
-                event.key === 'Enter' ? setSearch(false) : null
-              )}
-              onBlur={() => setSearch(false)}
-              aria-label="restaurant search field"
-              className="header__search-input"
-              placeholder="What are you craving?"
-            />
-          ) : (
-            <button
-              type="button"
-              className="header__search-btn"
-              onClick={() => setSearch(true)}
-            >
-              Search
-            </button>
-          )}
+          <div className="header__search">
+            {searchIsActive ? (
+              <input
+                type="search"
+                name="restaurant-search-field"
+                autoFocus
+                onKeyPress={event => (
+                  event.key === 'Enter' ? setSearch(false) : null
+                )}
+                onBlur={() => setSearch(false)}
+                aria-label="restaurant search field"
+                className="header__search-input"
+                placeholder="What are you craving?"
+              />
+            ) : (
+              <button
+                type="button"
+                className="header__search-btn"
+                onClick={() => setSearch(true)}
+              >
+                Search
+              </button>
+            )}
+          </div>
 
           <a href="/react_uber-eats" className="header__sign-in">Sing in</a>
         </div>

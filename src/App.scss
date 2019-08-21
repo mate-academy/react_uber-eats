@@ -13,6 +13,11 @@ body {
 .main {
   margin: 0 auto;
   padding: 0 80px;
+
+  &__search,
+  &__delivery {
+    display: none;
+  }
 }
 
 h1 {
@@ -31,4 +36,4 @@ h1 {
 @import "./scss/footer.scss";
 @import "./scss/up-button.scss";
 @import "./scss/media-1024px.scss";
-@import "./scss/media-640px.scss";
+@import "./scss/media-768px.scss";

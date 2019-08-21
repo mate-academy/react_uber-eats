@@ -1,32 +1,32 @@
 @media (max-width: 1024px) {
-  .header-wrapper,
-  .main,
-  .footer {
-    padding: 0 8px;
-  }
-
-  .delivery__adress {
-    max-width: 190px;
-    font-size: 13px;
-  }
-
-  .delivery__span {
-    margin: 0 3px;
-  }
-
-  .buttons__button {
-    margin: 0 5px 0 0;
-  }
-
-  .buttons__basket-button {
-    margin: 0;
-  }
-
   .card-list {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer__lang-select {
-    width: 175px;
+  .header__delivery {
+    display: none;
+  }
+
+  .main__search-and-delivery {
+    margin-bottom: 30px;
+  }
+
+  .main__delivery {
+    display: flex;
+  }
+
+  .main__delivery-time,
+  .main__input-wrapper,
+  .main__location-clear-btn {
+    width: 50%;
+    margin: 0;
+  }
+
+  .footer__apps {
+    flex-direction: column;
+  }
+
+  .footer__additional-info-lists {
+    width: 70%;
   }
 }

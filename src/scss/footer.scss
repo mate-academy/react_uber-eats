@@ -36,7 +36,7 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
     flex-direction: column;
     justify-content: space-between;
 
-    width: 445px;
+    width: 50%;
   }
 
   &__apps {
@@ -47,19 +47,16 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
 
   &__app-logo {
     margin-right: 16px;
-    transition: transform 1s;
-  }
-
-  &__app-logo:hover {
-    transform: $scale-tanform;
   }
 
   &__additional-info-lists {
+    width: 50%;
+
     display: flex;
   }
 
   &__additional-info {
-    width: 220px;
+    width: 50%;
   }
 
   &__additional-info li {
@@ -122,7 +119,12 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
     justify-content: space-between;
 
     height: 100px;
-    width: 445px;
+    width: 50%;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    font-weight: 400;
   }
 
   &__policy-and-terms {

@@ -85,6 +85,7 @@
   &__search-btn,
   &__sign-in {
     height: 48px;
+    outline: none;
   }
 
   &__delivery-time {
@@ -98,6 +99,11 @@
     background-size: 18px;
 
     appearance: none;
+  }
+
+  &__delivery-time:focus {
+    background-color: #F5F5F5 !important;
+    border-bottom: 2px solid #000;
   }
 
   &__delivery-time,
