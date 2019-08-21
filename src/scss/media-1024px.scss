@@ -3,7 +3,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .header__delivery {
+  .header__delivery,
+  .header__location-clear-btn {
     display: none;
   }
 
