@@ -1,0 +1,134 @@
+@import './variable.scss';
+
+.footer {
+  background: $colorBackgroundFooter;
+  margin-top: 80px;
+  padding: 0 8px;
+
+  &__section {
+    margin: 0 98px;
+  }
+
+  &__logo {
+    height: 116px;
+  }
+
+  &__logo img {
+    padding-top: 56px;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px;
+    padding: 32px 0 40px;
+  }
+
+  &__nav-lang {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  &__nav-lang::before {
+    content: "";
+    display: block;
+    position: absolute;
+    //background: url(images/icons/world.svg) center no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 16px;
+  }
+
+  &__nav-lang::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url('https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/2601cb43facfcd27a8d88d727dce9bb5.svg') center no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 9px;
+    left: 15px;
+    cursor: pointer;
+  }
+
+  &__nav-lang-input {
+    width: 227px;
+    height: 40px;
+    background: #3b3b3b;
+    border: 0;
+    border-radius: 2px;
+    padding: 12px 48px;
+    color: #fff;
+  }
+
+  &__nav-lang-input::placeholder {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15px;
+    color: #fff;
+  }
+
+  &__nav-name {
+    margin-top: 33px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #fff;
+  }
+
+  &__nav-name-hash {
+    color: #49a144;
+  }
+
+  &__column {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  &__column>a {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 15px;
+    color: #fff;
+    padding-bottom: 23px;
+    text-decoration: none;
+  }
+
+  &__app {
+    display: flex;
+    justify-content: center;
+    margin: 41px 0 39px;
+  }
+
+  &__app .gplay {
+    margin-left: 40px;
+  }
+
+  &__rights {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 40px 0;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 13px;
+    color: #fff;
+  }
+
+  &__rights .link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background: #fff;
+  }
+
+}
