@@ -25,6 +25,7 @@ header {
 .header_btn-container {
   display: flex;
   align-items: center;
+
 }
 
 .header_btn {
@@ -79,14 +80,15 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
-}
-.search_container .search_input {
-  width: 100%;
-  border: 0;
-  opacity: 50%;
-  line-height: 56px;
-  padding-left: 8px;
-  position: relative;
+
+  .search_input {
+    width: 100%;
+    border: 0;
+    opacity: 50%;
+    line-height: 56px;
+    padding-left: 8px;
+    position: relative;
+  }
 }
 
 .dest_btn {
@@ -177,24 +179,27 @@ main {
 
 .product_card {
   margin-bottom: 32px;
-}
-.product_card .product_card-img {
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
-}
-.product_card .product_card-name {
-  font-size: 16px;
-  line-height: 24px;
-}
-.product_card .product_card-class {
-  font-size: 14px;
-  line-height: 21px;
-  color: #626262;
-}
-.product_card .product_card-delivery_time {
-  font-size: 13px;
-  line-height: 21px;
+  .product_card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .product_card-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .product_card-class {
+    font-size: 14px;
+    line-height: 21px;
+    color: #626262;
+  }
+
+  .product_card-delivery_time {
+    font-size: 13px;
+    line-height: 21px;
+  }
 }
 
 /***********************************************************
@@ -208,9 +213,11 @@ footer {
   position: relative;
 }
 
-.app_link .app_link-img {
-  width: 150px;
-  height: 45px;
+.app_link {
+  .app_link-img {
+    width: 150px;
+    height: 45px;
+  }
 }
 
 .w_logo-container {
@@ -339,126 +346,106 @@ footer {
   .logo {
     width: 150px;
   }
-
   .medium_show {
     display: block;
   }
-
   .medium_hide {
     display: none;
   }
-
   .soc_link {
     padding: 0 5px;
   }
-
   .app_link {
     display: block;
     padding-bottom: 10px;
   }
-
   .deliver_to {
     display: flex;
     align-items: center;
   }
-
   .dest {
     margin: 0 10px;
     font-size: 13px;
     line-height: 15px;
   }
-
   .product_cards {
     display: grid;
     justify-content: center;
     grid-template-columns: 49.9% 49.9%;
-  }
-  .product_cards .product_card {
-    margin: 0 6px 23px;
-  }
-  .product_cards .product_card-img {
-    position: relative;
-    transition: transform 0.5s;
-  }
-  .product_cards .product_card-img:hover {
-    transform: translate(0, -8px);
-  }
-  .product_cards .show_card {
-    display: block;
-  }
+    .product_card {
+      margin: 0 6px 23px;
+    }
+    .product_card-img {
+      position: relative;
+      transition: transform 0.5s;
+    }
+    .product_card-img:hover {
+      transform: translate(0, -8px);
 
+    }
+    .show_card {
+      display: block;
+    }
+  }
   .footer_links-container {
     display: grid;
     grid-template-columns: 49.9% 49.9%;
   }
-
   .footer_columns-container {
     display: grid;
     grid-template-columns: 50% 50%;
   }
-
   .footer_links-copy-container {
     display: flex;
   }
-
   .footer_copy-n-links {
     margin: 0 60px 24px 0;
   }
-
   .footer_bottom-links {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50%  50%;
   }
-
   .btn_app_container {
     max-width: 530px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .footer_section,
-.header_section,
-main {
+  .header_section,
+  main {
     max-width: 956px;
     margin: auto;
   }
-
   .logo {
     display: block;
     margin-right: 50px;
   }
-
   .big_hide {
     display: none;
   }
-
   .big_show {
     display: flex;
     margin-bottom: 0;
   }
-
   .big_navigation button {
     display: flex;
     align-items: center;
     background: transparent;
     border: none;
+    img {
+      margin-right: 5px;
+    }
   }
-  .big_navigation button img {
-    margin-right: 5px;
-  }
-
   .header_section--nav {
     display: grid;
     grid-template-columns: 50% 50%;
     width: 100%;
   }
-
   .header_btn-container {
     justify-content: flex-end;
   }
-
   .product_cards {
     grid-template-columns: 33.33% 33.33% 33.33%;
   }
 }
-
-/*# sourceMappingURL=App.css.map */
