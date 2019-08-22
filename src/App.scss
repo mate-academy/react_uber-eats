@@ -838,10 +838,6 @@ product
   }
 }
 @media (min-width: 1023px) {
-  .hidding__product_details {
-    display: none;
-  }
-
   .catalog__container {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 15px;
@@ -851,4 +847,17 @@ product
 // _________________________________________________
 // header
 // __________________________________________________
+.is__Visible__now {
+  opacity: 0.2;
+  position: relative;
+}
 
+.product__information__close {
+  position: absolute;
+}
+
+.product__categories__rating {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
