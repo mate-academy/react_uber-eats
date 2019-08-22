@@ -1,4 +1,4 @@
-/* stylelint-disable */
+/* stylelint-disable */ 
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,7 +6,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 28px 98px;
+  margin: 0px 80px;
+  height: 80px;
+  white-space: nowrap;
 }
 
 .header__fixed {
@@ -14,10 +16,11 @@
   background-color: white;
   min-width: 964px;
   width: 100%;
-  padding: 28px 98px;
+  padding: 28px 80px;
   margin: 0 auto;
   -webkit-box-shadow: 0px 0px 10px #d6d3d3;
           box-shadow: 0px 0px 10px #d6d3d3;
+  top: 0;
   z-index: 2;
 }
 
@@ -49,6 +52,82 @@
   margin-left: 5px;
 }
 
+.header__location-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header__location-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f5f5f5;
+  padding: 12px 16px;
+  border-bottom: 1.5px solid black;
+  margin-right: 25px;
+}
+
+.header__location-input * {
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f5f5f5;
+}
+
+.header__location-input button {
+  background: #f5f5f5;
+  color: #757575;
+  padding: 0;
+  margin: 0;
+}
+
+.header__location-input input {
+  border: none;
+  font-size: 16px;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.header__vertical-line {
+  border-left: 1.5px solid #e0e0ee;
+  padding: 0;
+  margin: 0 16px;
+}
+
+.header__dropdown-select {
+  border: none;
+  font-size: 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .header .mainmenubtn {
   border: none;
   background: whitesmoke;
@@ -67,28 +146,6 @@
   border-bottom: 1px solid black;
 }
 
-.header__dropdown-child {
-  display: none;
-}
-
-.header__dropdown-child a {
-  text-decoration: none;
-  display: block;
-  color: black;
-}
-
-.header__dropdown:hover .header__dropdown-child {
-  display: block;
-  position: absolute;
-  z-index: 3;
-  background-color: white;
-  white-space: nowrap;
-}
-
-.header .childbtn {
-  padding: 8px 16px;
-}
-
 .header__auth {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,6 +153,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 5px;
 }
 
 .header__button--auth {

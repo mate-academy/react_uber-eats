@@ -3,12 +3,15 @@ import React from 'react';
 import { getRestaurants } from '../api/getDate';
 import Loading from './Loading';
 import MainSection from './MainSection';
+import Header from './Header';
+import Footer from './Footer';
 
 class HomePage extends React.Component {
   state = {
     restaurants: [],
     loading: false,
     errors: null,
+    filterRestaurants:'',
   }
 
   async componentDidMount() {
@@ -18,6 +21,7 @@ class HomePage extends React.Component {
 
       this.setState({
         restaurants: uuidRestaurants,
+        filterRestaurants: uuidRestaurants,
         loading: true,
       })
     } catch (error) {
@@ -27,17 +31,27 @@ class HomePage extends React.Component {
     };
   }
 
+  searchRestaurant = (query) => {
+    this.setState({
+      filterRestaurants:this.state.restaurants.filter(restaurant => {
+        return restaurant.title.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+      })
+    })
+  }
+
   render() {
-    const { loading, errors, restaurants } = this.state;
+    const { loading, errors, filterRestaurants } = this.state;
 
     return (
       <main>
-        <MainSection />
         {!errors
           ? (loading
             ? (
+              <>
+              <Header searchRestaurant={this.searchRestaurant}/>
+              <MainSection />
               <section class="catalog">
-                {restaurants.map(restaurant =>
+                {filterRestaurants.map(restaurant =>
 
                   <article class="catalog__item">
                     <a href="#/" class="catalog__item--image">
@@ -57,6 +71,8 @@ class HomePage extends React.Component {
                   </article>
                 )}
               </section>
+               <Footer />
+               </>
             )
             : <Loading />
           ) : (

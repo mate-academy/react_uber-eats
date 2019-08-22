@@ -1,16 +1,14 @@
-/* stylelint-disable */
+/* stylelint-disable */ 
 .catalog {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-grid-columns: (31.999%)[3];
-      grid-template-columns: repeat(3, 31.999%);
-  grid-gap: 30px 24px;
-  min-width: 964px;
-  padding: 32px 98px 0;
-  margin: auto;
+  -ms-grid-columns: (31.5%)[3];
+      grid-template-columns: repeat(3, 31.5%);
+  grid-row-gap: 24px;
+  margin: 32px 80px 0;
 }
 
 .catalog__item {
@@ -63,6 +61,7 @@
   display: -ms-flexbox;
   display: flex;
   text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 }
 

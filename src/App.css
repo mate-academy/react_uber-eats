@@ -1,4 +1,5 @@
 @import "./sass/variable.css";
+@import "./sass/loading.css";
 @import "./sass/header.css";
 @import "./sass/footer.css";
 @import "./sass/homePageCatalog.css";
@@ -13,6 +14,13 @@
 
 body {
   font-family: Roboto;
+}
+
+* :active,
+* :hover,
+* :focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .arrow-to-top {

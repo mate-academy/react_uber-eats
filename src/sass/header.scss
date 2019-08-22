@@ -2,7 +2,9 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    margin: 28px 98px;
+    margin: 0px 80px;
+    height: 80px;
+    white-space: nowrap;
   }
 
   &__fixed {
@@ -10,9 +12,10 @@
     background-color: white;
     min-width: 964px;
     width: 100%;
-    padding: 28px 98px;
+    padding: 28px 80px;
     margin: 0 auto;
     box-shadow: 0px 0px 10px #d6d3d3;
+    top: 0;
     z-index: 2;
   }
 
@@ -40,6 +43,62 @@
     margin-left: 5px;
   }
 
+  &__location-section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__location-input {
+    display: flex;
+    background: #f5f5f5;
+    padding: 12px 16px;
+    border-bottom: 1.5px solid black;
+    margin-right: 25px;
+  }
+
+  &__location-input * {
+    padding-right: 7px;
+    display: flex;
+    background: #f5f5f5;
+  }
+
+  &__location-input button {
+    background: #f5f5f5;
+    color: #757575;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__location-input input {
+    border: none;
+    font-size: 16px;
+    animation-duration: 300ms;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  &__vertical-line {
+    border-left: 1.5px solid #e0e0ee;
+    padding: 0;
+    margin: 0 16px;
+  }
+
+  &__dropdown-select {
+    border: none;
+    font-size: 16px;
+    appearance: none;
+  }
+
   .mainmenubtn {
     border: none;
     background: rgb(245, 245, 245);
@@ -58,31 +117,10 @@
     border-bottom: 1px solid black;
 }
 
-  &__dropdown-child {
-      display: none;
-  }
-
-  &__dropdown-child a {
-      text-decoration: none;
-      display: block;
-      color: black;
-  }
-
-  &__dropdown:hover &__dropdown-child {
-      display: block;
-      position: absolute;
-      z-index: 3;
-      background-color: white;
-      white-space: nowrap;
-  }
-
-  .childbtn {
-    padding: 8px 16px;
-  }
-
   &__auth {
     display: flex;
     align-items: center;
+    margin-left: 5px;
   }
 
   &__button--auth {
