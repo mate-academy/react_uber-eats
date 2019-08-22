@@ -18,6 +18,11 @@ body {
 .header {
   flex: 0 0 auto;
 
+  &__location-delivery-block {
+    display: flex;
+  }
+
+
   &__logo {
     cursor: pointer;
   }
@@ -32,7 +37,10 @@ body {
     cursor: pointer;
 
     &::before {
-      content: url('/images/location.svg');
+      content: url('https://hlybchenko.github.io/react_uber-eats/images/location.svg');
+        background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
       // height: 24px;
       padding: 0 10px;
     }
@@ -48,8 +56,11 @@ body {
     cursor: pointer;
 
     &::before {
-      content: url('/images/time.svg');
+      content: url('https://hlybchenko.github.io/react_uber-eats/images/time.svg');
       // height: 24px;
+        background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
       padding: 0 10px;
     }
 
@@ -65,8 +76,11 @@ body {
     cursor: pointer;
 
     &::before {
-      content: url('/images/search.svg');
+      content: url('https://hlybchenko.github.io/react_uber-eats/images/search.svg');
       // height: 24px;
+        background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
       padding: 0 10px;
     }
 
@@ -84,10 +98,10 @@ body {
 
 .header__container {
   display: flex;
-  width: 1090px;
+  // width: 1090px;
   height: 80px;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 35px;
 }
 
 // MAIN // // MAIN // // MAIN // // MAIN //
@@ -95,32 +109,72 @@ body {
 .main__container {
   flex: 1 0 auto;
   height: 100%;
-  width: 1090px;
-  margin: 40px auto 80px;
+  // width: 1090px;
+  margin: 40px 35px 80px;
 }
 
-.main__restourants {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 24px;
+.main__restaurants {
+  grid-template-columns: repeat(3, 32%);
+
+  gap: 40px 20px;
   display: grid;
   list-style-type: none;
   padding: 0;
 }
 
-.main__restourants-photo {
-  width: 349px;
-  height: 278px;
+.main__restaurants-link {
+  text-decoration: none;
+  color:black
 }
 
-.main__restourants-info-title {
+.main__restaurants-item {
+
+  border-radius: 5px;
+ position: relative;
+  padding-bottom: 80%;
+  // height: 278px;
+}
+
+.main__restaurants-card{
+   opacity: 0.92;
+  transition: 0.3s;
+  cursor: pointer;
+
+}
+.main__restaurants-card:hover {
+  // transform: scale(0.998);
+  opacity: 1;
+  box-shadow: 0 0 20px #cccccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.main__restaurants-photo {
+  border-top-left-radius : 5px;
+  border-top-right-radius : 5px;
+  width: 100%;
+  height:100%;
+  position: absolute;
+
+}
+
+
+.main__restaurants-info-title {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
+  text-decoration: none;
 }
 
-.main__restourants-info-categories {
+.main__restaurants-info-categories {
   display: flex;
   align-items: flex-start;
+  ///
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  ///
   font-size: 14px;
   line-height: 16px;
   color: #757575;
@@ -131,13 +185,20 @@ body {
     padding-right: 5px;
 
   }
+
 }
 
-.main__restourants-info-opening {
+.main__restaurants-info-opening,
+.main__restaurants-info-waiting {
   // text-align: end;
   font-size: 14px;
   line-height: 30px;
   color: #757575;
+}
+
+.main__restaurants-info-waiting-text {
+  background-color: #fff;;
+  padding: 5px;
 }
 
 
@@ -148,11 +209,12 @@ body {
   flex: 0 0 auto;
   height: 460px;
   background-color: #262626;
+
 }
 
 .footer__container {
-  width: 1090px;
-  margin: 80px auto 0;
+  // width: 1090px;
+  margin: 80px 35px 0;
 }
 
 .footer__container-upper-part {
@@ -188,11 +250,11 @@ flex: 2;
 }
 
 .footer__container-about {
-flex: 1;
+flex: 1 0 0;
 }
 
 .footer__container-get-help {
-flex: 1;
+flex: 1 0 0;
 }
 
 .footer__container-about-list{
@@ -207,6 +269,12 @@ flex: 1;
 .footer__container-about-item-text,
 .footer__container-get-help-item-text {
    cursor: pointer;
+}
+
+.footer__container-about-item-text:hover,
+.footer__container-get-help-item-text:hover {
+   text-decoration: underline;
+   color: #fff;
 }
 
 
@@ -236,7 +304,7 @@ flex: 1;
 
 .footer__container-get-help-item:last-child::before {
   display: inline-block;
-  content: url('/images/lang.svg');
+  content: url('https://hlybchenko.github.io/react_uber-eats/images/lang.svg');
   width: 16px;
   height: 16px;
   padding-right: 8px;
@@ -252,6 +320,10 @@ flex: 1;
 
 .footer__container-inc {
   flex:1;
+
+  p {
+    margin: 0;
+  }
 }
 
 .footer__container-rights {
@@ -261,6 +333,10 @@ flex: 1;
 .footer__container-rights-upper {
   display: flex;
   justify-content: space-between;
+
+  span{
+    cursor: pointer;
+  }
 
 }
 
@@ -280,3 +356,451 @@ flex: 1;
   margin-right: 25px;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+/* MOBILE-SEARCH */
+
+.search-box--mobile {
+  display: flex;
+  // justify-content: space-between;
+
+  margin-bottom: 40px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.search-box--mobile__input {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+input,
+select,
+option {
+  outline: none;
+  cursor:pointer;
+}
+
+.search-box__asap--mobile {
+  display: flex;
+  height: 40px;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+
+.search-box__asap--mobile:hover {
+  border-radius: 8px;
+  border: 1px solid greenyellow
+}
+
+
+.search-box__delivery-location--mobile {
+  // display: flex;
+  position: relative;
+  margin-left: 20px;
+  // flex: 0 1 auto;
+  // justify-items: center;
+  // align-items: center;
+  // width: 100%;
+}
+
+.location-img--mobile {
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  background-image: url('https://hlybchenko.github.io/react_uber-eats/images/location.svg');
+  width: 14px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.address--mobile {
+  height: 42px;
+  padding: 10px 30px;
+  font-size: 13px;
+  line-height: 24px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition:  0.35s ease;
+  color: #1d1d1d;
+  cursor: text;
+}
+
+.address--mobile:hover {
+  border-radius: 8px;
+  border: 1px solid greenyellow;
+}
+
+
+.search-box--mobile-title {
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+
+}
+
+
+
+
+
+
+
+
+
+
+  /* SEARCH */
+
+
+.search-box {
+  display: none;
+  // width: 948px;
+  height: 79px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 0 0;
+
+}
+
+.search-box__search-container::after {
+  content: "";
+  border-bottom: 1px solid #626262;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.search-box__input {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.search-box__search-container {
+  width: 100%;
+  position: relative;
+}
+
+.search-box__del-text-btn {
+  display: flex;
+  border: none;
+  background: none;
+  opacity: 0.2;
+ }
+
+.search-box__del-text-btn:hover {
+  opacity: 0.5  ;
+  transform: scale(1.2);
+  font-size: bold;
+  cursor: pointer;
+}
+
+.restaurants-search {
+  display: flex;
+  height: 42px;
+  width: 100%;
+  padding: 10px 3px 10px 30px;
+  font-size: 16px;
+  line-height: 24px;
+  box-sizing: border-box;
+  color: #000000;
+  border: none;
+  cursor: text;
+}
+
+.restaurants-search::placeholder {
+  color: #626262;
+  opacity: 0.5;
+}
+
+.restaurants-search:focus {
+  outline: none;
+  border: none;
+}
+
+.search-box__search-img {
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  width: 25px;
+  height: 25px;
+  background-image: url("https://hlybchenko.github.io/react_uber-eats/images/search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+  .main__restaurants {
+    grid-template-columns: repeat(1, 99%);
+  }
+
+
+
+
+.footer__container-lower-part-social {
+  display: none;
+  margin-top: 50px;
+
+}
+
+
+.footer__container-line-mobile {
+  display: none;
+}
+
+.footer__container-stores-mobile {
+  display: none;
+}
+
+.footer__container-hash {
+  display:none;
+}
+
+.footer__container-rights-lower-mobile {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1550px) {
+
+  .main__restaurants {
+    grid-template-columns: repeat(4, 24%);
+  }
+
+    .search-box--mobile-wrapper {
+    display: none;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1550px) {
+
+  .search-box--mobile-wrapper {
+    display: none;
+  }
+
+  .main__restaurants {
+    grid-template-columns: repeat(3, 32%);
+  }
+
+}
+
+
+
+
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+  .header__location-delivery-block {
+    display: none;
+  }
+
+  .main__container {
+    margin-top: 0;
+  }
+
+  .main__restaurants {
+    grid-template-columns: repeat(2, 49%);
+  }
+
+  .search-box--mobile {
+    max-width: 49%;
+  }
+
+  .footer__container-stores {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__container-stores-google {
+    margin: 20px 0 0;
+  }
+
+  // .footer__container-about {
+  //   margin-right: 20px;
+  // }
+  // .footer__container-logo {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  .footer__container-logo-photo {
+    margin-bottom: 20px;
+  }
+
+  .footer__container-lower-part-social {
+    display: block;
+  }
+
+  .footer__container-rights-lower {
+    display:none;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+
+  .main__container {
+    margin-top: 0;
+  }
+
+  .search-box {
+    display: flex;
+  }
+
+  .header__location-delivery-block {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .header__sign-in {
+    margin-left: auto;
+  }
+
+  .footer {
+    height: 880px;
+  }
+
+  .footer__container {
+    margin-top: 40px;
+  }
+
+  .footer__container-logo-photo {
+    margin-bottom: 20px;
+  }
+
+  .footer__container-hash {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .footer__container-hash-icon {
+    display: inline-block;
+    color: green;
+  }
+
+  .footer__container-hash-text {
+    display: inline-block;
+    color: #fff;
+  }
+
+  .footer__container-about-list,
+  .footer__container-get-help-list {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .footer__container-about-item,
+  .footer__container-get-help-item {
+    padding: 10px 0;
+  }
+
+  .footer__container-rights-lower-mobile {
+    display: block;
+    margin: 35px 0 ;
+  }
+
+  .footer__container-about-item:first-child {
+    margin-bottom: 0;
+  }
+
+  .footer__container-get-help-item:first-child {
+    margin-bottom: 0;
+  }
+
+  .footer__container-stores {
+    display: none;
+  }
+
+  .footer__container-upper-part {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__container-lower-part-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+  .footer__container-rights-upper {
+    flex-direction: column;
+  }
+
+  .footer__container-stores-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer__container-stores-google {
+    margin: 0;
+  }
+
+  .footer__container-inc{
+      padding: 10px 0;
+  }
+
+  .footer__container-rights-upper{
+    span {
+      padding: 10px 0;
+    }
+  }
+
+  .footer__container-rights-lower{
+    display: none;
+  }
+
+  .footer__container-line-mobile {
+    display: block;
+  }
+
+  .footer__container-line {
+    margin: 12px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
