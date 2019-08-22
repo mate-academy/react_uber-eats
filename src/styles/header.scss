@@ -14,8 +14,9 @@ header {
   align-items: center;
   font-size: $size-16;
   color: $black-color;
+  min-height: 80px;
 
-  padding: $padding-header 0;
+  padding: 0 $padding-container;
   max-width: 1400px;
   margin: 0 auto;
 
@@ -35,10 +36,16 @@ header {
     display: flex;
   }
 
+  &-location-and-time {
+    display: flex;
+    align-items: center;
+  }
+
   &-location {
     &__svg {
       width: 19px;
       margin-right: 13px;
+      top: 17%;
     }
 
     &__city {
@@ -61,7 +68,6 @@ header {
         flex: 1;
         max-width: 540px;
         background-color: $input-color;
-        border-bottom: 1px solid;
       }
 
       &-choice {
@@ -79,14 +85,14 @@ header {
       &-close {
         padding-left: $padding-btn-close;
         background-color: $input-color;
-        border-left: 1px solid $border-btn-close;
+        border-left: 1px solid $border-btn;
       }
     }
 
   }
 
   &-time {
-    padding: $padding-top-bottom $padding-left-right;
+    padding: 0 $padding-left-right;
 
     &__deliver {
       display: flex;
@@ -104,17 +110,19 @@ header {
         height: 36px;
         padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
         border: 0;
+        border-bottom: 2px solid transparent;
         background: #fff;
         font-size: $size-16;
+        -webkit-appearance: none;
+        font-family: Roboto, sans-serif;
+        cursor: pointer;
 
-        &--array {
-          position: relative;
-
-          &:focus {
-            background-color: $input-color;
-            border: 0;
-          }
+        &:focus,
+        &:hover {
+          background-color: $input-color;
+          border-bottom: 2px solid;
         }
+
       }
 
       &:focus {
@@ -128,38 +136,21 @@ header {
     display: flex;
     align-items: center;
 
-    &-filter {
-      margin-right: 24px;
-
-      &-search {
-        display: flex;
-        position: relative;
-        font-size: $size-16;
-        padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
-        background: transparent;
-
-        &--hidden {
-          display: none;
-        }
-
-        &--form {
-          background-color: $input-color;
-          border-bottom: 2px solid;
-        }
-      }
-
-      &-input {
-        background-color: $input-color;
-      }
-
-      &-close {
-        background-color: $input-color;
-      }
-    }
-
     &-registration {
       color: $black-color;
       font-size: $size-16;
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header-location-and-time {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__action-filter {
+    display: none;
   }
 }

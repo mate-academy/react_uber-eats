@@ -1,0 +1,49 @@
+@import "variables";
+
+.filter {
+  margin-right: 24px;
+
+  &__search {
+    display: flex;
+    position: relative;
+    font-size: $size-16;
+    padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+
+    &--hidden {
+      display: none;
+    }
+
+    &--form {
+      background-color: $input-color;
+      border-bottom: 2px solid;
+    }
+  }
+
+  &__input {
+    background-color: $input-color;
+  }
+
+  &__close {
+    background-color: $input-color;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filter {
+    margin: 0;
+
+    &__close {
+      padding: 0;
+    }
+
+    &__search {
+      width: calc(100% - #{$padding-container});
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+}

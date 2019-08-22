@@ -65,7 +65,14 @@ class HomePage extends React.Component {
           filterValue={filterValue}
           onHandlerFilter={this.onHandlerFilter}
         />
-        <MainHomePage stores={storesToShow} />
+        <MainHomePage
+          stores={storesToShow}
+          locationValue={locationValue}
+          onHandlerChangeLocation={this.onHandlerChangeLocation}
+          onClearLocation={this.onClearLocation}
+          filterValue={filterValue}
+          onHandlerFilter={this.onHandlerFilter}
+        />
         <Footer />
       </>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-class ActionsOnHomePage extends React.Component {
+class LocationAndTime extends React.Component {
   state = {
     locationChoice: false,
   };
@@ -11,7 +11,6 @@ class ActionsOnHomePage extends React.Component {
       locationChoice: !state.locationChoice,
     }));
   };
-
 
   render() {
     const { locationChoice } = this.state;
@@ -24,6 +23,7 @@ class ActionsOnHomePage extends React.Component {
     return (
       <>
         <div className="header-location">
+          <span className="main__header-description">When</span>
           <button
             type="button"
             onClick={this.handlerChoiceLocation}
@@ -70,18 +70,19 @@ class ActionsOnHomePage extends React.Component {
           </form>
         </div>
         <div className="header-time">
+          <span className="main__header-description">To</span>
           <label
             htmlFor="time-deliver"
             className="header-time__deliver"
           >
             <img
               src="./images/clock.svg"
-              className="header-time__deliver-clock"
+              className="header-svg"
               alt="time"
             />
             <select
               id="time-deliver"
-              className="header-time__deliver-choice header-time__deliver-choice--array"
+              className="header-time__deliver-choice"
             >
               <option
                 className="header-time__deliver-choice"
@@ -104,10 +105,10 @@ class ActionsOnHomePage extends React.Component {
   }
 }
 
-ActionsOnHomePage.propTypes = {
+LocationAndTime.propTypes = {
   locationValue: propTypes.string.isRequired,
   onHandlerChangeLocation: propTypes.func.isRequired,
   onClearLocation: propTypes.func.isRequired,
 };
 
-export default ActionsOnHomePage;
+export default LocationAndTime;
