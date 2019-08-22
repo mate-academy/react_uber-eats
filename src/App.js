@@ -1,41 +1,47 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
-const App = () => (
-  <div className="App">
-    <header className="header">
-      <div className="header__wrapp">
-        <div className="header__logo">
-          <div className="header__logo__uber" />
-          <div className="header__logo__eats" />
-        </div>
-        <form className="header__wrapp__form">
-          <div className="header__wrapper__location">
-            <div className="header__location" />
-            <input
-              type="text"
-              placeholder="Kyiv"
-            />
-          </div>
-          <div className="header__delivery">
-            <div className="header__delivery-img" />
-            <select>
-              <option>Deliver now</option>
-              <option>Schedule for later</option>
-            </select>
-          </div>
-          <div>
-            <div className="header__search" />
-            <input
-              type="text"
-              placeholder="Search"
-            />
-          </div>
-          <button type="submit">Sign in</button>
-        </form>
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+
+// const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2';
+const BASE_URL = 'https://mate-academy.github.io/react_uber-eats/api';
+
+const loadData = async() => {
+  const response = await fetch(
+    `${BASE_URL}/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json`
+  );
+  const result = await response.json();
+
+  return result.data.feedItems.map(item => result.data.storesMap[item.uuid]);
+};
+
+class App extends React.Component {
+  state = {
+    stores: [],
+  }
+
+  async componentDidMount() {
+    const stores = await loadData();
+
+    this.setState({
+      stores,
+    });
+  }
+
+  render() {
+    const { stores } = this.state;
+
+    return (
+      <div className="App">
+        <Header />
+        <Main stores={stores} />
+        <Footer />
+
       </div>
-    </header>
-  </div>
-);
+    );
+  }
+}
 
 export default App;
