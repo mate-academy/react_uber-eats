@@ -2,6 +2,9 @@
 @import "./sass/header.css";
 @import "./sass/footer.css";
 @import "./sass/homePageCatalog.css";
+@import "./sass/mainSection.css";
+@import "./sass/tablet.css";
+@import "./sass/mobileVersion.css";
 
 * {
   margin: 0;

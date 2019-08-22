@@ -1,7 +1,8 @@
 import React from 'react';
 
-import {getRestaurants} from '../api/getDate';
+import { getRestaurants } from '../api/getDate';
 import Loading from './Loading';
+import MainSection from './MainSection';
 
 class HomePage extends React.Component {
   state = {
@@ -30,35 +31,38 @@ class HomePage extends React.Component {
     const { loading, errors, restaurants } = this.state;
 
     return (
-      !errors
-      ? (loading
-        ? (
-        <section class="catalog">
-          {restaurants.map(restaurant =>
+      <main>
+        <MainSection />
+        {!errors
+          ? (loading
+            ? (
+              <section class="catalog">
+                {restaurants.map(restaurant =>
 
-          <article class="catalog__item">
-            <a href="#/" class="catalog__item--image">
-              <img src={restaurant.heroImageUrl} alt="mcdonalds" />
-            </a>
-            <a href="#/" class="catalog__item--name">
-              <h2>{restaurant.title}</h2>
-            </a>
-            <div className="catalog__item--categoria">
-              {restaurant.categories.map(categoria => (
-                <p class="catalog__item--cuisine">{categoria}</p>
-              ))}
-            </div>
-            <p class="catalog__item--delivery-time">
-              {restaurant.etaRange ? restaurant.etaRange.text : '10–30 min'}
-            </p>
-          </article>
+                  <article class="catalog__item">
+                    <a href="#/" class="catalog__item--image">
+                      <img src={restaurant.heroImageUrl} alt="mcdonalds" />
+                    </a>
+                    <a href="#/" class="catalog__item--name">
+                      <h2>{restaurant.title}</h2>
+                    </a>
+                    <div className="catalog__item--categoria">
+                      {restaurant.categories.map(categoria => (
+                        <p class="catalog__item--cuisine">{categoria}</p>
+                      ))}
+                    </div>
+                    <p class="catalog__item--delivery-time">
+                      {restaurant.etaRange ? restaurant.etaRange.text : '10–30 min'}
+                    </p>
+                  </article>
+                )}
+              </section>
+            )
+            : <Loading />
+          ) : (
+            <h1 className="error-title centr">{errors}</h1>
           )}
-        </section>
-        )
-        : <Loading />
-      ) : (
-        <h1 className="error-title centr">{errors}</h1>
-      )
+      </main>
     )
   }
 }

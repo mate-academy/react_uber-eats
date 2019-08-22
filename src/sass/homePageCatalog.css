@@ -1,10 +1,10 @@
- /* stylelint-disable */ 
+/* stylelint-disable */
 .catalog {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-grid-columns: (31.999%)[3];
       grid-template-columns: repeat(3, 31.999%);
   grid-gap: 30px 24px;
