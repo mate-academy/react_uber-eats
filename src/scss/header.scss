@@ -64,7 +64,8 @@
     width: 200px;
   }
 
-  &__location-clear-btn {
+  &__location-clear-btn,
+  &__search-close-btn {
     background-color: rgba(255, 255, 255, 0) !important;
     color: #757575;
   }
@@ -83,6 +84,7 @@
   &__delivery-time,
   &__search-input,
   &__search-btn,
+  &__search-close-btn,
   &__sign-in {
     height: 48px;
     outline: none;
@@ -91,17 +93,21 @@
   &__delivery-time {
     margin-left: 40px;
 
-    padding-left: 46px;
+    padding: 0 16px 0 46px;
 
     background-image: url(img/Group.png);
     background-position: left 16px top 14px;
     background-repeat: no-repeat;
     background-size: 18px;
 
+    border-bottom: 2px solid #fff;
+
     appearance: none;
+
+    transition: all .3s;
   }
 
-  &__delivery-time:focus {
+  &__delivery-time:hover {
     background-color: #F5F5F5 !important;
     border-bottom: 2px solid #000;
   }
@@ -121,11 +127,15 @@
     line-height: 19px;
 
     cursor: pointer;
+    outline: none;
   }
 
   &__search-and-sign-in {
+    width: 50%;
+
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
 
   &__search-input,
@@ -140,18 +150,54 @@
     outline: none;
   }
 
-  &__search-input {
+  &__search {
+    position: relative;
+  }
+
+  &__search-btn {
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+
+  &__search-form {
+    padding: 1px 16px;
     width: 50px;
 
-    background-color: #F5F5F5 !important;
-    border-bottom: 2px solid #000;
-    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
+    margin-left: auto;
 
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: #F5F5F5;
+    border-bottom: 2px solid #000;
+
+    transition: width .2s;
+
+    outline: none;
+  }
+
+  &__search-input {
+    box-sizing: border-box;
+    width: 80%;
+
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
     transition: width .2s;
   }
 
-  &__search-input:focus {
-    width: 240px;
+  &__search-form:focus,
+  &__search-form:focus-within {
+    width: 320px;
+  }
+
+  &__search-close-btn {
+    margin-left: 16px;
+    appearance: none;
+    border: none;
   }
 
   &__sign-in {
@@ -162,4 +208,8 @@
 
     line-height: 48px;
   }
+}
+
+.invisibleItem {
+ visibility: hidden;
 }

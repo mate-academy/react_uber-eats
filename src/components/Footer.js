@@ -117,15 +117,6 @@ const Footer = () => (
                 Pricing
               </a>
             </li>
-            <li>
-              <a href="#up" className="up-button">
-                <img
-                  src="img/arrow.svg"
-                  alt="up"
-                  className="up-button__arrow"
-                />
-              </a>
-            </li>
           </ul>
 
           <ul className="footer__social-networks footer__lists">

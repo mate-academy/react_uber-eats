@@ -3,6 +3,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .header {
+    margin-bottom: 10px;
+  }
+
   .header__delivery,
   .header__location-clear-btn {
     display: none;
