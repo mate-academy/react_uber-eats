@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 /**************************
 parameters
 ***********************/
@@ -9,7 +10,7 @@ $containers-paddings-for-small-screens: 0 5px;
 //End of parameters
 body {
   margin: 0 auto;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*******************************************************************
@@ -114,6 +115,7 @@ product
 ******************************************************/
 .main {
   margin-bottom: 68px;
+  font-family: 'Roboto', sans-serif;
 
   &__container {
     max-width: $containers-max-width;
@@ -144,7 +146,7 @@ product
 }
 
 .search_container {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   line-height: 24px;
   vertical-align: center;
@@ -208,7 +210,6 @@ product
       width: 3px;
       background: #626262;
       display: block;
-      border-radius: 2px;
       margin-right: 3px;
     }
   }
@@ -239,10 +240,6 @@ product
 }
 
 @media (min-width: 1023px) {
-  .hidding__product_details {
-    display: none;
-  }
-
   .catalog {
     &__container {
       grid-template-columns: 1fr 1fr 1fr;
@@ -369,7 +366,6 @@ device
 }
 .adress-delivery .dest_style {
   border: none;
-  border-radius: 2px;
   line-height: 40px;
   text-align: center;
   color: #1d1d1d;
@@ -684,6 +680,7 @@ header
   background: #fff;
   box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
   margin-bottom: 25px;
+  font-family: ro
 }
 .header__container {
   max-width: 956px;
