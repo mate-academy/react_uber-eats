@@ -1,12 +1,112 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-const SearchAndDelivery = () => {
-  const [searchIsActive, setSearch] = useState(false);
-  const [locationIsActive, setLocation] = useState(false);
+import {
+  filterStores,
+  getFilterValue,
+  setLocations,
+  getLocations,
+  setLocationValue,
+  getLocationValue,
+} from '../store';
+
+const SearchAndDelivery = ({
+  search,
+  filterValue,
+  autocompleteLocation,
+  locations,
+  locationValue,
+  changeLocation,
+}) => {
+  const locationCloseRef = useRef();
+  const locationInputRef = useRef();
+  const searchCloseRef = useRef();
+  const searchInputRef = useRef();
+  const URL = 'https://mate-academy.github.io/react_uber-eats/api';
+
+  const handleFocus = inputRef => inputRef.current.focus();
+  const handleBlur = inputRef => inputRef.current.blur();
+
+  useEffect(() => {
+    async function fetchData() {
+      await fetch(`${URL}/locationAutocomplete/${locationValue}.json`)
+        .then(response => response.json())
+        .then(({ data }) => {
+          autocompleteLocation(data);
+        });
+    }
+
+    if (locationValue) {
+      fetchData();
+    }
+  }, [locationValue]);
 
   return (
     <div className="main__search-and-delivery">
       <div className="main__delivery">
+        <form
+          className="form delivery-form"
+          tabIndex="-1"
+          onKeyPress={(event) => {
+            event.preventDefault();
+
+            return event.key === 'Enter'
+              ? handleBlur(locationInputRef)
+              : null;
+          }}
+        >
+          <input
+            type="text"
+            name="delivery-adress"
+            list="location"
+            ref={locationInputRef}
+            value={locationValue}
+            onChange={event => changeLocation(event.target.value)}
+            aria-label="choose delivery adress"
+            className="form__input location__input"
+            placeholder="Location"
+          />
+
+          <button
+            type="button"
+            className={classnames(
+              'form__clear form__btn',
+              { invisibleItem: !locationValue }
+            )}
+            onClick={() => {
+              handleFocus(locationInputRef);
+              changeLocation('');
+            }}
+          >
+            Clear
+          </button>
+
+          <button
+            type="button"
+            ref={locationCloseRef}
+            className="form__btn form__close"
+            onClick={() => {
+              changeLocation('');
+              handleBlur(locationCloseRef);
+            }}
+          >
+            <img src="img/closingCross.svg" alt="CLose" />
+          </button>
+
+          <datalist
+            id="location"
+          >
+            {locations.map(location => (
+              <option
+                key={location.id}
+                value={location.addressLine1}
+              />
+            ))}
+          </datalist>
+        </form>
+
         <select
           name="order-time"
           aria-label="select delivery time"
@@ -16,69 +116,81 @@ const SearchAndDelivery = () => {
           <option value="now">Delivery now</option>
           <option value="plan">Schedule for later</option>
         </select>
-
-        {locationIsActive ? (
-          <form
-            className="header__input-wrapper main__input-wrapper"
-            onKeyPress={event => (
-              event.key === 'Enter' ? setLocation(false) : null
-            )}
-            onBlur={() => setLocation(false)}
-          >
-            <input
-              type="text"
-              name="delivery-adress"
-              autoFocus
-              aria-label="choose delivery adress"
-              className="header__location header__location-input"
-              placeholder="Enter delivery address"
-              defaultValue="London"
-            />
-
-            <button
-              type="button"
-              className="header__location-clear-btn"
-            >
-              Clear
-            </button>
-          </form>
-        ) : (
-          <button
-            type="button"
-            className="header__location header__location-btn main__location-btn"
-            onClick={() => setLocation(true)}
-          >
-            London
-          </button>
-        )}
       </div>
 
       <div className="main__search">
-        {searchIsActive ? (
+        <form
+          className="form search-form"
+          onKeyPress={(event) => {
+            event.preventDefault();
+
+            return event.key === 'Enter'
+              ? handleBlur(searchInputRef)
+              : null;
+          }}
+        >
           <input
-            type="search"
+            type="text"
             name="restaurant-search-field"
-            autoFocus
-            onKeyPress={event => (
-              event.key === 'Enter' ? setSearch(false) : null
-            )}
-            onBlur={() => setSearch(false)}
+            value={filterValue}
+            ref={searchInputRef}
+            onChange={event => search(event.target.value)}
             aria-label="restaurant search field"
-            className="header__search-input main__search-input"
-            placeholder="What are you craving?"
+            className="form__input search__input"
+            placeholder="Search"
           />
-        ) : (
+
           <button
             type="button"
-            className="header__search-btn"
-            onClick={() => setSearch(true)}
+            className={classnames(
+              'form__clear',
+              'form__btn',
+              { invisibleItem: !filterValue }
+            )}
+            onClick={() => {
+              handleFocus(searchInputRef);
+              search('');
+            }}
           >
-            Search
+            Clear
           </button>
-        )}
+
+          <button
+            type="button"
+            ref={searchCloseRef}
+            className="form__btn form__close"
+            onClick={() => {
+              search('');
+              handleBlur(searchCloseRef);
+            }}
+          >
+            <img src="img/closingCross.svg" alt="CLose" />
+          </button>
+        </form>
       </div>
     </div>
   );
 };
 
-export default SearchAndDelivery;
+SearchAndDelivery.propTypes = {
+  search: PropTypes.func.isRequired,
+  filterValue: PropTypes.string.isRequired,
+  autocompleteLocation: PropTypes.func.isRequired,
+  locations: PropTypes.arrayOf(PropTypes.object).isRequired,
+  locationValue: PropTypes.string.isRequired,
+  changeLocation: PropTypes.func.isRequired,
+};
+
+const getData = state => ({
+  filterValue: getFilterValue(state),
+  locations: getLocations(state),
+  locationValue: getLocationValue(state),
+});
+
+const getMethods = dispatch => ({
+  search: value => dispatch(filterStores(value)),
+  autocompleteLocation: locations => dispatch(setLocations(locations)),
+  changeLocation: value => dispatch(setLocationValue(value)),
+});
+
+export default connect(getData, getMethods)(SearchAndDelivery);

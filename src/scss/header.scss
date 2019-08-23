@@ -4,12 +4,14 @@
   height: 80px;
 
   &__wrapper {
-    height: 100%;
+    height: 80px;
+    width: 100%;
+
+    position: fixed;
+    z-index: 10;
 
     padding: 0 80px;
     margin: 0 auto;
-
-    max-width: 1980px;
 
     display: flex;
     justify-content: space-between;
@@ -18,6 +20,28 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
+
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__delivery-time,
+  &__sign-in
+  {
+    margin-left: 20px;
+    padding: 0 16px;
+
+    height: 52px;
+    outline: none;
+    border-bottom: 2px solid #fff !important;
+
+    transition: background-color .3s,  border-bottom .3s;
+  }
+
+  &__delivery-time:hover,
+  &__sign-in:hover {
+    background-color: #F5F5F5 !important;
+    border-bottom: 2px solid #000 !important;
   }
 
   &__logo-and-delivery {
@@ -25,100 +49,17 @@
     align-items: center;
   }
 
-  &__logo {
-    margin-right: 60px;
-  }
-
-
   &__delivery {
     display: flex;
     align-items: center;
-  }
 
-  &__input-wrapper {
-    box-sizing: border-box;
-    display: flex;
-
-    padding-right: 16px;
-
-    background-color: #F5F5F5 !important;
-
-    border-bottom: 2px solid #000;
-    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
-  }
-
-
-  &__location {
-    padding-left: 46px;
-  }
-
-  &__location-input {
-    width: 100px;
-
-    background-color: rgba(255, 255, 255, 0) !important;
-
-    transition: width .2s linear;
-  }
-
-  &__location-input:focus {
-    width: 200px;
-  }
-
-  &__location-clear-btn,
-  &__search-close-btn {
-    background-color: rgba(255, 255, 255, 0) !important;
-    color: #757575;
-  }
-
-  &__location-input,
-  &__location-btn {
-    background-image: url(img/Vector.png);
-    background-position: left 20px top 15px;
-    background-repeat: no-repeat;
-    background-size: 14px;
-
-    outline: none;
-  }
-
-  &__location,
-  &__delivery-time,
-  &__search-input,
-  &__search-btn,
-  &__search-close-btn,
-  &__sign-in {
-    height: 48px;
-    outline: none;
+    margin-left: 60px;
   }
 
   &__delivery-time {
-    margin-left: 40px;
-
     padding: 0 16px 0 46px;
 
-    background-image: url(img/Group.png);
-    background-position: left 16px top 14px;
-    background-repeat: no-repeat;
-    background-size: 18px;
-
-    border-bottom: 2px solid #fff;
-
-    appearance: none;
-
-    transition: all .3s;
-  }
-
-  &__delivery-time:hover {
-    background-color: #F5F5F5 !important;
-    border-bottom: 2px solid #000;
-  }
-
-  &__delivery-time,
-  &__location-btn,
-  &__location-input,
-  &__location-clear-btn,
-  &__search-btn,
-  &__search-input {
-    background-color: #fff;
+    background-color: transparent;
     border: none;
 
     font-family: "Roboto", sans-serif;
@@ -126,8 +67,15 @@
     font-weight: 400;
     line-height: 19px;
 
+    background-image: url(img/Group.png);
+    background-position: left 16px top 14px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+
+    appearance: none;
     cursor: pointer;
-    outline: none;
+
+    transition: all .3s;
   }
 
   &__search-and-sign-in {
@@ -138,78 +86,17 @@
     justify-content: flex-end;
   }
 
-  &__search-input,
-  &__search-btn {
-    padding-left: 46px;
-
-    background-image: url(img/search-loop.svg);
-    background-position: left 16px top 15px;
-    background-repeat: no-repeat;
-    background-size: 18px;
-
-    outline: none;
-  }
-
-  &__search {
-    position: relative;
-  }
-
-  &__search-btn {
-    position: absolute;
-    left: 0;
-    top: 2px;
-  }
-
-  &__search-form {
-    padding: 1px 16px;
-    width: 50px;
-
-    margin-left: auto;
-
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    overflow: hidden;
-
-    background-color: #F5F5F5;
-    border-bottom: 2px solid #000;
-
-    transition: width .2s;
-
-    outline: none;
-  }
-
-  &__search-input {
-    box-sizing: border-box;
-    width: 80%;
-
-    background-color: rgba(0, 0, 0, 0) !important;
-    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
-    transition: width .2s;
-  }
-
-  &__search-form:focus,
-  &__search-form:focus-within {
-    width: 320px;
-  }
-
-  &__search-close-btn {
-    margin-left: 16px;
-    appearance: none;
-    border: none;
-  }
-
   &__sign-in {
-    margin-left: 40px;
+    box-sizing: border-box;
+
+    padding: 0 16px;
+
+    min-width: 90px;
 
     text-decoration: none;
+    text-align: center;
     color: #1F1F1F;
 
     line-height: 48px;
   }
-}
-
-.invisibleItem {
- visibility: hidden;
 }

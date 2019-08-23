@@ -4,11 +4,17 @@
   }
 
   .main__search {
+    position: relative;
     display: block;
     margin-top: 10px;
+    height: 52px;
   }
 
-  .main__search-input:focus {
+  .search-form {
+    width: 50%;
+  }
+
+  .search-form:focus-within {
     width: 100%;
   }
 

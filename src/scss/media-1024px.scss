@@ -3,10 +3,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .header {
-    margin-bottom: 10px;
-  }
-
   .header__delivery,
   .header__location-clear-btn {
     display: none;
@@ -17,14 +13,19 @@
   }
 
   .main__delivery {
+    width: 100%;
     display: flex;
+
   }
 
-  .main__delivery-time,
-  .main__input-wrapper,
-  .main__location-clear-btn {
+  .delivery-form,
+  .main__delivery-time {
     width: 50%;
     margin: 0;
+  }
+
+  .delivery-form:focus-within {
+    width: 100%;
   }
 
   .footer__apps {

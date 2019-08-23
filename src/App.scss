@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -28,9 +29,8 @@ h1 {
 }
 
 @import "./scss/header.scss";
+@import "./scss/header-inputs.scss";
 @import "./scss/delivery.scss";
-@import "./scss/buttons.scss";
-@import "./scss/search-field.scss";
 @import "./scss/card-list.scss";
 @import "./scss/card.scss";
 @import "./scss/footer.scss";

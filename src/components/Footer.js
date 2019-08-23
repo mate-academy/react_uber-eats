@@ -1,5 +1,7 @@
 import React from 'react';
 
+const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2';
+
 const Footer = () => (
   <footer className="footer">
     <div className="footer__wrapper">
@@ -10,7 +12,7 @@ const Footer = () => (
             className="footer__logo"
           >
             <img
-              src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/12c47a69e1022b581a7e823e9bd45466.svg"
+              src={`${IMG_URL}/12c47a69e1022b581a7e823e9bd45466.svg`}
               alt="UberEats"
             />
           </a>
