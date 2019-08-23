@@ -21,7 +21,7 @@
   justify-items: center;
   align-items: center;
   height: 80px;
-  width: 1080px;
+  width: 1280px;
   margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .header-container__logo {
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 .delivery {
@@ -83,7 +83,6 @@
   background-image: url(./img/Group.png);
   background-position: top 10px left 16px;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 
 .header-container__search {
@@ -105,43 +104,52 @@
   margin-left: 30px;
 }
 
-.header-container__singIn:hover {
+.header-container__singIn:hover,
+.header-container__search:hover {
   cursor: pointer;
 }
 
 /*--------- Main Styles ---------*/
 
 .main-container {
-  width: 1080px;
+  width: 1280px;
   margin: 40px auto;
 }
 
-.main-container__city {
-  font-size: 22px;
-  font-weight: normal;
-  margin: 55px 0 15px;
+.loader {
+  text-align: center;
 }
 
 .restaurants-list {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
-  grid-column-gap: 6px;
-  grid-row-gap: 16px;
+  grid-template-columns: repeat(3, 410px);
+  grid-column-gap: 25px;
+  grid-row-gap: 30px;
   margin: 16px 0 80px;
 }
 
 .restaurant-card {
-  width: 320px;
+  width: 410px;
   padding: 0 0 20px;
-}
-
-.restaurant-card:hover {
-  transform: scale(1.05);
-  transition: 0.2s linear;
 }
 
 .text-transform {
   text-transform: uppercase;
+}
+
+.restaurant-card__img {
+  overflow: hidden;
+  width: 410px;
+  height: 240px;
+}
+
+.restaurant-card__img a img {
+  transition: all 1s ease-out;
+}
+
+.restaurant-card__img a img:hover {
+  transform: scale(1.1);
+
 }
 
 .restaurant-card__info {
@@ -151,24 +159,133 @@
 .restaurant-card__kitchen-name {
   font-size: 14px;
   color: #626262;
-  margin: 4px 0;
+  margin: 10px 0;
 }
 
 .restaurant-card__distance {
+  background-color: #f5f5f5;
   font-size: 13px;
+  padding: 5px;
 }
 
 /*--------- Footer Styles ---------*/
 
 footer {
-  position: relative;
   background-color: #262626;
 }
 
-.footer-container {
-  width: 1080px;
+.footer {
+  width: 1280px;
   color: #fff;
   padding: 56px 0 40px;
   margin: 0 auto;
 }
 
+.footer-container {
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 40px;
+}
+
+.footer-container,
+.footer-container__nav {
+  display: flex;
+}
+
+.footer-container__store-buttons {
+  margin-top: 65px;
+}
+
+.footer-container__nav {
+  margin-left: 360px;
+}
+
+.footer-container__nav-block1 {
+  margin-right: 165px;
+}
+
+.footer-container__nav-list {
+  list-style: none;
+}
+
+.footer-container__nav-list li a,
+.footer-container__bottom a {
+  color: #fff;
+  font-style: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.footer-container__nav-list li {
+  margin-bottom: 16px;
+}
+
+.footer-container__nav-list li:first-child {
+  font-weight: 500;
+}
+
+.footer-container__nav-list li a:hover,
+.footer-container__bottom a:hover {
+  text-decoration: underline;
+  color: #C4C4C4;
+}
+
+.appstore {
+  border: none;
+  width: 135px;
+  height: 40px;
+  background: url('./img/appstore.png');
+  margin-right: 15px;
+}
+
+.playmarket {
+  border: none;
+  width: 135px;
+  height: 40px;
+  background: url('./img/playmarket.png');
+}
+
+.appstore:hover,
+.playmarket:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer-container__bottom {
+  display: flex;
+  padding: 40px 0 60px 0;
+}
+
+.social {
+  margin: 0 40px 0 428px;
+}
+
+.social__buttons {
+  margin-top: 55px;
+}
+
+.social__buttons-item {
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+.social__buttons-item:hover {
+  cursor: pointer;
+}
+
+.facebook {
+  background: url('./img/facebook.png');
+}
+
+.twitter {
+  margin: 0 24px;
+  background: url('./img/twitter.png');
+}
+
+.instagram {
+  background: url('./img/instagram.png');
+}
+
+.termsOfUse {
+  margin-right: 73px;
+}

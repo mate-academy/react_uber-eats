@@ -1,119 +1,82 @@
 import React from 'react';
+import Loader from 'react-loader-spinner';
 
-const Main = () => {
-  return (
-    <main>
+const BASE_URL = 'https://mate-academy.github.io/react_uber-eats/api'
+const RESTAURANTS_URL = '/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json';
 
-		<section class="main-container">
+const getRestaurants = async () => {
+  const respons = await fetch(`${BASE_URL}${RESTAURANTS_URL}`);
+  const result = await respons.json();
 
-			<section class="restaurants-list">
+  console.log(result);
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/mac.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name">Макдоналдс</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Бургеры</div>
-						<div class="restaurant-card__distance">25 - 35 Min</div>
-					</div>
-				</div>
+  return result.data.feedItems.map(item => {
+    return result.data.storesMap[item.uuid]
+  });
+}
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/wokwei1.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name text-uppercase">Wokwei</div>
-						<div class="restaurant-card__kitchen-name">₴ • Китайська • Азіатська</div>
-						<div class="restaurant-card__distance">40 - 50 Min</div>
-					</div>
-				</div>
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/yizha.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name text-uppercase">Yizha</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Американська • Бургери • Вулична їжа</div>
-						<div class="restaurant-card__distance">40 - 50 Min</div>
-					</div>
-				</div>
+class Main extends React.Component {
+  state = {
+    restaurants: [],
+    isLoading: true,
+  }
 
-				<div class="restaurant-card">
-					<a href="$">
-						<img src="./img/musafir.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name">Musafir (вул. Саксаганського)</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Близькосхідна</div>
-						<div class="restaurant-card__distance">30 - 40 Min</div>
-					</div>
-				</div>
+  async componentDidMount() {
+    const restaurants = await getRestaurants();
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/wokwei2.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name text-uppercase">Wokwei</div>
-						<div class="restaurant-card__kitchen-name">₴ • Китайська • Азіатська</div>
-						<div class="restaurant-card__distance">40 - 50 Min</div>
-					</div>
-				</div>
+    this.setState({
+      restaurants,
+      isLoading: false,
+    });
+  }
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/milk_bar.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name">Milk Bar</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Десерти • Європейська</div>
-						<div class="restaurant-card__distance">25 - 35 Min</div>
-					</div>
-				</div>
+  render() {
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/mimosa.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name">Mimosa Brooklyn Pizza</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Італійська • Піца • Американська</div>
-						<div class="restaurant-card__distance">15 - 25 Min</div>
-					</div>
-				</div>
+    const { restaurants, isLoading } = this.state;
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/tobe.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name">To Be</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Японська • Азіатська • Суші</div>
-						<div class="restaurant-card__distance">25 - 35 Min</div>
-					</div>
-				</div>
+    return (
+      <main className="main">
 
-				<div class="restaurant-card">
-					<a href="#">
-						<img src="./img/druzi.png" alt="restaurant" class="restaurant-card__img"/>
-					</a>
-					<div class="restaurant-card__info">
-						<div class="restaurant-card__name">Druzi Cafe (вул. Прорізна)</div>
-						<div class="restaurant-card__kitchen-name">₴₴ • Американська • Сучасна європейська • У...</div>
-						<div class="restaurant-card__distance">30 - 40 Min</div>
-					</div>
-				</div>
+        {isLoading && (
+          <Loader
+            type="Oval"
+            color="green"
+            height="50"
+            width="50"
+            className="loader"
+          />
+        )}
 
-			</section>
+      <section className="main-container">
 
-		</section>
+        <section className="restaurants-list">
 
-	</main>
+          {restaurants.map(restaurant => (
+              <div className="restaurant-card">
+                <div className="restaurant-card__img">
+                <a href="#/">
+                  <img src={restaurant.heroImageUrl} alt="Restaurant"/>
+                </a>
+                </div>
 
-  )
+                <div className="restaurant-card__info">
+                  <div className="restaurant-card__name">{restaurant.title}</div>
+                  <div className="restaurant-card__kitchen-name">{restaurant.categories.join(' • ')}</div>
+                  <span className="restaurant-card__distance">{restaurant.etaRange ? restaurant.etaRange.text : '15-20 min'}</span>
+                  <span className="">{restaurant.feedback ? restaurant.feedback.rating : '00'}</span>
+                </div>
+              </div>
+          ))}
+
+        </section>
+
+      </section>
+
+    </main>
+
+    )
+  }
 }
 
 export default Main;
