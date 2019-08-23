@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 
 class Header extends React.Component {
@@ -17,6 +18,8 @@ class Header extends React.Component {
       isSearch: false,
       isDelivered: !this.state.isDelivered,
     })
+
+    document.addEventListener('click', this.handleClickOutside, true);
   }
 
   changeTimeDelivery = (timeDelivery) => {
@@ -32,6 +35,8 @@ class Header extends React.Component {
       isSearch: false,
       isDelivered: false,
     })
+
+    document.addEventListener('click', this.handleClickOutside, true);
   }
 
   handleSearch = () => {
@@ -40,6 +45,20 @@ class Header extends React.Component {
       isLocation: false,
       isDelivered: false,
     })
+
+    document.addEventListener('click', this.handleClickOutside, true);
+  }
+
+  handleClickOutside = (event) => {
+    const domNode = ReactDOM.findDOMNode(this);
+
+    if ((!domNode || !domNode.contains(event.target))) {
+      this.setState({
+        isSearch: false,
+        isLocation: false,
+        isDelivered: false,
+      });
+  }
   }
 
   filterRestaurant = (event) => {
@@ -81,6 +100,7 @@ class Header extends React.Component {
       valueRestaurant,
       timeDelivery,
     } = this.state;
+    console.log(isSearch);
 
     return (
       <header>
