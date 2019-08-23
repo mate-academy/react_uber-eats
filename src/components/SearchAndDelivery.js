@@ -46,16 +46,15 @@ const SearchAndDelivery = ({
   return (
     <div className="main__search-and-delivery">
       <div className="main__delivery">
-        <form
-          className="form delivery-form"
+        <div
+          role="form"
           tabIndex="-1"
-          onKeyPress={(event) => {
-            event.preventDefault();
-
-            return event.key === 'Enter'
+          className="form delivery-form"
+          onKeyPress={event => (
+            event.key === 'Enter'
               ? handleBlur(locationInputRef)
-              : null;
-          }}
+              : null
+          )}
         >
           <input
             type="text"
@@ -105,7 +104,7 @@ const SearchAndDelivery = ({
               />
             ))}
           </datalist>
-        </form>
+        </div>
 
         <select
           name="order-time"
@@ -119,15 +118,15 @@ const SearchAndDelivery = ({
       </div>
 
       <div className="main__search">
-        <form
+        <div
+          role="form"
+          tabIndex="-1"
           className="form search-form"
-          onKeyPress={(event) => {
-            event.preventDefault();
-
-            return event.key === 'Enter'
+          onKeyPress={event => (
+            event.key === 'Enter'
               ? handleBlur(searchInputRef)
-              : null;
-          }}
+              : null
+          )}
         >
           <input
             type="text"
@@ -166,7 +165,7 @@ const SearchAndDelivery = ({
           >
             <img src="img/closingCross.svg" alt="CLose" />
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );

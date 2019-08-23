@@ -55,15 +55,15 @@ const Header = ({
           </a>
 
           <div className="header__delivery">
-            <form
+            <div
+              role="form"
+              tabIndex="-1"
               className="form"
-              onKeyPress={(event) => {
-                event.preventDefault();
-
-                return event.key === 'Enter'
+              onKeyPress={event => (
+                event.key === 'Enter'
                   ? handleBlur(locationInputRef)
-                  : null;
-              }}
+                  : null
+              )}
             >
               <input
                 type="text"
@@ -113,7 +113,7 @@ const Header = ({
                   />
                 ))}
               </datalist>
-            </form>
+            </div>
 
             <select
               name="order-time"
@@ -128,15 +128,15 @@ const Header = ({
         </div>
 
         <div className="header__search-and-sign-in">
-          <form
+          <div
+            role="form"
+            tabIndex="-1"
             className="header__search form"
-            onKeyPress={(event) => {
-              event.preventDefault();
-
-              return event.key === 'Enter'
+            onKeyPress={event => (
+              event.key === 'Enter'
                 ? handleBlur(searchInputRef)
-                : null;
-            }}
+                : null
+            )}
           >
             <input
               type="text"
@@ -176,7 +176,7 @@ const Header = ({
             >
               <img src="img/closingCross.svg" alt="CLose" />
             </button>
-          </form>
+          </div>
 
           <a href="/react_uber-eats" className="header__sign-in">
             Sing in
