@@ -1,17 +1,36 @@
 import React from 'react';
+import classnames from 'classnames';
 
 class Header extends React.Component {
   state = {
     isLocation: false,
     isSearch: false,
-    valueTextInput : 'Google',
-    valueRestaurant : '',
+    isDelivered: false,
+    valueTextInput: 'Google',
+    valueRestaurant: '',
+    timeDelivery:'Deliver now',
+  }
+
+  handleDelivery = () => {
+    this.setState({
+      isLocation: false,
+      isSearch: false,
+      isDelivered: !this.state.isDelivered,
+    })
+  }
+
+  changeTimeDelivery = (timeDelivery) => {
+    this.setState({
+      timeDelivery,
+      isDelivered: !this.state.isDelivered,
+    })
   }
 
   handleLocation = () => {
     this.setState({
       isLocation: !this.state.isLocation,
       isSearch: false,
+      isDelivered: false,
     })
   }
 
@@ -19,11 +38,12 @@ class Header extends React.Component {
     this.setState({
       isSearch: !this.state.isSearch,
       isLocation: false,
+      isDelivered: false,
     })
   }
 
   filterRestaurant = (event) => {
-    const {value} = event.target;
+    const { value } = event.target;
 
     this.setState({
       valueRestaurant: value,
@@ -40,21 +60,27 @@ class Header extends React.Component {
 
   clearText = () => {
     this.setState({
-      valueTextInput : '',
+      valueTextInput: '',
     })
   }
 
   clearTextRestaurant = () => {
     this.setState({
-      valueRestaurant : '',
+      valueRestaurant: '',
     })
 
     this.props.searchRestaurant('');
   }
 
   render() {
-    const { isLocation, isSearch, valueTextInput, valueRestaurant } = this.state;
-    console.log(isLocation);
+    const {
+      isLocation,
+      isSearch,
+      isDelivered,
+      valueTextInput,
+      valueRestaurant,
+      timeDelivery,
+    } = this.state;
 
     return (
       <header>
@@ -103,64 +129,84 @@ class Header extends React.Component {
                 )}
 
               <div className="header__dropdown">
-                <select className="header__dropdown-select">
-                  <option class="header__dropdown-child">
-                    Deliver now
-                </option>
-                  <option className="header__dropdown-child">
-                    Schedule for later
-                </option>
-                </select>
-              </div>
-              </div>
-            </form>
-
-            <div className="header__auth">
-              {!isSearch ? (
-                <button onClick={this.handleSearch}>
-                  <div className="header__button">
-                    <img src="images/icons/search.svg" alt='map-marker'></img>
-                    <span>Search</span>
+                <button onClick={this.handleDelivery}>
+                  <div className={classnames({
+                    "header__button": true,
+                    "header__active": isDelivered,
+                  })}
+                  >
+                    <img src="images/icons/time.svg" alt='map-marker'></img>
+                    <span>{timeDelivery}</span>
                   </div>
-                </button>) : (
-                  <div className="header__location-input">
-                    <div>
-                      <img src="images/icons/search.svg" alt='map-marker'></img>
-                      <input
-                        onChange={this.filterRestaurant}
-                        type="text"
-                        name="userQuery"
-                        placeholder="What would you like?"
-                        value={valueRestaurant}
-                      />
-                    </div>
-                    <button
-                      onClick={this.clearTextRestaurant}
-                      type="button"
-                    >
-                      Clear
+                </button>
+
+                {isDelivered ? (
+                  <div className="header__dropdown-child" >
+                    <button onClick={() => this.changeTimeDelivery('Deliver now')}>
+                      <div className="header__button">
+                        <img src="images/icons/time.svg" alt='map-marker'></img>
+                        <span>Deliver now</span>
+                      </div>
                     </button>
-                    <div className="header__vertical-line"></div>
-                    <button
-                      onClick={this.handleSearch}
-                      type="button"
-                    >
-                      <img src="images/icons/close.svg" alt='map-marker'></img>
+                    <button onClick={() => this.changeTimeDelivery('Schedule for later')}>
+                      <div className="header__button">
+                        <img src="images/icons/calendar.svg" alt='map-marker'></img>
+                        <span>Schedule for later</span>
+                      </div>
                     </button>
                   </div>
-                )}
+                ) : ('')}
 
-              <a href="#/"
-                class="header__button--auth"
-              >
-                Sign In
-          </a>
+              </div>
             </div>
+          </form>
+
+          <div className="header__auth">
+            {!isSearch ? (
+              <button onClick={this.handleSearch}>
+                <div className="header__button">
+                  <img src="images/icons/search.svg" alt='map-marker'></img>
+                  <span>Search</span>
+                </div>
+              </button>) : (
+                <div className="header__location-input">
+                  <div>
+                    <img src="images/icons/search.svg" alt='map-marker'></img>
+                    <input
+                      onChange={this.filterRestaurant}
+                      type="text"
+                      name="userQuery"
+                      placeholder="What would you like?"
+                      value={valueRestaurant}
+                    />
+                  </div>
+                  <button
+                    onClick={this.clearTextRestaurant}
+                    type="button"
+                  >
+                    Clear
+                    </button>
+                  <div className="header__vertical-line"></div>
+                  <button
+                    onClick={this.handleSearch}
+                    type="button"
+                  >
+                    <img src="images/icons/close.svg" alt='map-marker'></img>
+                  </button>
+                </div>
+              )}
+
+            <a href="#/"
+              class="header__button--auth"
+            >
+              Sign In
+          </a>
+          </div>
 
         </div>
       </header>
-        )
-      }
-    }
+    )
+  }
+}
 
-    export default Header;
+export default Header;

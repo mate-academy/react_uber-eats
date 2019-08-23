@@ -9,12 +9,14 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    text-decoration: none;
   }
 
   &__item--image {
     width: 100%;
     height: 240px;
     transition: transform .5s;
+    z-index: 0;
   }
 
   &__item--image img {
@@ -68,6 +70,7 @@
     padding: 2px 8px;
     margin-top: 8px;
     background: #F5F5F5;
+    color: #111;
     width: fit-content;
   }
 }

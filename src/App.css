@@ -23,6 +23,10 @@ body {
   outline-offset: 0;
 }
 
+button {
+  padding: 0;
+}
+
 .arrow-to-top {
   display: block;
   position: fixed;

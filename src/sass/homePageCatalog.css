@@ -1,4 +1,4 @@
-/* stylelint-disable */ 
+ /* stylelint-disable */ 
 .catalog {
   display: -ms-grid;
   display: grid;
@@ -21,6 +21,7 @@
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  text-decoration: none;
 }
 
 .catalog__item--image {
@@ -30,6 +31,7 @@
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
+  z-index: 0;
 }
 
 .catalog__item--image img {
@@ -87,6 +89,7 @@
   padding: 2px 8px;
   margin-top: 8px;
   background: #F5F5F5;
+  color: #111;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

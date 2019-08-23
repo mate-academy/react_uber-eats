@@ -53,13 +53,13 @@ class HomePage extends React.Component {
               <section class="catalog">
                 {filterRestaurants.map(restaurant =>
 
-                  <article class="catalog__item">
-                    <a href="#/" class="catalog__item--image">
+                  <a href="#/" class="catalog__item">
+                    <div href="#/" class="catalog__item--image">
                       <img src={restaurant.heroImageUrl} alt="mcdonalds" />
-                    </a>
-                    <a href="#/" class="catalog__item--name">
+                    </div>
+                    <div href="#/" class="catalog__item--name">
                       <h2>{restaurant.title}</h2>
-                    </a>
+                    </div>
                     <div className="catalog__item--categoria">
                       {restaurant.categories.map(categoria => (
                         <p class="catalog__item--cuisine">{categoria}</p>
@@ -68,7 +68,7 @@ class HomePage extends React.Component {
                     <p class="catalog__item--delivery-time">
                       {restaurant.etaRange ? restaurant.etaRange.text : '10–30 min'}
                     </p>
-                  </article>
+                  </a>
                 )}
               </section>
                <Footer />
