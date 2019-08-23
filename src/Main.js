@@ -3,7 +3,6 @@ import React from 'react';
 const Main = ({ stores }) => (
 
   <main className="main">
-      {console.log(stores)}
     {stores.map(store => (
       <div className="single-card">
         <div className="card-image">
