@@ -100,12 +100,11 @@ class Header extends React.Component {
       valueRestaurant,
       timeDelivery,
     } = this.state;
-    console.log(isSearch);
 
     return (
       <header>
         <div class="header__top">
-          <form>
+          <div>
             <div className="header__location-section">
               <a href="#" >
                 <img
@@ -121,7 +120,7 @@ class Header extends React.Component {
                     <span>London</span>
                   </div>
                 </button>) : (
-                  <div className="header__location-input">
+                  <form className="header__location-input">
                     <div>
                       <img src="images/icons/location.svg" alt='map-marker'></img>
                       <input
@@ -145,7 +144,7 @@ class Header extends React.Component {
                     >
                       <img src="images/icons/close.svg" alt='map-marker'></img>
                     </button>
-                  </div>
+                  </form>
                 )}
 
               <div className="header__dropdown">
@@ -179,7 +178,7 @@ class Header extends React.Component {
 
               </div>
             </div>
-          </form>
+          </div>
 
           <div className="header__auth">
             {!isSearch ? (
@@ -189,7 +188,7 @@ class Header extends React.Component {
                   <span>Search</span>
                 </div>
               </button>) : (
-                <div className="header__location-input">
+                <form className="header__location-input">
                   <div>
                     <img src="images/icons/search.svg" alt='map-marker'></img>
                     <input
@@ -213,7 +212,7 @@ class Header extends React.Component {
                   >
                     <img src="images/icons/close.svg" alt='map-marker'></img>
                   </button>
-                </div>
+                </form>
               )}
 
             <a href="#/"
