@@ -675,13 +675,16 @@ input[class=main-content__search-form] {
 /*******************************************************************
 header
 ******************************************************/
+
+
 .header {
   height: 72px;
   background: #fff;
   box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
   margin-bottom: 25px;
-  font-family: ro
+  font-family: Roboto, sans-serif;
 }
+
 .header__container {
   max-width: 956px;
   padding: 0 5px;

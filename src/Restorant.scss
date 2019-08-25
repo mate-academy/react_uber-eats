@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+.n__header {
+  display: grid;
+  grid-template-rows: 80px;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+
+  &__wrapp {
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    padding: 0 90px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    display: block;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 24px;
+  }
+  &__input {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 16px;
+    width: 50px;
+    transition: width 0.3s ease;
+  }
+  &__search_img {
+    margin-right: 13px;
+  }
+  &__local_img {
+    margin-right: 13px;
+  }
+
+  &__form:focus-within {
+    background: rgba(0,0,0,0.05);
+    border-bottom: 2px solid gray;
+  }
+  &__button {
+    padding: 3px;
+    line-height: 0;
+    background: transparent;
+    font-size: 16px;
+    color: #757575;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: none;
+  }
+  &__clear:focus,
+  &__clear:hover,
+  &__close:focus svg path,
+  &__close:hover svg path {
+    fill: #424242;
+    color: #424242;
+    transition: all 0.3s ease;
+  }
+
+  &__input:focus {
+    width: 200px;
+    cursor: initial;
+  }
+
+  &__bulkhead {
+    width: 1px;
+    height: 100%;
+    background: #757575;
+    margin: 0 5px;
+    display: none;
+  }
+
+  &__form:focus-within .n__header__clear, .n__header__form:focus-within .n__header__close,
+  &__form:focus-within .n__header__bulkhead{
+    display: block;
+  }
+  &__adress-delivery__bts {
+    display: flex;
+    align-items: center;
+  }
+  &__adress-delivery__bts img {
+    margin-right: 13px;
+  }
+  &__adress-delivery__destination-details {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    appearance: none;
+    border: none;
+  }
+  &__container__delivery {
+    display: flex;
+  }
+  &__container__serch {
+    display: flex;
+    align-items: center;
+  }
+  &__sign-delivery__button__sign-in {
+    text-decoration: none;
+    color: #000000;
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.scss';
+import { Route, Switch } from 'react-router-dom';
 
-import Header from './Header';
+import NotFoundPage from './NotFoundPage';
+import Restorants from './Restorants';
 import Main from './Main';
-import Footer from './Footer';
 
 // const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2';
 const BASE_URL = 'https://mate-academy.github.io/react_uber-eats/api';
@@ -35,10 +36,32 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header />
-        <Main stores={stores} />
-        <Footer />
-
+        <Switch>
+          <Route
+            path="/food-delivery/"
+            exact
+            render={({ match }) => (
+              <Main
+                key={stores.id}
+                stores={stores}
+              />
+            )}
+          />
+          <Route
+            path="/food-delivery/restourant"
+            exact
+            render={({ match }) => (
+              <Restorants
+                key={stores.id}
+                stores={stores}
+              />
+            )}
+          />
+          <Route
+            path="*"
+            component={NotFoundPage}
+          />
+        </Switch>
       </div>
     );
   }
