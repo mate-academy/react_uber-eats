@@ -11,7 +11,7 @@ const RestaurantsList = ({ stores }) => (
         className="card"
       >
         <a
-          href="/react_uber-eats"
+          href="#"
           className="card__link"
         >
           <div className="card__picture-wrapper">

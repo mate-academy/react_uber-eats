@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ScrollUpButton from 'react-scroll-up-button';
+import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -51,19 +52,27 @@ const App = ({ loadStores, stores, filterValue }) => {
     <div className="App">
       <Header />
 
-      <main className="main">
-        <SearchAndDelivery />
+      <Switch>
+        <Route
+          path="/"
+          exact
+          render={() => (
+            <main className="main">
+              <SearchAndDelivery />
 
-        {isLoaded
-          ? (
-            <RestaurantsList
-              stores={filteredStores}
-            />
-          ) : (
-            <div>Loading...</div>
-          )
-        }
-      </main>
+              {isLoaded
+                ? (
+                  <RestaurantsList
+                    stores={filteredStores}
+                  />
+                ) : (
+                  <div>Loading...</div>
+                )
+              }
+            </main>
+          )}
+        />
+      </Switch>
 
       <Footer />
 

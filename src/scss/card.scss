@@ -61,7 +61,7 @@
     align-items: center;
 
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
   }
 
   &__range,
@@ -77,8 +77,8 @@
     display: flex;
   }
 
-  &__star-img {
-    width: 24px;
-    height: 24px;
+  &__star-img img{
+    width: 20px;
+    height: 20px;
   }
 }
