@@ -3,7 +3,8 @@
 .main {
   max-width: 1400px;
   margin: 0 auto;
-  padding: $padding-header+$margin-header+$header-content $padding-container 82px;
+  padding-top: $padding-header+$margin-header+$header-content;
+  padding-bottom: 82px;
 
   &__header {
     display: none;
@@ -60,31 +61,42 @@
   }
 
   .header {
-    &-svg {
-      left: 2px;
-      top: 6px;
+    &__svg--time {
+      left: 16px;
     }
 
-    &-location__city {
-      padding: $padding-top-bottom $padding-left-right $padding-top-bottom 2*$padding-left-right;
-      border: 1px solid $border-btn;
-    }
-
-    &-time {
-      padding-left: 0;
-
-      &__deliver {
-        border: 1px solid $border-btn;
-
-        &-choice {
-          padding: $padding-top-bottom $padding-left-right $padding-top-bottom 40px;
-        }
-      }
+    &__time {
+      padding: 10px 0;
     }
   }
 
   .stores {
     grid: auto-flow/repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .header__form {
+    width: 100%;
+  }
+
+  .header__location-city-choice {
+    &:focus {
+      width: 100%;
+    }
+  }
+
+  .header__time-deliver-choice {
+    padding-left: 38px;
+  }
+
+  .header__svg--time {
+    left: 12px;
   }
 }
 

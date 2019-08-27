@@ -5,7 +5,6 @@ import './styles/header.scss';
 import FilterHomePage from './FilterHomePage';
 import LocationAndTime from './LocationAndTime';
 
-
 const Header = ({
   locationValue,
   onHandlerChangeLocation,
@@ -14,14 +13,14 @@ const Header = ({
   onHandlerFilter,
 }) => (
   <header>
-    <div className="header">
-      <div className="header-logo">
+    <div className="header container">
+      <div className="header__logo">
         <img
           src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/f8f0721f871b3704cce92eb96bc6e504.svg"
           alt="logo Uber Eats"
         />
       </div>
-      <div className="header-location-and-time">
+      <div className="header__location-and-time">
         <LocationAndTime
           locationValue={locationValue}
           onHandlerChangeLocation={onHandlerChangeLocation}

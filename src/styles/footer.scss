@@ -37,7 +37,7 @@ footer a {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $footer-border-row;
-    padding-bottom: $padding-bottom;
+    padding-bottom: $padding-bottom / 2;
     margin-bottom: $margin-row;
 
     &--last {
@@ -165,8 +165,24 @@ footer a {
     }
   }
 
-  &__arrow-to-top {
-    display: none;
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: $arrow-top-color;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 24px;
+    opacity: 0.6;
+
+    &--to-top {
+      right: 16px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -179,10 +195,6 @@ footer a {
 @media screen and (max-width: 1024px) {
   .footer {
     padding-top: 40px;
-
-    &__row-column--info {
-      justify-content: flex-start;
-    }
 
     &__logo {
       margin-bottom: $margin-bottom-mobile;
@@ -216,8 +228,6 @@ footer a {
     }
 
     &__nav-block {
-      width: auto;
-
       &-link {
         margin-bottom: 2*$margin-nav-link;
       }
@@ -225,6 +235,26 @@ footer a {
       &-link--language {
         display: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .footer__row-column--info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__row-column--social-info {
+    align-items: center;
+  }
+
+  .footer__rules {
+    flex-direction: column;
+    margin-left: 25%;
+
+    &-link {
+      margin-bottom: 15px;
     }
   }
 }
@@ -241,7 +271,7 @@ footer a {
         width: 100%;
         margin-bottom: $margin-bottom-mobile;
         border-bottom: 1px solid white;
-        flex-direction: column;
+        align-items: flex-start;
 
         &--social-info {
           margin-bottom: 0;
@@ -258,28 +288,13 @@ footer a {
     }
 
     &__rules {
-      flex-direction: column;
+      margin-left: 0 ;
 
       &-link {
         margin-bottom: $margin-bottom-mobile;
       }
     }
 
-    &__arrow-to-top {
-      display: flex;
-      justify-content: center;
-      width: 80px;
-      height: 80px;
-      background: $arrow-top-color;
-      border-radius: 2px;
-      position: fixed;
-      bottom: 24px;
-      right: 16px;
-      opacity: 0.6;
 
-      &:hover {
-        opacity: 1;
-      }
-    }
   }
 }

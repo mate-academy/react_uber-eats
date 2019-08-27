@@ -22,84 +22,65 @@ class LocationAndTime extends React.Component {
 
     return (
       <>
-        <div className="header-location">
-          <span className="main__header-description">When</span>
-          <button
-            type="button"
-            onClick={this.handlerChoiceLocation}
-            className={locationChoice
-              ? 'header-location__city--hidden'
-              : 'header-location__city header-location__city--btn'}
-          >
-            <div className="header-svg">
-              <img src="./images/location.svg" alt="location" />
+        <form className="header__form">
+          <div className="header__location">
+            <div className="header__svg">
+              <img src="./images/location1.svg" alt="location" />
             </div>
-            <div className="header-location__name">
-              {locationValue}
-            </div>
-          </button>
-          <form className={locationChoice
-            ? 'header-location__city header-location__city--form'
-            : 'header-location__city--hidden'}
-          >
-            <div className="header-svg">
-              <img src="./images/location.svg" alt="location" />
-            </div>
-            <label htmlFor="choice-location">
-              <input
-                className="header-location__city-choice"
-                id="choice-location"
-                value={locationValue}
-                onChange={onHandlerChangeLocation}
-              />
-            </label>
+            <input
+              className="header__location-city-choice"
+              id="choice-location"
+              value={locationValue}
+              placeholder={locationChoice}
+              onChange={onHandlerChangeLocation}
+            />
             <button
-              className="header-location__city-clear"
+              className="header__location-city-clear header__btn"
               type="button"
               onClick={() => onClearLocation}
             >
               Clear
             </button>
             <button
-              className="header-location__city-close"
+              className="header__location-city-close header__btn"
               type="button"
               onClick={this.handlerChoiceLocation}
+              disabled
             >
               <img src="./images/button_close.svg" alt="close" />
             </button>
-          </form>
-        </div>
-        <div className="header-time">
-          <span className="main__header-description">To</span>
-          <label
-            htmlFor="time-deliver"
-            className="header-time__deliver"
-          >
-            <img
-              src="./images/clock.svg"
-              className="header-svg"
-              alt="time"
-            />
+          </div>
+        </form>
+        <form lassName="header__form">
+
+          <div className="header__time">
+            <div className="header__svg header__svg--time">
+              <img
+                src="./images/clock.svg"
+                className="header-svg"
+                alt="time"
+              />
+            </div>
             <select
               id="time-deliver"
-              className="header-time__deliver-choice"
+              className="header__time-deliver-choice"
             >
               <option
-                className="header-time__deliver-choice"
+                className="header__time-deliver-choice"
                 value="now"
                 selected
               >
                 Deliver now
               </option>
               <option
-                className="header-time__deliver-choice"
+                className="header__time-deliver-choice"
                 value="later"
               >
                 Schedule for later
               </option>
             </select>
-          </label>
-        </div>
+          </div>
+        </form>
       </>
     );
   }

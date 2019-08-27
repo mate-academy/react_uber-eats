@@ -14,7 +14,7 @@ const MainHomePage = ({
   filterValue,
   onHandlerFilter,
 }) => (
-  <main className="main">
+  <main className="main container">
     <div className="main__filter">
       <FilterHomePage
         filterValue={filterValue}
@@ -49,7 +49,7 @@ const MainHomePage = ({
 );
 
 MainHomePage.propTypes = {
-  stores: propTypes.arrayOf().isRequired,
+  stores: propTypes.shape().isRequired,
   locationValue: propTypes.string.isRequired,
   onHandlerChangeLocation: propTypes.func.isRequired,
   onClearLocation: propTypes.func.isRequired,

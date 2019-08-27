@@ -3,36 +3,85 @@
 .filter {
   margin-right: 24px;
 
-  &__search {
-    display: flex;
+  &__container {
     position: relative;
-    font-size: $size-16;
-    padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
-    background: transparent;
-    border-bottom: 2px solid transparent;
-
-    &--hidden {
-      display: none;
-    }
-
-    &--form {
-      background-color: $input-color;
-      border-bottom: 2px solid;
-    }
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
   &__input {
-    background-color: $input-color;
+    cursor: pointer;
+    background: transparent;
+    font-size: 16px;
+    width: 60px;
+    transition: width 0.3s ease;
+
+    &::placeholder {
+      color: $black-color;
+    }
+
+    &:focus {
+      width: 200px;
+      cursor: initial;
+    }
   }
 
   &__close {
-    background-color: $input-color;
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid $border-btn;
+  }
+
+  &__btn {
+    padding: 3px;
+    line-height: 0;
+    background: transparent;
+    font-size: 16px;
+    color: #757575;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: none;
+  }
+
+  &__form {
+    border-bottom: 2px solid transparent;
+
+    &:focus-within {
+      background: rgba(0, 0, 0, 0.05);
+      border-bottom: 2px solid;
+      display: block;
+
+      & .filter__close {
+        display: block;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .filter {
+    &__input {
+      &:focus {
+        width: 120px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   .filter {
     margin: 0;
+
+    &__input {
+      &:focus {
+        width: 100%;
+      }
+    }
 
     &__close {
       padding: 0;
@@ -42,8 +91,5 @@
       width: calc(100% - #{$padding-container});
     }
 
-    &__input {
-      width: 100%;
-    }
   }
 }

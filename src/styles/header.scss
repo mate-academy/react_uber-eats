@@ -16,7 +16,6 @@ header {
   color: $black-color;
   min-height: 80px;
 
-  padding: 0 $padding-container;
   max-width: 1400px;
   margin: 0 auto;
 
@@ -24,87 +23,99 @@ header {
     box-sizing: border-box;
   }
 
-  &-svg {
-    position: absolute;
-    width: $width-svg;
-    left: $padding-left-right;
-    z-index: 100;
+  &__svg {
+    width: 20px;
+    margin-right: 6px;
+
+    &--time {
+      position: absolute;
+      left: 25px;
+      margin: auto;
+    }
   }
 
-  &-logo {
+  &__logo {
     width: 120px;
     display: flex;
   }
 
-  &-location-and-time {
+  &__location-and-time {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 30%;
   }
 
-  &-location {
-    &__svg {
-      width: 19px;
-      margin-right: 13px;
-      top: 17%;
-    }
+  &__location {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
 
-    &__city {
-      display: flex;
-      align-items: center;
-      font-size: $size-16;
-      position: relative;
-      padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right+$width-svg+$margin-svg;
-
-      &--hidden {
-        display: none;
-      }
-
-      &--btn {
-        background: transparent;
-        border: none;
-      }
-
-      &--form {
-        flex: 1;
-        max-width: 540px;
-        background-color: $input-color;
-      }
-
+    &-city {
       &-choice {
-        background-color: $input-color;
-        flex: 1;
-        padding: 0;
-        border: 0;
-      }
+        cursor: pointer;
+        background: transparent;
+        font-size: 16px;
+        width: 60px;
+        transition: width 0.3s ease;
 
-      &-clear {
-        color: $gray-input-color;
-        background-color: $input-color;
+        &:focus {
+          width: 200px;
+          cursor: initial;
+        }
       }
 
       &-close {
-        padding-left: $padding-btn-close;
-        background-color: $input-color;
+        width: 24px;
+        height: 24px;
         border-left: 1px solid $border-btn;
       }
     }
-
   }
 
-  &-time {
-    padding: 0 $padding-left-right;
+  &__form {
+    border-bottom: 2px solid transparent;
 
-    &__deliver {
+    &:focus-within {
+      background: rgba(0, 0, 0, 0.05);
+      border-bottom: 2px solid;
+      display: block;
+
+      & .header__location-city-close,
+      & .header__location-city-clear {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 3px;
+    line-height: 0;
+    background: transparent;
+    font-size: 16px;
+    color: #757575;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: none;
+  }
+
+  &__time {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &-deliver {
       display: flex;
       align-items: center;
       position: relative;
-
-      &-clock {
-        width: $width-svg;
-        left: $padding-left-right;
-        position: absolute;
-        z-index: 1;
-      }
 
       &-choice {
         height: 36px;
@@ -122,12 +133,10 @@ header {
           background-color: $input-color;
           border-bottom: 2px solid;
         }
-
       }
 
       &:focus {
         background-color: $input-color;
-
       }
     }
   }
@@ -139,12 +148,14 @@ header {
     &-registration {
       color: $black-color;
       font-size: $size-16;
+      height: 40px;
+      padding: 10px;
     }
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .header-location-and-time {
+  .header__location-and-time {
     display: none;
   }
 }

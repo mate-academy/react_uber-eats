@@ -13,81 +13,92 @@ header {
   font-size: 16px;
   color: #000;
   min-height: 80px;
-  padding: 0 34px;
   max-width: 1400px;
   margin: 0 auto;
 }
 .header * {
   box-sizing: border-box;
 }
-.header-svg {
-  position: absolute;
-  width: 22px;
-  left: 16px;
-  z-index: 100;
+.header__svg {
+  width: 20px;
+  margin-right: 6px;
 }
-.header-logo {
+.header__svg--time {
+  position: absolute;
+  left: 25px;
+  margin: auto;
+}
+.header__logo {
   width: 120px;
   display: flex;
 }
-.header-location-and-time {
+.header__location-and-time {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 30%;
 }
-.header-location__svg {
-  width: 19px;
-  margin-right: 13px;
-  top: 17%;
-}
-.header-location__city {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
+.header__location {
   position: relative;
-  padding: 8px 16px 8px 50px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
 }
-.header-location__city--hidden {
-  display: none;
-}
-.header-location__city--btn {
+.header__location-city-choice {
+  cursor: pointer;
   background: transparent;
-  border: none;
+  font-size: 16px;
+  width: 60px;
+  transition: width 0.3s ease;
 }
-.header-location__city--form {
-  flex: 1;
-  max-width: 540px;
-  background-color: #f5f5f5;
+.header__location-city-choice:focus {
+  width: 200px;
+  cursor: initial;
 }
-.header-location__city-choice {
-  background-color: #f5f5f5;
-  flex: 1;
-  padding: 0;
-  border: 0;
-}
-.header-location__city-clear {
-  color: #757575;
-  background-color: #f5f5f5;
-}
-.header-location__city-close {
-  padding-left: 16px;
-  background-color: #f5f5f5;
+.header__location-city-close {
+  width: 24px;
+  height: 24px;
   border-left: 1px solid #e0e0e0;
 }
-.header-time {
-  padding: 0 16px;
+.header__form {
+  border-bottom: 2px solid transparent;
 }
-.header-time__deliver {
+.header__form:focus-within {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid;
+  display: block;
+}
+.header__form:focus-within .header__location-city-close, .header__form:focus-within .header__location-city-clear {
+  display: block;
+}
+.header__btn {
+  padding: 3px;
+  line-height: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: none;
+}
+.header__time {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.header__time-deliver {
   display: flex;
   align-items: center;
   position: relative;
 }
-.header-time__deliver-clock {
-  width: 22px;
-  left: 16px;
-  position: absolute;
-  z-index: 1;
-}
-.header-time__deliver-choice {
+.header__time-deliver-choice {
   height: 36px;
   padding: 8px 16px 8px 50px;
   border: 0;
@@ -98,11 +109,11 @@ header {
   font-family: Roboto, sans-serif;
   cursor: pointer;
 }
-.header-time__deliver-choice:focus, .header-time__deliver-choice:hover {
+.header__time-deliver-choice:focus, .header__time-deliver-choice:hover {
   background-color: #f5f5f5;
   border-bottom: 2px solid;
 }
-.header-time__deliver:focus {
+.header__time-deliver:focus {
   background-color: #f5f5f5;
 }
 .header__action {
@@ -112,10 +123,12 @@ header {
 .header__action-registration {
   color: #000;
   font-size: 16px;
+  height: 40px;
+  padding: 10px;
 }
 
 @media screen and (max-width: 1024px) {
-  .header-location-and-time {
+  .header__location-and-time {
     display: none;
   }
 }
