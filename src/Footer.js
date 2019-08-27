@@ -2,26 +2,26 @@ import React from 'react';
 
 const Footer = () => (
   <footer className="footer">
-    <div class="footer-content">
-      <div class="footer__logo">
-        <a href="#" class="logo-uber" aria-hidden="true">
+    <div className="footer-content">
+      <div className="footer__logo">
+        <a href="#" className="logo-uber" aria-hidden="true">
           <img src="image/white-logo.svg" alt="Logo uber eats in footer" />
         </a>
       </div>
 
-      <div class="footer__info">
+      <div className="footer__info">
         <div>
-          <select name="" class="footer__info-languages">
+          <select className="footer__info-languages">
             <option value="en">English</option>
             <option value="ua">Українська</option>
             <option value="ru">Русский</option>
           </select>
 
-          <div class="footer__info-socials">
-            <div class="tag-ubereats"><span>#</span>UberEats</div>
-            <a href="#" class="ico-facebk"></a>
-            <a href="#" class="ico-twit"></a>
-            <a href="#" class="ico-inst"></a>
+          <div className="footer__info-socials">
+            <div className="tag-ubereats"><span>#</span>UberEats</div>
+            <a href="#" className="ico-facebk"></a>
+            <a href="#" className="ico-twit"></a>
+            <a href="#" className="ico-inst"></a>
           </div>
         </div>
 
@@ -39,21 +39,19 @@ const Footer = () => (
         </ul>
       </div>
 
-      <div class="footer__download">
-        <a href="#" class="footer__download-app-store"></a>
-        <a href="#" class="footer__download-google-play"></a>
+      <div className="footer__download">
+        <a href="#" className="footer__download-app-store"></a>
+        <a href="#" className="footer__download-google-play"></a>
       </div>
 
-      <div class="footer__bottom">
+      <div className="footer__bottom">
         <span>© 2017 Uber Technologies Inc.</span>
         <a href="#">Privacy</a>
         <a href="#">Terms</a>
       </div>
-
-
     </div>
 
-    <a href="#to-top" class="button-to-up" />
+    <a href="#to-top" className="button-to-up" />
   </footer>
 )
 

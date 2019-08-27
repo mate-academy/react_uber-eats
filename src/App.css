@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -10,21 +14,19 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 80px;
-  grid-template-areas: "Logo Location-delivery Search-login";
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .location-delivery {
-  grid-area: Location-delivery;
-  justify-self: baseline;
+  display: flex;
 }
 
 .search-login {
-  grid-area: Search-login;
-  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 button {
@@ -32,6 +34,46 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+select {
+  outline: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgba(113,113,113);
+}
+
+.inner-delivery select option {
+  padding: 16px 16px;
+}
+
+.inner-delivery select {
+  background: rgb(245, 245, 245);
+}
+
+.delivery-select {
+  padding: 10px;
+  display: inline-block;
+}
+
+.inner::before {
+  content: "";
+  display: inline-block;
+  background: url("/image/group.svg") center no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+.inner-delivery {
+  background: rgb(245, 245, 245);
+  border-bottom: 2px solid black;
 }
 
 .log-in {
@@ -45,27 +87,27 @@ button {
   font-size: 16px;
 }
 
-.location-btn::before {
+.location_icon::before {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 5px;
   content: "";
   height: 24px;
   width: 24px;
   background: url("/image/Vector.svg") center no-repeat;
 }
 
-.delivery-btn::before {
+.delivery_icon::before {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 5px;
   content: "";
   height: 24px;
   width: 24px;
   background: url("/image/group.svg") center no-repeat;
 }
 
-.search-btn::before {
+.search-icon::before {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 5px;
   content: "";
   height: 24px;
   width: 24px;
@@ -79,14 +121,9 @@ button {
   grid-column-gap: 17px;
 }
 
-.card-image {
-  position: relative;
-  cursor: pointer;
-}
-
 .card-image img {
-  width: 100%;
-  height: 300px;
+  max-width: 100%;
+  height: 270px;
 }
 
 p.categories {
@@ -172,7 +209,7 @@ span.closed, span.rating, span.rating-count {
   height: 40px;
   padding-left: 48px;
   border-width: 0;
-  background: #3b3b3b url() 16px center no-repeat;
+  background: #3b3b3b url("/image/Vector.svg") 16px center no-repeat;
   color: #fff;
   font-size: 13px;
   cursor: pointer;
@@ -280,6 +317,89 @@ span.closed, span.rating, span.rating-count {
   width: 60px;
   height: 60px;
   background: #59BD5A url('/image/arrow.svg') center no-repeat;
+}
+
+.form {
+  display: block;
+}
+
+.inner {
+ display: flex;
+ align-items: center;
+ height: 40px;
+ box-sizing: border-box;
+ padding: 10px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  color: rgb(113, 113, 113);
+  font-size: 16px;
+  width: 70px;
+  transition: width 0.3s ease;
+}
+
+.search_img {
+  margin-right: 5px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.form:focus-within {
+  background: rgba(0,0,0,0.05);
+  border-bottom: 2px solid gray;
+}
+
+button {
+  padding: 3px;
+  line-height: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: none;
+}
+
+.svg-one {
+  width: 24px;
+  height: 24px;
+}
+
+button svg path {
+  fill: #757575;
+}
+
+.clear:focus,
+.clear:hover,
+.close:focus svg path,
+.close:hover svg path {
+  fill: #424242;
+  color: #424242;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  width: 200px;
+  cursor: initial;
+}
+
+.bulkhead {
+  width: 1px;
+  height: 100%;
+  background: #757575;
+  margin: 0 5px;
+  display: none;
+}
+
+.form:focus-within .clear, .form:focus-within .close,
+.form:focus-within .bulkhead{
+  display: block;
 }
 
 
