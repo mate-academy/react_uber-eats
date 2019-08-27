@@ -54,7 +54,7 @@ header {
   transition: width 0.3s ease;
 }
 .header__location-city-choice:focus {
-  width: 200px;
+  width: 140px;
   cursor: initial;
 }
 .header__location-city-close {
@@ -99,8 +99,9 @@ header {
   position: relative;
 }
 .header__time-deliver-choice {
-  height: 36px;
+  height: 42px;
   padding: 8px 16px 8px 50px;
+  margin-right: 6px;
   border: 0;
   border-bottom: 2px solid transparent;
   background: #fff;
