@@ -144,4 +144,9 @@
     text-decoration: none;
     color: black;
   }
+
+  &__top button:hover,
+  &__top a:hover {
+    text-decoration: underline;
+  }
 }

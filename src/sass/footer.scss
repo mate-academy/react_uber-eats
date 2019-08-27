@@ -3,18 +3,23 @@
 .footer {
   background: $colorBackgroundFooter;
   margin-top: 80px;
-  padding: 0 8px;
+  padding: 0 80px;
 
   &__section {
-    margin: 0 80px;
+    padding-top: 72px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &__logo {
     height: 116px;
   }
 
-  &__logo img {
-    padding-top: 56px;
+  &__logo-section {
+    display: flex;
+    flex-flow: column;
   }
 
   &__nav {
@@ -30,33 +35,10 @@
     cursor: pointer;
   }
 
-  &__nav-lang::before {
-    content: "";
-    display: block;
-    position: absolute;
-    //background: url(images/icons/world.svg) center no-repeat;
-    width: 16px;
-    height: 16px;
-    top: 12px;
-    left: 16px;
-  }
-
-  &__nav-lang::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background: url('https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/2601cb43facfcd27a8d88d727dce9bb5.svg') center no-repeat;
-    width: 20px;
-    height: 20px;
-    top: 9px;
-    left: 15px;
-    cursor: pointer;
-  }
-
   &__nav-lang-input {
     width: 227px;
     height: 40px;
-    background: #3b3b3b;
+    background: #1F1F1F;
     border: 0;
     border-radius: 2px;
     padding: 12px 48px;
@@ -89,35 +71,58 @@
     align-items: flex-start;
   }
 
-  &__column>a {
-    font-size: 13px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 15px;
-    color: #fff;
-    padding-bottom: 23px;
-    text-decoration: none;
+  &__column img {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
   }
 
-  &__app {
-    display: flex;
-    justify-content: center;
-    margin: 41px 0 39px;
+  &__column > a {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 16px;
+  }
+
+  &__column > a:first-child {
+    padding-bottom: 24px;
+  }
+
+  &__app img{
+    height: 40px;
   }
 
   &__app .gplay {
-    margin-left: 40px;
+    margin-left: 16px;
+  }
+
+  .hr {
+    margin: 40px 0;
+  }
+
+  .hr-mobile {
+    display: none;
   }
 
   &__rights {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-content: center;
-    padding: 40px 0;
-    font-size: 11px;
-    font-weight: normal;
-    line-height: 13px;
     color: #fff;
+    padding-bottom: 70px;
+  }
+
+  &__rights > p {
+    font-size: 14px;
+  }
+
+  &__rights-info {
+    display: flex;
+  }
+
+  &__rights-info > a {
+    padding-right: 40px;
   }
 
   &__rights .link {
@@ -125,11 +130,11 @@
     text-decoration: none;
   }
 
-  &__social {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    background: #fff;
+  &__logo-section-mobile {
+    display: none;
   }
 
+  & a:hover {
+    text-decoration: underline;
+  }
 }

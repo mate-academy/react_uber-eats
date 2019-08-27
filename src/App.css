@@ -28,7 +28,7 @@ button {
 }
 
 .arrow-to-top {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 24px;
   right: 16px;
@@ -40,6 +40,23 @@ button {
   background-image: url(./images/btn-up.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.arrow-displayed {
+  display: block;
+  animation-duration: 800ms;
+  animation-name: slide;
+}
+
+@keyframes slide {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 80px;
+  }
 }
 
 @media (max-width: 639px) {

@@ -1,16 +1,20 @@
 
-  /* stylelint-disable */ 
+  /* stylelint-disable */
   @media (max-width: 980px) {
   .header {
     &__top {
       margin: 28px 70px;
     }
 
-    &__top form button {
+    &__fixed {
       display: none;
     }
 
-    &__fixed {
+    &__dropdown {
+      display: none;
+    }
+
+    &__location-section &__button {
       display: none;
     }
 
@@ -26,7 +30,7 @@
   .main-section {
     &__delivery {
       display: grid;
-      grid-template-columns: 65px 0.5fr;
+      grid-template-columns: 65px 0.6fr;
       grid-gap: 8px 16px;
       margin: 40px 70px;
     }
@@ -49,14 +53,29 @@
     margin: 0 70px;
   }
 
-  .footer__section {
-    margin: 0 40px;
+  .footer__app {
+    display: grid;
   }
 
-  .footer__nav {
-    display: grid;
-    grid-template-columns: 1fr 0.7fr 0.5fr;
-    grid-gap: 50px;
-    padding: 32px 0 40px;
- }
+  .footer__rights > p {
+    font-size: 12px;
+  }
+
+  .footer__app .gplay {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  .footer__column > a {
+    font-size: 13px;
+  }
+
+  .footer__rights-info > a {
+    padding-right: 15px;
+    font-size: 13px;
+  }
+
+  .footer__logo {
+    height: 70px;
+  }
 }

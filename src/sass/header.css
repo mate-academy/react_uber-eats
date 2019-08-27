@@ -176,4 +176,9 @@
   text-decoration: none;
   color: black;
 }
+
+.header__top button:hover,
+.header__top a:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=header.css.map */

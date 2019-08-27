@@ -3,10 +3,13 @@
   .header__top {
     margin: 28px 70px;
   }
-  .header__top form button {
+  .header__fixed {
     display: none;
   }
-  .header__fixed {
+  .header__dropdown {
+    display: none;
+  }
+  .header__location-section .header__button {
     display: none;
   }
   .header__location-section .header__location-input {
@@ -18,8 +21,8 @@
   .main-section__delivery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 65px 0.5fr;
-        grid-template-columns: 65px 0.5fr;
+    -ms-grid-columns: 65px 0.6fr;
+        grid-template-columns: 65px 0.6fr;
     grid-gap: 8px 16px;
     margin: 40px 70px;
   }
@@ -39,16 +42,26 @@
     padding-top: 32px;
     margin: 0 70px;
   }
-  .footer__section {
-    margin: 0 40px;
-  }
-  .footer__nav {
+  .footer__app {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 0.7fr 0.5fr;
-        grid-template-columns: 1fr 0.7fr 0.5fr;
-    grid-gap: 50px;
-    padding: 32px 0 40px;
+  }
+  .footer__rights > p {
+    font-size: 12px;
+  }
+  .footer__app .gplay {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+  .footer__column > a {
+    font-size: 13px;
+  }
+  .footer__rights-info > a {
+    padding-right: 15px;
+    font-size: 13px;
+  }
+  .footer__logo {
+    height: 70px;
   }
 }
 /*# sourceMappingURL=tablet.css.map */
