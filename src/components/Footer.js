@@ -110,6 +110,7 @@ const Footer = () => (
             <li>
               <a href="#to_top_of_page" className="top-button">
                 <img
+
                   alt="button to top of page"
                   className="top-button__arrow"
                 />

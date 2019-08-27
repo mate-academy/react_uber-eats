@@ -72,7 +72,7 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
   }
 
   &__language::before {
-    content: url("/api/img/language-icon.svg")
+    content: url("/image/language-icon.svg")
   }
 
   &__language-link {
@@ -103,17 +103,17 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
 
   &__social-networks-twit {
     margin-right: 16px;
-    content: url("/api/img/twit.svg")
+    content: url("/image/twit.svg");
   }
 
   &__social-networks-fb {
     margin-right: 16px;
-    content: url("/api/img/fb.svg")
+    content: url("/image/fb.svg");
   }
 
   &__social-networks-insta {
     margin-right: 16px;
-    content: url("/api/img/insta.svg")
+    content: url("/image/insta.svg");
   }
 
   &__policy {
@@ -155,6 +155,6 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
   border-radius: 2px;
 
   &__arrow {
-    content: url("/api/img/arrow.png")
+    content: url("/image/arrow.png");
   }
 }
