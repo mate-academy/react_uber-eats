@@ -67,6 +67,7 @@
 
   .header__form {
     width: 100%;
+    margin-bottom: 6px;
   }
 
   .header__location-city-choice:focus {
@@ -88,6 +89,7 @@
 
   .main__filter {
     display: block;
+    margin-bottom: 6px;
   }
 }
 

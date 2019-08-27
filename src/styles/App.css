@@ -42,4 +42,10 @@ input {
   padding: 0 34px;
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 17px;
+  }
+}
+
 /*# sourceMappingURL=App.css.map */
