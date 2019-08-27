@@ -9,6 +9,7 @@ const Footer = () => (
         <div className="footer__logo-and-apps">
           <a
             href="#"
+            onClick={(event) => event.preventDefault()}
             className="footer__logo"
           >
             <img
@@ -19,7 +20,11 @@ const Footer = () => (
 
           <ul className="footer__apps">
             <li>
-              <a href="#" target="_blank">
+              <a
+                href="https://apps.apple.com/app/id1058959277?my_keyword=ubereatscom_iOScta_footer&ref_id=777261344.1566217124&sub1=fa9a652e-6078-41e5-8dcb-cbef03ae9fb2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="img/AppStore.png"
                   alt="appstore logo"
@@ -29,7 +34,11 @@ const Footer = () => (
             </li>
 
             <li>
-              <a target="_blank" href="#">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ubercab.eats&my_keyword=ubereatscom_androidcta_footer&ref_id=777261344.1566217124&sub1=fa9a652e-6078-41e5-8dcb-cbef03ae9fb2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="img/google-play.png"
                   alt="google-play logo"
@@ -43,27 +52,52 @@ const Footer = () => (
         <nav className="footer__additional-info-lists">
           <ul className="footer__additional-info footer__lists">
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://about.ubereats.com/?_ga=2.40393184.377662423.1566629948-777261344.1566217124"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 About Uber Eats
               </a>
             </li>
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://www.ubereats.com/blog/uk-UA/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Read our blog
               </a>
             </li>
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://about.ubereats.com/gift-cards/?_ga=2.44592096.518078225.1566899714-777261344.1566217124"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Buy gift cards
               </a>
             </li>
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://www.uber.com/ua/ru/drive/delivery/?_ga=2.12955635.518078225.1566899714-777261344.1566217124"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Sign up to deliver
               </a>
             </li>
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://www.ubereats.com/restaurant/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Add your restaurant
               </a>
             </li>
@@ -71,23 +105,39 @@ const Footer = () => (
 
           <ul className="footer__additional-info footer__lists">
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://help.uber.com/ubereats"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Get Help
               </a>
             </li>
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://about.ubereats.com/faq/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Read FAQs
               </a>
             </li>
             <li>
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://www.ubereats.com/en-UA/cities/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 View all cities
               </a>
             </li>
             <li className="footer__language">
               <a
                 href="#"
+                onClick={(event) => event.preventDefault()}
                 className="footer__lists-link footer__language-link"
               >
                 English
@@ -105,17 +155,32 @@ const Footer = () => (
         <div className="footer__policy-and-social-networks">
           <ul className="footer__policy-and-terms footer__lists">
             <li className="footer__policy-paragraph">
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://privacy.uber.com/policy/?_ga=2.15183858.518078225.1566899714-777261344.1566217124"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Privacy Policy
               </a>
             </li>
             <li className="footer__policy-paragraph">
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://www.uber.com/legal/terms/gb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Terms of Use
               </a>
             </li>
             <li className="footer__policy-paragraph">
-              <a href="#" className="footer__lists-link">
+              <a
+                href="https://help.uber.com/riders/article/%D1%86%D0%B5%D0%BD%D1%8B-%D0%B2-ubereats-?nodeId=a3e4363b-761f-4acd-a555-1eff290f5ee6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__lists-link"
+              >
                 Pricing
               </a>
             </li>
@@ -123,7 +188,11 @@ const Footer = () => (
 
           <ul className="footer__social-networks footer__lists">
             <li>
-              <a href="#">
+              <a
+                href="https://www.facebook.com/UberEatsUA/?brand_redir=696009167187917"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="img/facebook.svg"
                   alt="link to UberEats' facebook page"
@@ -132,7 +201,11 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="https://twitter.com/ubereats"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="img/twitter.svg"
                   alt="link to UberEats' twitter page"
@@ -141,7 +214,11 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="https://www.instagram.com/ubereats/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="img/instagram.svg"
                   alt="link to UberEats' instagram page"

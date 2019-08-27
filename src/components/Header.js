@@ -49,6 +49,7 @@ const Header = ({
         <div className="header__logo-and-delivery">
           <a
             href="#"
+            onClick={event => event.preventDefault()}
             className="header__logo"
           >
             <img src="img/logo.svg" alt="Uber Eats" />
@@ -178,7 +179,11 @@ const Header = ({
             </button>
           </div>
 
-          <a href="#" className="header__sign-in">
+          <a
+            href="#"
+            onClick={event => event.preventDefault()}
+            className="header__sign-in"
+          >
             Sing in
           </a>
         </div>
