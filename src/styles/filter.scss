@@ -75,11 +75,23 @@
 
 @media screen and (max-width: 480px) {
   .filter {
-    margin: 0;
+    margin: 0 0 20px;
+
+    &__form {
+      border-bottom: 1px solid transparent;
+
+      &:focus-within {
+        border-bottom: 1px solid;
+      }
+    }
 
     &__input {
       &:focus {
         width: 100%;
+      }
+
+      &::placeholder {
+        color: $color-span;
       }
     }
 
@@ -90,6 +102,5 @@
     &__search {
       width: calc(100% - #{$padding-container});
     }
-
   }
 }

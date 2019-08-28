@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts.scss";
 
 body {
   margin: 0;
@@ -13,7 +14,8 @@ a {
 a:focus,
 button:focus,
 input:focus,
-select:focus {
+select:focus,
+form:focus {
   outline: none;
 }
 
@@ -44,8 +46,8 @@ input {
   padding: 0 $padding-container;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .container {
-    padding: 0 $padding-container / 2;
+    padding: 0 $padding-container--mobile;
   }
 }

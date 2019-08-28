@@ -13,7 +13,7 @@ class LocationAndTime extends React.Component {
   };
 
   render() {
-    const { locationChoice } = this.state;
+    const {locationChoice} = this.state;
     const {
       locationValue,
       onHandlerChangeLocation,
@@ -22,65 +22,71 @@ class LocationAndTime extends React.Component {
 
     return (
       <>
-        <form className="header__form">
-          <div className="header__location">
-            <div className="header__svg">
-              <img src="./images/location1.svg" alt="location" />
-            </div>
-            <input
-              className="header__location-city-choice"
-              id="choice-location"
-              value={locationValue}
-              placeholder={locationChoice}
-              onChange={onHandlerChangeLocation}
-            />
-            <button
-              className="header__location-city-clear header__btn"
-              type="button"
-              onClick={() => onClearLocation}
-            >
-              Clear
-            </button>
-            <button
-              className="header__location-city-close header__btn"
-              type="button"
-              onClick={this.handlerChoiceLocation}
-              disabled
-            >
-              <img src="./images/button_close.svg" alt="close" />
-            </button>
-          </div>
-        </form>
-        <form lassName="header__form">
-
-          <div className="header__time">
-            <div className="header__svg header__svg--time">
-              <img
-                src="./images/clock.svg"
-                className="header-svg"
-                alt="time"
+        <div className="main__header-column--location">
+          <span className="main__header-column-description">To</span>
+          <form className="header__form header__form--location">
+            <div className="header__location">
+              <div className="header__svg header__svg--location">
+                <img src="./images/location1.svg" alt="location" />
+              </div>
+              <input
+                className="header__location-city-choice"
+                id="choice-location"
+                value={locationValue}
+                placeholder={locationChoice}
+                onChange={onHandlerChangeLocation}
               />
+              <button
+                className="header__location-city-clear header__btn"
+                type="button"
+                onClick={() => onClearLocation}
+              >
+                Clear
+              </button>
+              <button
+                className="header__location-city-close header__btn"
+                type="button"
+                onClick={this.handlerChoiceLocation}
+                disabled
+              >
+                <img src="./images/button_close.svg" alt="close" />
+              </button>
             </div>
-            <select
-              id="time-deliver"
-              className="header__time-deliver-choice"
-            >
-              <option
+          </form>
+        </div>
+
+        <div className="main__header-column">
+          <span className="main__header-column-description">When</span>
+          <form className="header__form">
+            <div className="header__time">
+              <div className="header__svg header__svg--time">
+                <img
+                  src="./images/clock.svg"
+                  className="header-svg"
+                  alt="time"
+                />
+              </div>
+              <select
+                id="time-deliver"
                 className="header__time-deliver-choice"
-                value="now"
-                selected
               >
-                Deliver now
-              </option>
-              <option
-                className="header__time-deliver-choice"
-                value="later"
-              >
-                Schedule for later
-              </option>
-            </select>
-          </div>
-        </form>
+                <option
+                  className="header__time-deliver-choice"
+                  value="now"
+                  selected
+                >
+                  ASAP
+                </option>
+                <option
+                  className="header__time-deliver-choice"
+                  value="later"
+                >
+                  Later
+                </option>
+              </select>
+            </div>
+          </form>
+        </div>
       </>
     );
   }

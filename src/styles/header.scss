@@ -29,7 +29,7 @@ header {
 
     &--time {
       position: absolute;
-      left: 25px;
+      left: 12px;
       margin: auto;
     }
   }
@@ -37,13 +37,13 @@ header {
   &__logo {
     width: 120px;
     display: flex;
+    flex-grow: 1;
   }
 
   &__location-and-time {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 30%;
+    flex-grow: 2;
   }
 
   &__location {
@@ -108,7 +108,6 @@ header {
     display: flex;
     align-items: center;
     height: 40px;
-    padding: 10px;
     cursor: pointer;
     box-sizing: border-box;
 
@@ -120,7 +119,6 @@ header {
       &-choice {
         height: 42px;
         padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
-        margin-right: 6px;
         border: 0;
         border-bottom: 2px solid transparent;
         background: #fff;
@@ -145,6 +143,8 @@ header {
   &__action {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
 
     &-registration {
       color: $black-color;
@@ -162,6 +162,10 @@ header {
 }
 
 @media screen and (max-width: 480px) {
+  .header {
+    min-height: 60px;
+  }
+
   .header__action-filter {
     display: none;
   }

@@ -14,12 +14,12 @@ const Header = ({
 }) => (
   <header>
     <div className="header container">
-      <div className="header__logo">
+      <a href="#" className="header__logo">
         <img
           src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/f8f0721f871b3704cce92eb96bc6e504.svg"
           alt="logo Uber Eats"
         />
-      </div>
+      </a>
       <div className="header__location-and-time">
         <LocationAndTime
           locationValue={locationValue}

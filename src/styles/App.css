@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff"), url("../fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/Robotomedium.woff2") format("woff2"), url("../fonts/Robotomedium.woff") format("woff"), url("../fonts/Robotomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +23,8 @@ a {
 a:focus,
 button:focus,
 input:focus,
-select:focus {
+select:focus,
+form:focus {
   outline: none;
 }
 
@@ -42,9 +55,9 @@ input {
   padding: 0 34px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .container {
-    padding: 0 17px;
+    padding: 0 20px;
   }
 }
 

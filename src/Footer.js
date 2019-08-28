@@ -53,7 +53,7 @@ class Footer extends React.Component {
                 />
               </a>
 
-              <form className="footer__language footer__language--mobile">
+              <form className="footer__language">
                 <label>
                   <div className="footer__language-svg footer__language-svg--before">
                     <img
@@ -144,17 +144,6 @@ class Footer extends React.Component {
                   className="footer__nav-block-link footer__link"
                 >
                   View all cities
-                </a>
-                <a
-                  href="#"
-                  className="footer__nav-block-link footer__link footer__nav-block-link--language footer__nav-block-link--language-desktop"
-                >
-                  <img
-                    src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/2601cb43facfcd27a8d88d727dce9bb5.svg"
-                    alt="language"
-                    className="footer__nav-block-link--language-img"
-                  />
-                  English
                 </a>
               </div>
             </div>

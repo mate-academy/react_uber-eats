@@ -58,10 +58,19 @@
 }
 @media screen and (max-width: 480px) {
   .filter {
-    margin: 0;
+    margin: 0 0 20px;
+  }
+  .filter__form {
+    border-bottom: 1px solid transparent;
+  }
+  .filter__form:focus-within {
+    border-bottom: 1px solid;
   }
   .filter__input:focus {
     width: 100%;
+  }
+  .filter__input::placeholder {
+    color: #626262;
   }
   .filter__close {
     padding: 0;

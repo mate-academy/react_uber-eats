@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import './styles/restoItem.scss';
 
 const RestoItem = ({ store }) => (
-  <div className="store">
+  <a href="#!" className="store">
     <a href="#!" className="store-images">
       <img src={`${store.heroImageUrl}`} alt="mac" />
     </a>
@@ -16,7 +16,7 @@ const RestoItem = ({ store }) => (
     <div className="store-time">
       {store.etaRange !== null ? store.etaRange.text : 'ASAP'}
     </div>
-  </div>
+  </a>
 );
 
 RestoItem.propTypes = {

@@ -27,21 +27,16 @@ footer a {
     }
   }
 
-  &__language {
-    &--mobile {
-      display: none;
-    }
-  }
-
   &__row {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $footer-border-row;
-    padding-bottom: $padding-bottom / 2;
+    padding-bottom: $padding-bottom;
     margin-bottom: $margin-row;
 
     &--last {
       margin-bottom: 0;
+      border-bottom: 1px solid transparent;
     }
 
     &-column {
@@ -67,14 +62,14 @@ footer a {
   &__logo {
     display: block;
     width: 147px;
-    margin-bottom: 65px;
+    margin-bottom: $margin-row / 2;
   }
 
   &__language {
     max-width: 175px;
     position: relative;
     cursor: pointer;
-    margin-bottom: 33px;
+    margin-bottom: $margin-row / 2;
 
     &-svg {
       position: absolute;
@@ -116,6 +111,11 @@ footer a {
     &-link {
       height: 40px;
       margin-right: 20px;
+
+      &:hover {
+        box-shadow: 0 0 16px rgba(255, 235, 235, 0.66);
+        opacity: 0.8;
+      }
     }
   }
 
@@ -125,17 +125,10 @@ footer a {
     flex-direction: column;
 
     &-link {
-      margin-bottom: $margin-nav-link;
+      margin-bottom: $margin-nav-link * 2;
 
-      &--language {
-        display: flex;
-        align-items: center;
-
-        &-img {
-          width: $width-svg;
-          margin-right: 6px;
-        }
-
+      &--title {
+        font-weight: 500;
       }
     }
   }
@@ -186,18 +179,13 @@ footer a {
   }
 }
 
-@media screen and (max-width: 1224px) {
-  .footer {
-    margin: 0 34px;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .footer {
     padding-top: 40px;
 
-    &__logo {
-      margin-bottom: $margin-bottom-mobile;
+    &__logo,
+    &__language {
+      margin-bottom: $margin-footer;
     }
 
     &__applications {
@@ -221,19 +209,9 @@ footer a {
       display: none;
     }
 
-    &__language {
-      &--mobile {
-        display: block;
-      }
-    }
-
     &__nav-block {
       &-link {
-        margin-bottom: 2*$margin-nav-link;
-      }
-
-      &-link--language {
-        display: none;
+        margin-bottom: $margin-footer;
       }
     }
   }
@@ -247,6 +225,7 @@ footer a {
 
   .footer__row-column--social-info {
     align-items: center;
+    border-bottom: 1px solid transparent;
   }
 
   .footer__rules {
@@ -288,13 +267,11 @@ footer a {
     }
 
     &__rules {
-      margin-left: 0 ;
+      margin-left: 0;
 
       &-link {
         margin-bottom: $margin-bottom-mobile;
       }
     }
-
-
   }
 }

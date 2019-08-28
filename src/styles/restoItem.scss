@@ -52,10 +52,16 @@
   }
 
   &-time {
-    font-size: 13px;
+    padding: 2px 8px;
+    background-color: $input-color;
+    font-size: 14px;
+    width: 86px;
+    text-align: center;
+    border-radius: 6px;
   }
 
-  &:hover {
-    background-color: rgba(117, 117, 117, 0.04);
+  &:hover,
+  &:hover .store-name__headline {
+    font-weight: 500;
   }
 }

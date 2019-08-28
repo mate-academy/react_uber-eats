@@ -43,10 +43,15 @@
   min-height: 43px;
 }
 .store-time {
-  font-size: 13px;
+  padding: 2px 8px;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  width: 86px;
+  text-align: center;
+  border-radius: 6px;
 }
-.store:hover {
-  background-color: rgba(117, 117, 117, 0.04);
+.store:hover, .store:hover .store-name__headline {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=restoItem.css.map */
