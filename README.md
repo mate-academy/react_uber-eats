@@ -46,7 +46,7 @@ using [this design](https://www.figma.com/file/j2sfk3XSjRf12SC27z0Ykf/Uber-eats-
 - run `npm run lint` to check code style
 - When you finished add correct `homepage` to `package.json` and run `npm run deploy` 
 - Add links to your demo in readme.md.
-  - `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)` - this will be a 
+  - `[DEMO LINK](https://SergGolub89.github.io/react_uber-eats)` - this will be a 
   link to your index.html
 - Commit and push all recent changes.
 - Create `Pull Request` from forked repo `(<branch_name>)` to original repo 
