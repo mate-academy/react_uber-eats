@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  // box-sizing: border-box;
 }
 
 .App {
@@ -42,7 +42,7 @@ body {
   background-size: cover;
   background-position: center center;
       // height: 24px;
-      padding: 0 10px;
+      // padding: 0 10px;
     }
   }
 
@@ -61,7 +61,7 @@ body {
         background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-      padding: 0 10px;
+      // padding: 0 10px;
     }
 
   }
@@ -78,10 +78,10 @@ body {
     &::before {
       content: url('https://hlybchenko.github.io/react_uber-eats/images/search.svg');
       // height: 24px;
-        background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-      padding: 0 10px;
+          background-repeat: no-repeat;
+    background-size: cover;
+     background-position: center center;
+      // padding: 0 10px;
     }
 
   }
@@ -103,6 +103,99 @@ body {
   align-items: center;
   margin: 0 35px;
 }
+
+
+
+
+
+
+
+.form {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner {
+ display: flex;
+ align-items: center;
+ height: 40px;
+ box-sizing: border-box;
+ padding: 10px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  width: 60px;
+  transition: width 0.3s ease;
+}
+
+.search_img {
+  margin-right: 5px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.form:focus-within {
+  background: rgba(0,0,0,0.05);
+  border-bottom: 2px solid gray;
+}
+
+button {
+  padding: 3px;
+  line-height: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: none;
+}
+
+button svg path {
+  fill: #757575;
+}
+
+.clear:focus,
+.clear:hover,
+.close:focus svg path,
+.close:hover svg path {
+  fill: #424242;
+  color: #424242;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  width: 200px;
+  cursor: initial;
+}
+
+.bulkhead {
+  width: 1px;
+  height: 100%;
+  background: #757575;
+  margin: 0 5px;
+  display: none;
+}
+
+.form:focus-within .clear, .form:focus-within .close,
+.form:focus-within .bulkhead{
+  display: block;
+}
+
+
+
+
+
 
 // MAIN // // MAIN // // MAIN // // MAIN //
 
@@ -254,7 +347,8 @@ flex: 1 0 0;
 }
 
 .footer__container-get-help {
-flex: 1 0 0;
+  flex: 1 0 0;
+  padding-left: 15px;
 }
 
 .footer__container-about-list{
@@ -289,7 +383,7 @@ flex: 1 0 0;
 .footer__container-line {
   margin: 40px 0;
   // border:none;
-  color: #F5F5F5;
+  color: #f5eeee;
 }
 
 .footer__container-about-item:first-child {
@@ -338,6 +432,12 @@ flex: 1 0 0;
     cursor: pointer;
   }
 
+  span:hover {
+  text-decoration: underline;
+  }
+
+
+
 }
 
 .footer__container-rights-social-links {
@@ -348,19 +448,25 @@ flex: 1 0 0;
   margin-top: 50px;
 }
 
-.footer__container-rights-social-links-f,
-.footer__container-rights-social-links-t,
-.footer__container-rights-social-links-i {
-  width: 16px;
-  height: 16px;
-  margin-right: 25px;
-  cursor: pointer;
+.footer__container-rights-social-links {
+  &-f,
+  &-t,
+  &-i {
+    width: 16px;
+    height: 16px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+
+  }
+
+  &-f:hover,
+  &-t:hover,
+  &-i:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
 }
-
-
-
-
-
 
 
 
@@ -542,6 +648,7 @@ option {
   cursor: pointer;
 }
 
+
   .main__restaurants {
     grid-template-columns: repeat(1, 99%);
   }
@@ -558,6 +665,8 @@ option {
 
 .footer__container-line-mobile {
   display: none;
+  color: #f5eeee;
+
 }
 
 .footer__container-stores-mobile {
@@ -583,8 +692,157 @@ option {
 
 
 
-@media screen and (min-width: 1550px) {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.restaurant__header {
+  width: 100%;
+  height: 300px;
+  // max-height: 600px;
+  overflow: hidden;
+
+  img {
+    // display: block;
+      // margin: 0 auto;
+      width: 100%;
+  }
+}
+
+
+
+.restaurant__container,
+.restaurant__products {
+  // max-width: 1550px;
+  margin: 0 35px;
+}
+
+.restaurant__nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.restaurant__line {
+margin: 30px auto 40px;
+}
+
+.restaurant__nav-item:last-child {
+padding: 0;
+margin: 0;
+}
+
+.restaurant__nav-item {
+  padding-right: 20px;
+}
+
+.restaurant__nav-item:hover {
+  // line-height: 23px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.restaurant__products {
+  // margin: 35px auto;
+}
+
+.restaurant__products-cards {
+  grid-template-columns: repeat(3, 32%);
+  gap: 40px 20px;
+  display: grid;
+  list-style-type: none;
+  padding: 0;
+}
+
+.restaurant__products-item {
+  display: flex;
+}
+
+
+.restaurant__products-item-info {
+flex:1;
+}
+
+.restaurant__products-item-photo {
+  flex:1;
+  width: 158px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1700px) {
+
+  .header__container,
+  .main__container {
+    width: 1550px;
+    margin: 0 auto;
+
+  }
+
+
+.restaurant__container,
+.restaurant__products {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+
+  .footer__container {
+    width: 1550px;
+    margin: 80px auto;
+  }
+
+  .restaurant__products-cards,
   .main__restaurants {
     grid-template-columns: repeat(4, 24%);
   }
@@ -597,7 +855,7 @@ option {
 
 
 
-@media screen and (min-width: 1024px) and (max-width: 1550px) {
+@media screen and (min-width: 1024px) and (max-width: 1700px) {
 
   .search-box--mobile-wrapper {
     display: none;
@@ -623,6 +881,7 @@ option {
     margin-top: 0;
   }
 
+  .restaurant__products-cards,
   .main__restaurants {
     grid-template-columns: repeat(2, 49%);
   }
@@ -714,6 +973,10 @@ option {
     color: #fff;
   }
 
+  .footer__container-get-help {
+    padding: 0;
+  }
+
   .footer__container-about-list,
   .footer__container-get-help-list {
     margin: 0;
@@ -791,6 +1054,14 @@ option {
   .footer__container-line {
     margin: 12px 0;
   }
+
+
+    .restaurant__products-cards {
+    grid-template-columns: repeat(1, 99%);
+  }
+
+
+
 }
 
 

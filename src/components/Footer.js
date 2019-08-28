@@ -31,7 +31,7 @@ const Footer = () => {
 
           <div className="footer__container-rights-lower-mobile">
             <div className="footer__container-rights-social-links">
-              <a href="/#">
+              <a href="/##">
                 <img
                   className="footer__container-rights-social-links-f"
                   src="https://hlybchenko.github.io/react_uber-eats/images/f.svg"
@@ -39,7 +39,7 @@ const Footer = () => {
                 />
               </a>
 
-              <a href="/#">
+              <a href="/##">
                 <img
                   className="footer__container-rights-social-links-t"
                   src="https://hlybchenko.github.io/react_uber-eats/images/t.svg"
@@ -47,7 +47,7 @@ const Footer = () => {
                 />
               </a>
 
-              <a href="/#">
+              <a href="/##">
                 <img
                   className="footer__container-rights-social-links-i"
                   src="https://hlybchenko.github.io/react_uber-eats/images/i.svg"
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__container-stores">
-            <a href="/#">
+            <a href="/##">
               <img
                 className="footer__container-stores-apple"
                 src="https://hlybchenko.github.io/react_uber-eats/images/apple.svg"
@@ -66,7 +66,7 @@ const Footer = () => {
               />
             </a>
 
-            <a href="/#">
+            <a href="/##">
               <img
                 className="footer__container-stores-google"
                 src="https://hlybchenko.github.io/react_uber-eats/images/google.png"
@@ -104,7 +104,7 @@ const Footer = () => {
       <hr className="footer__container-line" />
 
       <div className="footer__container-stores-mobile">
-        <a href="/#">
+        <a href="/##">
           <img
             className="footer__container-stores-apple"
             src="https://hlybchenko.github.io/react_uber-eats/images/apple.svg"
@@ -112,7 +112,7 @@ const Footer = () => {
           />
         </a>
 
-        <a href="/#">
+        <a href="/##">
           <img
             className="footer__container-stores-google"
             src="https://hlybchenko.github.io/react_uber-eats/images/google.png"
@@ -129,7 +129,7 @@ const Footer = () => {
             <p>© 2019 Uber Technologies Inc.</p>
             <div className="footer__container-lower-part-social">
               <div className="footer__container-rights-social-links">
-                <a href="/#">
+                <a href="/##">
                   <img
                     className="footer__container-rights-social-links-f"
                     src="https://hlybchenko.github.io/react_uber-eats/images/f.svg"
@@ -137,7 +137,7 @@ const Footer = () => {
                   />
                 </a>
 
-                <a href="/#">
+                <a href="/##">
                   <img
                     className="footer__container-rights-social-links-t"
                     src="https://hlybchenko.github.io/react_uber-eats/images/t.svg"
@@ -145,7 +145,7 @@ const Footer = () => {
                   />
                 </a>
 
-                <a href="/#">
+                <a href="/##">
                   <img
                     className="footer__container-rights-social-links-i"
                     src="https://hlybchenko.github.io/react_uber-eats/images/i.svg"
@@ -165,7 +165,7 @@ const Footer = () => {
 
             <div className="footer__container-rights-lower">
               <div className="footer__container-rights-social-links">
-                <a href="/#">
+                <a href="/##">
                   <img
                     className="footer__container-rights-social-links-f"
                     src="https://hlybchenko.github.io/react_uber-eats/images/f.svg"
@@ -173,7 +173,7 @@ const Footer = () => {
                   />
                 </a>
 
-                <a href="/#">
+                <a href="/##">
                   <img
                     className="footer__container-rights-social-links-t"
                     src="https://hlybchenko.github.io/react_uber-eats/images/t.svg"
@@ -181,7 +181,7 @@ const Footer = () => {
                   />
                 </a>
 
-                <a href="/#">
+                <a href="/##">
                   <img
                     className="footer__container-rights-social-links-i"
                     src="https://hlybchenko.github.io/react_uber-eats/images/i.svg"

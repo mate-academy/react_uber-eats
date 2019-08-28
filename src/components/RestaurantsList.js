@@ -1,17 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import getData from '../api/getData';
+import { getData } from '../api/getData';
 
 export default class RestaurantsList extends Component {
   state = {
     restaurants: [],
-    // isLoading: false,
   };
 
   async componentDidMount() {
-    const restaurants = await getData();
+    const HOME_PATH = '/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json';
+
+    const restaurants = await getData(HOME_PATH);
 
     this.setState({ restaurants });
   }
@@ -25,7 +27,7 @@ export default class RestaurantsList extends Component {
 
         <section className="search-box">
           <div className="search-box__search-container">
-            <a className="search-box__search-img" href="#" />
+            <a className="search-box__search-img" href="/#" />
             <form className="search-box__input">
               <input
                 type="text"
@@ -54,7 +56,7 @@ export default class RestaurantsList extends Component {
             </div>
 
             <div className="search-box__delivery-location--mobile">
-              <a className="location-img--mobile" href="#" />
+              <a className="location-img--mobile" href="/#" />
               <label htmlFor="search--mobile">
                 <p>To</p>
                 <input
@@ -76,7 +78,11 @@ export default class RestaurantsList extends Component {
         <ul className="main__restaurants">
           {restaurants.map(restor => (
             <li className="main__restaurants-card" key={restor.uuid}>
-              <a className="main__restaurants-link" href="/#">
+              <Link
+                className="main__restaurants-link"
+                // to={`${restor.slug}`}
+                to="/restaurant"
+              >
                 <div className="main__restaurants-item">
                   <img
                     className="main__restaurants-photo"
@@ -109,7 +115,7 @@ export default class RestaurantsList extends Component {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

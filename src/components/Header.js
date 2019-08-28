@@ -11,20 +11,89 @@ const Header = () => (
     </a>
 
     <div className="header__location-delivery-block">
-      <button type="button" className="header__location">
-        London
-      </button>
+      <div className="header__location">
+        <div className="wrapper">
+          <form action="search" className="form3 form">
+            <div className="inner">
+              <input
+                name="search"
+                type="text"
+                className="input"
+                placeholder="London"
+              />
+              <button type="button" className="clear" disabled>
+                Clear
+              </button>
+              <div className="bulkhead" />
+              <button type="button" className="close" disabled>
+                <svg
+                  style={{ width: '24px', height: '24px' }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
 
-      <button type="button" className="header__delivery-time">
-        Delivery now
-      </button>
+      <div className="header__delivery-time">
+        <div className="wrapper">
+          <form action="search" className="form2 form">
+            <div className="inner">
+              <input
+                name="search"
+                type="text"
+                className="input"
+                placeholder="Delivery now"
+              />
+              <button type="button" className="clear" disabled>
+                Clear
+              </button>
+              <div className="bulkhead" />
+              <button type="button" className="close" disabled>
+                <svg
+                  style={{ width: '24px', height: '24px' }}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <button type="button" className="header__search">
-      Search
-    </button>
+    <div className="header__search">
+      <div className="wrapper">
+        <form action="search" className="form1 form">
+          <div className="inner">
+            <input
+              name="search"
+              type="text"
+              className="input"
+              placeholder="search"
+            />
+            <button type="button" className="clear" disabled>
+              Clear
+            </button>
+            <div className="bulkhead" />
+            <button type="button" className="close" disabled>
+              <svg
+                style={{ width: '24px', height: '24px' }}
+                viewBox="0 0 24 24"
+              >
+                <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-    <a className="header__sign-in" href="/#">
+    <a className="header__sign-in" href="/##">
       Sign in
     </a>
   </div>
