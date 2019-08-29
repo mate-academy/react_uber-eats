@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 1460px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+@import './header';
+@import './main';
+@import './footer';
+@import './viewport';

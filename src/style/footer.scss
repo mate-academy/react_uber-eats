@@ -1,0 +1,127 @@
+.footer {
+  background-color: #262626;
+  margin-top: 80px;
+  padding: 72px 0px 80px;
+
+
+  &__above-line-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__download {
+    display: flex;
+  }
+
+  &__download-icon {
+    margin-top: 65px;
+    height: 40px;
+    width: 135px;
+    margin-right: 16px;
+  }
+
+  &__about-help {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+
+    &:first-child {
+      font-weight: 500px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__language {
+    background: none;
+    border: 1px solid #979797;
+    width: 175px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__language-option {
+    background-color: #262626;
+    width: 175px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__help {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      font-weight: 500px;
+    }
+  }
+
+  &__icon {
+    height: 16px;
+    width: 16px;
+  }
+
+  &__line {
+    margin: 40px 0;
+  }
+
+  &__under-line-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__trade-mark {
+    color: white;
+  }
+
+  &__link-policy {
+    color: white;
+    text-decoration: none;
+
+    &:not(:first-child) {
+      margin-left: 48px;
+    }
+  }
+
+  &__subscribe {
+    margin-top: 56px;
+  }
+
+  &__social-icon {
+    margin-right: 24px;
+  }
+
+  &__top-button {
+    position: fixed;
+    right: 16px;
+    bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #59BD5A;
+    border-radius: 2px;
+  }
+
+  &__top-button-arrow {
+    content: url("../img/arrow.svg");
+  }
+}

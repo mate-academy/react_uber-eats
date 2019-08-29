@@ -1,0 +1,42 @@
+.header {
+  height: 80px;
+  background-color: white;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  @mixin buttonWithIcon($icon) {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 25px;
+    background: url($icon) no-repeat;
+  }
+
+  &__button-location {
+    margin-left: 60px;
+    @include buttonWithIcon("../img/location.svg")
+  }
+
+  &__button-delivery-time {
+    margin-left: 60px;
+    @include buttonWithIcon("../img/delivery.svg")
+  }
+
+  &__button-search {
+    margin-left: auto;
+    @include buttonWithIcon("../img/search.svg")
+  }
+
+  &__sign-in {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+  }
+}
