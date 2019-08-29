@@ -2,6 +2,10 @@
   /* stylelint-disable */
   @media (max-width: 980px) {
   .header {
+    &__logo {
+      margin-right: 34px;
+    }
+
     &__top {
       margin: 28px 70px;
     }
@@ -31,7 +35,7 @@
     &__delivery {
       display: grid;
       grid-template-columns: 65px 0.6fr;
-      grid-gap: 8px 16px;
+      grid-gap: 8px 25px;
       margin: 40px 70px;
     }
 
@@ -51,6 +55,10 @@
     padding: 0;
     padding-top: 32px;
     margin: 0 70px;
+
+    &__all-btn {
+      width: 30%;
+    }
   }
 
   .footer__app {

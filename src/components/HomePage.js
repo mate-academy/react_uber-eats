@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { getRestaurants } from '../api/getDate';
 import Loading from './Loading';
@@ -26,7 +27,7 @@ class HomePage extends React.Component {
       })
     } catch (error) {
       this.setState({
-        errors: 'Phone was not found',
+        errors: 'Restaurants was not found',
       })
     };
   }
@@ -49,11 +50,12 @@ class HomePage extends React.Component {
             ? (
               <>
               <Header searchRestaurant={this.searchRestaurant}/>
-              <MainSection />
-              <section class="catalog">
+              <MainSection searchRestaurant={this.searchRestaurant}/>
+              {filterRestaurants.length > 1 ?
+              (<section class="catalog">
                 {filterRestaurants.map(restaurant =>
 
-                  <a href="#/" class="catalog__item">
+                  <Link to={`/restaurant/${restaurant.uuid}`} className="catalog__item">
                     <div href="#/" class="catalog__item--image">
                       <img src={restaurant.heroImageUrl} alt="mcdonalds" />
                     </div>
@@ -68,9 +70,16 @@ class HomePage extends React.Component {
                     <p class="catalog__item--delivery-time">
                       {restaurant.etaRange ? restaurant.etaRange.text : '10–30 min'}
                     </p>
-                  </a>
+                  </Link>
                 )}
-              </section>
+              </section>) : (
+                <>
+                <div className = "catalog__empty">Your search did not match any</div>
+                <div className = "catalog__empty--secondary-info">Try looking for something else</div>
+                <a class="catalog__all-btn" href="/">View all restaurants</a>
+                </>
+              )
+              }
                <Footer />
                </>
             )

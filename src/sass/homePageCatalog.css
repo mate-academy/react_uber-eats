@@ -1,4 +1,4 @@
-/* stylelint-disable */
+ /* stylelint-disable */
 .catalog {
   display: -ms-grid;
   display: grid;
@@ -93,5 +93,36 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.catalog__empty {
+  color: #000000;
+  text-align: center;
+  margin: 80px 0 18px;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.catalog__empty--secondary-info {
+  text-align: center;
+  font-size: 16px;
+  color: #3d3c3c;
+}
+
+.catalog__all-btn {
+  background: #3e9920;
+  padding: 12px 24px;
+  font-size: 16px;
+  margin: 24px auto 120px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.catalog__all-btn:hover {
+  background: #2e7916;
 }
 /*# sourceMappingURL=homePageCatalog.css.map */

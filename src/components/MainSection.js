@@ -1,10 +1,14 @@
 import React from 'react';
 
-const MainSection = () => (
+const MainSection = ({ searchRestaurant }) => (
   <>
     <form class="main-section__search" method="GET">
       <label>
-        <input class="main-section__search-field" type="text" placeholder="Search for restaurant or cuisine" />
+        <input
+          onChange={(event) => searchRestaurant(event.target.value)}
+          class="main-section__search-field"
+          type="text"
+          placeholder="Search for restaurant or cuisine" />
       </label>
       <label>
         <input class="main-section__search--button visually-hidden " type="button" value="" />

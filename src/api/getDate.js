@@ -6,3 +6,12 @@ export const getRestaurants = async() => {
 
   return restaurant;
 };
+
+export const getRestaurant = async(uuid) => {
+  const url = `https://mate-academy.github.io/react_uber-eats/api/restaurants/${uuid}.json`;
+
+  const response = await fetch(url);
+  const restaurant = await response.json();
+
+  return restaurant;
+};

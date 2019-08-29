@@ -30,6 +30,25 @@
     grid-template-columns: repeat(1, 100%);
     padding: 0 20px;
     margin: 10px 0 0;
+
+    &__empty {
+      color: #000000;
+      text-align: center;
+      margin: 80px 0 18px;
+      font-size: 21px;
+      line-height: 24px;
+    }
+
+    &__empty--secondary-info {
+      text-align: center;
+      font-size: 13px;
+      color: #3d3c3c;
+    }
+
+    &__all-btn {
+      font-size: 13px;
+      width: 50%;
+    }
   }
 
   .main-section{

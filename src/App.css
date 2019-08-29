@@ -28,35 +28,27 @@ button {
 }
 
 .arrow-to-top {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 24px;
   right: 16px;
-  width: 80px;
-  height: 80px;
+  width: 0;
+  height: 0;
+  opacity: 0;
   background-color: #59bd5a;
   border: none;
   border-radius: 2px;
   background-image: url(./images/btn-up.png);
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.3s linear;
 }
 
 .arrow-displayed {
   display: block;
-  animation-duration: 800ms;
-  animation-name: slide;
-}
-
-@keyframes slide {
-  from {
-    width: 0;
-    height: 0;
-  }
-
-  to {
-    width: 80px;
-  }
+  opacity: 1;
+  width: 80px;
+  height: 80px;
 }
 
 @media (max-width: 639px) {
