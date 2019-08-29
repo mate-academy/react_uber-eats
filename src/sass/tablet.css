@@ -71,5 +71,42 @@
   .footer__logo {
     height: 70px;
   }
+  .restaurant__submenu a {
+    padding-right: 15px;
+    font-size: 13px;
+  }
+  .restaurant__items-catalog {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 14px;
+  }
+  .restaurant__item-catalog--title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .restaurant__item-catalog-info {
+    width: 140px;
+    max-width: 60%;
+  }
+  .restaurant__main-details {
+    top: 30%;
+    left: 20%;
+    width: 100%;
+    max-width: 60%;
+  }
+  .restaurant__main-title {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+  .restaurant__item--adress {
+    display: none;
+  }
+  .restaurant .main-section__heading {
+    display: none;
+  }
+  .restaurant .main-section__delivery {
+    margin: 30px 70px;
+  }
 }
 /*# sourceMappingURL=tablet.css.map */

@@ -6,6 +6,7 @@ import { getRestaurant } from '../api/getDate';
 import Header from './Header';
 import Footer from './Footer';
 import Loading from './Loading';
+import MainSection from './MainSection';
 
 class RestaurantPage extends React.Component {
   state = {
@@ -61,6 +62,7 @@ class RestaurantPage extends React.Component {
             ? (
               <>
                 <Header />
+
                 <section class="restaurant">
                   <div className="restaurant__image">
                     <img src={restaurant.data.heroImageUrls[5].url} />
@@ -88,6 +90,8 @@ class RestaurantPage extends React.Component {
                       </p>
                     </div>
                   </div>
+
+                  <MainSection />
 
                   <section className="restaurant__section">
                     <nav>
@@ -163,7 +167,7 @@ class RestaurantPage extends React.Component {
                                   {restaurant.data.sectionEntitiesMap[selectedMenu][uuid].title}
                                 </div>
                                 <p className="restaurant__item-catalog--details">
-                                  {(restaurant.data.sectionEntitiesMap[selectedMenu][uuid].description).substring(0, 70)}...
+                                  {(restaurant.data.sectionEntitiesMap[selectedMenu][uuid].description).substring(0, 40)}...
                               </p>
                                 <p className="restaurant__item-catalog--price">
                                   £{restaurant.data.sectionEntitiesMap[selectedMenu][uuid].price}

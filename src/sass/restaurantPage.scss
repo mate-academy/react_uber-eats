@@ -108,9 +108,15 @@
 
 &__submenu {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   list-style: none;
   padding: 0;
+}
+
+.restaurant__submenu a:last-child {
+  padding-right: 0;
 }
 
 &__submenu a {
@@ -165,6 +171,10 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 270px;
+  width: 60%;
 }
 
 &__item-catalog--title {

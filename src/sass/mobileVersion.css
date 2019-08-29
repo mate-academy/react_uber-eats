@@ -144,5 +144,71 @@
     display: block;
     margin: 30px 0;
   }
+  .footer .social__buttons {
+    display: none;
+  }
+  .restaurant__menu {
+    height: 60px;
+    white-space: nowrap;
+  }
+  .restaurant__menu-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .restaurant__menu-time-info {
+    font-size: 10px;
+  }
+  .restaurant__image {
+    margin: 0;
+    padding: 0;
+    height: 256px;
+  }
+  .restaurant__item-catalog {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+  }
+  .restaurant__items-catalog {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .restaurant__main-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+  .restaurant .main-section__delivery {
+    margin: 10px 20px;
+  }
+  .restaurant .main-section__search-field {
+    margin-top: 130px;
+  }
+  .restaurant__submenu {
+    display: none;
+  }
+  .restaurant__section {
+    margin: 0 20px;
+  }
+  .restaurant__main-details {
+    top: 200px;
+    left: 5%;
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+  }
+  .restaurant__item-catalog--image {
+    height: 100px;
+    min-width: 100px;
+    width: 100px;
+  }
+  .restaurant__item-catalog--image img {
+    width: 100px;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .restaurant__item-catalog-info {
+    width: 180px;
+    max-width: 80%;
+  }
 }
 /*# sourceMappingURL=mobileVersion.css.map */

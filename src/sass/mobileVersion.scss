@@ -1,6 +1,6 @@
 @media (max-width: 639px) {
   .header {
-    &__top{
+    &__top {
       margin: 0;
       padding: 0 20px;
       min-width: 0;
@@ -50,7 +50,7 @@
     }
   }
 
-  .main-section{
+  .main-section {
     &__search {
       display: block;
       margin: 0 20px;
@@ -142,7 +142,7 @@
       margin: 30px 0;
     }
 
-    &__rights > p {
+    &__rights>p {
       font-size: 13px;
       padding-bottom: 20px;
     }
@@ -161,6 +161,88 @@
     .hr-mobile {
       display: block;
       margin: 30px 0;
+    }
+
+    .social__buttons {
+      display: none;
+    }
+  }
+
+  .restaurant {
+    &__menu {
+      height: 60px;
+      white-space: nowrap;
+    }
+
+    &__menu-title {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__menu-time-info {
+      font-size: 10px;
+    }
+
+    &__image {
+      margin: 0;
+      padding: 0;
+      height: 256px;
+    }
+
+    &__item-catalog {
+      border: none;
+      border-top: 1px solid #E0E0E0;
+    }
+
+    &__items-catalog {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+
+    &__main-title {
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+
+    .main-section__delivery {
+      margin: 10px 20px;
+    }
+
+    .main-section__search-field {
+      margin-top: 130px;
+    }
+
+    &__submenu {
+      display: none;
+    }
+
+    &__section {
+      margin: 0 20px;
+    }
+
+    &__main-details {
+      top: 200px;
+      left: 5%;
+      width: 100%;
+      max-width: 90%;
+      padding: 20px;
+    }
+
+    &__item-catalog--image {
+      height: 100px;
+      min-width: 100px;
+      width: 100px;
+    }
+
+    &__item-catalog--image img {
+      width: 100px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__item-catalog-info {
+      width: 180px;
+      max-width: 80%;
     }
   }
 }
