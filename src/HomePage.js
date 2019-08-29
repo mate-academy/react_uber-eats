@@ -32,8 +32,6 @@ class HomePage extends React.Component {
     });
   }
 
-  componen
-
   onHandlerChangeLocation = (event) => {
     this.setState({
       locationValue: event.target.value,
