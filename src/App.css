@@ -6,6 +6,7 @@
 @import "./sass/mainSection.css";
 @import "./sass/tablet.css";
 @import "./sass/mobileVersion.css";
+@import "./sass/restaurantPage.css";
 
 * {
   margin: 0;

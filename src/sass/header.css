@@ -1,4 +1,4 @@
- /* stylelint-disable */
+/* stylelint-disable */
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,19 +9,19 @@
   margin: 0px 80px;
   height: 80px;
   white-space: nowrap;
-}
-
-.header__fixed {
   position: fixed;
+  top: 0;
+  z-index: 2;
   background-color: white;
   min-width: 964px;
   width: 100%;
   padding: 28px 80px;
   margin: 0 auto;
+}
+
+.header__fixed {
   -webkit-box-shadow: 0px 0px 10px #d6d3d3;
           box-shadow: 0px 0px 10px #d6d3d3;
-  top: 0;
-  z-index: 2;
 }
 
 .header__logo {

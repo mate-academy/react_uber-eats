@@ -7,12 +7,10 @@ import RestaurantPage from './components/RestaurantPage';
 
 const App = () => (
   <HashRouter>
-
     <Switch>
       <Route path="/" exact component={HomePage} />
       <Route path="/restaurant/:uuid" exact component={RestaurantPage} />
     </Switch>
-
   </HashRouter>
 );
 

@@ -5,18 +5,18 @@
     margin: 0px 80px;
     height: 80px;
     white-space: nowrap;
-  }
-
-  &__fixed {
     position: fixed;
+    top: 0;
+    z-index: 2;
     background-color: white;
     min-width: 964px;
     width: 100%;
     padding: 28px 80px;
     margin: 0 auto;
+  }
+
+  &__fixed {
     box-shadow: 0px 0px 10px #d6d3d3;
-    top: 0;
-    z-index: 2;
   }
 
   &__logo {

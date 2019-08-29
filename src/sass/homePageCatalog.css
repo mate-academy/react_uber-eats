@@ -1,4 +1,4 @@
- /* stylelint-disable */
+/* stylelint-disable */
 .catalog {
   display: -ms-grid;
   display: grid;
@@ -9,6 +9,7 @@
       grid-template-columns: repeat(3, 31.5%);
   grid-row-gap: 24px;
   margin: 32px 80px 0;
+  padding-top: 80px;
 }
 
 .catalog__item {
@@ -41,7 +42,7 @@
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
-.catalog__item--image img:hover {
+.catalog__item:hover img {
   -webkit-transform: translate(0, -8px);
           transform: translate(0, -8px);
 }
@@ -98,7 +99,7 @@
 .catalog__empty {
   color: #000000;
   text-align: center;
-  margin: 80px 0 18px;
+  margin: 200px 0 18px;
   font-size: 26px;
   line-height: 32px;
 }

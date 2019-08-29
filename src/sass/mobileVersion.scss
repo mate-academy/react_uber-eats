@@ -1,7 +1,9 @@
 @media (max-width: 639px) {
   .header {
     &__top{
-      margin: 0px 20px;
+      margin: 0;
+      padding: 0 20px;
+      min-width: 0;
     }
 
     &__auth button:first-child {
@@ -11,10 +13,6 @@
     &__logo {
       height: 20px;
       width: auto;
-    }
-
-    &__fixed {
-      display: none;
     }
 
     &__location-input {
@@ -34,20 +32,21 @@
     &__empty {
       color: #000000;
       text-align: center;
-      margin: 80px 0 18px;
-      font-size: 21px;
-      line-height: 24px;
+      margin: 40px 0 18px;
+      font-size: 16px;
+      line-height: 17px;
     }
 
     &__empty--secondary-info {
       text-align: center;
-      font-size: 13px;
+      font-size: 11px;
       color: #3d3c3c;
     }
 
     &__all-btn {
-      font-size: 13px;
-      width: 50%;
+      font-size: 14px;
+      width: 60%;
+      margin: 24px auto 60px;
     }
   }
 
@@ -61,7 +60,7 @@
       font-size: 16px;
       line-height: 24px;
       width: 100%;
-      margin-top: 30px;
+      margin-top: 110px;
       margin-bottom: 20px;
       padding: 8px 0px 16px 30px;
       border: none;
@@ -78,6 +77,7 @@
       grid-template-columns: 65px 1fr;
       grid-gap: 8px 16px;
       padding-bottom: 30px;
+      padding-top: 10px;
       margin: 0 20px;
     }
 

@@ -126,6 +126,7 @@
 
 .footer__column > a:first-child {
   padding-bottom: 24px;
+  font-weight: 800;
 }
 
 .footer__app img {
@@ -152,7 +153,7 @@
   -ms-flex-line-pack: center;
       align-content: center;
   color: #fff;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 }
 
 .footer__rights > p {
@@ -179,6 +180,38 @@
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  opacity: 0.6;
+}
+
+.social__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding-bottom: 80px;
+}
+
+.social__buttons-item {
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+.social__buttons-item:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.facebook {
+  background: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/ccfc8856107f17665b7c82df307d35ee.svg") no-repeat;
+}
+
+.twitter {
+  margin: 0 24px;
+  background: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/db07894edae0a7dde4b9f7477489eb3f.svg") no-repeat;
+}
+
+.instagram {
+  background: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/8c75d9d92274d2f1df48a02f35a7b1f0.svg") no-repeat;
 }
 /*# sourceMappingURL=footer.css.map */

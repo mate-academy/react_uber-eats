@@ -102,7 +102,7 @@ class Header extends React.Component {
     } = this.state;
 
     return (
-      <header>
+      <header id='header'>
         <div class="header__top">
           <div>
             <div className="header__location-section">

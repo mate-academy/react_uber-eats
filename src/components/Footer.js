@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const Footer = () => (
-  <footer class="footer">
+const Footer = () => {
+   return (
+<footer class="footer">
     <section class="footer__section">
 
       <div className="footer__logo-section">
@@ -51,7 +53,7 @@ const Footer = () => (
             <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/cf6dad406fdfdcd290fd40de9008ae50.png" alt="googleplay-icon" />
           </a>
       </div>
-      
+
       <hr class="hr-mobile" />
 
     <div class="footer__rights">
@@ -63,9 +65,26 @@ const Footer = () => (
       </section>
     </div>
 
-    <a href="#" class="arrow-to-top">
-    </a>
+    <div class="social__buttons">
+      <div></div>
+      <div>
+      <button class="facebook social__buttons-item"></button>
+      <button class="twitter social__buttons-item"></button>
+      <button class="instagram social__buttons-item"></button>
+      </div>
+    </div>
+
+    <Link
+      className="arrow-to-top"
+      to="header"
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration= {500}
+    />
+
   </footer>
-)
+   )
+}
 
 export default Footer;
