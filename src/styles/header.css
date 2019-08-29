@@ -50,14 +50,20 @@ header {
   cursor: pointer;
   background: transparent;
   font-size: 16px;
-  width: 60px;
+  width: 130px;
   transition: width 0.3s ease;
 }
 .header__location-city-choice:focus {
-  width: 140px;
+  width: 250px;
   cursor: initial;
 }
+.header__location-city-clear {
+  position: absolute;
+  right: 30px;
+}
 .header__location-city-close {
+  position: absolute;
+  right: 6px;
   width: 24px;
   height: 24px;
   border-left: 1px solid #e0e0e0;

@@ -59,16 +59,23 @@ header {
         cursor: pointer;
         background: transparent;
         font-size: 16px;
-        width: 60px;
+        width: 130px;
         transition: width 0.3s ease;
 
         &:focus {
-          width: 140px;
+          width: 250px;
           cursor: initial;
         }
       }
 
+      &-clear {
+        position: absolute;
+        right: 30px;
+      }
+
       &-close {
+        position: absolute;
+        right: 6px;
         width: 24px;
         height: 24px;
         border-left: 1px solid $border-btn;

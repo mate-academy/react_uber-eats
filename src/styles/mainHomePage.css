@@ -87,14 +87,6 @@
   .header__location-city-choice:focus, .header__location-city-choice:hover {
     width: auto;
   }
-  .header__location-city-close {
-    position: absolute;
-    right: 6px;
-  }
-  .header__location-city-clear {
-    position: absolute;
-    right: 30px;
-  }
   .header__location:focus, .header__location:hover {
     border: 1px solid black;
   }
