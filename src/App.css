@@ -1,1 +1,70 @@
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/daygrid/main.css";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 
+.fc-toolbar h2 {
+  display: none;
+}
+
+.fc-toolbar {
+  justify-content: start;
+  padding: 0;
+}
+
+.fc-button-primary:disabled {
+  color: #3b86ff;
+  background-color: #fff;
+  border: 1px solid #d7dae2;
+  height: 32px;
+  box-shadow: #000 2px Blur 6px;
+  width: 57px;
+}
+
+.fc-button-group button {
+  height: 32px;
+  border: 1px solid #d7dae2;
+  background-color: #fff;
+  color: #3b86ff;
+}
+
+.fc-button-group > .fc-button:not(:last-child) {
+  padding: 0;
+}
+
+.fc-icon-chevron-left:before {
+  content: "Back";
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+}
+
+.fc-button:disabled {
+  opacity: 1;
+}
+
+.fc-icon-chevron-right:before {
+  content: "Next";
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+}
+
+.fc-button .fc-icon {
+  vertical-align: middle;
+  font-size: 16px;
+  width: 57px;
+}
+
+.fc-button-group > .fc-button:not(:first-child) {
+  padding: 0;
+  height: 32px;
+  width: 57.86;
+}
+
+.fc-toolbar > * > :not(:first-child) {
+  margin: 0;
+}
+
+.fc-right {
+  height: 32px;
+  width: 193px;
+}
