@@ -1,5 +1,5 @@
 import React from 'react';
-import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
+import { TinyButton as ScrollUpButton } from 'react-scroll-up-button';
 
 const Footer = () => (
   <footer className="footer">
