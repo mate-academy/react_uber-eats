@@ -2,26 +2,28 @@ import React from 'react';
 
 const Main = ({ stores }) => (
 
-  <main className="main">
-    {stores.map(store => (
-      <a href="#!">
-        <div className="single-card">
-            <img className="card-image" src={store.heroImageUrl} alt={store.slug} />
-          <div className="card-title">{store.title}</div>
-          <div className="rating-duration">
-            <p className="categories">{`${store.categories.join(' • ')}`}</p>
-            <span className="closed">{store.closedMessage}</span>
-            <span className="rating">
-              {store.feedback ? store.feedback.rating : ''}
-            </span>
-            <span className="rating-count">
-              {store.feedback ? `(${store.feedback.ratingCount})` : '0 reviews'}
-            </span>
-          </div>
+  <div className="container-fluid main">
+    <div className="row">
+          {stores.map(store => (
+            <div className="col-12 col-sm-6 col-lg-4 single-card center-block">
+              <a href="#!">
+                <img className="img-fluid card-image rounded shadow-sm" src={store.heroImageUrl} alt={store.slug} />
+                <div className="card-title">{store.title}</div>
+                <div className="rating-duration">
+                  <p className="categories">{`${store.categories.join(' • ')}`}</p>
+                  <span className="closed">{store.closedMessage}</span>
+                  <span className="rating">
+                    {store.feedback ? store.feedback.rating : ''}
+                  </span>
+                  <span className="rating-count">
+                    {store.feedback ? `(${store.feedback.ratingCount})` : '0 reviews'}
+                  </span>
+                </div>
+              </a>
+            </div>
+          ))}
         </div>
-      </a>
-    ))}
-  </main>
+      </div>
 );
 
 export default Main;
