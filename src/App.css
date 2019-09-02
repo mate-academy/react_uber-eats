@@ -100,7 +100,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("/image/Vector.svg") center no-repeat;
+  background: url("image/Vector.svg") center no-repeat;
 }
 
 .delivery_icon::before {
@@ -109,7 +109,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("/image/group.svg") center no-repeat;
+  background: url("image/group.svg") center no-repeat;
 }
 
 .search-icon::before {
@@ -118,7 +118,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("/image/search.svg") center no-repeat;
+  background: url("image/search.svg") center no-repeat;
 }
 
 .single-card {
@@ -176,7 +176,7 @@ span.closed, span.rating, span.rating-count {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("/image/star.svg") center no-repeat;
+  background: url("image/star.svg") center no-repeat;
 }
 
 .none {
@@ -219,7 +219,7 @@ span.closed, span.rating, span.rating-count {
   height: 40px;
   padding-left: 48px;
   border-width: 0;
-  background: #3b3b3b url("/image/Vector.svg") 16px center no-repeat;
+  background: #3b3b3b url("image/Vector.svg") 16px center no-repeat;
   color: #fff;
   font-size: 13px;
   cursor: pointer;
@@ -274,12 +274,12 @@ span.closed, span.rating, span.rating-count {
 }
 
 .footer__download-app-store {
-  background: url('/image/apple.png') center no-repeat;
+  background: url('image/apple.png') center no-repeat;
   background-size: 100% 100%;
 }
 
 .footer__download-google-play {
-  background: url('/image/google.png') center no-repeat;
+  background: url('image/google.png') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -309,15 +309,15 @@ span.closed, span.rating, span.rating-count {
 }
 
 .ico-facebk {
-  background: url('/image/facebook.svg') center no-repeat;
+  background: url('image/facebook.svg') center no-repeat;
 }
 
 .ico-twit {
-  background: url('/image/twitter.svg') center no-repeat;
+  background: url('image/twitter.svg') center no-repeat;
 }
 
 .ico-inst {
-  background: url('/image/instagram.svg') center no-repeat;
+  background: url('image/instagram.svg') center no-repeat;
 }
 
 .form {
