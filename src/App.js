@@ -22,10 +22,12 @@ class App extends React.Component {
   async componentDidMount() {
     const stores = await getStores();
 
-    this.setState({
-      stores,
-      isLoading: false,
-    });
+    setTimeout(() => {
+      this.setState({
+        stores,
+        isLoading: false,
+      });
+    }, 4000);
   }
 
   render() {
@@ -33,11 +35,18 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <div className={isLoading ? 'd-flex justify-content-center' : 'none'}>
-          <div className="spinner-grow text-success" role="status">
-            <span className="sr-only">Loading...</span>
+        <div className={isLoading ? 'load-bg' : 'none'}>
+          <div className={isLoading ? 'load' : 'none'}>
+            <div>G</div>
+            <div>N</div>
+            <div>I</div>
+            <div>D</div>
+            <div>A</div>
+            <div>O</div>
+            <div>L</div>
           </div>
         </div>
+
         <div className={isLoading ? 'none' : 'grid-wrapper'}>
           <Header />
           <Main stores={stores} />
