@@ -100,7 +100,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("https://djkamry22.github.io/react_uber-eats/image/image/Vector.svg") center no-repeat;
+  background: url("https://djkamry22.github.io/react_uber-eats/image/Vector.svg") center no-repeat;
 }
 
 .delivery_icon::before {
@@ -109,7 +109,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("https://djkamry22.github.io/react_uber-eats/image/image/group.svg") center no-repeat;
+  background: url("https://djkamry22.github.io/react_uber-eats/image/group.svg") center no-repeat;
 }
 
 .search-icon::before {
@@ -118,7 +118,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("https://djkamry22.github.io/react_uber-eats/image/image/search.svg") center no-repeat;
+  background: url("https://djkamry22.github.io/react_uber-eats/image/search.svg") center no-repeat;
 }
 
 .single-card {
@@ -176,7 +176,7 @@ span.closed, span.rating, span.rating-count {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("https://djkamry22.github.io/react_uber-eats/image/image/star.svg") center no-repeat;
+  background: url("https://djkamry22.github.io/react_uber-eats/image/star.svg") center no-repeat;
 }
 
 .none {
@@ -219,7 +219,7 @@ span.closed, span.rating, span.rating-count {
   height: 40px;
   padding-left: 48px;
   border-width: 0;
-  background: #3b3b3b url("https://djkamry22.github.io/react_uber-eats/image/image/Vector.svg") 16px center no-repeat;
+  background: #3b3b3b url("https://djkamry22.github.io/react_uber-eats/image/Vector.svg") 16px center no-repeat;
   color: #fff;
   font-size: 13px;
   cursor: pointer;
@@ -274,12 +274,12 @@ span.closed, span.rating, span.rating-count {
 }
 
 .footer__download-app-store {
-  background: url('https://djkamry22.github.io/react_uber-eats/image/image/apple.png') center no-repeat;
+  background: url('https://djkamry22.github.io/react_uber-eats/image/apple.png') center no-repeat;
   background-size: 100% 100%;
 }
 
 .footer__download-google-play {
-  background: url('https://djkamry22.github.io/react_uber-eats/image/image/google.png') center no-repeat;
+  background: url('https://djkamry22.github.io/react_uber-eats/image/google.png') center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -309,15 +309,15 @@ span.closed, span.rating, span.rating-count {
 }
 
 .ico-facebk {
-  background: url('https://djkamry22.github.io/react_uber-eats/image/image/facebook.svg') center no-repeat;
+  background: url('https://djkamry22.github.io/react_uber-eats/image/facebook.svg') center no-repeat;
 }
 
 .ico-twit {
-  background: url('https://djkamry22.github.io/react_uber-eats/image/image/twitter.svg') center no-repeat;
+  background: url('https://djkamry22.github.io/react_uber-eats/image/twitter.svg') center no-repeat;
 }
 
 .ico-inst {
-  background: url('https://djkamry22.github.io/react_uber-eats/image/image/instagram.svg') center no-repeat;
+  background: url('https://djkamry22.github.io/react_uber-eats/image/instagram.svg') center no-repeat;
 }
 
 .form {
