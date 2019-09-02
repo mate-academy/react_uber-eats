@@ -23,9 +23,9 @@ using [this design](https://www.figma.com/file/j2sfk3XSjRf12SC27z0Ykf/Uber-eats-
 
 ### Extra Tasks
 1. Implement location autocomplete
-2. Implement a `Basket`
-3. Implement search autocomplete
-4. Implement `delivery time` selection
+1. Implement search autocomplete
+1. Implement `delivery time` selection
+1. Implement a `Basket`
 
 ## Workflow
 - Fork the repository with task
