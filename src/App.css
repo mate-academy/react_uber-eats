@@ -13,10 +13,10 @@ body {
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 80px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 80px;
 }
 
 .location-delivery {
@@ -26,7 +26,6 @@ body {
 .search-login {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
 button {
@@ -48,6 +47,15 @@ select {
   color: rgba(113,113,113);
 }
 
+input::placeholder {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .inner-delivery select option {
   padding: 16px 16px;
 }
@@ -59,9 +67,10 @@ select {
 .delivery-select {
   padding: 10px;
   display: inline-block;
+  color: #000000;
 }
 
-.inner::before {
+.delivery-select::before {
   content: "";
   display: inline-block;
   background: url("/image/group.svg") center no-repeat;
@@ -76,10 +85,9 @@ select {
   border-bottom: 2px solid black;
 }
 
-.log-in {
+.sign-in {
+  color: #000000;
   text-decoration: none;
-  font-size: 16px;
-  color: black;
 }
 
 .btn {
@@ -114,6 +122,10 @@ select {
   background: url("/image/search.svg") center no-repeat;
 }
 
+.sign-in {
+
+}
+
 .main {
   display: grid;
   grid-template-columns: repeat(3,330px);
@@ -121,9 +133,9 @@ select {
   grid-column-gap: 17px;
 }
 
-.card-image img {
-  max-width: 100%;
-  height: 270px;
+.card-image {
+  max-width: 90%;
+  min-height: 264px;
 }
 
 p.categories {
@@ -195,11 +207,9 @@ span.closed, span.rating, span.rating-count {
 
 
 .footer__info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   justify-items: flex-start;
-  box-sizing: border-box;
-  height: 220px;
   border-bottom: 1px solid #fff;
   padding-top: 32px;
 }
@@ -252,7 +262,7 @@ span.closed, span.rating, span.rating-count {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  padding: 40px;
   border-bottom: 1px solid #fff;
 }
 
@@ -274,8 +284,8 @@ span.closed, span.rating, span.rating-count {
 }
 
 .footer__bottom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 93px;
   font-size: 11px;
@@ -308,15 +318,6 @@ span.closed, span.rating, span.rating-count {
 
 .ico-inst {
   background: url('/image/instagram.svg') center no-repeat;
-}
-
-.button-to-up {
-  position: absolute;
-  bottom: 4%;
-  right: 10%;
-  width: 60px;
-  height: 60px;
-  background: #59BD5A url('/image/arrow.svg') center no-repeat;
 }
 
 .form {
@@ -402,18 +403,33 @@ button svg path {
   display: block;
 }
 
+.up-to-top {
+  background: #5fb709 !important;
+  width: 40px !important;
+  height: 45px !important;
+  fill: rgb(255, 255, 255) !important;
+}
 
- @media screen and (max-width:375px){
 
-  .header{
-    grid-template-columns: 1fr;
-  }
+ @media screen and (min-width: 320px) and (max-width: 414px){
   .grid-wrapper {
-    width: 375px;
+    width: 100%;
 }
 
   .main {
     grid-template-columns: 1fr;
+}
+
+.footer__info {
+  flex-direction: column;
+}
+
+.footer__info ul {
+  padding: 0;
+}
+
+.header {
+  padding: 20px;
 }
 
 button.search-btn.btn {
@@ -421,6 +437,10 @@ button.search-btn.btn {
 }
 
 .location-delivery {
+  display: none;
+}
+
+form.form1.form {
   display: none;
 }
  }

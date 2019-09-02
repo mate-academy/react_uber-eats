@@ -22,7 +22,7 @@ const Header = () => (
         </div>
       </form>
       <div className="inner">
-        {/* <div className="delivery_icon" /> */}
+        <div className="delivery_icon" />
           <select className="delivery-select">
             <option>Delivery</option>
             <option>ASAP</option>
@@ -44,7 +44,7 @@ const Header = () => (
           </button>
         </div>
       </form>
-      <div><a>Sign in</a></div>
+      <div><a className="sign-in" href="#!">Sign in</a></div>
 
     </div>
   </header>

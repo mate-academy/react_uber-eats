@@ -4,6 +4,7 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 
+
 const BASE_URL = 'https://mate-academy.github.io/react_uber-eats/api';
 
 const getStores = async() => {
@@ -37,6 +38,7 @@ class App extends React.Component {
           <Header />
           <Main stores={stores} />
           <Footer />
+
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 
 const Footer = () => (
   <footer className="footer">
@@ -50,9 +51,14 @@ const Footer = () => (
         <a href="#">Terms</a>
       </div>
     </div>
+    <ScrollUpButton
+      ContainerClassName="up-to-top"
+      StopPosition={null}
+      ShowAtPosition={700}
+      AnimationDuration={800}
+    />
 
-    <a href="#to-top" className="button-to-up" />
   </footer>
-)
+);
 
 export default Footer;
