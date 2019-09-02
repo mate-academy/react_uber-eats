@@ -3,7 +3,7 @@ import {TinyButton as ScrollUpButton} from "react-scroll-up-button";
 
 const Footer = () => (
   <footer className="footer">
-    <div className="footer-content">
+    <div className="footer-content" data-aos="fade-down">
       <div className="footer__logo">
         <a href="#" className="logo-uber" aria-hidden="true">
           <img src="image/white-logo.svg" alt="Logo uber eats in footer" />

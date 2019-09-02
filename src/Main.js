@@ -5,7 +5,7 @@ const Main = ({ stores }) => (
   <div className="container-fluid main">
     <div className="row">
           {stores.map(store => (
-            <div className="col-12 col-sm-6 col-lg-4 single-card center-block">
+            <div className="col-12 col-sm-6 col-lg-4 single-card center-block" data-aos="zoom-in-down">
               <a href="#!">
                 <img className="img-fluid card-image rounded shadow-sm" src={store.heroImageUrl} alt={store.slug} />
                 <div className="card-title">{store.title}</div>
@@ -15,7 +15,7 @@ const Main = ({ stores }) => (
                   <span className="rating">
                     {store.feedback ? store.feedback.rating : ''}
                   </span>
-                  <span className="rating-count">
+                  <span className="rating-count" >
                     {store.feedback ? `(${store.feedback.ratingCount})` : '0 reviews'}
                   </span>
                 </div>

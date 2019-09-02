@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => (
-  <header id="to-top" className="header">
+  <header id="to-top" className="header" data-aos="fade-right">
     <div className="logo">
       <a href="#!">
         <img src="image/Logo.png" alt="Logo" />
