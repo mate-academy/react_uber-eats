@@ -1,0 +1,53 @@
+.Footer {
+  background-color: #262626;
+  color: white;
+  margin-top: 80px;
+  padding: 70px 10%;
+
+  &__up {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__apps-link {
+    margin-top: 65px;
+  }
+
+  &__apps-link img {
+    margin-right: 16px;
+  }
+
+  &__about p,
+  &__faq p {
+    margin-top: 15px;
+  }
+
+  &__about p:first-child,
+  &__faq p:first-child {
+    margin-top: 0;
+  }
+
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 40px 0;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__policy {
+    display: flex;
+  }
+
+  &__policy p {
+    margin-right: 48px;
+  }
+
+  &__policy p:last-child {
+    margin-right: 0;
+  }
+}

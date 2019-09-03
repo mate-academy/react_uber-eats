@@ -1,0 +1,73 @@
+.Header {
+  min-height: 80px;
+  padding: 28px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__nav-time {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    margin-left: 200px;
+  }
+
+  &__nav {
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+
+  &__nav::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(./img/location.svg);
+    background-size: 100% 100%;
+    left: 0;
+    top: -1px;
+  }
+
+  &__time {
+    margin-left: 60px;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  &__time::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(./img/time.svg);
+    background-size: 100% 100%;
+    left: 0;
+    top: -1px;
+  }
+
+  &__search-acc {
+    margin-left: auto;
+  }
+
+  &__search {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  &__search::before {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: url(./img/search.svg) no-repeat center;
+    left: 0;
+    top: -1px;
+  }
+
+  &__acc {
+    margin-left: 40px;
+  }
+}
