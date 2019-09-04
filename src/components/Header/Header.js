@@ -7,7 +7,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="Header">
+      <header id="head" className="Header">
         <div className="Header__logo">
           <img src="./img/logo.svg" alt="logo" />
         </div>

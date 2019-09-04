@@ -3,6 +3,7 @@
   color: white;
   margin-top: 80px;
   padding: 70px 10%;
+  position: relative;
 
   &__up {
     display: flex;
@@ -49,5 +50,34 @@
 
   &__policy p:last-child {
     margin-right: 0;
+  }
+
+  &__social {
+    margin-top: 56px;
+    margin-left: auto;
+    margin-right: 205px;
+    width: 130px;
+  }
+
+  &__social img {
+    margin-right: 24px;
+  }
+
+  &__anchor {
+    width: 64px;
+    height: 64px;
+    background-color: #59bd5a;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  &__anchor:hover {
+    cursor: pointer;
+    background-color: #59bd5ab8;
   }
 }

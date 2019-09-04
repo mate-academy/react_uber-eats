@@ -73,6 +73,10 @@
   line-height: 19px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main {
   max-width: 1200px;
   margin: auto;

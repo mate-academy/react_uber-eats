@@ -38,6 +38,14 @@ class Footer extends React.Component {
             <p>Pricing</p>
           </div>
         </div>
+        <div className="Footer__social">
+          <img src="./img/facebook.svg" alt=""/>
+          <img src="./img/twitter.svg" alt=""/>
+          <img src="./img/instagram.svg" alt=""/>
+        </div>
+        <a href="#head" className="Footer__anchor">
+          <img src="./img/arrow.svg" alt=""/>
+        </a>
       </footer>
       
       
