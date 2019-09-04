@@ -12,8 +12,10 @@ const ContentPage = ({ stores }) => {
             <a class="card-link" href="#">
               <img class="product-card__img" src={store.heroImageUrl} alt="food" />
               <div class="product-card__caption">{store.title}</div>
-              <div class="product-card__type">{store.categories.join(" - ")}</div>
-              <div class="product-card__time">{store.etaRange.text ? store.etaRange.text : 'ASAP'}</div>
+              <div class="product-card__type">{store.categories.join(" • ")}</div>
+              <div class="product-card__time">
+                <div>{store.etaRange.text ? store.etaRange.text : 'ASAP'}</div>
+                </div>
             </a>
           </div>
         ))}
