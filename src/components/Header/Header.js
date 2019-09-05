@@ -15,6 +15,9 @@ class Header extends React.Component {
           <button className="Header__nav">Kiev</button>
           <button className="Header__time">Deliver Time</button>
         </div>
+        <div className="Header__mobile-search">
+          <input type="text" placeholder="Search restaurant"/>
+        </div>
         <div className="Header__search-acc">
           <button className="Header__search">Search</button>
           <button className="Header__acc">Sign in</button>

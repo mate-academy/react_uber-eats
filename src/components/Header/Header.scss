@@ -1,3 +1,4 @@
+/*stylelint-disable*/
 .Header {
   min-height: 80px;
   padding: 28px 0;
@@ -69,5 +70,65 @@
 
   &__acc {
     margin-left: 40px;
+  }
+
+  &__mobile-search {
+    order: 3;
+    display: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Header {
+    flex-wrap: wrap;
+
+    &__nav-time {
+      order: 4;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Header {
+
+    &__search {
+      display: none;
+    }
+
+    &__nav-time {
+
+    }
+
+    &__mobile-search {
+      display: flex;
+      position: relative;
+      padding-left: 30px;
+      border-bottom: 1px solid #757575;
+      min-height: 40px;
+      margin-top: 40px;
+    }
+
+    &__mobile-search:before {
+      content: " ";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: url(./img/search.svg) no-repeat center;
+      left: 0;
+      top: 1px;
+    }
+
+    &__mobile-search input {
+      height: 24px;
+      border: none;
+    }
+
+    &__mobile-search input:focus {
+      outline: none;
+    }
   }
 }
