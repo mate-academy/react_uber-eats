@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { TinyButton as ScrollUpButton } from 'react-scroll-up-button';
 import './style/App.scss';
 import Header from './components/Header';
 import RestaurantsList from './components/RestaurantsList';
@@ -37,6 +38,21 @@ const App = () => {
         : ''
       }
       <Footer />
+      <ScrollUpButton
+        StopPosition={0}
+        ShowAtPosition={150}
+        EasingType="easeOutCubic"
+        AnimationDuration={500}
+        ContainerClassName="ScrollUpButton__Container"
+        TransitionClassName="ScrollUpButton__Toggled"
+        style={{
+          width: '80px',
+          height: '80px',
+          backgroundColor: '#59BD5A',
+          outline: 'none',
+          fill: 'rgb(255,255,255)',
+        }}
+      />
     </div>
   );
 };

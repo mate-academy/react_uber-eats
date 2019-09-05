@@ -10,27 +10,15 @@ $main-text-color: #1F1F1F;
   margin-bottom: 100px;
 }
 
-@media (max-width: 1310px) {
-  .card-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .card-list {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 .card{
   box-sizing: border-box;
   display: block;
-  transition: transform 1s;
 
   &__picture-wrapper {
     padding-bottom: 80%;
     display: block;
     position: relative;
+    overflow: hidden;
   }
   &__link {
     text-decoration: none;
@@ -41,6 +29,11 @@ $main-text-color: #1F1F1F;
     position: absolute;
     width: 100%;
     height: 100%;
+    transition: transform .3s;
+  }
+
+  &__picture:hover {
+    transform: scale(1.1);
   }
 
   &__title {
@@ -80,6 +73,7 @@ $main-text-color: #1F1F1F;
   }
 }
 
-.card:hover {
-  transform: scale(1.04);
+.card:hover .card__picture {
+  transform: scale(1.1);
 }
+

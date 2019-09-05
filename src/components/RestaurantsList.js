@@ -11,6 +11,7 @@ const RestaurantsList = ({ stores }) => (
         <div className="card">
           <a
             href="/"
+            onClick={event => event.preventDefault()}
             className="card__link"
           >
             <div className="card__picture-wrapper">

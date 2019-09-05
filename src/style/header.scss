@@ -50,14 +50,10 @@ $sing-in-btn-color: #E0E0E0;
     margin-left: auto;
   }
 
-  &__location {
-    padding-left: 46px;
-  }
-
   &__location-input {
     width: 100px;
     background-color: rgba(255, 255, 255, 0) !important;
-    transition: width .2s linear;
+    transition: width .5s ease;
   }
 
   &__location-input:focus {
@@ -79,21 +75,20 @@ $sing-in-btn-color: #E0E0E0;
     outline: none;
   }
 
-  &__location,
   &__delivery-time,
   &__search-input,
   &__search-btn,
   &__sign-in {
-    height: 48px;
+    height: 50px;
   }
 
   &__delivery-time {
     margin-left: 40px;
-
+    margin-right: auto;
     padding-left: 46px;
 
     background-image: url("../image/clock.svg");
-    background-position: left 16px top 14px;
+    background-position: left 16px top 12px;
     background-repeat: no-repeat;
     background-size: 18px;
 
@@ -112,7 +107,7 @@ $sing-in-btn-color: #E0E0E0;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 19px;
+
     box-sizing: border-box;
     cursor: pointer;
   }
@@ -217,4 +212,115 @@ $sing-in-btn-color: #E0E0E0;
     box-sizing: border-box;
     border-radius: 2px;
   }
+}
+
+.invisibleItem {
+  visibility: hidden;
+ }
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 48px;
+  width: 140px;
+
+
+  border-bottom: 2px solid #fff;
+  outline: none;
+
+  transition: all 0.3s;
+
+  &__input,
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+    cursor: pointer;
+  }
+
+  &__input {
+    height: 100%;
+    width: 80%;
+
+    margin-left: 10px;
+    padding-left: 26px;
+
+    background-position: left 0 top 13px;
+    background-repeat: no-repeat;
+  }
+
+  &__input::-webkit-input-placeholder {
+    color: #000;
+  }
+
+  &__input::-webkit-calendar-picker-indicator,
+  &__btn {
+    display: none;
+  }
+
+  &__clear {
+    position: relative;
+
+    padding: 5px 10px 5px 0;
+  }
+
+  &__clear::after {
+    content: "";
+
+    display: block;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: #9a9898;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__close {
+    margin: 2px 5px 0 15px;
+  }
+
+  &__close img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.search__input {
+  background-image: url("../image/loop.svg");
+  background-size: 18px;
+}
+
+.location__input {
+  background-image: url("../image/location.svg");
+  background-size: 14px;
+}
+
+.form:hover,
+.form:focus-within {
+  background-color: #F5F5F5;
+  border-bottom: 2px solid #000;
+}
+
+.form:focus-within {
+  width: 300px;
+}
+
+.form:focus-within .form__btn {
+  display: block;
+}
+
+.form:focus-within .form__input {
+  cursor: initial;
 }

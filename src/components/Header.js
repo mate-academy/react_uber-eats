@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import classnames from 'classnames';
 
 const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/';
 const Header = () => {
-  const [activeSearch, setSearch] = useState(false);
-  const [activeLocation, setLocation] = useState(false);
+  const [search, setSearch] = useState('');
+  const [location, setLocation] = useState('London');
+
+  const locationCloseRef = useRef();
+  const locationInputRef = useRef();
+  const searchCloseRef = useRef();
+  const searchInputRef = useRef();
+  const handleFocus = inputRef => inputRef.current.focus();
+  const handleBlur = inputRef => inputRef.current.blur();
 
   return (
     <header id="to_top_of_page" className="header">
@@ -16,41 +24,45 @@ const Header = () => {
           />
         </a>
 
-        {activeLocation ? (
-          <form
-            className="header__input-wrapper-loc"
-            onChange={event => (event.key === 'Enter'
-              ? setLocation(false)
-              : '')}
-          >
-            <input
-              type="text"
-              name="delivery-adress"
-              /* eslint-disable-next-line */
-              autoFocus="true"
-              onBlur={() => setLocation(false)}
-              aria-label="choose delivery adress"
-              className="header__location header__location-input"
-              placeholder="Enter delivery address"
-              value="London"
-            />
-            <button
-              type="button"
-              className="header__location-clear-btn"
-            >
-          Clear
-            </button>
-          </form>
-        ) : (
+        <form
+          className="form header__location"
+        >
+          <input
+            type="text"
+            name="delivery-adress"
+            list="location"
+            value={location}
+            ref={locationInputRef}
+            onChange={event => setLocation(event.target.value)}
+            aria-label="choose delivery adress"
+            className="form__input location__input"
+            placeholder="Location"
+          />
+
           <button
             type="button"
-            className="header__location header__location-btn"
-            onClick={() => setLocation(true)}
+            className={classnames(
+              'form__clear form__btn',
+            )}
+            onClick={() => {
+              handleFocus(locationInputRef);
+              setLocation('');
+            }}
           >
-          London
+              Clear
           </button>
-        )
-        }
+          <button
+            type="button"
+            ref={locationCloseRef}
+            className="form__btn form__close"
+            onClick={() => {
+              setLocation('London');
+              handleBlur(locationCloseRef);
+            }}
+          >
+            <img src="../image/close.svg" alt="CLose" />
+          </button>
+        </form>
 
         <select
           name="order-time"
@@ -61,32 +73,53 @@ const Header = () => {
           <option value="plan">Schedule for later</option>
         </select>
 
-        {activeSearch ? (
-          <div className="header__input-wrapper">
-            <input
-              type="search"
-              name="restaurant-search-field"
-              onKeyPress={event => (event.key === 'Enter'
-                ? setSearch(false)
-                : '')}
-              /* eslint-disable-next-line */
-              autoFocus="true"
-              onBlur={() => setSearch(false)}
-              aria-label="restaurant search field"
-              className="header__search-input"
-              placeholder="What are you craving?"
-            />
-          </div>
-        ) : (
+        <form
+          className="header__search form"
+        >
+          <input
+            type="text"
+            name="restaurant-search-field"
+            value={search}
+            ref={searchInputRef}
+            autoComplete="off"
+            onChange={event => setSearch(event.target.value)}
+            aria-label="restaurant search field"
+            className="form__input search__input"
+            placeholder="Search"
+          />
           <button
             type="button"
-            className="header__search-btn"
-            onClick={() => setSearch(true)}
+            className={classnames(
+              'form__clear',
+              'form__btn',
+            )}
+            onClick={() => {
+              setSearch('');
+              handleFocus(searchInputRef);
+            }}
           >
-          Search
+              Clear
           </button>
-        )}
-        <a href="/" className="header__sign-in">Sing in</a>
+          <button
+            type="button"
+            ref={searchCloseRef}
+            className="form__btn form__close"
+            onClick={() => {
+              handleBlur(searchCloseRef);
+            }}
+          >
+
+            <img src="../image/close.svg" alt="CLose" />
+          </button>
+        </form>
+
+        <a
+          href="/"
+          className="header__sign-in"
+          onClick={event => event.preventDefault()}
+        >
+           Sing in
+        </a>
       </div>
     </header>
   );
