@@ -60,7 +60,7 @@ const Header = () => {
               handleBlur(locationCloseRef);
             }}
           >
-            <img src="../image/close.svg" alt="CLose" />
+            <img alt="CLose" className="form__close-img" />
           </button>
         </form>
 
@@ -109,7 +109,7 @@ const Header = () => {
             }}
           >
 
-            <img src="../image/close.svg" alt="CLose" />
+            <img alt="CLose" className="form__close-img" />
           </button>
         </form>
 

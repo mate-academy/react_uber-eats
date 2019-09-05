@@ -214,10 +214,6 @@ $sing-in-btn-color: #E0E0E0;
   }
 }
 
-.invisibleItem {
-  visibility: hidden;
- }
-
 .form {
   display: flex;
   align-items: center;
@@ -244,6 +240,12 @@ $sing-in-btn-color: #E0E0E0;
     line-height: 19px;
 
     cursor: pointer;
+  }
+
+  &__close-img {
+    content: url("../image/close.svg");
+    //background-repeat: no-repeat;
+
   }
 
   &__input {
@@ -289,11 +291,13 @@ $sing-in-btn-color: #E0E0E0;
 
   &__close {
     margin: 2px 5px 0 15px;
+
   }
 
   &__close img {
     width: 24px;
     height: 24px;
+
   }
 }
 
