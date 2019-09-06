@@ -112,6 +112,15 @@
       flex-direction: column-reverse;
     }
 
+    &__policy {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__link-policy {
+      margin-left: 0 !important;
+    }
+
     &__policy-subscribe {
       margin-bottom: 30px;
     }
