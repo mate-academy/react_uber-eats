@@ -1,7 +1,4 @@
 @media (max-width: 1460px) {
-  .container {
-    width: 1090px;
-  }
 
   .main {
     &__container {
@@ -14,12 +11,7 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .container {
-    width: 720px;
-    height: 100%;
-    margin: 0 auto;
-  }
+@media (max-width: 1270px) {
 
   .header {
     &__button-location,
@@ -62,9 +54,6 @@
 }
 
 @media (max-width: 760px) {
-  .container {
-    width: 390px;
-  }
 
   .header {
     &__button-search {
@@ -84,6 +73,10 @@
 
     &__search-input {
       visibility: visible;
+    }
+
+    &__delivery-section-place {
+      width: 100px;
     }
 
     &__container {
@@ -121,11 +114,6 @@
 
     &__policy-subscribe {
       margin-bottom: 30px;
-    }
-
-    &__top-button {
-      width: 60px;
-      height: 60px;
     }
   }
 }

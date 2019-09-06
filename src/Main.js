@@ -7,7 +7,7 @@ const Main = ({
   checkRaitingCountInfo,
   IMG_URL,
 }) => (
-  <main>
+  <main className="main">
     <div className="container">
       <div className="main__for-small-devices">
         <input
@@ -36,16 +36,18 @@ const Main = ({
             className="main__store"
             href="#$%"
           >
-            <img
-              alt={store.slug}
-              src={store.heroImageUrl}
-              className="main__store-image"
-            />
+            <div className="main__store-image-wrapper">
+              <img
+                alt={store.slug}
+                src={store.heroImageUrl}
+                className="main__store-image"
+              />
+            </div>
             <div className="main__store-info">
               <div className="main__store-info-title">
                 {store.title}
               </div>
-              <span className="main__store-info-categories">
+              <div className="main__store-info-categories">
                 {store.categories.map(
                   category => (
                     <li className="main__category">
@@ -53,7 +55,7 @@ const Main = ({
                     </li>
                   )
                 )}
-              </span>
+              </div>
               <div className="main__store-info-details">
                 <div className="main__store-info-details-open">
                   {store.closedMessage}

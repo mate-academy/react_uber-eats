@@ -43,6 +43,10 @@
     &:not(:last-child) {
       margin-bottom: 16px;
     }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__language {
@@ -98,6 +102,10 @@
     &:not(:first-child) {
       margin-left: 48px;
     }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__subscribe {
@@ -106,22 +114,9 @@
 
   &__social-icon {
     margin-right: 24px;
-  }
-
-  &__top-button {
-    position: fixed;
-    right: 16px;
-    bottom: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    background-color: #59BD5A;
-    border-radius: 2px;
-  }
-
-  &__top-button-arrow {
-    content: url("../img/arrow.svg");
+    opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
   }
 }

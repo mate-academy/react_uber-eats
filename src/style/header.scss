@@ -1,11 +1,12 @@
 .header {
   height: 80px;
   background-color: white;
+  margin: 0 auto;
+  padding: 0 80px;
 
   &__container {
     display: flex;
     align-items: center;
-    margin: 0 auto;
   }
 
   @mixin buttonWithIcon($icon) {
@@ -15,13 +16,15 @@
     background: none;
     font-size: 16px;
     line-height: 19px;
+    outline: none;
+    cursor: pointer;
     padding-left: 25px;
     background: url($icon) no-repeat;
   }
 
   &__button-location {
     margin-left: 60px;
-    @include buttonWithIcon("../img/location.svg")
+    @include buttonWithIcon("../img/location.svg");
   }
 
   &__button-delivery-time {

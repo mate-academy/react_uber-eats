@@ -1,4 +1,7 @@
 .main {
+  margin: 0 auto;
+  padding: 0 80px;
+
   &__for-small-devices {
     margin-bottom: 40px;
     display: none;
@@ -50,7 +53,7 @@
     height: 40px;
     margin-left: 20px;
     padding: 0 30px;
-    background: url("../img/location.svg") no-repeat;
+    background: url("../img/location.svg") center no-repeat;
     background-position: 4px 7px;
       &::before {
         content: "To"
@@ -59,7 +62,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 20px;
     justify-items: center;
   }
@@ -68,19 +71,24 @@
     text-decoration: none;
     color: black;
     transition: transform 0.4s;
+    min-width: 0;
   }
 
-  &__store:hover {
+  &__store:hover img {
     transform: scale(1.05);
   }
 
   &__store-info {
     white-space: nowrap;
   }
+  &__store-image-wrapper {
+    overflow: hidden;
+  }
 
   &__store-image {
-    width: 350px;
-    height: 278px;
+    width: 100%;
+    height: 240px;
+    transition: transform 0.4s;
   }
 
   &__store-info-title {
@@ -92,7 +100,6 @@
   &__store-info-categories {
     display: flex;
     list-style-type: none;
-    width: 350px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;

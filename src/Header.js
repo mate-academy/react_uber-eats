@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Header = ({ IMG_URL }) => (
-  <header id="top" className="header">
+  <header className="header">
     <div className="container header__container">
       <a href="#?">
         <img

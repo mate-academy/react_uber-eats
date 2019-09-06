@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ScrollUpButton from 'react-scroll-up-button';
 
 const Footer = ({ IMG_URL }) => (
   <footer className="footer">
@@ -102,12 +103,7 @@ const Footer = ({ IMG_URL }) => (
                 className="footer__icon footer__social-icon"
               />
             </a>
-            <a href="#top" className="footer__top-button">
-              <img
-                alt="button to top of page"
-                className="footer__top-button-arrow"
-              />
-            </a>
+            <ScrollUpButton style={{ outline: 'none' }} />
           </div>
         </div>
       </div>
