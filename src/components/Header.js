@@ -148,10 +148,13 @@ class Header extends React.Component {
                 )}
 
               <div className="header__dropdown">
-                <button onClick={this.handleDelivery}>
+                <button
+                  className={classnames({
+                    "header__active": isDelivered,
+                  })}
+                  onClick={this.handleDelivery}>
                   <div className={classnames({
                     "header__button": true,
-                    "header__active": isDelivered,
                   })}
                   >
                     <img src="images/icons/time.svg" alt='map-marker'></img>
@@ -215,11 +218,11 @@ class Header extends React.Component {
                 </form>
               )}
 
-            <a href="#/"
-              class="header__button--auth"
-            >
+            <button class="header__button--auth">
+            <div class="header__button">
               Sign In
-          </a>
+          </div>
+          </button>
           </div>
 
         </div>

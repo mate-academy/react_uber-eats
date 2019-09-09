@@ -122,6 +122,9 @@
   color: #fff;
   text-decoration: none;
   padding-bottom: 16px;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .footer__column > a:first-child {
@@ -168,6 +171,9 @@
 
 .footer__rights-info > a {
   padding-right: 40px;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .footer__rights .link {
@@ -179,8 +185,9 @@
   display: none;
 }
 
-.footer a:hover {
-  opacity: 0.6;
+.footer a:hover,
+.footer a:focus {
+  opacity: 0.5;
 }
 
 .social__buttons {

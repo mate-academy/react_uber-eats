@@ -1,14 +1,25 @@
 /* stylelint-disable */
 @media (max-width: 980px) {
   .header {
-
     &__logo {
-      margin-right: 15px;
+      margin-right: 25px;
+    }
+
+    &__location-input {
+      margin: 0;
     }
 
     &__top {
       margin: 0;
       min-width: 300px;
+    }
+
+    &__top button {
+      margin-right: 0;
+    }
+
+    &__button {
+      padding: 0 0 0 32px;
     }
 
     &__dropdown {

@@ -37,6 +37,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 16px;
+  height: 48px;
 }
 
 .header__button:not(:first-child) {
@@ -48,12 +50,31 @@
   background: white;
   font-size: 16px;
   font-family: Roboto;
-  margin-right: 40px;
+  margin-right: 10px;
   cursor: pointer;
+}
+
+.header__top button:last-child {
+  margin: 0;
 }
 
 .header__top button span {
   margin-left: 5px;
+}
+
+.header__top button::after {
+  background-color: black;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.header__top button:hover::after,
+.header__top button:focus::after {
+  width: 100%;
 }
 
 .header__location-section {
@@ -132,34 +153,47 @@
 }
 
 .header__dropdown-child {
-  padding: 8px 0px;
   display: -ms-grid;
   display: grid;
+  padding: 8px 0px;
+  background-color: white;
   position: absolute;
 }
 
-.header__dropdown-child .header__button {
-  padding: 8px 16px;
+.header__dropdown-child button::after {
+  background-color: black;
+  display: block;
+  content: "";
+  height: 1.5px;
+  margin: 0 16px;
+  width: 0%;
+  -webkit-transition: width 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: width 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header__dropdown-child button:hover::after {
+  width: 0;
+}
+
+.header__dropdown-child button:hover {
+  background: #f5f5f5;
+}
+
+.header__dropdown-child button {
+  padding: 0;
   margin: 0;
 }
 
-.header .mainmenubtn {
-  border: none;
-  background: whitesmoke;
-  padding: 0 16px;
-  height: 48px;
-  cursor: pointer;
-}
-
-.header__dropdown .header__button {
-  padding: 0 16px;
-  height: 48px;
-}
-
-.header__active {
+.header__top .header__active {
   background-color: #f5f5f5;
-  border-bottom: 1.5px solid black;
-  padding-bottom: 7px;
+}
+
+.header__top .header__active::after {
+  background-color: black;
+  display: block;
+  content: "";
+  height: 1.5px;
+  width: 100%;
 }
 
 .header__auth {
@@ -170,15 +204,5 @@
       -ms-flex-align: center;
           align-items: center;
   margin-left: 5px;
-}
-
-.header__button--auth {
-  text-decoration: none;
-  color: black;
-}
-
-.header__top button:hover,
-.header__top a:hover {
-  text-decoration: underline;
 }
 /*# sourceMappingURL=header.css.map */

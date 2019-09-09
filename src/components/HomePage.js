@@ -55,7 +55,7 @@ class HomePage extends React.Component {
               (<section class="catalog">
                 {filterRestaurants.map(restaurant =>
 
-                  <Link to={`/restaurant/${restaurant.uuid}`} className="catalog__item">
+                  <Link to={`/restaurant/d7c942e8-d2b3-4004-b964-d8e008da75b0`} className="catalog__item">
                     <div href="#/" class="catalog__item--image">
                       <img src={restaurant.heroImageUrl} alt="mcdonalds" />
                     </div>
