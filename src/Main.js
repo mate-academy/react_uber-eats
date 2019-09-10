@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 import Header from './Header';
 
-const Main = ({ stores }) => {
+const Main = ({ stores, restorantId }) => {
   const regex = /[0-9][0-9]:[0-9][0-9]/g;
   const today = new Date();
   const dateNow = `${today.getHours()}: ${today.getMinutes()}`;
@@ -31,8 +31,7 @@ const Main = ({ stores }) => {
                   )
                   : ''}
                 <NavLink
-                  to="/food-delivery/restourant"
-                  exact
+                  to={`/food-delivery/${store.title}`}
                   className="product__photo product__img"
                   activeClassName="phoneClassActive"
                 >
@@ -79,6 +78,7 @@ const Main = ({ stores }) => {
 };
 
 Main.propTypes = {
+  restorantId: PropTypes.string.isRequired,
   stores: PropTypes.objectOf(
     PropTypes.number,
   ).isRequired,

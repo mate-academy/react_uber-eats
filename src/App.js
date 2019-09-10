@@ -3,7 +3,7 @@ import './App.scss';
 import { Route, Switch } from 'react-router-dom';
 
 import NotFoundPage from './NotFoundPage';
-import Restorants from './Restorants';
+import Restorant from './Restorant';
 import Main from './Main';
 
 // const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2';
@@ -38,7 +38,7 @@ class App extends React.Component {
       <div className="App">
         <Switch>
           <Route
-            path="/food-delivery/"
+            path="/"
             exact
             render={({ match }) => (
               <Main
@@ -48,12 +48,13 @@ class App extends React.Component {
             )}
           />
           <Route
-            path="/food-delivery/restourant"
+            path="/food-delivery/:restorantId"
             exact
             render={({ match }) => (
-              <Restorants
+              <Restorant
                 key={stores.id}
                 stores={stores}
+                restorantId={match.params.restorantId}
               />
             )}
           />

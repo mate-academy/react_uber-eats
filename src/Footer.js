@@ -1,10 +1,16 @@
 import React from 'react';
+import './footer.scss';
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer__container">
       <a href="#!" className="footer__logo">
-        <img src="img/uber__eats__logo.png" alt="Uber eats" />
+        <img
+          src="img/Uber.svg"
+          alt="Uber eats"
+          className="footer__logo__img_logo"
+        />
+        <img src="img/eats.png" alt="Uber eats" />
       </a>
       <hr className="hr" />
 
@@ -85,7 +91,7 @@ const Footer = () => (
       </section>
 
       <a href="/#" className="arrow-to-top">
-        <img src="src/images/direct.svg" alt="" />
+        <img src="img/direction.svg" alt="" />
       </a>
     </div>
   </footer>

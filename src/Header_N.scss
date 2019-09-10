@@ -9,12 +9,11 @@ body {
   line-height: 19px;
   margin: 0 auto;
   display: grid;
-  // height: 80px;
   grid-template-columns: 23% 37% 41%;
   grid-template-rows: 80px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  // padding: 0 30px;
   &__container__deliverry {
     display: flex;
     align-items: center;

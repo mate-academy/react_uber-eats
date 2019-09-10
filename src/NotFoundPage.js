@@ -7,7 +7,7 @@ const NotFoundPage = () => (
     <span>
       <NavLink
         className="navlink"
-        to="/food-delivery/"
+        to="/"
         exact
       >
         here is Home
