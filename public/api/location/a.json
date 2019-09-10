@@ -1,0 +1,2344 @@
+{
+  "status": "success",
+  "data": {
+    "diningModes": [],
+    "feedItems": [
+      {
+        "type": "STORE",
+        "uuid": "8e7b1dfd-c0ed-42b8-8492-c8338530d8cc"
+      },
+      {
+        "type": "STORE",
+        "uuid": "340b03bf-ed03-4574-8118-d406ec34d39b"
+      },
+      {
+        "type": "STORE",
+        "uuid": "8476752b-08cb-4280-8066-41bc3c0dca4c"
+      },
+      {
+        "type": "STORE",
+        "uuid": "e476dc30-429f-4228-ab27-e10552a4f0c2"
+      },
+      {
+        "type": "STORE",
+        "uuid": "8299a40f-b34e-4b77-ae57-9ac3d325b754"
+      },
+      {
+        "type": "STORE",
+        "uuid": "916ef574-3161-4bec-81ea-08fb49f3dec6"
+      },
+      {
+        "type": "STORE",
+        "uuid": "b30a4f73-db98-4f59-84e4-f3afdfa01c68"
+      },
+      {
+        "type": "STORE",
+        "uuid": "a8508733-5ce2-4fb7-93b5-df6fda348a4a"
+      },
+      {
+        "type": "STORE",
+        "uuid": "a9618f36-3494-44e9-91eb-df74d0827e15"
+      },
+      {
+        "type": "STORE",
+        "uuid": "a181db96-b909-4846-9cd0-412ea5fc5673"
+      },
+      {
+        "type": "STORE",
+        "uuid": "65eb8bb8-4928-4777-8453-7128181c3bc6"
+      },
+      {
+        "type": "STORE",
+        "uuid": "0cfc4355-1d49-4ea1-a1f1-7e142acf7b53"
+      },
+      {
+        "type": "STORE",
+        "uuid": "4b764693-a5dd-4570-8aa8-a1f10d69aa76"
+      },
+      {
+        "type": "STORE",
+        "uuid": "e9f3e8f6-26ba-4d80-98f9-d1f70c901d50"
+      },
+      {
+        "type": "STORE",
+        "uuid": "4450f030-2701-4aa6-9221-6caaebbbc3dd"
+      },
+      {
+        "type": "STORE",
+        "uuid": "a743b05f-520b-4459-87e2-c7b786ef1d75"
+      },
+      {
+        "type": "STORE",
+        "uuid": "96a74797-000c-4111-9691-bcedf6d2e267"
+      },
+      {
+        "type": "STORE",
+        "uuid": "0bb05f09-d3ca-4d49-aece-024804b12a44"
+      },
+      {
+        "type": "STORE",
+        "uuid": "8548894f-0b8a-4388-b627-6886b301e65a"
+      },
+      {
+        "type": "STORE",
+        "uuid": "28c2ef4c-ff9d-4bed-b6b4-0d9603aaaa1c"
+      },
+      {
+        "type": "STORE",
+        "uuid": "340faa84-d284-43b1-81b1-184f56a9a4bc"
+      },
+      {
+        "type": "STORE",
+        "uuid": "1968d261-1052-409b-95b1-a3003fa00948"
+      },
+      {
+        "type": "STORE",
+        "uuid": "eef1f51a-7ac8-4540-8ac5-6ed99ddb76dc"
+      },
+      {
+        "type": "STORE",
+        "uuid": "afa6e563-32ca-4222-92e7-cd77df83d379"
+      },
+      {
+        "type": "STORE",
+        "uuid": "b318911f-1c17-4d57-b0ef-3c0fcbd7f17e"
+      },
+      {
+        "type": "STORE",
+        "uuid": "fac9ae03-c90a-4cd3-8178-db1f13e93474"
+      },
+      {
+        "type": "STORE",
+        "uuid": "c53b4d51-fdf4-43fb-83cf-529acdc47249"
+      },
+      {
+        "type": "STORE",
+        "uuid": "9b9ea061-aa92-41e2-a506-14e50b5348af"
+      },
+      {
+        "type": "STORE",
+        "uuid": "638d7cce-60d1-41b8-b482-38af752b7d45"
+      },
+      {
+        "type": "STORE",
+        "uuid": "4f6baf8b-6799-4824-b90a-be452946d41c"
+      },
+      {
+        "type": "STORE",
+        "uuid": "d30e3f97-520e-40bf-9b50-fa3b08065dfd"
+      },
+      {
+        "type": "STORE",
+        "uuid": "9bb5f578-a8fe-46ca-b04e-116a7393696a"
+      },
+      {
+        "type": "STORE",
+        "uuid": "a6d87a7c-f22a-4f88-b00d-fe9a00197820"
+      },
+      {
+        "type": "STORE",
+        "uuid": "b4b353a4-69d1-42e5-a206-7e703059ac38"
+      },
+      {
+        "type": "STORE",
+        "uuid": "6f18d5d6-bac9-48ce-86c7-79e4344cd7c2"
+      },
+      {
+        "type": "STORE",
+        "uuid": "c348632a-e462-4145-a127-411cd11274a5"
+      },
+      {
+        "type": "STORE",
+        "uuid": "cf68d4ec-4f37-4ac7-bb97-ec12b49d7d83"
+      },
+      {
+        "type": "STORE",
+        "uuid": "0e924687-7405-4c62-b38f-dc7cda384d65"
+      },
+      {
+        "type": "STORE",
+        "uuid": "13acfa58-7856-4bd5-93bd-c01b815ede05"
+      },
+      {
+        "type": "STORE",
+        "uuid": "2c30d8fb-582a-4860-9ac7-6d9af0a1ecb6"
+      },
+      {
+        "type": "STORE",
+        "uuid": "49859cf1-fad8-45c7-b4c2-7ceda0b2c468"
+      },
+      {
+        "type": "STORE",
+        "uuid": "5b198cdb-4ac7-40b5-89b2-0884db410e92"
+      },
+      {
+        "type": "STORE",
+        "uuid": "66dd70e1-4c39-493c-91de-8141718bb62b"
+      },
+      {
+        "type": "STORE",
+        "uuid": "5b8e0d3e-dad5-45ce-aefb-5d418c68c826"
+      },
+      {
+        "type": "STORE",
+        "uuid": "3db51406-ab70-4eed-90d0-86c655c2d2ab"
+      },
+      {
+        "type": "STORE",
+        "uuid": "67b27106-28c1-4dde-a237-9e3c740e2d90"
+      },
+      {
+        "type": "STORE",
+        "uuid": "c8a8ed34-a4d5-459d-8154-22016205d33b"
+      },
+      {
+        "type": "STORE",
+        "uuid": "8faa88d6-9b38-4aaf-8245-f7eda6495fec"
+      },
+      {
+        "type": "STORE",
+        "uuid": "5cad82b2-f7aa-473a-a911-93a0076a9383"
+      },
+      {
+        "type": "STORE",
+        "uuid": "de988589-a072-4620-8bee-e1a332d3b616"
+      },
+      {
+        "type": "STORE",
+        "uuid": "dd95767a-d227-44af-98f5-f0feb22c0325"
+      },
+      {
+        "type": "STORE",
+        "uuid": "291276e3-d8e5-49fa-9966-63ec724a4aca"
+      },
+      {
+        "type": "STORE",
+        "uuid": "b36eeea6-6247-46ab-a27c-c916af1a9e4e"
+      },
+      {
+        "type": "STORE",
+        "uuid": "b3f84976-ef9c-428e-8652-4e1bb3cbe17c"
+      },
+      {
+        "type": "STORE",
+        "uuid": "2bcef0c1-5d18-475a-85bc-e6f5e876fe68"
+      },
+      {
+        "type": "STORE",
+        "uuid": "47081423-bd6c-47c9-9483-bb164c0e94b0"
+      },
+      {
+        "type": "STORE",
+        "uuid": "691c9c4f-52c1-42e8-96a9-d9d371ab0507"
+      },
+      {
+        "type": "STORE",
+        "uuid": "969e56b1-5ca4-4d13-9426-1ec5f28d6046"
+      },
+      {
+        "type": "STORE",
+        "uuid": "ab36906a-7af5-4211-bb34-742743773833"
+      },
+      {
+        "type": "STORE",
+        "uuid": "2b523af8-823b-40e1-aca0-0d9d02d29030"
+      },
+      {
+        "type": "STORE",
+        "uuid": "07df4792-2d67-4ae2-bded-0015c131ced9"
+      },
+      {
+        "type": "STORE",
+        "uuid": "2d74386a-2e0e-4071-be6b-65d549d34cc8"
+      },
+      {
+        "type": "STORE",
+        "uuid": "96965a43-0f43-4a42-b0a7-3b7961d6e34c"
+      },
+      {
+        "type": "STORE",
+        "uuid": "3e198e09-895d-460c-be8a-d071e70a7f20"
+      },
+      {
+        "type": "STORE",
+        "uuid": "7502641a-9b4d-4f2a-a28b-660bdb052ec2"
+      },
+      {
+        "type": "STORE",
+        "uuid": "814139b9-1e0e-4d65-aaf6-70ac1237a0a4"
+      },
+      {
+        "type": "STORE",
+        "uuid": "45617023-7158-48b6-8392-4c34a745d448"
+      },
+      {
+        "type": "STORE",
+        "uuid": "db662b6c-f98d-497b-a993-c9b6750feeeb"
+      },
+      {
+        "type": "STORE",
+        "uuid": "c1e1e937-8dd7-46fb-891c-773f64c84d41"
+      },
+      {
+        "type": "STORE",
+        "uuid": "98374475-0b6a-43b7-8e52-d88c9ed95e9b"
+      },
+      {
+        "type": "STORE",
+        "uuid": "ecb4d61b-0d1d-45f6-97e3-aad409d95265"
+      },
+      {
+        "type": "STORE",
+        "uuid": "6adc6ae3-dc31-46ca-bbea-a9376d573f90"
+      },
+      {
+        "type": "STORE",
+        "uuid": "41474ff9-3c96-48b0-9423-47cba5132d15"
+      },
+      {
+        "type": "STORE",
+        "uuid": "fb394fd0-760b-4508-b1c8-ade9d215e84a"
+      },
+      {
+        "type": "STORE",
+        "uuid": "43ca1956-8222-42c4-ae29-1cfbe7371c6f"
+      },
+      {
+        "type": "STORE",
+        "uuid": "1ee7acb0-a7f6-4ee5-b68d-bd22c1adab72"
+      },
+      {
+        "type": "STORE",
+        "uuid": "d8130084-f722-4a08-b85d-d975c9e69959"
+      },
+      {
+        "type": "STORE",
+        "uuid": "c9aef498-4d25-4417-933a-008fe5913853"
+      },
+      {
+        "type": "STORE",
+        "uuid": "67435315-5a9f-4619-89fa-520da17fd005"
+      },
+      {
+        "type": "STORE",
+        "uuid": "facf3954-df96-4dc7-8e06-57090d3d39d3"
+      }
+    ],
+    "storesMap": {
+      "d30e3f97-520e-40bf-9b50-fa3b08065dfd": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/79f01238-c972-4527-971a-f8eaf38d8293",
+        "citySlug": "kyiv",
+        "slug": "khu-yum",
+        "title": "Khu-Yum",
+        "uuid": "d30e3f97-520e-40bf-9b50-fa3b08065dfd",
+        "categories": [
+          "₴₴",
+          "Азіатська",
+          "Тайська"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "97"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "5b8e0d3e-dad5-45ce-aefb-5d418c68c826": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/b703f54d-b0a9-4870-b78f-a7b2a3e8607f",
+        "citySlug": "kyiv",
+        "slug": "остання-барикада",
+        "title": "Остання Барикада",
+        "uuid": "5b8e0d3e-dad5-45ce-aefb-5d418c68c826",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Європейська",
+          "Морепродукти"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "28"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "100% українська гастрономія"
+        },
+        "promoTrackings": []
+      },
+      "67b27106-28c1-4dde-a237-9e3c740e2d90": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/4afbbc0c-563a-47ba-8d41-5a855a7e1dfd",
+        "citySlug": "kyiv",
+        "slug": "city•zen-cafe&bar-вул-велика-житомирська",
+        "title": "CITY•ZEN cafe&bar (вул. Велика Житомирська)",
+        "uuid": "67b27106-28c1-4dde-a237-9e3c740e2d90",
+        "categories": [
+          "₴₴",
+          "Азіатська",
+          "Єврейська",
+          "Українська"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "36"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "e476dc30-429f-4228-ab27-e10552a4f0c2": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/48efae80-7609-44a2-bec8-afbae76fab98",
+        "citySlug": "kyiv",
+        "slug": "burger-farm-б-р-шевченка",
+        "title": "Burger Farm (б-р Шевченка)",
+        "uuid": "e476dc30-429f-4228-ab27-e10552a4f0c2",
+        "categories": [
+          "₴",
+          "Американська",
+          "Барбекю",
+          "Традиційна американська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "916ef574-3161-4bec-81ea-08fb49f3dec6": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/3e2a077d-5610-4b8e-b81a-a174394bdb4a",
+        "citySlug": "kyiv",
+        "slug": "ресторан-the-burger-арена",
+        "title": "Ресторан The Burger (Арена)",
+        "uuid": "916ef574-3161-4bec-81ea-08fb49f3dec6",
+        "categories": [
+          "₴₴",
+          "Американська",
+          "Бургери",
+          "Закуски"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Супер соковиті бургери"
+        },
+        "promoTrackings": []
+      },
+      "b30a4f73-db98-4f59-84e4-f3afdfa01c68": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/576f05c4-7dd9-4e0d-bbc8-30fe717fa083",
+        "citySlug": "kyiv",
+        "slug": "зелении-кит",
+        "title": "Зелений Кит",
+        "uuid": "b30a4f73-db98-4f59-84e4-f3afdfa01c68",
+        "categories": [
+          "₴",
+          "Європейська",
+          "Для вегетаріанців",
+          "Салати"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "152"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "b36eeea6-6247-46ab-a27c-c916af1a9e4e": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/a7e4b7f3-10d2-4694-8533-247398083ebf.jpeg",
+        "citySlug": "kyiv",
+        "slug": "burger-bar",
+        "title": "Burger Bar",
+        "uuid": "b36eeea6-6247-46ab-a27c-c916af1a9e4e",
+        "categories": [
+          "₴₴",
+          "Бургери",
+          "Американська",
+          "Вулична їжа"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "58"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "1ee7acb0-a7f6-4ee5-b68d-bd22c1adab72": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/d469d1eb-424a-416b-8849-6adbb15570a6",
+        "citySlug": "kyiv",
+        "slug": "blin-&-panini",
+        "title": "Blin & Panini",
+        "uuid": "1ee7acb0-a7f6-4ee5-b68d-bd22c1adab72",
+        "categories": [
+          "₴",
+          "Вулична їжа",
+          "Мексиканська",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 3.8,
+          "ratingCount": "31"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "66dd70e1-4c39-493c-91de-8141718bb62b": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/9c5119fb-cfc3-4c04-9605-3aca0ac8e84a.jpeg",
+        "citySlug": "kyiv",
+        "slug": "юджин-бургер",
+        "title": "Юджин Бургер",
+        "uuid": "66dd70e1-4c39-493c-91de-8141718bb62b",
+        "categories": [
+          "₴₴",
+          "Бургери",
+          "Американська",
+          "Для вегетаріанців",
+          "Для веганів",
+          "Вулична їжа"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "97"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "ab36906a-7af5-4211-bb34-742743773833": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/848072d2-ec8e-44ab-ad37-bea0aed6f80f",
+        "citySlug": "kyiv",
+        "slug": "smørrebrød",
+        "title": "Smørrebrød",
+        "uuid": "ab36906a-7af5-4211-bb34-742743773833",
+        "categories": [
+          "₴₴",
+          "Європейська",
+          "Сучасна європейська",
+          "Сніданок і бранч"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "40"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Легендарні сендвічі з різними начинками"
+        },
+        "promoTrackings": []
+      },
+      "6adc6ae3-dc31-46ca-bbea-a9376d573f90": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/6ffff61e-d483-4264-825d-b038d2a950f7",
+        "citySlug": "kyiv",
+        "slug": "руккола-вул-богдана-хмельницького",
+        "title": "Руккола (вул. Богдана Хмельницького)",
+        "uuid": "6adc6ae3-dc31-46ca-bbea-a9376d573f90",
+        "categories": [
+          "₴₴",
+          "Італійська",
+          "Європейська",
+          "Піца"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "27"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "0cfc4355-1d49-4ea1-a1f1-7e142acf7b53": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/adc7aa5c-a287-4686-94aa-4b6f1236bfd6",
+        "citySlug": "kyiv",
+        "slug": "rooster-grill-bar",
+        "title": "Rooster Grill Bar",
+        "uuid": "0cfc4355-1d49-4ea1-a1f1-7e142acf7b53",
+        "categories": [
+          "₴₴",
+          "Бургери",
+          "Курка",
+          "Сніданок і бранч"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "157"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "e9f3e8f6-26ba-4d80-98f9-d1f70c901d50": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/bae6205b-e0d7-4572-ba4e-1c3d2cc2eb5c",
+        "citySlug": "kyiv",
+        "slug": "ресторан-sho",
+        "title": "Ресторан SHO",
+        "uuid": "e9f3e8f6-26ba-4d80-98f9-d1f70c901d50",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Сніданок і бранч",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "101"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Сучасна українська кухня"
+        },
+        "promoTrackings": []
+      },
+      "96a74797-000c-4111-9691-bcedf6d2e267": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/819caf2b-62b2-4964-b6ba-a247241a2863.jpeg",
+        "citySlug": "kyiv",
+        "slug": "трішки-більше",
+        "title": "Трішки більше",
+        "uuid": "96a74797-000c-4111-9691-bcedf6d2e267",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Європейська",
+          "Сніданок і бранч"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "36"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "b4b353a4-69d1-42e5-a206-7e703059ac38": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/da05fdd1-a45b-4836-944d-cf1f165ed05f",
+        "citySlug": "kyiv",
+        "slug": "чачапурі-бул-тараса-шевченка",
+        "title": "Чачапурі (бул. Тараса Шевченка)",
+        "uuid": "b4b353a4-69d1-42e5-a206-7e703059ac38",
+        "categories": [
+          "₴₴",
+          "Грузинська",
+          "Європейська",
+          "Випічка"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "61"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Замовляй нові комбо-меню за 170 грн! "
+        },
+        "promoTrackings": []
+      },
+      "6f18d5d6-bac9-48ce-86c7-79e4344cd7c2": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/fa0e79e8-4b96-4280-a931-a2bd2abfad10",
+        "citySlug": "kyiv",
+        "slug": "фаина-фамілія-вул-еспланадна",
+        "title": "Файна Фамілія (вул. Еспланадна)",
+        "uuid": "6f18d5d6-bac9-48ce-86c7-79e4344cd7c2",
+        "categories": [
+          "₴₴",
+          "Італійська",
+          "Європейська",
+          "Середземноморська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "84"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "2bcef0c1-5d18-475a-85bc-e6f5e876fe68": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/c54e95f4-2ae7-462f-b3ba-1df89ae541c8",
+        "citySlug": "kyiv",
+        "slug": "georgian-house",
+        "title": "Georgian House",
+        "uuid": "2bcef0c1-5d18-475a-85bc-e6f5e876fe68",
+        "categories": [
+          "₴₴",
+          "Грузинська",
+          "Східноєвропейська",
+          "Випічка"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "44"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "При замовленні від 200 грн отримуй Хачапурі по-мегрельскі у подарунок"
+        },
+        "promoTrackings": []
+      },
+      "691c9c4f-52c1-42e8-96a9-d9d371ab0507": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/78ba3f25-3585-4f25-8904-ce86f52e8e94",
+        "citySlug": "kyiv",
+        "slug": "мама-манана-вул-кірпи",
+        "title": "Мама Манана (вул. Кірпи)",
+        "uuid": "691c9c4f-52c1-42e8-96a9-d9d371ab0507",
+        "categories": [
+          "₴₴",
+          "Близькосхідна",
+          "Грузинська",
+          "Випічка"
+        ],
+        "feedback": {
+          "rating": 4.9,
+          "ratingCount": "146"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "3e198e09-895d-460c-be8a-d071e70a7f20": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/e3863d73-c40a-4be5-a15a-491477fa72f8",
+        "citySlug": "kyiv",
+        "slug": "dolceteka-bassano",
+        "title": "Dolceteka Bassano",
+        "uuid": "3e198e09-895d-460c-be8a-d071e70a7f20",
+        "categories": [
+          "₴₴",
+          "Європейська",
+          "Десерти",
+          "Сніданок і бранч"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "43"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Вишукані десерти"
+        },
+        "promoTrackings": []
+      },
+      "340faa84-d284-43b1-81b1-184f56a9a4bc": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/f96585c2-4561-437a-bd4e-8f461ea10118",
+        "citySlug": "kyiv",
+        "slug": "salo-bar",
+        "title": "Salo Bar",
+        "uuid": "340faa84-d284-43b1-81b1-184f56a9a4bc",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Салати",
+          "Закуски"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "eef1f51a-7ac8-4540-8ac5-6ed99ddb76dc": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/0070f166-d9e9-4bac-91f5-48740bc3ab63",
+        "citySlug": "kyiv",
+        "slug": "компот-вул-велика-васильківська",
+        "title": "Компот (вул. Велика Васильківська)",
+        "uuid": "eef1f51a-7ac8-4540-8ac5-6ed99ddb76dc",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Східноєвропейська",
+          "Європейська"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "73"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "b318911f-1c17-4d57-b0ef-3c0fcbd7f17e": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/e6f5a386-80b2-490e-afe2-d227170444b4",
+        "citySlug": "kyiv",
+        "slug": "шишка",
+        "title": "Шишка",
+        "uuid": "b318911f-1c17-4d57-b0ef-3c0fcbd7f17e",
+        "categories": [
+          "₴₴",
+          "Для вегетаріанців",
+          "Європейська"
+        ],
+        "feedback": {
+          "rating": 4.9,
+          "ratingCount": "103"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "814139b9-1e0e-4d65-aaf6-70ac1237a0a4": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/7143af35-3cca-4b00-aacd-2641a4242a3e",
+        "citySlug": "kyiv",
+        "slug": "риба-пила",
+        "title": "Риба Пила",
+        "uuid": "814139b9-1e0e-4d65-aaf6-70ac1237a0a4",
+        "categories": [
+          "₴₴",
+          "Морепродукти",
+          "Суші",
+          "Японська"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "98374475-0b6a-43b7-8e52-d88c9ed95e9b": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/2e5d3688-7b2b-4172-816f-1700fbfda19b",
+        "citySlug": "kyiv",
+        "slug": "сушия-вул-ярославська",
+        "title": "Сушия (вул. Ярославська)",
+        "uuid": "98374475-0b6a-43b7-8e52-d88c9ed95e9b",
+        "categories": [
+          "₴₴",
+          "Японська",
+          "Суші",
+          "Роли",
+          "Азіатська"
+        ],
+        "feedback": {
+          "rating": 4.2,
+          "ratingCount": "33"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Справжні японські суші"
+        },
+        "promoTrackings": []
+      },
+      "fb394fd0-760b-4508-b1c8-ade9d215e84a": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/97e43b6b-a7c4-47f9-8208-257765f4325a",
+        "citySlug": "kyiv",
+        "slug": "vatra",
+        "title": "Vatra",
+        "uuid": "fb394fd0-760b-4508-b1c8-ade9d215e84a",
+        "categories": [
+          "₴₴",
+          "Американська",
+          "Бургери",
+          "Європейська"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "37"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "340b03bf-ed03-4574-8118-d406ec34d39b": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/8eac1eb0-db4a-499e-afd5-116b92a03a7b",
+        "citySlug": "kyiv",
+        "slug": "noodle-doodle-вул-велика-васильківська",
+        "title": "Noodle Doodle (вул. Велика Васильківська)",
+        "uuid": "340b03bf-ed03-4574-8118-d406ec34d39b",
+        "categories": [
+          "₴",
+          "Азіатська",
+          "Китайська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "8299a40f-b34e-4b77-ae57-9ac3d325b754": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/0b214c90-f214-4472-88a9-26c4bb549f1c",
+        "citySlug": "kyiv",
+        "slug": "noodle-doodle-маидан-незалежності",
+        "title": "Noodle Doodle (Майдан Незалежності)",
+        "uuid": "8299a40f-b34e-4b77-ae57-9ac3d325b754",
+        "categories": [
+          "₴",
+          "Азіатська",
+          "Китайська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "192"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "1968d261-1052-409b-95b1-a3003fa00948": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/8f76881c-d9f1-4f58-9590-b0981ab61bf9",
+        "citySlug": "kyiv",
+        "slug": "тюбетеика-на-тарасівськіи",
+        "title": "Тюбетейка на Тарасівській",
+        "uuid": "1968d261-1052-409b-95b1-a3003fa00948",
+        "categories": [
+          "₴",
+          "Близькосхідна",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "95"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "49859cf1-fad8-45c7-b4c2-7ceda0b2c468": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/f78c5406-fe4e-4ac0-9fe0-c36e32744632",
+        "citySlug": "kyiv",
+        "slug": "компот-поштова-площа",
+        "title": "Компот (Поштова площа)",
+        "uuid": "49859cf1-fad8-45c7-b4c2-7ceda0b2c468",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Східноєвропейська",
+          "Європейська"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "36"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "7502641a-9b4d-4f2a-a28b-660bdb052ec2": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/3c7e8db5-60af-4756-b92a-2002ad33e3c8",
+        "citySlug": "kyiv",
+        "slug": "crazy-quentin",
+        "title": "Crazy Quentin",
+        "uuid": "7502641a-9b4d-4f2a-a28b-660bdb052ec2",
+        "categories": [
+          "₴₴",
+          "Бургери",
+          "Американська",
+          "Європейська"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "8e7b1dfd-c0ed-42b8-8492-c8338530d8cc": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/88706b15-065e-45a1-9289-c0921acb608c",
+        "citySlug": "kyiv",
+        "slug": "punkraft",
+        "title": "Punkraft",
+        "uuid": "8e7b1dfd-c0ed-42b8-8492-c8338530d8cc",
+        "categories": [
+          "₴₴",
+          "Бургери",
+          "Салати",
+          "Закуски"
+        ],
+        "feedback": null,
+        "etaRange": {
+          "text": "25–35 мин.",
+          "iconUrl": ""
+        },
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": true,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "638d7cce-60d1-41b8-b482-38af752b7d45": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/7052d917-53fb-48fb-a163-85a372a7deb3",
+        "citySlug": "kyiv",
+        "slug": "georgian-bar-wine-&-bread",
+        "title": "Georgian Bar WINE & BREAD",
+        "uuid": "638d7cce-60d1-41b8-b482-38af752b7d45",
+        "categories": [
+          "₴₴",
+          "Грузинська",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.3,
+          "ratingCount": "103"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "c348632a-e462-4145-a127-411cd11274a5": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/9246a92b-e671-45d8-b1de-667ccdfc502f",
+        "citySlug": "kyiv",
+        "slug": "bruce-lee",
+        "title": "Bruce Lee",
+        "uuid": "c348632a-e462-4145-a127-411cd11274a5",
+        "categories": [
+          "₴₴",
+          "Китайська",
+          "Азіатська"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "77"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "41474ff9-3c96-48b0-9423-47cba5132d15": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/ad39f6aa-d076-4646-855f-95254a9a7021",
+        "citySlug": "kyiv",
+        "slug": "freshline-вул-мала-житомирська",
+        "title": "FreshLine (вул. Мала Житомирська)",
+        "uuid": "41474ff9-3c96-48b0-9423-47cba5132d15",
+        "categories": [
+          "₴",
+          "Фастфуд",
+          "Сандвічі",
+          "Салати"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "5b198cdb-4ac7-40b5-89b2-0884db410e92": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/8d926f05-a9b6-42ff-97a7-44c38a7f6463",
+        "citySlug": "kyiv",
+        "slug": "kuzen-falafel",
+        "title": "Kuzen Falafel",
+        "uuid": "5b198cdb-4ac7-40b5-89b2-0884db410e92",
+        "categories": [
+          "₴",
+          "Для вегетаріанців",
+          "Фастфуд"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "64"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "2b523af8-823b-40e1-aca0-0d9d02d29030": {
+        "heroImageUrl": "https://duyt4h9nfnj50.cloudfront.net/resized/1544363624375-w550-99.jpg",
+        "citySlug": "kyiv",
+        "slug": "rebra&kotlety-вул-борисоглібська",
+        "title": "Rebra&Kotlety (вул. Борисоглібська)",
+        "uuid": "2b523af8-823b-40e1-aca0-0d9d02d29030",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Сучасна європейська",
+          "Європейська"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "facf3954-df96-4dc7-8e06-57090d3d39d3": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/78ce3266-6280-4d74-bcf4-8b9a7dd73021",
+        "citySlug": "kyiv",
+        "slug": "the-burger-вул-гоголівська",
+        "title": "The Burger (вул. Гоголівська)",
+        "uuid": "facf3954-df96-4dc7-8e06-57090d3d39d3",
+        "categories": [
+          "₴₴",
+          "Американська",
+          "Бургери",
+          "Закуски"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "82"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "2c30d8fb-582a-4860-9ac7-6d9af0a1ecb6": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/eb4acbdf-9d61-4461-baf2-1634871c55a1",
+        "citySlug": "kyiv",
+        "slug": "бездельники-бар",
+        "title": "Бездельники бар",
+        "uuid": "2c30d8fb-582a-4860-9ac7-6d9af0a1ecb6",
+        "categories": [
+          "₴₴",
+          "Сніданок і бранч",
+          "Вулична їжа",
+          "Європейська",
+          "Азіатська"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "61"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "dd95767a-d227-44af-98f5-f0feb22c0325": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/46bcd5ad-bb1e-4048-b779-615395538b88",
+        "citySlug": "kyiv",
+        "slug": "quanto-costa",
+        "title": "Quanto Costa",
+        "uuid": "dd95767a-d227-44af-98f5-f0feb22c0325",
+        "categories": [
+          "₴₴",
+          "Італійська",
+          "Європейська",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "74"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "2d74386a-2e0e-4071-be6b-65d549d34cc8": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/2358cacc-b090-4d69-867a-0e592284a0e8",
+        "citySlug": "kyiv",
+        "slug": "дом",
+        "title": "ДОМ",
+        "uuid": "2d74386a-2e0e-4071-be6b-65d549d34cc8",
+        "categories": [
+          "₴",
+          "Сучасна європейська",
+          "Для веганів",
+          "Для вегетаріанців"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "8476752b-08cb-4280-8066-41bc3c0dca4c": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/f51103dd-acd1-4b10-a87c-6a40c2f5884e",
+        "citySlug": "kyiv",
+        "slug": "meiwei-вул-велика-васильківська",
+        "title": "Meiwei (вул. Велика Васильківська)",
+        "uuid": "8476752b-08cb-4280-8066-41bc3c0dca4c",
+        "categories": [
+          "₴₴",
+          "Китайська",
+          "Азіатська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "8548894f-0b8a-4388-b627-6886b301e65a": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/3f6b06fb-13cf-4ff5-911d-f4e35de2daaf",
+        "citySlug": "kyiv",
+        "slug": "nebos",
+        "title": "Nebos",
+        "uuid": "8548894f-0b8a-4388-b627-6886b301e65a",
+        "categories": [
+          "₴₴",
+          "Для веганів",
+          "Для вегетаріанців"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "113"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "c53b4d51-fdf4-43fb-83cf-529acdc47249": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/860b1e51-77ef-4795-aeee-e6ce3db7bd5e.jpeg",
+        "citySlug": "kyiv",
+        "slug": "wokwei",
+        "title": "WOKWEI",
+        "uuid": "c53b4d51-fdf4-43fb-83cf-529acdc47249",
+        "categories": [
+          "₴",
+          "Китайська",
+          "Азіатська",
+          "Європейська",
+          "Італійська"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "47081423-bd6c-47c9-9483-bb164c0e94b0": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/b1aba206-95fa-475f-8d3e-8e3452ebbeb0",
+        "citySlug": "kyiv",
+        "slug": "adriano-pizza",
+        "title": "Adriano Pizza",
+        "uuid": "47081423-bd6c-47c9-9483-bb164c0e94b0",
+        "categories": [
+          "₴₴",
+          "Піца",
+          "Італійська",
+          "Європейська"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "64"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "c1e1e937-8dd7-46fb-891c-773f64c84d41": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/4f798379-29b7-449e-b9da-f59cdf6bf3cd",
+        "citySlug": "kyiv",
+        "slug": "хачапурі-і-вино-вул-велика-васильківська",
+        "title": "Хачапурі і Вино (вул. Велика Васильківська)",
+        "uuid": "c1e1e937-8dd7-46fb-891c-773f64c84d41",
+        "categories": [
+          "₴₴",
+          "Грузинська",
+          "Близькосхідна",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.3,
+          "ratingCount": "34"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "ecb4d61b-0d1d-45f6-97e3-aad409d95265": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/6ffff61e-d483-4264-825d-b038d2a950f7",
+        "citySlug": "kyiv",
+        "slug": "руккола-вул-петра-сагаидачного",
+        "title": "Руккола (вул. Петра Сагайдачного)",
+        "uuid": "ecb4d61b-0d1d-45f6-97e3-aad409d95265",
+        "categories": [
+          "₴₴",
+          "Італійська",
+          "Європейська",
+          "Піца"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "32"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "4b764693-a5dd-4570-8aa8-a1f10d69aa76": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/e5e663e0-95ef-410d-996b-c4bcd46c72d3",
+        "citySlug": "kyiv",
+        "slug": "market-plaza-вул-володимирська",
+        "title": "Market Plaza (вул. Володимирська)",
+        "uuid": "4b764693-a5dd-4570-8aa8-a1f10d69aa76",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Європейська",
+          "Східноєвропейська"
+        ],
+        "feedback": {
+          "rating": 4.3,
+          "ratingCount": "153"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "fac9ae03-c90a-4cd3-8178-db1f13e93474": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/f6ad142f-7fbd-43e1-97ce-1ad13a340a7b",
+        "citySlug": "kyiv",
+        "slug": "the-cake",
+        "title": "The Cake",
+        "uuid": "fac9ae03-c90a-4cd3-8178-db1f13e93474",
+        "categories": [
+          "₴₴",
+          "Сніданок і бранч",
+          "Десерти"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "65"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Улюблені авторські десерти"
+        },
+        "promoTrackings": []
+      },
+      "9b9ea061-aa92-41e2-a506-14e50b5348af": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/ad7251a0-582d-4bc0-93d0-4ded3d7b27dd",
+        "citySlug": "kyiv",
+        "slug": "vesuvio-pizza",
+        "title": "Vesuvio Pizza",
+        "uuid": "9b9ea061-aa92-41e2-a506-14e50b5348af",
+        "categories": [
+          "₴₴",
+          "Італійська",
+          "Піца",
+          "Салати"
+        ],
+        "feedback": {
+          "rating": 4.1,
+          "ratingCount": "151"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "96965a43-0f43-4a42-b0a7-3b7961d6e34c": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/e2d65ce3-9b78-4f25-a55e-67941d64973e",
+        "citySlug": "kyiv",
+        "slug": "dogz&burgerz-пров-є-гуцала",
+        "title": "Dogz&Burgerz (пров. Є. Гуцала)",
+        "uuid": "96965a43-0f43-4a42-b0a7-3b7961d6e34c",
+        "categories": [
+          "₴",
+          "Американська",
+          "Фастфуд",
+          "Вулична їжа"
+        ],
+        "feedback": {
+          "rating": 4.2,
+          "ratingCount": "41"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "45617023-7158-48b6-8392-4c34a745d448": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/bc899764-8b88-406c-bb29-a467d773fa10",
+        "citySlug": "kyiv",
+        "slug": "сушия-вул-б-хмельницького",
+        "title": "Сушия (вул. Б. Хмельницького)",
+        "uuid": "45617023-7158-48b6-8392-4c34a745d448",
+        "categories": [
+          "₴₴",
+          "Японська",
+          "Суші",
+          "Роли",
+          "Азіатська"
+        ],
+        "feedback": {
+          "rating": 4.1,
+          "ratingCount": "34"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Справжні японські суші"
+        },
+        "promoTrackings": []
+      },
+      "07df4792-2d67-4ae2-bded-0015c131ced9": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/67a023ca-7c46-4f32-8fbb-be7faa8b92fc",
+        "citySlug": "kyiv",
+        "slug": "tequila-house",
+        "title": "Tequila House",
+        "uuid": "07df4792-2d67-4ae2-bded-0015c131ced9",
+        "categories": [
+          "₴₴",
+          "Латиноамериканська",
+          "Південноамериканська",
+          "Мексиканська"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "65eb8bb8-4928-4777-8453-7128181c3bc6": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/04f2946f-11ef-49f2-8a36-f5ad7aadd7fd",
+        "citySlug": "kyiv",
+        "slug": "urban-space-500",
+        "title": "Urban Space 500",
+        "uuid": "65eb8bb8-4928-4777-8453-7128181c3bc6",
+        "categories": [
+          "₴₴",
+          "Здорова їжа",
+          "Сучасна європейська",
+          "Для вегетаріанців"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "160"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "28c2ef4c-ff9d-4bed-b6b4-0d9603aaaa1c": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/d0f2bb55-eb63-4de2-8671-cc7c13e6c6f9",
+        "citySlug": "kyiv",
+        "slug": "fish-&-pussycat",
+        "title": "Fish & Pussycat ",
+        "uuid": "28c2ef4c-ff9d-4bed-b6b4-0d9603aaaa1c",
+        "categories": [
+          "₴₴₴",
+          "Японська",
+          "Суші",
+          "Морепродукти"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "52"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "b3f84976-ef9c-428e-8652-4e1bb3cbe17c": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/366ad9aa-7722-44fb-95bb-4c7c1c0f79ea",
+        "citySlug": "kyiv",
+        "slug": "walker-food-вул-антоновича",
+        "title": "Walker Food (вул. Антоновича)",
+        "uuid": "b3f84976-ef9c-428e-8652-4e1bb3cbe17c",
+        "categories": [
+          "₴",
+          "Фастфуд",
+          "Бургери",
+          "Азіатська"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "79"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "cf68d4ec-4f37-4ac7-bb97-ec12b49d7d83": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/8fe50d84-eee6-47dc-ab6b-22218d9910ca",
+        "citySlug": "kyiv",
+        "slug": "napoli-pizza",
+        "title": "Napoli-Pizza",
+        "uuid": "cf68d4ec-4f37-4ac7-bb97-ec12b49d7d83",
+        "categories": [
+          "₴₴",
+          "Італійська",
+          "Піца"
+        ],
+        "feedback": {
+          "rating": 3.9,
+          "ratingCount": "77"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "db662b6c-f98d-497b-a993-c9b6750feeeb": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/5241fcd8-d2cc-4b50-994a-5748cea9cb3a",
+        "citySlug": "kyiv",
+        "slug": "han-gang",
+        "title": "Han-Gang",
+        "uuid": "db662b6c-f98d-497b-a993-c9b6750feeeb",
+        "categories": [
+          "₴₴",
+          "Корейська",
+          "Близькосхідна",
+          "Морепродукти"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "39"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "d8130084-f722-4a08-b85d-d975c9e69959": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/3af51993-a1c7-4601-b195-f6775f9fab88",
+        "citySlug": "kyiv",
+        "slug": "хачапурі-і-вино-вул-бориса-грінченко",
+        "title": "Хачапурі і Вино (вул. Бориса Грінченко)",
+        "uuid": "d8130084-f722-4a08-b85d-d975c9e69959",
+        "categories": [
+          "₴₴",
+          "Грузинська",
+          "Близькосхідна",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "36"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "a743b05f-520b-4459-87e2-c7b786ef1d75": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/f8952505-292b-42f3-8095-6fae2102dbe2.jpeg",
+        "citySlug": "kyiv",
+        "slug": "софра-кловськии-узвіз",
+        "title": "Софра (Кловський узвіз)",
+        "uuid": "a743b05f-520b-4459-87e2-c7b786ef1d75",
+        "categories": [
+          "₴",
+          "Близькосхідна",
+          "Турецька",
+          "Східноєвропейська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "108"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "0e924687-7405-4c62-b38f-dc7cda384d65": {
+        "heroImageUrl": "https://duyt4h9nfnj50.cloudfront.net/resized/1544698474444-w550-13.jpg",
+        "citySlug": "kyiv",
+        "slug": "furgoneta-вул-басеина",
+        "title": "Furgoneta (вул. Басейна)",
+        "uuid": "0e924687-7405-4c62-b38f-dc7cda384d65",
+        "categories": [
+          "₴",
+          "Для вегетаріанців",
+          "Бургери",
+          "Азіатська",
+          "Фастфуд"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "79"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "8faa88d6-9b38-4aaf-8245-f7eda6495fec": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/6c71217b-6841-461d-95af-2fe64943adff",
+        "citySlug": "kyiv",
+        "slug": "mr-butcher",
+        "title": "Mr. Butcher",
+        "uuid": "8faa88d6-9b38-4aaf-8245-f7eda6495fec",
+        "categories": [
+          "₴",
+          "Фастфуд",
+          "Американська"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "56"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "afa6e563-32ca-4222-92e7-cd77df83d379": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/53adbc2a-c8b0-47ad-b06f-ace1b3027e55",
+        "citySlug": "kyiv",
+        "slug": "raman-sumasbrod",
+        "title": " Ra.Man (Sumasbrod)",
+        "uuid": "afa6e563-32ca-4222-92e7-cd77df83d379",
+        "categories": [
+          "₴",
+          "Для вегетаріанців",
+          "Вулична їжа",
+          "Для веганів"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "122"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "4f6baf8b-6799-4824-b90a-be452946d41c": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/24c9b0cc-60b8-40bb-9ebe-bb79c2878ffa",
+        "citySlug": "kyiv",
+        "slug": "любчик-вул-воздвиженська",
+        "title": "Любчик (вул. Воздвиженська)",
+        "uuid": "4f6baf8b-6799-4824-b90a-be452946d41c",
+        "categories": [
+          "₴₴",
+          "Українська",
+          "Морепродукти",
+          "Закуски"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "58"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Одеські делікатеси"
+        },
+        "promoTrackings": []
+      },
+      "9bb5f578-a8fe-46ca-b04e-116a7393696a": {
+        "heroImageUrl": "https://duyt4h9nfnj50.cloudfront.net/resized/1544699487850-w550-1b.jpg",
+        "citySlug": "kyiv",
+        "slug": "maisataibar",
+        "title": "Maisatai.bar",
+        "uuid": "9bb5f578-a8fe-46ca-b04e-116a7393696a",
+        "categories": [
+          "₴₴",
+          "Азіатська",
+          "Тайська"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "54"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "a6d87a7c-f22a-4f88-b00d-fe9a00197820": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/02d8ce38-5f2a-4e33-b596-108138c687d9",
+        "citySlug": "kyiv",
+        "slug": "yummy-dogs",
+        "title": "Yummy Dogs",
+        "uuid": "a6d87a7c-f22a-4f88-b00d-fe9a00197820",
+        "categories": [
+          "₴",
+          "Американська",
+          "Закуски",
+          "Вулична їжа"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "54"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "3db51406-ab70-4eed-90d0-86c655c2d2ab": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/dca202c2-933f-44a5-ab87-5f5c578f7fb5",
+        "citySlug": "kyiv",
+        "slug": "zelyonka-новыи-стиль-жизни",
+        "title": "Zelyonka - новый стиль жизни",
+        "uuid": "3db51406-ab70-4eed-90d0-86c655c2d2ab",
+        "categories": [
+          "₴₴",
+          "Європейська",
+          "Сніданок і бранч",
+          "Для вегетаріанців"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "44"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "a8508733-5ce2-4fb7-93b5-df6fda348a4a": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/34dc8252-ba7e-441c-9fc0-87d3e1ba0304",
+        "citySlug": "kyiv",
+        "slug": "orang+utan-вул-січових-стрільців",
+        "title": "ORANG+UTAN (вул. Січових Стрільців)",
+        "uuid": "a8508733-5ce2-4fb7-93b5-df6fda348a4a",
+        "categories": [
+          "₴",
+          "Здорова їжа",
+          "Для вегетаріанців",
+          "Для веганів"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "a9618f36-3494-44e9-91eb-df74d0827e15": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/7de8ef71-0282-48bd-bee3-a9b8e8d34c07",
+        "citySlug": "kyiv",
+        "slug": "viet-bar",
+        "title": "Viet Bar",
+        "uuid": "a9618f36-3494-44e9-91eb-df74d0827e15",
+        "categories": [
+          "₴₴",
+          "Азіатська",
+          "В’єтнамська"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "0bb05f09-d3ca-4d49-aece-024804b12a44": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/9505b879-7bb3-4a33-93ac-15fbe3e10078",
+        "citySlug": "kyiv",
+        "slug": "escobar",
+        "title": "EscoBar",
+        "uuid": "0bb05f09-d3ca-4d49-aece-024804b12a44",
+        "categories": [
+          "₴₴",
+          "Кубинська",
+          "Мексиканська",
+          "Латиноамериканська"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "123"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "969e56b1-5ca4-4d13-9426-1ec5f28d6046": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/ba125bfa-eeb9-4d9e-9abe-909c492b133b",
+        "citySlug": "kyiv",
+        "slug": "каркас",
+        "title": "Каркас",
+        "uuid": "969e56b1-5ca4-4d13-9426-1ec5f28d6046",
+        "categories": [
+          "₴₴",
+          "Європейська",
+          "Стейки",
+          "Бургери"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "35"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Фіналіст премії \"Соль\" 2015-1016 років "
+        },
+        "promoTrackings": []
+      },
+      "5cad82b2-f7aa-473a-a911-93a0076a9383": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/4d935c3a-e36e-476f-b1f7-2f7d38fdf3a4",
+        "citySlug": "kyiv",
+        "slug": "furgoneta-вул-фізкультури",
+        "title": "Furgoneta (вул. Фізкультури)",
+        "uuid": "5cad82b2-f7aa-473a-a911-93a0076a9383",
+        "categories": [
+          "₴",
+          "Для вегетаріанців",
+          "Бургери",
+          "Азіатська",
+          "Фастфуд"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "39"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "67435315-5a9f-4619-89fa-520da17fd005": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/1c6c0eaf-9541-4de9-98dd-5db027f79735",
+        "citySlug": "kyiv",
+        "slug": "сушия-вул-б-грінченка",
+        "title": "Сушия (вул. Б. Грінченка)",
+        "uuid": "67435315-5a9f-4619-89fa-520da17fd005",
+        "categories": [
+          "₴₴",
+          "Японська",
+          "Суші",
+          "Роли",
+          "Азіатська"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": {
+          "iconUrl": "https://uber-test.s3.amazonaws.com/badge_check@3x.png",
+          "text": "Справжні японські суші"
+        },
+        "promoTrackings": []
+      },
+      "4450f030-2701-4aa6-9221-6caaebbbc3dd": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/a19616a3-a33f-4bd5-a811-b15c597fe917",
+        "citySlug": "kyiv",
+        "slug": "mon-cher-вул-ярославів-вал",
+        "title": "Mon Cher (вул. Ярославів Вал)",
+        "uuid": "4450f030-2701-4aa6-9221-6caaebbbc3dd",
+        "categories": [
+          "₴₴",
+          "Ліванська",
+          "Європейська",
+          "Традиційна їжа"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "114"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "13acfa58-7856-4bd5-93bd-c01b815ede05": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/3a67a01f-caa2-44ec-b6cf-ae72cc0a09e7",
+        "citySlug": "kyiv",
+        "slug": "радіо-тбілісі",
+        "title": "Радіо Тбілісі",
+        "uuid": "13acfa58-7856-4bd5-93bd-c01b815ede05",
+        "categories": [
+          "₴₴",
+          "Грузинська",
+          "Випічка",
+          "Близькосхідна"
+        ],
+        "feedback": {
+          "rating": 4.8,
+          "ratingCount": "54"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "c8a8ed34-a4d5-459d-8154-22016205d33b": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/2044897d-7722-4a40-b3be-6100469535a2",
+        "citySlug": "kyiv",
+        "slug": "кава-та-троянди",
+        "title": "Кава та Троянди",
+        "uuid": "c8a8ed34-a4d5-459d-8154-22016205d33b",
+        "categories": [
+          "₴₴",
+          "Сніданок і бранч",
+          "Українська",
+          "Європейська"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "99"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "c9aef498-4d25-4417-933a-008fe5913853": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/dc4aaaf2-2cfb-42aa-8088-ae6ea2a4268b",
+        "citySlug": "kyiv",
+        "slug": "capo-di-monte",
+        "title": "Capo di Monte",
+        "uuid": "c9aef498-4d25-4417-933a-008fe5913853",
+        "categories": [
+          "₴₴",
+          "Європейська",
+          "Італійська",
+          "Середземноморська"
+        ],
+        "feedback": {
+          "rating": 4.5,
+          "ratingCount": "29"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "a181db96-b909-4846-9cd0-412ea5fc5673": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/c1fcbae1-6ec8-4ac0-8950-0e7e59987cda",
+        "citySlug": "kyiv",
+        "slug": "green-13-вул-велика-житомирська",
+        "title": "Green 13 (вул. Велика Житомирська)",
+        "uuid": "a181db96-b909-4846-9cd0-412ea5fc5673",
+        "categories": [
+          "₴",
+          "Для веганів",
+          "Для вегетаріанців",
+          "Вулична їжа"
+        ],
+        "feedback": {
+          "rating": 4.7,
+          "ratingCount": "163"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "291276e3-d8e5-49fa-9966-63ec724a4aca": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/93c19563-0b00-4e9c-a7f0-f581ba186d1e.jpeg",
+        "citySlug": "kyiv",
+        "slug": "бульдог-паб",
+        "title": "Бульдог паб",
+        "uuid": "291276e3-d8e5-49fa-9966-63ec724a4aca",
+        "categories": [
+          "₴₴",
+          "Американська",
+          "Бургери",
+          "Паб"
+        ],
+        "feedback": {
+          "rating": 4.4,
+          "ratingCount": "200+"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "43ca1956-8222-42c4-ae29-1cfbe7371c6f": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/1d86af4c-e8aa-4caf-b17b-9bfff0a5d474",
+        "citySlug": "kyiv",
+        "slug": "mushlya-bar-вул-хрещатик",
+        "title": "Mushlya Bar (вул. Хрещатик)",
+        "uuid": "43ca1956-8222-42c4-ae29-1cfbe7371c6f",
+        "categories": [
+          "₴₴",
+          "Закуски",
+          "Морепродукти",
+          "Бургери"
+        ],
+        "feedback": null,
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      },
+      "de988589-a072-4620-8bee-e1a332d3b616": {
+        "heroImageUrl": "https://d1ralsognjng37.cloudfront.net/4fa4e44f-5b8b-49ee-9d52-15161fb76381",
+        "citySlug": "kyiv",
+        "slug": "софра-вул-верхніи-вал",
+        "title": "Софра (вул. Верхній Вал)",
+        "uuid": "de988589-a072-4620-8bee-e1a332d3b616",
+        "categories": [
+          "₴",
+          "Близькосхідна",
+          "Турецька",
+          "Східноєвропейська"
+        ],
+        "feedback": {
+          "rating": 4.6,
+          "ratingCount": "30"
+        },
+        "etaRange": null,
+        "fareBadge": null,
+        "promotion": null,
+        "isOpen": false,
+        "closedMessage": "Открывается в Среда",
+        "isDeliveryThirdParty": false,
+        "endorsement": null,
+        "promoTrackings": []
+      }
+    },
+    "meta": {
+      "offset": 80,
+      "hasMore": true
+    },
+    "currencyCode": "UAH",
+    "citySlug": "kyiv",
+    "isInServiceArea": true,
+    "cacheKey": "pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMiVEMCU5QSVEMCVCOCVEMCVCNSVEMCVCMiUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpCVVZhNFU3UDFFQVJfa1lCRjlJeFNYWSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E1MC40NDk4NTg3JTJDJTIybG9uZ2l0dWRlJTIyJTNBMzAuNTIzNjQ5NiU3RA%3D%3D"
+  }
+}
