@@ -23,6 +23,7 @@ $main-text-color: #1F1F1F;
   &__link {
     text-decoration: none;
     color: $main-text-color;
+    outline: none;
   }
 
   &__picture {
@@ -33,6 +34,10 @@ $main-text-color: #1F1F1F;
   }
 
   &__picture:hover {
+    transform: scale(1.1);
+  }
+
+  &__picture:focus {
     transform: scale(1.1);
   }
 

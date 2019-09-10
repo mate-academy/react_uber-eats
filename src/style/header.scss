@@ -22,13 +22,9 @@ $sing-in-btn-color: #E0E0E0;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
   }
 
-  &__logo-and-delivery {
-    display: flex;
-    align-items: center;
-  }
-
   &__logo {
     margin-right: 60px;
+    outline: none;
   }
 
   &__delivery {
@@ -87,12 +83,26 @@ $sing-in-btn-color: #E0E0E0;
     margin-right: auto;
     padding-left: 46px;
 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
     background-image: url("../image/clock.svg");
     background-position: left 16px top 12px;
     background-repeat: no-repeat;
     background-size: 18px;
 
     appearance: none;
+    background-color: transparent;
+    border: none;
+  }
+  &__delivery-time,
+  &__sign-in
+  {
+    outline: none;
+    border-bottom: 2px solid #fff !important;
+
+    transition: background-color .3s,  border-bottom .3s;
   }
 
   &__delivery-time,
@@ -143,8 +153,17 @@ $sing-in-btn-color: #E0E0E0;
   &__sign-in {
     margin-left: 40px;
     text-decoration: none;
+    height: 48px;
     color: #1F1F1F;
     line-height: 48px;
+    min-width: 90px;
+    text-align: center;
+  }
+
+  &__delivery-time:hover,
+  &__sign-in:hover {
+    background-color: #F5F5F5 !important;
+    border-bottom: 2px solid #000 !important;
   }
 }
 
@@ -165,53 +184,6 @@ $sing-in-btn-color: #E0E0E0;
   background-repeat: no-repeat;
   background-size: 22px;
   border: none;
-}
-
-.delivery {
-  display: flex;
-  align-items: center;
-  color: $text-color;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-
-  &__time {
-    height: 40px;
-    width: 70px;
-    padding-left: 7px;
-
-    color: #1D1D1D;
-    font-family: Roboto;
-    font-size: 16px;
-    line-height: 24px;
-
-    border: 1px solid #E0E0E0;
-    box-sizing: border-box;
-    border-radius: 2px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-  }
-
-  &__span {
-    margin: 0 9px;
-  }
-
-  &__adress {
-    height: 40px;
-    max-width: 292px;
-    padding: 0 0 0 36px;
-
-    color: #1D1D1D;
-    font-family: Roboto;
-    font-size: 16px;
-    line-height: 24px;
-
-    border: 1px solid #E0E0E0;
-    box-sizing: border-box;
-    border-radius: 2px;
-  }
 }
 
 .form {
@@ -244,8 +216,6 @@ $sing-in-btn-color: #E0E0E0;
 
   &__close-img {
     content: url("../image/close.svg");
-    //background-repeat: no-repeat;
-
   }
 
   &__input {
@@ -328,3 +298,4 @@ $sing-in-btn-color: #E0E0E0;
 .form:focus-within .form__input {
   cursor: initial;
 }
+

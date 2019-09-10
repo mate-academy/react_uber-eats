@@ -8,7 +8,10 @@ const RestaurantsList = ({ stores }) => (
   <main className="main">
     <div className="card-list">
       {stores.map(store => (
-        <div className="card">
+        <div
+          className="card"
+          key={store.uuid}
+        >
           <a
             href="/"
             onClick={event => event.preventDefault()}

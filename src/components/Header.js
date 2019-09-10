@@ -17,7 +17,7 @@ const Header = () => {
     <header id="to_top_of_page" className="header">
       <div className="header__wrapper">
 
-        <a href="/" className="header__logo">
+        <a href="/" tabIndex="-1" className="header__logo">
           <img
             alt="Uber Eats"
             src={`${IMG_URL}/f8f0721f871b3704cce92eb96bc6e504.svg`}
@@ -26,6 +26,7 @@ const Header = () => {
 
         <form
           className="form header__location"
+          tabIndex="-1"
         >
           <input
             type="text"
@@ -68,13 +69,16 @@ const Header = () => {
           name="order-time"
           aria-label="select delivery time"
           className="header__delivery-time"
+          defaultValue="now"
+          tabIndex="0"
         >
-          <option value="now" selected>Delivery now</option>
+          <option value="now">Delivery now</option>
           <option value="plan">Schedule for later</option>
         </select>
 
         <form
           className="header__search form"
+          tabIndex="-1"
         >
           <input
             type="text"
@@ -117,6 +121,7 @@ const Header = () => {
           href="/"
           className="header__sign-in"
           onClick={event => event.preventDefault()}
+          tabIndex="-1"
         >
            Sing in
         </a>
