@@ -1,11 +1,35 @@
 /*eslint-disable*/
 import React from 'react';
 import './Header.scss';
+import { Store, filterStores } from "../Store";
+
+const debounce = (f, delay) => {
+  let timerId = 0;
+  
+  const wrapper = (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => f(...args), delay);
+  };
+  
+  return wrapper;
+};
 
 class Header extends React.Component {
-  state = [];
+  state = {
+    inputField: "",
+  };
+  
+  inputFieldChange = (event) => {
+    this.setState({
+      inputField: event.target.value
+    });
+    Store.dispatch(filterStores(event.target.value))
+    
+  };
 
   render() {
+    console.log(this.state);
+    const { inputField } = this.state;
     return (
       <header id="head" className="Header">
         <div className="Header__logo">
@@ -16,10 +40,21 @@ class Header extends React.Component {
           <button className="Header__time">Deliver Time</button>
         </div>
         <div className="Header__mobile-search">
-          <input type="text" placeholder="Search restaurant"/>
+          <input type="text"
+                 placeholder="Search restaurant"
+                 value={inputField}
+                 onChange={this.inputFieldChange}
+          />
         </div>
         <div className="Header__search-acc">
-          <button className="Header__search">Search</button>
+          <div className="Header__search">
+            <input className="Header__search-input"
+                   type="text"
+                   placeholder="Search"
+                   // value={inputField}
+                   onChange={this.inputFieldChange}
+            />
+          </div>
           <button className="Header__acc">Sign in</button>
         </div>
       </header>
