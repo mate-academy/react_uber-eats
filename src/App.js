@@ -10,6 +10,7 @@ const BASE_URL = 'https://mate-academy.github.io/react_uber-eats/api/';
 const App = () => {
   const [stores, setStores] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [filterValue, setFilterValue] = useState('');
 
   useEffect(() => {
     const getStores = async() => {
@@ -26,13 +27,33 @@ const App = () => {
     getStores();
   }, []);
 
+  const filterStores = () => {
+    if (filterValue === '') {
+      return stores;
+    }
+
+    return stores.filter(
+      store => (
+        (store.title + store.categories)
+          .toLowerCase()
+          .includes(filterValue.trim())
+      ),
+    );
+  };
+
+  const filteredStores = filterStores();
+
   return (
     <div className="App">
-      <Header />
+      <Header
+        filterValue={filterValue}
+        setFilterValue={setFilterValue}
+        onChange={e => (setFilterValue(e.target.value))}
+      />
       {isLoaded
         ? (
           <RestaurantsList
-            stores={stores}
+            stores={filteredStores}
           />
         )
         : ''

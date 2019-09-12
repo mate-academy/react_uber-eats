@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/';
-const Header = () => {
-  const [search, setSearch] = useState('');
+const Header = ({ filterValue, onChange }) => {
   const [location, setLocation] = useState('London');
 
   const locationCloseRef = useRef();
@@ -83,10 +83,10 @@ const Header = () => {
           <input
             type="text"
             name="restaurant-search-field"
-            value={search}
+            value={filterValue}
             ref={searchInputRef}
             autoComplete="off"
-            onChange={event => setSearch(event.target.value)}
+            onChange={onChange}
             aria-label="restaurant search field"
             className="form__input search__input"
             placeholder="Search"
@@ -98,7 +98,6 @@ const Header = () => {
               'form__btn',
             )}
             onClick={() => {
-              setSearch('');
               handleFocus(searchInputRef);
             }}
           >
@@ -128,6 +127,11 @@ const Header = () => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  filterValue: PropTypes.string.isRequired,
 };
 
 export default Header;
