@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <section className="header_section">
-        <a href="/">
+        <a href="/" className="logo_link">
           <img
             src={`${process.env.PUBLIC_URL}/img/logo.svg`}
             alt="Uber Eats"

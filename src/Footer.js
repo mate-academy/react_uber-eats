@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer>
+  <footer className="footer">
     <section className="footer_section">
       <div className="w_logo-container">
         <img src={`${process.env.PUBLIC_URL}/img/white-logo.svg`} alt="" />
@@ -33,7 +33,7 @@ const Footer = () => (
                 </option>
               </select>
             </form>
-            <div className="btn_app_container medium_show">
+            <div className="btn_app--container medium_show">
               <a
                 className="app_link"
                 href="/"
@@ -57,7 +57,7 @@ const Footer = () => (
             </div>
           </div>
           <div className="socials_container medium_hide">
-            <p className="hash_tag">
+            <p className="hash_tag ">
               <span className="hash">#</span>
               UberEats
             </p>
@@ -136,7 +136,7 @@ const Footer = () => (
 
       <div className="app_container">
         <div className="line_block" />
-        <div className="btn_app_container medium_hide">
+        <div className="btn_app--container medium_hide">
           <a
             className="app_link"
             href="/"
@@ -165,7 +165,35 @@ const Footer = () => (
         <span className="footer_links-copy-container">
           <a className="footer_copy-n-links" href="/">Privacy</a>
           <a className="footer_copy-n-links" href="/">Terms</a>
-          <a className="footer_copy-n-links" href="/">Pricing</a>
+          <a className="footer_copy-n-links medium_show" href="/">Pricing</a>
+          <div className="socials_container big_show">
+            <div>
+              <a
+                className="soc_link"
+                href="/"
+              >
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/facebook.svg`}
+                  alt=""
+                />
+              </a>
+              <a
+                className="soc_link"
+                href="/"
+              >
+                <img src={`${process.env.PUBLIC_URL}/img/twitter.svg`} alt="" />
+              </a>
+              <a
+                className="soc_link"
+                href="/"
+              >
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/instagram.svg`}
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
         </span>
       </article>
       <div className="footer_socials-bottom--container">
@@ -176,6 +204,7 @@ const Footer = () => (
               href="/"
             >
               <img
+                className="soc_link--img"
                 src={`${process.env.PUBLIC_URL}/img/facebook.svg`}
                 alt=""
               />
@@ -184,27 +213,9 @@ const Footer = () => (
               className="soc_link"
               href="/"
             >
-              <img src={`${process.env.PUBLIC_URL}/img/twitter.svg`} alt="" />
-            </a>
-            <a
-              className="soc_link"
-              href="/"
-            >
               <img
-                src={`${process.env.PUBLIC_URL}/img/instagram.svg`}
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
-        <div className="socials_container big_show">
-          <div>
-            <a
-              className="soc_link"
-              href="/"
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/img/facebook.svg`}
+                className="soc_link--img"
+                src={`${process.env.PUBLIC_URL}/img/twitter.svg`}
                 alt=""
               />
             </a>
@@ -212,13 +223,8 @@ const Footer = () => (
               className="soc_link"
               href="/"
             >
-              <img src={`${process.env.PUBLIC_URL}/img/twitter.svg`} alt="" />
-            </a>
-            <a
-              className="soc_link"
-              href="/"
-            >
               <img
+                className="soc_link--img"
                 src={`${process.env.PUBLIC_URL}/img/instagram.svg`}
                 alt=""
               />
