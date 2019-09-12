@@ -101,50 +101,63 @@
   }
 
   .restaurant {
+    &__submenu {
+      justify-content: space-between;
+    }
 
-  &__submenu a {
-    padding-right: 15px;
-    font-size: 13px;
+    &__submenu a {
+      padding-right: 0;
+      font-size: 13px;
+    }
+
+    &__items-catalog {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px 14px;
+    }
+
+    &__item-catalog--title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &__item-catalog-info {
+      width: 140px;
+      max-width: 60%;
+    }
+
+    &__main-details {
+      top: 70%;
+      left: 20%;
+      width: 100%;
+      max-width: 60%;
+      height: 170px;
+    }
+
+    &__main-title {
+      font-size: 28px;
+      padding-bottom: 10px;
+    }
+
+    &__item--adress {
+      display: none;
+    }
+
+    .main-section__heading {
+      display: none;
+    }
+
+    .main-section__delivery {
+      margin: 10px 70px;
+    }
   }
 
-  &__items-catalog {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px 14px;
-  }
-
-  &__item-catalog--title {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  &__item-catalog-info {
-    width: 140px;
-    max-width: 60%;
-}
-
-  &__main-details {
-    top: 30%;
-    left: 20%;
-    width: 100%;
-    max-width: 60%;
-  }
-
-  &__main-title {
-    font-size: 28px;
-    padding-bottom: 10px;
-  }
-
-  &__item--adress {
+  .sinir {
     display: none;
   }
 
-  .main-section__heading {
-    display: none;
-  }
-
-  .main-section__delivery {
-    margin: 30px 70px;
-  }
+  .modal-content {
+    width: 550px !important;
+    margin: 0 auto;
   }
 }

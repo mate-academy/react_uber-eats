@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   height: 380px;
+  position: relative;
 }
 
 .restaurant__image img {
@@ -10,7 +11,6 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: relative;
 }
 
 .restaurant__main-details {
@@ -107,7 +107,7 @@
 
 .restaurant__menu li a:hover,
 .restaurant__menu li a:focus {
-  color: #3e9920;
+  color: #3e9920 !important;
 }
 
 .restaurant__menu-title {
@@ -151,7 +151,7 @@
 
 .restaurant__submenu a:hover,
 .restaurant__submenu a:focus {
-  color: #3e9920;
+  color: #3e9920 !important;
 }
 
 .restaurant__submenu--more {
@@ -188,6 +188,7 @@
   border: 1px solid #E0E0E0;
   text-decoration: none;
   color: #1F1F1F;
+  cursor: pointer;
 }
 
 .restaurant__item-catalog:hover, .restaurant__item-catalog:focus {
@@ -209,7 +210,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 270px;
-  width: 60%;
+  width: 100%;
 }
 
 .restaurant__item-catalog--title {
@@ -234,13 +235,13 @@
 }
 
 .restaurant__item-catalog--image {
-  width: 156px;
-  min-width: 156px;
-  height: 156px;
+  width: 100%;
+  max-width: 156px;
+  max-height: 156px;
 }
 
 .restaurant__item-catalog--image img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

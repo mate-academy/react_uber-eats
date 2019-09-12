@@ -4,13 +4,13 @@
     margin: 0;
     padding: 0;
     height: 380px;
+    position: relative;
   }
 
   &__image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    position: relative;
   }
 
   &__main-details {
@@ -93,7 +93,7 @@
 
   &__menu li a:hover,
   &__menu li a:focus {
-    color: #3e9920;
+    color: #3e9920 !important;
   }
 
   &__menu-title {
@@ -131,13 +131,11 @@
 
   &__submenu a:hover,
   &__submenu a:focus {
-    color: #3e9920;
+    color: #3e9920 !important;
   }
 
   &__submenu--more {
     display: none;
-
-
   }
 
   &__menu-catalog {
@@ -164,6 +162,7 @@
     border: 1px solid #E0E0E0;
     text-decoration: none;
     color: #1F1F1F;
+    cursor: pointer;
   }
 
   &__item-catalog:hover,
@@ -179,7 +178,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 270px;
-    width: 60%;
+    width: 100%;
   }
 
   &__item-catalog--title {
@@ -204,13 +203,13 @@
   }
 
   &__item-catalog--image {
-    width: 156px;
-    min-width: 156px;
-    height: 156px;
+    width: 100%;
+    max-width: 156px;
+    max-height: 156px;
   }
 
   &__item-catalog--image img {
-    width: 100%;
+    width: 90%;
     height: 100%;
     object-fit: cover;
   }

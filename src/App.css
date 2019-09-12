@@ -1,3 +1,4 @@
+@import "./sass/loadingStart.css";
 @import "./sass/variable.css";
 @import "./sass/loading.css";
 @import "./sass/header.css";
@@ -7,6 +8,7 @@
 @import "./sass/restaurantPage.css";
 @import "./sass/tablet.css";
 @import "./sass/mobileVersion.css";
+@import "./sass/modalWindow.css";
 
 * {
   margin: 0;
@@ -20,12 +22,29 @@ body {
 * :active,
 * :hover,
 * :focus {
-  outline: 0;
+  outline: 0 !important;
   outline-offset: 0;
 }
 
 button {
   padding: 0;
+}
+
+p,
+ul,
+h1,
+h2,
+label {
+  margin: 0;
+}
+
+hr {
+  margin-top: 0;
+  background-color: #e0e0e0;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .arrow-to-top {

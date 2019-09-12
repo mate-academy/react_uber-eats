@@ -4,9 +4,11 @@ import { Route, HashRouter, Switch } from 'react-router-dom';
 
 import HomePage from './components/HomePage';
 import RestaurantPage from './components/RestaurantPage';
+import LoadingStart from './components/LoadingStart';
 
 const App = () => (
   <HashRouter>
+    <LoadingStart />
     <Switch>
       <Route path="/" exact component={HomePage} />
       <Route path="/restaurant/:uuid" exact component={RestaurantPage} />

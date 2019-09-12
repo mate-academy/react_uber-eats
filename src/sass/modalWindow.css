@@ -1,0 +1,235 @@
+/* stylelint-disable */
+.modal-dialog {
+  display: block;
+  max-width: 676px;
+  margin: 80px auto;
+}
+
+.modal-content {
+  width: 676px;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 0;
+  border-bottom: none;
+}
+
+.modal-header img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal-header .close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f6f6f6;
+  -o-border-image: initial;
+     border-image: initial;
+}
+
+.modal-header .close span {
+  padding-top: -5px;
+  position: absolute;
+  top: 13px;
+  left: 17px;
+}
+
+.modal__btn-plus {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #c2c0c0;
+}
+
+.modal__title-section {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal-title {
+  margin-top: 16px;
+  padding: 0 24px;
+}
+
+.modal__info {
+  color: #545454;
+  line-height: 20px;
+  font-size: 14px;
+  padding: 16px 24px 24px;
+  text-align: justify;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal__section {
+  background: #f6f6f6;
+  padding: 16px 24px;
+}
+
+.modal__section span {
+  color: #545454;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.modal__checkbox label {
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+
+.modal__checkbox input {
+  display: none;
+}
+
+.modal__checkbox-fake {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  border: 1px solid #e2e2e2;
+  margin-right: 10px;
+  position: relative;
+}
+
+.modal__checkbox-fake::before {
+  content: '';
+  top: 0;
+  right: 0;
+  height: 22px;
+  width: 22px;
+  background: #3e9920;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.modal__checkbox-fake::after {
+  content: '';
+  top: 20%;
+  left: 20%;
+  display: block;
+  -webkit-transform: translate(-25%, -25%);
+          transform: translate(-25%, -25%);
+  height: 10px;
+  width: 10px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.modal__checkbox input {
+  display: none;
+}
+
+.modal__checkbox input:checked + .modal__checkbox-fake::before,
+.modal__checkbox input:checked + .modal__checkbox-fake::after {
+  opacity: 1;
+}
+
+.modal__checkbox-label {
+  display: block;
+}
+
+.modal__section--block-btn {
+  padding: 19px 0;
+}
+
+.dr .modal__section--btn {
+  padding: 0 24px;
+}
+
+.modal__section--btn {
+  padding: 10px 24px;
+}
+
+.modal__section--btn span {
+  padding-left: 10px;
+}
+
+.modal__block-checkbox {
+  padding: 16px 0;
+}
+
+.modal__block-checkbox .modal__checkbox label {
+  padding: 10px 24px;
+}
+
+.modal__section--instructions {
+  border: none;
+  margin: 19px 24px;
+  font-size: 14px;
+}
+
+.modal__form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal__form-submit div {
+  padding: 0 10px;
+}
+
+.modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-primary {
+  background: #3e9920;
+  border: 1px solid #3e9920;
+  width: 70%;
+  height: 48px;
+}
+
+.btn-primary:hover {
+  background: #2c7712;
+  border: 1px solid #2c7712;
+}
+
+.btn-secondary {
+  width: 48px;
+  height: 48px;
+  background: #f6f6f6;
+  border-radius: 50%;
+  border: 1px solid #f6f6f6;
+}
+/*# sourceMappingURL=modalWindow.css.map */

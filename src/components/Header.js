@@ -9,7 +9,7 @@ class Header extends React.Component {
     isDelivered: false,
     valueTextInput: 'Google',
     valueRestaurant: '',
-    timeDelivery:'Deliver now',
+    timeDelivery: 'Deliver now',
   }
 
   handleDelivery = () => {
@@ -58,7 +58,7 @@ class Header extends React.Component {
         isLocation: false,
         isDelivered: false,
       });
-  }
+    }
   }
 
   filterRestaurant = (event) => {
@@ -219,10 +219,10 @@ class Header extends React.Component {
               )}
 
             <button class="header__button--auth">
-            <div class="header__button">
-              Sign In
+              <div class="header__button">
+                Sign In
           </div>
-          </button>
+            </button>
           </div>
 
         </div>

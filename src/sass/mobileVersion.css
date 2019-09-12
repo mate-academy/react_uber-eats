@@ -45,13 +45,15 @@
     display: block;
     margin: 0 20px;
   }
+  .main-section__search label {
+    width: 100%;
+  }
   .main-section__search-field {
     font-size: 16px;
     line-height: 24px;
     width: 100%;
-    margin-top: 110px;
-    margin-bottom: 20px;
-    padding: 8px 0px 16px 30px;
+    margin-top: 100px;
+    padding: 8px 0px 12px 30px;
     border: none;
     border-bottom: 1px solid rgba(117, 117, 117, 0.3);
     color: #1d1d1d;
@@ -177,7 +179,7 @@
     padding-bottom: 10px;
   }
   .restaurant .main-section__delivery {
-    margin: 10px 20px;
+    margin: 0px 20px;
   }
   .restaurant .main-section__search-field {
     margin-top: 130px;
@@ -209,6 +211,24 @@
   .restaurant__item-catalog-info {
     width: 180px;
     max-width: 80%;
+  }
+  .sinir {
+    display: none;
+  }
+  .modal-content {
+    width: 320px !important;
+  }
+  .modal-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .modal-header img {
+    height: 256px !important;
+  }
+  .modal-footer > :not(:first-child) {
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=mobileVersion.css.map */
