@@ -11,7 +11,7 @@ body {
   display: none;
 }
 
-.grid-wrapper {
+.main-wrapper {
   width: 1024px;
   margin: 0 auto;
 }
@@ -19,12 +19,19 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 80px;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 20%;
 }
 
 .location-delivery {
   display: flex;
+  align-items: center;
 }
 
 .search-login {
@@ -58,6 +65,11 @@ input::placeholder {
 a {
   text-decoration: none;
   color: #000000;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 a:hover {
@@ -109,7 +121,7 @@ a:hover {
   content: "";
   height: 24px;
   width: 24px;
-  background: url("https://djkamry22.github.io/react_uber-eats/image/group.svg") center no-repeat;
+  background: url("https://djkamry22.github.io/react_uber-eats/image/Group.svg") center no-repeat;
 }
 
 .search-icon::before {
@@ -135,7 +147,7 @@ a:hover {
 }
 
 .card-image:hover {
-  box-shadow: 0 4px 15px #59BD5A !important;
+  box-shadow: 0 4px 15px #d8d8d8 !important;
 }
 
 p.categories {
@@ -208,10 +220,14 @@ span.closed, span.rating, span.rating-count {
 
 .footer__info {
   display: flex;
-  justify-content: space-between;
-  justify-items: flex-start;
   border-bottom: 1px solid #fff;
   padding-top: 32px;
+}
+
+.footer-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .footer__info-languages {
@@ -237,9 +253,8 @@ span.closed, span.rating, span.rating-count {
 
 .footer__info-socials a {
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  padding: 0 2px;
+  width: 30px;
+  height: 30px;
 }
 
 .footer__info ul {
@@ -247,7 +262,7 @@ span.closed, span.rating, span.rating-count {
 }
 
 .footer__info ul > li {
-  margin-bottom: 23px;
+  margin-bottom: 11px;
 }
 
 .footer__info ul a {
@@ -275,28 +290,32 @@ span.closed, span.rating, span.rating-count {
 
 .footer__download-app-store {
   background: url('https://djkamry22.github.io/react_uber-eats/image/apple.png') center no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
 }
 
 .footer__download-google-play {
   background: url('https://djkamry22.github.io/react_uber-eats/image/google.png') center no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
 }
 
 .footer__bottom {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 93px;
   font-size: 11px;
   line-height: 13px;
 }
 
+.footer__bottom-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
 .footer__bottom a {
   font-family: "Roboto", sans-serif;
   color: #fff;
-  font-size: 11px;
-  line-height: 13px;
+  font-size: 13px;
   text-decoration: none;
 }
 
@@ -310,18 +329,22 @@ span.closed, span.rating, span.rating-count {
 
 .ico-facebk {
   background: url('https://djkamry22.github.io/react_uber-eats/image/facebook.svg') center no-repeat;
+  background-size: 100%;
 }
 
 .ico-twit {
   background: url('https://djkamry22.github.io/react_uber-eats/image/twitter.svg') center no-repeat;
+  background-size: 100%;
 }
 
 .ico-inst {
   background: url('https://djkamry22.github.io/react_uber-eats/image/instagram.svg') center no-repeat;
+  background-size: 100%;
 }
 
 .form {
   display: block;
+  margin-right: 8px;
 }
 
 .inner {
@@ -413,7 +436,7 @@ button svg path {
 
  @media screen and (max-width: 767px){
 
-  .grid-wrapper {
+  .main-wrapper {
     width: unset;
     padding: 0 10px 0 10px;
   }
@@ -434,8 +457,12 @@ button svg path {
   padding: 0;
 }
 
-.header {
-  padding: 20px;
+.footer-flex {
+  flex-direction: column;
+}
+
+.footer__download {
+  padding: 0;
 }
 
 .location-delivery {
@@ -456,7 +483,7 @@ form.form1.form {
     display: none;
 }
 
-.grid-wrapper {
+.main-wrapper {
   width: unset;
   padding: 0 30px 0 30px;
 }

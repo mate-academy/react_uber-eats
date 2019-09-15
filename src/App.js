@@ -17,6 +17,8 @@ class App extends React.Component {
   state = {
     stores: [],
     isLoading: true,
+    searchText: '',
+    visible: [],
   };
 
   async componentDidMount() {
@@ -24,14 +26,39 @@ class App extends React.Component {
 
     setTimeout(() => {
       this.setState({
-        stores,
+        stores: [...stores],
+        visible: [...stores],
         isLoading: false,
       });
-    }, 4000);
+    }, 1000);
+  }
+
+  searchQuery = (event) => {
+    this.setState({
+      searchText: event.target.value.toLowerCase().trim(),
+    });
+    this.filtered();
+  }
+
+  filtered = () => {
+    this.setState(state => ({
+      visible: [
+        ...state.stores.filter(
+          store => store.title.toLowerCase().trim().includes(state.searchText)
+        ),
+      ],
+    }));
+  }
+
+  clearText = (event) => {
+    event.preventDefault();
+    this.setState({
+      searchText: '',
+    });
   }
 
   render() {
-    const { stores, isLoading } = this.state;
+    const { visible, isLoading } = this.state;
 
     return (
       <div className="App">
@@ -47,12 +74,19 @@ class App extends React.Component {
           </div>
         </div>
 
-        <div className={isLoading ? 'none' : 'grid-wrapper'}>
-          <Header />
-          <Main stores={stores} />
-          <Footer />
-
+        <div className={isLoading ? 'none' : 'main-wrapper'}>
+          <Header
+            stores={visible}
+            searchQuery={this.searchQuery}
+            clearText={this.clearText}
+            searchText={this.state.searchText}
+          />
+          <Main stores={visible} />
         </div>
+        <div className={isLoading ? 'none' : ''}>
+          <Footer />
+        </div>
+
       </div>
     );
   }
