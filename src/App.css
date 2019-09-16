@@ -73,6 +73,11 @@
   line-height: 19px;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -81,7 +86,6 @@ html {
   max-width: 1200px;
   min-width: 350px;
   margin: auto;
-  padding: 0 10px;
   box-sizing: border-box;
 }
 

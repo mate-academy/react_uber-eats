@@ -18,16 +18,31 @@
 
   &__apps-link img {
     margin-right: 16px;
+    cursor: pointer;
   }
 
-  &__about p,
-  &__faq p {
+  &__about,
+  &__faq {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__about a,
+  &__faq a {
     margin-top: 15px;
+    color: white;
+    text-decoration: none;
   }
 
-  &__about p:first-child,
-  &__faq p:first-child {
+  &__about a:first-child,
+  &__faq a:first-child {
     margin-top: 0;
+  }
+
+  &__about a:hover,
+  &__faq a:hover {
+    color: #5fb709;
+    cursor: pointer;
   }
 
   &__separator {
@@ -42,7 +57,7 @@
     justify-content: space-between;
   }
 
-  &__copyright p {
+  &__copyright a {
     font-size: 14px;
   }
 
@@ -50,11 +65,18 @@
     display: flex;
   }
 
-  &__policy p {
+  &__policy a {
     margin-right: 48px;
+    color: white;
+    text-decoration: none;
   }
 
-  &__policy p:last-child {
+  &__policy a:hover {
+    color: #5fb709;
+    cursor: pointer;
+  }
+
+  &__policy a:last-child {
     margin-right: 0;
   }
 
@@ -67,6 +89,10 @@
 
   &__social img {
     margin-right: 24px;
+  }
+
+  &__social img:hover {
+    transform: scale(1.2);
   }
 
   &__anchor {
@@ -151,6 +177,7 @@
     &__apps-link img {
       margin-top: 20px;
       margin-right: auto;
+      cursor: pointer;
     }
 
     &__mobile-select {
@@ -166,6 +193,21 @@
     &__about,
     &__faq {
       margin-top: 65px;
+    }
+
+    &__copyright {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__copyright a {
+      margin-top: 10px;
+      color: white;
+    }
+
+    &__copyright a:hover {
+      color: #5fb709;
+      cursor: pointer;
     }
   }
 }
@@ -222,18 +264,11 @@
 
     &__apps-link img {
       margin: 0;
+      cursor: pointer;
     }
 
     &__down {
       margin-top: 20px;
-    }
-
-    &__copyright p {
-      margin-top: 24px;
-    }
-
-    &__copyright p:first-child {
-      margin-top: 0;
     }
   }
 }

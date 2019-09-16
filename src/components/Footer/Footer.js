@@ -16,21 +16,25 @@ class Footer extends React.Component {
                 </select>
               </div>
               <div className="Footer__apps-link">
-                <img src="./img/appstore.svg"/>
-                <img src="./img/googleplay.svg"/>
+                <a>
+                  <img src="./img/appstore.svg"/>
+                </a>
+                <a>
+                  <img src="./img/googleplay.svg"/>
+                </a>
               </div>
             </div>
             <div className="Footer__about">
-              <p>About UberEats</p>
-              <p>Read our blog</p>
-              <p>Sign up to deliver</p>
-              <p>Add your restaurant</p>
+              <a>About UberEats</a>
+              <a>Read our blog</a>
+              <a>Sign up to deliver</a>
+              <a>Add your restaurant</a>
             </div>
             <div className="Footer__faq">
-              <p>Get help</p>
-              <p>Read FAQs</p>
-              <p>View all cities</p>
-              <p>English</p>
+              <a>Get help</a>
+              <a>Read FAQs</a>
+              <a>View all cities</a>
+              <a>English</a>
             </div>
           </div>
           <div className="Footer__separator"> </div>
@@ -39,15 +43,15 @@ class Footer extends React.Component {
               <p>© 2019 Uber Technologies Inc.</p>
             </div>
             <div className="Footer__policy">
-              <p>Privacy policy</p>
-              <p>Terms of  use</p>
-              <p>Pricing</p>
+              <a>Privacy policy</a>
+              <a>Terms of  use</a>
+              <a>Pricing</a>
             </div>
           </div>
           <div className="Footer__social">
-            <img src="./img/facebook.svg" alt=""/>
-            <img src="./img/twitter.svg" alt=""/>
-            <img src="./img/instagram.svg" alt=""/>
+            <a href="##"><img src="./img/facebook.svg" alt=""/></a>
+            <a href="##"><img src="./img/twitter.svg" alt=""/></a>
+            <a href="##"><img src="./img/instagram.svg" alt=""/></a>
           </div>
           <a href="#head" className="Footer__anchor">
             <img src="./img/arrow.svg" alt=""/>
@@ -74,17 +78,17 @@ class Footer extends React.Component {
             </div>
             
             <div className="Footer__about">
-              <p>About UberEats</p>
-              <p>Read our blog</p>
-              <p>Sign up to deliver</p>
-              <p>Add your restaurant</p>
+              <a>About UberEats</a>
+              <a>Read our blog</a>
+              <a>Sign up to deliver</a>
+              <a>Add your restaurant</a>
             </div>
             
             <div className="Footer__faq">
-              <p>Get help</p>
-              <p>Read FAQs</p>
-              <p>View all cities</p>
-              <p>English</p>
+              <a>Get help</a>
+              <a>Read FAQs</a>
+              <a>View all cities</a>
+              <a>English</a>
             </div>
             
           </div>
@@ -92,8 +96,8 @@ class Footer extends React.Component {
           <div className="Footer__separator"> </div>
           
           <div className="Footer__apps-link">
-            <img src="./img/appstore.svg"/>
-            <img src="./img/googleplay.svg"/>
+            <a><img src="./img/appstore.svg"/></a>
+            <a><img src="./img/googleplay.svg"/></a>
           </div>
           
           <div className="Footer__separator"> </div>
@@ -101,8 +105,8 @@ class Footer extends React.Component {
           <div className="Footer__down">
             <div className="Footer__copyright">
               <p>© 2019 Uber Technologies Inc.</p>
-              <p>Privacy</p>
-              <p>Terms</p>
+              <a>Privacy</a>
+              <a>Terms</a>
             </div>
           </div>
           

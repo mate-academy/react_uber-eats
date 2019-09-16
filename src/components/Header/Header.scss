@@ -1,7 +1,7 @@
 /*stylelint-disable*/
 .Header {
   min-height: 80px;
-  padding: 28px 0;
+  padding: 28px 10px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -84,7 +84,10 @@
     outline: none;
     border: 1px solid black;
     width: 150px;
+  }
 
+  &__search-input:hover {
+    cursor: pointer;
   }
 
   &__acc {

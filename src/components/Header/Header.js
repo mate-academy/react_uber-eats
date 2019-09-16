@@ -3,32 +3,21 @@ import React from 'react';
 import './Header.scss';
 import { Store, filterStores } from "../Store";
 
-const debounce = (f, delay) => {
-  let timerId = 0;
-  
-  const wrapper = (...args) => {
-    clearTimeout(timerId);
-    timerId = setTimeout(() => f(...args), delay);
-  };
-  
-  return wrapper;
-};
-
 class Header extends React.Component {
   state = {
     inputField: "",
   };
   
   inputFieldChange = (event) => {
+    
+    console.log(event.nativeEvent);
     this.setState({
       inputField: event.target.value
     });
     Store.dispatch(filterStores(event.target.value))
-    
   };
 
   render() {
-    console.log(this.state);
     const { inputField } = this.state;
     return (
       <header id="head" className="Header">

@@ -20,20 +20,20 @@ class Content extends React.Component {
   }
   
   render() {
-    console.log(this.state);
-    const { stores } = this.state;
     return (
         <div className="Main">
           {Store.getState().stores.slice(0, 12).map(item => (
-            <div key={item.slug} className="Main__restaurant">
-              <img className="Main__restaurant-img" src={item.heroImageUrl} alt=""/>
-              <h3 className="Main__restaurant-name">{item.title}</h3>
-              <div className="Main__restaurant-list">
-                {item.categories.map(item =>
-                  <p key={item}>{item}</p>
-                )}
+            <a href="">
+              <div key={item.slug} className="Main__restaurant">
+                <img className="Main__restaurant-img" src={item.heroImageUrl} alt=""/>
+                <h3 className="Main__restaurant-name">{item.title}</h3>
+                <div className="Main__restaurant-list">
+                  {item.categories.map(item =>
+                    <p key={item}>{item}</p>
+                  )}
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
     )}
