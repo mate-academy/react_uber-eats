@@ -32,6 +32,7 @@
     margin-top: 15px;
     color: white;
     text-decoration: none;
+    transition: all 300ms;
   }
 
   &__about a:first-child,
@@ -69,6 +70,7 @@
     margin-right: 48px;
     color: white;
     text-decoration: none;
+    transition: all 300ms;
   }
 
   &__policy a:hover {
@@ -89,6 +91,7 @@
 
   &__social img {
     margin-right: 24px;
+    transition: all 100ms;
   }
 
   &__social img:hover {
@@ -106,6 +109,7 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
+    transition: all 300ms;
   }
 
   &__anchor:hover {

@@ -5,8 +5,9 @@
   grid-column-gap: 20px;
   grid-template-rows: auto;
   grid-row-gap: 20px;
-  margin-top: 30px;
+  margin: 30px auto 0 auto;
   padding: 0 10px;
+  max-width: 1200px;
 
   &__restaurant {
     display: flex;

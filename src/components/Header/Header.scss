@@ -1,23 +1,24 @@
 /*stylelint-disable*/
 .Header {
   min-height: 80px;
-  padding: 28px 10px;
+  padding: 0 10px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__nav-time {
     display: flex;
     padding: 0 10px;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 100px;
   }
 
   &__nav {
     display: flex;
     position: relative;
-    padding-left: 30px;
     box-sizing: border-box;
   }
 
@@ -29,12 +30,41 @@
     background-image: url(./img/location.svg);
     background-size: 100% 100%;
     left: 0;
-    top: -1px;
+    top: 4px;
+  }
+
+  &__nav-input {
+    padding: 5px 0 5px 30px;
+    border: 1px solid transparent;
+    width: 50px;
+    transition: all 300ms;
+  }
+
+  &__nav-input::placeholder {
+    color: black;
+    transition: all 300ms;
+  }
+
+  &__nav-input:hover {
+    cursor: pointer;
+  }
+
+  &__nav-input:hover::placeholder {
+    color: #5fb709;
+  }
+
+  &__nav-input:focus {
+    outline: none;
+    width: 100px;
+    border-bottom: 1px solid black;
+  }
+
+  &__nav-input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &__time {
     margin-left: 60px;
-    padding-left: 30px;
     position: relative;
   }
 
@@ -46,7 +76,31 @@
     background-image: url(./img/time.svg);
     background-size: 100% 100%;
     left: 0;
-    top: -1px;
+    top: 5px;
+  }
+
+  &__time-select {
+    padding: 5px 0 5px 30px;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    transition: all 300ms;
+  }
+
+  &__time-select:focus {
+    outline: none;
+  }
+
+  &__time-select:hover{
+    color: #5fb709;
+    cursor: pointer;
+  }
+
+  &__time-select:focus {
+    color: black;
+  }
+
+  &__time-select:focus option {
+    color: black;
   }
 
   &__search-acc {
@@ -56,7 +110,11 @@
 
   &__search {
     position: relative;
-    padding-left: 30px;
+    transition: all 500ms;
+  }
+
+  &__search-input:hover {
+    cursor: pointer;
   }
 
   &__search::before {
@@ -66,28 +124,38 @@
     position: absolute;
     background: url(./img/search.svg) no-repeat center;
     left: 0;
-    top: -1px;
+    top: 9px;
   }
 
   &__search-input {
     width: 50px;
-    border: none;
+    padding: 10px 0 10px 30px;
+    border: 1px solid transparent;
     color: black;
     transition: width 500ms;
   }
 
   &__search-input::placeholder {
     color: black;
+    transition: all 300ms;
+  }
+
+  &__search-input:hover::placeholder {
+    color: #5fb709;
   }
 
   &__search-input:focus {
     outline: none;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     width: 150px;
   }
 
-  &__search-input:hover {
-    cursor: pointer;
+  &__search-input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__search-input:focus &__search {
+    display: none;
   }
 
   &__acc {

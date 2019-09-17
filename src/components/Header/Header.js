@@ -21,12 +21,19 @@ class Header extends React.Component {
     const { inputField } = this.state;
     return (
       <header id="head" className="Header">
-        <div className="Header__logo">
+        <a href="" className="Header__logo">
           <img src="./img/logo.svg" alt="logo" />
-        </div>
+        </a>
         <div className="Header__nav-time">
-          <button className="Header__nav">Kiev</button>
-          <button className="Header__time">Deliver Time</button>
+          <div className="Header__nav">
+            <input className="Header__nav-input" type="text" placeholder="Kiev"/>
+          </div>
+          <div className="Header__time">
+            <select className="Header__time-select">
+              <option value="" disabled selected>Deliver Time</option>
+              <option value="ASAP">ASAP</option>
+            </select>
+          </div>
         </div>
         <div className="Header__mobile-search">
           <input type="text"

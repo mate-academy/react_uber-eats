@@ -23,7 +23,7 @@ class Content extends React.Component {
     return (
         <div className="Main">
           {Store.getState().stores.slice(0, 12).map(item => (
-            <a href="">
+            <a href="##">
               <div key={item.slug} className="Main__restaurant">
                 <img className="Main__restaurant-img" src={item.heroImageUrl} alt=""/>
                 <h3 className="Main__restaurant-name">{item.title}</h3>

@@ -9,7 +9,7 @@ class Footer extends React.Component {
         <footer className="Footer Footer-desc">
           <div className="Footer__up">
             <div className="Footer__app">
-              <img src="./img/logofoot.svg" alt=""/>
+              <a href=""><img src="./img/logofoot.svg" alt=""/></a>
               <div className="Footer__mobile-select">
                 <select>
                   <option>English</option>

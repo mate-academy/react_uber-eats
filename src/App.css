@@ -83,7 +83,6 @@ html {
 }
 
 .main {
-  max-width: 1200px;
   min-width: 350px;
   margin: auto;
   box-sizing: border-box;
