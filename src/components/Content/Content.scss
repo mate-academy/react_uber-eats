@@ -26,12 +26,16 @@
 
   &__restaurant-name {
     margin-top: 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
   }
 
   &__restaurant-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
+    align-items: center;
+    min-height: 30px;
   }
 
   &__restaurant-list p {
