@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TinyButton as ScrollUpButton } from 'react-scroll-up-button';
+import debounce from 'lodash.debounce';
 import './style/App.scss';
 import Header from './components/Header';
 import RestaurantsList from './components/RestaurantsList';
@@ -27,6 +28,10 @@ const App = () => {
     getStores();
   }, []);
 
+  const hadleInputChange = debounce((value) => {
+    setFilterValue(value);
+  }, 800);
+
   const filterStores = () => {
     if (filterValue === '') {
       return stores;
@@ -46,9 +51,7 @@ const App = () => {
   return (
     <div className="App">
       <Header
-        filterValue={filterValue}
-        setFilterValue={setFilterValue}
-        onChange={e => (setFilterValue(e.target.value))}
+        onChange={e => (hadleInputChange(e.target.value))}
       />
       {isLoaded
         ? (

@@ -119,13 +119,11 @@ $footer-border: 1px solid rgba(255,255,255, 0.4);
     transition: transform .3s;
   }
 
-
-&__social-networks-fb:hover,
-&__social-networks-twit:hover,
-&__social-networks-insta:hover {
-  transform: scale(1.3);
-}
-
+  &__social-networks-fb:hover,
+  &__social-networks-twit:hover,
+  &__social-networks-insta:hover {
+    transform: scale(1.3);
+  }
 
   &__policy {
     display: flex;

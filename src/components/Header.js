@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const IMG_URL = 'https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/';
-const Header = ({ filterValue, onChange }) => {
+const Header = ({ onChange }) => {
   const [location, setLocation] = useState('London');
 
   const locationCloseRef = useRef();
@@ -83,7 +83,6 @@ const Header = ({ filterValue, onChange }) => {
           <input
             type="text"
             name="restaurant-search-field"
-            value={filterValue}
             ref={searchInputRef}
             autoComplete="off"
             onChange={onChange}
@@ -131,7 +130,6 @@ const Header = ({ filterValue, onChange }) => {
 
 Header.propTypes = {
   onChange: PropTypes.func.isRequired,
-  filterValue: PropTypes.string.isRequired,
 };
 
 export default Header;
