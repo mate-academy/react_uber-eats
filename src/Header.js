@@ -1,5 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header_N.scss';
 // import PropTypes from 'prop-types';
 
@@ -12,11 +13,16 @@ class Header extends React.Component {
     return (
       <div className="n__header">
         <div className="n__header__wrap__logo">
-          <img
-            src="img/uber__eats__logo.png"
-            alt="logo"
-            className="n__header__logo"
-          />
+          <NavLink
+            to="/"
+            exact
+          >
+            <img
+              src="img/uber__eats__logo.png"
+              alt="logo"
+              className="n__header__logo"
+            />
+          </NavLink>
         </div>
         <div className="n__header__container__deliverry">
           <form action="search" className="n__header__form3 n__header__form">

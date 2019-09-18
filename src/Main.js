@@ -15,7 +15,7 @@ const Main = ({ stores, restorantId }) => {
   return (
     <>
       <Header />
-      <section className="catalog">
+      <section className="catalog catalog_container">
         <h1 className="catalog-header">Moscow products</h1>
         <div className="catalog__container">
           {

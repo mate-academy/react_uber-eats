@@ -90,7 +90,10 @@ const Footer = () => (
         <a className="link" href="#!">Terms</a>
       </section>
 
-      <a href="/#" className="arrow-to-top">
+      <a
+        href="https://nastyakpi1995.github.io/react_uber-eats/#/"
+        className="arrow-to-top"
+      >
         <img src="img/direction.svg" alt="" />
       </a>
     </div>

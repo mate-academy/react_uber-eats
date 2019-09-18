@@ -6,14 +6,13 @@ body {
 .n__header {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  line-height: 19px;
+  width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 23% 37% 41%;
   grid-template-rows: 80px;
   align-items: center;
   justify-content: space-between;
-  // padding: 0 30px;
   &__container__deliverry {
     display: flex;
     align-items: center;
