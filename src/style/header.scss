@@ -1,0 +1,301 @@
+$text-color: #626262;
+$main-text-color: #1F1F1F;
+$scale-tanform: scale(1.2);
+$register-btn-color: #262626;
+$sing-in-btn-color: #E0E0E0;
+
+.header {
+  margin-bottom: 32px;
+  height: 80px;
+
+  &__wrapper {
+    height: 100%;
+    padding: 0 80px;
+    margin: 0 auto;
+    max-width: 1980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+  }
+
+  &__logo {
+    margin-right: 60px;
+    outline: none;
+  }
+
+  &__delivery {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-wrapper,
+  &__input-wrapper-loc {
+    box-sizing: border-box;
+    display: flex;
+    padding-right: 16px;
+    background-color: #F5F5F5 !important;
+    border-bottom: 2px solid #000;
+    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
+  }
+
+  &__input-wrapper{
+    margin-left: auto;
+  }
+
+  &__location-input {
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0) !important;
+    transition: width .5s ease;
+  }
+
+  &__location-input:focus {
+    width: 200px;
+  }
+
+  &__location-clear-btn {
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: #757575;
+  }
+
+  &__location-input,
+  &__location-btn {
+    background-image: url("../image/location.svg");
+    background-position: left 20px top 15px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+
+    outline: none;
+  }
+
+  &__delivery-time,
+  &__search-input,
+  &__search-btn,
+  &__sign-in {
+    height: 50px;
+  }
+
+  &__delivery-time {
+    margin-left: 40px;
+    margin-right: auto;
+    padding-left: 46px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+    background-image: url("../image/clock.svg");
+    background-position: left 16px top 12px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+
+    appearance: none;
+    background-color: transparent;
+    border: none;
+  }
+  &__delivery-time,
+  &__sign-in
+  {
+    outline: none;
+    border-bottom: 2px solid #fff !important;
+
+    transition: background-color .3s,  border-bottom .3s;
+  }
+
+  &__delivery-time,
+  &__location-btn,
+  &__location-input,
+  &__location-clear-btn,
+  &__search-btn,
+  &__search-input {
+    background-color: #fff;
+    border: none;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  &__search-and-sign-in {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-input,
+  &__search-btn {
+    padding-left: 46px;
+    margin-left: auto;
+    background-image: url("../image/loop.svg");
+    background-position: left 16px top 15px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+
+    outline: none;
+  }
+
+  &__search-input {
+    width: 50px;
+    background-color: #F5F5F5 !important;
+    box-shadow: rgb(224, 224, 224) 0px -1px 0px inset;
+    transition: width .2s;
+  }
+
+  &__search-input:focus {
+    width: 240px;
+  }
+
+  &__sign-in {
+    margin-left: 40px;
+    text-decoration: none;
+    height: 48px;
+    color: #1F1F1F;
+    line-height: 48px;
+    min-width: 90px;
+    text-align: center;
+  }
+
+  &__delivery-time:hover,
+  &__sign-in:hover {
+    background-color: #F5F5F5 !important;
+    border-bottom: 2px solid #000 !important;
+  }
+}
+
+.search-field {
+  display: flex;
+  height: 54px;
+  margin-bottom: 56px;
+
+  border-bottom: 1px solid 	rgba(117,	117, 117, 0.3)
+}
+
+.restaurant-search {
+  width: 100%;
+  padding-left: 29px;
+  font-size: 16px;
+  line-height: 24px;
+  background-position: left 0 top 16px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  border: none;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 48px;
+  width: 140px;
+
+
+  border-bottom: 2px solid #fff;
+  outline: none;
+
+  transition: all 0.3s;
+
+  &__input,
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+    cursor: pointer;
+  }
+
+  &__close-img {
+    content: url("../image/close.svg");
+  }
+
+  &__input {
+    height: 100%;
+    width: 80%;
+
+    margin-left: 10px;
+    padding-left: 26px;
+
+    background-position: left 0 top 13px;
+    background-repeat: no-repeat;
+  }
+
+  &__input::-webkit-input-placeholder {
+    color: #000;
+  }
+
+  &__input::-webkit-calendar-picker-indicator,
+  &__btn {
+    display: none;
+  }
+
+  &__clear {
+    position: relative;
+
+    padding: 5px 10px 5px 0;
+  }
+
+  &__clear::after {
+    content: "";
+
+    display: block;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: #9a9898;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__close {
+    margin: 2px 5px 0 15px;
+
+  }
+
+  &__close img {
+    width: 24px;
+    height: 24px;
+
+  }
+}
+
+.search__input {
+  background-image: url("../image/loop.svg");
+  background-size: 18px;
+}
+
+.location__input {
+  background-image: url("../image/location.svg");
+  background-size: 14px;
+}
+
+.form:hover,
+.form:focus-within {
+  background-color: #F5F5F5;
+  border-bottom: 2px solid #000;
+}
+
+.form:focus-within {
+  width: 300px;
+}
+
+.form:focus-within .form__btn {
+  display: block;
+}
+
+.form:focus-within .form__input {
+  cursor: initial;
+}
+
