@@ -60,6 +60,10 @@ product
   width: 80px;
 }
 
+.catalog_img {
+  height: 278px;
+}
+
 .catalog-header{
   margin: 56px 0 14px;
   font-size: 22px;
@@ -228,11 +232,10 @@ product
   position: relative;
 }
 .product__photo img {
-  max-width: 100%;
   display: block;
   object-fit: cover;
-  height: auto;
-  width: 100%;
+  height: 100%;
+  max-width: 100%;
   margin-bottom: 0;
   transform: scale(1);
   transition: all 0.3s;

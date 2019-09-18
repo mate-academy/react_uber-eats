@@ -35,15 +35,17 @@ const Main = ({ stores, restorantId }) => {
                   className="product__photo product__img"
                   activeClassName="phoneClassActive"
                 >
-                  <img
-                    className={
-                      classNames({
-                        is__Visible__now: store.closedMessage
-                          .match(regex) > dateNow,
-                      })}
-                    src={store.heroImageUrl}
-                    alt="card__restorant"
-                  />
+                  <div className="catalog_img">
+                    <img
+                      className={
+                        classNames({
+                          is__Visible__now: store.closedMessage
+                            .match(regex) > dateNow,
+                        })}
+                      src={store.heroImageUrl}
+                      alt="card__restorant"
+                    />
+                  </div>
                 </NavLink>
                 <div className="hidding__product_details">
                   <h2 className="product__name">{store.title}</h2>

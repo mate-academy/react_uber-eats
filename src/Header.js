@@ -113,13 +113,14 @@ class Header extends React.Component {
             </div>
           </form>
           <div className="n__header__sign-delivery">
-            <a
-              href="/#"
+            <NavLink
+              to="/"
+              exact
               className="n__header__sign-delivery__button
                 n__header__sign-delivery__button__sign-in"
             >
               Sign in
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
