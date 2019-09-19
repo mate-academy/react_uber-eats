@@ -50,15 +50,18 @@ class Header extends React.Component {
   }
 
   handleClickOutside = (event) => {
-    const domNode = ReactDOM.findDOMNode(this);
+    const domNod = ReactDOM.findDOMNode(this);
+    console.log(domNod);
 
-    if ((!domNode || !domNode.contains(event.target))) {
+    if ((!domNod.contains(event.target))) {
       this.setState({
         isSearch: false,
         isLocation: false,
         isDelivered: false,
       });
     }
+
+    document.removeEventListener('click', this.handleClickOutside, true);
   }
 
   filterRestaurant = (event) => {

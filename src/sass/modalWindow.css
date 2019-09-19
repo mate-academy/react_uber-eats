@@ -98,6 +98,20 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal__checkbox input {
@@ -109,16 +123,15 @@
   height: 22px;
   width: 22px;
   border: 1px solid #e2e2e2;
-  margin-right: 10px;
   position: relative;
 }
 
 .modal__checkbox-fake::before {
   content: '';
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
   height: 22px;
-  width: 22px;
+  width: 20.5px;
   background: #3e9920;
   position: absolute;
   opacity: 0;
@@ -128,8 +141,8 @@
 
 .modal__checkbox-fake::after {
   content: '';
-  top: 20%;
-  left: 20%;
+  top: 15%;
+  left: 25%;
   display: block;
   -webkit-transform: translate(-25%, -25%);
           transform: translate(-25%, -25%);
@@ -156,6 +169,17 @@
 
 .modal__checkbox-label {
   display: block;
+  padding-left: 10px;
+}
+
+.modal__checkbox-label-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .modal__section--block-btn {
@@ -167,11 +191,40 @@
 }
 
 .modal__section--btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px 24px;
 }
 
 .modal__section--btn span {
   padding-left: 10px;
+}
+
+.modal__section--btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__section-btn---quantity-change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__section-btn---quantity-change div {
+  padding: 0 5px;
+}
+
+.modal__btn--quantity-change {
+  border-radius: 50%;
+  background: #f6f6f6;
+  border: 1px solid #f6f6f6;
+  cursor: pointer;
 }
 
 .modal__block-checkbox {
@@ -204,6 +257,10 @@
   padding: 0 10px;
 }
 
+.modal__form-submit--count {
+  padding-left: 10px;
+}
+
 .modal-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,6 +268,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
+  width: 674px;
+  background: white;
+  margin: auto;
+  bottom: 0;
+  padding: 19px 24px;
 }
 
 .btn-primary {

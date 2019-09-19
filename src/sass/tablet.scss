@@ -110,6 +110,10 @@
       font-size: 13px;
     }
 
+    &__submenu--more {
+      left: -118px;
+    }
+
     &__items-catalog {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 30px 14px;

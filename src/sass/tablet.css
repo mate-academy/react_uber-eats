@@ -89,6 +89,9 @@
     padding-right: 0;
     font-size: 13px;
   }
+  .restaurant__submenu--more {
+    left: -118px;
+  }
   .restaurant__items-catalog {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);

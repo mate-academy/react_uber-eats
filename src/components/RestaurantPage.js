@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 import classnames from 'classnames';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 import { getRestaurant } from '../api/getDate';
 import Header from './Header';
@@ -8,15 +10,25 @@ import Footer from './Footer';
 import Loading from './Loading';
 import MainSection from './MainSection';
 import ModalWindow from './ModalWindow';
+import { timingSafeEqual } from 'crypto';
 
 class RestaurantPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.submenuMore=React.createRef();
+  }
+
   state = {
     restaurant: [],
     menuRestaurant: [],
+    menuСheckout:'',
     loading: false,
     selectedMenu: '',
     foodSection: '',
     showModal: false,
+    selectedDish:'',
+    isMoreSubmenu: false,
   }
 
   async componentDidMount() {
@@ -51,9 +63,13 @@ class RestaurantPage extends React.Component {
     })
   }
 
-  handleShow = () => {
+  handleShow = (uuid) => {
+    const { restaurant, selectedMenu } = this.state;
+
     this.setState({
       showModal: true,
+      selectedDish: uuid,
+      menuСheckout: restaurant.data.sectionEntitiesMap[selectedMenu][`${uuid}`],
     })
   }
 
@@ -63,6 +79,42 @@ class RestaurantPage extends React.Component {
     })
   }
 
+  handleMoreSubmenu = () => {
+    const { isMoreSubmenu } = this.state;
+
+    this.setState({
+      isMoreSubmenu: !isMoreSubmenu,
+    })
+
+    document.addEventListener('click', this.handleClickOutsides, true);
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  handleScroll = (event) => {
+    console.log($(window).scrollTop())
+
+    if($(window).scrollTop() > 650) {
+      this.setState({
+        isMoreSubmenu: false,
+      });
+
+      document.removeEventListener('scroll', this.handleScroll, true);
+    }
+  }
+
+  handleClickOutsides = (event) => {
+    const { isMoreSubmenu } = this.state;
+    const domNode = this.submenuMore.current;
+
+    if ((!domNode.contains(event.target))) {
+    this.setState({
+      isMoreSubmenu: !isMoreSubmenu,
+    });
+
+    document.removeEventListener('click', this.handleClickOutsides, true);
+  }
+  }
+
   render() {
     const {
       loading,
@@ -70,14 +122,16 @@ class RestaurantPage extends React.Component {
       restaurant,
       selectedMenu,
       menuRestaurant,
-      showModal } = this.state;
+      showModal,
+      menuСheckout,
+      isMoreSubmenu } = this.state;
 
     return (
       <main>
         {!errors
             ? ((loading
               ? (
-                <>
+                <div className="restaurant-page">
                   <Header />
                   <section class="restaurant">
                     <div className="restaurant__image">
@@ -154,9 +208,24 @@ class RestaurantPage extends React.Component {
                                   </Link>
                                 </li>
                               )
-                            } else {
-                              return (
-                                <div className="restaurant__submenu--more">
+                            }
+                          }
+                          )}
+                          <a
+                            onClick={this.handleMoreSubmenu}
+                            className="restaurant__submenu--open-more"
+                            ref={this.submenuMore}
+                          >
+                            More
+                            <img
+                              src='images/icons/detail.svg'
+                              alt='detail'
+                            />
+                            {isMoreSubmenu?
+                            (<div className="restaurant__submenu--more">
+                              {menuRestaurant.map((menuItem, index) => {
+                              if (index > 6) {
+                                return (
                                   <li key={menuItem.uuid}>
                                     <Link
                                       to={menuItem.uuid}
@@ -168,12 +237,14 @@ class RestaurantPage extends React.Component {
                                       {menuItem.title}
                                     </Link>
                                   </li>
-                                </div>
-                              )
+                                )
+                              }
                             }
-                          }
-                          )}
-                          <a>More</a>
+                            )}
+                            </div>
+                            ) : ('')
+                        }
+                          </a>
                         </ul>
                       </div>
 
@@ -183,7 +254,10 @@ class RestaurantPage extends React.Component {
                           <div className="restaurant__items-catalog">
                             {menuItem.itemUuids.map(uuid =>
                               <>
-                              <a onClick={this.handleShow} className="restaurant__item-catalog">
+                              <a
+                                onClick={() => this.handleShow(uuid)}
+                                className="restaurant__item-catalog"
+                              >
                                 <div className="restaurant__item-catalog-info">
                                   <div className="restaurant__item-catalog--title">
                                     {restaurant.data.sectionEntitiesMap[selectedMenu][uuid].title}
@@ -208,9 +282,13 @@ class RestaurantPage extends React.Component {
                       ))}
                     </section>
                   </section>
-                  <ModalWindow show={showModal} handleClose={this.handleClose} />
+                <ModalWindow
+                  show={showModal}
+                  handleClose={this.handleClose}
+                  menuСheckout={menuСheckout}
+                />
                   <Footer />
-                </>
+                </div>
               )
               : <Loading />
             )) : (
