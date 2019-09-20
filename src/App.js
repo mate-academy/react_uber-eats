@@ -5,9 +5,12 @@ import Footer from './Footer';
 import './App.scss';
 
 class App extends React.Component {
+
   render() {
     return (
-      <div className="App">
+      <div
+        className="App"
+      >
         <Header />
         <Main />
         <Footer />

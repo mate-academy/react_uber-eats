@@ -1,6 +1,10 @@
 /***********************************************************
                       GENERAL
 ***********************************************************/
+*:focus {
+  outline: 1px solid black;
+}
+
 body {
   margin: 0 auto;
   font-family: Roboto, sans-serif;
@@ -183,15 +187,18 @@ main {
 
 .product_card {
   margin-bottom: 32px;
-  .product_card-img {
+  color: black;
+  text-decoration: none;
+  &-img {
     width: 100%;
     height: auto;
     border-radius: 2px;
   }
 
-  .product_card-name {
+  &-name {
     font-size: 16px;
     line-height: 24px;
+    font-weight: bold;
   }
 
   .product_card-class {
@@ -229,7 +236,7 @@ main {
 }
 
 .medium_hide {
-  display: block !important;;
+  display: block !important;
 }
 
 .btn_app--container {
@@ -240,7 +247,7 @@ main {
 }
 
 .medium_show {
-  display: none !important;;
+  display: none !important;
 }
 
 .div_underline {
@@ -258,12 +265,6 @@ main {
   font-size: 13px;
   background: #262626;
   border-radius: 2px;
-  /* line-height: 40px; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* box-sizing: border-box; */
-  /* display: inline-block; */
-  /* text-align: left; */
   width: 140px;
   margin-bottom: 20px;
   padding: 8px 0 8px 42px;
@@ -293,6 +294,11 @@ main {
 
 .soc_link {
   display: inline-block;
+  opacity: 0.65;
+}
+
+.soc_link:hover {
+  opacity: 1;
 }
 
 .footer_links-list {
@@ -358,16 +364,15 @@ main {
 /***********************************************************
                         @MEDIA
 ***********************************************************/
-@media screen and (max-width: 639px) {}
 @media screen and (min-width: 640px) {
   .logo {
     width: 150px;
   }
   .medium_show {
-    display: block !important;;
+    display: block !important;
   }
   .medium_hide {
-    display: none !important;;
+    display: none !important;
   }
   .soc_link {
     padding: 0 5px;
@@ -393,15 +398,15 @@ main {
     justify-content: center;
     grid-template-columns: 49.9% 49.9%;
     .product_card {
-      margin: 0 6px 23px;
+      padding: 0 6px 23px;
     }
     .product_card-img {
       position: relative;
-      transition: transform 0.5s;
     }
-    .product_card-img:hover {
+    .product_card:hover {
       transform: translate(0, -8px);
-
+      transition: transform 0.5s ease;
+      text-decoration: none;
     }
     .show_card {
       display: block;

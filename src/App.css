@@ -1,6 +1,10 @@
 /***********************************************************
                       GENERAL
 ***********************************************************/
+*:focus {
+  outline: 1px solid black;
+}
+
 body {
   margin: 0 auto;
   font-family: Roboto, sans-serif;
@@ -181,15 +185,18 @@ main {
 
 .product_card {
   margin-bottom: 32px;
+  color: black;
+  text-decoration: none;
 }
-.product_card .product_card-img {
+.product_card-img {
   width: 100%;
   height: auto;
   border-radius: 2px;
 }
-.product_card .product_card-name {
+.product_card-name {
   font-size: 16px;
   line-height: 24px;
+  font-weight: bold;
 }
 .product_card .product_card-class {
   font-size: 14px;
@@ -251,12 +258,6 @@ main {
   font-size: 13px;
   background: #262626;
   border-radius: 2px;
-  /* line-height: 40px; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* box-sizing: border-box; */
-  /* display: inline-block; */
-  /* text-align: left; */
   width: 140px;
   margin-bottom: 20px;
   padding: 8px 0 8px 42px;
@@ -286,6 +287,11 @@ main {
 
 .soc_link {
   display: inline-block;
+  opacity: 0.65;
+}
+
+.soc_link:hover {
+  opacity: 1;
 }
 
 .footer_links-list {
@@ -393,14 +399,15 @@ main {
     grid-template-columns: 49.9% 49.9%;
   }
   .product_cards .product_card {
-    margin: 0 6px 23px;
+    padding: 0 6px 23px;
   }
   .product_cards .product_card-img {
     position: relative;
-    transition: transform 0.5s;
   }
-  .product_cards .product_card-img:hover {
+  .product_cards .product_card:hover {
     transform: translate(0, -8px);
+    transition: transform 0.5s ease;
+    text-decoration: none;
   }
   .product_cards .show_card {
     display: block;
