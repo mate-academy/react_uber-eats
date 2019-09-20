@@ -30,20 +30,16 @@ class Main extends React.Component {
         <section className="product_cards">
           {
             this.arr.map(img => (
-              <article className="product_card">
-                <a
-                  href="/"
-                >
-                  <img
-                    className="product_card-img move-up"
-                    src="https://d1ralsognjng37.cloudfront.net/3af51993-a1c7-4601-b195-f6775f9fab88"
-                    alt=""
-                  />
-                </a>
+              <a href="/" className="product_card">
+                <img
+                  className="product_card-img move-up"
+                  src="https://d1ralsognjng37.cloudfront.net/3af51993-a1c7-4601-b195-f6775f9fab88"
+                  alt=""
+                />
                 <p className="product_card-name">Макдоналдс — Газетный</p>
                 <p className="product_card-class">₽₽ • Бургеры</p>
                 <p className="product_card-delivery_time">25 - 35 Min</p>
-              </article>
+              </a>
             ))
           }
         </section>
