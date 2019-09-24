@@ -2,19 +2,24 @@
 
 ## Task     
 Implement [Uber eats](https://www.ubereats.com/en-UA/feed/?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkt5aXYlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKQlVWYTRVN1AxRUFSX2tZQkY5SXhTWFklMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNTAuNDQ5ODU4NyUyQyUyMmxvbmdpdHVkZSUyMiUzQTMwLjUyMzY0OTYlN0Q%3D)
-using [this design](https://www.figma.com/file/j2sfk3XSjRf12SC27z0Ykf/Uber-eats-adaptive?node-id=0%3A1)
+using [this design](https://www.figma.com/file/cABVXdvRdGiXYzffeOE4gG/Uber-Eats-Adaptive-Dev-Copy?node-id=0%3A1)
 
-1. Implement basic header markup
-    - `Location` and `Search` should be placed on the next line for small screens
-    - `Deliver now` should appear on small screens
-    - `Location` should be replaced with a header on small screens   
-2. Implement footer
+1. Implement list of restaurants on the `Home` page
+  - use `redux` to store data
+  - use `redux-thunk` to handle async actions
+  - create separate component for restaurant card
+  - use https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants endpoint to fetch data
+    - accept optional query parameter `location`: `london|kyiv` 
+  - `RestaurantCard` should be clickable fully (not only the image) 
+2. Implement basic header markup
+    - `Location`, `Deliver now` and `Search` should be replaced whith buttons on the small screens.
+    Block with inputs should apper below the header after click on the button. 
+3. Implement footer
     - Pay attention to mobile version
     - Implement got to top arrow  
-3. Implement `HomePage` with the list of restaurants in [London](https://mate-academy.github.io/react_uber-eats/api/location/ChIJdd4hrwug2EcRmSrV3Vo6llI.json)
-    - `RestaurantCard` should be clickable fully (not only the image) 
-4. Implement `RestaurantPage` basing on [McDonald's® (Victoria)](https://mate-academy.github.io/react_uber-eats/api/restaurants/d7c942e8-d2b3-4004-b964-d8e008da75b0.json)
+4. Implement `RestaurantPage`
     - use `uuid` in the URL
+    - fetch data from https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/:uuid
 5. Implement modal window for selecting a meal
     - open it when clicking on a meal
     - close it on `X` or after adding
