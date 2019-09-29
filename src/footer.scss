@@ -179,19 +179,6 @@ input[class=main-content__search-form] {
   opacity: 0.4;
 }
 
-.arrow-to-top {
-  background: #59bd5a;
-  border-radius: 2px;
-  height: 64px;
-  width: 64px;
-  position: absolute;
-  bottom: 0;
-  right: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 1023px) {
   .footer {
     padding: 55px 8px 40px 8px;
@@ -209,11 +196,6 @@ input[class=main-content__search-form] {
   .footer__nav-social {
     width: 96px;
     margin-top: 15px;
-  }
-
-  .arrow-to-top {
-    right: 16px;
-    bottom: 25px;
   }
 
   .product__hiden_details {
@@ -251,13 +233,5 @@ input[class=main-content__search-form] {
     margin-top: 24px;
   }
 
-  .arrow-to-top {
-    width: 64px;
-    height: 64px;
-  }
-
-  .arrow-to-top::after {
-    bottom: 20px;
-    right: 24px;
-  }
 }
+

@@ -33,10 +33,10 @@ class Header extends React.Component {
                 className="n__header__local_img"
               />
               <input
-                name="search"
+                name="location"
                 type="text"
                 className="n__header__input"
-                placeholder="search"
+                placeholder="location"
               />
               <button className="n__header__clear n__header__button" disabled>
                 Clear
@@ -107,7 +107,7 @@ class Header extends React.Component {
                 className="n__header__close n__header__button"
                 disabled
               >
-                <img src="img/local.svg" alt="img__local" />
+                <img src="img/search.svg" alt="img__local" />
 
               </button>
             </div>

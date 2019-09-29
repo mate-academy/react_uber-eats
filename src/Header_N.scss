@@ -29,6 +29,7 @@ body {
   &__form {
     display: block;
     margin-right: 20px;
+    padding: 0 10px;
   }
   &__inner {
     display: flex;
@@ -40,11 +41,11 @@ body {
     font-family: 'Roboto', sans-serif;
     border: none;
     outline: none;
-    cursor: pointer;
     background: transparent;
     font-size: 16px;
     width: 50px;
     transition: width 0.3s ease;
+    cursor: pointer;
   }
   &__search_img {
     margin-right: 13px;
@@ -75,7 +76,10 @@ body {
     fill: #424242;
     color: #424242;
     transition: all 0.3s ease;
+    z-index: 3;
+    position: relative;
   }
+
 
   &__input:focus {
     width: 200px;
@@ -84,12 +88,11 @@ body {
 
   &__bulkhead {
     width: 1px;
-    height: 100%;
+    height: 60%;
     background: #757575;
     margin: 0 5px;
     display: none;
   }
-
   &__form:focus-within .n__header__clear, .n__header__form:focus-within .n__header__close,
   &__form:focus-within .n__header__bulkhead{
     display: block;
@@ -101,6 +104,7 @@ body {
   &__adress-delivery__bts img {
     margin-right: 13px;
   }
+
   &__adress-delivery__destination-details {
     font-family: 'Roboto', sans-serif;
     color: #757575;
@@ -119,9 +123,9 @@ body {
   // end important thinks
 }
 
-@media (max-width: 769px) {
+@media (max-width: 860px) {
   .n__header {
-    grid-template-rows: 80px 153px;
+    grid-template-rows: 80px 100px;
     grid-template-columns: 1fr 1fr;
     // align-items: center;
     padding: 0 30px;
@@ -137,7 +141,7 @@ body {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 500px) {
   .n__header {
     grid-template-rows: 80px 79px 81px;
     // grid-template-columns: 100%;

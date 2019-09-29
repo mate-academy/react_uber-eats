@@ -1,13 +1,14 @@
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/require-default-props */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Footer from './Footer';
-
 import Header from './Header';
 
-const Main = ({ stores, restorantId }) => {
+const Main = ({ stores }) => {
   const regex = /[0-9][0-9]:[0-9][0-9]/g;
   const today = new Date();
   const dateNow = `${today.getHours()}: ${today.getMinutes()}`;
@@ -20,7 +21,7 @@ const Main = ({ stores, restorantId }) => {
         <div className="catalog__container">
           {
             stores.map(store => (
-              <section className="product">
+              <section key={store.uuid} className="product">
                 {store.closedMessage.match(regex) > dateNow
                   ? (
                     <h1
@@ -42,6 +43,7 @@ const Main = ({ stores, restorantId }) => {
                           is__Visible__now: store.closedMessage
                             .match(regex) > dateNow,
                         })}
+                      key={store.heroImageUrl}
                       src={store.heroImageUrl}
                       alt="card__restorant"
                     />
@@ -80,10 +82,8 @@ const Main = ({ stores, restorantId }) => {
 };
 
 Main.propTypes = {
-  restorantId: PropTypes.string.isRequired,
-  stores: PropTypes.objectOf(
-    PropTypes.number,
-  ).isRequired,
+  // restorantId: PropTypes.string,
+  stores: PropTypes.array,
 };
 
 export default Main;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-/**************************
-parameters
-***********************/
+// /**************************
+// parameters
+// ***********************/
 $main-font-color: #1D1D1D;
 $second-font-color: #626262;
 $main-font-size: 13px;
@@ -12,63 +12,12 @@ body {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
 }
-/*******************************************************************
-product
-******************************************************/
+// /*******************************************************************
+// product
+// ******************************************************/
 .main {
   margin-bottom: 68px;
   font-family: 'Roboto', sans-serif;
-
-  &__container {
-    max-width: $containers-max-width;
-    padding: $containers-paddings-for-small-screens;
-    margin: auto;
-    box-sizing: border-box;
-  }
-}
-
-.product-search-delivery {
-  $search-height: 40px;
-
-  margin-bottom: 24px;
-
-  &__field {
-    border-style: hidden;
-    width: 100%;
-  }
-}
-
-.search_input {
-  width: 100%;
-  border: 0;
-  opacity: 50%;
-  line-height: 56px;
-  padding-left: 8px;
-  position: relative;
-}
-
-.search_container {
-  font-family: 'Roboto', sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  vertical-align: center;
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-
-  height: 40px;
-  width: 80px;
-}
-
-.catalog_img {
-  height: 278px;
-}
-
-.catalog-header{
-  margin: 56px 0 14px;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 34px;
 }
 
 .catalog {
@@ -76,6 +25,33 @@ product
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 32px;
+  }
+  &_img {
+    height: 278px;
+  }
+  &-header {
+    margin: 56px 0 14px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  &_container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+  &-header {
+    margin: 56px 0 14px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
   }
 }
 
@@ -159,70 +135,19 @@ $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
 $logo-max-width: 115px;
 $logo-min-width: 105px;
 
-/**************************
-parameters
-***********************/
+// /**************************
+// parameters
+// ***********************/
 body {
   margin: 0 auto;
   font-family: Roboto, sans-serif;
 }
 
-/*******************************************************************
-product
-******************************************************/
+// /*******************************************************************
+// product
+// ******************************************************/
 .main {
   margin-bottom: 68px;
-}
-.main__container {
-  max-width: 956px;
-  padding: 0 5px;
-  margin: auto;
-  box-sizing: border-box;
-}
-
-.product-search-delivery {
-  margin-bottom: 24px;
-}
-.product-search-delivery .search_container {
-  font-family: Roboto, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  vertical-align: center;
-  border-bottom: 1px solid #757575;
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-}
-.product-search-delivery .search_input {
-  width: 100%;
-  border: 0;
-  opacity: 50%;
-  line-height: 56px;
-  padding-left: 8px;
-  position: relative;
-}
-.product-search-delivery__field {
-  border-style: hidden;
-  width: 100%;
-}
-
-.catalog-header {
-  margin: 56px 0 14px;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 34px;
-}
-
-.catalog__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 32px;
-}
-
-.catalog_container {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 35px;
 }
 
 .product__photo {
@@ -240,7 +165,8 @@ product
   transform: scale(1);
   transition: all 0.3s;
 }
-.product__photo:hover img {
+
+.product:hover img {
   transform: scale(1.1);
   transition: all 0.3s;
 }
@@ -296,9 +222,9 @@ product
   }
 }
 
-// _________________________________________________
-// header
-// __________________________________________________
+// // _________________________________________________
+// // header
+// // __________________________________________________
 .is__Visible__now {
   opacity: 0.2;
   position: relative;
@@ -310,6 +236,6 @@ product
 
 .product__categories__rating {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
