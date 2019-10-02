@@ -16,15 +16,14 @@ Base API url: https://mate-uber-eats-api.herokuapp.com/api/v1/
     - accept optional query parameter `location`: `london|kyiv` 
   - `RestaurantCard` should be clickable fully (not only the image) 
 2. Implement basic header markup
+3. Implement footer
+4. Add functionality and styles for mobile and tablet versions
     - `Location`, `Deliver now` and `Search` should be replaced whith buttons on the small screens.
     Block with inputs should apper below the header after click on the button. 
-3. Implement footer
-    - Pay attention to mobile version
-    - Implement got to top arrow  
-4. Implement `RestaurantPage`
+5. Implement `RestaurantPage`
     - use `uuid` in the URL
     - fetch data from https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/:uuid
-5. Implement modal window for selecting a meal
+6. Implement modal window for selecting a meal
     - open it when clicking on a meal
     - close it on `X` or after adding
     - (*) close it on outside click
