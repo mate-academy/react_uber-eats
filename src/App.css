@@ -6,8 +6,12 @@
 }
 
 body {
+  margin: 0;
+}
+
+.centered {
   margin: 0 auto;
-  font-family: Roboto, sans-serif;
+  justify-content: center;
 }
 
 a:hover {
@@ -62,6 +66,93 @@ header {
 }
 
 /***********************************************************
+                        GROWING FORM
+***********************************************************/
+.form {
+  display: block;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+.input::-webkit-input-placeholder {
+  color: black;
+}
+
+.search_img {
+  margin-right: 5px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.form:focus-within {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid gray;
+}
+
+button {
+  padding: 3px;
+  line-height: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: none;
+}
+
+button svg path {
+  fill: #757575;
+}
+
+.clear:focus,
+.clear:hover,
+.close:focus svg path,
+.close:hover svg path {
+  fill: #424242;
+  color: #424242;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  width: 150px;
+  cursor: initial;
+}
+.input:focus::-webkit-input-placeholder {
+  color: gray;
+}
+
+.bulkhead {
+  width: 1px;
+  height: 100%;
+  background: #757575;
+  margin: 0 5px;
+  display: none;
+}
+
+.form:focus-within .clear,
+.form:focus-within .close,
+.form:focus-within .bulkhead {
+  display: block;
+}
+
+/***********************************************************
                         SEARCH
 ***********************************************************/
 main {
@@ -69,7 +160,6 @@ main {
 }
 
 .header_btn-search {
-  font-family: Roboto sans-serif;
   font-size: 16px;
   text-decoration: none;
   color: black;
@@ -79,7 +169,6 @@ main {
 }
 
 .search_container {
-  font-family: Roboto, sans-serif;
   font-size: 13px;
   line-height: 24px;
   vertical-align: center;
@@ -213,8 +302,8 @@ main {
 ***********************************************************/
 .footer {
   height: 100%;
-  background: #262626;
-  padding: 0 16px;
+  background: #000;
+  padding: 0 16px 80px;
   color: #fff;
   position: relative;
 }
@@ -265,6 +354,10 @@ main {
   -webkit-appearance: none;
 }
 
+.lang_drop-title:hover {
+  cursor: pointer;
+}
+
 .lang_img {
   position: absolute;
   z-index: 1;
@@ -311,7 +404,7 @@ main {
 }
 
 .footer_link:hover,
-.footer_copy-n-links:hover {
+.footer_copy-n-links a:hover {
   text-decoration: underline;
 }
 
@@ -346,12 +439,18 @@ main {
   border-radius: 2px;
   height: 64px;
   width: 64px;
-  position: absolute;
+  position: fixed;
   bottom: 24px;
   right: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.75;
+}
+
+.back_btn:hover {
+  opacity: 1;
+  transition: ease-in-out 0.3s;
 }
 
 /***********************************************************
@@ -380,6 +479,14 @@ main {
   .app_link {
     display: block;
     padding-bottom: 10px;
+  }
+
+  .delivery_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    align-items: center;
+    color: #000;
   }
 
   .deliver_to {
@@ -424,12 +531,17 @@ main {
     margin-bottom: 20px;
   }
 
+  .footer_links-list_item a {
+    font-size: 14px;
+  }
+
   .footer_links-copy-container {
     display: flex;
   }
 
   .footer_copy-n-links {
     margin: 0 60px 24px 0;
+    font-size: 14px;
   }
 
   .footer_bottom-links {
@@ -445,8 +557,8 @@ main {
   .footer_section,
 .header_section,
 main {
-    max-width: 956px;
     margin: auto;
+    padding: 0 80px;
   }
 
   .logo {
@@ -495,6 +607,19 @@ main {
 
   .product_cards {
     grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .product_card-img {
+    object-fit: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .product_card--figure {
+    height: 240px;
+    width: 100%;
+    margin: 0;
   }
 
   .btn_app--container {

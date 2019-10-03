@@ -166,34 +166,6 @@ const Footer = () => (
           <a className="footer_copy-n-links" href="/">Privacy</a>
           <a className="footer_copy-n-links" href="/">Terms</a>
           <a className="footer_copy-n-links medium_show" href="/">Pricing</a>
-          <div className="socials_container big_show">
-            <div>
-              <a
-                className="soc_link"
-                href="/"
-              >
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/facebook.svg`}
-                  alt=""
-                />
-              </a>
-              <a
-                className="soc_link"
-                href="/"
-              >
-                <img src={`${process.env.PUBLIC_URL}/img/twitter.svg`} alt="" />
-              </a>
-              <a
-                className="soc_link"
-                href="/"
-              >
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/instagram.svg`}
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
         </span>
       </article>
       <div className="footer_socials-bottom--container">
@@ -232,15 +204,34 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <a
-        className="back_btn"
-        href="/"
-      >
-        <img
-          src={`${process.env.PUBLIC_URL}/img/arrow-up.svg`}
-          alt=""
-        />
-      </a>
+      <div className="socials_container big_show centered">
+        <div>
+          <a
+            className="soc_link"
+            href="/"
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/img/facebook.svg`}
+              alt=""
+            />
+          </a>
+          <a
+            className="soc_link"
+            href="/"
+          >
+            <img src={`${process.env.PUBLIC_URL}/img/twitter.svg`} alt="" />
+          </a>
+          <a
+            className="soc_link"
+            href="/"
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/img/instagram.svg`}
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
     </section>
   </footer>
 );
