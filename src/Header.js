@@ -6,7 +6,8 @@ import './Header_N.scss';
 
 class Header extends React.Component {
   state = {
-
+    // Header__time-select
+    // Header__time
   }
 
   render() {
@@ -47,34 +48,31 @@ class Header extends React.Component {
                 className="n__header__close n__header__button"
                 disabled
               >
-                <img src="img/local.svg" alt="img__local" />
-
+                <img
+                  src="img/enter.svg"
+                  className="n__header__img"
+                  alt="clear"
+                />
               </button>
             </div>
           </form>
           <div className="n__header__adress-delivery__bts">
-            <img src="img/time.png" alt="location" />
             <select
               name=""
               id="destination-details"
               className="n__header__adress-delivery__destination-details"
             >
-              <option value="ASAP">Delivery now</option>
+              <option
+                className="n__header__adress-delivery_option"
+                value="ASAP"
+              >
+                Delivery now
+              </option>
               <option value="ASAP">Schedule for later</option>
             </select>
           </div>
         </div>
         <div className="n__header__search__container ">
-          <button
-            type="button"
-            className="n__header__dest_btn n__header__abs_btn"
-          >
-            <img
-              src="img/search.svg"
-              alt="location"
-              className="dest_btn__img"
-            />
-          </button>
           <input
             type="text"
             className="n__header__destination_input n__header__dest_style"
@@ -107,8 +105,11 @@ class Header extends React.Component {
                 className="n__header__close n__header__button"
                 disabled
               >
-                <img src="img/search.svg" alt="img__local" />
-
+                <img
+                  src="img/enter.svg"
+                  className="n__header__img"
+                  alt="clear"
+                />
               </button>
             </div>
           </form>

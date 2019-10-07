@@ -37,6 +37,18 @@ body {
     height: 40px;
     box-sizing: border-box;
   }
+  &__img {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+  }
+  &__destination_input {
+    background-image: url('./img/search.svg');
+    background-repeat: no-repeat;
+    background-position: left 14px top 6px;
+    padding: 0 0 0 50px;
+  }
   &__input {
     font-family: 'Roboto', sans-serif;
     border: none;
@@ -76,8 +88,6 @@ body {
     fill: #424242;
     color: #424242;
     transition: all 0.3s ease;
-    z-index: 3;
-    position: relative;
   }
 
 
@@ -102,16 +112,31 @@ body {
     align-items: center;
   }
   &__adress-delivery__bts img {
-    margin-right: 13px;
+    margin: 0 13px;
   }
-
+  &__adress-delivery__bts:focus {
+    outline: none;
+  }
+  &__adress-delivery__bts:hover{
+    color: #5fb709;
+    cursor: pointer;
+  }
+  &__adress-delivery_option {
+    height: 260px;
+  }
   &__adress-delivery__destination-details {
     font-family: 'Roboto', sans-serif;
     color: #757575;
-    font-size: 15px;
+    background-size: 22px;
     appearance: none;
     border: none;
     height: 30px;
+    background-image: url(./img/time.svg);
+    background-repeat: no-repeat;
+    background-position: left 16px top 4px;
+    padding-left: 46px;
+    font-size: 16px;
+    cursor: pointer;
   }
   &__sign-delivery__button {
     text-decoration: none;
@@ -123,28 +148,40 @@ body {
   // end important thinks
 }
 
+@media (min-width: 1020px) {
+  .n__header {
+    &__input:focus {
+      width: 70px;
+    }
+  }
+}
+
 @media (max-width: 860px) {
   .n__header {
     grid-template-rows: 80px 100px;
-    grid-template-columns: 1fr 1fr;
-    // align-items: center;
+    grid-template-columns: 23% 78%;
     padding: 0 30px;
     &__container__deliverry {
       grid-row: 2;
+    }
+    &__input:focus {
+      width: 170px;
     }
   }
 }
 
 @media (min-width: 1280px) {
   .n__header {
-    width: 1200px;
+    // width: 1200px;
+    &__input:focus {
+      width: 170px;
+    }
   }
 }
 
 @media (max-width: 500px) {
   .n__header {
     grid-template-rows: 80px 79px 81px;
-    // grid-template-columns: 100%;
     &__container__deliverry {
       grid-row: 3;
     }
@@ -154,9 +191,9 @@ body {
       grid-row: 2;
       height: 78px;
       border-bottom: 1px solid;
-      width: 100%;
+      width: 328px;
     }
-    &__n__header__dest_btn {
+    &__dest_btn {
       appearance: none;
       border: none;
     }
@@ -170,6 +207,10 @@ body {
     &__dest_style {
       border: none;
       height: 30px;
+      width: 1000px;
+    }
+    &__input:focus {
+      width: 20px;
     }
   }
 }

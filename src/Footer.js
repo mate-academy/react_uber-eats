@@ -22,17 +22,17 @@ const Footer = () => (
               <div className="footer__dropdown footer__lang_drop">
                 <span className="footer__lang_drop-title">
                   <img src="" alt="" />
-  ENGLISH
+                    ENGLISH
                   {' '}
                   <img src="src/images/drop.png" alt="" />
                 </span>
                 <div className="footer__dropdown-content">
                   <ul className="footer__dropdown-content_list">
                     <li className="footer__dropdown-content_list-item">
-                      <a className="dropdown_link" href="/#">РУССКИЙ</a>
+                      <a className="dropdown_link" href="#!">РУССКИЙ</a>
                     </li>
-                    <li className="dropdown-content_list-item">
-                      <a className="dropdown_link" href="/#">УКРАЇНСЬКА</a>
+                    <li className="footer__dropdown-content_list-item">
+                      <a className="dropdown_link" href="#!">УКРАЇНСЬКА</a>
                     </li>
                   </ul>
                 </div>

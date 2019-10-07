@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Footer from './Footer';
 import Header from './Header';
+import './main.scss';
 
 const Main = ({ stores }) => {
   const regex = /[0-9][0-9]:[0-9][0-9]/g;
@@ -17,7 +18,7 @@ const Main = ({ stores }) => {
     <>
       <Header />
       <section className="catalog catalog_container">
-        <h1 className="catalog-header">Moscow products</h1>
+        <h1 className="catalog-header">London products</h1>
         <div className="catalog__container">
           {
             stores.map(store => (
@@ -57,14 +58,21 @@ const Main = ({ stores }) => {
                     </li>
 
                   </ul>
-                  <div className="product__details">
+                  <div
+                    className={
+                      classNames({
+                        product__details: true,
+                        product__categories__rating: store.feedback,
+                      })
+                    }
+                  >
                     {store.etaRange
                       ? store.etaRange.text
                       : store.feedback
                         ? (
                           <div className="product__categories__rating">
                             <p>{store.feedback.rating}</p>
-                            <p>✰ </p>
+                            <p className="product_rating">✰ </p>
                             <p>{store.feedback.ratingCount}</p>
                           </div>
                         )
