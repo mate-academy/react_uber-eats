@@ -1,0 +1,37 @@
+@import "../../styles/vars.scss";
+
+.restaurant-card {
+  --heigth: 367px;
+  height: var(--heigth);
+  width: 100%;
+
+  cursor: pointer;
+
+
+  @media (max-width: $break-point-mobile) {
+  --heigth: 330px;
+  }
+  &__img {
+    height: calc(var(--heigth) * 0.7);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 12px 0 4px;
+    color: $color-dark;
+  }
+
+  &__categories {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 4px; 
+  }
+  &__eta{
+    font-size: 14px;
+    padding: 2px 8px;
+    color: $color-dark;
+    background-color: #f5f5f5;
+    display: inline-block;
+  }
+}

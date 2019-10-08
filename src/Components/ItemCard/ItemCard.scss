@@ -1,0 +1,24 @@
+@import '../../styles/vars.scss';
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid $color-grey;
+
+  &__left-section {
+    width: 55%;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  &__description {
+    color: $color-dark-grey;
+    line-height: 21px;
+  }
+  &__price {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
