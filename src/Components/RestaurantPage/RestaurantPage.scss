@@ -1,1 +1,138 @@
-/* todo: delete file if not needed */
+@import '../../styles/vars.scss';
+
+.restaurant-page {
+  margin-top: -40px;
+
+  &__top-part {
+    height: 380px;
+
+    position: relative;
+  }
+  &__main-img {
+    height: 380px;
+    width: 100%;
+
+    @media (max-width: $break-point-mobile) {
+      height: 256px;
+    }
+  }
+  &__rest-details {
+    width: 590px;
+    padding: 24px  40px 24px 95px;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+
+    @media (max-width: $break-point-tablet) {
+      left: 50%;
+      bottom: -20%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: $break-point-mobile) {
+      width: 280px;
+      padding: 20px;
+      bottom: -5%;
+    }
+    @media (min-width: $break-point-large) {
+      width: 757px;
+      padding-left: 264px;
+    }
+  }
+  &__main-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  &__description {
+    margin-bottom: 16px;
+    color: #757575;
+  }
+  &__time {
+    width: 86px;
+    height: 24px;
+    background-color: #F5F5F5;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  &__location {
+    display: block;
+
+    @media (max-width: $break-point-tablet) {
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+    }
+  }
+  &__navigation {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 90px;
+  }
+  &__navigation-link {
+    color: #000;
+    display: block;
+    text-align: center;
+    height: 40px;
+    position: relative;
+
+    margin-right: 24px;
+    margin-bottom: 10px;
+
+    transition: color 0.3s;
+
+    &:hover{
+      color: $c-green;
+    }
+    &:hover::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: #000;
+      bottom: 0;
+      left: 0;
+
+      animation: hover-animation 0.3s;
+    }
+  }
+  &__menu-item-title {
+    font-size: 20px;
+    line-height: 21px;
+
+    margin: 40px 0 21px;
+  }
+  &__menu-container {
+    --menu-width: 340px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--menu-width), 1fr));
+    gap: 40px 20px;
+
+    @media (max-width: $break-point-mobile) {
+      --menu-width: 280px;
+    }
+  }
+}
+
+
+@keyframes hover-animation {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}

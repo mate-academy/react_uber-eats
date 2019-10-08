@@ -4,6 +4,7 @@ const initialState = {
   restaurantsListData: null,
   isLoading: false,
   error: null,
+  itemId: null,
 };
 
 export function rootReducer(state = initialState, action) {
@@ -38,6 +39,15 @@ export function rootReducer(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
+      };
+    }
+
+    case ACTION_TYPES.SET_ID: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        itemId: payload,
       };
     }
 

@@ -3,6 +3,7 @@ export const ACTION_TYPES = {
   SET_LOAD_RESTAURANTS_ERROR: 'SET_LOAD_RESTAURANTS_ERROR',
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
+  SET_ID: 'SET_ID',
 };
 
 const saveRestaurants = data => ({
@@ -31,4 +32,9 @@ const startLoading = () => ({
 
 const stopLoading = () => ({
   type: ACTION_TYPES.STOP_LOADING,
+});
+
+export const setRestaurantId = id => ({
+  type: ACTION_TYPES.SET_ID,
+  payload: id,
 });

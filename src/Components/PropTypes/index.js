@@ -72,7 +72,20 @@ export const ErrorDefault = {
 
 export const ItemCardPropTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  imgUrl: PropTypes.string,
+};
+
+export const ItemCardDefault = {
+  imgUrl: '',
+  description: '',
+};
+
+export const AppProps = {
+  itemId: PropTypes.string,
+};
+
+export const RestaurantPagePropTypes = {
+  uuid: PropTypes.string,
 };

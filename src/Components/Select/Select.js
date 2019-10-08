@@ -23,7 +23,7 @@ export const Select = (props) => {
           <option
             value={optionValue}
             selected={value === optionValue}
-            key={optionValue}
+            key={label}
           >
             {label}
           </option>

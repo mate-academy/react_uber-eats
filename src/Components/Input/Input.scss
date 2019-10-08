@@ -12,6 +12,10 @@
     border: 1px solid $color-grey;
   
     transition: border-color 0.3s;
+
+    &--focused {
+      border-color: $c-green;
+    }
   }
 
   &__icon {
@@ -38,10 +42,6 @@
     color: #626262;
 
     margin-bottom: 8px;
-  }
-
-  &--focused {
-    border-color: $c-green;
   }
 
   & + & {

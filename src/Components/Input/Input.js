@@ -36,7 +36,7 @@ export class Input extends PureComponent {
     const { isFocused } = this.state;
 
     const inputWrapperClass = cx('control__input-wrapper', {
-      'control__input-wrapper': isFocused,
+      'control__input-wrapper--focused': isFocused,
       [className]: !!className,
     });
 

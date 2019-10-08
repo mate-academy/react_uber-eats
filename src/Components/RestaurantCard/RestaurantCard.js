@@ -1,11 +1,10 @@
 import React from 'react';
 import './RestaurantCard.scss';
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   RestaurantCardProps,
   RestaurantCardDefault,
 } from '../PropTypes';
-import { RestaurantPage } from '../RestaurantPage';
 
 export const RestaurantCard = (props) => {
   const {
@@ -14,11 +13,16 @@ export const RestaurantCard = (props) => {
     categories,
     uuid,
     etaRange,
+    setRestaurantId,
   } = props;
 
   return (
     <>
-      <NavLink className="restaurant-card" to={`/:${uuid}?`}>
+      <NavLink
+        className="restaurant-card"
+        to={`/${uuid}`}
+        onClick={() => setRestaurantId(uuid)}
+      >
         <img src={imageUrl} alt={title} className="restaurant-card__img" />
         <h2 className="restaurant-card__title">
           {title}
@@ -30,14 +34,6 @@ export const RestaurantCard = (props) => {
           {etaRange}
         </div>
       </NavLink>
-      <Route
-        path={`/:${uuid}?`}
-        render={
-          ({ match }) => (
-            <RestaurantPage match={match} uuid={uuid} />
-          )
-        }
-      />
     </>
   );
 };

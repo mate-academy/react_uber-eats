@@ -18,10 +18,14 @@ export const ItemCard = (props) => {
           {description}
         </p>
         <span className="item-card__price">
-          {price}
+          {`£ ${price}`}
         </span>
       </div>
-      <img src={imgUrl} alt={title} />
+      <img
+        src={imgUrl}
+        alt={title}
+        className="item-card__img"
+      />
     </div>
   );
 };

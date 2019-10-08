@@ -1,11 +1,12 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import './RestaurantPage.scss';
 import { ItemCard } from '../ItemCard';
+import { Loader } from '../Loader';
+import { RestaurantPagePropTypes } from '../PropTypes';
 
 export class RestaurantPage extends React.Component {
   state = {
-    restaurantData: [],
+    restaurantData: null,
   }
 
   componentDidMount() {
@@ -13,75 +14,83 @@ export class RestaurantPage extends React.Component {
 
     fetch(`https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/${uuid}`)
       .then(res => res.json())
-      .then(data => this.setState({ restaurantData: data }));
+      .then(({ data }) => this.setState({ restaurantData: data }));
   }
 
   render() {
     const {
-      title,
-      etaRange,
-      location,
-      priceBucket,
-      cuisineList,
-      sections,
-      sectionMap,
-      entitiesMap,
-    } = this.state.restaurantData.data;
+      restaurantData,
+    } = this.state;
+
+    if (!restaurantData) {
+      return <Loader />;
+    }
 
     return (
       <section className="restaurant-page">
         <div className="restaurant-page__top-part">
-          <img src="" alt="" className="restaurant-page__main-img" />
+          <img
+            src={restaurantData
+              .heroImageUrls[restaurantData.heroImageUrls.length - 1].url}
+            alt=""
+            className="restaurant-page__main-img"
+          />
           <div className="restaurant-page__rest-details">
             <h1 className="restaurant-page__main-title">
-              {title}
+              {restaurantData.title}
             </h1>
             <p className="restaurant-page__description">
-              {`${priceBucket}${cuisineList.join(' • ')}`}
+              {`${restaurantData.priceBucket} ${restaurantData.cuisineList
+                .join(' • ')}`}
             </p>
             <p className="restaurant-page__time">
-              {etaRange.text}
+              {restaurantData.etaRange
+                ? restaurantData.etaRange.text
+                : '35 - 45 min'}
             </p>
             <p className="restaurant-page__location">
-              {location.address}
+              {restaurantData.location.address}
             </p>
           </div>
         </div>
 
-        <div className="restaurant-page__main-content">
+        <div className="restaurant-page__main-content content">
           <nav>
             <ul className="restaurant-page__navigation">
-              {sections.map(section => (
-                <li>
-                  <a href="##">
-                    {sectionMap[section].title}
+              {restaurantData.sections.map(section => (
+                <li key={restaurantData.sectionsMap[section].title}>
+                  <a href="##" className="restaurant-page__navigation-link">
+                    {restaurantData.sectionsMap[section].title}
                   </a>
                 </li>
               ))}
             </ul>
           </nav>
           <div className="restaurant-page__menu">
-            {sections.map(section => (
-              <div className="restaurant-page__menu-item">
+            {restaurantData.sections.map(section => (
+              <div
+                className="restaurant-page__menu-item"
+                key={restaurantData.sectionsMap[section].title}
+              >
                 <h2 className="restaurant-page__menu-item-title">
-                  {sectionMap[section].title}
+                  {restaurantData.sectionsMap[section].title}
                 </h2>
                 <div className="restaurant-page__menu-container">
-                  {sectionMap[section].itemUuids.map((item) => {
+                  {restaurantData.sectionsMap[section].itemUuids.map((item) => {
                     const {
                       title,
                       description,
                       price,
-                      imgUrl,
+                      imageUrl,
                       uuid,
-                    } = entitiesMap[item];
+                    } = restaurantData.entitiesMap[item];
 
                     return (
                       <ItemCard
                         title={title}
                         description={description}
                         price={price}
-                        imgUrl={imgUrl}
+                        imgUrl={imageUrl}
                         key={uuid}
                       />
                     );
@@ -95,9 +104,5 @@ export class RestaurantPage extends React.Component {
     );
   }
 }
-
-const RestaurantPagePropTypes = {
-  // always use prop types!
-};
 
 RestaurantPage.propTypes = RestaurantPagePropTypes;

@@ -33,25 +33,27 @@ export class RestaurantsListPage extends React.Component {
     }
 
     return (
-      <div className="restaurant-list">
-        {restaurantsListData.map(({
-          title,
-          categories,
-          uuid,
-          heroImageUrl: imageUrl,
-          etaRange,
-        }) => (
+      <>
+        <div className="restaurant-list">
+          {restaurantsListData.map(({
+            title,
+            categories,
+            uuid,
+            heroImageUrl: imageUrl,
+            etaRange,
+          }) => (
 
-          <RestaurantCard
-            key={uuid}
-            title={title}
-            categories={categories}
-            uuid={uuid}
-            imageUrl={imageUrl}
-            etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
-          />
-        ))}
-      </div>
+            <RestaurantCard
+              key={uuid}
+              title={title}
+              categories={categories}
+              uuid={uuid}
+              imageUrl={imageUrl}
+              etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
+            />
+          ))}
+        </div>
+      </>
     );
   }
 }
