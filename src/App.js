@@ -3,14 +3,15 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import './App.scss';
+// import * as Api from './Api';
 
 class App extends React.Component {
   state = {
+    locationSearchOpen: false,
+    searchOpen: false,
     shoudStick: false,
-    specialProposition: [],
-    newOnSite: [],
-    popularNear: [],
-    foodList: [],
+    autoCompleteList: {},
+    query: 'Kyiv',
   };
 
   componentDidMount() {
@@ -31,8 +32,31 @@ class App extends React.Component {
     }
   };
 
+  openLocSearch = () => {
+    this.setState({ locationSearchOpen: true });
+  };
+
+  handleCityChange = async(input) => {
+    this.setState(() => ({
+      query: input,
+    }));
+  };
+
+  closeSearch = () => {
+    this.setState({
+      locationSearchOpen: false,
+      searchOpen: false,
+    });
+  };
+
   render() {
-    const { shoudStick } = this.state;
+    const {
+      shoudStick,
+      query,
+      searchOpen,
+      locationSearchOpen,
+      autoCompleteList,
+    } = this.state;
 
     return (
       <div
@@ -42,8 +66,17 @@ class App extends React.Component {
       >
         <Header
           shoudStick={shoudStick}
+          searchOpen={searchOpen}
+          closeSearch={this.closeSearch}
+          openLocSearch={this.openLocSearch}
+          locationSearchOpen={locationSearchOpen}
+          query={query}
+          handleCityChange={this.handleCityChange}
         />
-        <Main />
+        <Main
+          location={query}
+          autoCompleteList={autoCompleteList}
+        />
         <Footer />
         <a
           style={{ display: (shoudStick ? 'flex' : 'none') }}
@@ -61,6 +94,8 @@ class App extends React.Component {
 }
 App.defaultProps = {
   shoudStick: false,
+  locationSearchOpen: false,
+  searchOpen: false,
 };
 
 export default App;

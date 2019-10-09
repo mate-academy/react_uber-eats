@@ -66,10 +66,36 @@ header {
 }
 
 /***********************************************************
+                        AUTOCOMPLETE
+***********************************************************/
+.location {
+  z-index: 1;
+}
+
+.location_search--autocomplete {
+  margin: 0;
+  padding: 0;
+  background: white;
+  z-index: 5;
+}
+
+.autocomplete_address {
+  padding: 16px;
+  list-style: none;
+  margin: 0;
+}
+
+.autocomplete_address:hover {
+  background: #f6f6f6;
+  cursor: pointer;
+}
+
+/***********************************************************
                         GROWING FORM
 ***********************************************************/
 .form {
   display: block;
+  margin-right: 10px;
 }
 
 .inner {
@@ -121,6 +147,10 @@ button svg path {
   fill: #757575;
 }
 
+.clear {
+  outline: none;
+}
+
 .clear:focus,
 .clear:hover,
 .close:focus svg path,
@@ -130,11 +160,11 @@ button svg path {
   transition: all 0.3s ease;
 }
 
-.input:focus {
-  width: 150px;
+.active_search {
+  width: 200px;
   cursor: initial;
 }
-.input:focus::-webkit-input-placeholder {
+.active_search::-webkit-input-placeholder {
   color: gray;
 }
 
@@ -292,9 +322,15 @@ main {
   line-height: 21px;
   color: #626262;
 }
-.product_card .product_card-delivery_time {
+.product_card .product_card--span {
+  display: flex;
+  justify-content: space-between;
+  max-width: 170px;
+}
+.product_card .product_card--span p {
+  background: #f6f6f6;
+  padding: 5px;
   font-size: 13px;
-  line-height: 21px;
 }
 
 /***********************************************************
@@ -574,6 +610,7 @@ main {
 
   .big_show {
     display: flex;
+    height: 40px;
     margin-bottom: 0;
   }
 

@@ -1,9 +1,18 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 class Main extends React.Component {
-  arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  store = {
+    query: '',
+  };
 
   render() {
+    const {
+      location,
+    } = this.props;
+
+    const arr = [1, 1, 1, 1, 1, 1];
+
     return (
       <main className="main centered">
         <form className="destination_container big_hide" action="#">
@@ -26,10 +35,10 @@ class Main extends React.Component {
           />
         </form>
 
-        <h1 className="section_header">Moscow Restaurants</h1>
+        <h1 className="section_header">{`${location} Restaurants`}</h1>
         <section className="product_cards">
           {
-            this.arr.map(img => (
+            arr.map(img => (
               <a href="/" className="product_card">
                 <figure
                   className="product_card--figure"
@@ -37,12 +46,19 @@ class Main extends React.Component {
                   <img
                     className="product_card-img move-up"
                     src="https://d1ralsognjng37.cloudfront.net/3af51993-a1c7-4601-b195-f6775f9fab88"
-                    alt=""
+                    alt="food"
                   />
                 </figure>
                 <p className="product_card-name">Макдоналдс — Газетный</p>
                 <p className="product_card-class">₽₽ • Бургеры</p>
-                <p className="product_card-delivery_time">25 - 35 Min</p>
+                <span className="product_card--span">
+                  <p className="product_card-delivery_time">25 - 35 Min</p>
+                  <p className="product_card-rating">
+                    {'4.0 '}
+                    <img src="" alt="star" />
+                    {' num'}
+                  </p>
+                </span>
               </a>
             ))
           }
@@ -51,5 +67,9 @@ class Main extends React.Component {
     );
   }
 }
+
+Main.propTypes = {
+  location: propTypes.string.isRequired,
+};
 
 export default Main;
