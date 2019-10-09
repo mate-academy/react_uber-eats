@@ -1,0 +1,27 @@
+@import '../../styles/extends.scss';
+
+.control {
+  $border-color: #e0e0e0;
+  @extend %flex-row-center;
+
+  padding: 11px 16px;
+
+  border: 1px solid $border-color;
+  border-radius: 2px;
+
+  transition: border-color 300ms;
+
+  &--focused {
+    border-color: darken($border-color, 20);
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+
+  & + .control {
+    margin-left: 20px;
+  }
+};
