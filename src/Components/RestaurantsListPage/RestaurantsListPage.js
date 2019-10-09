@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  RestaurantsListPageProps,
-  RestaurantsListPageDefault,
-} from '../PropTypes';
+import PropTypes from 'prop-types';
 import { RestaurantCard } from '../RestaurantCard';
 import './RestaurantsListPage.scss';
 import { Error } from '../Error';
@@ -58,5 +55,15 @@ export class RestaurantsListPage extends React.Component {
   }
 }
 
-RestaurantsListPage.propTypes = RestaurantsListPageProps;
-RestaurantsListPage.defaultProps = RestaurantsListPageDefault;
+RestaurantsListPage.propTypes = {
+  restaurantsListData: PropTypes.arrayOf(PropTypes.shape({})),
+  loadRestaurants: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  isLoading: PropTypes.bool,
+};
+
+RestaurantsListPage.defaultProps = {
+  restaurantsListData: [],
+  error: null,
+  isLoading: false,
+};

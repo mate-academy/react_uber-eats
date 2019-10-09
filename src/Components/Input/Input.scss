@@ -14,7 +14,7 @@
     transition: border-color 0.3s;
 
     &--focused {
-      border-color: $c-green;
+      border-color: $color-green;
     }
   }
 
@@ -23,6 +23,7 @@
     height: 14px;
     margin-right: 10px;
   }
+
   &__input {
     max-height: 24px;
     line-height: 24px;
@@ -32,6 +33,7 @@
         max-width: 75px;
       }
     }
+
     &--time {
       max-width: 75px;
     }

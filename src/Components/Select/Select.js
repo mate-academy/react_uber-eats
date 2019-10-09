@@ -1,6 +1,6 @@
 import React from 'react';
 import './Select.scss';
-import { SelectProps, SelectDefault } from '../PropTypes';
+import PropTypes from 'prop-types';
 
 export const Select = (props) => {
   const {
@@ -43,5 +43,19 @@ export const Select = (props) => {
   );
 };
 
-Select.propTypes = SelectProps;
-Select.defaultProps = SelectDefault;
+Select.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onSelect: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string,
+  })),
+  iconUrl: PropTypes.string,
+};
+
+Select.defaultProps = {
+  onSelect: () => {},
+  options: [],
+  iconUrl: '',
+};

@@ -9,8 +9,9 @@
 
 
   @media (max-width: $break-point-mobile) {
-  --heigth: 330px;
+    --heigth: 330px;
   }
+
   &__img {
     height: calc(var(--heigth) * 0.7);
     width: 100%;
@@ -27,6 +28,7 @@
     color: #757575;
     margin-bottom: 4px; 
   }
+
   &__eta{
     font-size: 14px;
     padding: 2px 8px;

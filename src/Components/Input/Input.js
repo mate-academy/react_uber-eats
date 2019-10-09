@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import cx from 'classnames';
-import { InputProps, InputDefault } from '../PropTypes';
+import PropTypes from 'prop-types';
 import './Input.scss';
 
 export class Input extends PureComponent {
@@ -8,7 +8,7 @@ export class Input extends PureComponent {
     isFocused: false,
   }
 
-  handleFocused = () => {
+  handleFocus = () => {
     this.setState({
       isFocused: true,
     });
@@ -70,7 +70,7 @@ export class Input extends PureComponent {
             name={name}
             placeholder={placeholder}
             className={inputClass}
-            onFocus={this.handleFocused}
+            onFocus={this.handleFocus}
             onBlur={this.handleBlur}
           />
         </div>
@@ -79,5 +79,23 @@ export class Input extends PureComponent {
   }
 }
 
-Input.propTypes = InputProps;
-Input.defaultProps = InputDefault;
+Input.propTypes = {
+  iconUrl: PropTypes.string,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  isSmall: PropTypes.bool,
+  label: PropTypes.string,
+};
+
+Input.defaultProps = {
+  iconUrl: '',
+  type: 'text',
+  placeholder: '',
+  className: '',
+  isSmall: true,
+  label: '',
+};

@@ -3,42 +3,64 @@
 .item-card {
   display: flex;
   justify-content: space-between;
-  height: auto;
+  height: 157px;
 
   border: 1px solid $color-grey;
 
   &__left-section {
-    width: 55%;
-    padding: 16px;
+    min-width: 182px;
+    max-width: 542px;
+    padding: 16px 5px 16px 16px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    border-right: 1px solid $color-grey;
+    @media (max-width: $break-point-mobile) {
+      width: 148px;
+    }
   }
+
   &__title {
     font-size: 16px;
     line-height: 21px;
 
     margin-bottom: 5px;
   }
+
   &__description {
     color: $color-dark-grey;
     line-height: 21px;
+    height: 62px;
 
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+    overflow: auto;
+    position: relative;
+
+    @media (max-width: $break-point-mobile) {
+      width: 116px;
+    }
   }
+
   &__price {
     font-size: 16px;
     line-height: 21px;
   }
+
+  &__img-container {
+    min-width: 159px;
+    width: 159px;
+    overflow: hidden;
+    height: 155px;
+    border-left: 1px solid $color-grey;
+  }
+
   &__img {
-    max-width: 150px;
-    margin: auto;
+    height: 155px;
+    margin-left: -8px;
 
     @media (max-width: $break-point-mobile) {
-      min-width: 125px;
+      width: 125px;
     }
   }
 }

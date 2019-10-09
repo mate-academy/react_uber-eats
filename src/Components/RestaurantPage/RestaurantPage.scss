@@ -8,14 +8,21 @@
 
     position: relative;
   }
-  &__main-img {
+
+  &__img-wrapper {
     height: 380px;
     width: 100%;
+    overflow: hidden;
 
     @media (max-width: $break-point-mobile) {
       height: 256px;
     }
   }
+
+  &__main-img {
+    width: 100%;
+  }
+
   &__rest-details {
     width: 590px;
     padding: 24px  40px 24px 95px;
@@ -32,24 +39,29 @@
       bottom: -20%;
       transform: translateX(-50%);
     }
+
     @media (max-width: $break-point-mobile) {
       width: 280px;
       padding: 20px;
       bottom: -5%;
     }
+
     @media (min-width: $break-point-large) {
       width: 757px;
       padding-left: 264px;
     }
   }
+
   &__main-title {
     font-size: 36px;
     margin-bottom: 16px;
   }
+
   &__description {
     margin-bottom: 16px;
     color: #757575;
   }
+
   &__time {
     width: 86px;
     height: 24px;
@@ -57,6 +69,7 @@
     margin-bottom: 16px;
     text-align: center;
   }
+
   &__location {
     display: block;
 
@@ -66,27 +79,39 @@
       display: none;
     }
   }
+
+  &__navigation-wrapper {
+    position: sticky;
+    top: -60px;
+    height: 140px;
+    padding-top: 90px;
+    background-color: #fff;
+    z-index: 1;
+  }
+
   &__navigation {
     display: flex;
-    flex-wrap: wrap;
+    overflow: auto;
+    white-space: nowrap;
 
-    margin-top: 90px;
+    z-index: 1;
+    background-color: #fff;
   }
+
   &__navigation-link {
     color: #000;
-    display: block;
     text-align: center;
+    display: inline-block;
     height: 40px;
     position: relative;
-
     margin-right: 24px;
-    margin-bottom: 10px;
 
     transition: color 0.3s;
 
     &:hover{
-      color: $c-green;
+      color: $color-green;
     }
+
     &:hover::after {
       content: '';
       position: absolute;
@@ -99,12 +124,14 @@
       animation: hover-animation 0.3s;
     }
   }
+
   &__menu-item-title {
     font-size: 20px;
     line-height: 21px;
 
     margin: 40px 0 21px;
   }
+
   &__menu-container {
     --menu-width: 340px;
 

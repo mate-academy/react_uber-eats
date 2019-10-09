@@ -1,5 +1,5 @@
 import React from 'react';
-import { ItemCardPropTypes } from '../PropTypes';
+import PropTypes from 'prop-types';
 import './ItemCard.scss';
 
 export const ItemCard = (props) => {
@@ -21,13 +21,25 @@ export const ItemCard = (props) => {
           {`£ ${price}`}
         </span>
       </div>
-      <img
-        src={imgUrl}
-        alt={title}
-        className="item-card__img"
-      />
+      <div className="item-card__img-container">
+        <img
+          src={imgUrl}
+          alt={title}
+          className="item-card__img"
+        />
+      </div>
     </div>
   );
 };
 
-ItemCard.propTypes = ItemCardPropTypes;
+ItemCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  imgUrl: PropTypes.string,
+};
+
+ItemCard.defaultProps = {
+  imgUrl: '',
+  description: '',
+};

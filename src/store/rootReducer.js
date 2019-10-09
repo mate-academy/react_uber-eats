@@ -2,9 +2,9 @@ import { ACTION_TYPES } from './actions';
 
 const initialState = {
   restaurantsListData: null,
+  restaurantInfo: null,
   isLoading: false,
   error: null,
-  itemId: null,
 };
 
 export function rootReducer(state = initialState, action) {
@@ -15,6 +15,15 @@ export function rootReducer(state = initialState, action) {
       return {
         ...state,
         restaurantsListData: payload,
+      };
+    }
+
+    case ACTION_TYPES.SAVE_RESTAURANT_INFO: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        restaurantInfo: payload,
       };
     }
 
@@ -39,15 +48,6 @@ export function rootReducer(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-      };
-    }
-
-    case ACTION_TYPES.SET_ID: {
-      const { payload } = action;
-
-      return {
-        ...state,
-        itemId: payload,
       };
     }
 

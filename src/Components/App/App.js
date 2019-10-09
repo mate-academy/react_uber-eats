@@ -5,9 +5,8 @@ import { RestaurantsListPage } from '../RestaurantsListPage';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { RestaurantPage } from '../RestaurantPage';
-import { AppProps } from '../PropTypes';
 
-export const App = ({ itemId }) => (
+export const App = () => (
   <>
     <Header />
     <main className="page">
@@ -19,16 +18,10 @@ export const App = ({ itemId }) => (
         />
       </div>
       <Route
-        path={`/${itemId}`}
-        render={
-          ({ match }) => (
-            <RestaurantPage match={match} uuid={itemId} />
-          )
-        }
+        path="/:id"
+        component={RestaurantPage}
       />
     </main>
     <Footer />
   </>
 );
-
-App.propTypes = AppProps;

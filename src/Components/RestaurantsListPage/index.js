@@ -7,17 +7,15 @@ import {
   selectIsLoading,
 } from '../../store/selectors';
 
-const mapDispatchToProps = dispatch => ({
-  loadRestaurants: () => dispatch(loadRestaurants()),
-});
-
 const ImprovedRestaurantsListPage = connect(
   state => ({
     restaurantsListData: selectRestaurantList(state),
     error: selectRestaurantListError(state),
     isLoading: selectIsLoading(state),
   }),
-  mapDispatchToProps
+  {
+    loadRestaurants,
+  },
 )(RestaurantsListPage);
 
 export { ImprovedRestaurantsListPage as RestaurantsListPage };

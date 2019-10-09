@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrorProps, ErrorDefault } from '../PropTypes';
+import PropTypes from 'prop-types';
 
 export const Error = ({ message }) => (
   <div className="error">
@@ -12,5 +12,10 @@ export const Error = ({ message }) => (
   </div>
 );
 
-Error.propTypes = ErrorProps;
-Error.defaultProps = ErrorDefault;
+Error.propTypes = {
+  message: PropTypes.string,
+};
+
+Error.defaultProps = {
+  message: 'Sorry, something went wrong(',
+};

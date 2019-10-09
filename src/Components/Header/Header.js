@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import { Input } from '../Input';
 import './Header.scss';
 
-export class Header extends React.Component {
+export class Header extends PureComponent {
   state = {
     address: '',
     time: '',
@@ -51,11 +52,13 @@ export class Header extends React.Component {
       <header className="header">
         <div className="content">
           <div className="header__inner">
-            <img
-              src="./images/LogoHeader.svg"
-              alt="UberEats"
-              className="header__logo"
-            />
+            <Link to="/">
+              <img
+                src="./images/LogoHeader.svg"
+                alt="UberEats"
+                className="header__logo"
+              />
+            </Link>
             <div className="header__delivery-info">
               <Input
                 name="address"
