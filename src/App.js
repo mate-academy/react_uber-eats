@@ -4,18 +4,19 @@ import { store } from './store';
 
 import { RestaurantListPage } from './components/RestaurantListPage';
 import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
-import './App.css';
+import './App.scss';
 
 const App = () => (
   <Provider store={store}>
+    <Header />
     <div className="page">
-      <Header />
       <main className="content">
         <RestaurantListPage />
       </main>
-      <footer>Uber Eats Footer</footer>
     </div>
+    <Footer />
   </Provider>
 );
 
