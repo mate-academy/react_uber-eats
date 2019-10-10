@@ -11,11 +11,11 @@ import './App.scss';
 const App = () => (
   <Provider store={store}>
     <Header />
-    <div className="page">
-      <main className="content">
+    <main className="page">
+      <div className="content">
         <RestaurantListPage />
-      </main>
-    </div>
+      </div>
+    </main>
     <Footer />
   </Provider>
 );
