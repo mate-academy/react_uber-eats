@@ -24,6 +24,7 @@ Base API url: https://mate-uber-eats-api.herokuapp.com/api/v1/
     - use `uuid` in the URL
     - fetch data from https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/:uuid
 6. Implement modal window for selecting a meal
+    - fetch data for modal from https://mate-uber-eats-api.herokuapp.com/api/v1/menu-items/:id
     - open it when clicking on a meal
     - close it on `X` or after adding
     - (*) close it on outside click
