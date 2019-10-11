@@ -3,10 +3,12 @@ import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import './App.scss';
-// import * as Api from './Api';
+import * as Api from './Api';
 
 class App extends React.Component {
   state = {
+    // cityKey: 'ChIJBUVa4U7P1EAR_kYBF9IxSXY',
+    restaurantsList: {},
     locationSearchOpen: false,
     searchOpen: false,
     shoudStick: false,
@@ -16,6 +18,7 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.checkScroll);
+    this.handleCityChange('ChIJBUVa4U7P1EAR_kYBF9IxSXY', 'Kyiv');
   }
 
   componentWillUnmount() {
@@ -36,9 +39,12 @@ class App extends React.Component {
     this.setState({ locationSearchOpen: true });
   };
 
-  handleCityChange = async(input) => {
+  handleCityChange = async(val, name) => {
+    const cityData = await Api.getRestaurants(val);
+
     this.setState(() => ({
-      query: input,
+      restaurantsList: cityData,
+      query: name,
     }));
   };
 
@@ -56,6 +62,7 @@ class App extends React.Component {
       searchOpen,
       locationSearchOpen,
       autoCompleteList,
+      restaurantsList,
     } = this.state;
 
     return (
@@ -73,10 +80,15 @@ class App extends React.Component {
           query={query}
           handleCityChange={this.handleCityChange}
         />
-        <Main
-          location={query}
-          autoCompleteList={autoCompleteList}
-        />
+        {
+          restaurantsList.storesMap ? (
+            <Main
+              restaurantsList={restaurantsList.storesMap}
+              location={query}
+              autoCompleteList={autoCompleteList}
+            />
+          ) : ('')
+        }
         <Footer />
         <a
           style={{ display: (shoudStick ? 'flex' : 'none') }}

@@ -5,6 +5,10 @@
   outline: 1px solid black;
 }
 
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -47,7 +51,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 12px;
   text-decoration: none;
 }
 
@@ -90,12 +93,52 @@ header {
   cursor: pointer;
 }
 
-/***********************************************************
-                        GROWING FORM
-***********************************************************/
+.select-search-box {
+  margin-right: 10px;
+  z-index: 1;
+  display: block;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid gray;
+}
+.select-search-box__select {
+  display: none;
+}
+.select-search-box__search {
+  border: none;
+  outline: none;
+  cursor: initial;
+  background: transparent;
+  font-size: 16px;
+  width: 200px;
+  padding: 10px;
+}
+.select-search-box__select--display {
+  display: flex;
+  background: white;
+  z-index: 5;
+}
+.select-search-box__options {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.select-search-box__option {
+  padding: 16px;
+  list-style: none;
+  margin: 0;
+}
+.select-search-box__option:hover {
+  background: #f6f6f6;
+  cursor: pointer;
+}
+
 .form {
   display: block;
-  margin-right: 10px;
+  margin: 1px 4px 0 0;
 }
 
 .inner {
@@ -136,15 +179,10 @@ button {
   line-height: 0;
   background: transparent;
   font-size: 16px;
-  color: #757575;
   cursor: pointer;
   border: none;
   outline: none;
   display: none;
-}
-
-button svg path {
-  fill: #757575;
 }
 
 .clear {
@@ -158,28 +196,6 @@ button svg path {
   fill: #424242;
   color: #424242;
   transition: all 0.3s ease;
-}
-
-.active_search {
-  width: 200px;
-  cursor: initial;
-}
-.active_search::-webkit-input-placeholder {
-  color: gray;
-}
-
-.bulkhead {
-  width: 1px;
-  height: 100%;
-  background: #757575;
-  margin: 0 5px;
-  display: none;
-}
-
-.form:focus-within .clear,
-.form:focus-within .close,
-.form:focus-within .bulkhead {
-  display: block;
 }
 
 /***********************************************************
@@ -317,20 +333,36 @@ main {
   line-height: 24px;
   font-weight: bold;
 }
-.product_card .product_card-class {
+.product_card-class {
   font-size: 14px;
   line-height: 21px;
   color: #626262;
 }
-.product_card .product_card--span {
+.product_card--span {
   display: flex;
-  justify-content: space-between;
-  max-width: 170px;
 }
-.product_card .product_card--span p {
+.product_card--span p {
   background: #f6f6f6;
   padding: 5px;
-  font-size: 13px;
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product_card-name, .product_card-class, .product_card--span {
+  margin: 0;
+}
+.product_card-rating {
+  margin-left: 20px !important;
+  width: auto;
+}
+.product_card .closedMessage {
+  font-size: 14px;
+  background: #1d1d1d;
+  color: red;
+  float: left;
+  padding: 8px;
 }
 
 /***********************************************************
@@ -656,7 +688,7 @@ main {
   .product_card--figure {
     height: 240px;
     width: 100%;
-    margin: 0;
+    margin: 0 0 7px;
   }
 
   .btn_app--container {
