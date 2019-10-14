@@ -4,10 +4,18 @@
   padding: 64px 0;
   background-color: #262626;
 
+  @media (max-width: $break-point-tablet) {
+    padding: 40px 0;
+  }
+
   &__main,
   &__copyright {
     flex-basis: 45vw;
     padding-right: 40px;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-basis: initial;
+    }
   }
 
   &__main {
@@ -20,6 +28,10 @@
   &__bottom-part {
     @extend %flex-row-center;
     align-items: flex-start;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+    }
   }
 
   &__top-part {
@@ -35,10 +47,19 @@
 
   &__logo {
     margin-right: 40px;
+
+    @media (nax-width: $break-point-tablet) {
+      margin-bottom: 40px;
+    }
   } 
 
   &__mobile-app {
     display: inline-block;
+
+    @media (max-width: $break-point-tablet) {
+      display: block;
+      margin-bottom: 20px;
+    }
 
     &:first-of-type {
       margin-right: 20px;
@@ -47,17 +68,32 @@
 
   &__top-links:last-of-type {
     margin-left: 10vw;
+
+    @media (max-width: $break-point-phone-lg) {
+      margin-left: 0;
+    }
   }
 
   &__copyright {
     color: #fff;
     font-size: 14px;
+
+    @media (max-width: $break-point-phone-lg) {
+      margin-left: 0;
+    }
   }
 
   &__bottom-links {
     @extend %flex-row-center;
 
     margin-bottom: 40px;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+      margin-top: 20px;
+      align-items: flex-start;
+      order: 1;
+    }
 
     .links__link:not(:last-of-type) {
       margin-right: 40px;
@@ -77,8 +113,16 @@
       color:#5fb709;
     }
   }
+
+  &__misc {
+    @media (max-width: $break-point-phone-lg) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
 }
 
 .social__link {
-  margin-right: 20px;
+    margin-right: 20px;
 }

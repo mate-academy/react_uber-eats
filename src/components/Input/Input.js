@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable import/prefer-default-export */
 import React, { PureComponent, createRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -25,40 +27,51 @@ export class Input extends PureComponent {
       placeholder,
       name,
       className,
+      isSmall,
+      label,
     } = this.props;
 
     const { isFocused } = this.state;
-    const rootClass = cx('control', {
-      'control--focused': isFocused,
+
+    const inputWrapper = cx('control__input-wrapper', {
+      'control__input-wrapper--focused': isFocused,
       [className]: !!className,
     });
 
-    return (
-      <div
-        className={rootClass}
-        onClick={this.focus}
-        role="presentation"
-      >
-        {!!iconUrl && (
-          <img
-            src={iconUrl}
-            alt={placeholder}
-            className="control__icon"
-          />
-        )}
+    const inputClass = cx('control__input', {
+      'control__input--small': isSmall,
+      'control-input--time': type === 'time',
+    });
 
-        <input
-          ref={this.inputRef}
-          type={type}
-          value={value}
-          onChange={onChange}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
-          name={name}
-          className="control__input"
-          placeholder={placeholder}
-        />
-      </div >
+    return (
+      <label className="control">
+        {label && (
+          <p className="control__Label">
+            {label}
+          </p>
+        )}
+        <div className={inputWrapper}>
+          {!!iconUrl && (
+            <img
+              src={iconUrl}
+              alt={placeholder}
+              className="control__icon"
+            />
+          )}
+
+          <input
+            ref={this.inputRef}
+            type={type}
+            value={value}
+            onChange={onChange}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            name={name}
+            className={inputClass}
+            placeholder={placeholder}
+          />
+        </div>
+      </label>
     );
   }
 }
@@ -71,6 +84,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   iconUrl: PropTypes.string,
   className: PropTypes.string,
+  label: PropTypes.string,
+  isSmall: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -78,4 +93,6 @@ Input.defaultProps = {
   type: 'text',
   placeholder: '',
   className: '',
+  label: '',
+  isSmall: true,
 };
