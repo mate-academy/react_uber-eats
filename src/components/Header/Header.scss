@@ -19,7 +19,7 @@
     height: 24px;
     width: auto;
 
-    @media (max-width: $breakpoint-phone) {
+    @media (max-width: $break-point-phone) {
       height: 14px;
     }
   }
