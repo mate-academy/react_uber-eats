@@ -4,20 +4,32 @@
   display: flex;
   justify-content: space-between;
   height: 157px;
+  padding: 0;
+
+  text-align: initial;
 
   border: 1px solid $color-grey;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__title {
+    text-decoration: underline;
+  }
 
   &__left-section {
     min-width: 182px;
     max-width: 542px;
-    padding: 16px 5px 16px 16px;
+    height: 157px;
+    padding: 16px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media (max-width: $break-point-mobile) {
-      width: 148px;
+      min-width: 148px;
     }
   }
 
@@ -30,8 +42,8 @@
 
   &__description {
     color: $color-dark-grey;
+    font-size: 14px;
     line-height: 21px;
-    height: 62px;
 
     margin-bottom: 14px;
     overflow: auto;
@@ -53,11 +65,15 @@
     overflow: hidden;
     height: 155px;
     border-left: 1px solid $color-grey;
+    @media (max-width: $break-point-mobile) {
+      width: 125px;
+      min-width: 125px;
+    }
   }
 
   &__img {
     height: 155px;
-    margin-left: -8px;
+    width: 159px;
 
     @media (max-width: $break-point-mobile) {
       width: 125px;

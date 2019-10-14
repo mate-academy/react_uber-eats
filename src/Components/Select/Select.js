@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 export const Select = (props) => {
   const {
     name,
-    value,
     onSelect,
     options,
     iconUrl,
@@ -16,13 +15,11 @@ export const Select = (props) => {
       <select
         name={name}
         onChange={onSelect}
-        value={value}
         className="select__input"
       >
         {options.map(({ optionValue, label }) => (
           <option
             value={optionValue}
-            selected={value === optionValue}
             key={label}
           >
             {label}
@@ -45,7 +42,6 @@ export const Select = (props) => {
 
 Select.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
   onSelect: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,

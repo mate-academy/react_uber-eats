@@ -116,13 +116,25 @@ export const Footer = props => (
             </a>
           </div>
           <div className="footer__social social">
-            <a href="##" alt="" className="social__link">
+            <a
+              href="https://www.facebook.com/UberEats/"
+              alt="Facebook link"
+              className="social__link"
+            >
               <img src="./images/facebookIcon.svg" alt="facebook" />
             </a>
-            <a href="##" alt="" className="social__link">
+            <a
+              href="https://twitter.com/ubereats"
+              alt="Twitter link"
+              className="social__link"
+            >
               <img src="./images/twitterIcon.svg" alt="facebook" />
             </a>
-            <a href="##" alt="" className="social__link">
+            <a
+              href="https://www.instagram.com/ubereats"
+              alt="Instagram link"
+              className="social__link"
+            >
               <img src="./images/instagramIcon.svg" alt="facebook" />
             </a>
           </div>

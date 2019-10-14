@@ -107,3 +107,58 @@ export const selectRestaurantCuisineList = createSelector(
     return restaurantInfo.cuisineList;
   },
 );
+
+export const selectMenuItemMainImgUrl = createSelector(
+  rootSelector,
+  ({ menuItemInfo }) => {
+    if (!menuItemInfo) {
+      return [];
+    }
+
+    return menuItemInfo.imageUrl || '';
+  }
+);
+
+export const selectMenuItemTitle = createSelector(
+  rootSelector,
+  ({ menuItemInfo }) => {
+    if (!menuItemInfo) {
+      return [];
+    }
+
+    return menuItemInfo.title;
+  }
+);
+
+export const selectMenuItemDescription = createSelector(
+  rootSelector,
+  ({ menuItemInfo }) => {
+    if (!menuItemInfo) {
+      return [];
+    }
+
+    return menuItemInfo.itemDescription || '';
+  }
+);
+
+export const selectMenuItemPrice = createSelector(
+  rootSelector,
+  ({ menuItemInfo }) => {
+    if (!menuItemInfo) {
+      return [];
+    }
+
+    return menuItemInfo.price;
+  }
+);
+
+export const selectCustomizationsList = createSelector(
+  rootSelector,
+  ({ menuItemInfo }) => {
+    if (!menuItemInfo) {
+      return [];
+    }
+
+    return menuItemInfo.customizationsList;
+  }
+);

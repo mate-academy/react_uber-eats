@@ -7,6 +7,15 @@
 
   cursor: pointer;
 
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: translateY(3px);
+  }
+
+  &:hover &__title{
+    text-decoration: underline;
+  }
 
   @media (max-width: $break-point-mobile) {
     --heigth: 330px;

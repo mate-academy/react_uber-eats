@@ -141,6 +141,7 @@
 
     @media (max-width: $break-point-mobile) {
       --menu-width: 280px;
+      gap: 20px;
     }
   }
 }

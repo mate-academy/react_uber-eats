@@ -7,7 +7,7 @@
     flex-flow: row nowrap;
     align-items: center;
   
-    padding: 11px 16px;
+    padding: 11px;
   
     border: 1px solid $color-grey;
   
@@ -15,6 +15,7 @@
 
     &--focused {
       border-color: $color-green;
+      animation: focusAnimation 1s;
     }
   }
 
@@ -35,7 +36,11 @@
     }
 
     &--time {
-      max-width: 75px;
+      max-width: 84px;
+
+      &::-webkit-datetime-edit-fields-wrapper {
+        display: flex;
+      }
     }
   }
   
@@ -48,5 +53,27 @@
 
   & + & {
     margin-left: 20px;
+  }
+}
+
+@keyframes focusAnimation {
+  0% {
+    border-color: $color-grey;
+  }
+
+  25% {
+    border-top-color: $color-green;
+  }
+
+  50% {
+    border-right-color: $color-green;
+  }
+
+  75% {
+    border-bottom-color: $color-green;
+  }
+
+  100% {
+    border-left-color: $color-green;
   }
 }

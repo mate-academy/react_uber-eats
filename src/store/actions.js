@@ -4,6 +4,9 @@ export const ACTION_TYPES = {
   SET_LOAD_RESTAURANTS_ERROR: 'SET_LOAD_RESTAURANTS_ERROR',
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
+  MODAL_WINDOW_OPENING: 'MODAL_WINDOW_OPENING',
+  SAVE_MENU_ITEM_DETAILS: 'SAVE_MENU_ITEM_DETAILS',
+  CLOSE_MODAL_WINDOW: 'CLOSE_MODAL_WINDOW',
 };
 
 const saveRestaurants = data => ({
@@ -47,4 +50,28 @@ const startLoading = () => ({
 
 const stopLoading = () => ({
   type: ACTION_TYPES.STOP_LOADING,
+});
+
+export const modalWindowOpening = id => ({
+  type: ACTION_TYPES.MODAL_WINDOW_OPENING,
+  payload: id,
+});
+
+const saveMenuItemDetails = data => ({
+  type: ACTION_TYPES.SAVE_MENU_ITEM_DETAILS,
+  payload: data,
+});
+
+export const loadMenuItemInfo = id => (dispatch) => {
+  dispatch(startLoading());
+
+  fetch(` https://mate-uber-eats-api.herokuapp.com/api/v1/menu-items/${id}`)
+    .then(result => result.json())
+    .then(({ data }) => dispatch(saveMenuItemDetails(data)))
+    .catch(error => dispatch(setRestaurantsError(error)))
+    .finally(() => dispatch(stopLoading()));
+};
+
+export const closeModalWindow = () => ({
+  type: ACTION_TYPES.CLOSE_MODAL_WINDOW,
 });

@@ -1,5 +1,9 @@
 @import "./vars.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 ::before,
 ::after {

@@ -10,6 +10,8 @@ export class RestaurantPage extends React.Component {
     const { loadRestaurantInfo, match } = this.props;
 
     loadRestaurantInfo(match.params.id);
+
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -64,7 +66,8 @@ export class RestaurantPage extends React.Component {
                     to={`/${match.params.id}#${section.title}`}
                     className="restaurant-page__navigation-link"
                   >
-                    {section.title}
+                    {section
+                      .title.toLowerCase().replace(/^\w/, c => c.toUpperCase())}
                   </Link>
                 </li>
               ))}
@@ -75,12 +78,13 @@ export class RestaurantPage extends React.Component {
               <div
                 className="restaurant-page__menu-item"
                 key={section.title}
+                id={section.title}
               >
                 <h2
                   className="restaurant-page__menu-item-title"
-                  id={section.title}
                 >
-                  {section.title}
+                  {section
+                    .title.toLowerCase().replace(/^\w/, c => c.toUpperCase())}
                 </h2>
                 <div className="restaurant-page__menu-container">
                   {section.itemUuids.map((item) => {
@@ -99,6 +103,7 @@ export class RestaurantPage extends React.Component {
                         price={price}
                         imgUrl={imageUrl}
                         key={uuid}
+                        uuid={uuid}
                       />
                     );
                   })}

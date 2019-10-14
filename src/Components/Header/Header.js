@@ -105,7 +105,7 @@ export class Header extends PureComponent {
                 />
               </button>
             </div>
-            <a className="header__link" href="/sign-in">
+            <a className="header__link" href="##">
               Sign In
             </a>
           </div>
