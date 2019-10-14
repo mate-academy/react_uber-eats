@@ -1,0 +1,85 @@
+@import "../../styles/extends.scss";
+
+.footer {
+  padding: 64px 0;
+  background-color: #262626;
+
+  &__top-part {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  &__main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  &__logo-container {
+    @extend %flex-row-center;
+
+    margin-bottom: 40px;
+  }
+
+  &__mobile-app {
+    display: inline-block;
+
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__top-part,
+  &__bottom-part {
+    @extend %flex-row-center;
+    align-items: flex-start;
+  }
+
+  &__main,
+  &__copyright {
+    flex-basis: 45vw;
+    padding-right: 40px;
+  }
+
+  &__top-links:last-of-type {
+    margin-left: 10vw;
+  }
+
+  &__copyright {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  &__bottom-links {
+    @extend %flex-row-center;
+
+    margin-bottom: 40px;
+
+    .links__link:not(:last-of-type) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.links {
+  &__link {
+    display: block;
+    margin-bottom: 16px;
+
+    color: #fff;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social__link {
+  margin-right: 20px;
+}
