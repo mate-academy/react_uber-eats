@@ -1,4 +1,4 @@
-@import '../../styles/vars.scss';
+@import "../../styles/vars.scss";
 
 .restaurant-page {
   margin-top: -40px;
@@ -65,7 +65,7 @@
   &__time {
     width: 86px;
     height: 24px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     margin-bottom: 16px;
     text-align: center;
   }
@@ -130,6 +130,8 @@
     line-height: 21px;
 
     margin: 40px 0 21px;
+
+    text-transform: capitalize;
   }
 
   &__menu-container {

@@ -7,6 +7,7 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { RestaurantPage } from '../RestaurantPage';
 import { ModalWindow } from '../ModalWindow';
+import { MenuItemDetails } from '../MenuItemDetails';
 
 export const App = ({ isOpenedModalWindow }) => (
   <>
@@ -27,12 +28,18 @@ export const App = ({ isOpenedModalWindow }) => (
     <Footer />
     {
       isOpenedModalWindow && (
-        <ModalWindow />
+        <ModalWindow>
+          <MenuItemDetails />
+        </ModalWindow>
       )
     }
   </>
 );
 
 App.propTypes = {
-  isOpenedModalWindow: PropTypes.bool.isRequired,
+  isOpenedModalWindow: PropTypes.string,
+};
+
+App.defaultProps = {
+  isOpenedModalWindow: null,
 };

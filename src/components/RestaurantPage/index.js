@@ -3,20 +3,21 @@ import { RestaurantPage } from './RestaurantPage';
 import { loadRestaurantInfo } from '../../store/actions';
 import {
   selectPageMainImgUrl,
-  selectRestPageSectionsAsObj,
-  selectObjOfSectionItems,
+  selectRestaurantSections,
+  selectRestaurantSectionsEntities,
   selectRestaurantTitle,
   selectRestaurantAddress,
   selectRestaurantEtaRange,
   selectRestaurantCuisineList,
+  isDataLoadingSelector,
 } from '../../store/selectors';
 
 const ImprovedRestaurantPage = connect(
   state => ({
-    isLoading: state.isLoading,
+    isLoading: isDataLoadingSelector(state),
     pageMainImgUrl: selectPageMainImgUrl(state),
-    pageFoodSections: selectRestPageSectionsAsObj(state),
-    objOfSectionItems: selectObjOfSectionItems(state),
+    pageFoodSections: selectRestaurantSections(state),
+    sectionItems: selectRestaurantSectionsEntities(state),
     restaurantTitle: selectRestaurantTitle(state),
     restaurantAddress: selectRestaurantAddress(state),
     restaurantEtaRange: selectRestaurantEtaRange(state),

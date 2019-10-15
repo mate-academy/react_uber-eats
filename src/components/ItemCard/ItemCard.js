@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { truncate } from '../../utils';
 import './ItemCard.scss';
 
 export const ItemCard = (props) => {
@@ -8,18 +9,14 @@ export const ItemCard = (props) => {
     description,
     price,
     imgUrl,
-    modalWindowOpening,
+    openMenuItemModalWindow,
     uuid,
   } = props;
-
-  const truncate = input => (
-    input.length > 5 ? `${input.substring(0, 35)}...` : input
-  );
 
   return (
     <button
       className="item-card"
-      onClick={() => modalWindowOpening(uuid)}
+      onClick={() => openMenuItemModalWindow(uuid)}
       type="button"
     >
       <div className="item-card__left-section">
@@ -51,7 +48,7 @@ ItemCard.propTypes = {
   description: PropTypes.string,
   price: PropTypes.number.isRequired,
   imgUrl: PropTypes.string,
-  modalWindowOpening: PropTypes.func.isRequired,
+  openMenuItemModalWindow: PropTypes.func.isRequired,
   uuid: PropTypes.string.isRequired,
 };
 

@@ -1,9 +1,3 @@
-@import "./vars.scss";
-
-//html {
-//  scroll-behavior: smooth;
-//}
-
 *,
 ::before,
 ::after {
@@ -41,11 +35,16 @@ input {
   max-width: 1160px;
   padding: 0 34px;
   margin: 0 auto;
-
-  @media (max-width: $break-point-mobile) {
+}
+@media (max-width: 550px) {
+  .content {
     padding: 0 20px;
   }
-  @media (min-width: $break-point-large) {
+}
+@media (min-width: 1281px) {
+  .content {
     max-width: 1520px;
   }
 }
+
+/*# sourceMappingURL=index.css.map */

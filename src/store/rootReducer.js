@@ -5,11 +5,9 @@ const initialState = {
   restaurantInfo: null,
   isLoading: false,
   error: null,
-  modalWindowInfo: {
-    isOpened: false,
-    openedWindowId: null,
-  },
+  modalWindowInfo: null,
   menuItemInfo: null,
+  menuItemError: null,
 };
 
 export function rootReducer(state = initialState, action) {
@@ -61,10 +59,7 @@ export function rootReducer(state = initialState, action) {
 
       return {
         ...state,
-        modalWindowInfo: {
-          isOpened: true,
-          openedWindowId: payload,
-        },
+        modalWindowInfo: payload,
       };
     }
 
@@ -80,10 +75,25 @@ export function rootReducer(state = initialState, action) {
     case ACTION_TYPES.CLOSE_MODAL_WINDOW: {
       return {
         ...state,
-        modalWindowInfo: {
-          isOpened: false,
-          openedWindowId: null,
-        },
+        modalWindowInfo: null,
+        menuItemInfo: null,
+      };
+    }
+
+    case ACTION_TYPES.CLEAN_MODAL_WINDOW_STATE: {
+      return {
+        ...state,
+        menuItemInfo: null,
+        menuItemError: null,
+      };
+    }
+
+    case ACTION_TYPES.SET_MENU_ITEM_ERROR: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        menuItemError: payload,
       };
     }
 

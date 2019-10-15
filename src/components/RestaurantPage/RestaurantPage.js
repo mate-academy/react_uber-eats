@@ -1,7 +1,7 @@
 import React from 'react';
 import './RestaurantPage.scss';
 import { HashLink as Link } from 'react-router-hash-link';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 import { ItemCard } from '../ItemCard';
 import { Loader } from '../Loader';
 
@@ -20,7 +20,7 @@ export class RestaurantPage extends React.Component {
       isLoading,
       pageMainImgUrl,
       pageFoodSections,
-      objOfSectionItems,
+      sectionItems,
       restaurantTitle,
       restaurantAddress,
       restaurantEtaRange,
@@ -84,7 +84,7 @@ export class RestaurantPage extends React.Component {
                   className="restaurant-page__menu-item-title"
                 >
                   {section
-                    .title.toLowerCase().replace(/^\w/, c => c.toUpperCase())}
+                    .title.toLowerCase()}
                 </h2>
                 <div className="restaurant-page__menu-container">
                   {section.itemUuids.map((item) => {
@@ -94,7 +94,7 @@ export class RestaurantPage extends React.Component {
                       price,
                       imageUrl,
                       uuid,
-                    } = objOfSectionItems[item];
+                    } = sectionItems[item];
 
                     return (
                       <ItemCard
@@ -131,7 +131,7 @@ RestaurantPage.propTypes = {
     title: PropTypes.string,
     uuid: PropTypes.string,
   })).isRequired,
-  objOfSectionItems: PropTypes.shape({}).isRequired,
+  sectionItems: PropTypes.shape({}).isRequired,
   restaurantTitle: PropTypes.string.isRequired,
   restaurantAddress: PropTypes.string.isRequired,
   restaurantEtaRange: PropTypes.string.isRequired,

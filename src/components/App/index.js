@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import { App } from './App';
+import { modalWindowOpenedIDSelector } from '../../store/selectors';
 
 const ImprovedApp = connect(
   state => ({
-    isOpenedModalWindow: state.modalWindowInfo.isOpened,
+    isOpenedModalWindow: modalWindowOpenedIDSelector(state),
   })
 )(App);
 

@@ -46,6 +46,7 @@ export class Input extends PureComponent {
     });
 
     return (
+      // eslint-disable-next-line jsx-a11y/label-has-associated-control
       <label
         className="control"
       >

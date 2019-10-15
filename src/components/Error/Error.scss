@@ -18,10 +18,10 @@
   }
   &__link {
     font-size: 24px;
-    color: $c-green;
+    color: $color-green;
 
     &:hover {
-      text-decoration: undeline;
+      text-decoration: underline;
     }
   }
 }

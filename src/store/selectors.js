@@ -2,6 +2,22 @@ import { createSelector } from 'reselect';
 
 const rootSelector = state => state;
 
+const baseMenuItemSelector = ({ menuItemInfo }) => {
+  if (!menuItemInfo) {
+    return [];
+  }
+
+  return menuItemInfo;
+};
+
+const baseRestaurantInfoSelector = ({ restaurantInfo }) => {
+  if (!restaurantInfo) {
+    return [];
+  }
+
+  return restaurantInfo;
+};
+
 export const selectRestaurantList = createSelector(
   rootSelector,
   ({ restaurantsListData }) => {
@@ -15,6 +31,21 @@ export const selectRestaurantList = createSelector(
   },
 );
 
+export const isDataLoadingSelector = createSelector(
+  rootSelector,
+  ({ isLoading }) => isLoading
+);
+//
+// export const isModalWindowOpenedSelector = createSelector(
+//   rootSelector,
+//   ({ modalWindowInfo }) => modalWindowInfo.isOpened
+// );
+
+export const modalWindowOpenedIDSelector = createSelector(
+  rootSelector,
+  ({ modalWindowInfo }) => modalWindowInfo
+);
+
 export const selectRestaurantListError = createSelector(
   rootSelector,
   ({ error }) => error,
@@ -26,139 +57,89 @@ export const selectIsLoading = createSelector(
 );
 
 export const selectPageMainImgUrl = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
+  baseRestaurantInfoSelector,
+  (restaurantInfo) => {
     const { heroImageUrls } = restaurantInfo;
 
-    return heroImageUrls[heroImageUrls.length - 1].url;
+    return heroImageUrls
+      ? heroImageUrls[heroImageUrls.length - 1].url
+      : '';
   },
 );
 
-export const selectRestPageSectionsAsObj = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
+export const selectRestaurantSections = createSelector(
+  baseRestaurantInfoSelector,
+  (restaurantInfo) => {
     const { sections, sectionsMap } = restaurantInfo;
 
-    return sections.map(section => sectionsMap[section]);
+    return sections
+      ? sections.map(section => sectionsMap[section])
+      : [];
   },
 );
 
-export const selectObjOfSectionItems = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
-    return restaurantInfo.entitiesMap;
-  },
+export const selectRestaurantSectionsEntities = createSelector(
+  baseRestaurantInfoSelector,
+  restaurantInfo => restaurantInfo.entitiesMap || {},
 );
 
 export const selectRestaurantTitle = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
-    return restaurantInfo.title;
-  },
+  baseRestaurantInfoSelector,
+  restaurantInfo => restaurantInfo.title || '',
 );
 
 export const selectRestaurantAddress = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
-    return restaurantInfo.location.address;
-  },
+  baseRestaurantInfoSelector,
+  restaurantInfo => (restaurantInfo.location
+    ? restaurantInfo.location.address
+    : ''),
 );
 
 export const selectRestaurantEtaRange = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
-    return restaurantInfo.etaRange
-      ? restaurantInfo.etaRange.text
-      : '35 - 45 min';
-  },
+  baseRestaurantInfoSelector,
+  restaurantInfo => (restaurantInfo.etaRange
+    ? restaurantInfo.etaRange.text
+    : '35 - 45 min'
+  ),
 );
 
 export const selectRestaurantCuisineList = createSelector(
-  rootSelector,
-  ({ restaurantInfo }) => {
-    if (!restaurantInfo) {
-      return [];
-    }
-
-    return restaurantInfo.cuisineList;
-  },
+  baseRestaurantInfoSelector,
+  restaurantInfo => restaurantInfo.cuisineList || [],
 );
 
 export const selectMenuItemMainImgUrl = createSelector(
-  rootSelector,
-  ({ menuItemInfo }) => {
-    if (!menuItemInfo) {
-      return [];
-    }
-
-    return menuItemInfo.imageUrl || '';
-  }
+  baseMenuItemSelector,
+  menuItemInfo => menuItemInfo.imageUrl || ''
 );
 
 export const selectMenuItemTitle = createSelector(
-  rootSelector,
-  ({ menuItemInfo }) => {
-    if (!menuItemInfo) {
-      return [];
-    }
-
-    return menuItemInfo.title;
-  }
+  baseMenuItemSelector,
+  menuItemInfo => menuItemInfo.title
 );
 
 export const selectMenuItemDescription = createSelector(
-  rootSelector,
-  ({ menuItemInfo }) => {
-    if (!menuItemInfo) {
-      return [];
-    }
-
-    return menuItemInfo.itemDescription || '';
-  }
+  baseMenuItemSelector,
+  menuItemInfo => menuItemInfo.itemDescription || ''
 );
 
 export const selectMenuItemPrice = createSelector(
-  rootSelector,
-  ({ menuItemInfo }) => {
-    if (!menuItemInfo) {
-      return [];
-    }
-
-    return menuItemInfo.price;
-  }
+  baseMenuItemSelector,
+  menuItemInfo => menuItemInfo.price
 );
 
 export const selectCustomizationsList = createSelector(
+  baseMenuItemSelector,
+  menuItemInfo => menuItemInfo.customizationsList
+);
+
+export const selectMenuItemError = createSelector(
   rootSelector,
-  ({ menuItemInfo }) => {
-    if (!menuItemInfo) {
-      return [];
+  ({ menuItemError }) => {
+    if (menuItemError === '{}') {
+      return 'Sorry, something went wrong(';
     }
 
-    return menuItemInfo.customizationsList;
+    return menuItemError;
   }
 );
