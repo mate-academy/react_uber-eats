@@ -45,6 +45,27 @@ class Header extends React.Component {
   //   }
   // };
 
+  renderListFunction = (option) => {
+    const imgStyle = {
+      borderRadius: '50%',
+      verticalAlign: 'middle',
+      marginRight: 10,
+    };
+
+    return (
+      <span>
+        <img
+          alt={option.name}
+          style={imgStyle}
+          width="14"
+          height="14"
+          src="/img/location.svg"
+        />
+        <span>{option.name}</span>
+      </span>
+    );
+  };
+
   locChose = (val) => {
     this.setState({ query: val });
     this.props.handleCityChange(val);
@@ -91,57 +112,66 @@ class Header extends React.Component {
             />
           </a>
           <div className="header_section--nav">
-            <div className="destination_container big_show">
-              {
-                !locationSearchOpen ? (
-                  <button
-                    type="button"
-                    className="inner"
-                    onClick={() => this.openSearch('location')}
-                  >
-                    {
-                      <>
-                        <svg
-                          style={{ width: 21, height: 21 }}
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            fill="#000000"
-                            d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,
+            <div className="medium_show">
+              <button
+                type="button"
+                className={locationSearchOpen ? 'inner inner--hidden' : 'inner'}
+                onClick={() => this.openSearch('location')}
+              >
+                {
+                  <>
+                    <svg
+                      style={{ width: 21, height: 21 }}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#000000"
+                        d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,
                     2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,
                     11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22
                      19,14.25 19,9A7,7 0 0,0 12,2Z"
-                          />
-                        </svg>
-                        {this.props.query}
-                      </>
-                    }
-                  </button>
-                ) : (
-                  <SelectSearch
-                    autofocus="true"
-                    options={this.state.options}
-                    onBlur={this.blurDiscard}
-                    value={this.state.query}
-                    onChange={(event) => {
-                      this.search(event);
-                    }}
-                    onKeyDown={this.discardChange}
-                    name="city"
-                    placeholder="Choose your city"
-                  />
-                )
-              }
-              <button
-                type="button"
-                className="delivery_btn"
+                      />
+                    </svg>
+                    {this.props.query}
+                  </>
+                }
+              </button>
+              <div
+                className={
+                  locationSearchOpen
+                    ? 'search_input--hidden search_input--hidden-active'
+                    : 'search_input--hidden'
+                }
               >
+                <SelectSearch
+                  autofocus
+                  options={this.state.options}
+                  renderOption={this.renderListFunction}
+                  onBlur={this.blurDiscard}
+                  value={this.state.query}
+                  onChange={(event) => {
+                    this.search(event);
+                  }}
+                  onKeyDown={this.discardChange}
+                  name="city"
+                  placeholder="Choose your city"
+                />
+              </div>
+              <span className="delivery_btn--header">
                 <img
                   src={`${process.env.PUBLIC_URL}/img/time.png`}
                   alt=""
                 />
-                Deliver Now
-              </button>
+                <select
+                  name="dest_style"
+                  id="time_select-2"
+                  className="inner"
+                >
+                  <option value="now" selected>ASAP</option>
+                  <option value="plan">Schedule</option>
+                </select>
+              </span>
+
             </div>
 
             <div className="header_btn-container">

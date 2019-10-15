@@ -1,4 +1,5 @@
 import React from 'react';
+import animateScrollTo from 'animated-scroll-to';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -55,6 +56,10 @@ class App extends React.Component {
     });
   };
 
+  scrollTop = () => {
+    animateScrollTo(0);
+  };
+
   render() {
     const {
       shoudStick,
@@ -90,16 +95,17 @@ class App extends React.Component {
           ) : ('')
         }
         <Footer />
-        <a
+        <button
+          type="button"
           style={{ display: (shoudStick ? 'flex' : 'none') }}
           className="back_btn"
-          href="#App"
+          onClick={this.scrollTop}
         >
           <img
             src={`${process.env.PUBLIC_URL}/img/arrow-up.svg`}
             alt=""
           />
-        </a>
+        </button>
       </div>
     );
   }

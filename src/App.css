@@ -100,9 +100,12 @@ header {
   align-items: center;
   height: 40px;
   box-sizing: border-box;
-  transition: width 0.3s ease;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05) url("https://svgsilh.com/svg/1093167.svg") no-repeat;
   border-bottom: 2px solid gray;
+}
+.select-search-box--focus {
+  width: auto;
+  transition: width 1s ease-in-out;
 }
 .select-search-box__select {
   display: none;
@@ -147,6 +150,14 @@ header {
   height: 40px;
   box-sizing: border-box;
   padding: 10px;
+  transition: width 2s ease-out;
+  overflow: hidden;
+  width: auto;
+  background: white;
+  z-index: 1;
+}
+.inner--hidden {
+  display: none;
 }
 
 .input {
@@ -237,6 +248,22 @@ main {
   border: none;
 }
 
+.search_input--hidden {
+  transition: width 1s;
+  width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  transform: translate(-70px);
+}
+
+.search_input--hidden-active {
+  width: 200px;
+  transform: translate(0);
+  overflow-x: inherit;
+  overflow-y: inherit;
+}
+
 /***********************************************************
                 DESTINATION CONTENT
 ***********************************************************/
@@ -319,9 +346,9 @@ main {
 }
 
 .product_card {
-  margin-bottom: 32px;
   color: black;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 .product_card-img {
   width: 100%;
@@ -353,14 +380,23 @@ main {
 .product_card-name, .product_card-class, .product_card--span {
   margin: 0;
 }
+.product_card--figure {
+  height: 240px;
+  width: 100%;
+  margin: 0 0 7px;
+  overflow: hidden;
+}
 .product_card-rating {
   margin-left: 20px !important;
   width: auto;
 }
+.product_card--bottom_block {
+  margin-bottom: 24px;
+}
 .product_card .closedMessage {
   font-size: 14px;
-  background: #1d1d1d;
-  color: red;
+  background: #f6f6f6;
+  color: #a00000;
   float: left;
   padding: 4px 8px;
 }
@@ -386,18 +422,18 @@ main {
 }
 
 .medium_hide {
-  display: block !important;
+  display: block;
 }
 
 .btn_app--container {
   height: 35px;
   padding: 10px 0;
-  display: flex !important;
+  display: flex;
   justify-content: space-around;
 }
 
 .medium_show {
-  display: none !important;
+  display: none;
 }
 
 .div_underline {
@@ -526,15 +562,41 @@ main {
 ***********************************************************/
 @media screen and (min-width: 640px) {
   .logo {
+    display: block;
     width: 150px;
+  }
+  .logo_link {
+    margin-right: 20px;
   }
 
   .medium_show {
-    display: block !important;
+    display: flex;
+    height: 40px;
   }
 
   .medium_hide {
-    display: none !important;
+    display: none;
+  }
+
+  .delivery_btn--header {
+    display: flex;
+    align-items: center;
+  }
+  .delivery_btn--header .inner {
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+  .header_section--nav {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+  }
+
+  .header_btn-container {
+    justify-content: flex-end;
   }
 
   .soc_link {
@@ -574,15 +636,21 @@ main {
     grid-template-columns: 49.9% 49.9%;
   }
   .product_cards .product_card {
-    padding: 0 6px 23px;
+    padding: 0 6px;
+    text-decoration: none;
+  }
+  .product_cards .product_card--figure {
+    overflow: hidden;
+  }
+  .product_cards .product_card--bottom_block {
+    margin-bottom: 14px;
   }
   .product_cards .product_card-img {
     position: relative;
+    transition: 0.5s;
   }
-  .product_cards .product_card:hover {
-    transform: translate(0, -8px);
-    transition: transform 0.5s ease;
-    text-decoration: none;
+  .product_cards .product_card-img:hover {
+    transform: scale(1.1);
   }
   .product_cards .show_card {
     display: block;
@@ -629,13 +697,6 @@ main {
     padding: 0 80px;
   }
 
-  .logo {
-    display: block;
-  }
-  .logo_link {
-    margin-right: 50px;
-  }
-
   .big_hide {
     display: none;
   }
@@ -664,16 +725,6 @@ main {
     margin-right: 5px;
   }
 
-  .header_section--nav {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-  }
-
-  .header_btn-container {
-    justify-content: flex-end;
-  }
-
   .product_cards {
     grid-template-columns: 33.33% 33.33% 33.33%;
   }
@@ -683,12 +734,6 @@ main {
     position: relative;
     height: 100%;
     width: 100%;
-  }
-
-  .product_card--figure {
-    height: 240px;
-    width: 100%;
-    margin: 0 0 7px;
   }
 
   .btn_app--container {

@@ -14,7 +14,7 @@ class Main extends React.Component {
 
     return (
       <main className="main centered">
-        <form className="destination_container big_hide" action="#">
+        <form className="destination_container medium_hide" action="#">
           <span className="dest">When</span>
           <select
             name="time_select dest_style"
@@ -30,7 +30,6 @@ class Main extends React.Component {
             name="adress"
             className="destination_input dest_style"
             id="delivery_place-2"
-            value="ul. Bolshaya Dmitrovka,22"
           />
         </form>
 
@@ -38,7 +37,7 @@ class Main extends React.Component {
         <section className="product_cards">
           {
             Object.keys(restaurantsList).map(restaurant => (
-              <a href="/" className="product_card">
+              <a href="/#" className="product_card">
                 <figure
                   className="product_card--figure"
                 >
@@ -76,7 +75,11 @@ class Main extends React.Component {
                 </p>
                 {
                   restaurantsList[restaurant].feedback ? (
-                    <span className="product_card--span">
+                    <span
+                      className="
+                        product_card--span
+                        product_card--bottom_block"
+                    >
                       <p className="product_card-delivery_time">25 - 35 Min</p>
                       <p className="product_card-rating">
                         {`${restaurantsList[restaurant].feedback.rating}  `}
@@ -86,7 +89,7 @@ class Main extends React.Component {
                         >
                           <path
                             fill={
-                              restaurantsList[restaurant].feedback.rating > 4.5
+                              restaurantsList[restaurant].feedback.rating >= 4.5
                                 ? 'gold' : '#000000'}
                             d="M12,17.27L18.18,21L16.54,
                             13.97L22,9.24L14.81,8.62L12,
@@ -101,7 +104,12 @@ class Main extends React.Component {
                       </p>
                     </span>
                   ) : (
-                    <p className="closedMessage product_card-class">
+                    <p
+                      className="
+                        closedMessage
+                        product_card-class
+                        product_card--bottom_block"
+                    >
                       {restaurantsList[restaurant].closedMessage}
                     </p>
                   )
