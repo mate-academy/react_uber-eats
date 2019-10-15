@@ -1,6 +1,5 @@
 import React from 'react';
 import './RestaurantPage.scss';
-import { HashLink as Link } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import { ItemCard } from '../ItemCard';
 import { Loader } from '../Loader';
@@ -14,9 +13,16 @@ export class RestaurantPage extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  handleNavLinkClick = (id) => {
+    const coordinates = document.getElementById(id).getBoundingClientRect();
+
+    window.scrollBy(
+      { behavior: 'smooth', top: coordinates.top - 100, left: coordinates.left }
+    );
+  }
+
   render() {
     const {
-      match,
       isLoading,
       pageMainImgUrl,
       pageFoodSections,
@@ -62,13 +68,14 @@ export class RestaurantPage extends React.Component {
             <ul className="restaurant-page__navigation">
               {pageFoodSections.map(section => (
                 <li key={section.title}>
-                  <Link
-                    to={`/${match.params.id}#${section.title}`}
+                  <button
+                    type="button"
                     className="restaurant-page__navigation-link"
+                    onClick={() => this.handleNavLinkClick(section.title)}
                   >
                     {section
-                      .title.toLowerCase().replace(/^\w/, c => c.toUpperCase())}
-                  </Link>
+                      .title.toLowerCase()}
+                  </button>
                 </li>
               ))}
             </ul>

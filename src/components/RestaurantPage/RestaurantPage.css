@@ -95,6 +95,7 @@
   position: relative;
   margin-right: 24px;
   transition: color 0.3s;
+  text-transform: capitalize;
 }
 .restaurant-page__navigation-link:hover {
   color: #5fb709;

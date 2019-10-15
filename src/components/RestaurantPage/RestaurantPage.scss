@@ -108,6 +108,8 @@
 
     transition: color 0.3s;
 
+    text-transform: capitalize;
+
     &:hover{
       color: $color-green;
     }
