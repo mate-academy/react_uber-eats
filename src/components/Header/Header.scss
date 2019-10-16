@@ -4,12 +4,23 @@
   position: sticky;
   top: 0;
   z-index: 1;
+
+  width: 100%;
   padding: 16px 0;
 
   background: #fff;
 
   &__inner {
     @extend %flex-row-center;
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+
+    @media (max-width: $breack-point-phone) {
+      height: 14px;
+    }
   }
 
   &__delivery-info {
@@ -52,15 +63,35 @@
   }
 
   &__toogle-btn {
-    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    padding: 11px 5px;
+
     cursor: pointer;
+    border: 1px solid transparent;
 
     &:not(:last-of-type) {
       margin-right: 20px;
     }
 
     &:focus {
-      border: 1px solid $color-gray;
+      border-color: $color-gray;
     }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+
+  @media (max-width: $breack-point-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
   }
 }
