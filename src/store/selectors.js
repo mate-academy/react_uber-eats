@@ -12,7 +12,7 @@ const baseMenuItemSelector = ({ menuItemInfo }) => {
 
 const baseRestaurantInfoSelector = ({ restaurantInfo }) => {
   if (!restaurantInfo) {
-    return [];
+    return {};
   }
 
   return restaurantInfo;

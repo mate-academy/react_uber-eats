@@ -1,10 +1,14 @@
 import React from 'react';
 import './RestaurantPage.scss';
 import PropTypes from 'prop-types';
-import { ItemCard } from '../ItemCard';
 import { Loader } from '../Loader';
+import { RestaurantPageSection } from '../RestaurantPageSection';
 
 export class RestaurantPage extends React.Component {
+  state = {
+    activeSection: null,
+  }
+
   componentDidMount() {
     const { loadRestaurantInfo, match } = this.props;
 
@@ -13,12 +17,16 @@ export class RestaurantPage extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  handleNavLinkClick = (id) => {
-    const coordinates = document.getElementById(id).getBoundingClientRect();
+  componentWillUnmount() {
+    this.setState({
+      activeSection: null,
+    });
+  }
 
-    window.scrollBy(
-      { behavior: 'smooth', top: coordinates.top - 100, left: coordinates.left }
-    );
+  handleNavLinkClick = (id) => {
+    this.setState({
+      activeSection: id,
+    });
   }
 
   render() {
@@ -26,12 +34,13 @@ export class RestaurantPage extends React.Component {
       isLoading,
       pageMainImgUrl,
       pageFoodSections,
-      sectionItems,
       restaurantTitle,
       restaurantAddress,
       restaurantEtaRange,
       restaurantCuisineList,
     } = this.props;
+
+    const { activeSection } = this.state;
 
     if (isLoading) {
       return <Loader />;
@@ -81,42 +90,15 @@ export class RestaurantPage extends React.Component {
             </ul>
           </nav>
           <div className="restaurant-page__menu">
-            {pageFoodSections.map(section => (
-              <div
-                className="restaurant-page__menu-item"
-                key={section.title}
-                id={section.title}
-              >
-                <h2
-                  className="restaurant-page__menu-item-title"
-                >
-                  {section
-                    .title.toLowerCase()}
-                </h2>
-                <div className="restaurant-page__menu-container">
-                  {section.itemUuids.map((item) => {
-                    const {
-                      title,
-                      description,
-                      price,
-                      imageUrl,
-                      uuid,
-                    } = sectionItems[item];
-
-                    return (
-                      <ItemCard
-                        title={title}
-                        description={description}
-                        price={price}
-                        imgUrl={imageUrl}
-                        key={uuid}
-                        uuid={uuid}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
+            {
+              pageFoodSections.map(section => (
+                <RestaurantPageSection
+                  section={section}
+                  activeSection={activeSection}
+                  key={section.uuid}
+                />
+              ))
+            }
           </div>
         </div>
       </section>
@@ -138,7 +120,6 @@ RestaurantPage.propTypes = {
     title: PropTypes.string,
     uuid: PropTypes.string,
   })).isRequired,
-  sectionItems: PropTypes.shape({}).isRequired,
   restaurantTitle: PropTypes.string.isRequired,
   restaurantAddress: PropTypes.string.isRequired,
   restaurantEtaRange: PropTypes.string.isRequired,

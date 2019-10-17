@@ -1,0 +1,25 @@
+@import "../../styles/vars.scss";
+
+.restaurant-page {
+  &__menu-item-title {
+    font-size: 20px;
+    line-height: 21px;
+
+    margin: 40px 0 21px;
+
+    text-transform: capitalize;
+  }
+
+  &__menu-container {
+    --menu-width: 340px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--menu-width), 1fr));
+    gap: 40px 20px;
+
+    @media (max-width: $break-point-mobile) {
+      --menu-width: 280px;
+      gap: 20px;
+    }
+  }
+}

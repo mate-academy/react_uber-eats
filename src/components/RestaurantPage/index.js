@@ -4,7 +4,6 @@ import { loadRestaurantInfo } from '../../store/actions';
 import {
   selectPageMainImgUrl,
   selectRestaurantSections,
-  selectRestaurantSectionsEntities,
   selectRestaurantTitle,
   selectRestaurantAddress,
   selectRestaurantEtaRange,
@@ -17,7 +16,6 @@ const ImprovedRestaurantPage = connect(
     isLoading: isDataLoadingSelector(state),
     pageMainImgUrl: selectPageMainImgUrl(state),
     pageFoodSections: selectRestaurantSections(state),
-    sectionItems: selectRestaurantSectionsEntities(state),
     restaurantTitle: selectRestaurantTitle(state),
     restaurantAddress: selectRestaurantAddress(state),
     restaurantEtaRange: selectRestaurantEtaRange(state),
