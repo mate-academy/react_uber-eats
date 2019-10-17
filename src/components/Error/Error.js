@@ -7,7 +7,10 @@ export const Error = ({ message }) => (
     <p className="error__text">
       {message}
     </p>
-    <a href="/" className="error__link">
+    <a
+      href="https://kseniiamazan.github.io/react_uber-eats/#/"
+      className="error__link"
+    >
       Return home
     </a>
   </div>
