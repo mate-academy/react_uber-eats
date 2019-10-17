@@ -7,7 +7,7 @@ import { App } from './components/App';
 import './styles/index.scss';
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename='https://kseniiamazan.github.io/react_uber-eats/'>
     <Provider store={store}>
       <App />
     </Provider>
