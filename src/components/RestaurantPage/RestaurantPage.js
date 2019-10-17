@@ -17,12 +17,6 @@ export class RestaurantPage extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  componentWillUnmount() {
-    this.setState({
-      activeSection: null,
-    });
-  }
-
   handleNavLinkClick = (id) => {
     this.setState({
       activeSection: id,
@@ -80,7 +74,7 @@ export class RestaurantPage extends React.Component {
                   <button
                     type="button"
                     className="restaurant-page__navigation-link"
-                    onClick={() => this.handleNavLinkClick(section.title)}
+                    onClick={() => this.handleNavLinkClick(section.uuid)}
                   >
                     {section
                       .title.toLowerCase()}

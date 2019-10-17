@@ -6,13 +6,16 @@ import './RestaurantPageSection.scss';
 export class RestaurantPageSection extends React.Component {
   sectionRef = React.createRef();
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
+  componentDidUpdate(prevProps) {
     const { activeSection, section } = this.props;
 
-    if (prevProps.activeSection !== activeSection) {
+    if (
+      (prevProps.activeSection !== activeSection)
+        && (section.uuid === activeSection)
+    ) {
       const coordinates = this.sectionRef.current.getBoundingClientRect();
 
-      section.title === activeSection && window.scrollBy(
+      window.scrollBy(
         {
           behavior: 'smooth',
           top: coordinates.top - 100,
