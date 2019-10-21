@@ -12,11 +12,10 @@ export const RestaurantPage = () => {
     `https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/${id}`
   );
 
-  let restaurantPageHeaderImg = '';
-  
-  if (!loading) {
-    restaurantPageHeaderImg = data.heroImageUrls[2].url;
-  }
+  const title = loading ? '' : data.title;
+  const restaurantPageHeaderImg = loading ? '' : data.heroImageUrls[3].url;
+
+  console.log(data)
 
   return (
     <>
@@ -30,7 +29,7 @@ export const RestaurantPage = () => {
           >
           </div>
           <div className="content">
-              Content
+              {title}
             </div>
         </div>
       )}
