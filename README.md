@@ -8,7 +8,7 @@ using [this design](https://www.figma.com/file/cABVXdvRdGiXYzffeOE4gG/Uber-Eats-
 
 Base API url: https://mate-uber-eats-api.herokuapp.com/api/v1/
 
-1. Hello! Implement list of restaurants on the `Home` page
+1. Hello man! Implement list of restaurants on the `Home` page
   - use `redux` to store data
   - use `redux-thunk` to handle async actions
   - create separate component for restaurant card
