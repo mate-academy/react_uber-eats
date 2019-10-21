@@ -1,10 +1,31 @@
 import React from 'react';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import './App.scss';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import RestaurantsList from './components/RestaurantsList';
+
+import RestaurantPage from './components/RestaurantPage';
 
 const App = () => (
-  <div className="App">
-    <h1>React Uber eats</h1>
-  </div>
+  <Switch>
+    <div className="App">
+      <header className="header">
+        <Header />
+      </header>
+
+      <main className="main">
+        <Route path="/" exact component={RestaurantsList} />
+        <Route path="/restaurant" exact component={RestaurantPage} />
+      </main>
+
+      <footer className="footer">
+        <Footer />
+      </footer>
+    </div>
+
+  </Switch>
 );
 
 export default App;
