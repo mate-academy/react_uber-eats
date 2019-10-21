@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './App.scss';
 import { store } from './store';
@@ -12,12 +12,12 @@ const App = () => (
   <Provider store={store}>
     <Header />
     <main className="page">
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route path="/" exact component={RestaurantsListPage} />
           <Route path="/:uuid" component={RestaurantPage} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </main>
     <Footer />
   </Provider>
