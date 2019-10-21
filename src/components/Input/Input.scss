@@ -1,0 +1,49 @@
+@import '../../styles/extends.scss';
+@import '../../styles/variables.scss';
+
+.control {
+  &__input-wrapper {
+    $border-color: #e0e0e0;
+    @extend %flex-row-center;
+
+    padding: 11px 16px;
+
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    transition: border-color 300ms;
+  }
+
+  &--focused {
+    border-color: darken($border-color, 20);
+  }
+
+  &__input {
+    &--time {
+      max-width: 75px;
+    }
+
+    &--small {
+      @media (max-width: $break-point-tablet-lg) {
+        max-width: 75px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #626262;
+
+    margin-bottom: 8px;
+  }
+
+  & + .control {
+    margin-left: 20px;
+  }
+};
