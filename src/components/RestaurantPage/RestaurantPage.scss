@@ -1,0 +1,14 @@
+.restaurant-page {
+  &__header {
+    min-height: 380px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__desc {
+    width: 40%;
+    height: 208px;
+    background-color: #fff;
+  }
+}
