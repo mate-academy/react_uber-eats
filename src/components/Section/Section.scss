@@ -1,0 +1,16 @@
+.section {
+  --card-width: 348px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  gap: 40px 20px;
+
+  margin-bottom: 40px;
+}
+
+.title-categories {
+  font-size: 20px;
+  font-weight: 500;
+
+  margin-bottom: 20px;
+}

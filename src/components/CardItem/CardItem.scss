@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  height: 160px;
+
+  line-height: 21px;
+  border: 1px solid #e0e0e0;
+
+  &__img {
+    width: 50%;
+  }
+
+  &__description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 16px;
+
+    &-wrapper {
+      overflow-y: auto;
+      max-height: 90px;
+    }
+
+    &-info {
+      font-size: 14px;
+      color: #626262;
+      margin-top: 4px;
+
+    }
+  }
+}

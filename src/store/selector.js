@@ -15,6 +15,64 @@ export const selectRestaurantsList = createSelector(
   }
 );
 
+export const selectResorauntSections = createSelector(
+  rootSelector,
+  ({ restaurantPageData }) => {
+    if (!restaurantPageData) {
+      return [];
+    }
+
+    const { sectionsMap, sections } = restaurantPageData;
+
+    return sections.map(id => sectionsMap[id]);
+  }
+);
+
+export const selectRestorauntItems = createSelector(
+  rootSelector,
+  selectResorauntSections,
+  ({ restaurantPageData }, resorauntSections) => {
+    if (!restaurantPageData) {
+      return [];
+    }
+
+    const { entitiesMap } = restaurantPageData;
+
+    return resorauntSections
+      .map(item => ({
+        ...item,
+        itemUuids: item.itemUuids.map(uid => entitiesMap[uid]),
+      }));
+  }
+);
+
+export const selectEtaRange = (
+  state,
+  props
+) => state.storesMap[props.uuid].etaRange.text;
+
+export const selectRestaurantPageData = createSelector(
+  rootSelector,
+  ({ restaurantPageData }) => {
+    if (!restaurantPageData) {
+      return [];
+    }
+
+    return restaurantPageData;
+  }
+);
+
+export const selectRestaurantCurency = createSelector(
+  rootSelector,
+  ({ restaurantPageData }) => {
+    if (!restaurantPageData) {
+      return [];
+    }
+
+    return restaurantPageData.priceBucket;
+  }
+);
+
 export const selectRestaurantsListError = createSelector(
   rootSelector,
   ({ error }) => error

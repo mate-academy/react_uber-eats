@@ -1,5 +1,6 @@
 export const ACTION_TYPES = {
   SAVE_RESTAURANTS: 'SAVE_RESTAURANTS',
+  SAVE_RESTAURANT_PAGE: 'SAVE_RESTAURANT_PAGE',
   SET_LOAD_RESTAURANTS_ERROR: 'SET_LOAD_RESTAURANTS_ERROR',
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
@@ -7,6 +8,11 @@ export const ACTION_TYPES = {
 
 const saveRestaurants = data => ({
   type: ACTION_TYPES.SAVE_RESTAURANTS,
+  payload: data,
+});
+
+const saveRestaurantPage = data => ({
+  type: ACTION_TYPES.SAVE_RESTAURANT_PAGE,
   payload: data,
 });
 
@@ -28,6 +34,15 @@ export const loadRestaurants = () => (dispatch) => {
   fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants')
     .then(response => response.json())
     .then(({ data }) => dispatch(saveRestaurants(data)))
+    .catch(error => dispatch(setRestaurantsError(error.message)))
+    .finally(() => dispatch(stopLoading()));
+};
+
+export const loadRestaurantPage = id => (dispatch) => {
+  dispatch(startLoading());
+  fetch(`https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/${id}`)
+    .then(response => response.json())
+    .then(({ data }) => dispatch(saveRestaurantPage(data)))
     .catch(error => dispatch(setRestaurantsError(error.message)))
     .finally(() => dispatch(stopLoading()));
 };

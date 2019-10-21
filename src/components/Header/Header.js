@@ -49,11 +49,13 @@ export class Header extends Component {
       <header className="header">
         <div className="content">
           <div className="header__inner">
-            <img
-              className="header__logo"
-              src="./images/logo.svg"
-              alt="Uber Eats"
-            />
+            <a href="/">
+              <img
+                className="header__logo"
+                src="./images/logo.svg"
+                alt="Uber Eats"
+              />
+            </a>
 
             <div className="header__delivery-info">
               <Input

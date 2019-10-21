@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import RestaurantCard from '../RestaurantCard';
 import './RestaurantListPage.scss';
@@ -30,27 +31,31 @@ export class RestaurantsListPage extends Component {
     }
 
     return (
-      <div className="restaurant-list">
-        {restaurantsListData.map((restoraunt) => {
-          const {
-            uuid,
-            title,
-            heroImageUrl,
-            categories,
-            etaRange,
-          } = restoraunt;
+      <div className="content">
+        <div className="restaurant-list">
+          {restaurantsListData.map((restoraunt) => {
+            const {
+              uuid,
+              title,
+              heroImageUrl,
+              categories,
+              etaRange,
+            } = restoraunt;
 
-          return (
-            <RestaurantCard
-              key={uuid}
-              uuid={uuid}
-              title={title}
-              imageUrl={heroImageUrl}
-              categories={categories}
-              etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
-            />
-          );
-        })}
+            return (
+              <Link to={uuid} key={uuid}>
+                <RestaurantCard
+                  key={uuid}
+                  uuid={uuid}
+                  title={title}
+                  imageUrl={heroImageUrl}
+                  categories={categories}
+                  etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
+                />
+              </Link>
+            );
+          })}
+        </div>
       </div>
     );
   }
