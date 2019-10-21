@@ -1,0 +1,38 @@
+@media (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header__delivery,
+  .header__location-clear-btn {
+    display: none;
+  }
+
+  .main__search-and-delivery {
+    margin-bottom: 30px;
+  }
+
+  .main__delivery {
+    width: 100%;
+    display: flex;
+
+  }
+
+  .delivery-form,
+  .main__delivery-time {
+    width: 50%;
+    margin: 0;
+  }
+
+  .delivery-form:focus-within {
+    width: 100%;
+  }
+
+  .footer__apps {
+    flex-direction: column;
+  }
+
+  .footer__additional-info-lists {
+    width: 70%;
+  }
+}

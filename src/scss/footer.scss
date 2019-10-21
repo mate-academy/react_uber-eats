@@ -1,0 +1,137 @@
+@import "./variables";
+
+$footer-border: 1px solid rgba(255,255,255, 0.4);
+
+.footer {
+  width: 100%;
+
+  margin-top: 80px;
+  padding: 72px 0 80px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+
+  background-color: #1F1F1F;
+
+  &__wrapper {
+    box-sizing: border-box;
+    width: 100%;
+
+    padding: 0 80px;
+  }
+
+  &__apps-and-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding-bottom: 40px;
+
+    border-bottom: $footer-border;
+  }
+
+  &__logo-and-apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+  }
+
+  &__apps {
+    display: flex;
+
+    list-style: none;
+  }
+
+  &__app-logo {
+    margin-right: 16px;
+  }
+
+  &__additional-info-lists {
+    width: 50%;
+
+    display: flex;
+  }
+
+  &__additional-info {
+    width: 50%;
+  }
+
+  &__additional-info li {
+    padding-bottom: 16px;
+  }
+
+  &__additional-info li:first-child {
+    padding-bottom: 24px;
+    font-weight: 700;
+  }
+
+  &__additional-info li:last-child {
+    padding-bottom: 0;
+  }
+
+  &__language::before {
+    content: url("img/language-icon.png")
+  }
+
+  &__language-link {
+    margin-left: 10px;
+  }
+
+  &__lists {
+    list-style: none;
+  }
+
+  &__lists-link {
+    text-decoration: none;
+    color: #fff;
+    line-height: 15px;
+  }
+
+  &__lists-link:hover {
+    text-decoration: underline;
+  }
+
+  &__social-networks {
+    display: flex;
+  }
+
+  &__social-networks-logo {
+    margin-right: 16px;
+    transition: transform 1s;
+  }
+
+  &__social-networks-logo:hover {
+    transform: $scale-tanform;
+  }
+
+  &__policy {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  &__policy-and-social-networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100px;
+    width: 50%;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__policy-and-terms {
+    display: flex;
+  }
+
+  &__policy-paragraph {
+    margin-right: 48px;
+  }
+}

@@ -1,0 +1,102 @@
+.header {
+  margin-bottom: 32px;
+
+  height: 80px;
+
+  &__wrapper {
+    height: 80px;
+    width: 100%;
+
+    position: fixed;
+    z-index: 10;
+
+    padding: 0 80px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__delivery-time,
+  &__sign-in
+  {
+    margin-left: 20px;
+    padding: 0 16px;
+
+    height: 52px;
+    outline: none;
+    border-bottom: 2px solid #fff !important;
+
+    transition: background-color .3s,  border-bottom .3s;
+  }
+
+  &__delivery-time:hover,
+  &__sign-in:hover {
+    background-color: #F5F5F5 !important;
+    border-bottom: 2px solid #000 !important;
+  }
+
+  &__logo-and-delivery {
+    display: flex;
+    align-items: center;
+  }
+
+  &__delivery {
+    display: flex;
+    align-items: center;
+
+    margin-left: 60px;
+  }
+
+  &__delivery-time {
+    padding: 0 16px 0 46px;
+
+    background-color: transparent;
+    border: none;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+
+    background-image: url(img/Group.png);
+    background-position: left 16px top 14px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+
+    appearance: none;
+    cursor: pointer;
+
+    transition: all .3s;
+  }
+
+  &__search-and-sign-in {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__sign-in {
+    box-sizing: border-box;
+
+    padding: 0 16px;
+
+    min-width: 90px;
+
+    text-decoration: none;
+    text-align: center;
+    color: #1F1F1F;
+
+    line-height: 48px;
+  }
+}
