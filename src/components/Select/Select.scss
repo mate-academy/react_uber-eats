@@ -1,0 +1,31 @@
+.select {
+  position: relative;
+
+  &__input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #979797;
+    border-radius: 0;
+    padding: 10px 40px;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 28%;
+    left: 10px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 42%;
+    right: 12px;
+  }
+}
