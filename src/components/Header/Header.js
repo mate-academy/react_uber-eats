@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Input from '../Input';
 import './Header.scss';
 
@@ -49,13 +50,13 @@ export class Header extends Component {
       <header className="header">
         <div className="content">
           <div className="header__inner">
-            <a href="/#">
+            <Link to="/">
               <img
                 className="header__logo"
                 src="./images/logo.svg"
                 alt="Uber Eats"
               />
-            </a>
+            </Link>
 
             <div className="header__delivery-info">
               <Input

@@ -10,16 +10,16 @@ import { RestaurantPage } from './components/RestaurantPage';
 
 const App = () => (
   <Provider store={store}>
-    <Header />
-    <main className="page">
-      <HashRouter>
+    <HashRouter>
+      <Header />
+      <main className="page">
         <Switch>
           <Route path="/" exact component={RestaurantsListPage} />
           <Route path="/:uuid" component={RestaurantPage} />
         </Switch>
-      </HashRouter>
-    </main>
-    <Footer />
+      </main>
+      <Footer />
+    </HashRouter>
   </Provider>
 );
 
