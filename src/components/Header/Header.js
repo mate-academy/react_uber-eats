@@ -49,7 +49,7 @@ export class Header extends Component {
       <header className="header">
         <div className="content">
           <div className="header__inner">
-            <a href="/">
+            <a href="/#">
               <img
                 className="header__logo"
                 src="./images/logo.svg"
