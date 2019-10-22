@@ -1,14 +1,63 @@
+@import '../../styles/utils.scss';
+
 .restaurant-page {
   &__header {
-    min-height: 380px;
+    height: 380px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+    // background-color: #aaa;
+
+    &-image {
+      height: 100%;
+      display: inline-block;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__desc {
-    width: 40%;
-    height: 208px;
+    padding: 24px 15px 24px 34px;
+    width: 46.1%;
+    min-height: 208px;
     background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    @media (max-width: $break-point-phone) {
+      padding: 24px 15px 24px 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    color: #1D1D1D;
+    margin-bottom: 16px;
+  }
+
+  &__categories {
+    font-size: 14px;
+    color: #757575;
+
+    margin-bottom: 18px;
+  }
+
+  &__delivery-time {
+    display: inline-block;
+    font-size: 14px;
+    padding: 2px 8px;
+    background-color: #F5F5F5;
+
+    margin-bottom: 18px;
+  }
+
+  &__address {
+    font-size: 14px;
+    color: #000000;
   }
 }
+
