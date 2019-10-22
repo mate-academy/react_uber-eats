@@ -7,7 +7,8 @@
   line-height: 21px;
   border: 1px solid #e0e0e0;
 
-  &__img {
+  &__img,
+  &__description {
     width: 50%;
   }
 
@@ -19,8 +20,9 @@
     padding: 16px;
 
     &-wrapper {
-      overflow-y: auto;
+      overflow: hidden;
       max-height: 90px;
+      line-clamp: 4;
     }
 
     &-info {
