@@ -16,7 +16,7 @@ const mapDispatch2Props = {
 };
 
 const Enhanced = connect(
-  mapState2Props,
+  mapStateToProps,
   mapDispatch2Props
 )(RestaurantPage);
 
