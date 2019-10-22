@@ -47,7 +47,7 @@ export class Header extends Component {
               />
             </div>
             <Input
-              name="seacrh"
+              name="search"
               value={search}
               onChange={this.handleChange}
               placeholder="Search"
