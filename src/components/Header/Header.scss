@@ -85,6 +85,7 @@
   position: relative;
   padding-top: 30px;
 
+
   @media (max-width: $breack-point-tablet) {
     display: flex;
   }
@@ -97,5 +98,5 @@
 }
 
 .control {
-  margin-left: auto;
+  // margin-left: auto;
 }

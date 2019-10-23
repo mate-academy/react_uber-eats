@@ -12,6 +12,7 @@ export class RestaurantPage extends PureComponent {
     const { match: { params } } = this.props;
 
     loadRestaurantPage(params.uuid);
+    window.scrollTo(0, 0);
   }
 
   render() {

@@ -111,12 +111,12 @@ export class Header extends Component {
               </button>
             </div>
 
-            <a
+            <Link
+              to="/"
               className="header__link"
-              href="/sign-in"
             >
               Sign In
-            </a>
+            </Link>
 
           </div>
 
