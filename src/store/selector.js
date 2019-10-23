@@ -53,13 +53,7 @@ export const selectEtaRange = (
 
 export const selectRestaurantPageData = createSelector(
   rootSelector,
-  ({ restaurantPageData }) => {
-    if (!restaurantPageData) {
-      return [];
-    }
-
-    return restaurantPageData;
-  }
+  ({ restaurantPageData }) => restaurantPageData
 );
 
 export const selectRestaurantCurency = createSelector(

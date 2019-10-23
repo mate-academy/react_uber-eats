@@ -13,7 +13,6 @@ export const Error = (props) => {
       <a href="/" className="error__link">
         Go to Home
       </a>
-
     </div>
   );
 };

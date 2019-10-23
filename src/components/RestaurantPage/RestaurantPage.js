@@ -17,6 +17,11 @@ export class RestaurantPage extends PureComponent {
 
   render() {
     const { restaurantPageData, restaurantSections } = this.props;
+
+    if (!restaurantPageData) {
+      return <Loader />;
+    }
+
     const {
       uuid,
       title,
@@ -25,10 +30,6 @@ export class RestaurantPage extends PureComponent {
       etaRange,
       location,
     } = restaurantPageData;
-
-    if (restaurantPageData.length === 0) {
-      return <Loader />;
-    }
 
     const heroImageUrl = heroImageUrls[heroImageUrls.length - 1].url;
 
@@ -46,11 +47,13 @@ export class RestaurantPage extends PureComponent {
           <img
             className="hero__img"
             srcSet={heroImageUrlSrcSet}
-            sizes="(max-width: 320px) 240px,
+            sizes="
+              (max-width: 320px) 240px,
               (max-width: 768px) 550px,
               (max-width: 1280px) 750px,
               (max-width: 1980px) 1080px,
-              750px"
+              750px
+            "
             src={heroImageUrl}
             alt={title}
           />
@@ -75,6 +78,7 @@ export class RestaurantPage extends PureComponent {
                 <a
                   href={`#${item.uuid}`}
                   className="restoraunt-menu__item"
+                  key={item.uuid}
                 >
                   {item.title}
                 </a>
@@ -82,21 +86,41 @@ export class RestaurantPage extends PureComponent {
             }
           </nav>
 
-          {restaurantSections.map(item => <Section category={item} />)}
+          {restaurantSections
+            .map(item => <Section category={item} key={item.uuid} />)
+          }
         </div>
       </>
     );
   }
 }
 
+const restorauntShape = {
+  title: PropTypes.string,
+  uuid: PropTypes.string,
+  categories: PropTypes.arrayOf(PropTypes.string),
+  etaRange: PropTypes.string,
+  location: PropTypes.shape({
+    address: PropTypes.string,
+    city: PropTypes.string,
+  }),
+};
+
 RestaurantPage.propTypes = {
   loadRestaurantPage: PropTypes.func.isRequired,
-  restaurantPageData: PropTypes.shape(),
-  restaurantSections: PropTypes.arrayOf(PropTypes.shape()),
-  match: PropTypes.shape().isRequired,
+  restaurantPageData: PropTypes.shape(restorauntShape),
+  restaurantSections: PropTypes.arrayOf(PropTypes.shape({
+    uuid: PropTypes.string,
+    tittle: PropTypes.string,
+  })),
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      uuid: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 RestaurantPage.defaultProps = {
-  restaurantPageData: [],
+  restaurantPageData: null,
   restaurantSections: [],
 };

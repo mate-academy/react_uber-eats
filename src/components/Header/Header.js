@@ -169,7 +169,6 @@ export class Header extends Component {
                   alt="search icon"
                 />
               </button>
-
             </div>
           )}
         </div>

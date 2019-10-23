@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { PureComponent, createRef } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
@@ -42,7 +41,7 @@ export class Input extends PureComponent {
     });
 
     return (
-      <label className="control">
+      <label htmlFor="control" className="control">
         {label && (
           <p className="control__label">
             {label}
@@ -60,6 +59,7 @@ export class Input extends PureComponent {
           )}
 
           <input
+            id="control"
             ref={this.inputRef}
             type={type}
             value={value}

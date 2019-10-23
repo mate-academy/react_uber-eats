@@ -1,3 +1,5 @@
+const BASE_URL = 'https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/';
+
 export const ACTION_TYPES = {
   SAVE_RESTAURANTS: 'SAVE_RESTAURANTS',
   SAVE_RESTAURANT_PAGE: 'SAVE_RESTAURANT_PAGE',
@@ -31,7 +33,7 @@ const stopLoading = () => ({
 
 export const loadRestaurants = () => (dispatch) => {
   dispatch(startLoading());
-  fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants')
+  fetch(BASE_URL)
     .then(response => response.json())
     .then(({ data }) => dispatch(saveRestaurants(data)))
     .catch(error => dispatch(setRestaurantsError(error.message)))
@@ -40,7 +42,7 @@ export const loadRestaurants = () => (dispatch) => {
 
 export const loadRestaurantPage = id => (dispatch) => {
   dispatch(startLoading());
-  fetch(`https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/${id}`)
+  fetch(`${BASE_URL}${id}`)
     .then(response => response.json())
     .then(({ data }) => dispatch(saveRestaurantPage(data)))
     .catch(error => dispatch(setRestaurantsError(error.message)))

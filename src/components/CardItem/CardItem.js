@@ -25,7 +25,7 @@ CardItem.propTypes = {
   title: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
   description: PropTypes.string,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   restaurantCurency: PropTypes.string,
 };
 
