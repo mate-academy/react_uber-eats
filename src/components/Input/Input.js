@@ -1,4 +1,4 @@
-import React, { PureComponent, createRef } from 'react';
+import React, { PureComponent } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import './Input.scss';
@@ -8,13 +8,9 @@ export class Input extends PureComponent {
     isFocused: false,
   }
 
-  inputRef = createRef();
-
   handleFocus = () => this.setState({ isFocused: true });
 
   handleBlur = () => this.setState({ isFocused: false });
-
-  focus = () => this.inputRef.current.focus();
 
   render() {
     const {
@@ -60,7 +56,6 @@ export class Input extends PureComponent {
 
           <input
             id="control"
-            ref={this.inputRef}
             type={type}
             value={value}
             onChange={onChange}

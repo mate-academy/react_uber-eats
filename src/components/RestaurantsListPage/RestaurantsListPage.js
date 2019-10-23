@@ -13,6 +13,7 @@ export class RestaurantsListPage extends Component {
     const { loadRestaurants } = this.props;
 
     loadRestaurants();
+    window.scrollTo(0, 0);
   }
 
   render() {

@@ -111,12 +111,11 @@ export class Header extends Component {
               </button>
             </div>
 
-            <Link
-              to="/"
+            <span
               className="header__link"
             >
               Sign In
-            </Link>
+            </span>
 
           </div>
 
@@ -137,23 +136,23 @@ export class Header extends Component {
               {isMobileDeliveryInfoVisible && (
                 <>
                   <Input
-                    label="Where"
-                    name="address"
-                    value={address}
-                    onChange={this.handleChange}
-                    placeholder="Address"
-                    iconUrl="./images/place.svg"
-                    isSmall={false}
-                  />
-
-                  <Input
-                    label="To"
+                    label="When"
                     name="time"
                     value={time}
                     onChange={this.handleChange}
                     placeholder="Time"
                     iconUrl=""
                     type="time"
+                    isSmall={false}
+                  />
+
+                  <Input
+                    label="To"
+                    name="address"
+                    value={address}
+                    onChange={this.handleChange}
+                    placeholder="Address"
+                    iconUrl="./images/place.svg"
                     isSmall={false}
                   />
                 </>

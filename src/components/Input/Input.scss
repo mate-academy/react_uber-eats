@@ -20,6 +20,10 @@
     height: 14px;
 
     margin-right: 10px;
+
+    @media (max-width: $breack-point-tablet) {
+      margin-right: 0;
+    }
   }
 
   &__input {
@@ -32,7 +36,7 @@
 
     &--small {
       @media (max-width: $breack-point-tablet-lg) {
-        max-width: 75px;
+        max-width: 90px;
       }
     }
   }

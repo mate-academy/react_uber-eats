@@ -67,7 +67,7 @@ export class RestaurantPage extends PureComponent {
             </div>
             <div className="title__address">
               {`${location.address} • `}
-              <a href="# " className="title__more">More info</a>
+              <span className="title__more">More info</span>
             </div>
           </div>
         </div>

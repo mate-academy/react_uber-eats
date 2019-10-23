@@ -50,6 +50,7 @@
 
     &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 
@@ -90,6 +91,10 @@
     display: flex;
   }
 
+  @media (max-width: $breack-point-phone) {
+    justify-content: center;
+  }
+
   &__close {
     position: absolute;
     top: 10px;
@@ -99,4 +104,21 @@
 
 .control {
   margin-left: auto;
+
+  @media (max-width: $breack-point-tablet) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $breack-point-phone) {
+    width: 100%;
+    &:not(:last-of-type) {
+      width: 25%;
+    }
+  }
+
+  @media (max-width: $breack-point-phone-sm) {
+    &:not(:first-of-type) {
+      max-width: 195px;
+    }
+  }
 }
