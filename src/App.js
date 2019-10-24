@@ -1,10 +1,123 @@
 import React from 'react';
-import './App.css';
+import animateScrollTo from 'animated-scroll-to';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import './App.scss';
+import * as Api from './Api';
 
-const App = () => (
-  <div className="App">
-    <h1>React Uber eats</h1>
-  </div>
-);
+class App extends React.Component {
+  state = {
+    // cityKey: 'ChIJBUVa4U7P1EAR_kYBF9IxSXY',
+    restaurantsList: {},
+    locationSearchOpen: false,
+    searchOpen: false,
+    shoudStick: false,
+    autoCompleteList: {},
+    query: 'Kyiv',
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.checkScroll);
+    this.handleCityChange('ChIJBUVa4U7P1EAR_kYBF9IxSXY', 'Kyiv');
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.checkScroll);
+  }
+
+  checkScroll = () => {
+    if (window.pageYOffset >= 1) {
+      this.setState({ shoudStick: true });
+    }
+
+    if (window.pageYOffset < 1) {
+      this.setState({ shoudStick: false });
+    }
+  };
+
+  openLocSearch = () => {
+    this.setState({ locationSearchOpen: true });
+  };
+
+  handleCityChange = async(val, name) => {
+    const cityData = await Api.getRestaurants(val);
+
+    this.setState(() => ({
+      restaurantsList: cityData,
+      query: name,
+    }));
+  };
+
+  closeSearch = () => {
+    this.setState({
+      locationSearchOpen: false,
+      searchOpen: false,
+    });
+  };
+
+  scrollTop = () => {
+    animateScrollTo(0);
+  };
+
+  render() {
+    const {
+      shoudStick,
+      query,
+      searchOpen,
+      locationSearchOpen,
+      autoCompleteList,
+      restaurantsList,
+    } = this.state;
+
+    return (
+      <div
+        className="App"
+        id="App"
+        style={{ paddingTop: (shoudStick ? 75 : 0) }}
+      >
+        <Header
+          shoudStick={shoudStick}
+          searchOpen={searchOpen}
+          closeSearch={this.closeSearch}
+          openLocSearch={this.openLocSearch}
+          locationSearchOpen={locationSearchOpen}
+          query={query}
+          handleCityChange={this.handleCityChange}
+        />
+        {
+          restaurantsList.storesMap ? (
+            <Main
+              restaurantsList={restaurantsList.storesMap}
+              location={query}
+              autoCompleteList={autoCompleteList}
+            />
+          ) : ('')
+        }
+        <Footer />
+        <button
+          type="button"
+          style={
+            {
+              display: (shoudStick ? 'flex' : 'none'),
+            }
+          }
+          className="back_btn"
+          onClick={this.scrollTop}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/img/arrow-up.svg`}
+            alt=""
+          />
+        </button>
+      </div>
+    );
+  }
+}
+App.defaultProps = {
+  shoudStick: false,
+  locationSearchOpen: false,
+  searchOpen: false,
+};
 
 export default App;
