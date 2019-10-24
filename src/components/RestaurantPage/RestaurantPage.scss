@@ -82,7 +82,7 @@
       margin-right: 20px;
     }
 
-    &::after {
+    &:after {
       content: "";
       height: 1px;
       width: 0;
@@ -93,7 +93,7 @@
       transition: 500ms;
     }
 
-    &:hover::after {
+    &:hover:after {
       width: 100%;
     }
 

@@ -123,8 +123,10 @@
     color: #fff;
     white-space: nowrap;
 
+    transition: color 300ms;
+
     &:hover {
-      text-decoration: underline;
+      color: $color-green;
     }
   }
 }
