@@ -16,12 +16,12 @@ export const Select = (props) => {
     <div className="select">
       <select
         name={name}
-        value={value}
+        defaultValue={value}
         onChange={onSelect}
         className="select__input"
       >
         {options.map(({ value: optionValue, label }) => (
-          <option value={optionValue} selected={value === optionValue}>
+          <option value={optionValue} key={optionValue}>
             {label}
           </option>
         ))}

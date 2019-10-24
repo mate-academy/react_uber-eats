@@ -23,37 +23,41 @@ export class RestaurantsListPage extends Component {
       isLoading,
     } = this.props;
 
-    if (isLoading) {
-      return <Loader />;
-    }
-
-    if (error) {
-      return <Error message={error} />;
-    }
-
     return (
-      <div className="restaurants-list">
-        {restaurantsData.map((restaurant) => {
-          const {
-            uuid,
-            title,
-            heroImageUrl,
-            categories,
-            etaRange,
-          } = restaurant;
+      <>
+        {isLoading && (
+          <Loader />
+        )}
 
-          return (
-            <RestaurantCard
-              key={uuid}
-              uuid={uuid}
-              title={title}
-              imageUrl={heroImageUrl}
-              categories={categories}
-              etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
-            />
-          );
-        })}
-      </div>
+        {error && (
+          <Error message={error} />
+        )}
+
+        {(!isLoading && !error) && (
+          <div className="restaurants-list">
+            {restaurantsData.map((restaurant) => {
+              const {
+                uuid,
+                title,
+                heroImageUrl,
+                categories,
+                etaRange,
+              } = restaurant;
+
+              return (
+                <RestaurantCard
+                  key={uuid}
+                  uuid={uuid}
+                  title={title}
+                  imageUrl={heroImageUrl}
+                  categories={categories}
+                  etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
+                />
+              );
+            })}
+          </div>
+        )}
+      </>
     );
   }
 }
