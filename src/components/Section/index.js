@@ -4,7 +4,7 @@ import {
   selectRestorauntItems,
 } from '../../store/selector';
 
-const mapState2Props = state => ({
+const mapStateToProps = state => ({
   restaurantItems: selectRestorauntItems(state),
 });
 
