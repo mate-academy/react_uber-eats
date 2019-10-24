@@ -46,6 +46,10 @@
     &:focus {
       outline: 1px solid $color-green;
     }
+
+    &__img {
+      display: block;
+    }
   }
 
   &__logo {
@@ -137,10 +141,18 @@
   }
 }
 
-.social__link {
-  margin-right: 20px;
+.social {
+  display: flex;
 
-  &:focus {
-    outline: 1px solid $color-green;
+  &__link {
+    margin-right: 20px;
+
+    &:focus {
+      outline: 1px solid $color-green;
+    }
+  }
+
+  &__icon {
+    display: block;
   }
 }

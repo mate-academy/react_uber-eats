@@ -35,6 +35,7 @@ export const Footer = () => (
               <img
                 src="./images/app-store.png"
                 alt="App Store"
+                className="footer__mobile-app__img"
               />
             </a>
             <a
@@ -44,6 +45,7 @@ export const Footer = () => (
               <img
                 src="./images/google-play.png"
                 alt="Google Play"
+                className="footer__mobile-app__img"
               />
             </a>
           </div>
@@ -97,13 +99,25 @@ export const Footer = () => (
 
           <div className="footer__social social">
             <a href="#" className="social__link">
-              <img src="./images/fb.svg" alt="facebook" />
+              <img
+                src="./images/fb.svg"
+                alt="facebook"
+                className="social__icon"
+              />
             </a>
             <a href="#" className="social__link">
-              <img src="./images/tw.svg" alt="twitter" />
+              <img
+                src="./images/tw.svg"
+                alt="twitter"
+                className="social__icon"
+              />
             </a>
             <a href="#" className="social__link">
-              <img src="./images/ig.svg" alt="instagram" />
+              <img
+                src="./images/ig.svg"
+                alt="instagram"
+                className="social__icon"
+              />
             </a>
           </div>
         </div>

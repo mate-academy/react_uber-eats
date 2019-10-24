@@ -24,6 +24,7 @@ export class Input extends PureComponent {
       name,
       className,
       isSmall,
+      isSmallPhone,
       label,
     } = this.props;
     const { isFocused } = this.state;
@@ -36,6 +37,7 @@ export class Input extends PureComponent {
     const inputClass = cx('control__input', {
       'control__input--small': isSmall,
       'control__input--time': type === 'time',
+      'control__input--small-phone': isSmallPhone,
     });
 
     return (
@@ -79,6 +81,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   className: PropTypes.string,
   isSmall: PropTypes.bool,
+  isSmallPhone: PropTypes.bool,
   label: PropTypes.string,
 };
 
@@ -88,5 +91,6 @@ Input.defaultProps = {
   placeholder: '',
   className: '',
   isSmall: true,
+  isSmallPhone: true,
   label: '',
 };

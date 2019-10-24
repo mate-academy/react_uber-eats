@@ -123,21 +123,22 @@ export class Header extends Component {
               {isMobileDeliveryInfoVisible && (
                 <>
                   <Input
-                    label="Where"
-                    name="address"
-                    value={address}
-                    onChange={this.handleChange}
-                    placeholder="Address"
-                    iconUrl="./images/place.svg"
-                    isSmall={false}
-                  />
-                  <Input
-                    label="To"
+                    label="When"
                     name="time"
                     value={time}
                     onChange={this.handleChange}
                     placeholder="Time"
                     type="time"
+                    isSmall={false}
+                    isSmallPhone={false}
+                  />
+                  <Input
+                    label="To"
+                    name="address"
+                    value={address}
+                    onChange={this.handleChange}
+                    placeholder="Address"
+                    iconUrl="./images/place.svg"
                     isSmall={false}
                   />
                 </>
@@ -152,6 +153,7 @@ export class Header extends Component {
                   placeholder="Search"
                   iconUrl="./images/search.svg"
                   isSmall={false}
+                  isSmallPhone={false}
                 />
               )}
 
