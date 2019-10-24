@@ -6,18 +6,18 @@ import {
   selectResorauntSections,
 } from '../../store/selector';
 
-const mapState2Props = state => ({
+const mapStateToProps = state => ({
   restaurantPageData: selectRestaurantPageData(state),
   restaurantSections: selectResorauntSections(state),
 });
 
-const mapDispatch2Props = {
+const mapDispatchToProps = {
   loadRestaurantPage,
 };
 
 const Enhanced = connect(
-  mapState2Props,
-  mapDispatch2Props
+  mapStateToProps,
+  mapDispatchToProps
 )(RestaurantPage);
 
 export { Enhanced as RestaurantPage };

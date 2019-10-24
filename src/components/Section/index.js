@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const Enhanced = connect(
-  mapState2Props,
+  mapStateToProps,
 )(Section);
 
 export { Enhanced as Section };

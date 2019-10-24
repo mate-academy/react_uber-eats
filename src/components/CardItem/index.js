@@ -4,12 +4,12 @@ import {
   selectRestaurantCurency,
 } from '../../store/selector';
 
-const mapState2Props = state => ({
+const mapStateToProps = state => ({
   restaurantCurency: selectRestaurantCurency(state),
 });
 
 const Enhanced = connect(
-  mapState2Props,
+  mapStateToProps,
 )(CardItem);
 
 export { Enhanced as CardItem };
