@@ -20,6 +20,7 @@ class Header extends React.Component {
     zIndex: '1',
     top: 0,
     boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 10px',
+    maxWidth: 1900,
   };
 
   search = (event) => {
@@ -59,7 +60,7 @@ class Header extends React.Component {
           style={imgStyle}
           width="14"
           height="14"
-          src="/img/location.svg"
+          src="img/location.svg"
         />
         <span>{option.name}</span>
       </span>
@@ -121,7 +122,7 @@ class Header extends React.Component {
                 {
                   <>
                     <svg
-                      style={{ width: 21, height: 21 }}
+                      style={{ width: 24, height: 24 }}
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -144,7 +145,7 @@ class Header extends React.Component {
                 }
               >
                 <SelectSearch
-                  autofocus
+                  autofocus={locationSearchOpen}
                   options={this.state.options}
                   renderOption={this.renderListFunction}
                   onBlur={this.blurDiscard}
@@ -158,10 +159,19 @@ class Header extends React.Component {
                 />
               </div>
               <span className="delivery_btn--header">
-                <img
-                  src={`${process.env.PUBLIC_URL}/img/time.png`}
-                  alt=""
-                />
+                <svg
+                  style={{ width: 24, height: 24 }}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#000000"
+                    d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,
+                    4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,
+                    10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,
+                    22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,
+                    7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                  />
+                </svg>
                 <select
                   name="dest_style"
                   id="time_select-2"

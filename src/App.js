@@ -97,7 +97,11 @@ class App extends React.Component {
         <Footer />
         <button
           type="button"
-          style={{ display: (shoudStick ? 'flex' : 'none') }}
+          style={
+            {
+              display: (shoudStick ? 'flex' : 'none'),
+            }
+          }
           className="back_btn"
           onClick={this.scrollTop}
         >

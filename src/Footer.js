@@ -4,7 +4,13 @@ const Footer = () => (
   <footer className="footer">
     <section className="footer_section">
       <div className="w_logo-container">
-        <img src={`${process.env.PUBLIC_URL}/img/white-logo.svg`} alt="" />
+        <a href="/" className="logo_link">
+          <img
+            src={`${process.env.PUBLIC_URL}/img/white-logo.svg`}
+            alt="Uber Eats"
+            className="logo footer--logo"
+          />
+        </a>
       </div>
       <div className="line_block div_underline medium_hide" />
 
@@ -33,7 +39,11 @@ const Footer = () => (
                 </option>
               </select>
             </form>
-            <div className="btn_app--container medium_show">
+            <div
+              className="btn_app--container
+                         btn_app--container__big
+                         medium_show"
+            >
               <a
                 className="app_link"
                 href="/"
@@ -161,14 +171,14 @@ const Footer = () => (
         <div className="line_block" />
       </div>
       <article className="footer_bottom-links">
-        <p className="footer_copy-n-links">© 2017 Uber Technologies Inc.</p>
+        <p className="footer_copy-n-links">© 2019 Uber Technologies Inc.</p>
         <span className="footer_links-copy-container">
           <a className="footer_copy-n-links" href="/">Privacy</a>
           <a className="footer_copy-n-links" href="/">Terms</a>
           <a className="footer_copy-n-links medium_show" href="/">Pricing</a>
         </span>
       </article>
-      <div className="footer_socials-bottom--container">
+      <div className="footer_socials-bottom--container big_hide">
         <div className="socials_container medium_show">
           <div className="big_hide">
             <a
