@@ -57,18 +57,34 @@ export class RestaurantPage extends PureComponent {
             src={heroImageUrl}
             alt={title}
           />
-          <div className="title">
-            <h1 id={uuid} className="title__name">{title}</h1>
-            <div className="title__categories">
-              {categories.join(' • ')}
+
+          <div className="wrapper-title">
+            <div className="content">
+              <div className="title">
+                <h1 id={uuid} className="title__name">{title}</h1>
+                <div className="title__categories">
+                  {categories.join(' • ')}
+                </div>
+                <div className="title__eta">
+                  {etaRange || DEFAULT_ETA_RANGE}
+                </div>
+                <div className="title__address">
+                  {`${location.address} • `}
+                  <span className="title__more">More info</span>
+                </div>
+              </div>
             </div>
-            <div className="title__eta">
-              {etaRange || DEFAULT_ETA_RANGE}
-            </div>
-            <div className="title__address">
-              {`${location.address} • `}
-              <span className="title__more">More info</span>
-            </div>
+            <div className="left-margin-block" />
+          </div>
+        </div>
+
+        <div className="title-mobile">
+          <h1 id={uuid} className="title-mobile__name">{title}</h1>
+          <div className="title-mobile__categories">
+            {categories.join(' • ')}
+          </div>
+          <div className="title-mobile__eta">
+            {etaRange || DEFAULT_ETA_RANGE}
           </div>
         </div>
         <div className="content">
