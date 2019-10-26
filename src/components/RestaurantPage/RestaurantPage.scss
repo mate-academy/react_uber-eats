@@ -70,7 +70,6 @@
 
 .restoraunt-menu {
   display: flex;
-  justify-content: space-between;
 
   overflow-x: auto;
 
@@ -84,6 +83,7 @@
     font-size: 14px;
     line-height: 21px;
     position: relative;
+    margin-right: 24px;
 
     &:not(:last-of-type) {
       margin-right: 20px;
@@ -131,20 +131,20 @@
     font-size: 28px;
     font-weight: 500;
 
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   &__categories {
     color: #757575;
 
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   &__eta {
     width: 86px;
     background-color: #f5f5f5;
 
-    margin-bottom: 18px;
+    // margin-bottom: 18px;
   }
 
   @media (max-width: $breack-point-tablet) {

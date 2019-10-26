@@ -1,14 +1,16 @@
 .card {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
   box-sizing: border-box;
   height: 160px;
 
   line-height: 21px;
   border: 1px solid #e0e0e0;
 
-  &__img,
-  &__description {
+  overflow: hidden;
+
+  &__img {
     width: 50%;
   }
 

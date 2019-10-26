@@ -1,11 +1,29 @@
+@import "../../styles/utils.scss";
+
 .section {
   --card-width: 348px;
+  --section-row-gap: 40px;
+  --section-coumn-gap: 20px;
+
+  box-sizing: border-box;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
-  gap: 40px 20px;
+  gap: var(--section-row-gap) var(--section-coumn-gap);
 
   margin-bottom: 40px;
+
+  @media (max-width: $breack-point-tablet-lg) {
+    --card-width: 340px;
+  }
+
+  @media (max-width: $breack-point-phone-lg) {
+    --section-row-gap: 20px;
+  }
+
+  @media (max-width: $breack-point-phone-sm) {
+    --card-width: 280px;
+  }
 }
 
 .title-categories {
