@@ -76,6 +76,7 @@ export class RestaurantPage extends PureComponent {
             </div>
             <div className="left-margin-block" />
           </div>
+
         </div>
 
         <div className="title-mobile">
@@ -87,6 +88,7 @@ export class RestaurantPage extends PureComponent {
             {etaRange || DEFAULT_ETA_RANGE}
           </div>
         </div>
+
         <div className="content">
           <nav className="restoraunt-menu">
             {restaurantSections

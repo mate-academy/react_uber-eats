@@ -8,15 +8,21 @@
 
   overflow: hidden;
 
-  @media (max-width: $breack-point-tablet-lg) {
-    margin-bottom: 90px;
-  }
-
   &__img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+  }
+
+  @media (max-width: $breack-point-tablet) {
+    margin-bottom: 90px;
+    height: 300px;
+  }
+
+  @media (max-width: $breack-point-phone) {
+    margin-bottom: 175px;
+    height: 255px;
   }
 }
 
@@ -26,10 +32,6 @@
   align-items: flex-start;
 
   font-size: 14px;
-
-  @media (max-width: $breack-point-tablet-lg) {
-    display: none;
-  }
 
   width: fit-content;
   background: #fff;
@@ -106,22 +108,23 @@
 }
 
 .title-mobile {
+
   display: none;
 
   position: absolute;
+  top: 200px;
 
-  width: 575px;
+  min-width: 540px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  // display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   font-size: 14px;
 
   background: #fff;
-  padding-left: 62px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 60px;
 
   &__name {
     color: #1d1d1d;
@@ -143,6 +146,16 @@
 
     margin-bottom: 18px;
   }
+
+  @media (max-width: $breack-point-tablet) {
+    display: flex;
+  }
+
+  @media (max-width: $breack-point-phone) {
+    padding: 20px;
+    min-width: 280px;
+  }
+
 }
 
 .wrapper-title {
@@ -152,6 +165,11 @@
   transform: translateY(-50%);
   width: 100%;
   background: transparent;
+
+  @media (max-width: $breack-point-tablet) {
+    display: none;
+  }
+
 }
 
 .left-margin-block {
