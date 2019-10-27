@@ -31,14 +31,14 @@ export const selectResorauntSections = createSelector(
 export const selectRestorauntItems = createSelector(
   rootSelector,
   selectResorauntSections,
-  ({ restaurantPageData }, resorauntSections) => {
+  ({ restaurantPageData }, restorauntSections) => {
     if (!restaurantPageData) {
       return [];
     }
 
     const { entitiesMap } = restaurantPageData;
 
-    return resorauntSections
+    return restorauntSections
       .map(item => ({
         ...item,
         itemUuids: item.itemUuids.map(uid => entitiesMap[uid]),
