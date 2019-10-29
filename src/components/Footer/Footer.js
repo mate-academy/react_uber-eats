@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Select from '../Select';
+
 import './Footer.scss';
 
 const Footer = () => (

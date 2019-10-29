@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+
 import './Input.scss';
 
 export class Input extends PureComponent {

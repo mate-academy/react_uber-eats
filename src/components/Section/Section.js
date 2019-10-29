@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uuidGen from 'uuidv4';
-import './Section.scss';
+
 import { CardItem } from '../CardItem';
+
+import './Section.scss';
 
 export const Section = ({ category, restaurantItems }) => {
   const { title, uuid } = category;
@@ -13,7 +14,7 @@ export const Section = ({ category, restaurantItems }) => {
     <>
       <h2 className="title-categories">{title}</h2>
       <section id={uuid} className="section">
-        {items.map(item => <CardItem {...item} key={uuidGen()} />)}
+        {items.map(item => <CardItem {...item} key={item.uuid} />)}
       </section>
     </>
   );

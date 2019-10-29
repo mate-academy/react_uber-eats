@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 import RestaurantCard from '../RestaurantCard';
-import './RestaurantListPage.scss';
 import Loader from '../Loader';
 import Error from '../Error';
+
+import './RestaurantListPage.scss';
 
 const DEFAULT_ETA_RANGE = '20 - 30 min';
 

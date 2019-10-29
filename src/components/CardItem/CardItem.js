@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import './CardItem.scss';
 
 export const CardItem = ({
@@ -8,25 +9,42 @@ export const CardItem = ({
   description,
   price,
   restaurantCurency,
-}) => (
-  <div className="card">
-    <div className="card__description">
-      <div className="card__description-wrapper">
-        <p>{title}</p>
-        <p className="card__description-info">{description}</p>
+  uuid,
+  createOrder,
+}) => {
+  const srcImage = imageUrl || './images/no_image.png';
+  const srcTitle = title || 'no-image icon';
+
+  return (
+    <div
+      id={uuid}
+      className="card"
+      onClick={event => createOrder(event.target.id)}
+      onKeyPress={event => createOrder(event.target.id)}
+      role="presentation"
+    >
+      <div id={uuid} className="card__description">
+        <div id={uuid} className="card__description-wrapper">
+          <p id={uuid}>{title}</p>
+          <p id={uuid} className="card__description-info">{description}</p>
+        </div>
+        <p id={uuid}>{`${restaurantCurency}${price}`}</p>
       </div>
-      <p>{`${restaurantCurency}${price}`}</p>
+      <div className="card__wrapper-img">
+        <img id={uuid} className="card__img" src={srcImage} alt={srcTitle} />
+      </div>
     </div>
-    {imageUrl && <img className="card__img" src={imageUrl} alt={title} />}
-  </div>
-);
+  );
+};
 
 CardItem.propTypes = {
+  uuid: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
   description: PropTypes.string,
   price: PropTypes.number.isRequired,
   restaurantCurency: PropTypes.string,
+  createOrder: PropTypes.func.isRequired,
 };
 
 CardItem.defaultProps = {

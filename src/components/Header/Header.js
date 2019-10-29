@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import Input from '../Input';
+
 import './Header.scss';
 
 export class Header extends Component {

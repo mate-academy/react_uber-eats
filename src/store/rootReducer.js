@@ -5,6 +5,8 @@ const initialState = {
   restaurantPageData: null,
   isLoading: false,
   error: null,
+  order: null,
+  showModalWindow: false,
 };
 
 export function rootReducer(state = initialState, action) {
@@ -38,6 +40,7 @@ export function rootReducer(state = initialState, action) {
         error: payload,
         restaurantsListData: null,
         restaurantPage: null,
+        order: null,
       });
     }
 
@@ -52,6 +55,24 @@ export function rootReducer(state = initialState, action) {
       return ({
         ...state,
         isLoading: false,
+      });
+    }
+
+    case ACTION_TYPES.SET_ORDER: {
+      const { payload } = action;
+
+      return ({
+        ...state,
+        order: payload,
+      });
+    }
+
+    case ACTION_TYPES.SET_MODAL_WINDOW: {
+      const { payload } = action;
+
+      return ({
+        ...state,
+        showModalWindow: payload,
       });
     }
 

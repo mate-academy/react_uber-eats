@@ -17,8 +17,7 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
-    "uuidv4": "^5.0.1"
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "@mate-academy/eslint-config-react": "*",

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import './Error.scss';
 
 export const Error = (props) => {
@@ -7,11 +8,12 @@ export const Error = (props) => {
 
   return (
     <div className="error">
+      <p className="error__text">Sorry, something wrong(</p>
       <p className="error__text">
         {message}
       </p>
       <a href="/" className="error__link">
-        Go to Home
+        Go to main page
       </a>
     </div>
   );

@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+
 import Loader from '../Loader';
-import './RestaurantPage.scss';
 import { Section } from '../Section';
+
+import './RestaurantPage.scss';
 
 const DEFAULT_ETA_RANGE = '20 - 30 min';
 

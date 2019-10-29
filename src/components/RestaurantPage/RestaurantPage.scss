@@ -70,6 +70,10 @@
 
 .restoraunt-menu {
   display: flex;
+  position: sticky;
+  top: 80px;
+
+  background: #fff;
 
   overflow-x: auto;
 

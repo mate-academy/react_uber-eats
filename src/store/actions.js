@@ -1,4 +1,4 @@
-const BASE_URL = 'https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants/';
+const BASE_URL = 'https://mate-uber-eats-api.herokuapp.com/api/v1/';
 
 export const ACTION_TYPES = {
   SAVE_RESTAURANTS: 'SAVE_RESTAURANTS',
@@ -6,6 +6,8 @@ export const ACTION_TYPES = {
   SET_LOAD_RESTAURANTS_ERROR: 'SET_LOAD_RESTAURANTS_ERROR',
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
+  SET_ORDER: 'SET_ORDER',
+  SET_MODAL_WINDOW: 'SET_MODAL_WINDOW',
 };
 
 const saveRestaurants = data => ({
@@ -31,9 +33,19 @@ const stopLoading = () => ({
   type: ACTION_TYPES.STOP_LOADING,
 });
 
+export const setOrder = uuid => ({
+  type: ACTION_TYPES.SET_ORDER,
+  payload: uuid,
+});
+
+export const setModalWindow = bool => ({
+  type: ACTION_TYPES.SET_MODAL_WINDOW,
+  payload: bool,
+});
+
 export const loadRestaurants = () => (dispatch) => {
   dispatch(startLoading());
-  fetch(BASE_URL)
+  fetch(`${BASE_URL}restaurants/`)
     .then(response => response.json())
     .then(({ data }) => dispatch(saveRestaurants(data)))
     .catch(error => dispatch(setRestaurantsError(error.message)))
@@ -42,9 +54,19 @@ export const loadRestaurants = () => (dispatch) => {
 
 export const loadRestaurantPage = id => (dispatch) => {
   dispatch(startLoading());
-  fetch(`${BASE_URL}${id}`)
+  fetch(`${BASE_URL}restaurants/${id}`)
     .then(response => response.json())
     .then(({ data }) => dispatch(saveRestaurantPage(data)))
+    .catch(error => dispatch(setRestaurantsError(error.message)))
+    .finally(() => dispatch(stopLoading()));
+};
+
+export const loadMenuItem = uuid => (dispatch) => {
+  dispatch(setModalWindow(true));
+  dispatch(startLoading());
+  fetch(`${BASE_URL}menu-items/${uuid}`)
+    .then(response => response.json())
+    .then(({ data }) => dispatch(setOrder(data)))
     .catch(error => dispatch(setRestaurantsError(error.message)))
     .finally(() => dispatch(stopLoading()));
 };

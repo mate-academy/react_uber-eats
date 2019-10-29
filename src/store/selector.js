@@ -76,3 +76,19 @@ export const selectIsLoading = createSelector(
   rootSelector,
   ({ isLoading }) => isLoading
 );
+
+export const selectOrder = createSelector(
+  rootSelector,
+  ({ order }) => {
+    if (!order) {
+      return [];
+    }
+
+    return order;
+  }
+);
+
+export const selectStateModalWindow = createSelector(
+  rootSelector,
+  ({ showModalWindow }) => showModalWindow
+);
