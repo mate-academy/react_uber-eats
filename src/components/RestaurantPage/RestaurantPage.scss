@@ -89,6 +89,8 @@
     position: relative;
     margin-right: 24px;
 
+    cursor: pointer;
+
     &:not(:last-of-type) {
       margin-right: 20px;
     }

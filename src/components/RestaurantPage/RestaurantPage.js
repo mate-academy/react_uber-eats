@@ -19,6 +19,18 @@ export const RestaurantPage = ({
     window.scrollTo(0, 0);
   }, [params.uuid, loadRestaurantPage]);
 
+  const handleClickItemMenu = (id) => {
+    const sectionId = id.slice(2);
+    const section = document.getElementById(sectionId);
+    const positionSection = section.getBoundingClientRect();
+
+    window.scrollTo({
+      left: 0,
+      top: positionSection.y - 170,
+      behavior: 'smooth',
+    });
+  };
+
   if (!restaurantPageData) {
     return <Loader />;
   }
@@ -94,13 +106,16 @@ export const RestaurantPage = ({
         <nav className="restoraunt-menu">
           {restaurantSections
             .map(item => (
-              <a
-                href={`#${item.uuid}`}
+              <span
+                id={`m_${item.uuid}`}
                 className="restoraunt-menu__item"
                 key={item.uuid}
+                onClick={event => handleClickItemMenu(event.target.id)}
+                onKeyPress={event => handleClickItemMenu(event.target.id)}
+                role="presentation"
               >
                 {item.title}
-              </a>
+              </span>
             ))
           }
         </nav>
