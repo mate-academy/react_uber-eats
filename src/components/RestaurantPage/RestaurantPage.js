@@ -26,7 +26,7 @@ export const RestaurantPage = ({
 
     window.scrollTo({
       left: 0,
-      top: positionSection.y - 170,
+      top: positionSection.y + window.scrollY - 170,
       behavior: 'smooth',
     });
   };
