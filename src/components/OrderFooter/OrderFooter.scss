@@ -1,6 +1,20 @@
+@import '../../styles/utils.scss';
+
 .counter {
   display: flex;
   align-items: center;
+
+  @media (max-width: $breack-point-phone) {
+    margin-bottom: 20px;
+  }
+
+  &__mobile {
+    display: none;
+    @media (max-width: $breack-point-phone) {
+      display: inline;
+      margin-right: auto;
+    }
+  }
 
   &__button {
 
@@ -9,6 +23,16 @@
     transition: box-shadow 300ms;
 
     margin-right: 17px;
+
+    @media (max-width: $breack-point-phone) {
+      &:not(:last-of-type) {
+        margin-right: 26px;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
 
     &:hover {
       cursor: pointer;
@@ -22,6 +46,12 @@
 
   &__item {
     margin-right: 17px;
+
+    @media (max-width: $breack-point-phone) {
+      &:not(:last-of-type) {
+        margin-right: 26px;
+      }
+    }
   }
 }
 

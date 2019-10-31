@@ -1,3 +1,5 @@
+@import '../../styles/utils.scss';
+
 .modal{
   z-index: 2;
   position: fixed;
@@ -20,6 +22,12 @@
     min-height: 300px;
     min-width: 400px;
     overflow-y: auto;
+
+    @media (max-width: $breack-point-tablet) {
+      width: 100%;
+      margin: 0;
+      height: 100%;
+    }
 
     &__button-close {
       position: absolute;
@@ -48,6 +56,10 @@
       font-weight: 500;
       line-height: 21px;
       margin-bottom: 8px;
+
+      @media (max-width: $breack-point-phone) {
+        font-size: 24px;
+      }
     }
 
     &__description {
@@ -61,6 +73,10 @@
       display: flex;
       align-items: center;
       margin: 24px 0;
+
+      @media (max-width: $breack-point-phone) {
+        display: block;
+      }
     }
   }
 }

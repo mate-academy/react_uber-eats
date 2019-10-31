@@ -15,6 +15,9 @@ export const OrderFooter = ({
   return (
     <>
       <div className="counter">
+        <div className="counter__mobile">
+          Quantity
+        </div>
         <img
           className="counter__button"
           src="./images/button-minus.svg"
