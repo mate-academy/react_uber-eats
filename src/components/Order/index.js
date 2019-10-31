@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { Order } from './Order';
-import { setOrder, setModalWindow } from '../../store/actions';
+import { hideModalWindow } from '../../store/actions';
 import {
   selectOrder,
   selectRestaurantsListError,
@@ -14,12 +14,9 @@ const mapStateToProps = state => ({
   isLoading: selectIsLoading(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  deleteOrder: () => {
-    dispatch(setModalWindow(false));
-    dispatch(setOrder(null));
-  },
-});
+const mapDispatchToProps = {
+  hideModalWindow,
+};
 
 const Enhanced = connect(
   mapStateToProps,

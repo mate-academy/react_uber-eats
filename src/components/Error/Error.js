@@ -8,7 +8,7 @@ export const Error = (props) => {
 
   return (
     <div className="error">
-      <p className="error__text">Sorry, something wrong(</p>
+      <p className="error__text">something wrong</p>
       <p className="error__text">
         {message}
       </p>

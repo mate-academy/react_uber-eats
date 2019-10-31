@@ -3,6 +3,7 @@
 .error {
   @extend %absolute-center;
   flex-flow: column nowrap;
+  padding: 10px;
 
   &__text {
     font-size: 30px;

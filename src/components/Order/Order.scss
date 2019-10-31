@@ -11,8 +11,11 @@
     position: relative;
     margin: 80px auto 0;
     background: #fff;
-    width: 716px;
+    width: 720px;
+    height: 100%;
     min-height: 300px;
+    min-width: 400px;
+    overflow: auto;
 
     &__button-close {
       position: absolute;
@@ -28,10 +31,12 @@
       }
     }
 
+    &__wrapper-img {
+      margin-bottom: 50px;
+    }
+
     &__img {
-      display: block;
-      height: 375px;
-      margin: 0 auto 50px;
+      width: 100%;
     }
 
     &__wrapper-content {
@@ -42,7 +47,7 @@
       font-size: 30px;
       font-weight: 500;
       line-height: 21px;
-      margin-bottom: 2px;
+      margin-bottom: 8px;
     }
 
     &__description {
@@ -53,40 +58,8 @@
 
     &__footer {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-    }
-
-    &__button-order {
-      width: 485px;
-      height: 55px;
-      background: #247a00;
-      color: #fff;
-      font-weight: 500;
-
-      &:hover {
-        cursor: pointer;
-      }
+      margin: 24px 0;
     }
   }
 }
-
-.counter {
-  display: flex;
-  align-items: center;
-
-  &__button {
-    &:not(:last-of-type) {
-      margin-right: 17px;
-    }
-
-    &:hover{
-      cursor: pointer;
-    }
-  }
-
-  &__item {
-    margin-right: 17px;
-  }
-}
-

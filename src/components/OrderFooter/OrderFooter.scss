@@ -1,0 +1,59 @@
+.counter {
+  display: flex;
+  align-items: center;
+
+  &__button {
+
+    border-radius: 50%;
+
+    transition: box-shadow 300ms;
+
+    margin-right: 17px;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    }
+  }
+
+  &__item {
+    margin-right: 17px;
+  }
+}
+
+.button-order {
+  display: flex;
+  justify-content: flex-end;
+
+  height: 55px;
+  width: 100%;
+  background: #247a00;
+  color: #fff;
+
+  font-weight: 500;
+
+  transition: box-shadow 300ms;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(36,122,0, 0.5);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 10px rgba(36,122,0, 0.5);
+  }
+
+  &__amount {
+    margin-right: 16px;
+    display: block;
+    white-space: nowrap;
+  }
+
+  &__wrapper-number {
+    width: 100%;
+  }
+}

@@ -7,6 +7,7 @@ const initialState = {
   error: null,
   order: null,
   showModalWindow: false,
+  orderAmount: null,
 };
 
 export function rootReducer(state = initialState, action) {
@@ -60,10 +61,12 @@ export function rootReducer(state = initialState, action) {
 
     case ACTION_TYPES.SET_ORDER: {
       const { payload } = action;
+      const price = payload ? payload.price : null;
 
       return ({
         ...state,
         order: payload,
+        orderAmount: price,
       });
     }
 

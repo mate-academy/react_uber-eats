@@ -33,15 +33,21 @@ const stopLoading = () => ({
   type: ACTION_TYPES.STOP_LOADING,
 });
 
-export const setOrder = uuid => ({
+const setOrder = uuid => ({
   type: ACTION_TYPES.SET_ORDER,
   payload: uuid,
 });
 
-export const setModalWindow = bool => ({
+const setModalWindow = bool => ({
   type: ACTION_TYPES.SET_MODAL_WINDOW,
   payload: bool,
 });
+
+export const hideModalWindow = () => (dispatch) => {
+  dispatch(setModalWindow(false));
+  dispatch(setOrder(null));
+  dispatch(setRestaurantsError(null));
+};
 
 export const loadRestaurants = () => (dispatch) => {
   dispatch(startLoading());
