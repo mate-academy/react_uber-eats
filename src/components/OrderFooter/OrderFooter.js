@@ -3,8 +3,14 @@ import PropTypes from 'prop-types';
 
 import './OrderFooter.scss';
 
-export const OrderFooter = ({ hideModalWindow, orderAmount, currencyCode }) => {
+export const OrderFooter = ({
+  hideModalWindow,
+  orderAmount,
+  currencyCode,
+  altPrice,
+}) => {
   const [countItem, changeCountItem] = useState(1);
+  const totalAmount = orderAmount || altPrice;
 
   return (
     <>
@@ -46,7 +52,7 @@ export const OrderFooter = ({ hideModalWindow, orderAmount, currencyCode }) => {
         <span
           className="button-order__amount"
         >
-          {`${(orderAmount * countItem).toFixed(2)} ${currencyCode}`}
+          {`${(totalAmount * countItem).toFixed(2)} ${currencyCode}`}
         </span>
       </button>
     </>
@@ -57,4 +63,9 @@ OrderFooter.propTypes = {
   hideModalWindow: PropTypes.func.isRequired,
   orderAmount: PropTypes.number.isRequired,
   currencyCode: PropTypes.string.isRequired,
+  altPrice: PropTypes.number,
+};
+
+OrderFooter.defaultProps = {
+  altPrice: 0,
 };

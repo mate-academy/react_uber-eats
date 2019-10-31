@@ -108,3 +108,8 @@ export const selectCurencyCode = createSelector(
     return restaurantPageData.currencyCode;
   }
 );
+
+export const selectAltDataModal = createSelector(
+  rootSelector,
+  ({ altDataModalWindow }) => altDataModalWindow
+);

@@ -1,0 +1,22 @@
+.customizations-sections {
+  &__head {
+    background: #f5f5f5;
+    padding: 17px 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  &__count {
+    font-size: 14px;
+    line-height: 21px;
+    color: #757575;
+  }
+
+  &__options {
+    padding: 17px 0;
+  }
+}

@@ -11,6 +11,7 @@ export const CardItem = ({
   restaurantCurency,
   uuid,
   createOrder,
+  setAltData,
 }) => {
   const srcImage = imageUrl || './images/no_image.png';
   const srcTitle = title || 'no-image icon';
@@ -19,7 +20,17 @@ export const CardItem = ({
     <div
       id={uuid}
       className="card"
-      onClick={event => createOrder(event.target.id)}
+      onClick={
+        (event) => {
+          createOrder(event.target.id);
+          setAltData({
+            title,
+            imageUrl,
+            itemDescription: description,
+            price,
+          });
+        }
+      }
       onKeyPress={event => createOrder(event.target.id)}
       role="presentation"
     >
@@ -45,6 +56,7 @@ CardItem.propTypes = {
   price: PropTypes.number.isRequired,
   restaurantCurency: PropTypes.string,
   createOrder: PropTypes.func.isRequired,
+  setAltData: PropTypes.shape().isRequired,
 };
 
 CardItem.defaultProps = {

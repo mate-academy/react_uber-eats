@@ -7,7 +7,13 @@ const initialState = {
   error: null,
   order: null,
   showModalWindow: false,
-  orderAmount: null,
+  orderAmount: 0,
+  altDataModalWindow: {
+    title: '',
+    imageUrl: '',
+    itemDescription: '',
+    price: 0,
+  },
 };
 
 export function rootReducer(state = initialState, action) {
@@ -40,7 +46,6 @@ export function rootReducer(state = initialState, action) {
         ...state,
         error: payload,
         restaurantsListData: null,
-        restaurantPage: null,
         order: null,
       });
     }
@@ -61,7 +66,7 @@ export function rootReducer(state = initialState, action) {
 
     case ACTION_TYPES.SET_ORDER: {
       const { payload } = action;
-      const price = payload ? payload.price : null;
+      const price = payload ? payload.price : 0;
 
       return ({
         ...state,
@@ -76,6 +81,15 @@ export function rootReducer(state = initialState, action) {
       return ({
         ...state,
         showModalWindow: payload,
+      });
+    }
+
+    case ACTION_TYPES.SET_ALT_DATA_MODAL_WINDOW: {
+      const { payload } = action;
+
+      return ({
+        ...state,
+        altDataModalWindow: payload,
       });
     }
 

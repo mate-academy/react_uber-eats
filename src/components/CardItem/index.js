@@ -4,7 +4,7 @@ import { CardItem } from './CardItem';
 import {
   selectRestaurantCurency,
 } from '../../store/selector';
-import { loadMenuItem } from '../../store/actions';
+import { loadMenuItem, setAltDataModalWindow } from '../../store/actions';
 
 const mapStateToProps = state => ({
   restaurantCurency: selectRestaurantCurency(state),
@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   createOrder: uuid => dispatch(loadMenuItem(uuid)),
+  setAltData: data => dispatch(setAltDataModalWindow(data)),
 });
 
 const Enhanced = connect(
