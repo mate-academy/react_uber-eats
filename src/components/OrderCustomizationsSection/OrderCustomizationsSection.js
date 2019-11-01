@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { OrderCustomizationsOptions } from '../OrderCustomizationsOptions';
+
 import './OrderCustomizationsSection.scss';
 
 export const OrderCustomizationsSection = ({ customizations }) => {
@@ -22,7 +24,7 @@ export const OrderCustomizationsSection = ({ customizations }) => {
 
       <div className="customizations-sections__options">
         <div className="modal__wrapper-content">
-          {options.map(item => <p>{item.title}</p>)}
+          {options.map(item => <OrderCustomizationsOptions option={item} />)}
         </div>
       </div>
     </div>
