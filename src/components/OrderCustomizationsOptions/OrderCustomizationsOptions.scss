@@ -1,9 +1,11 @@
+@import '../../styles/utils.scss';
+
 .option {
   height: 48px;
 
   display: flex;
   align-items: center;
-  
+
   &__checkbox {
     display: flex;
 
@@ -51,6 +53,10 @@
 
     &-input:checked + &-title::after {
       content: "V";
+    }
+
+    &-input:focus + &-title::before {
+      outline: $color-green auto 5px;
     }
   }
 
