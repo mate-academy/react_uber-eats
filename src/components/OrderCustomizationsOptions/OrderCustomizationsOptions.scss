@@ -29,14 +29,19 @@
       }
 
       &::after {
-        content: "V";
+        content: "";
         display: inline-block;
-        font-size: 16px;
-        font-weight: 500;
+        height: 8px;
+        width: 12px;
+
         position: absolute;
-        left: 6px;
-        top: 50%;
-        transform: translateY(-50%);
+        left: 5px;
+        top: 4px;
+
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+
+        transform: rotate(-45deg);
       }
     }
 
@@ -52,7 +57,11 @@
     }
 
     &-input:checked + &-title::after {
-      content: "V";
+      content: "";
+    }
+
+    &-input:checked + &-title::before {
+      background: $color-green;
     }
 
     &-input:focus + &-title::before {
