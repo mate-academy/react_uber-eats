@@ -1,0 +1,57 @@
+.option {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  
+  &__checkbox {
+    display: flex;
+
+    &-title {
+      display: flex;
+      position: relative;
+
+      font-size: 12px;
+      line-height: 21px;
+
+      &::before {
+        content: "";
+        display: inline-block;
+
+        height: 22px;
+        width: 22px;
+
+        margin-right: 14px;
+
+        border: 1px solid #d3d3d3;
+      }
+
+      &::after {
+        content: "V";
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        position: absolute;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-input {
+      opacity: 0;
+
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    &-input + &-title::after {
+      content: none;
+    }
+
+    &-input:checked + &-title::after {
+      content: "V";
+    }
+  }
+
+}

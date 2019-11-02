@@ -24,7 +24,9 @@ export const OrderCustomizationsSection = ({ customizations }) => {
 
       <div className="customizations-sections__options">
         <div className="modal__wrapper-content">
-          {options.map(item => <OrderCustomizationsOptions option={item} />)}
+          {options.map(
+            item => <OrderCustomizationsOptions option={item} key={item.uuid} />
+          )}
         </div>
       </div>
     </div>
