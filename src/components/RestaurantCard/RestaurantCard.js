@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './RestaurantCard.scss';
@@ -9,7 +8,7 @@ function RestaurantCard(props) {
     title,
     categories,
     etaRange,
-    uuid,
+    // uuid,
   } = props;
 
   return (
@@ -29,7 +28,7 @@ function RestaurantCard(props) {
 RestaurantCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  uuid: PropTypes.string.isRequired,
+  // uuid: PropTypes.string.isRequired,
   categories: PropTypes.arrayOf(PropTypes.string),
   etaRange: PropTypes.string,
 };
