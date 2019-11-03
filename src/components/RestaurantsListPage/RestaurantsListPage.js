@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RestaurantCard from '../RestaurantCard/RestaurantCard';
+import './RestaurantsListPage.scss';
 // heroImageUrl, title, categories, etaRange.errorMessage, uuid
 
 const DEFAULT_ETA_RANGE = '20 - 30 min';
@@ -16,7 +17,7 @@ class RestaurantsListPage extends Component {
     const { restaurantsData } = this.props;
 
     return (
-      <div>
+      <div className="restaurants-list">
         {restaurantsData.map((restaurant) => {
           const {
             uuid,
@@ -33,7 +34,7 @@ class RestaurantsListPage extends Component {
               title={title}
               imageUrl={heroImageUrl}
               categories={categories}
-              etaRange={etaRange ? etaRange.errorMessage : DEFAULT_ETA_RANGE}
+              etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
             />
           );
         })}
