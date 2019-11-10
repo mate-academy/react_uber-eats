@@ -15,7 +15,7 @@ export const Error = (props) => {
         Go to Home
       </a>
     </div>
-  )
+  );
 };
 
 Error.propTypes = {

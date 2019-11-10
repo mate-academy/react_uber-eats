@@ -15,6 +15,20 @@ export const selectorRestaurants = createSelector(
   }
 );
 
+export const selectorRestaurant = createSelector(
+  rootSelector,
+  ({ restaurantData }) => {
+    if (!restaurantData) {
+      return [];
+    }
+
+    const { feedItems, storesMap } = restaurantData;
+
+    //return feedItems.map(({ uuid }) => storesMap[uuid]);
+    return restaurantData;
+  }
+);
+
 export const selectRestaurantsListError = createSelector(
   rootSelector,
   ({ error }) => error,

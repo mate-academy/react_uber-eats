@@ -4,6 +4,7 @@ const initialStore = {
   restaurantsListData: null,
   isLoading: false,
   error: null,
+  restaurantData: null,
 };
 
 export function rootReducer(state = initialStore, action) {
@@ -15,6 +16,16 @@ export function rootReducer(state = initialStore, action) {
         ...state,
         error: null,
         restaurantsListData: payload,
+      };
+    }
+
+    case ACTION_TYPES.SAVE_RESTAURANT: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        error: null,
+        restaurantData: payload,
       };
     }
 

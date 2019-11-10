@@ -1,0 +1,146 @@
+.restaurant{
+  &-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+
+    margin-bottom: 20px;
+  }
+
+  &__menu {
+
+    &-items {
+      display: flex;
+      overflow-x: scroll;
+
+      margin: 30px 0 40px;
+    }
+  }
+
+  &__items {
+    margin-bottom: 40px;
+  }
+}
+
+.menu {
+  &__item {
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-btn {
+      position: relative;
+      height: 42px;
+      margin-right: 24px;
+
+      font-size: 14px;
+      color: #000;
+
+      white-space: nowrap;
+      transition: color 300ms;
+
+      &:hover {
+        color: #5FB709;
+      }
+
+      &:hover::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #000;
+        bottom: 0;
+        left: 0;
+
+        animation: menu-hover-animation 0.3s;
+      }
+    }
+  }
+}
+
+.container {
+  --item-width: 348px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+  gap: 40px 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  height: 158px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e0e0e0;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 16px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    padding-top: 16px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+
+    color: #000;
+  }
+
+  &__description {
+    display: inline-block;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-bottom: 17px;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #626262;
+  }
+
+  &__price {
+
+
+    padding-bottom: 16px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+
+    color: #000;
+  }
+
+  &__img {
+    max-width: 156px;
+    height: 158px;
+  }
+}
+
+@keyframes menu-hover-animation {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}

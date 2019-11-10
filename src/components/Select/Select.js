@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Select.scss';
 
+const uuidv1 = require('uuid/v1');
+
 export const Select = (props) => {
   const {
     name,
@@ -19,8 +21,12 @@ export const Select = (props) => {
         onChange={onSelect}
         className="select__input"
       >
-        {options.map(({ value: optionValue, label }) => (
-          <option value={optionValue} selected={value === optionValue}>
+        {options.map(({ value: optionValue, label }, index) => (
+          <option
+            value={optionValue}
+            selected={value === optionValue}
+            key={uuidv1()}
+          >
             {label}
           </option>
         ))}

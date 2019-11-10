@@ -1,24 +1,40 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import { Route } from 'react-router-dom';
 
 import {
   RestaurantsListPage,
 } from './components/RestaurantsListPage/index';
+import {
+  RestaurantPage,
+} from './components/RestaurantPage/index';
 
 import './App.scss';
 
-import { store } from './store';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 
-export const App = () => (
-  <Provider store={store}>
-    <Header />
-    <div className="page">
-      <main className="content">
-        <RestaurantsListPage />
-      </main>
-    </div>
-    <Footer />
-  </Provider>
-);
+const uuidv1 = require('uuid/v1');
+
+export const App = ({ restaurantsData }) => {
+
+  return (
+    <>
+      <Header />
+      <div className="page">
+        <main className="content">
+          <Route
+            exact
+            path="/"
+            component={RestaurantsListPage}
+          />
+
+          <Route
+            path="/restaurants/:id"
+            component={RestaurantPage}
+          />
+        </main>
+      </div>
+      <Footer />
+    </>
+  );
+};

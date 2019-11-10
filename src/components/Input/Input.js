@@ -26,41 +26,51 @@ export class Input extends PureComponent {
       placeholder,
       name,
       className,
+      isSmall,
+      label,
     } = this.props;
 
     const { isFocused } = this.state;
 
-    const rootClass = cx('control', {
-      'control--focused': isFocused,
+    const inputWrappeClass = cx('control__input-wrapper', {
+      'control__input-wrapper--focused': isFocused,
       [className]: !!className,
     });
 
-    return (
-      <div
-        className={rootClass}
-        onClick={this.focus}
-        role="presentation"
-      >
-        {!!iconUrl && (
-          <img
-            src={iconUrl}
-            alt={placeholder}
-            className="control_icon"
-          />
-        )}
+    const inputClass = cx('control_input', {
+      'control_input--small': isSmall,
+      'control_input--time': type === 'time',
+    });
 
-        <input
-          ref={this.inputRef}
-          type={type}
-          value={value}
-          onChange={onChange}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
-          name={name}
-          placeholder={placeholder}
-          className="control_input "
-        />
-      </div>
+    return (
+      <label className="control">
+        {label && (
+          <p className="control__label">
+            {label}
+          </p>
+        )}
+        <div className={inputWrappeClass}>
+          {!!iconUrl && (
+            <img
+              src={iconUrl}
+              alt={placeholder}
+              className="control_icon"
+            />
+          )}
+
+          <input
+            ref={this.inputRef}
+            type={type}
+            value={value}
+            onChange={onChange}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            name={name}
+            placeholder={placeholder}
+            className={inputClass}
+          />
+        </div>
+      </label>
     );
   }
 }
@@ -73,6 +83,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   iconUrl: PropTypes.string,
   className: PropTypes.string,
+  isSmall: PropTypes.bool,
+  label: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -80,4 +92,6 @@ Input.defaultProps = {
   placeholder: '',
   iconUrl: '',
   className: '',
+  label: '',
+  isSmall: true,
 };
