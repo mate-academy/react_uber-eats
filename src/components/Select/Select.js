@@ -20,16 +20,28 @@ const Select = (props) => {
         className="select__input"
       >
         {options.map(({ value: optionValue, label }) => (
-          <option key={optionValue} value={optionValue} selected={value === optionValue}>
+          <option
+            key={optionValue}
+            value={optionValue}
+            selected={value === optionValue}
+          >
             {label}
           </option>
         ))}
       </select>
       {!!iconUrl && (
-        <img className="select__icon" src={iconUrl} alt="select icon" />
+        <img
+          className="select__icon"
+          src={iconUrl}
+          alt="select icon"
+        />
       )}
 
-      <img className="select__arrow" src="./images/arrow.svg" alt="arrow" />
+      <img
+        className="select__arrow"
+        src="./images/arrow.svg"
+        alt="arrow"
+      />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import './Header.scss';
 import { Input } from '../Input/Input';
@@ -51,11 +52,13 @@ render() {
     <header className="header">
       <div className="content">
         <div className="header__inner">
-          <img
-            src="./images/logo.svg"
-            alt="Uber Eats"
-            className="header__logo"
-          />
+          <a href="#">
+            <img
+              src="./images/logo.svg"
+              alt="Uber Eats"
+              className="header__logo"
+            />
+          </a>
           <div className="header__delivery-info">
             <Input
               name="address"

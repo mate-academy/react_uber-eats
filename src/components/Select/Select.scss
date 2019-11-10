@@ -10,6 +10,7 @@
     padding: 10px 40px;
     color: white;
     cursor: pointer;
+    outline: none;
   }
 
   &__icon {
@@ -27,5 +28,6 @@
   }
   & option {
     background: #262626;
+    outline: none;
   }
 }
