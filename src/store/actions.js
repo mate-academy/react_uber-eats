@@ -26,7 +26,11 @@ const stoptLoading = () => ({
 export const loadRestaurants = () => (dispatch) => {
   dispatch(startLoading());
 
-  fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants')
+  fetch(
+    Math.random() < 0.5
+      ? ''
+      : 'https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants'
+  )
     .then(res => res.json())
     .then(({ data }) => {
       dispatch(saveRestaurants(data));

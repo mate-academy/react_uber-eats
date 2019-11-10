@@ -1,4 +1,5 @@
-*,
+@import "utils";
+
 ::after,
 ::before {
   box-sizing: border-box;
@@ -23,8 +24,22 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
 .content {
   max-width: 1160px;
   padding: 0 34px;
   margin: 0 auto;
+
+  @media (max-width: $breakpoint-phone) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    max-width: 1520px;
+  }
 }
