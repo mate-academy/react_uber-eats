@@ -21,7 +21,7 @@ export const App = ({ restaurantsData }) => {
     <>
       <Header />
       <div className="page">
-        <main className="content">
+        <main>
           <Route
             exact
             path="/"

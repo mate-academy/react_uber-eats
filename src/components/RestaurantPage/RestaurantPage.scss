@@ -70,6 +70,7 @@
 .item {
   display: flex;
   justify-content: space-between;
+
   height: 158px;
 
   box-sizing: border-box;
@@ -80,6 +81,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    width: 50%;
 
     padding: 0 16px;
   }
@@ -121,9 +124,15 @@
     color: #000;
   }
 
+  &-right {
+    display: flex;
+  }
+
   &__img {
     max-width: 156px;
-    height: 158px;
+    height: 155px;
+
+    align-self: center;
   }
 }
 

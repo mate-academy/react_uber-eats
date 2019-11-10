@@ -32,27 +32,29 @@ export class RestaurantsListPage extends Component {
     }
 
     return (
-      <div className="restaurants-list">
-        {restaurantsData.map((restaurant) => {
-          const {
-            uuid,
-            title,
-            heroImageUrl,
-            categories,
-            etaRange,
-          } = restaurant;
+      <div className="content">
+        <div className="restaurants-list">
+          {restaurantsData.map((restaurant) => {
+            const {
+              uuid,
+              title,
+              heroImageUrl,
+              categories,
+              etaRange,
+            } = restaurant;
 
-          return (
-            <RestaurantsCard
-              key={uuid}
-              uuid={uuid}
-              title={title}
-              imageUrl={heroImageUrl}
-              categories={categories}
-              etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
-            />
-          );
-        })}
+            return (
+              <RestaurantsCard
+                key={uuid}
+                uuid={uuid}
+                title={title}
+                imageUrl={heroImageUrl}
+                categories={categories}
+                etaRange={etaRange ? etaRange.text : DEFAULT_ETA_RANGE}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }
