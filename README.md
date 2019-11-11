@@ -1,5 +1,8 @@
 # React Uber Eats
 
+* [Uber eats](https://vyacheslav-p.github.io/react_uber-eats/)
+
+
 ## Task
 Follow this [Video guide](https://www.youtube.com/playlist?list=PL7FuXFaDeEX0MZnk9tC1tNfjoN4hnc6tl)
 
