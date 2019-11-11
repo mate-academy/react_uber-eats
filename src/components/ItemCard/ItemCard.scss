@@ -1,0 +1,82 @@
+@import '../../styles/vars.scss';
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  height: 157px;
+  padding: 0;
+
+  text-align: initial;
+
+  border: 1px solid $color-grey;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__title {
+    text-decoration: underline;
+  }
+
+  &__left-section {
+    min-width: 182px;
+    max-width: 542px;
+    height: 157px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: $break-point-mobile) {
+      min-width: 148px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    color: $color-dark-grey;
+    font-size: 14px;
+    line-height: 21px;
+
+    margin-bottom: 14px;
+    overflow: auto;
+    position: relative;
+
+    @media (max-width: $break-point-mobile) {
+      width: 116px;
+    }
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__img-container {
+    min-width: 159px;
+    width: 159px;
+    overflow: hidden;
+    height: 155px;
+    border-left: 1px solid $color-grey;
+    @media (max-width: $break-point-mobile) {
+      width: 125px;
+      min-width: 125px;
+    }
+  }
+
+  &__img {
+    height: 155px;
+    width: 159px;
+
+    @media (max-width: $break-point-mobile) {
+      width: 125px;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@import "../../styles/vars.scss";
+
+.header {
+  padding: 16px 0;
+  background: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  &__logo {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: $break-point-mobile) {
+      height: 14px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 80px;
+
+  }
+
+  &__delivery-info {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 7vw;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-left: 40px;
+    padding: 12px;
+    white-space: nowrap;
+    color: #1f1f1f;
+
+    &:hover {
+      color: lighten(#1f1f1f, 30%);
+    }
+  }
+
+  &__toogle-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    display: none;
+
+    @media (max-width: $break-point-tablet) {
+      display: flex;
+    }
+  }
+
+  &__toogle-btn {
+    cursor: pointer;
+    padding: 12px 0;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+    &:focus {
+      opacity: 0.4;
+    }
+  }
+
+  &__locations-info {
+    position: relative;
+    margin-right: 1rem;
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    border: 1px solid $color-grey;
+    border-top: none;
+
+    z-index: 2;
+  }
+
+  &__dropdown-button {
+    height: 48px;
+    width: 100%;
+    padding: 12px;
+
+    background-color: #fff;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(#fff, 5);
+      cursor: pointer;
+    }
+  }
+
+  &__dropdown-button-img {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__dropdown-button-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+
+  padding-top: 30px;
+
+  @media (max-width: $break-point-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}

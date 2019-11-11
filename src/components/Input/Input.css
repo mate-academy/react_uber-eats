@@ -1,0 +1,60 @@
+.control__input-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 11px;
+  border: 1px solid #e0e0e0;
+  transition: border-color 0.3s;
+}
+.control__input-wrapper--focused {
+  border-color: #5fb709;
+  animation: focusAnimation 1s;
+}
+.control__icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+.control__input {
+  max-height: 24px;
+  line-height: 24px;
+}
+@media (max-width: 956px) {
+  .control__input--small {
+    max-width: 75px;
+  }
+}
+.control__input--time {
+  max-width: 84px;
+}
+.control__input--time::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+.control__label {
+  font-size: 14px;
+  color: #626262;
+  margin-bottom: 8px;
+}
+.control + .control {
+  margin-left: 20px;
+}
+
+@keyframes focusAnimation {
+  0% {
+    border-color: #e0e0e0;
+  }
+  25% {
+    border-top-color: #5fb709;
+  }
+  50% {
+    border-right-color: #5fb709;
+  }
+  75% {
+    border-bottom-color: #5fb709;
+  }
+  100% {
+    border-left-color: #5fb709;
+  }
+}
+
+/*# sourceMappingURL=Input.css.map */
