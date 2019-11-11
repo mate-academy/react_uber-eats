@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Input } from '../Input';
 import './Header.scss';
 
 export class Header extends PureComponent {
   state = {
     address: '',
+    addressPlaceholder: '',
     time: '',
     search: '',
     isMobileSearchVisible: false,
@@ -18,14 +20,14 @@ export class Header extends PureComponent {
     });
   }
 
-  toogleSearch = () => {
+  toggleSearch = () => {
     this.setState(prevState => ({
       isMobileSearchVisible: !prevState.isMobileSearchVisible,
       isMobileDeliveryInfoVisible: false,
     }));
   }
 
-  toogleDeliveryInfo = () => {
+  toggleDeliveryInfo = () => {
     this.setState(prevState => ({
       isMobileDeliveryInfoVisible: !prevState.isMobileDeliveryInfoVisible,
       isMobileSearchVisible: false,
@@ -39,14 +41,27 @@ export class Header extends PureComponent {
     });
   }
 
+  handleDropdownVariantsClick = (id, title) => {
+    const { addCurrentLocation } = this.props;
+
+    addCurrentLocation(id);
+    this.setState({
+      addressPlaceholder: title,
+      address: '',
+    });
+  }
+
   render() {
     const {
       address,
+      addressPlaceholder,
       time,
       search,
       isMobileSearchVisible,
       isMobileDeliveryInfoVisible,
     } = this.state;
+
+    const { locationsVariants } = this.props;
 
     return (
       <header className="header">
@@ -60,13 +75,48 @@ export class Header extends PureComponent {
               />
             </Link>
             <div className="header__delivery-info">
-              <Input
-                name="address"
-                value={address}
-                placeholder="Address"
-                iconUrl="./images/locationImg.svg"
-                onChange={this.handleChange}
-              />
+              <div className="header__locations-info">
+                <Input
+                  name="address"
+                  value={address}
+                  placeholder={addressPlaceholder || 'Address'}
+                  iconUrl="./images/locationImg.svg"
+                  onChange={this.handleChange}
+                />
+
+                {
+                  this.state.address && (
+                    <div className="header__dropdown" id="header__dropdown">
+                      {
+                        locationsVariants
+                          .filter(({ title }) => title
+                            .toLowerCase()
+                            .includes(this.state.address.toLowerCase()))
+                          .map(({ title, id }) => (
+                            <button
+                              className="header__dropdown-button"
+                              type="button"
+                              key={id}
+                              onClick={() => this
+                                .handleDropdownVariantsClick(id, title)}
+                            >
+                              <Link to="/">
+                                <img
+                                  src="./images/locationImg.svg"
+                                  alt="search icon"
+                                  className="header__dropdown-button-img"
+                                />
+                                <p className="header__dropdown-button-title">
+                                  {title}
+                                </p>
+                              </Link>
+                            </button>
+                          ))
+                      }
+                    </div>
+                  )
+                }
+              </div>
               <Input
                 name="time"
                 type="time"
@@ -87,7 +137,7 @@ export class Header extends PureComponent {
               <button
                 type="button"
                 className="header__toogle-btn"
-                onClick={this.toogleDeliveryInfo}
+                onClick={this.toggleDeliveryInfo}
               >
                 <img
                   src="./images/locationImg.svg"
@@ -97,7 +147,7 @@ export class Header extends PureComponent {
               <button
                 type="button"
                 className="header__toogle-btn"
-                onClick={this.toogleSearch}
+                onClick={this.toggleSearch}
               >
                 <img
                   src="./images/headerSearchIcon.svg"
@@ -106,7 +156,7 @@ export class Header extends PureComponent {
               </button>
             </div>
             <a className="header__link" href="##">
-              Sign In
+            Sign In
             </a>
           </div>
           {(isMobileSearchVisible || isMobileDeliveryInfoVisible) && (
@@ -123,26 +173,26 @@ export class Header extends PureComponent {
                 />
               )}
               {isMobileDeliveryInfoVisible && (
-              <>
-                <Input
-                  label="Where"
-                  name="time"
-                  type="time"
-                  value={time}
-                  onChange={this.handleChange}
-                  placeholder="Time"
-                  isSmall={false}
-                />
-                <Input
-                  label="To"
-                  name="address"
-                  value={address}
-                  placeholder="Address"
-                  iconUrl="./images/locationImg.svg"
-                  onChange={this.handleChange}
-                  isSmall={false}
-                />
-              </>
+                <>
+                  <Input
+                    label="Where"
+                    name="time"
+                    type="time"
+                    value={time}
+                    onChange={this.handleChange}
+                    placeholder="Time"
+                    isSmall={false}
+                  />
+                  <Input
+                    label="To"
+                    name="address"
+                    value={address}
+                    placeholder="Address"
+                    iconUrl="./images/locationImg.svg"
+                    onChange={this.handleChange}
+                    isSmall={false}
+                  />
+                </>
               )}
               <button
                 type="button"
@@ -161,3 +211,15 @@ export class Header extends PureComponent {
     );
   }
 }
+
+Header.propTypes = {
+  addCurrentLocation: PropTypes.func.isRequired,
+  locationsVariants: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  })),
+};
+
+Header.defaultProps = {
+  locationsVariants: [],
+};

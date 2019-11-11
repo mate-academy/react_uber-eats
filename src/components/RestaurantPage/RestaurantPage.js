@@ -10,11 +10,20 @@ export class RestaurantPage extends React.Component {
   }
 
   componentDidMount() {
-    const { loadRestaurantInfo, match } = this.props;
+    const {
+      loadRestaurantInfo,
+      match,
+      loadLocationsVariants,
+      locationsVariants,
+    } = this.props;
 
     loadRestaurantInfo(match.params.id);
 
     window.scrollTo(0, 0);
+
+    if (!locationsVariants) {
+      loadLocationsVariants();
+    }
   }
 
   handleNavLinkClick = (id) => {
@@ -102,6 +111,11 @@ export class RestaurantPage extends React.Component {
 
 RestaurantPage.propTypes = {
   loadRestaurantInfo: PropTypes.func.isRequired,
+  loadLocationsVariants: PropTypes.func.isRequired,
+  locationsVariants: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  })),
   match: PropTypes.shape({
     params: PropTypes.shape({
       tabId: PropTypes.string,
@@ -118,4 +132,8 @@ RestaurantPage.propTypes = {
   restaurantAddress: PropTypes.string.isRequired,
   restaurantEtaRange: PropTypes.string.isRequired,
   restaurantCuisineList: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+RestaurantPage.defaultProps = {
+  locationsVariants: [],
 };

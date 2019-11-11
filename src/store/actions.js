@@ -9,6 +9,8 @@ export const ACTION_TYPES = {
   CLOSE_MODAL_WINDOW: 'CLOSE_MODAL_WINDOW',
   CLEAN_MODAL_WINDOW_STATE: 'CLEAN_MODAL_WINDOW_STATE',
   SET_MENU_ITEM_ERROR: 'SET_MENU_ITEM_ERROR',
+  ADD_LOCATIONS_VARIANTS: 'ADD_LOCATIONS_VARIANTS',
+  ADD_CURRENT_LOCATION: 'ADD_CURRENT_LOCATION',
 };
 
 const saveRestaurants = data => ({
@@ -16,10 +18,13 @@ const saveRestaurants = data => ({
   payload: data,
 });
 
-export const loadRestaurants = () => (dispatch) => {
+const loadRestaurants = (
+  id = 'f6019ddf-0413-4024-b3e6-e949d8609c56'
+) => (dispatch) => {
   dispatch(startLoading());
 
-  fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants')
+  // eslint-disable-next-line max-len
+  fetch(`https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants?location=${id}`)
     .then(result => result.json())
     .then(({ data }) => dispatch(saveRestaurants(data)))
     .catch(error => dispatch(setRestaurantsError(error)))
@@ -86,3 +91,27 @@ export const closeModalWindow = () => ({
 export const cleanModalWindowState = () => ({
   type: ACTION_TYPES.CLEAN_MODAL_WINDOW_STATE,
 });
+
+const addLocationsVariantsToStore = ({ locationsMap }) => ({
+  type: ACTION_TYPES.ADD_LOCATIONS_VARIANTS,
+  payload: Object.values(locationsMap),
+});
+
+export const addCurrentLocation = id => (dispatch) => {
+  dispatch(loadRestaurants(id));
+
+  return {
+    type: ACTION_TYPES.ADD_CURRENT_LOCATION,
+    payload: id,
+  };
+};
+
+export const loadLocationsVariants = () => (dispatch, getState) => {
+  fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/locations')
+    .then(result => result.json())
+    .then(({ data }) => dispatch(addLocationsVariantsToStore(data)));
+
+  if (!getState().currentLocation) {
+    dispatch(loadRestaurants());
+  }
+};

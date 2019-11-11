@@ -243,5 +243,16 @@
   margin-top: 50%;
   transform: translate(-50%, -50%);
 }
+.menu-item-details__error-button {
+  margin-top: 2rem;
+  transition: transform 0.3s;
+}
+.menu-item-details__error-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.menu-item-details__error-text {
+  color: #5fb709;
+}
 
 /*# sourceMappingURL=MenuItemDetails.css.map */

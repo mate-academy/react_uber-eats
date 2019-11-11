@@ -1,14 +1,11 @@
-@import '../../styles/vars.scss';
+@import "../../styles/vars.scss";
 
 .header {
-  position: sticky;
-  top: 0;
   padding: 16px 0;
   background: white;
   width: 100%;
-
-  overflow: hidden;
-
+  position: sticky;
+  top: 0;
   z-index: 1;
 
   &__logo {
@@ -32,12 +29,16 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+
+    height: 80px;
+
   }
 
   &__delivery-info {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: space-between;
     margin-left: 7vw;
 
     @media (max-width: $break-point-tablet) {
@@ -85,6 +86,55 @@
     &:focus {
       opacity: 0.4;
     }
+  }
+
+  &__locations-info {
+    position: relative;
+    margin-right: 1rem;
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    border: 1px solid $color-grey;
+    border-top: none;
+
+    z-index: 2;
+  }
+
+  &__dropdown-button {
+    height: 48px;
+    width: 100%;
+    padding: 12px;
+
+    background-color: #fff;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(#fff, 5);
+      cursor: pointer;
+    }
+  }
+
+  &__dropdown-button-img {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__dropdown-button-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+
+    display: inline-block;
+    margin-left: 10px;
   }
 }
 

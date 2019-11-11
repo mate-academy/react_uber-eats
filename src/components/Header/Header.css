@@ -1,0 +1,134 @@
+.header {
+  padding: 16px 0;
+  background: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.header__logo {
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.header__logo:hover {
+  opacity: 0.7;
+}
+@media (max-width: 550px) {
+  .header__logo {
+    height: 14px;
+  }
+}
+.header__inner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.header__delivery-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 7vw;
+}
+@media (max-width: 768px) {
+  .header__delivery-info {
+    display: none;
+  }
+}
+.header__search {
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .header__search {
+    display: none;
+  }
+}
+.header__link {
+  margin-left: 40px;
+  padding: 12px;
+  white-space: nowrap;
+  color: #1f1f1f;
+}
+.header__link:hover {
+  color: #6c6c6c;
+}
+.header__toogle-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__toogle-buttons {
+    display: flex;
+  }
+}
+.header__toogle-btn {
+  cursor: pointer;
+  padding: 12px 0;
+}
+.header__toogle-btn:not(:last-of-type) {
+  margin-right: 20px;
+}
+.header__toogle-btn:focus {
+  opacity: 0.4;
+}
+.header__locations-info {
+  position: relative;
+  margin-right: 1rem;
+}
+.header__dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  z-index: 2;
+}
+.header__dropdown-button {
+  height: 48px;
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+.header__dropdown-button:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.header__dropdown-button-img {
+  width: 15px;
+  height: 15px;
+}
+.header__dropdown-button-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+}
+@media (max-width: 768px) {
+  .mobile-controls {
+    display: flex;
+  }
+}
+.mobile-controls__close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+/*# sourceMappingURL=Header.css.map */

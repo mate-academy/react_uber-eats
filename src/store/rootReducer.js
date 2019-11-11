@@ -8,6 +8,8 @@ const initialState = {
   modalWindowInfo: null,
   menuItemInfo: null,
   menuItemError: null,
+  locationsVariants: null,
+  currentLocation: null,
 };
 
 export function rootReducer(state = initialState, action) {
@@ -94,6 +96,24 @@ export function rootReducer(state = initialState, action) {
       return {
         ...state,
         menuItemError: payload,
+      };
+    }
+
+    case ACTION_TYPES.ADD_LOCATIONS_VARIANTS: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        locationsVariants: payload,
+      };
+    }
+
+    case ACTION_TYPES.ADD_CURRENT_LOCATION: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        currentLocation: payload,
       };
     }
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { RestaurantsListPage } from './RestaurantsListPage';
-import { loadRestaurants } from '../../store/actions';
+import { loadLocationsVariants } from '../../store/actions';
 import {
   selectRestaurantList,
   selectRestaurantListError,
@@ -12,9 +12,10 @@ const ImprovedRestaurantsListPage = connect(
     restaurantsListData: selectRestaurantList(state),
     error: selectRestaurantListError(state),
     isLoading: selectIsLoading(state),
+    locationsVariants: state.locationsVariants,
   }),
   {
-    loadRestaurants,
+    loadLocationsVariants,
   },
 )(RestaurantsListPage);
 

@@ -40,6 +40,7 @@ body .modal-window {
     top: 24px;
     right: 24px;
 
+    z-index: 1;
     transition: opacity 0.3s;
 
     &:hover {
@@ -47,7 +48,8 @@ body .modal-window {
       opacity: 0.8;
     }
     &::after {
-      content: '✕';
+      content: "✕";
+      z-index: 2;
       color: #000;
       font-size: 28px;
       width: 30px;
@@ -70,6 +72,8 @@ body .modal-window {
   }
 
   &__close-btn-img {
+    z-index: 1;
+
     @media (max-width: $break-point-mobile-lg) {
       width: 26px;
       height: 26px;

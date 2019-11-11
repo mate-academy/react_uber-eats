@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import onClickOutside from 'react-onclickoutside';
 import { Error } from '../Error';
@@ -32,6 +33,7 @@ class MenuItemDetails extends React.Component {
       customizationsList,
       isLoading,
       menuItemError,
+      closeModalWindow,
     } = this.props;
 
     return (
@@ -50,7 +52,19 @@ class MenuItemDetails extends React.Component {
         {menuItemError
           ? (
             <div className="menu-item-details__error">
-              <Error message={menuItemError} />
+              <Error message={menuItemError}>
+                <button
+                  type="button"
+                  onClick={closeModalWindow}
+                  className="menu-item-details__error-button"
+                >
+                  <Link to="/">
+                    <p className="menu-item-details__error-text">
+                      Click to close and return home
+                    </p>
+                  </Link>
+                </button>
+              </Error>
             </div>
           )
           : (

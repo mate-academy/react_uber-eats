@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { RestaurantPage } from './RestaurantPage';
-import { loadRestaurantInfo } from '../../store/actions';
+import { loadRestaurantInfo, loadLocationsVariants } from '../../store/actions';
 import {
   selectPageMainImgUrl,
   selectRestaurantSections,
@@ -20,9 +20,11 @@ const ImprovedRestaurantPage = connect(
     restaurantAddress: selectRestaurantAddress(state),
     restaurantEtaRange: selectRestaurantEtaRange(state),
     restaurantCuisineList: selectRestaurantCuisineList(state),
+    locationsVariants: state.locationsVariants,
   }),
   {
     loadRestaurantInfo,
+    loadLocationsVariants,
   }
 )(RestaurantPage);
 

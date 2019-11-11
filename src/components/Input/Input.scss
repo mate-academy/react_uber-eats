@@ -6,11 +6,11 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-  
+
     padding: 11px;
-  
+
     border: 1px solid $color-grey;
-  
+
     transition: border-color 0.3s;
 
     &--focused {
@@ -43,7 +43,7 @@
       }
     }
   }
-  
+
   &__label {
     font-size: 14px;
     color: #626262;

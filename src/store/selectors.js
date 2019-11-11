@@ -35,11 +35,6 @@ export const isDataLoadingSelector = createSelector(
   rootSelector,
   ({ isLoading }) => isLoading
 );
-//
-// export const isModalWindowOpenedSelector = createSelector(
-//   rootSelector,
-//   ({ modalWindowInfo }) => modalWindowInfo.isOpened
-// );
 
 export const modalWindowOpenedIDSelector = createSelector(
   rootSelector,

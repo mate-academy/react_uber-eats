@@ -216,7 +216,6 @@
     }
   }
 
-
   &__checkbox-remove {
     -webkit-appearance: none;
 
@@ -229,7 +228,7 @@
     position: relative;
 
     &:checked:before {
-      content: '✔';
+      content: "✔";
       height: 16px;
       width: 16px;
       color: #247a00;
@@ -279,5 +278,20 @@
     margin-left: 50%;
     margin-top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  &__error-button {
+    margin-top: 2rem;
+
+    transition: transform 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+
+  &__error-text {
+    color: $color-green;
   }
 }

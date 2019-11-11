@@ -38,6 +38,7 @@ body .modal-window {
   position: absolute;
   top: 24px;
   right: 24px;
+  z-index: 1;
   transition: opacity 0.3s;
 }
 .modal-window__close-btn:hover {
@@ -46,6 +47,7 @@ body .modal-window {
 }
 .modal-window__close-btn::after {
   content: "✕";
+  z-index: 2;
   color: #000;
   font-size: 28px;
   width: 30px;
@@ -62,6 +64,9 @@ body .modal-window {
     top: 3.5px;
     left: 7.5px;
   }
+}
+.modal-window__close-btn-img {
+  z-index: 1;
 }
 @media (max-width: 620px) {
   .modal-window__close-btn-img {

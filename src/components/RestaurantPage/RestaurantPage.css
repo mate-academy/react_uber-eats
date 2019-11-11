@@ -51,6 +51,11 @@
   font-size: 36px;
   margin-bottom: 16px;
 }
+@media (max-width: 768px) {
+  .restaurant-page__main-title {
+    font-size: 28px;
+  }
+}
 .restaurant-page__description {
   margin-bottom: 16px;
   color: #757575;

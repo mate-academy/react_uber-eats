@@ -55,6 +55,10 @@
   &__main-title {
     font-size: 36px;
     margin-bottom: 16px;
+
+    @media (max-width: $break-point-tablet) {
+      font-size: 28px;
+    }
   }
 
   &__description {

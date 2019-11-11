@@ -9,9 +9,16 @@ const DEFAULT_ETA_RANGE = '20 - 30 min';
 
 export class RestaurantsListPage extends React.Component {
   componentDidMount() {
-    const { loadRestaurants } = this.props;
+    const {
+      loadLocationsVariants,
+      locationsVariants,
+    } = this.props;
 
-    loadRestaurants();
+    if (!locationsVariants) {
+      loadLocationsVariants();
+    }
+
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -57,13 +64,18 @@ export class RestaurantsListPage extends React.Component {
 
 RestaurantsListPage.propTypes = {
   restaurantsListData: PropTypes.arrayOf(PropTypes.shape({})),
-  loadRestaurants: PropTypes.func.isRequired,
+  loadLocationsVariants: PropTypes.func.isRequired,
+  locationsVariants: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  })),
   error: PropTypes.string,
   isLoading: PropTypes.bool,
 };
 
 RestaurantsListPage.defaultProps = {
   restaurantsListData: [],
+  locationsVariants: [],
   error: null,
   isLoading: false,
 };
