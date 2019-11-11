@@ -1,3 +1,45 @@
+.restaurant-page {
+  &__img-wrapper {
+    height: 380px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    top: -250px;
+
+    background-color: #fff;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 150%;
+    color: #1d1d1d;
+  }
+
+  .categories {
+    font-size: 14px;
+    line-height: 21px;
+    color: #757575;
+  }
+
+  .location {
+    font-size: 14px;
+    line-height: 150%;
+    color: #000;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
 .restaurant{
   &-title {
     font-weight: 500;

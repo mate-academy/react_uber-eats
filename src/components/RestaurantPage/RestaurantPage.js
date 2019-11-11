@@ -39,8 +39,19 @@ export class RestaurantPage extends Component {
     return (
       <div className="restaurant-page restaurant">
         <div className="hero">
-          <div className="restaurant-page__img">
-            <img src={hero} alt="" />
+          <div className="restaurant-page__img-wrapper">
+            <img src={hero} alt="" className="restaurant-page__img" />
+          </div>
+
+          <div className="content">
+            <div className="restaurant-page__title">
+              <h1 className="title">{title}</h1>
+              <p className="categories">{categories}</p>
+              <div className="location-wrapper">
+                <p className="location">{location && location.address}</p>
+                <a href="#">More info</a>
+              </div>
+            </div>
           </div>
         </div>
 
