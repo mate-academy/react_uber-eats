@@ -1,0 +1,31 @@
+.header {
+  position: sticky;
+  top: 0;
+
+  height: 80px;
+  padding-top: 16px;
+  background-color: #fff;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__delivery-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__link {
+    margin-left: 20px;
+    color: #1f1f1f;
+  }
+}

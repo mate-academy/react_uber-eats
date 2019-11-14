@@ -1,0 +1,29 @@
+.control {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 262px;
+
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition: border-color 0.3s ease-in-out;
+
+  padding-left: 8px;
+  margin-right: 20px;
+
+  &.focus {
+    border-color: #5fb709;
+  }
+
+  &.time {
+    width: 72px;
+  }
+
+  &__icon {
+    height: 14px;
+    width: 14px;
+
+    margin-right: 4px;
+  }
+}
