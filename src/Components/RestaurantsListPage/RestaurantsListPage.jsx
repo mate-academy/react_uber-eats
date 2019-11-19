@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { loadRestaurants } from '../../Store/actions';
-import { selectRestaurantsList } from '../../Store/selectors';
+import { selectRestaurantsList, selectRestaurantsListError, selectIsLoading } from '../../Store/selectors';
 import PropTypes from 'prop-types';
 import RestaurantCard from '../RestaurantCard/RestaurantCard';
+import { Loader } from '../Loader/Loader';
+import { Error } from '../Error/Error';
 import './RestaurantListPage.scss';
 
 const ETA_RANGE = '15 - 20 min';
@@ -16,7 +18,15 @@ class RestaurantsListPage extends React.Component {
   }
 
   render() {
-    const { restaurantListData } = this.props;
+    const { restaurantListData, isLoading, error } = this.props;
+
+    if (isLoading) {
+      return <Loader />;
+    }
+
+    if (error) {
+      return <Error massage={error} />;
+    }
 
     return (
       <div className="restaurants-list">
@@ -44,6 +54,8 @@ class RestaurantsListPage extends React.Component {
 
 const putStateToProps = state => ({
   restaurantListData: selectRestaurantsList(state),
+  error: selectRestaurantsListError(state),
+  isLoading: selectIsLoading(state),
 });
 
 const putActionsToProps = {
@@ -53,10 +65,14 @@ const putActionsToProps = {
 RestaurantsListPage.propTypes = {
   loadRestaurantsData: PropTypes.func.isRequired,
   restaurantListData: PropTypes.arrayOf({}),
+  error: PropTypes.string,
+  isLoading: PropTypes.bool,
 };
 
 RestaurantsListPage.defaultProps = {
   restaurantListData: [],
+  error: null,
+  isLoading: false,
 };
 
 export default connect(

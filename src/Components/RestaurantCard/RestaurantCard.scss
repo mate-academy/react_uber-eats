@@ -1,8 +1,18 @@
 .restaurant-card {
-  height: 367px;
+  --card-height: 367px;
+
+  height: var(--card-height);
   width: 100%;
 
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    --card-height: 378px;
+  }
+
+  @media (max-width: 600px) {
+    --card-height: 330px;
+  }
 
   &__title {
     margin: 12px 0 4px;

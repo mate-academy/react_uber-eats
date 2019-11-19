@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   background-color: #262626;
 
   &__top-part {
@@ -7,21 +8,75 @@
     padding: 63px 0 40px;
 
     border-bottom: 1px solid #c4c4c4;
+
+    @media (max-width: 550px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 465px) {
+      justify-content: center;
+      flex-direction: column;
+
+      padding: 40px 0 0;
+      border-bottom: none;
+    }
   }
 
   &__bottom-part {
     display: flex;
     font-display: row;
     padding: 40px 0 92px;
+
+    @media (max-width: 850px) {
+      padding: 30px 0 62px;
+    }
+
+    @media (max-width: 550px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 465px) {
+      flex-direction: column;
+    }
+
+    & > .footer__left-part {
+      @media (max-width: 465px) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__last-part {
+    @media (max-width: 550px) {
+      margin-right: 9vw;
+    }
   }
 
   &__left-part {
     width: 37vw;
+
+    @media (max-width: 465px) {
+      width: 100%;
+    }
   }
 
   &__right-part {
     display: flex;
-    font-display: row;
+
+    @media (max-width: 1150px) {
+      margin-top: 70px;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+
+      margin-top: 0;
+    }
+
+    @media (max-width: 465px) {
+      margin-top: 15px;
+    }
 
     & > .links:first-child {
       margin-right: 10vw;
@@ -31,18 +86,87 @@
   &__copy {
     font-size: 14px;
     color: #fff;
+    white-space: nowrap;
+
+    @media (max-width: 850px) {
+      margin-top: 15px;
+    }
+
+    @media (max-width: 550px) {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 465px) {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
   }
 
   &__bottom-links {
     display: flex;
-    flex-direction: row;
 
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+
+    &-mobile {
+      display: flex;
+    }
+  }
+
+  &__social-icons {
+    @media (max-width: 750px) {
+      display: none;
+    }
+
+    &-mobile {
+      display: none;
+
+      @media (max-width: 750px) {
+        display: flex;
+      }
+
+      @media (max-width: 465px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__button-up {
+    display: none;
+    position: absolute;
+    background-color: #59bd5a;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+
+    height: 64px;
+    width: 64px;
+
+    bottom: 43px;
+    right: 20px;
+
+    @media (max-width: 465px) {
+      display: flex;
+    }
+
+    &:hover {
+      animation-name: slidein;
+      animation-duration: 0.4s;
+      animation-iteration-count: 2;
+      background-color: darken(#59bd5a, 15%);
+    }
   }
 }
 
 .main {
   display: flex;
-  flex-direction: row;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+  }
 
   &__logo {
     margin: 7px 40px 0 0;
@@ -52,9 +176,29 @@
 .mobile-apps {
   margin-top: 55px;
 
+  @media (max-width: 1150px) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 465px) {
+    display: flex;
+    justify-content: space-around;
+  }
+
   &__img {
     margin-right: 20px;
     cursor: pointer;
+
+    @media (max-width: 465px) {
+      height: 34px;
+      width: 105px;
+    }
+
+    &:first-of-type {
+      @media (max-width: 850px) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -62,6 +206,19 @@
   &__link {
     color: #fff;
     line-height: 35px;
+
+    @media (max-width: 850px) {
+      line-height: 50px;
+    }
+
+    @media (max-width: 550px) {
+      line-height: 40px;
+    }
+
+    @media (max-width: 465px) {
+      font-size: 13px;
+      line-height: 35px;
+    }
 
     &--padright {
       margin-right: 48px;
@@ -72,13 +229,41 @@
 .links-social {
   margin-top: 56px;
 
+  @media (max-width: 465px) {
+    margin-top: 0;
+  }
+
   &__link > img {
     height: 16px;
     width: 16px;
     margin-right: 24px;
+
+    @media (max-width: 850px) {
+      height: 20px;
+      width: 20px;
+    }
   }
 }
 
 .medium {
   font-weight: 500;
+
+  @media (max-width: 465px) {
+    font-weight: 400;
+  }
+}
+
+@keyframes slidein {
+  0% {
+
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

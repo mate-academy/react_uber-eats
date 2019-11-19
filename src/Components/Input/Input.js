@@ -12,7 +12,7 @@ export class Input extends React.PureComponent {
   handleFocus = () => this.setState({ isFocused: true });
   handleBlur = () => this.setState({ isFocused: false })
   focus = () => this.inputRef.current.focus();
-  
+
   render() {
     const {
       icon,

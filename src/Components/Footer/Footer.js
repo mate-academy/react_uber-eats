@@ -89,6 +89,25 @@ const Footer = () => (
           <p className="footer__copy">
             © 2019 Uber Technologies Inc.
           </p>
+          <div className="footer__social-icons-mobile">
+            <ul className="footer__bottom-links-mobile links-social">
+              <li className="links-social__list">
+                <a href="#" className="links-social__link">
+                  <img src="./img/facebook.svg" alt="Facebook" />
+                </a>
+              </li>
+              <li className="links-social__list">
+                <a href="#" className="links-social__link">
+                  <img src="./img/twiter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li className="links-social__list">
+                <a href="#" className="links-social__link">
+                  <img src="./img/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="footer__last-part">
           <ul className="footer__bottom-links links">
@@ -130,6 +149,13 @@ const Footer = () => (
         </div>
       </div>
     </div>
+    <a
+      href="#"
+      type="button"
+      className="footer__button-up"
+    >
+      &#11014;
+    </a>
   </footer>
 );
 
