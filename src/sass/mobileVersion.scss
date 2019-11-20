@@ -1,0 +1,274 @@
+/* stylelint-disable */
+@media (max-width: 639px) {
+  .header {
+    &__top {
+      margin: 0;
+      padding: 0 20px;
+      min-width: 0;
+    }
+
+    &__auth button:first-child {
+      display: none;
+    }
+
+    &__logo {
+      height: 20px;
+      width: auto;
+    }
+
+    &__location-input {
+      display: none;
+    }
+
+    &__dropdown-select {
+      display: none;
+    }
+  }
+
+  .catalog {
+    grid-template-columns: repeat(1, 100%);
+    padding: 0 20px;
+    margin: 10px 0 0;
+
+    &__empty {
+      color: #000000;
+      text-align: center;
+      margin: 40px 0 18px;
+      font-size: 16px;
+      line-height: 17px;
+    }
+
+    &__empty--secondary-info {
+      text-align: center;
+      font-size: 11px;
+      color: #3d3c3c;
+    }
+
+    &__all-btn {
+      font-size: 14px;
+      width: 60%;
+      margin: 24px auto 60px;
+    }
+  }
+
+  .main-section {
+    &__search {
+      display: block;
+      margin: 0 20px;
+    }
+
+    &__search label {
+      width: 100%;
+    }
+
+    &__search-field {
+      font-size: 16px;
+      line-height: 24px;
+      width: 100%;
+      margin-top: 100px;
+      padding: 8px 0px 12px 30px;
+      border: none;
+      border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+      color: #1d1d1d;
+      text-overflow: ellipsis;
+      outline: none;
+      font: inherit;
+      background: url(../images/icons/search.svg) left 5px bottom 15px no-repeat;
+    }
+
+    &__delivery {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      grid-gap: 8px 16px;
+      padding-bottom: 30px;
+      padding-top: 10px;
+      margin: 0 20px;
+    }
+
+    &__heading {
+      display: inline;
+      margin: 0 20px;
+      font-size: 22px;
+      line-height: 34px;
+      font-weight: normal;
+    }
+  }
+
+  .footer {
+    padding: 0 20px;
+
+    &__section {
+      margin: 0;
+    }
+
+    &__nav {
+      grid-template-columns: 1fr;
+      padding-bottom: 12px;
+    }
+
+    &__app {
+      display: none;
+    }
+
+    &__section {
+      grid-template-columns: 1fr;
+    }
+
+    &__rights {
+      grid-template-columns: 1fr;
+      padding-bottom: 30px;
+    }
+
+    &__nav-name {
+      padding-bottom: 30px;
+    }
+
+    &__app {
+      margin: 10px 0 10px;
+    }
+
+    &__rights-info a {
+      padding: 0;
+      padding-bottom: 20px;
+    }
+
+    &__rights>* {
+      flex-flow: column;
+      padding-bottom: 15px;
+    }
+
+    &__nav-lang-input {
+      width: 100%;
+      padding: 12px 10px 12px 40px;
+    }
+
+    .hr {
+      margin: 30px 0;
+    }
+
+    &__rights>p {
+      font-size: 13px;
+      padding-bottom: 20px;
+    }
+
+    &__logo-section-mobile {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .appstore img,
+    .gplay img {
+      width: 124px;
+      height: 37px;
+    }
+
+    .hr-mobile {
+      display: block;
+      margin: 30px 0;
+    }
+
+    .social__buttons {
+      display: none;
+    }
+  }
+
+  .restaurant {
+    &__menu {
+      height: 60px;
+      white-space: nowrap;
+    }
+
+    &__menu-title {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__menu-time-info {
+      font-size: 10px;
+    }
+
+    &__image {
+      margin: 0;
+      padding: 0;
+      height: 256px;
+    }
+
+    &__item-catalog {
+      border: none;
+      border-top: 1px solid #E0E0E0;
+    }
+
+    &__items-catalog {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+
+    &__main-title {
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+
+    .main-section__delivery {
+      margin: 0px 20px;
+    }
+
+    .main-section__search-field {
+      margin-top: 130px;
+    }
+
+    &__submenu {
+      display: none;
+    }
+
+    &__section {
+      margin: 0 20px;
+    }
+
+    &__main-details {
+      top: 200px;
+      left: 5%;
+      width: 100%;
+      max-width: 90%;
+      padding: 20px;
+    }
+
+    &__item-catalog--image {
+      height: 100px;
+      min-width: 100px;
+      width: 100px;
+    }
+
+    &__item-catalog--image img {
+      width: 100px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__item-catalog-info {
+      width: 180px;
+      max-width: 80%;
+    }
+  }
+
+  .sinir {
+    display: none;
+  }
+
+  .modal {
+    &-content {
+      width: 320px !important;
+    }
+
+    &-footer {
+      flex-flow: column;
+    }
+
+    &-header img {
+      height: 256px !important;
+    }
+
+    &-footer>:not(:first-child) {
+      margin-top: 15px;
+  }
+}
+}

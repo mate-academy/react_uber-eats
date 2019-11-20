@@ -1,1 +1,86 @@
+@import "./sass/loadingStart.css";
+@import "./sass/variable.css";
+@import "./sass/loading.css";
+@import "./sass/header.css";
+@import "./sass/footer.css";
+@import "./sass/homePageCatalog.css";
+@import "./sass/mainSection.css";
+@import "./sass/restaurantPage.css";
+@import "./sass/tablet.css";
+@import "./sass/mobileVersion.css";
+@import "./sass/modalWindow.css";
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+
+* :active,
+* :hover,
+* :focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+button {
+  padding: 0;
+}
+
+p,
+ul,
+h1,
+h2,
+label {
+  margin: 0;
+}
+
+hr {
+  margin-top: 0;
+  background-color: #e0e0e0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.arrow-to-top {
+  display: block;
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: #59bd5a;
+  border: none;
+  border-radius: 2px;
+  background-image: url(./images/btn-up.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+
+.arrow-displayed {
+  display: block;
+  opacity: 1;
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 639px) {
+  .arrow-to-top {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

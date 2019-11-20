@@ -1,0 +1,176 @@
+/* stylelint-disable */
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 80px;
+    height: 80px;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    min-width: 964px;
+    width: 100%;
+    padding: 28px 80px;
+    margin: 0 auto;
+  }
+
+  &__fixed {
+    box-shadow: 0px 0px 10px #d6d3d3;
+  }
+
+  &__logo {
+    height: 24px;
+    width: 146px;
+    margin-right: 64px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 48px;
+  }
+
+  &__button:not(:first-child) {
+    padding: 0 16px;
+  }
+
+  &__top button {
+    border: none;
+    background: white;
+    font-size: 16px;
+    font-family: Roboto;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  &__top button:last-child {
+    margin: 0;
+  }
+
+  &__top button span {
+    margin-left: 5px;
+  }
+
+  &__top button::after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    transition: all .3s ease-in-out;
+  }
+
+  &__top button:hover::after,
+  &__top button:focus::after {
+    width: 100%;
+  }
+
+  &__location-section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__location-input {
+    display: flex;
+    background: #f5f5f5;
+    padding: 12px 16px;
+    border-bottom: 1.5px solid black;
+    margin-right: 25px;
+  }
+
+  &__location-input * {
+    padding-right: 7px;
+    display: flex;
+    background: #f5f5f5;
+  }
+
+  &__location-input button {
+    background: #f5f5f5;
+    color: #757575;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__location-input input {
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    animation-duration: 100ms;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 9.5vw;
+    }
+  }
+
+  &__vertical-line {
+    border-left: 1.5px solid #e0e0ee;
+    padding: 0;
+    margin: 0 16px;
+  }
+
+  &__dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+  }
+
+  &__dropdown-child {
+    display: grid;
+    padding: 8px 0px;
+    background-color: white;
+    position: absolute;
+  }
+
+  &__dropdown-child button::after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 1.5px;
+    margin: 0 16px;
+    width: 0%;
+    transition: width .1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &__dropdown-child button:hover::after {
+    width: 0;
+  }
+
+  &__dropdown-child button:hover {
+    background: #f5f5f5;
+  }
+
+  &__dropdown-child button {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__top &__active {
+    background-color: #f5f5f5;
+  }
+
+  &__top &__active::after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 1.5px;
+    width: 100%;
+  }
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,80 @@
+/* stylelint-disable */
+.main-section__search {
+  display: none;
+}
+
+.main-section__delivery {
+  display: none;
+}
+
+.main-section__search-field::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.main-section__search-field:-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.main-section__search-field::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.main-section__search-field::placeholder {
+  opacity: 0.5;
+}
+
+.main-section__heading {
+  display: none;
+}
+
+.header__delivery--adress {
+  border: 1px solid #e0e0e0;
+  height: 40px;
+  width: 100%;
+  border-radius: 2px;
+  font-size: 16px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  background: url(../images/icons/location.svg) 12px center no-repeat;
+  padding-left: 35px;
+}
+
+.header__delivery--asap {
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  height: 40px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  background-color: #fff;
+}
+
+.header__delivery--adress::-webkit-input-placeholder {
+  color: black;
+}
+
+.header__delivery--adress:-ms-input-placeholder {
+  color: black;
+}
+
+.header__delivery--adress::-ms-input-placeholder {
+  color: black;
+}
+
+.header__delivery--adress::placeholder {
+  color: black;
+}
+
+.header__delivery--text {
+  font-weight: 300;
+  color: #626262;
+  font-size: 14px;
+  line-height: 13px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=mainSection.css.map */

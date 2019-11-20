@@ -1,0 +1,255 @@
+.modal-dialog {
+  display: block;
+  max-width: 676px;
+  margin: 80px auto;
+}
+
+.modal-content {
+  width: 676px;
+}
+
+.modal-header {
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  border-bottom: none;
+}
+
+.modal-header img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.modal-header .close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(246, 246, 246);
+  border-image: initial;
+}
+
+.modal-header .close span {
+  padding-top: -5px;
+  position: absolute;
+  top: 13px;
+  left: 17px;
+}
+
+.modal__btn-plus {
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(194, 192, 192);
+}
+
+.modal__title-section {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal-title {
+  margin-top: 16px;
+  padding: 0 24px;
+}
+
+.modal__info {
+  color: rgb(84, 84, 84);
+  line-height: 20px;
+  font-size: 14px;
+  padding: 16px 24px 24px;
+  text-align: justify;
+}
+
+.modal {
+  &-body {
+    padding: 0;
+  }
+
+  &__section {
+    background: rgb(246, 246, 246);
+    padding: 16px 24px;
+  }
+
+  &__section span{
+    color: rgb(84, 84, 84);
+    line-height: 20px;
+    font-size: 14px;
+  }
+
+  &__checkbox label{
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__checkbox input{
+    display: none;
+  }
+
+  &__checkbox-fake {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    border: 1px solid rgb(226, 226, 226);
+    position: relative;
+  }
+
+  &__checkbox-fake::before {
+    content: '';
+    top: -1px;
+    right: -1px;
+    height: 22px;
+    width: 20.5px;
+    background: rgb(62, 153, 32);
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &__checkbox-fake::after {
+    content: '';
+    top: 15%;
+    left: 25%;
+    display: block;
+    transform: translate(-25%, -25%);
+    height: 10px;
+    width: 10px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &__checkbox input {
+    display: none;
+  }
+
+  &__checkbox input:checked + &__checkbox-fake::before,
+  &__checkbox input:checked + &__checkbox-fake::after {
+    opacity: 1;
+  }
+
+  &__checkbox-label {
+    display: block;
+    padding-left: 10px;
+  }
+
+  &__checkbox-label-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__section--block-btn {
+    padding: 19px 0;
+  }
+
+  .dr &__section--btn{
+    padding: 0 24px;
+  }
+
+  &__section--btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 24px;
+  }
+
+  &__section--btn span {
+    padding-left: 10px;
+  }
+
+  &__section--btn-block {
+    display: flex;
+  }
+
+  &__section-btn---quantity-change {
+    display: flex;
+  }
+
+  &__section-btn---quantity-change div{
+    padding: 0 5px;
+  }
+
+  &__btn--quantity-change {
+    border-radius: 50%;
+    background: #f6f6f6;
+    border: 1px solid #f6f6f6;
+    cursor: pointer;
+  }
+
+  &__block-checkbox {
+    padding: 16px 0;
+  }
+
+  &__block-checkbox &__checkbox label{
+    padding: 10px 24px;
+  }
+
+  &__section--instructions {
+    border: none;
+    margin: 19px 24px;
+    font-size: 14px;
+  }
+
+  &__form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form-submit div {
+    padding:0 10px;
+  }
+
+  &__form-submit--count {
+    padding-left: 10px;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 674px;
+    background: white;
+    margin: auto;
+    bottom: 0;
+    padding: 19px 24px;
+  }
+}
+
+.btn-primary {
+  background: rgb(62, 153, 32);
+  border: 1px solid rgb(62, 153, 32);
+  width: 70%;
+  height: 48px;
+}
+
+.btn-primary:hover {
+  background: rgb(44, 119, 18);
+  border: 1px solid  rgb(44, 119, 18);
+}
+
+.btn-secondary {
+  width: 48px;
+  height: 48px;
+  background: rgb(246, 246, 246);
+  border-radius: 50%;
+  border: 1px solid rgb(246, 246, 246);
+}

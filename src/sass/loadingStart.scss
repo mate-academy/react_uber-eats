@@ -1,0 +1,136 @@
+.sinir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 5;
+  top: 0;
+  animation-name: slidein-opacity ;
+  animation-duration: 0.8s;
+  animation-delay: 1.7s;
+}
+
+@keyframes slidein-opacity {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.box {
+  width:auto;
+  height:130px;
+  //background-color:#6a2e79;
+  margin:0 auto;
+  float:left;
+  font-weight: 600;
+  font-size:115px;
+}
+
+.white {
+  color:#fff;
+}
+
+.green {
+  color:rgb(27, 216, 68);
+}
+
+.green:first-child {
+  padding-left: 25px;
+}
+
+/* Step 1: Build the Animation */
+@-webkit-keyframes aniload {
+  from {-webkit-transform:translate(0px, 1000px)}
+  to   {-webkit-transform:translate(0px, 0px)}
+}
+
+@-moz-keyframes aniload {
+  from {-moz-transform:translate(0px, 1000px)}
+  to   {-moz-transform:translate(0px, 0px)}
+}
+
+@-ms-keyframes aniload {
+  from {-ms-transform:translate(0px, 1000px)}
+  to   {-ms-transform:translate(0px, 0px)}
+}
+
+@-o-keyframes aniload {
+  from {-o-transform:translate(0px, 1000px)}
+  to   {-o-transform:translate(0px, 0px)}
+}
+
+@keyframes aniload {
+  from {transform:translate(0px, 1000px)}
+  to   {transform:translate(0px, 0px)}
+}
+
+/* Step 2: Call the Animation */
+#box1 {
+  -webkit-animation:aniload 1.5s;
+  -moz-animation:aniload 1.5s;
+  -ms-animation:aniload 1.5s;
+  -o-animation:aniload 1.5s;
+  animation:aniload 1.5s;
+}
+
+#box2 {
+  -webkit-animation:aniload 0.5s;
+  -moz-animation:aniload 0.5s;
+  -ms-animation:aniload 0.5s;
+  -o-animation:aniload 0.5s;
+  animation:aniload 0.5s;
+}
+
+#box3 {
+  -webkit-animation:aniload 1.5s;
+  -moz-animation:aniload 1.5s;
+  -ms-animation:aniload 1.5s;
+  -o-animation:aniload 1.5s;
+  animation:aniload 1.5s;
+}
+
+#box4 {
+  -webkit-animation:aniload 1s;
+  -moz-animation:aniload 1s;
+  -ms-animation:aniload 1s;
+  -o-animation:aniload 1s;
+  animation:aniload 1s;
+}
+
+#box5 {
+  -webkit-animation:aniload 0.5s;
+  -moz-animation:aniload 0.5s;
+  -ms-animation:aniload 0.5s;
+  -o-animation:aniload 0.5s;
+  animation:aniload 0.5s;
+}
+
+/**.sinir:hover {
+  opacity: 0;
+  visibility: collapse;
+}*/
+.end-loader {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright{width:100%;height:auto; background-color:#171717;color:#aaa;position:fixed; bottom:0px;font:  12px Arial;padding:5px;opacity:0.4;border-top:#a00 2px solid;z-index:99999;left:0px;right:0px;}.copyright:hover{opacity:1}
+
+/* Ayhan Altınok*/

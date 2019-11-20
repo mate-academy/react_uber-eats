@@ -1,0 +1,234 @@
+/* stylelint-disable */
+@media (max-width: 639px) {
+  .header__top {
+    margin: 0;
+    padding: 0 20px;
+    min-width: 0;
+  }
+  .header__auth button:first-child {
+    display: none;
+  }
+  .header__logo {
+    height: 20px;
+    width: auto;
+  }
+  .header__location-input {
+    display: none;
+  }
+  .header__dropdown-select {
+    display: none;
+  }
+  .catalog {
+    -ms-grid-columns: (100%)[1];
+        grid-template-columns: repeat(1, 100%);
+    padding: 0 20px;
+    margin: 10px 0 0;
+  }
+  .catalog__empty {
+    color: #000000;
+    text-align: center;
+    margin: 40px 0 18px;
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .catalog__empty--secondary-info {
+    text-align: center;
+    font-size: 11px;
+    color: #3d3c3c;
+  }
+  .catalog__all-btn {
+    font-size: 14px;
+    width: 60%;
+    margin: 24px auto 60px;
+  }
+  .main-section__search {
+    display: block;
+    margin: 0 20px;
+  }
+  .main-section__search label {
+    width: 100%;
+  }
+  .main-section__search-field {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    margin-top: 100px;
+    padding: 8px 0px 12px 30px;
+    border: none;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+    color: #1d1d1d;
+    text-overflow: ellipsis;
+    outline: none;
+    font: inherit;
+    background: url(../images/icons/search.svg) left 5px bottom 15px no-repeat;
+  }
+  .main-section__delivery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 65px 1fr;
+        grid-template-columns: 65px 1fr;
+    grid-gap: 8px 16px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin: 0 20px;
+  }
+  .main-section__heading {
+    display: inline;
+    margin: 0 20px;
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: normal;
+  }
+  .footer {
+    padding: 0 20px;
+  }
+  .footer__section {
+    margin: 0;
+  }
+  .footer__nav {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 12px;
+  }
+  .footer__app {
+    display: none;
+  }
+  .footer__section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .footer__rights {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+  .footer__nav-name {
+    padding-bottom: 30px;
+  }
+  .footer__app {
+    margin: 10px 0 10px;
+  }
+  .footer__rights-info a {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .footer__rights > * {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding-bottom: 15px;
+  }
+  .footer__nav-lang-input {
+    width: 100%;
+    padding: 12px 10px 12px 40px;
+  }
+  .footer .hr {
+    margin: 30px 0;
+  }
+  .footer__rights > p {
+    font-size: 13px;
+    padding-bottom: 20px;
+  }
+  .footer__logo-section-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer .appstore img,
+  .footer .gplay img {
+    width: 124px;
+    height: 37px;
+  }
+  .footer .hr-mobile {
+    display: block;
+    margin: 30px 0;
+  }
+  .footer .social__buttons {
+    display: none;
+  }
+  .restaurant__menu {
+    height: 60px;
+    white-space: nowrap;
+  }
+  .restaurant__menu-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .restaurant__menu-time-info {
+    font-size: 10px;
+  }
+  .restaurant__image {
+    margin: 0;
+    padding: 0;
+    height: 256px;
+  }
+  .restaurant__item-catalog {
+    border: none;
+    border-top: 1px solid #E0E0E0;
+  }
+  .restaurant__items-catalog {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .restaurant__main-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+  .restaurant .main-section__delivery {
+    margin: 0px 20px;
+  }
+  .restaurant .main-section__search-field {
+    margin-top: 130px;
+  }
+  .restaurant__submenu {
+    display: none;
+  }
+  .restaurant__section {
+    margin: 0 20px;
+  }
+  .restaurant__main-details {
+    top: 200px;
+    left: 5%;
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+  }
+  .restaurant__item-catalog--image {
+    height: 100px;
+    min-width: 100px;
+    width: 100px;
+  }
+  .restaurant__item-catalog--image img {
+    width: 100px;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .restaurant__item-catalog-info {
+    width: 180px;
+    max-width: 80%;
+  }
+  .sinir {
+    display: none;
+  }
+  .modal-content {
+    width: 320px !important;
+  }
+  .modal-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .modal-header img {
+    height: 256px !important;
+  }
+  .modal-footer > :not(:first-child) {
+    margin-top: 15px;
+  }
+}
+/*# sourceMappingURL=mobileVersion.css.map */
