@@ -5,6 +5,7 @@
   width: 100%;
 
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 
   @media (max-width: 768px) {
     --card-height: 378px;
@@ -36,5 +37,13 @@
     display: inline-block;
     padding: 2px 8px;
     background-color: #f5f5f5;
+  }
+
+  &:hover {
+    transform: translateY(5px);
+  }
+
+  &:hover img {
+    opacity: 0.8;
   }
 }

@@ -4,6 +4,7 @@
 
   padding: 16px 0;
   background-color: #fff;
+  z-index: 5;
 
   &__logo {
     @media (max-width: 480px) {
@@ -49,6 +50,10 @@
   &__link {
     margin-left: 20px;
     color: #1f1f1f;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__buttons {
@@ -74,13 +79,21 @@
       background-color: #5fb709;
     }
 
+    &:hover path {
+      stroke: #fff;
+    }
+
     &:not(:last-of-type) {
       margin-right: 20px;
     }
 
-    & > img {
+    & > svg {
       height: 17px;
       width: 14px;
+
+      & > path {
+        transition: stroke 0.25s ease-in-out;
+      }
     }
   }
 
@@ -88,6 +101,10 @@
     position: absolute;
     top: 5px;
     right: 30px;
+
+    @media (max-width: 450px) {
+      right: 15px;
+    }
   }
 }
 

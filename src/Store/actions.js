@@ -5,6 +5,8 @@ export const ACTION_TYPES = {
   STOP_LOADING: 'STOP_LOADING',
 };
 
+const BASE_URL = 'https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants';
+
 const saveRestaurants = data => ({
   type: ACTION_TYPES.SAVE_RESTAURANTS,
   payload: data,
@@ -26,7 +28,7 @@ export const stopLoading = () => ({
 export const loadRestaurants = () => (dispatch) => {
   dispatch(startLoading());
 
-  fetch('https://mate-uber-eats-api.herokuapp.com/api/v1/restaurants')
+  fetch(`${BASE_URL}`)
     .then(url => url.json())
     .then(({ data }) => {
       dispatch(saveRestaurants(data));

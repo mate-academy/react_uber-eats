@@ -5,7 +5,6 @@ import './RestaurantCard.scss';
 const RestaurantCard = ({
   imageUrl,
   categories,
-  // uuid,
   title,
   etaRange,
 }) => (
@@ -30,7 +29,6 @@ const RestaurantCard = ({
 RestaurantCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   categories: PropTypes.arrayOf(PropTypes.string),
-  // uuid: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   etaRange: PropTypes.string,
 };

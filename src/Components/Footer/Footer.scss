@@ -135,7 +135,7 @@
   &__button-up {
     display: none;
     position: absolute;
-    background-color: #59bd5a;
+    background-color: #5fb709;
     border-radius: 2px;
     color: #fff;
     font-size: 30px;
@@ -156,7 +156,7 @@
       animation-name: slidein;
       animation-duration: 0.4s;
       animation-iteration-count: 2;
-      background-color: darken(#59bd5a, 15%);
+      background-color: darken(#5fb709, 15%);
     }
   }
 }
@@ -207,6 +207,10 @@
     color: #fff;
     line-height: 35px;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 850px) {
       line-height: 50px;
     }
@@ -233,14 +237,23 @@
     margin-top: 0;
   }
 
-  &__link > img {
+  &__link > svg {
     height: 16px;
     width: 16px;
     margin-right: 24px;
+    transition: fill 0.9s ease-in-out;
 
     @media (max-width: 850px) {
       height: 20px;
       width: 20px;
+    }
+
+    & > path {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:hover path {
+      fill: rgba(211, 211, 211, 0.699);
     }
   }
 }

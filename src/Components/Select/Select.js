@@ -14,12 +14,10 @@ const Select = ({
       name={name}
       className="select__input"
       onChange={onSelect}
-      value={value}
     >
       {options.map(({ value: optionValue, label }) => (
         <option
-          value={value}
-          selected={value === optionValue}
+          value={optionValue}
           className="select__option"
         >
           {label}
