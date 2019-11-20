@@ -1,0 +1,253 @@
+@import "../../../src/style/mixin-var";
+@import "../../../src/style/media";
+
+.footer {
+  padding: 50px 0 40px;
+  background: #262626;
+}
+
+.logo-white {
+  width: 100%;
+  border-bottom: 1px solid $silver;
+}
+
+.logo-white a {
+  display: flex;
+  justify-content: start;
+  background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/white-logo.svg") no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 200px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.site-map {
+  display: flex;
+  padding: 30px 0;
+  width: 100%;
+  border-bottom: 1px solid $silver;
+  &__cell {
+    display: flex;
+    flex-grow: 1;
+    min-width: 33%;
+    flex-direction: column;
+    align-items: flex-start;
+    &--wrap{
+      list-style-type: none;
+    }
+    &--language{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: row;
+      margin-bottom: 33px;
+      .site-map__language--select {
+        width: 176px;
+        height: 40px;
+        padding: 0 30%;
+        background: #3B3B3B;
+        border-radius: 2px;
+        color: #fff;
+        text-transform: uppercase;
+        outline: none ;
+        text-align: center;
+        text-align-last: center;
+        cursor: pointer;
+        border: none;
+        .site-map__language--select--option {
+          left: 33%;
+          width: 176px;
+          height: 40px;
+          outline: none ;
+          text-align: center;
+          text-align-last: center;
+          cursor: pointer;
+        }
+        &{
+          -webkit-appearance: none;
+          appearance: none;
+        }
+      }
+      &::before {
+        content: "";
+        background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/world.svg") no-repeat center;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top:12px;
+        left: 16px;
+      }
+      &::after {
+        content: "";
+        background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/arrow-bot.png") no-repeat center;
+        width: 14px;
+        height: 8px;
+        position: absolute;
+        top:16px;
+        right: 8px;
+      }
+    }
+
+    &__social .site-map__cell--social--link {
+      display: flex;
+      flex-direction: column;
+      background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/social.png") no-repeat center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      width: 92px;
+      height: 60px;
+    }
+    .site-map__cell-link {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 23px;
+      list-style: none;
+      @include font(13, 15);
+      border-bottom: 1px solid transparent;
+      transition: .3s all ease-in-out;
+
+      text-decoration: none;
+      color: #fff;
+      &:hover::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        background-color: #fff;
+        width: 7px;
+      }
+    }
+    ul li:last-child .site-map__cell-link {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.site-map__cell--social {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: space-between;
+  .site-map__cell--social--link {
+    @include font(16, 19);
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    .hashtag {
+      color: #49A144;
+    }
+  }
+
+  .site-map__cell--social--links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .social--links--facebook,
+    .social--links--twitter,
+    .social--links--instagram {
+      display: flex;
+      width: 18px;
+      height: 18px;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    .social--links--facebook {
+      background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/facebook.png") no-repeat center;
+      margin-right: 20px;
+    }
+    .social--links--twitter {
+      background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/twitter.png") no-repeat center;
+      margin-right: 20px;
+    }
+    .social--links--instagram {
+      background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/instagram.png") no-repeat center;
+    }
+  }
+}
+
+.store {
+  @include flex-center;
+  align-items: center;
+  height: 120px;
+  border-bottom: 1px solid $silver;
+  width: 100%;
+  .store__appStore--link {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/app-store.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 121px;
+    height: 40px;
+    margin-right: 40px;
+  }
+  .store__googlePlay--link {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/google-play.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 135px;
+    height: 40px;
+  }
+}
+
+.privacy {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 40px;
+
+  &__rights,
+  &__link,
+  &__terms {
+    display: flex;
+    min-width: 33%;
+    flex-grow: 1;
+    justify-content: flex-start;
+    @include font(11, 13);
+    align-items: flex-end;
+    color: #fff;
+  }
+  &__link,
+  &__terms {
+    text-decoration: none;
+  }
+}
+
+#btn-top {
+  display: none;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  z-index: 99;
+  outline: none;
+  background-color: #59bd5a;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: infinite;
+  img {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 25px;
+  }
+  &:hover {
+    background-color: #262626;
+    border: 1px solid #59bd5a;
+    transition: all 0.5s ease-in-out;
+  }
+}

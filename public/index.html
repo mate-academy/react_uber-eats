@@ -3,9 +3,119 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/TweenMax.min.js"></script>
     <title>React Uber eats</title>
   </head>
+  <style>
+    #demo{
+      color: #fff;
+      position:relative;
+      width:100vw;
+      height: 100vh;
+      background-color:#000;
+      margin:auto;
+      overflow:hidden;
+    }
+
+    #demo h3 {
+      position:absolute;
+      font-family: 'Asap', sans-serif;
+      font-weight:700;
+      margin:0;
+      padding:0;
+      width:100%;
+      text-align:center;
+      visibility:hidden;
+      font-size:120px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    h2 {
+      color:#9af600;
+      margin-left:24px;
+      margin-bottom:0px;
+    }
+    li {
+      font-family: 'Asap', sans-serif;
+      color:#999;
+      margin-bottom:10px;
+    }
+
+    a:link, a:visited, a:active{
+      color:#f60;
+    }
+  </style>
   <body>
+  <div id="demo"></div>
+  <div id="boxWrapper">
+    <div class="boxBlack">U</div>
+    <div class="boxBlack">b</div>
+    <div class="boxBlack">e</div>
+    <div class="boxBlack">r</div>
+    <div> </div>
+    <div>E</div>
+    <div>a</div>
+    <div>t</div>
+    <div>s</div>
+  </div>
     <div id="root"></div>
+  <script>
+    let body = document.querySelector("#root");
+    let demo = document.querySelector("#demo");
+    window.addEventListener('DOMContentLoaded', (event) => {
+      setInterval(function(){
+        body.style.display = "block";
+        demo.style.display = "none";
+      }, 4700);
+      body.style.display = "none";
+      demo.style.display = "block";
+    });
+    setTimeout(function(){
+    $("#boxWrapper").css({visibility:"visible"});
+    var tl = new TimelineLite({repeat: 1}),
+        letters = $("#boxWrapper div");
+    tl.staggerFrom(letters, 0.5, {opacity:0, scale:0, rotation:-180}, 0.3)
+        .staggerTo(letters, 0.3, {scale:0.8}, 0.3, 0.7);
+      TweenMax.fromTo(demo, 1, {x:0}, {x: window.innerWidth, delay:0})
+
+    }, 4000);
+
+    var container = $("#demo"),
+        _sentenceEndExp = /(\.|\?|!)$/g; //regular expression to sense punctuation that indicates the end of a sentence so that we can adjust timing accordingly
+
+    function machineGun(text) {
+      var words = text.split(" "),
+          tl = new TimelineMax({delay:0.6}),
+          wordCount = words.length,
+          time = 0,
+          word, element, duration, isSentenceEnd, i;
+
+      for(i = 0; i < wordCount; i++){
+        word = words[i];
+        isSentenceEnd = _sentenceEndExp.test(word);
+        element = $("<h3>" + word + "</h3>").appendTo(container);
+        duration = Math.max(0.5, word.length * 0.08); //longer words take longer to read, so adjust timing. Minimum of 0.5 seconds.
+        if (isSentenceEnd) {
+          duration += 0.6; //if it's the last word in a sentence, drag out the timing a bit for a dramatic pause.
+        }
+        //set opacity and scale to 0 initially. We set z to 0.01 just to kick in 3D rendering in the browser which makes things render a bit more smoothly.
+        TweenLite.set(element, {autoAlpha:0, scale:0, z:0.01});
+        //the SlowMo ease is like an easeOutIn but it's configurable in terms of strength and how long the slope is linear. See https://www.greensock.com/v12/#slowmo and https://api.greensock.com/js/com/greensock/easing/SlowMo.html
+        tl.to(element, duration, {scale:1.2,  ease:SlowMo.ease.config(0.25, 0.9)}, time)
+        //notice the 3rd parameter of the SlowMo config is true in the following tween - that causes it to yoyo, meaning opacity (autoAlpha) will go up to 1 during the tween, and then back down to 0 at the end.
+            .to(element, duration, {autoAlpha:1, ease:SlowMo.ease.config(0.25, 0.9, true)}, time);
+        time += duration - 0.05;
+        if (isSentenceEnd) {
+          time += 0.6; //at the end of a sentence, add a pause for dramatic effect.
+        }
+      }
+
+    }
+    machineGun("Order Awesome Food Online At Uber Eats");
+
+  </script>
   </body>
 </html>

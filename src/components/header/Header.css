@@ -1,0 +1,277 @@
+@media (max-width: 1440px) {
+  .container {
+    width: 1024px; }
+
+  .catalog__row {
+    grid-template-columns: repeat(3, 329px); }
+
+  #boxWrapper {
+    left: calc((100vw - 1024px) / 2); } }
+@media (max-width: 1024px) {
+  .container {
+    width: 768px; }
+
+  #boxWrapper {
+    left: calc((100vw - 680px) / 2); }
+
+  .header {
+    padding-bottom: 120px;
+    padding-left: 50px;
+    padding-right: 50px; }
+
+  .catalog__row {
+    grid-template-columns: repeat(2, 329px);
+    grid-column-gap: 19px; }
+    .catalog__row-block {
+      padding: 0 0 110px 12px; }
+
+  .header__wrapper {
+    padding: 30px 16px 0;
+    position: relative; }
+    .header__wrapper__add--info {
+      position: absolute;
+      top: 100px;
+      flex-direction: column;
+      align-items: start; }
+      .header__wrapper__add--info .location__city {
+        display: flex;
+        margin-bottom: 10px;
+        margin-right: 0; }
+    .header__wrapper__logo--link {
+      margin-right: 230px; }
+
+  .header__wrapper .search-sign .search {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    padding: 0 16px;
+    margin-right: 0; }
+  .header__wrapper .search-sign .sign a {
+    background-color: #f5f5f5;
+    padding: 12px; } }
+@media (max-width: 768px) {
+  .container {
+    width: 320px; }
+
+  #boxWrapper {
+    left: calc((100vw - 320px) / 2); }
+
+  .catalog__row {
+    grid-template-columns: repeat(1, 329px);
+    grid-column-gap: 0; }
+    .catalog__row-block {
+      padding: 0 0 110px 12px; }
+
+  .header {
+    padding: 0 20px 120px 20px; }
+
+  .catalog__row-block {
+    padding-left: 0; }
+
+  .header__wrapper__add--info {
+    top: 110px; }
+    .header__wrapper__add--info .location__city {
+      display: flex;
+      margin-bottom: 10px;
+      margin-right: 0; }
+  .header__wrapper .search-sign .search {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    margin-right: 0; }
+  .header__wrapper .search-sign .sign a {
+    position: relative; }
+  .header__wrapper .search-sign--field {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    color: #626262;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border-width: 0;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 60px;
+    border-width: 0;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000; }
+    .header__wrapper .search-sign--field::before {
+      display: inline-block;
+      margin-right: 13px;
+      content: "";
+      height: 24px;
+      width: 24px;
+      background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/search.png") no-repeat center; }
+    .header__wrapper .search-sign--field::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 10px;
+      width: 200px;
+      height: 10px;
+      background-color: #626262; }
+
+  .footer .site-map {
+    flex-direction: column; }
+    .footer .site-map__cell {
+      margin-bottom: 23px; }
+      .footer .site-map__cell--language {
+        display: none; }
+
+  .footer .site-map__cell ul li:last-child .site-map__cell-link {
+    margin-bottom: 23px; } }
+@media (max-width: 320px) {
+  .container {
+    width: 90%; } }
+.header {
+  display: block; }
+  .header__wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 28px 0 60px; }
+    .header__wrapper__logo--link {
+      margin-right: 320px; }
+    .header__wrapper__add--info {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .header__wrapper__add--info .location__city {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 60px;
+        border-width: 0;
+        outline: none;
+        background: #fff;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000; }
+        .header__wrapper__add--info .location__city::before {
+          display: inline-block;
+          margin-right: 13px;
+          content: "";
+          height: 24px;
+          width: 24px;
+          background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/location.png") no-repeat center; }
+      .header__wrapper__add--info .delivery {
+        flex-direction: row;
+        align-items: center; }
+        .header__wrapper__add--info .delivery__time {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-right: 60px;
+          border-width: 0;
+          outline: none;
+          background: #fff;
+          cursor: pointer;
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          color: #000; }
+          .header__wrapper__add--info .delivery__time::before {
+            display: inline-block;
+            margin-right: 13px;
+            content: "";
+            height: 24px;
+            width: 24px;
+            background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/delivery.png") no-repeat center; }
+    .header__wrapper .search-sign {
+      display: flex;
+      margin-left: auto;
+      align-items: center; }
+      .header__wrapper .search-sign .search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 60px;
+        border-width: 0;
+        outline: none;
+        background: #fff;
+        cursor: pointer;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000; }
+        .header__wrapper .search-sign .search::before {
+          display: inline-block;
+          margin-right: 13px;
+          content: "";
+          height: 24px;
+          width: 24px;
+          background: url("https://githubfordmitry.github.io/react_uber-eats/api/img/icons/search.png") no-repeat center; }
+      .header__wrapper .search-sign .sign a {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000;
+        color: #000;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none; }
+      .header__wrapper .search-sign--field {
+        display: none; }
+
+#boxWrapper {
+  visibility: hidden;
+  position: absolute;
+  top: 32px;
+  left: calc((100vw - 1380px) / 2); }
+
+#boxWrapper div {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  display: inline-block;
+  font-size: 44px;
+  font-weight: 600;
+  color: #59bd5a;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  /* we apply a 3d transform just to improve rendering */
+  -webkit-transform: translateZ(0.1px);
+  -moz-transform: translateZ(0.1px);
+  -o-transform: translateZ(0.1px);
+  -ms-transform: translateZ(0.1px);
+  transform: translateZ(0.1px); }
+
+#boxWrapper .boxBlack {
+  color: #1d1d1d; }
+
+/*# sourceMappingURL=Header.css.map */
