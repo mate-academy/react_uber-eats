@@ -1,0 +1,37 @@
+@import "../../styles/utils";
+
+.restaurant-card {
+  --height: 367px;
+  height: var(--height);
+  width: 100%;
+  cursor: pointer;
+
+  @media (max-width: $break-point-phone) {
+    --heigth: 330px;
+  }
+
+  &__img {
+    height: calc(var(--height) * 0.7);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-weight: 500;
+    margin: 12px 0 4px;
+  }
+
+  &__categories {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 4px;
+  }
+
+  &__eta {
+    display: inline-block;
+    font-size: 14px;
+    padding: 2px 8px;
+    background-color: #f5f5f5;
+  }
+
+}
