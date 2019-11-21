@@ -1,0 +1,99 @@
+@import "../../styles/utils";
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 16px 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+
+  &__inner {
+    @extend %flex-row-center;
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+
+    @media (max-width: $break-point-phone) {
+      height: 14px;
+    }
+  }
+
+  &__delivery-info {
+    @extend %flex-row-center;
+
+    margin-left: 7vw;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-left: 40px;
+    padding: 12px 0;
+    white-space: nowrap;
+
+    color: #1f1f1f;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__toggle-buttons {
+    display: none;
+    margin-left: auto;
+
+    cursor: pointer;
+
+    @media (max-width: $break-point-tablet) {
+      display: flex;
+    }
+  }
+
+  &__toggle-btn {
+    display: flex;
+    align-items: center;
+    padding: 11px 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: background-color 0.5s, border-color 0.5s;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &:focus {
+      border-color: $color-gray;
+      background-color: whitesmoke;
+    }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+
+  @media (max-width: $break-point-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+  }
+}

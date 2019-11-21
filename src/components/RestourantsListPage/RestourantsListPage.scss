@@ -1,0 +1,18 @@
+@import "../../styles/utils";
+
+.restaurants-list {
+  --card-width: 348px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  gap: 40px 20px;
+
+  @media (max-width: $break-point-tablet-lg) {
+    row-gap: 20px;
+    --card-width: 348px;
+  }
+
+  @media(max-width: $break-point-phone) {
+    --card-width: 280px;
+  }
+}
