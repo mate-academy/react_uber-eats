@@ -11,6 +11,9 @@
   border-radius: 0;
   cursor: pointer;
 }
+.select__option {
+  background-color: #262626;
+}
 .select__icon {
   position: absolute;
   top: 12px;

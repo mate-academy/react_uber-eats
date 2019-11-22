@@ -1,3 +1,5 @@
+@import "../../styles/utils";
+
 .select {
 
   position: relative;
@@ -14,6 +16,10 @@
     border: 1px solid #979797;
     border-radius: 0;
     cursor: pointer;
+  }
+
+  &__option {
+    background-color: $color-dark-gray;
   }
 
   &__icon {
