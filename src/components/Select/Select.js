@@ -45,7 +45,7 @@ const Select = (props) => {
 Select.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  onSelect: PropTypes.string.isRequired,
+  onSelect: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
     label: PropTypes.string,
@@ -56,6 +56,7 @@ Select.propTypes = {
 Select.defaultProps = {
   options: [],
   iconUrl: '',
+  onSelect: '',
 };
 
 export default Select;
