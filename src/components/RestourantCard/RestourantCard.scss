@@ -1,0 +1,35 @@
+@import  '../../styles/variables.scss';
+
+.restourant-card {
+  --height: 376px;
+  height: var(--height);
+  width: 100%;
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-phone) {
+    --height: 330px;
+  }
+
+  &__img {
+    height: calc(var(--height) * .7);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 12px 0 4px;
+  }
+
+  &__categories {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 4px;
+  }
+
+  &__eta {
+    padding: 2px 8px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    display: inline-block;
+  }
+}

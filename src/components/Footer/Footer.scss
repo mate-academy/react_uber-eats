@@ -1,0 +1,146 @@
+@import '../../styles/extends.scss';
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: #262626;
+  padding: 64px 0;
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px 0;
+  }
+
+  &__main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  &__top-part {
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__mobile-apps {
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    margin-right: 40px;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__logo-container {
+    @extend %flex-row;
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    & > img[alt="googleplay"] {
+      margin-right: 40px;
+    }
+  }
+
+  &__mobile-app {
+    display: inline-block;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }
+
+  &__top-part,
+  &__bottom-part {
+    @extend %flex-row;
+    align-items: flex-start;
+
+    @media (max-width: $breakpoint-phone-lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__copyright,
+  &__main {
+    flex-basis: 45vw;
+    padding-right: 40px;
+
+    @media (max-width: $breakpoint-phone-lg) {
+      flex-basis: initial;
+    }
+  }
+
+  &__copyright {
+    color: #fff;
+    font-size: 14px;
+
+    @media (max-width: $breakpoint-phone-lg) {
+      order: 2;
+    }
+  }
+
+  &__top-links:last-of-type {
+    margin-left: 10vw;
+
+    @media (max-width: $breakpoint-phone-lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__bottom-links {
+    @extend %flex-row;
+    margin-bottom: 40px;
+
+    @media (max-width: $breakpoint-phone-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+      order: 2;
+    }
+
+    .links__link:not(:last-of-type) {
+      margin-right: 40px;
+    }
+  }
+
+  &__misc {
+    @media (max-width: $breakpoint-phone-lg) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  }
+}
+
+.links {
+  &__link {
+    display: block;
+    margin-bottom: 16px;
+    color: #fff;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social {
+  &__link {
+    margin-right: 20px;
+  }
+}
