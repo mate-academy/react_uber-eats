@@ -46,6 +46,11 @@
 .header__link:hover {
   text-decoration: underline;
 }
+@media (max-width: 1000px) {
+  .header__link {
+    margin-left: 10px;
+  }
+}
 .header__toggle-buttons {
   display: none;
   margin-left: auto;

@@ -6,7 +6,6 @@
   padding: 16px 0;
   z-index: 1;
 
-  //width: 100%;
   background-color: #fff;
 
   &__inner {
@@ -50,6 +49,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: $break-point-small) {
+      margin-left: 10px;
     }
   }
 

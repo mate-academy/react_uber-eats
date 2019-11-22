@@ -4,6 +4,11 @@
   width: 100%;
   cursor: pointer;
 }
+@media (max-width: 550px) {
+  .restaurant-card {
+    --height: 330px;
+  }
+}
 .restaurant-card__img {
   height: calc(var(--height) * 0.7);
   width: 100%;
