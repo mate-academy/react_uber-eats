@@ -110,7 +110,7 @@ class Header extends Component {
 
             <a
               className="header__link"
-              href="/sing-in"
+              href="#"
             >
               Sing In
             </a>
