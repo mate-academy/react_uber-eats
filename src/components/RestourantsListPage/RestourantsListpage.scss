@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+@import '../../styles/extends.scss';
+
+.restourant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+  gap: 40px 20px;
+
+  @media (max-width: $breakpoint-tablet-lg) {
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}

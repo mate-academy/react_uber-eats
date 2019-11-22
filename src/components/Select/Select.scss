@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.select {
+
+  position: relative;
+  margin-left: 20px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-left: 0;
+  }
+
+  &__input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #979797;
+    border-radius: 0;
+    padding: 10px 40px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 20px;
+    width: 14px;
+    height: 8px;
+    right: 10px;
+  }
+}

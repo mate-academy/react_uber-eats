@@ -1,0 +1,20 @@
+@import '../../styles/extends.scss';
+
+.error {
+  @extend %absolute-center;
+  flex-flow: column;
+
+  &__text {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__link {
+    font-size: 24px;
+    color: #5eb707;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

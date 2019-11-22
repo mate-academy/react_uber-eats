@@ -1,0 +1,93 @@
+@import "../../styles/extends.scss";
+@import "../../styles/variables.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 16px 0;
+  z-index: 1;
+  width: 100%;
+
+  &__inner {
+    @extend %flex-row;
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+
+    @media (max-width: $breakpoint-phone) {
+      height: 14px;
+    }
+  }
+
+  &__delivery-info {
+    @extend %flex-row;
+    margin-left: 7vw;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-left: 40px;
+    color: #1f1f1f;
+    padding: 12px 0;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__toggle-buttons {
+    display: none;
+    margin-left: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: flex;
+    }
+  }
+
+  &__toggle-btn {
+    display: flex;
+    align-items: center;
+    padding: 11px 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &:focus {
+      border-color: #1f1f1f;
+    }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
