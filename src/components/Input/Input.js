@@ -82,6 +82,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   className: PropTypes.string,
   isSmall: PropTypes.bool,
+  label: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -90,6 +91,7 @@ Input.defaultProps = {
   placeholder: '',
   className: '',
   isSmall: true,
+  label: '',
 };
 
 export default Input;

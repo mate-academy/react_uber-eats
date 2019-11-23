@@ -24,6 +24,7 @@ const Select = (props) => {
             value={optionValue}
             selected={value === optionValue}
             className="select__option"
+            key={optionValue}
           >
             {label}
           </option>
