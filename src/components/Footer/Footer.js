@@ -28,7 +28,7 @@ const Footer = () => (
           <div className="footer__mobile-apps">
             <a
               className="footer__mobile-app"
-              href="#"
+              href="https://apps.apple.com/us/app/uber-eats-food-delivery/id1058959277"
             >
               <img
                 src="./images/app-store.png"
@@ -38,7 +38,7 @@ const Footer = () => (
             </a>
             <a
               className="footer__mobile-app"
-              href="#"
+              href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=en"
             >
               <img
                 src="./images/google-play.png"

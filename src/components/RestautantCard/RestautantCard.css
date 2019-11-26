@@ -3,6 +3,10 @@
   height: var(--height);
   width: 100%;
   cursor: pointer;
+  transition: transform 0.5s;
+}
+.restaurant-card:hover {
+  transform: translate(0, -5px);
 }
 @media (max-width: 550px) {
   .restaurant-card {
