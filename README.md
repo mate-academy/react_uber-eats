@@ -1,6 +1,6 @@
 # React Uber Eats
 
-- [DEMO LINK](https://veronika-donets.github.io/react_uber-eats/#)
+- [DEMO LINK](https://veronika-donets.github.io/react_uber-eats/index.html)
 
 ## Task
 Follow this [Video guide](https://www.youtube.com/playlist?list=PL7FuXFaDeEX0MZnk9tC1tNfjoN4hnc6tl)(p. 1 - 4)
