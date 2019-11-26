@@ -1,0 +1,131 @@
+.footer__bottom-links, .footer__top-part, .footer__bottom-part, .footer__logo-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.footer {
+  background-color: #262626;
+  padding: 64px 0;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+.footer__top-part {
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+.footer__main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.footer__logo-container {
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .footer__logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer__mobile-app {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .footer__mobile-app {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.footer__mobile-app:first-of-type {
+  margin-right: 20px;
+}
+.footer__logo {
+  margin-right: 40px;
+}
+@media (max-width: 768px) {
+  .footer__logo {
+    margin-bottom: 40px;
+  }
+}
+.footer__top-part, .footer__bottom-part {
+  align-items: flex-start;
+}
+@media (max-width: 620px) {
+  .footer__top-part, .footer__bottom-part {
+    flex-direction: column;
+  }
+}
+.footer__copyright, .footer__main {
+  flex-basis: 45vw;
+  padding-right: 40px;
+}
+@media (max-width: 620px) {
+  .footer__copyright, .footer__main {
+    flex-basis: initial;
+  }
+}
+.footer__copyright {
+  font-size: 14px;
+  color: #fff;
+}
+@media (max-width: 620px) {
+  .footer__copyright {
+    order: 1;
+  }
+}
+.footer__top-links:last-of-type {
+  margin-left: 10vw;
+}
+@media (max-width: 620px) {
+  .footer__top-links:last-of-type {
+    margin-left: 0;
+  }
+}
+.footer__bottom-links {
+  margin-bottom: 40px;
+}
+@media (max-width: 620px) {
+  .footer__bottom-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    order: 1;
+  }
+}
+.footer__bottom-links .links__link:not(:last-of-type) {
+  margin-right: 40px;
+}
+@media (max-width: 620px) {
+  .footer__misc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.links__link {
+  display: block;
+  margin-bottom: 16px;
+  color: #fff;
+}
+.links__link:hover {
+  text-decoration: underline;
+}
+
+.social__link {
+  margin-right: 20px;
+}
+
+.links__link:focus,
+.social__link:focus,
+.footer__mobile-app:focus {
+  box-shadow: 0 0 2px 2px #5eb707;
+  outline: transparent;
+}
+
+/*# sourceMappingURL=Footer.css.map */

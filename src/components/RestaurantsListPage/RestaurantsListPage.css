@@ -1,0 +1,19 @@
+.restaurants-list {
+  --card-width: 348px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  gap: 40px 20px;
+}
+@media (max-width: 956px) {
+  .restaurants-list {
+    row-gap: 20px;
+    --card-width: 340px;
+  }
+}
+@media (max-width: 956px) {
+  .restaurants-list {
+    --card-width: 280px;
+  }
+}
+
+/*# sourceMappingURL=RestaurantsListPage.css.map */

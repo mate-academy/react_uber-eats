@@ -1,5 +1,5 @@
 # React Uber Eats
-
+[LINK] (https://nikakarelets.github.io/react_uber-eats/)
 ## Task
 Follow this [Video guide](https://www.youtube.com/playlist?list=PL7FuXFaDeEX0MZnk9tC1tNfjoN4hnc6tl)(p. 1 - 4)
 

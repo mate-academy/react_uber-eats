@@ -1,0 +1,34 @@
+.select {
+  position: relative;
+}
+.select__input {
+  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid #979797;
+  border-radius: 0;
+  padding: 10px 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.select__input:focus {
+  box-shadow: 0 0 2px 2px #5eb707;
+  outline: transparent;
+}
+.select__icon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+.select__arrow {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 14px;
+  height: 8px;
+}
+
+/*# sourceMappingURL=Select.css.map */
