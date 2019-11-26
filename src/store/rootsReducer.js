@@ -35,6 +35,7 @@ export function rootsReducer(state = initialState, action) {
         isLoading: true,
       };
     }
+
     case ACTION_TYPES.STOP_LOADING: {
 
       return {

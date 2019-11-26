@@ -12,6 +12,10 @@
   color: #fff;
   cursor: pointer;
 }
+.select__input:focus {
+  box-shadow: 0 0 2px 2px #5eb707;
+  outline: transparent;
+}
 .select__icon {
   position: absolute;
   top: 12px;

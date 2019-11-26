@@ -1,3 +1,5 @@
+@import "../../styles/utils";
+
 .select {
   position: relative;
   &__input {
@@ -10,6 +12,11 @@
     padding: 10px 40px;
     color: #fff;
     cursor: pointer;
+
+    &:focus {
+      box-shadow: 0 0 2px 2px $color-green;
+      outline: transparent;
+    }
   }
 
   &__icon {

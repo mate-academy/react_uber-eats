@@ -128,3 +128,12 @@
 .social__link {
   margin-right: 20px;
 }
+
+.links__link,
+.social__link,
+.footer__mobile-app {
+  &:focus {
+    box-shadow: 0 0 2px 2px $color-green;
+    outline: transparent;
+  }
+}

@@ -46,6 +46,10 @@
 .header__link:hover {
   text-decoration: underline;
 }
+.header__link:focus {
+  box-shadow: 0 0 2px 2px #5eb707;
+  outline: transparent;
+}
 .header__toggle-buttons {
   display: none;
   cursor: pointer;
@@ -67,7 +71,7 @@
   margin-right: 20px;
 }
 .header__toggle-btn:focus {
-  border-color: #e0e0e0;
+  outline: none;
 }
 
 .mobile-controls {
