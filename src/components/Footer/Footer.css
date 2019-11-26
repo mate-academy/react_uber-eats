@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.social__link:focus > img, .footer__mobile-app:focus > img {
+  box-shadow: 0 0 10px #5fb709;
+}
+
 .footer {
   padding: 64px 0;
   background-color: #262626;
@@ -120,6 +124,7 @@
 
 .social__link {
   margin-right: 20px;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=Footer.css.map */

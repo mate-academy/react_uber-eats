@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.control__input-wrapper:focus-within {
+  box-shadow: 0 0 10px #5fb709;
+}
+
 .control__input-wrapper {
   padding: 11px 16px;
   border: 1px solid #e0e0e0;

@@ -42,6 +42,10 @@
     &:first-of-type {
       margin-right: 20px;
     }
+
+    &:focus > img {
+      @extend %outline-select;
+    }
   }
 
   &__logo {
@@ -131,4 +135,9 @@
 
 .social__link {
   margin-right: 20px;
+  margin-bottom: 0;
+
+  &:focus > img {
+    @extend %outline-select;
+  }
 }

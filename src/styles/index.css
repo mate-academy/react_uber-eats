@@ -1,7 +1,21 @@
+a,
+p {
+  outline: none;
+}
+
+a:focus {
+  color: #5fb709;
+}
+
+select:focus {
+  box-shadow: 0 0 10px #5fb709;
+}
+
 *,
 ::after,
 ::before {
   box-sizing: border-box;
+  outline: none;
 }
 
 body,
@@ -17,13 +31,12 @@ input {
 input {
   border: none;
   background: transparent;
-  outline: none;
 }
 
 a {
   text-decoration: none;
+  outline: none;
 }
-
 button {
   border: none;
   background: none;

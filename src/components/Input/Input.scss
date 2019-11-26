@@ -8,6 +8,10 @@
 
     border: 1px solid #e0e0e0;
     transition: border-color 300ms;
+
+    &:focus-within {
+      @extend %outline-select;
+    }
   }
 
   &--focused {
