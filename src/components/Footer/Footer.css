@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.social__link:focus > img, .footer__mobile-app:focus > img {
+.footer__mobile-app:focus > img {
   box-shadow: 0 0 10px #5fb709;
 }
 
@@ -125,6 +125,9 @@
 .social__link {
   margin-right: 20px;
   margin-bottom: 0;
+}
+.social__link:focus > img {
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=Footer.css.map */

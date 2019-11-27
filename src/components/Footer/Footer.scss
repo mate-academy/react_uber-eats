@@ -138,6 +138,6 @@
   margin-bottom: 0;
 
   &:focus > img {
-    @extend %outline-select;
+    opacity: 0.6;
   }
 }
