@@ -28,7 +28,7 @@ export const Footer = () => (
 
           <div className="footer__mobile-apps">
             <a
-              href="#"
+              href="https://www.apple.com/retail/"
               className="footer__mobile-app"
             >
               <img
@@ -38,7 +38,7 @@ export const Footer = () => (
             </a>
 
             <a
-              href="#"
+              href="https://play.google.com/store"
               className="footer__mobile-app"
             >
               <img

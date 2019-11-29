@@ -20,7 +20,11 @@ export const Select = (props) => {
         className="select__input"
       >
         {options.map(({ value: optionValue, label }) => (
-          <option value={optionValue} selected={value === optionValue}>
+          <option
+            value={optionValue}
+            selected={value === optionValue}
+            className="select__option"
+          >
             {label}
           </option>
         ))}
