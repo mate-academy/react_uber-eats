@@ -1,0 +1,27 @@
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  flex-flow: column nowrap;
+}
+.error__text {
+  font-size: 30px;
+  font-weight: 500;
+}
+.error__link {
+  font-size: 24px;
+  color: #5fb709;
+}
+.error__link:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=Error.css.map */

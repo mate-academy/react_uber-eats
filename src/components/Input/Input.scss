@@ -1,0 +1,53 @@
+@import "../../styles/utils";
+
+.control {
+  &__input-wrapper {
+    @extend %flex-row-center;
+
+    padding: 11px 16px;
+
+    border: 1px solid #e0e0e0;
+    transition: border-color 300ms;
+
+    &:focus-within {
+      @extend %outline-select;
+    }
+  }
+
+  &--focused {
+    border-color: darken($color-gray, 20);
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+
+    margin-right: 10px;
+  }
+
+  &__input {
+    max-height: 24px;
+    line-height: 24px;
+
+    &--time {
+      max-width: 75px;
+    }
+
+    &--small {
+      @media (max-width: $break-point-tablet-lg) {
+        max-width: 75px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #626262;
+
+    margin-bottom: 8px;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}

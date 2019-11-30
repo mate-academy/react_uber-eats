@@ -1,0 +1,133 @@
+.footer__bottom-links, .footer__top-part, .footer__bottom-part, .footer__logo-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.footer__mobile-app:focus > img {
+  box-shadow: 0 0 10px #5fb709;
+}
+
+.footer {
+  padding: 64px 0;
+  background-color: #262626;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+.footer__top-part {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.footer__main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.footer__logo-container {
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .footer__logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.footer__mobile-app {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .footer__mobile-app {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.footer__mobile-app:first-of-type {
+  margin-right: 20px;
+}
+.footer__logo {
+  margin-right: 40px;
+}
+@media (max-width: 768px) {
+  .footer__logo {
+    margin-bottom: 40px;
+  }
+}
+.footer__top-part, .footer__bottom-part {
+  align-items: flex-start;
+}
+@media (max-width: 620px) {
+  .footer__top-part, .footer__bottom-part {
+    flex-direction: column;
+  }
+}
+.footer__main, .footer__copyright {
+  flex-basis: 45vw;
+  padding-right: 40px;
+}
+@media (max-width: 620px) {
+  .footer__main, .footer__copyright {
+    flex-basis: initial;
+  }
+}
+.footer__top-links:last-of-type {
+  margin-left: 10vw;
+}
+@media (max-width: 620px) {
+  .footer__top-links:last-of-type {
+    margin-left: 0;
+  }
+}
+.footer__copyright {
+  font-size: 14px;
+  color: #fff;
+}
+@media (max-width: 620px) {
+  .footer__copyright {
+    order: 1;
+  }
+}
+.footer__bottom-links {
+  margin-bottom: 40px;
+}
+@media (max-width: 620px) {
+  .footer__bottom-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    order: 1;
+  }
+}
+.footer__bottom-links .links__link:not(:last-of-type) {
+  margin-right: 40px;
+}
+@media (max-width: 620px) {
+  .footer__misc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.links__link {
+  display: block;
+  margin-bottom: 16px;
+  color: #fff;
+  white-space: nowrap;
+}
+.links__link:hover {
+  text-decoration: underline;
+}
+
+.social__link {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+.social__link:focus > img {
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=Footer.css.map */

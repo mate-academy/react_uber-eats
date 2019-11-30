@@ -1,0 +1,33 @@
+%flex-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+%absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 85%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%outline-none {
+  outline: none;
+}
+
+%outline-text {
+  color: $color-green;
+}
+
+%outline-input {
+  box-shadow: 0 0 10px $color-green;
+}
+
+%outline-select {
+  box-shadow: 0 0 10px $color-green;
+}

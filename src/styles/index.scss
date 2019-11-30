@@ -1,0 +1,62 @@
+@import "utils";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+button,
+a,
+select,
+input {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a,
+p {
+  @extend %outline-none;
+}
+
+input {
+  border: none;
+  background: transparent;
+}
+
+select {
+  &:focus {
+    @extend %outline-select;
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+
+  &:focus {
+    @extend %outline-text;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.content {
+  max-width: 1520px;
+  padding: 0 34px;
+  margin: 0 auto;
+
+  @media (max-width: $break-point-phone) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: $break-point-large) {
+    max-width: 1520px;
+  }
+}

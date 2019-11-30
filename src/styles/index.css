@@ -1,0 +1,61 @@
+a,
+p {
+  outline: none;
+}
+
+a:focus {
+  color: #5fb709;
+}
+
+select:focus {
+  box-shadow: 0 0 10px #5fb709;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+button,
+a,
+select,
+input {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+input {
+  border: none;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+button {
+  border: none;
+  background: none;
+}
+
+.content {
+  max-width: 1520px;
+  padding: 0 34px;
+  margin: 0 auto;
+}
+@media (max-width: 550px) {
+  .content {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1281px) {
+  .content {
+    max-width: 1520px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

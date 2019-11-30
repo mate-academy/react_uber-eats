@@ -1,0 +1,103 @@
+@import "../../styles/utils";
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 16px 0;
+  z-index: 1;
+
+  background-color: #fff;
+
+  &__inner {
+    @extend  %flex-row-center;
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+
+    @media (max-width: $break-point-phone) {
+      height: 14px;
+    }
+  }
+
+  &__delivery-info {
+    @extend  %flex-row-center;
+
+    margin-left: 7vw;
+    margin-right: auto;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-left: 40px;
+    padding: 12px 0;
+
+    white-space: nowrap;
+    color: #1f1f1f;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: $break-point-small) {
+      margin-left: 10px;
+    }
+  }
+
+  &__toggle-buttons {
+    display: none;
+    margin-left: auto;
+
+    cursor: pointer;
+
+    @media (max-width: $break-point-tablet) {
+      display: flex;
+    }
+  }
+
+  &__toggle-btn {
+    padding: 12px;
+    cursor: pointer;
+
+    outline: none;
+    border-radius: 50%;
+    max-height: $icon-block-size;
+    max-width: $icon-block-size;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 20px $color-green;
+    }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+
+  @media (max-width: $break-point-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
