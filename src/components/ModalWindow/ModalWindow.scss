@@ -1,12 +1,12 @@
+@import './../../styles/utils.scss';
+
 .modal-window {
   padding: 0 10px;
 
   &__container {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
     background-color: rgba(0,0,0,.9);
     position: fixed;
     top: 0;
@@ -64,21 +64,21 @@
     font-size: 16px;
     outline: none;
     border: 2px solid #fff;
-    border-bottom: 2px solid #bebebe;
+    border-bottom: 2px solid $color-gray-modal;
     transition: border 300ms;
 
     &::placeholder {
       font-size: 14px;
       font-family: Roboto, serif;
-      color: #bebebe;
+      color: $color-gray-modal;
     }
 
     &:hover {
-      border-bottom: 2px solid lighten(#bebebe, 20);
+      border-bottom: 2px solid lighten($color-gray-modal, 20);
     }
 
     &:focus {
-      border-bottom: 2px solid #bebebe;
+      border-bottom: 2px solid $color-gray-modal;
     }
   }
 }
@@ -127,19 +127,13 @@
     width: 48px;
     height: 48px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
 
     border-radius: 50%;
     background: #f5f5f5;
 
     &::before {
-      content: "";
-      width: 19px;
-      height: 2px;
-      position: absolute;
-      border-bottom: 2px solid #000;
+      @extend %toggle;
     }
   }
 
@@ -147,27 +141,17 @@
     width: 48px;
     height: 48px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
 
     border-radius: 50%;
     background: #f5f5f5;
 
     &::before {
-      content: "";
-      width: 19px;
-      height: 2px;
-      position: absolute;
-      border-bottom: 2px solid #000;
+      @extend %toggle;
     }
 
     &::after {
-      content: "";
-      width: 19px;
-      height: 2px;
-      position: absolute;
-      border-bottom: 2px solid #000;
+      @extend %toggle;
       transform: rotate(90deg);
     }
   }
@@ -181,10 +165,7 @@
   color: #fff;
   background: #247a00;
 
-  &-center {
-    justify-self: flex-end;
-  }
-
+  &-center,
   &-right {
     justify-self: flex-end;
   }

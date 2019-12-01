@@ -59,30 +59,30 @@ export const Footer = () => (
           </div>
         </div>
         <div className="footer__top-links links">
-            <a href="#" className="links__link links__link--intended">
-              About UberEats
-            </a>
-            <a href="#" className="links__link">
-              Read our blog
-            </a>
-            <a href="#" className="links__link">
-              Sign up to deliver
-            </a>
-            <a href="#" className="links__link">
-              Add your restaurant
-            </a>
-          </div>
+          <a href="#" className="links__link links__link--intended">
+            About UberEats
+          </a>
+          <a href="#" className="links__link">
+            Read our blog
+          </a>
+          <a href="#" className="links__link">
+            Sign up to deliver
+          </a>
+          <a href="#" className="links__link">
+            Add your restaurant
+          </a>
+        </div>
         <div className="footer__top-links links">
-            <a href="#" className="links__link links__link--intended">
-              Get help
-            </a>
-            <a href="#" className="links__link">
-              Read FAQs
-            </a>
-            <a href="#" className="links__link">
-              View all cities
-            </a>
-          </div>
+          <a href="#" className="links__link links__link--intended">
+            Get help
+          </a>
+          <a href="#" className="links__link">
+            Read FAQs
+          </a>
+          <a href="#" className="links__link">
+            View all cities
+          </a>
+        </div>
       </div>
       <div className="footer__bottom-part">
         <p className="footer__copyright">

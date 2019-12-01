@@ -3,8 +3,6 @@ import { RestaurantPage } from './RestaurantPage';
 import { loadRestaurant, openModalWindow } from '../../store/actions';
 import {
   selectorRestaurant,
-  selectIsLoading,
-  selectRestaurantsListError,
 } from '../../store/selectors';
 
 function mapState2Props(state) {

@@ -16,31 +16,29 @@ import { Footer } from './components/Footer/Footer';
 
 const uuidv1 = require('uuid/v1');
 
-export const App = ({ restaurantsData, openedModalWindow }) => {
-  return (
-    <>
-      {openedModalWindow && (
-        <ModalWindow>
-          {/* <MenuItemDetails /> */}
-        </ModalWindow>
-      )}
+export const App = ({ restaurantsData, openedModalWindow }) => (
+  <>
+    {openedModalWindow && (
+      <ModalWindow>
+        {/* <MenuItemDetails /> */}
+      </ModalWindow>
+    )}
 
-      <Header />
-      <div className="page">
-        <main>
-          <Route
-            exact
-            path="/"
-            component={RestaurantsListPage}
-          />
+    <Header />
+    <div className="page">
+      <main>
+        <Route
+          exact
+          path="/"
+          component={RestaurantsListPage}
+        />
 
-          <Route
-            path="/restaurants/:id"
-            component={RestaurantPage}
-          />
-        </main>
-      </div>
-      <Footer />
-    </>
-  );
-};
+        <Route
+          path="/restaurants/:id"
+          component={RestaurantPage}
+        />
+      </main>
+    </div>
+    <Footer />
+  </>
+);

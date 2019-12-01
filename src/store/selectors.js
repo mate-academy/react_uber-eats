@@ -22,9 +22,6 @@ export const selectorRestaurant = createSelector(
       return [];
     }
 
-    const { feedItems, storesMap } = restaurantData;
-
-    //return feedItems.map(({ uuid }) => storesMap[uuid]);
     return restaurantData;
   }
 );
