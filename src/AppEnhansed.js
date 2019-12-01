@@ -7,6 +7,7 @@ import {
 function mapState2Props(state) {
   return {
     restaurantsData: selectorRestaurants(state),
+    openedModalWindow: state.openedModalWindow,
   };
 }
 

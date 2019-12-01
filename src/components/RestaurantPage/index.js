@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { RestaurantPage } from './RestaurantPage';
-import { loadRestaurant } from '../../store/actions';
+import { loadRestaurant, openModalWindow } from '../../store/actions';
 import {
   selectorRestaurant,
   selectIsLoading,
@@ -16,6 +16,7 @@ function mapState2Props(state) {
 const mapDispatch2Props = (dispatch) => {
   return ({
     loadRestaurant: uuid => dispatch(loadRestaurant(uuid)),
+    openModalWindow: () => dispatch(openModalWindow()),
   });
 };
 

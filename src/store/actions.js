@@ -4,8 +4,13 @@ export const ACTION_TYPES = {
   SET_LOAD_RESTAURANTS_ERROR: 'SET_LOAD_RESTAURANTS_ERROR',
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
-
+  OPEN_MODAL_WINDOW: 'OPEN_MODAL_WINDOW',
 };
+
+export const openModalWindow = data => ({
+  type: ACTION_TYPES.OPEN_MODAL_WINDOW,
+  payload: data,
+});
 
 const saveRestaurant = data => ({
   type: ACTION_TYPES.SAVE_RESTAURANT,

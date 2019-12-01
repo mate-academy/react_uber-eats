@@ -7,6 +7,7 @@ import {
 import {
   RestaurantPage,
 } from './components/RestaurantPage/index';
+import { ModalWindow } from './components/ModalWindow/ModalWindow';
 
 import './App.scss';
 
@@ -15,10 +16,15 @@ import { Footer } from './components/Footer/Footer';
 
 const uuidv1 = require('uuid/v1');
 
-export const App = ({ restaurantsData }) => {
-
+export const App = ({ restaurantsData, openedModalWindow }) => {
   return (
     <>
+      {openedModalWindow && (
+        <ModalWindow>
+          {/* <MenuItemDetails /> */}
+        </ModalWindow>
+      )}
+
       <Header />
       <div className="page">
         <main>

@@ -5,10 +5,18 @@ const initialStore = {
   isLoading: false,
   error: null,
   restaurantData: null,
+  openedModalWindow: false,
 };
 
 export function rootReducer(state = initialStore, action) {
   switch (action.type) {
+    case ACTION_TYPES.OPEN_MODAL_WINDOW: {
+      return {
+        ...state,
+        openedModalWindow: true,
+      };
+    }
+
     case ACTION_TYPES.SAVE_RESTAURANTS: {
       const { payload } = action;
 

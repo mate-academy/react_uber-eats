@@ -23,7 +23,9 @@ export class RestaurantPage extends Component {
   }
 
   render() {
-    const { restaurantData: {
+    const {
+      openModalWindow,
+      restaurantData: {
       categories,
       title,
       location,
@@ -31,8 +33,8 @@ export class RestaurantPage extends Component {
       entitiesMap,
       heroImageUrls,
       priceBucket,
-    },
-  } = this.props;
+      },
+    } = this.props;
     const hero = heroImageUrls && heroImageUrls[heroImageUrls.length - 1].url;
     const entitiesMapToArray = entitiesMap && Object.entries(entitiesMap);
 
@@ -41,17 +43,23 @@ export class RestaurantPage extends Component {
         <div className="hero">
           <div className="restaurant-page__img-wrapper">
             <img src={hero} alt="" className="restaurant-page__img" />
+            <div className="restaurant-page__title page__title">
+              <h1 className="page__title_indent title">{title}</h1>
+              <p className="page__title_indent categories">{categories}</p>
+              <div className="location-wrapper">
+                <p className="location">{location && `${location.address} `}</p>
+                <a href="#" className="location__info">
+                  <span className="location__dot">
+                    •
+                  </span>
+                  More info
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="content">
-            <div className="restaurant-page__title">
-              <h1 className="title">{title}</h1>
-              <p className="categories">{categories}</p>
-              <div className="location-wrapper">
-                <p className="location">{location && location.address}</p>
-                <a href="#">More info</a>
-              </div>
-            </div>
+
           </div>
         </div>
 
@@ -93,7 +101,7 @@ export class RestaurantPage extends Component {
                       const foundItem = entitiesMapToArray.find(elem => elem[0] === itemMenu);
 
                       return (
-                        <div className="item">
+                        <div className="item" onClick={() => openModalWindow()}>
                           <div className="item__left">
                             <h3 className="item__title">
                               {foundItem && foundItem[1].title}

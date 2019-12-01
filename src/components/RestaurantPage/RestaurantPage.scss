@@ -3,6 +3,7 @@
     height: 380px;
     width: 100%;
     overflow: hidden;
+    position: relative;
   }
 
   &__img {
@@ -11,15 +12,34 @@
 
   &__title {
     position: absolute;
-    top: -250px;
+    top: 25%;
+    left: 0;
+
+    padding: 24px 40px 24px 98px;
+
+    z-index: 1;
 
     background-color: #fff;
+
+    @media (min-width: 1500px) {
+      padding-left: 264px;
+    }
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      padding-bottom: 18px;
+    }
+  }
+
+  .page__title_indent {
+    margin-bottom: 18px;
   }
 
   .title {
     font-size: 36px;
     line-height: 150%;
     color: #1d1d1d;
+    font-weight: 500;
   }
 
   .categories {
@@ -35,7 +55,17 @@
 
     &-wrapper {
       display: flex;
-      justify-content: space-between;
+      color: #000;
+    }
+
+    &__info {
+      font-size: 14px;
+      color: #247a00;
+    }
+
+    &__dot {
+      color: #000;
+      margin: 0 5px;
     }
   }
 }
