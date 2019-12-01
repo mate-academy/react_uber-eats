@@ -1,0 +1,172 @@
+@import './../../styles/utils.scss';
+
+.modal-window {
+  padding: 0 10px;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    @extend %flex-center;
+    background-color: rgba(0,0,0,.9);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    padding-top: 80px;
+  }
+
+  &__content {
+    width: 716px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0 auto 80px;
+    background-color: #fff;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+}
+
+.menu {
+  &__title {
+    font-weight: 500;
+    font-size: 30px;
+    color: #000;
+
+    &-wrapper {
+      padding: 23px 10px 31px 34px;
+    }
+  }
+
+  &__text-grey {
+    font-size: 14px;
+    color: #626262;
+  }
+
+  &__text-black {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__background {
+    background: #f5f5f5;
+    padding: 17px 10px 17px 34px;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 100px;
+    padding: 22px 0 0 34px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #fff;
+    border-bottom: 2px solid $color-gray-modal;
+    transition: border 300ms;
+
+    &::placeholder {
+      font-size: 14px;
+      font-family: Roboto, serif;
+      color: $color-gray-modal;
+    }
+
+    &:hover {
+      border-bottom: 2px solid lighten($color-gray-modal, 20);
+    }
+
+    &:focus {
+      border-bottom: 2px solid $color-gray-modal;
+    }
+  }
+}
+
+.point {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 25px 34px;
+
+  &__name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-right: 14px;
+  }
+
+  &__price {
+    font-size: 12px;
+    color: #000;
+  }
+}
+
+.order {
+  display: grid;
+  grid-template-columns: 150px minmax(205px, 485px);
+
+  padding: 24px 34px;
+
+  &__add {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-right: 24px;
+
+  &__minus {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    @extend %flex-center;
+
+    border-radius: 50%;
+    background: #f5f5f5;
+
+    &::before {
+      @extend %toggle;
+    }
+  }
+
+  &__plus {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    @extend %flex-center;
+
+    border-radius: 50%;
+    background: #f5f5f5;
+
+    &::before {
+      @extend %toggle;
+    }
+
+    &::after {
+      @extend %toggle;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.add {
+  height: 56px;
+  padding: 16px;
+
+  cursor: pointer;
+  color: #fff;
+  background: #247a00;
+
+  &-center,
+  &-right {
+    justify-self: flex-end;
+  }
+}

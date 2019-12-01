@@ -1,0 +1,17 @@
+@import '../../styles/utils.scss';
+
+.restaurants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+  gap: 40px 20px;
+
+  @media (max-width: $break-point-tablet-lg) {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+
+    row-gap: 20px;
+  }
+
+  @media (max-width: $break-point-phone) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
