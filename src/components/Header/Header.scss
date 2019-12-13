@@ -1,0 +1,34 @@
+@import "../../styles/extends.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 16px 0;
+  background: white;
+  z-index: 1;
+
+  &__inner {
+    @extend %flex-row;
+  }
+
+  &__delivery-info {
+    @extend %flex-row;
+    margin-left: 7vw;
+  }
+
+  &__search {
+    margin-left: auto;
+  }
+
+  &__link {
+    margin-left: 40px;
+    color: #1f1f1f;
+    padding: 12px 0;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
