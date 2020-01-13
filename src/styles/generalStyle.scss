@@ -1,0 +1,20 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+button,
+a,
+input {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.content {
+  min-width: 1160px;
+  padding: 0 34px;
+  margin: 0 auto;
+}

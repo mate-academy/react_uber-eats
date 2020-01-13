@@ -1,9 +1,15 @@
 import React from 'react';
-import './App.css';
+
+import Header from './components/Header/Header';
+import RestaurantsListPage from './components/RestaurantsListPage/index';
 
 const App = () => (
-  <div className="App">
-    <h1>React Uber eats</h1>
+  <div className="page">
+    <Header />
+    <main className="content">
+      <RestaurantsListPage />
+    </main>
+    <footer>FOOTER</footer>
   </div>
 );
 
