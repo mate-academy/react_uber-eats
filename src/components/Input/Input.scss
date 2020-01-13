@@ -1,0 +1,23 @@
+@import "../../styles/extends.scss";
+@import "../../styles/variables.scss";
+
+.control {
+
+  @extend %flex-row;
+  padding: 11px 16px;
+  border: 1px solid $c-lightGray;
+  transition: border-color 0.3s;
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+
+  }
+  &__input {
+    line-height: 24px;
+    max-height: 24px;
+  }
+  &--focused {
+    border-color: darken($c-lightGray, 20);
+  }
+}

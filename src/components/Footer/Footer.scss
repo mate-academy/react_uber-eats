@@ -1,0 +1,73 @@
+@import "../../styles/extends.scss";
+@import "../../styles/variables.scss";
+
+.footer {
+  padding: 64px 0;
+  background-color: $c-darkGrayBackground;
+  &__top-part {
+    border-bottom: 1px solid $c-grayFooter;
+    margin-bottom: $styleDistance;
+    padding-bottom: $styleDistance;
+  }
+  &__logo-container {
+    @extend %flex-row;
+    margin-bottom: $styleDistance;
+  }
+  &__logo {
+    margin-right: $styleDistance;
+  }
+  &__main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+  }
+  &__mobile-app {
+    display: inline-block;
+    &:first-of-type {
+      margin-right: $styleDistance / 2;
+    }
+  }
+  &__top-part,
+  &__bottom-part {
+    @extend %flex-row;
+    align-items: flex-start;
+  }
+  &__copyright,
+  &__main {
+    flex-basis: 45vw;
+    padding-right: $styleDistance;
+  }
+  &__top-links:last-of-type {
+    margin-left: 10vw;
+  }
+  &__copyright {
+    color: $c-white;
+    font-size: $smallFontSize;
+  }
+  &__bottom-links {
+    @extend %flex-row;
+    margin-bottom: $styleDistance;
+    .links__link:not(:last-of-type) {
+      margin-right: $styleDistance;
+    }
+  }
+}
+
+.links {
+  &__link {
+    display: block;
+    margin-bottom: 16px;
+    color: $c-white;
+    white-space: nowrap;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social {
+  &__link {
+    margin-right: $styleDistance / 2;
+  }
+}

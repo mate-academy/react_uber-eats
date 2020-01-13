@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+button,
+a,
+select,
+input {
+  font-family: Roboto, sans-serif;
+  font-size: $normalFontSize;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.content {
+  max-width: 1160px;
+  padding: 0 34px;
+  margin: 0 auto;
+}

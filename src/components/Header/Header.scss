@@ -1,0 +1,32 @@
+@import "../../styles/extends.scss";
+@import "../../styles/variables.scss";
+
+.header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: $c-white;
+  padding: 16px 0;
+  &__inner {
+    @extend %flex-row;
+  }
+  &__delivery-info {
+    @extend %flex-row;
+    margin-left: 7vw;
+  }
+  &__search {
+    margin-left: auto;
+  }
+  &__link {
+    margin-left: $styleDistance;
+    color: $c-darkGrayText;
+    padding: 12px 0;
+    white-space: nowrap;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__time {
+    margin-left: $styleDistance / 2;
+  }
+}
