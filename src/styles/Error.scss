@@ -1,0 +1,20 @@
+@import 'extends';
+
+.error {
+  @extend %absolute-center;
+  flex-flow: column nowrap;
+
+  &__text {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &__link {
+    font-size: 24px;
+
+    &:hover {
+      text-decoration: underline;
+      color: #5eb707;
+    }
+  }
+ }
