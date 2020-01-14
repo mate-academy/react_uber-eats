@@ -1,37 +1,62 @@
-import React from 'react';
+import React, { useState, createRef } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
 const Input = ({
   iconUrl,
   name,
   value,
+  className,
   onChange,
   type,
   placeholder,
-}) => (
-  <div className="control">
-    {!!iconUrl && (
-      <img
-        src={iconUrl}
-        alt={placeholder}
-        className="contor__icon"
+}) => {
+  const [isFocused, handleFocuses] = useState(false);
+
+  const handleFocus = () => handleFocuses(true);
+
+  const handleBlur = () => handleFocuses(false);
+
+  const focus = () => inputRef.current.focus();
+
+  const inputRef = createRef();
+
+  return (
+    <div
+      className={cn('control', {
+        'control--focused': isFocused,
+        [className]: !!className,
+      })}
+      onClick={focus}
+      role="presentation"
+    >
+      {!!iconUrl && (
+        <img
+          src={iconUrl}
+          alt={placeholder}
+          className="control__icon"
+        />
+      )}
+      <input
+        ref={inputRef}
+        type={type}
+        name={name}
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        className="contor__input"
       />
-    )}
-    <input
-      type={type}
-      name={name}
-      value={value}
-      placeholder={placeholder}
-      onChange={onChange}
-      className="contor__input"
-    />
-  </div>
-);
+    </div>
+  );
+};
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  className: PropTypes.string,
   iconUrl: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
@@ -40,6 +65,7 @@ Input.propTypes = {
 Input.defaultProps = {
   iconUrl: '',
   type: 'text',
+  className: '',
   placeholder: '',
 };
 
