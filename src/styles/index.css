@@ -1,0 +1,16 @@
+body,
+button,
+a,
+input {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main-content {
+  max-width: 1160px;
+  padding: 0 34px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=index.css.map */
