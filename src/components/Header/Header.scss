@@ -1,0 +1,29 @@
+@import "../../store/styles/extends.scss";
+
+.header {
+  padding: 28px 0;
+
+  &__inner {
+    @extend %flex-row;
+  }
+
+  &__delivery-info {
+    @extend %flex-row;
+    margin-left: 7vw;
+  }
+
+  &__search {
+    margin-left: auto;
+  }
+
+  &__link {
+    margin-left: 40px;
+    color: #1f1f1f;
+    padding: 13px 0;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

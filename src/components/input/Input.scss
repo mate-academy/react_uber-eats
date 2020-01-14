@@ -1,0 +1,22 @@
+@import "../../store/styles/extends.scss";
+
+.control {
+  @extend %flex-row;
+
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+
+  &__input {
+    max-height: 24px;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}
