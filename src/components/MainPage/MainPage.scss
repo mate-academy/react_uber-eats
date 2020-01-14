@@ -3,10 +3,8 @@ $light-grey: #f5f5f5;
 
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 348px);
+  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
   grid-gap: 40px 20px;
-  justify-content: center;
-  max-width: 1600px;
 }
 
 .card {
@@ -19,18 +17,21 @@ $light-grey: #f5f5f5;
   }
 
   &__title {
+    margin-top: 12px;
     line-height: 19px;
   }
 
   &__categories {
-    margin: 4px 0 8px;
+    margin-top: 4px;
     font-size: 14px;
+    line-height: 16px;
     color: $grey;
   }
 }
 
 .time {
   width: max-content;
+  margin-top: 8px;
   padding: 2px 8px;
   font-size: 14px;
   background-color: $light-grey;

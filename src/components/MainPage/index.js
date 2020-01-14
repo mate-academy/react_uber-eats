@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import '../../styles/index.scss';
 import './MainPage.scss';
 import { createActionLoadData } from '../../API/loadData';
 import { getRestaurants } from '../../store';
@@ -14,23 +13,25 @@ const MainPage = ({ loadData, restaurants }) => {
   });
 
   return (
-    <main className="main">
-      {restaurants.map(({
-        uuid,
-        heroImageUrl,
-        title,
-        categories,
-        etaRange: { text },
-      }) => (
-        <RestaurantCard
-          key={uuid}
-          image={heroImageUrl}
-          title={title}
-          categories={categories}
-          time={text}
-        />
-      ))}
-    </main>
+    <div className="width">
+      <main className="main">
+        {restaurants.map(({
+          uuid,
+          heroImageUrl,
+          title,
+          categories,
+          etaRange: { text },
+        }) => (
+          <RestaurantCard
+            key={uuid}
+            image={heroImageUrl}
+            title={title}
+            categories={categories}
+            time={text}
+          />
+        ))}
+      </main>
+    </div>
   );
 };
 

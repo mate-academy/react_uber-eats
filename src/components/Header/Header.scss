@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+
+  &__logo {
+    width: 25%;
+  }
+
+  &__form {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  &__input {
+    height: 48px;
+    padding: 0 16px 0 38px;
+    color: #1d1d1d;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    outline: none;
+
+    &--address {
+      margin-left: 5px;
+      background: url("./pics/address.svg") no-repeat top 16px left 14px;
+    }
+
+    &--time {
+      margin-left: 20px;
+      background: url("./pics/time.svg") no-repeat top 12px left 9px;
+    }
+
+    &--query {
+      background: url("./pics/query.svg") no-repeat top 16px left 14px;
+
+      &::placeholder {
+        color: #e0e0e0;
+      }
+    }
+
+    @media screen and (max-width: 1050px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &__toggle-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 62px;
+
+    @media screen and (min-width: 1051px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &__toggle-btn {
+    width: 16px;
+    height: 17px;
+
+    &--address {
+      background: url("./pics/address.svg") no-repeat;
+    }
+
+    &--query {
+      background: url("./pics/query.svg") no-repeat center;
+    }
+  }
+
+  &__sign-in {
+    margin-left: 40px;
+    color: #1f1f1f;
+    line-height: 19px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
