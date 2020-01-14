@@ -3,17 +3,11 @@ import { loadRestaurants } from '../../store/actions';
 import { RestaurantsListPage } from './RestaurantsListPage';
 import { selectRestaurantsList } from '../../store/selectors';
 
-function mapState2Props(state) {
-  return {
-    restaurantsData: selectRestaurantsList(state),
-  };
-}
-
-const mapDispatch2Props = {
-  loadRestaurants,
-};
+const mapStateToProps = state => ({
+  restaurantsData: selectRestaurantsList(state),
+});
 
 const Enhanced
-  = connect(mapState2Props, mapDispatch2Props)(RestaurantsListPage);
+  = connect(mapStateToProps, { loadRestaurants })(RestaurantsListPage);
 
 export { Enhanced as RestaurantsListPage };

@@ -8,7 +8,7 @@ const DEFAULT_ETA_RANGE = '20 - 30 min';
 export const RestaurantsListPage = ({ restaurantsData, loadRestaurants }) => {
   useEffect(() => {
     loadRestaurants();
-  });
+  }, []);
 
   return (
     <div className="restaurants-list">
@@ -37,7 +37,13 @@ export const RestaurantsListPage = ({ restaurantsData, loadRestaurants }) => {
 };
 
 RestaurantsListPage.propTypes = {
-  restaurantsData: PropTypes.arrayOf(PropTypes.shape({})),
+  restaurantsData: PropTypes.arrayOf(PropTypes.shape({
+    uuid: PropTypes.string,
+    imageUrl: PropTypes.string,
+    title: PropTypes.string,
+    categories: PropTypes.arrayOf(PropTypes.string),
+    etaRange: PropTypes.string,
+  })),
   loadRestaurants: PropTypes.func.isRequired,
 };
 
