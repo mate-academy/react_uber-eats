@@ -2,13 +2,28 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { RestaurantCard } from '../RestaurantCard';
 import './RestaurantsListPage.scss';
+import { Loader } from '../Loader';
+import { Error } from '../Error';
 
 const DEFAULT_ETA_RANGE = '20 - 30 min';
 
-export const RestaurantsListPage = ({ restaurantsData, loadRestaurants }) => {
+export const RestaurantsListPage = ({
+  restaurantsData,
+  loadRestaurants,
+  error,
+  isLoading,
+}) => {
   useEffect(() => {
     loadRestaurants();
   }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <Error message={error} />;
+  }
 
   return (
     <div className="restaurants-list">
@@ -45,8 +60,11 @@ RestaurantsListPage.propTypes = {
     etaRange: PropTypes.string,
   })),
   loadRestaurants: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 RestaurantsListPage.defaultProps = {
   restaurantsData: [],
+  error: null,
 };

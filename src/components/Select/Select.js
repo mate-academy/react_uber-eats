@@ -5,8 +5,8 @@ import './Select.scss';
 export const Select = ({
   name,
   value,
-  onSelect,
   options,
+  onSelect,
   iconUrl,
 }) => (
   <div className="select">

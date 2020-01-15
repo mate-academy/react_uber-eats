@@ -7,57 +7,64 @@ export const Input = ({
   name,
   type,
   value,
+  onChange,
   placeholder,
   iconUrl,
-  onChange,
   className,
+  isSmall,
+  label,
 }) => {
-  const [isFocused, setFocus] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const inputRef = createRef();
 
   const handleFocus = () => {
-    setFocus(true);
+    setIsFocused(true);
   };
 
   const handleBlur = () => {
-    setFocus(false);
+    setIsFocused(false);
   };
 
-  const focus = () => inputRef.current.focus();
+  const inputWrapperClass = cn('control__input-wrapper', {
+    'control__input-wrapper--focused': isFocused,
+    [className]: !!className,
+  });
+
+  const inputClass = cn('control__input', {
+    'control__input--small': isSmall,
+    'control__input--time': type === 'time',
+  });
 
   return (
-    <div
-      className={cn(
-        'control',
-        {
-          'control--focused': isFocused,
-          [className]: !!className,
-        }
+    <label className="control">
+      {label && (
+        <p className="control__label">
+          {label}
+        </p>
       )}
-      onClick={focus}
-      role="presentation"
-    >
-      {!!iconUrl && (
-        <img
-          className="control__icon"
-          src={iconUrl}
-          alt={placeholder}
-        />
-      )}
+      <div className={inputWrapperClass}>
+        {!!iconUrl && (
+          <img
+            className="control__icon"
+            src={iconUrl}
+            alt={placeholder}
+          />
+        )}
 
-      <input
-        ref={inputRef}
-        name={name}
-        type={type}
-        value={value}
-        placeholder={placeholder}
-        className="control__input"
-        onChange={onChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      />
-    </div>
+        <input
+          ref={inputRef}
+          name={name}
+          type={type}
+          value={value}
+          placeholder={placeholder}
+          className={inputClass}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      </div>
+    </label>
   );
 };
 
@@ -69,6 +76,8 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
+  isSmall: PropTypes.bool,
+  label: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -76,4 +85,6 @@ Input.defaultProps = {
   type: 'text',
   placeholder: '',
   className: '',
+  isSmall: true,
+  label: '',
 };
