@@ -36,7 +36,10 @@ button {
   max-width: 1520px;
   padding: 0 34px;
   margin: 0 auto;
-  @media (max-width: $breakpointMobile) {
+}
+
+@media (max-width: $breakpointMobile) {
+  .content {
     padding: 0 20px;
   }
 }

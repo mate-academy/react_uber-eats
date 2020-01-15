@@ -8,32 +8,39 @@
     border: 1px solid $c-lightGray;
     transition: border-color 0.3s;
   }
+
   &__icon {
     width: 14px;
     height: 14px;
     margin-right: 10px;
-
   }
+
   &__input {
     display: flex;
     line-height: 24px;
     max-height: 24px;
-    @media (max-width: $breakpointMobile) {
-      max-width: 75px;
-    }
-    &--small {
-      @media (max-width: $breakpointTabletL) {
-        max-width: 100px;
-      }
-    }
+
   }
   &--focused {
     border-color: darken($c-lightGray, 20);
   }
+
   &__label {
     font-size: $smallFontSize;
     margin-bottom: 8px;
     color: #626262;
     margin-left: 20px;
+  }
+}
+
+@media (max-width: $breakpointMobile) {
+  .control__input {
+    max-width: 75px;
+  }
+}
+
+@media (max-width: $breakpointTabletL) {
+  .control__input--small {
+    max-width: 100px;
   }
 }

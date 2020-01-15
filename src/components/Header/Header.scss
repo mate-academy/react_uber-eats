@@ -8,55 +8,44 @@
   background-color: $c-white;
   width: 100%;
   padding: 16px 0;
+
   &__inner {
     @extend %flex-row;
   }
+
   &__logo {
     height: 24px;
     width: auto;
-    @media (max-width: $breakpointMobile) {
-      height: 14px;
-    }
   }
+
   &__delivery-info {
     @extend %flex-row;
     margin-left: 7vw;
   }
-  @media(max-width: $breakpointTabletM) {
-    &__delivery-info {
-      display: none;
-    }
-  }
+
   &__search {
     margin-left: auto;
   }
-  @media(max-width: $breakpointTabletM) {
-    &__search {
-      display: none;
-    }
-  }
+
   &__link {
     margin-left: $styleDistance;
     color: $c-darkGrayText;
     padding: 12px 0;
     white-space: nowrap;
-    @media (max-width: $breakpointMobile) {
-      margin-left: 20px;
-    }
     &:hover {
       text-decoration: underline;
     }
   }
+
   &__time {
     margin-left: $styleDistance / 2;
   }
+
   &__toggle-buttons {
     display: none;
     margin-left: auto;
-    @media(max-width: $breakpointTabletM) {
-      display: flex;
-    }
   }
+
   &__toggle-btn {
     display: flex;
     align-items: center;
@@ -71,13 +60,42 @@
 .mobile-controls {
   display: none;
   position: relative;
-  @media(max-width: $breakpointTabletM) {
-    display: flex;
-    padding-top: 30px;
-  }
+
   &__close {
     position: absolute;
     top: 10px;
     right: 0;
+  }
+}
+
+@media (max-width: $breakpointTabletM) {
+  .mobile-controls {
+    display: flex;
+    padding-top: 30px;
+  }
+
+  .header {
+    &__toggle-buttons {
+      display: flex;
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &__delivery-info {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $breakpointMobile) {
+  .header {
+    &__logo {
+      height: 14px;
+    }
+    &__link {
+      margin-left: 20px;
+    }
   }
 }
