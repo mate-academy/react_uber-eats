@@ -7,9 +7,11 @@ import { RestaurantsListPage } from './components/RestaurantsListPage';
 const App = () => (
   <Provider store={store}>
     <div className="page">
-      <main className="main-content">
+      <header>Uber Eats Header</header>
+      <main className="content">
         <RestaurantsListPage />
       </main>
+      <footer>Uber Eats Footer</footer>
     </div>
   </Provider>
 );

@@ -1,3 +1,9 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 body,
 button,
 a,
@@ -7,7 +13,7 @@ input {
   line-height: 1.5;
 }
 
-.main-content {
+.content {
   max-width: 1160px;
   padding: 0 34px;
   margin: 0 auto;
