@@ -1,4 +1,5 @@
 import React from 'react';
+import Select from '../Select/Select';
 
 const Footer = () => (
   <footer className="footer">
@@ -6,9 +7,22 @@ const Footer = () => (
       <div className="footer__top-part">
 
         <div className="footer__main">
-          <div className="main__left">
+          <div className="footer__logo">
             <img src="./images/logo_white.svg" alt="Uber Eats" />
-            <div>Language</div>
+
+            <Select
+              name="language"
+              options={[
+                {
+                  value: 'en', label: 'English',
+                },
+                {
+                  value: 'ua', label: 'Ukrainian',
+                },
+              ]}
+              value="en"
+              iconUrl="./images/world.svg"
+            />
           </div>
 
           <div className="footer__modile-apps">
@@ -74,19 +88,20 @@ const Footer = () => (
               Pricing
             </a>
           </div>
+
+          <div className="footer__social social">
+            <a href="/#" className="social__link">
+              <img src="./images/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="/#" className="social__link">
+              <img src="./images/twitter.svg" alt="Twitter" />
+            </a>
+            <a href="/#" className="social__link">
+              <img src="./images/instagram.svg" alt="Instagram" />
+            </a>
+          </div>
         </div>
 
-        <div className="footer__social social">
-          <a href="/#" className="social__link">
-            <img src="./images/facebook.svg" alt="Facebook" />
-          </a>
-          <a href="/#" className="social__link">
-            <img src="./images/twitter.svg" alt="Twitter" />
-          </a>
-          <a href="/#" className="social__link">
-            <img src="./images/instagram.svg" alt="Instagram" />
-          </a>
-        </div>
       </div>
     </div>
   </footer>

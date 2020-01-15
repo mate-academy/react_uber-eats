@@ -5,13 +5,15 @@ import RestaurantsListPage from './components/RestaurantsListPage/index';
 import Footer from './components/Footer/Footer';
 
 const App = () => (
-  <div className="page">
+  <>
     <Header />
-    <main className="content">
-      <RestaurantsListPage />
+    <main className="page">
+      <div className="content">
+        <RestaurantsListPage />
+      </div>
     </main>
     <Footer />
-  </div>
+  </>
 );
 
 export default App;
