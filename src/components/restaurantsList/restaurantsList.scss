@@ -1,0 +1,30 @@
+@import "../../styles/vars";
+
+.restaurants_list {
+  display: grid;
+  padding: 0 264px;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(348px, 1fr));
+  gap: 40px 20px;
+}
+
+@media screen and (max-width: $max-widthFullHd) {
+  .restaurants_list {
+    padding: 0 97px;
+    grid-template-columns: repeat(3, minmax(348px, 1fr));
+  }
+}
+
+@media screen and (max-width: $max-widthIMac) {
+  .restaurants_list {
+    padding: 0 20px;
+    grid-template-columns: repeat(2, minmax(340px, 1fr));
+  }
+}
+
+@media screen and (max-width: $max-widthIPad) {
+  .restaurants_list {
+    padding: 0 20px;
+    grid-template-columns: minmax(280px, 1fr);
+  }
+}

@@ -1,0 +1,113 @@
+@import "../../styles/vars";
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 264px;
+  padding-right: 264px;
+
+  &__button {
+    margin-left: 83px;
+    height: 28px;
+    cursor: pointer;
+  }
+
+  &__query_address,
+  &__query_dish,
+  &__delivery_time {
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    margin-left: 223px;
+    width: 256px;
+    height: 48px;
+  }
+
+  &__input {
+    margin-left: 10px;
+    outline: none;
+    border: none;
+  }
+
+  &__delivery_time {
+    width: 100px;
+    margin-left: 20px;
+  }
+
+  &__query_dish {
+    margin-left: 360px;
+  }
+
+  &__sign_in {
+    cursor: pointer;
+    width: 48px;
+    margin-left: 44px;
+  }
+}
+
+.location {
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+
+  &__city {
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    bottom: 5px;
+    margin-left: 14px;
+  }
+}
+
+@media screen and (max-width: $max-widthFullHd) {
+  .search {
+    padding-left: 97px;
+    padding-right: 97px;
+
+    &__query_address {
+      margin-left: 131px;
+    }
+
+    &__query_dish {
+      margin-left: 84px;
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthIMac) {
+  .search {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__query_address {
+      margin-left: 10px;
+      display: none;
+    }
+
+    &__delivery_time {
+      display: none;
+    }
+
+    &__query_dish {
+      margin-left: 8px;
+    }
+  }
+
+
+}
