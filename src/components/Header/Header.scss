@@ -21,13 +21,17 @@
   &__delivery-info {
     @extend %flex-row;
     margin-left: 7vw;
-    @media(max-width: $breakpointTabletM) {
+  }
+  @media(max-width: $breakpointTabletM) {
+    &__delivery-info {
       display: none;
     }
   }
   &__search {
     margin-left: auto;
-    @media(max-width: $breakpointTabletM) {
+  }
+  @media(max-width: $breakpointTabletM) {
+    &__search {
       display: none;
     }
   }
