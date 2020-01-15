@@ -1,10 +1,19 @@
 @import "../../store/styles/extends.scss";
+@import "../../store/styles/variables.scss";
 
 .control {
-  @extend %flex-row;
+  &__input-wrapper {
+    @extend %flex-row;
 
-  padding: 12px 16px;
-  border: 1px solid #e0e0e0;
+    padding: 11px 16px;
+    border: 1px solid $color-gray;
+    transition: border-color 300ms;
+    box-sizing: border-box;
+  }
+
+  &__focused {
+    border-color: darken($color-gray, 25  );
+  }
 
   &__icon {
     width: 14px;
@@ -14,6 +23,22 @@
 
   &__input {
     max-height: 24px;
+
+    &--time {
+      max-width: 75px;
+    }
+
+    &--small {
+      @media (max-width: $break-point-tablet-lg) {
+        max-width: 75px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 11px;
+    margin-bottom: 8px;
+    color: #626262;
   }
 
   & + & {

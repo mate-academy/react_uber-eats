@@ -1,1 +1,5 @@
-
+.page {
+  /* min-height: 100vh; */
+  padding-top: 32px;
+  margin-bottom: 82px;
+}

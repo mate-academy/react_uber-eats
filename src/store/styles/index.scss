@@ -1,3 +1,5 @@
+@import "../../store/styles/variables.scss";
+
 *,
 ::after,
 ::before {
@@ -7,7 +9,8 @@
 body,
 button,
 a,
-input {
+input,
+select {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -19,6 +22,12 @@ input {
   outline: none;
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,4 +36,12 @@ a {
   max-width: 1160px;
   padding: 0 34px;
   margin: 0 auto;
+
+  @media (max-width: $break-point-phone) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $break-point-large) {
+    max-width: 1520px;
+  }
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, createRef } from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import './Input.scss';
 
@@ -10,28 +11,55 @@ const Input = ({
   placeholder,
   name,
   className,
+  isSmall,
+  label,
 }) => {
-  const rootClass = `control ${className}`;
+  const [isFocused, setFocused] = useState(false);
+
+  const inputRef = createRef();
+
+  const inputWrapperClass = cx('control__input-wrapper', {
+    'control__input-wrapperfocused': isFocused,
+    [className]: !!className,
+  });
+
+  const inputClass = cx('control__input', {
+    'control__input--small': isSmall,
+    'control__input--time': type === 'time',
+  });
 
   return (
-    <div className={rootClass}>
-      {!!iconUrl
-        && (
-          <img
-            src={iconUrl}
-            alt={placeholder}
-            className="control__icon"
-          />
-        )}
-      <input
-        type={type}
-        value={value}
-        onChange={onChange}
-        name={name}
-        placeholder={placeholder}
-        className="control__input"
-      />
-    </div>
+    // eslint-disable-next-line
+    <label className="control">
+      {label && (
+        <p className="control__label">
+          {label}
+        </p>
+      )}
+      <div
+        className={inputWrapperClass}
+      >
+        {!!iconUrl
+          && (
+            <img
+              src={iconUrl}
+              alt={placeholder}
+              className="control__icon"
+            />
+          )}
+        <input
+          ref={inputRef}
+          type={type}
+          value={value}
+          onChange={onChange}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          name={name}
+          placeholder={placeholder}
+          className={inputClass}
+        />
+      </div>
+    </label>
   );
 };
 
@@ -43,6 +71,8 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
+  isSmall: PropTypes.bool,
+  label: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -50,6 +80,8 @@ Input.defaultProps = {
   type: 'text',
   placeholder: '',
   className: '',
+  isSmall: true,
+  label: '',
 };
 
 export default Input;
