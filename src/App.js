@@ -3,16 +3,19 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import { RestaurantsListPage } from './components/RestaurantsListPage';
 import './styles/index.scss';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import './App.scss';
 
 const App = () => (
   <Provider store={store}>
+    <Header />
     <div className="page">
-      <header>Future header</header>
       <main className="content">
         <RestaurantsListPage />
       </main>
-      <footer>Future footer</footer>
     </div>
+    <Footer />
   </Provider>
 );
 

@@ -13,6 +13,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         restaurantsListData: action.payload,
       };
+
     default:
       return state;
   }
