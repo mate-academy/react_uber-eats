@@ -3,16 +3,18 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import './styles/index.scss';
 import { RestaurantsListPage } from './components/RestaurantsListPage';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 const App = () => (
   <Provider store={store}>
+    <Header />
     <div className="page">
-      <header>Uber Eats Header</header>
       <main className="content">
         <RestaurantsListPage />
       </main>
-      <footer>Uber Eats Footer</footer>
     </div>
+    <Footer />
   </Provider>
 );
 
