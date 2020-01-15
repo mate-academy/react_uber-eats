@@ -27,3 +27,11 @@
     margin-left: 20px;
   }
 }
+
+@media (max-width: $break-point-tablet-lg) {
+  .control {
+    &__input {
+      max-width: 75px;
+    }
+  }
+}
