@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import './Input.scss';
@@ -15,13 +15,8 @@ const Input = ({
   isSmall,
   label,
 }) => {
-  const [isFocused, setIsFocused] = useState(false);
-
-  const handleFocus = useCallback(() => setIsFocused(true), [setIsFocused]);
-  const handleBlur = useCallback(() => setIsFocused(false), [setIsFocused]);
   const wrapperClass = cn(
     'control__wrapper', {
-      'control__wrapper--focused': isFocused,
       [className]: !!className,
     }
   );
@@ -52,8 +47,6 @@ const Input = ({
           type={type}
           value={value}
           onChange={onChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
           name={name}
           className={inputClass}
           placeholder={placeholder}
