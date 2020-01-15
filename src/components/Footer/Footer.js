@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import './Footer.scss';
 import Select from '../Select/Select';
@@ -26,7 +25,7 @@ const Footer = () => (
           </div>
           <div className="footer__mobile-apps">
             <a
-              href="#"
+              href="/"
               className="footer__mobile-app"
             >
               <img
@@ -35,7 +34,7 @@ const Footer = () => (
               />
             </a>
             <a
-              href="#"
+              href="/"
               className="footer__mobile-app"
             >
               <img
@@ -47,27 +46,27 @@ const Footer = () => (
           </div>
         </div>
         <div className="footer__top-links links">
-          <a href="#" className="links__link links__link--intended">
+          <a href="/" className="links__link links__link--intended">
             About UberEats
           </a>
-          <a href="#" className="links__link">
+          <a href="/" className="links__link">
             Read our blog
           </a>
-          <a href="#" className="links__link">
+          <a href="/" className="links__link">
             Sign up to deliver
           </a>
-          <a href="#" className="links__link">
+          <a href="/" className="links__link">
             Add your restaurant
           </a>
         </div>
         <div className="footer__top-links">
-          <a href="#" className="links__link links__link--intended">
+          <a href="/" className="links__link links__link--intended">
             Get help
           </a>
-          <a href="#" className="links__link">
+          <a href="/" className="links__link">
             Read FAQs
           </a>
-          <a href="#" className="links__link">
+          <a href="/" className="links__link">
             View all cities
           </a>
         </div>
@@ -78,24 +77,24 @@ const Footer = () => (
         </p>
         <div className="footer__misc">
           <div className="footer__bottom-links links">
-            <a href="#" className="links__link">
+            <a href="/" className="links__link">
             Privacy policy
             </a>
-            <a href="#" className="links__link">
+            <a href="/" className="links__link">
             Terms to use
             </a>
-            <a href="#" className="links__link">
+            <a href="/" className="links__link">
             Pricing
             </a>
           </div>
           <div className="footer__social social">
-            <a href="#" className="social__link">
+            <a href="/" className="social__link">
               <img src="./images/fb.svg" alt="facebook" />
             </a>
-            <a href="#" className="social__link">
+            <a href="/" className="social__link">
               <img src="./images/twit.svg" alt="twitter" />
             </a>
-            <a href="#" className="social__link">
+            <a href="/" className="social__link">
               <img src="./images/instagram.svg" alt="instagram" />
             </a>
           </div>

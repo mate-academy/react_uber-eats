@@ -6,27 +6,74 @@
   z-index: 1;
   top: 0;
   background-color: $c-white;
+  width: 100%;
   padding: 16px 0;
   &__inner {
     @extend %flex-row;
   }
+  &__logo {
+    height: 24px;
+    width: auto;
+    @media (max-width: $breakpointMobile) {
+      height: 14px;
+    }
+  }
   &__delivery-info {
     @extend %flex-row;
     margin-left: 7vw;
+    @media(max-width: $breakpointTabletM) {
+      display: none;
+    }
   }
   &__search {
     margin-left: auto;
+    @media(max-width: $breakpointTabletM) {
+      display: none;
+    }
   }
   &__link {
     margin-left: $styleDistance;
     color: $c-darkGrayText;
     padding: 12px 0;
     white-space: nowrap;
+    @media (max-width: $breakpointMobile) {
+      margin-left: 20px;
+    }
     &:hover {
       text-decoration: underline;
     }
   }
   &__time {
     margin-left: $styleDistance / 2;
+  }
+  &__toggle-buttons {
+    display: none;
+    margin-left: auto;
+    @media(max-width: $breakpointTabletM) {
+      display: flex;
+    }
+  }
+  &__toggle-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  @media(max-width: $breakpointTabletM) {
+    display: flex;
+    padding-top: 30px;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 0;
   }
 }

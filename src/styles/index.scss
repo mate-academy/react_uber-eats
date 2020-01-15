@@ -26,8 +26,17 @@ input {
   outline: none;
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none ;
+}
+
 .content {
-  max-width: 1160px;
+  max-width: 1520px;
   padding: 0 34px;
   margin: 0 auto;
+  @media (max-width: $breakpointMobile) {
+    padding: 0 20px;
+  }
 }

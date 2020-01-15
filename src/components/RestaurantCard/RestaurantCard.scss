@@ -4,12 +4,17 @@
 
   height: $cardHeight;
   width: 100%;
-
+  @media (max-width: $breakpointMobile) {
+    height: $cardHeightMobile;
+  }
   cursor: pointer;
   &__img {
     height: $cardHeight * 0.7;
     width: 100%;
     object-fit: cover;
+    @media (max-width: $breakpointMobile) {
+      height: $cardHeightMobile * 0.7;
+    }
   }
   &__title {
     margin: 12px 0 4px;
