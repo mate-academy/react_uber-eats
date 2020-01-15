@@ -1,0 +1,37 @@
+.control {
+  $border-color: #e0e0e0;
+  @include flex-row;
+
+  padding: 11px 16px;
+
+  border: 1px solid $border-color;
+  transition: border-color 300ms;
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+
+    margin-right: 10px;
+  }
+
+  &--focused {
+    border-color: darken($border-color, 20);
+  }
+
+  &__input {
+    max-height: 24px;
+    line-height: 24px;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: $break-point-tablet-lg) {
+  .control {
+    &__input {
+      max-width: 75px;
+    }
+  }
+}

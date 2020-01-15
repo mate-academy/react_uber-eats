@@ -1,10 +1,19 @@
 import React from 'react';
-import './App.css';
+
+import Header from './components/Header/Header';
+import RestaurantsListPage from './components/RestaurantsListPage/index';
+import Footer from './components/Footer/Footer';
 
 const App = () => (
-  <div className="App">
-    <h1>React Uber eats</h1>
-  </div>
+  <>
+    <Header />
+    <main className="page">
+      <div className="content">
+        <RestaurantsListPage />
+      </div>
+    </main>
+    <Footer />
+  </>
 );
 
 export default App;
