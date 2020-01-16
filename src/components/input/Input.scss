@@ -1,0 +1,59 @@
+@import "../../store/styles/extends.scss";
+@import "../../store/styles/variables.scss";
+
+.control {
+  &__input-wrapper {
+    @extend %flex-row;
+
+    padding: 11px 16px;
+    border: 1px solid $color-gray;
+    transition: border-color 300ms;
+    box-sizing: border-box;
+  }
+
+  &__focused {
+    border-color: darken($color-gray, 25  );
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+
+  &__input {
+    max-height: 24px;
+
+    &--time {
+      max-width: 75px;
+
+      @media (max-width: $break-point-phone) {
+        max-width: 65px;
+      }
+    }
+
+    &--address {
+      max-width: 256px;
+
+      @media (max-width: $break-point-phone) {
+        max-width: 104px;
+      }
+    }
+
+    &--small {
+      @media (max-width: $break-point-tablet-lg) {
+        max-width: 65px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 11px;
+    margin-bottom: 8px;
+    color: #626262;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}
