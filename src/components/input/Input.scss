@@ -26,11 +26,23 @@
 
     &--time {
       max-width: 75px;
+
+      @media (max-width: $break-point-phone) {
+        max-width: 65px;
+      }
+    }
+
+    &--address {
+      max-width: 256px;
+
+      @media (max-width: $break-point-phone) {
+        max-width: 104px;
+      }
     }
 
     &--small {
       @media (max-width: $break-point-tablet-lg) {
-        max-width: 75px;
+        max-width: 65px;
       }
     }
   }

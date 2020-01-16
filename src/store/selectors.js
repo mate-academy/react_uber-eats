@@ -14,3 +14,13 @@ export const seleсtRestaurantsList = createSelector(
     return feedItems.map(item => storesMap[item.uuid]);
   }
 );
+
+export const seleсtRestaurantsListError = createSelector(
+  rootSelector,
+  ({ error }) => error
+);
+
+export const seleсtIsLoading = createSelector(
+  rootSelector,
+  ({ isLoading }) => isLoading
+);

@@ -14,6 +14,7 @@ const Select = ({ name, value, onSelect, options, iconUrl }) => (
         <option
           value={optionValue}
           selected={value === optionValue}
+          key={optionValue}
         >
           {label}
         </option>
