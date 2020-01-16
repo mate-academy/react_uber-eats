@@ -1,10 +1,17 @@
 import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from './store/index';
+import './App.scss';
+// eslint-disable-next-line import/named
+import { Enhanced as RestaurantsListPage }
+  from './components/RestaurantsListPage/index';
 
 const App = () => (
-  <div className="App">
-    <h1>React Uber eats</h1>
-  </div>
+  <Provider store={store}>
+    <div className="page">
+      <RestaurantsListPage />
+    </div>
+  </Provider>
 );
 
 export default App;
