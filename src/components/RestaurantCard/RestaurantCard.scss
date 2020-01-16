@@ -1,0 +1,31 @@
+.restaurant-card {
+  $height: 367px;
+  width: $height;
+  width: 100%;
+  cursor: pointer;
+
+  &__img {
+    height: $height * 0.7;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin: 12px 0 4px;
+  }
+
+  &__categories {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__eta {
+    font-size: 14px;
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: #f5f5f5;
+  }
+
+}
