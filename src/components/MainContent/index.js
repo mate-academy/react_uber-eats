@@ -1,15 +1,18 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 
-import './MainPage.scss';
+import './main.scss';
+import './time.scss';
 import { createActionLoadData } from '../../API/loadData';
 import { getRestaurants } from '../../store';
 import RestaurantCard from '../RestaurantCard';
 
-const MainPage = ({ loadData, restaurants }) => {
+const MainContent = () => {
+  const dispatch = useDispatch();
+  const restaurants = useSelector(getRestaurants);
+
   useEffect(() => {
-    loadData();
+    dispatch(createActionLoadData());
   });
 
   return (
@@ -35,17 +38,4 @@ const MainPage = ({ loadData, restaurants }) => {
   );
 };
 
-const mapState2Props = state => ({
-  restaurants: getRestaurants(state),
-});
-
-const mapDispatch2Props = {
-  loadData: createActionLoadData,
-};
-
-export default connect(mapState2Props, mapDispatch2Props)(MainPage);
-
-MainPage.propTypes = {
-  loadData: PropTypes.func.isRequired,
-  restaurants: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+export default MainContent;

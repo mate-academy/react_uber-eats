@@ -38,7 +38,7 @@ $bc-color: #262626;
     cursor: pointer;
   }
 
-  &__store {
+  &__stores {
 
     &--gp {
       margin-left: 20px;
@@ -67,7 +67,7 @@ $bc-color: #262626;
     border: 1px solid #c4c4c4;
   }
 
-  &__bottom {
+  &__copyright-nav {
     display: flex;
   }
 
@@ -85,5 +85,86 @@ $bc-color: #262626;
     color: #fff;
     font-size: 14px;
     line-height: 16px;
+  }
+
+  &__social {
+    margin-left: 50%;
+
+    @media screen and (max-width: 1050px) {
+      & {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    padding-bottom: 65px;
+
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-left {
+      width: max-content;
+    }
+
+    &__logo-select {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    &__select {
+      margin-top: 40px;
+      margin-left: 0;
+    }
+
+    &__stores {
+      margin-bottom: 40px;
+    }
+
+    &__top-right-nav {
+      margin-top: 16px;
+      margin-left: 0;
+    }
+
+    &__hr {
+      display: none;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__copyright-nav {
+      flex-direction: column;
+    }
+
+    &__social {
+      order: -1;
+      margin-top: 33px;
+    }
+
+    &__bottom-nav {
+      flex-direction: column;
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+
+    &__bottom-nav-li {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
+    &__link--bottom {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__copyright {
+      width: max-content;
+      margin-top: 40px;
+    }
   }
 }

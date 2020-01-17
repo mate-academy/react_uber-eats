@@ -19,15 +19,20 @@ const Footer = () => (
             </select>
           </section>
 
-          <section>
-            <a href="#/">
-              <img src={appStore} alt="Download on the App Store" />
-            </a>
+          <section className="footer__stores">
             <a href="#/">
               <img
-                className="footer__store--gp"
+                src={appStore}
+                alt="Download on the App Store"
+              />
+            </a>
+            <a
+              className="footer__stores--gp"
+              href="#/"
+            >
+              <img
                 src={googlePlay}
-                alt="Get it on Google Plat"
+                alt="Get it on Google Play"
               />
             </a>
           </section>
@@ -104,58 +109,58 @@ const Footer = () => (
       <hr className="footer__hr" />
 
       <section className="footer__bottom">
-        <p className="footer__copyright">© 2019 Uber Technologies Inc.</p>
-        <section>
-          <nav>
-            <ul className="footer__bottom-nav">
-              <li className="footer__bottom-nav-li">
-                <a
-                  className="footer__link"
-                  href="#/"
-                >
-                  Privacy policy
-                </a>
-              </li>
-              <li className="footer__bottom-nav-li">
-                <a
-                  className="footer__link"
-                  href="#/"
-                >
-                  Terms of  use
-                </a>
-              </li>
-              <li className="footer__bottom-nav-li">
-                <a
-                  className="footer__link"
-                  href="#/"
-                >
-                  Pricing
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <section className="social">
-            <button
-              className="social__icon social__icon--fb"
-              type="button"
-              // href="#/"
-            />
-            <button
-              className="social__icon social__icon--tw"
-              type="button"
-              // href="#/"
-            />
-            <button
-              className="social__icon social__icon--inst"
-              type="button"
-              // href="#/"
-            />
+        <section className="footer__copyright-nav">
+          <p className="footer__copyright">© 2019 Uber Technologies Inc.</p>
+          <section>
+            <nav>
+              <ul className="footer__bottom-nav">
+                <li className="footer__bottom-nav-li">
+                  <a
+                    className="footer__link footer__link--bottom"
+                    href="#/"
+                  >
+                    Privacy policy
+                  </a>
+                </li>
+                <li className="footer__bottom-nav-li">
+                  <a
+                    className="footer__link footer__link--bottom"
+                    href="#/"
+                  >
+                    Terms of  use
+                  </a>
+                </li>
+                <li className="footer__bottom-nav-li">
+                  <a
+                    className="footer__link footer__link--bottom"
+                    href="#/"
+                  >
+                    Pricing
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </section>
         </section>
-      </section>
-      <div className="div" />
 
+        <section className="social footer__social">
+          <button
+            className="social__icon social__icon--fb"
+            type="button"
+            // href="#/"
+          />
+          <button
+            className="social__icon social__icon--tw"
+            type="button"
+            // href="#/"
+          />
+          <button
+            className="social__icon social__icon--inst"
+            type="button"
+            // href="#/"
+          />
+        </section>
+      </section>
     </footer>
   </div>
 );

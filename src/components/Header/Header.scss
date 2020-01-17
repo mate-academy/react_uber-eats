@@ -13,6 +13,48 @@
     justify-content: space-between;
   }
 
+  &__inputs-address-time {
+    display: flex;
+    align-items: center;
+
+    &--toggled {
+      position: relative;
+      padding-top: 40px;
+
+      &::after {
+        content: "";
+      }
+
+      @media screen and (min-width: 1051px) {
+        & {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__toggled-address {
+    margin-left: 12px;
+  }
+
+  &__auxiliary {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #626262;
+  }
+
+  &__input-btns {
+    display: flex;
+    align-items: center;
+  }
+
   &__input {
     height: 48px;
     padding: 0 16px 0 38px;
@@ -22,13 +64,19 @@
     outline: none;
 
     &--address {
-      margin-left: 5px;
       background: url("./pics/address.svg") no-repeat top 16px left 14px;
+
+      &--top {
+        margin-left: 5px;
+      }
     }
 
     &--time {
-      margin-left: 20px;
       background: url("./pics/time.svg") no-repeat top 12px left 9px;
+
+      &--top {
+        margin-left: 20px;
+      }
     }
 
     &--query {
@@ -40,7 +88,9 @@
     }
 
     @media screen and (max-width: 1050px) {
-      & {
+      &--address--top,
+      &--time--top,
+      &--query {
         display: none;
       }
     }
