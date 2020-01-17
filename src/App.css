@@ -1,1 +1,10 @@
 
+body {
+  background-color: #e5e5e5;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5vw;
+}
