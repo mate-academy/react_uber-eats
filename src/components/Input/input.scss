@@ -1,0 +1,30 @@
+@import "../../styles/extends.scss";
+
+.control {
+  @extend %flex-row-center;
+
+  padding: 11px 16px;
+  border: 1px solid #e0e0e0;
+  transition: border-color 300ms;
+
+  &--focused {
+    border-color: darken(#e0e0e0, 20);
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+
+    margin-right: 10px;
+
+  }
+
+  &__input {
+    min-height: 24px;
+    line-height: 24px;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}

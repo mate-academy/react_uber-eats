@@ -11,6 +11,16 @@ input {
   line-height: 1.5;
 }
 
+input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .content {
   max-width: 1160px;
   padding: 0 34px;
