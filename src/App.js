@@ -3,16 +3,17 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import { RestaurantsListPage } from './components/RestaurantsListPage';
 import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 const App = () => (
   <Provider store={store}>
+    <Header />
     <div className="page">
-      <Header />
       <main className="content">
         <RestaurantsListPage />
       </main>
-      <footer>UBER Eats footer</footer>
     </div>
+    <Footer />
   </Provider>
 );
 
