@@ -1,15 +1,16 @@
-@import "../../styles/extends.scss";
+@import "../../styles/utils.scss";
 
 .control {
-  $border-color: #e0e0e0;
-  @extend %flex-row-center;
+  &__input-wrapper {
+    @extend %flex-row-center;
 
-  padding: 11px 16px;
-  border: 1px solid $border-color;
-  border-radius: 2px;
+    padding: 11px 16px;
+    border: 1px solid $color-grey;
+    border-radius: 2px;
+  }
 
   &--focused {
-    border-color: darken($border-color, 20);
+    border-color: darken($color-grey, 20);
   }
 
   &__icon {
@@ -22,6 +23,23 @@
   &__input {
     max-height: 24px;
     line-height: 24px;
+
+    &--time {
+      max-width: 75px;
+    }
+
+    &--small {
+      @media (max-width: $breakpoint-tablet-lg) {
+        max-width: 76px;
+      }
+    }
+  }
+
+  &__label {
+    font-style: 14px;
+    color: #626262;
+
+    margin-bottom: 8px;
   }
 
   & + & {

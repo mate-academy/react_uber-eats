@@ -1,13 +1,12 @@
-import React, { useState, createRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import './Input.scss';
 
 const Input = ({
-  iconUrl, value, onChange, type, placeholder, name, className,
+  iconUrl, value, onChange, type, placeholder, name, className, isSmall, label,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
-  const inputRef = createRef();
 
   const handleFocus = useCallback(
     () => {
@@ -21,41 +20,52 @@ const Input = ({
     }, [],
   );
 
-  const focusInput = () => {
-    inputRef.current.focus();
-  };
+  const inputWrapperClass = cn('control__input-wrapper', {
+    'control__input-wrapper--focused': isFocused,
+    [className]: !!className,
+  });
 
-  const rootClass = cn('control', {
-    'control--focused': isFocused,
+  const inputClass = cn('control__input', {
+    'control__input--small': isSmall,
+    'control__input--time': type === 'time',
     [className]: !!className,
   });
 
   return (
-    <div
-      className={rootClass}
-      onClick={focusInput}
-      role="presentation"
+    <label
+      htmlFor={name}
+      className="control"
     >
-      {!!iconUrl
-        && (
-          <img
-            src={iconUrl}
-            alt={placeholder}
-            className="control__icon"
-          />
-        )}
-      <input
-        ref={inputRef}
-        type={type}
-        value={value}
-        onChange={onChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        name={name}
-        placeholder={placeholder}
-        className="control__input"
-      />
-    </div>
+      {label && (
+        <p className="control__label">
+          {label}
+        </p>
+      )}
+      <div
+        className={inputWrapperClass}
+      >
+        {!!iconUrl
+          && (
+            <img
+              src={iconUrl}
+              alt={placeholder}
+              className="control__icon"
+            />
+          )}
+        <input
+          type={type}
+          value={value}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          name={name}
+          id={name}
+          placeholder={placeholder}
+          className={inputClass}
+        />
+      </div>
+    </label>
+
   );
 };
 
@@ -67,6 +77,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
+  label: PropTypes.string,
+  isSmall: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -74,6 +86,8 @@ Input.defaultProps = {
   type: 'text',
   placeholder: '',
   className: '',
+  label: '',
+  isSmall: true,
 };
 
 export default Input;
