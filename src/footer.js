@@ -412,7 +412,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div>
+          <div className="footer__logos">
             <svg
               className="footer__bottom-svgs"
               width="16"

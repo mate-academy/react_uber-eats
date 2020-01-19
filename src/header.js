@@ -66,16 +66,17 @@ const Header = ({ originalData, setStoresMap }) => {
     <nav className="nav">
       <div className="nav__items">
         <div className="nav__items-side">
-          <svg
-            className="nav__uber"
-            width="70"
-            height="24"
-            viewBox="0 0 70 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M67.713 9.66297C65.5609 9.66297 64.0343 11.3469
+          <div className="uberEats">
+            <svg
+              className="nav__uber"
+              width="70"
+              height="24"
+              viewBox="0 0 70 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M67.713 9.66297C65.5609 9.66297 64.0343 11.3469
       64.0343 13.9318V23.4138H60.7491V6.72395H63.995V8.76198C64.3953
       8.0865 64.9691 7.53039 65.6567 7.15129C66.3444 6.77219 67.1209
       6.5839 67.9058 6.60592H69.0861V9.66297H67.713ZM58.4789
@@ -117,32 +118,34 @@ const Header = ({ originalData, setStoresMap }) => {
       10.6649 23.7992 9.53465 23.7915C4.64415 23.7915 0.878906
       20.2269 0.878906 14.821V0.491821H4.34514V14.6558C4.34514
       18.3187 6.70579 20.7108 9.92415 20.7108Z"
-              fill="#262626"
-            />
-          </svg>
+                fill="#262626"
+              />
+            </svg>
 
-          <svg
-            width="69"
-            height="24"
-            viewBox="0 0 69 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d={wordEats} fill="#5FB709" />
-          </svg>
+            <svg
+              width="69"
+              height="24"
+              viewBox="0 0 69 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d={wordEats} fill="#5FB709" />
+            </svg>
+          </div>
         </div>
 
         <div className="nav__items">
-          <svg
-            className="nav__location"
-            width="20"
-            height="24"
-            viewBox="0 0 20 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.99184 24C9.99184 24 0 15.5265 0 9.99184C0
+          <span className="nav__text">
+            <svg
+              className="nav__location"
+              width="20"
+              height="24"
+              viewBox="0 0 20 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.99184 24C9.99184 24 0 15.5265 0 9.99184C0
             4.48163 4.45714 0 9.99184 0C15.5265 0 19.9837
             4.48163 19.9837 9.99184C19.9837 15.5265 9.99184
             24 9.99184 24ZM9.99184 2.00816C5.58367 2.00816
@@ -157,24 +160,25 @@ const Header = ({ originalData, setStoresMap }) => {
             10.0163C7.98367 11.1184 8.8898 12 9.99184 12C11.0939
             12 12 11.0939 12 9.99184C12 8.8898 11.0939 8.00816
             9.99184 8.00816Z"
-              fill="black"
-            />
-          </svg>
-          <span className="nav__text">London</span>
+                fill="black"
+              />
+            </svg>
+          London
+          </span>
         </div>
 
         <div className="nav__items">
-
-          <svg
-            className="nav__clock"
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 0C8.82441 0 6.69767 0.645139 4.88873
+          <span className="nav__text">
+            <svg
+              className="nav__clock"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 0C8.82441 0 6.69767 0.645139 4.88873
           1.85383C3.07979 3.06253 1.66989 4.78049 0.83733
           6.79048C0.00476614 8.80047 -0.21307 11.0122 0.211367
           13.146C0.635804 15.2798 1.68345 17.2398 3.22183
@@ -193,16 +197,17 @@ const Header = ({ originalData, setStoresMap }) => {
           5.90727C19.629 7.41472 20.1667 9.187 20.1667
           11C20.164 13.4303 19.1974 15.7604 17.4789
           17.4789C15.7604 19.1974 13.4303 20.164 11 20.1667Z"
-              fill="black"
-            />
-            <path
-              d="M11.9173
+                fill="black"
+              />
+              <path
+                d="M11.9173
           3.66663H10.084V10.0833V11V11.9166H15.584V10.0833H11.9173V3.66663Z"
-              fill="black"
-            />
-          </svg>
+                fill="black"
+              />
+            </svg>
 
-          <span className="nav__text">Deliver now</span>
+          Deliver now
+          </span>
         </div>
       </div>
       <div className="nav__items">
