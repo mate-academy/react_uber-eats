@@ -1,1 +1,436 @@
+body {
+  margin: 0;
+}
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1476px;
+  margin: auto;
+}
+
+.card {
+  margin: 40px 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.card__img {
+  max-width: 349px;
+  height: 279px;
+}
+
+.card__ul {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  width: 349px;
+  color: #757575;
+  padding: 0;
+  list-style: none;
+}
+
+.bull-none {
+  display: none;
+}
+
+.bull {
+  padding: 0 3px;
+}
+
+.card__time {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  width: 86px;
+  height: 24px;
+  background: #f5f5f5;
+  justify-content: center;
+  color: black;
+}
+
+.card__title {
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: black;
+  margin-top: 12px;
+}
+
+.selectedRestaurant {
+  width: 100%;
+  height: 384px;
+  filter: brightness(0.1);
+  object-fit: cover;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.card-opened {
+  position: relative;
+}
+
+.card__opened-info {
+  background-color: white;
+  bottom: 35%;
+  position: absolute;
+  min-width: 80%;
+}
+
+.opened__header {
+  margin-right: 100px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 54px;
+  display: flex;
+  align-items: flex-start;
+  color: black;
+  margin-left: 25%;
+  flex-direction: column;
+}
+
+.opened__ul {
+  margin-top: 0;
+}
+
+.opened__time {
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+.nav {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  padding: 14px;
+}
+
+.main {
+  padding-top: 80px;
+}
+
+.nav__items {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav__uber {
+  margin-right: 7px;
+}
+
+.nav__text {
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__items-side {
+  display: flex;
+  align-items: center;
+}
+
+.nav__location {
+  margin-left: 223px;
+  margin-right: 5px;
+}
+
+.nav__clock {
+  margin-left: 60px;
+  margin-right: 5px;
+
+}
+
+.nav__input {
+  border: 0;
+  outline: 0;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  background-color: #262626;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__block1 {
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__left-up {
+  padding: 63px 0 0 98px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 65px;
+
+}
+
+.footer__select {
+  border: 1px solid white;
+  padding: 0 10px;
+  margin-left: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer__select-inside {
+  border: 1px solid #262626;
+  background-color: #262626;
+  color: white;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.footer__p {
+  margin-right: 40px;
+}
+
+.footer__button {
+  width: 135px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.apple {
+  color: rgba(0, 0, 0, 0);
+  margin-left: 98px;
+  background-image: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/d0558d91063038236b60e3ef71fdc1fd.svg");
+}
+
+.android {
+  color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-image: url("https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/cf6dad406fdfdcd290fd40de9008ae50.png");
+}
+
+.footer__left-down {
+  display: flex;
+
+}
+
+.block2__ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 74px;
+}
+
+.block2__link {
+  color: white;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.block2__ul li {
+  margin-bottom: 16px;
+}
+
+.block2__link:hover {
+  text-decoration: underline;
+}
+
+.block2__svg {
+  margin-right: 6px;
+}
+
+.block3 {
+  margin-right: 100px;
+}
+
+.footer__hr {
+  width: 80%;
+  background-color: #c4c4c4;
+}
+
+.footer__copyright {
+  color: white;
+  padding: 40px 10% 167px 0;
+  margin: 0;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px;
+}
+
+.footer__bottom-link {
+  margin-right: 48px;
+}
+
+.footer__right-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__right-bottom ul {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer__bottom-svgs {
+  margin: 56px 24px 0 0;
+}
+
+@media (max-width: 950px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+  }
+
+  .nav__items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__clock {
+    margin: 0 5px 0 0;
+  }
+
+  .nav__location {
+    margin: 0 5px 0 0;
+  }
+
+  .nav__text {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .nav__items-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 50px;
+
+  }
+
+  .nav__search {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__input {
+    margin: 0;
+    width: 50px;
+  }
+
+  .uberEats {
+    display: flex;
+  }
+
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .footer__left-up {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__left-down {
+    display: flex;
+    justify-content: center;
+  }
+
+  .apple {
+    margin-left: 20px;
+  }
+
+  .block2__ul {
+    padding: 0;
+  }
+
+  .block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__copyright {
+    padding: 0;
+    text-align: center;
+  }
+
+  .block2__link {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+  .footer__logos {
+    display: flex;
+    justify-content: center;
+    padding-left: 24px;
+  }
+
+  .footer__right-bottom ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__right-bottom ul li {
+    margin-top: 20px;
+  }
+
+  .block2__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__bottom-svgs {
+    padding-bottom: 40px;
+  }
+}
