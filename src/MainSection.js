@@ -19,7 +19,7 @@ const MainSection = ({ storesMap }) => {
   if (selectedRestaurant[0]) {
     openedTime = selectedRestaurant[0].etaRange.text;
     imageURL = selectedRestaurant[0].heroImageUrl;
-    openedHeader = selectedRestaurant[0].title;
+    openedHeader = selectedRestaurant[0].title.split(' ').join(`\u00A0`);
     openedCategories = selectedRestaurant[0].categories;
     food = storesMap.filter((categorie) => {
       let foundedCategorie = null;
@@ -38,7 +38,7 @@ const MainSection = ({ storesMap }) => {
   }
 
   return (
-    <div>
+    <div className="main">
       <section className="card-opened">
         <img
           src={imageURL}
@@ -123,7 +123,6 @@ const MainSection = ({ storesMap }) => {
 };
 
 const getDataFromStore = state => ({
-  loadedData: state.loadedData,
   storesMap: state.storesMap,
 });
 

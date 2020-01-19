@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import * as store from './components/store/store';
 import MainSection from './MainSection';
+import Header from './header';
+import Footer from './footer';
 
 const App = ({ getAllDataFromUrl }) => {
   useEffect(() => {
@@ -13,7 +15,9 @@ const App = ({ getAllDataFromUrl }) => {
 
   return (
     <HashRouter>
+      <Header />
       <MainSection />
+      <Footer />
     </HashRouter>
   );
 };
