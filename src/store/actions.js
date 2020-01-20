@@ -5,6 +5,7 @@ export const ACTION_TYPES = {
   SET_LOAD_RESTAURANTS_ERROR: 'SET_LOAD_RESTAURANTS_ERROR',
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
+  SEARCH_RESTAURANT: 'SET_SEARCH_RESTAURANT',
 };
 
 const setRestaurantsError = error => ({
@@ -26,6 +27,11 @@ export const saveRESTAURANTS = (restaurants) => {
     payload: data,
   };
 };
+
+export const searchRESTAURANT = value => ({
+  type: ACTION_TYPES.SEARCH_RESTAURANT,
+  payload: value,
+});
 
 export const loadRESTAURANTS = () => async(dispatch) => {
   dispatch(startLoading());

@@ -4,6 +4,7 @@ const initialState = {
   RestaurantListData: null,
   isLoading: false,
   error: null,
+  searchQuery: '',
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -39,6 +40,15 @@ export const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
+      };
+    }
+
+    case ACTION_TYPES.SEARCH_RESTAURANT: {
+      const { payload } = action;
+
+      return {
+        ...state,
+        searchQuery: payload.value,
       };
     }
 

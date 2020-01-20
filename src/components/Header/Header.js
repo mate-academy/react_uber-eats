@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import * as actions from '../../store/actions';
 import './header.scss';
 import Input from '../Input/Input';
 
 export const Header = () => {
+  const dispatch = useDispatch();
+
   const [state, setstate] = useState({
     address: '',
     time: '',
@@ -16,6 +20,7 @@ export const Header = () => {
       ...state,
       [target.name]: target.value,
     });
+    dispatch(actions.searchRESTAURANT(target));
   };
 
   const toggleSearch = () => {

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { DebounceInput } from 'react-debounce-input';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import './input.scss';
@@ -54,7 +55,8 @@ const Input = ({
           />
         )}
 
-        <input
+        <DebounceInput
+          debounceTimeout={500}
           ref={inputRef}
           type={type}
           value={value}

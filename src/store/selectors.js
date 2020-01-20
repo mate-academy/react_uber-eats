@@ -24,3 +24,8 @@ export const selectRestaurantListIsLoading = createSelector(
   rootSelector,
   ({ isLoading }) => isLoading
 );
+
+export const selectQueryRestaurantList = createSelector(
+  rootSelector,
+  ({ searchQuery }) => searchQuery
+);
