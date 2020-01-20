@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
 .content {
   max-width: 1160px;
   padding: 0 34px;
