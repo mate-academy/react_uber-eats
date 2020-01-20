@@ -1,0 +1,12 @@
+%flex-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+%absolute-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
