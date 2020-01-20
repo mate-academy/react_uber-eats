@@ -1,0 +1,100 @@
+@import '../../styles/extends.scss';
+@import '../../styles/variables.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  width: 100%;
+  padding: 16px 0;
+
+  background-color: #fff;
+
+  &__inner {
+    @extend %flex-row-center;
+  }
+
+  &__logo {
+    height: 24px;
+    width: auto;
+
+    @media (max-width: $break-point-phone) {
+      height: 14px;
+    }
+  }
+
+  &__delivery-info {
+    @extend %flex-row-center;
+
+    margin-left: 7vw;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+
+    @media (max-width: $break-point-tablet) {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin-left: 40px;
+    padding: 13px 0;
+
+    white-space: nowrap;
+    color: #1f1f1f;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__toggle-buttons {
+    display: none;
+    margin-left: auto;
+
+    @media (max-width: $break-point-tablet) {
+      display: flex;
+    }
+  }
+
+  &__toggle-btn {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    padding: 11px 5px;
+    border: 1px solid transparent;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    &:focus {
+      border: 1px solid #1f1f1f;
+    }
+  }
+}
+
+.mobile-controls {
+  display: none;
+  position: relative;
+  padding-top: 30px;
+
+  @media (max-width: $break-point-tablet) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
+  }
+}
