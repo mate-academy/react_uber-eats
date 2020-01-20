@@ -12,11 +12,11 @@
     border-radius: 2px;
 
     transition: border-color 300ms;
+    &--focused {
+      border-color: darken($border-color, 40);
+    }
   }
 
-  &--focused {
-    border-color: darken($border-color, 20);
-  }
 
   &__input {
     &--time {
