@@ -1,0 +1,49 @@
+.restaurant-info {
+  width: 45%;
+  padding: 24px 24px 24px 4%;
+  font-size: 14px;
+  background-color: #fff;
+
+  @media screen and (max-width: 1050px) {
+    width: 75%;
+    margin-bottom: -50px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1d1d1d;
+
+    @media screen and (max-width: 1050px) {
+      font-size: 28px;
+    }
+  }
+
+  &__categories {
+    margin-bottom: 16px;
+    color: #757575;
+  }
+
+  &__address {
+    display: inline-block;
+    margin-top: 16px;
+  }
+
+  &__point {
+    margin: 0 10px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #247a00;
+  }
+
+  @media screen and (max-width: 1050px) {
+    &__address,
+    &__point,
+    &__link {
+      display: none;
+    }
+  }
+}

@@ -29,19 +29,14 @@ button {
 }
 
 .width {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 5%;
 
   &--header {
-    margin-bottom: 32px;
     position: sticky;
     top: 0;
     background-color: #fff;
   }
 
   &--footer {
-    margin-top: 82px;
     background-color: #262626;
   }
 }

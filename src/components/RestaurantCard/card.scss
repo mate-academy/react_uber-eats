@@ -1,0 +1,24 @@
+.card {
+
+  &__wrapper-button {
+    text-align: left;
+  }
+
+  &__image {
+    width: 100%;
+    height: 279px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-top: 12px;
+    line-height: 19px;
+  }
+
+  &__categories {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #757575;
+  }
+}

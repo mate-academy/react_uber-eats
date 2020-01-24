@@ -2,26 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
   grid-gap: 40px 20px;
-}
-
-.card {
-  cursor: pointer;
-
-  &__image {
-    width: 100%;
-    height: 279px;
-    object-fit: cover;
-  }
-
-  &__title {
-    margin-top: 12px;
-    line-height: 19px;
-  }
-
-  &__categories {
-    margin-top: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: #757575;
-  }
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 32px 4% 80px;
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import './footer.scss';
 import './social.scss';
@@ -6,163 +8,180 @@ import logo from './pics/logo-white.svg';
 import appStore from './pics/app-store.svg';
 import googlePlay from './pics/google-play.svg';
 
-const Footer = () => (
-  <div className="width width--footer">
-    <footer className="footer">
-      <section className="footer__top">
-        <section className="footer__top-left">
-          <section className="footer__logo-select">
-            <a href="#/"><img src={logo} alt="Uber Eats logotype" /></a>
-            <select className="footer__select" name="" id="">
-              <option value="">English</option>
-              <option value="">Ukrainian</option>
-            </select>
+const Footer = () => {
+  const { pathname } = useLocation();
+
+  return (
+    <div className="width width--footer">
+      <footer className="footer">
+        <section className="footer__top">
+          <section className="footer__top-left">
+            <section className="footer__logo-select">
+              <HashLink to={{
+                pathname: '/restaurants', hash: 'top',
+              }}
+              >
+                <img src={logo} alt="Uber Eats logotype" />
+              </HashLink>
+
+              <select className="footer__select" name="" id="">
+                <option value="">English</option>
+                <option value="">Ukrainian</option>
+              </select>
+            </section>
+
+            <section className="footer__stores">
+              <Link to={pathname}>
+                <img
+                  src={appStore}
+                  alt="Download on the App Store"
+                />
+              </Link>
+
+              <Link
+                to={pathname}
+                className="footer__stores--gp"
+              >
+                <img
+                  src={googlePlay}
+                  alt="Get it on Google Play"
+                />
+              </Link>
+            </section>
           </section>
 
-          <section className="footer__stores">
-            <a href="#/">
-              <img
-                src={appStore}
-                alt="Download on the App Store"
-              />
-            </a>
-            <a
-              className="footer__stores--gp"
-              href="#/"
-            >
-              <img
-                src={googlePlay}
-                alt="Get it on Google Play"
-              />
-            </a>
+          <nav>
+            <ul>
+              <li className="footer__nav-li">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  About Uber Eats
+                </Link>
+              </li>
+
+              <li className="footer__nav-li">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  Read out blog
+                </Link>
+              </li>
+
+              <li className="footer__nav-li">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  Sign up to deliver
+                </Link>
+              </li>
+
+              <li className="footer__nav-li footer__nav-li--last">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  Add your restaurant
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          <nav className="footer__top-right-nav">
+            <ul>
+              <li className="footer__nav-li">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  Get help
+                </Link>
+              </li>
+
+              <li className="footer__nav-li">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  Read FAQs
+                </Link>
+              </li>
+
+              <li className="footer__nav-li footer__nav-li--last">
+                <Link
+                  to={pathname}
+                  className="footer__link"
+                >
+                  View all cities
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+        </section>
+
+        <hr className="footer__hr" />
+
+        <section className="footer__bottom">
+          <section className="footer__copyright-nav">
+            <p className="footer__copyright">© 2019 Uber Technologies Inc.</p>
+            <section>
+              <nav>
+                <ul className="footer__bottom-nav">
+                  <li className="footer__bottom-nav-li">
+                    <Link
+                      to={pathname}
+                      className="footer__link footer__link--bottom"
+                    >
+                      Privacy policy
+                    </Link>
+                  </li>
+
+                  <li className="footer__bottom-nav-li">
+                    <Link
+                      to={pathname}
+                      className="footer__link footer__link--bottom"
+                    >
+                      Terms of  use
+                    </Link>
+                  </li>
+
+                  <li className="footer__bottom-nav-li">
+                    <Link
+                      to={pathname}
+                      className="footer__link footer__link--bottom"
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </section>
+
+            <HashLink className="footer__totop" to={{ hash: 'top' }} />
+          </section>
+
+          <section className="social footer__social">
+            <Link
+              to={pathname}
+              className="social__icon social__icon--fb"
+            />
+            <Link
+              to={pathname}
+              className="social__icon social__icon--tw"
+            />
+            <Link
+              to={pathname}
+              className="social__icon social__icon--inst"
+            />
           </section>
         </section>
-
-        <nav>
-          <ul>
-            <li className="footer__nav-li">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                About Uber Eats
-              </a>
-            </li>
-            <li className="footer__nav-li">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                Read out blog
-              </a>
-            </li>
-            <li className="footer__nav-li">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                Sign up to deliver
-              </a>
-            </li>
-            <li className="footer__nav-li footer__nav-li--last">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                Add your restaurant
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <nav className="footer__top-right-nav">
-          <ul>
-            <li className="footer__nav-li">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                Get help
-              </a>
-            </li>
-            <li className="footer__nav-li">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                Read FAQs
-              </a>
-            </li>
-            <li className="footer__nav-li footer__nav-li--last">
-              <a
-                className="footer__link"
-                href="#/"
-              >
-                View all cities
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-      </section>
-
-      <hr className="footer__hr" />
-
-      <section className="footer__bottom">
-        <section className="footer__copyright-nav">
-          <p className="footer__copyright">© 2019 Uber Technologies Inc.</p>
-          <section>
-            <nav>
-              <ul className="footer__bottom-nav">
-                <li className="footer__bottom-nav-li">
-                  <a
-                    className="footer__link footer__link--bottom"
-                    href="#/"
-                  >
-                    Privacy policy
-                  </a>
-                </li>
-                <li className="footer__bottom-nav-li">
-                  <a
-                    className="footer__link footer__link--bottom"
-                    href="#/"
-                  >
-                    Terms of  use
-                  </a>
-                </li>
-                <li className="footer__bottom-nav-li">
-                  <a
-                    className="footer__link footer__link--bottom"
-                    href="#/"
-                  >
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </section>
-        </section>
-
-        <section className="social footer__social">
-          <button
-            className="social__icon social__icon--fb"
-            type="button"
-            // href="#/"
-          />
-          <button
-            className="social__icon social__icon--tw"
-            type="button"
-            // href="#/"
-          />
-          <button
-            className="social__icon social__icon--inst"
-            type="button"
-            // href="#/"
-          />
-        </section>
-      </section>
-    </footer>
-  </div>
-);
+      </footer>
+    </div>
+  );
+};
 
 export default Footer;

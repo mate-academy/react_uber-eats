@@ -1,7 +1,9 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 16px 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 16px 4%;
 
   &__logo {
     width: 25%;
@@ -19,11 +21,7 @@
 
     &--toggled {
       position: relative;
-      padding-top: 40px;
-
-      &::after {
-        content: "";
-      }
+      padding: 45px 4%;
 
       @media screen and (min-width: 1051px) {
         & {
@@ -36,7 +34,7 @@
   &__close {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 4%;
   }
 
   &__toggled-address {

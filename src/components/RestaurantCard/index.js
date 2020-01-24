@@ -1,25 +1,40 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import './RestaurantCard.scss';
+import './card.scss';
 
 const RestaurantCard = ({
   image,
   title,
   categories,
   time,
-}) => (
-  <article className="card">
-    <img className="card__image" src={image} alt={title} />
-    <h2 className="card__title">{title}</h2>
-    <section className="card__categories">
-      {categories.join(' • ')}
-    </section>
-    <section className="time">
-      {time.replace('–', ' – ')}
-    </section>
-  </article>
-);
+}) => {
+  const history = useHistory();
+
+  const openRestaurantPage = () => {
+    history.push(`/restaurants/${title.replace(/ /g, '-')}`);
+  };
+
+  return (
+    <button
+      type="button"
+      className="card__wrapper-button"
+      onClick={openRestaurantPage}
+    >
+      <article className="card">
+        <img className="card__image" src={image} alt={title} />
+        <h2 className="card__title">{title}</h2>
+        <section className="card__categories">
+          {categories.join(' • ')}
+        </section>
+        <section className="time">
+          {time.replace('–', ' – ')}
+        </section>
+      </article>
+    </button>
+  );
+};
 
 export default RestaurantCard;
 

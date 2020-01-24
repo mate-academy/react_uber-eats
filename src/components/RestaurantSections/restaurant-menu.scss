@@ -1,0 +1,19 @@
+.restaurant-menu {
+
+  &__section {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+    grid-gap: 40px 20px;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 import './header.scss';
 import logo from './pics/logo-black.svg';
@@ -11,9 +12,13 @@ const Header = () => {
     <div className="width width--header">
       <header className="header">
         <section className="header__logo">
-          <a href="#/">
+          <HashLink to={{
+            pathname: '/restaurants',
+            hash: 'top',
+          }}
+          >
             <img src={logo} alt="Uber Eats logotype" />
-          </a>
+          </HashLink>
         </section>
 
         <form className="header__form">

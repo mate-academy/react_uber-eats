@@ -1,7 +1,9 @@
 $bc-color: #262626;
 
 .footer {
-  padding: 65px 0 90px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 65px 4% 90px;
 
   &__top {
     display: flex;
@@ -97,6 +99,25 @@ $bc-color: #262626;
     }
   }
 
+  &__totop {
+    display: none;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    border-radius: 2px;
+    background: #59bd5a url("./pics/arrow-totop.svg") no-repeat center;
+
+    &:hover {
+      background-color: #48ac49;
+    }
+
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+  }
+
   @media screen and (max-width: 860px) {
     padding-bottom: 65px;
 
@@ -135,6 +156,7 @@ $bc-color: #262626;
     &__bottom {
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     &__copyright-nav {
