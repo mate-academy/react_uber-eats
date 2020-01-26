@@ -17,10 +17,10 @@ export const Select = (props) => {
         className="select__input"
         name={name}
         value={value}
-        onChange={onSelect}
+        onChange={() => onSelect()}
       >
         {options.map(({ value: optionValue, label }) => (
-          <option value={optionValue} selected={value === optionValue}>
+          <option value={optionValue} key={label}>
             {label}
           </option>
         ))}
@@ -51,5 +51,5 @@ Select.propTypes = {
 Select.defaultProps = {
   options: () => {},
   iconUrl: '',
-  onSelect: '',
+  onSelect: null,
 };
