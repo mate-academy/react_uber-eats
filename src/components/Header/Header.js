@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   const handleChange = ({ target }) => {
-    switch (target.value) {
+    switch (target.name) {
       case inputValueNames.address:
         return setAddress(target.value);
 
