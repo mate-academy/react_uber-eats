@@ -16,12 +16,6 @@ input {
   line-height: 1.5;
 }
 
-input {
-  border: none;
-  background: transparent;
-  outline: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -29,6 +23,12 @@ a {
 button {
   border: none;
   background: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  background: transparent;
   outline: none;
 }
 
@@ -41,7 +41,7 @@ button {
     padding: 0 20px;
   }
 
-  @media (max-width: $break-point-large) {
+  @media (min-width: $break-point-large) {
     max-width: 1520px;
   }
 }
