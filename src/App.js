@@ -9,11 +9,11 @@ import { Footer } from './components/Footer';
 const App = () => (
   <Provider store={store}>
     <Header />
-    <div className="page">
-      <main className="content">
+    <main className="page">
+      <div className="content">
         <RestaurantsListPage />
-      </main>
-    </div>
+      </div>
+    </main>
     <Footer />
   </Provider>
 );
