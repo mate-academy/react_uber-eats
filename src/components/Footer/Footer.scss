@@ -1,8 +1,12 @@
-@import "../../styles/extends";
+@import "../../styles/utils";
 
 .footer {
   padding: 64px 0;
   background-color: #262626;
+
+  @media (max-width: $break-point-tablet) {
+    padding: 40px 0;
+  }
 
   &__top-part {
     margin-bottom: 40px;
@@ -18,11 +22,22 @@
 
   &__logo-container {
     @extend %flex-row-center;
+
     margin-bottom: 40px;
+
+    @media (max-width: $break-point-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__mobile-app {
     display: inline-block;
+
+    @media (max-width: $break-point-tablet) {
+      display: block;
+      margin-bottom: 20px;
+    }
 
     &:first-of-type {
       margin-right: 20px;
@@ -31,35 +46,71 @@
 
   &__logo {
     margin-right: 40px;
+
+    @media (max-width: $break-point-tablet) {
+      margin-bottom: 40px;
+    }
   }
 
   &__top-part,
   &__bottom-part {
     @extend %flex-row-center;
     align-items: flex-start;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+    }
   }
 
   &__main,
   &__copyright {
     flex-basis: 45vw;
     padding-right: 40px;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-basis: initial;
+    }
   }
 
   &__top-links:last-of-type {
     margin-left: 10vw;
+
+    @media (max-width: $break-point-phone-lg) {
+      margin-left: 0;
+    }
   }
 
   &__copyright {
     color: #fff;
     font-size: 14px;
+
+    @media (max-width: $break-point-phone-lg) {
+      order: 1;
+    }
   }
 
   &__bottom-links {
     @extend %flex-row-center;
+
     margin-bottom: 40px;
+
+    @media (max-width: $break-point-phone-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+      order: 1;
+    }
 
     .links__link:not(:last-of-type) {
       margin-right: 40px;
+    }
+  }
+
+  &__misc {
+    @media (max-width: $break-point-phone-lg) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
     }
   }
 }
@@ -71,6 +122,14 @@
     color: #fff;
     white-space: nowrap;
 
+    &--intended {
+      font-weight: 500;
+
+      @media (max-width: $break-point-phone-lg) {
+        font-weight: normal;
+      }
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -78,5 +137,7 @@
 }
 
 .social {
-  margin-right: 20px;
+  &__link {
+    margin-right: 20px;
+  }
 }
