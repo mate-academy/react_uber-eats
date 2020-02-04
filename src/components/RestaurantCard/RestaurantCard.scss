@@ -1,0 +1,50 @@
+@import "../../styles/utils";
+
+.restaurant-card {
+  --height: 367px;
+  height: var(--height);
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: whitesmoke;
+    transition: background-color 1s;
+  }
+
+  @media (max-width: $break-point-phone) {
+    --height: 330px;
+  }
+
+  &__img {
+    height: calc(var(--height) * 0.7);
+    width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.7s;
+      border-left: 5px solid #5eb707;
+      border-right: 5px solid white;
+    }
+  }
+
+  &__title {
+    margin: 12px 0 4px;
+  }
+
+  &__categories {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 4px;
+  }
+
+  &__eta {
+    font-size: 14px;
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: #f5f5f5;
+  }
+}
