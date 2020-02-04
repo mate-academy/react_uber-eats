@@ -6,6 +6,11 @@
   width: 100%;
   cursor: pointer;
 
+  &:hover {
+    background-color: whitesmoke;
+    transition: background-color 1s;
+  }
+
   @media (max-width: $break-point-phone) {
     --height: 330px;
   }
@@ -13,7 +18,17 @@
   &__img {
     height: calc(var(--height) * 0.7);
     width: 100%;
+    box-sizing: border-box;
     object-fit: cover;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.7s;
+      border-left: 5px solid #5eb707;
+      border-right: 5px solid white;
+    }
   }
 
   &__title {
