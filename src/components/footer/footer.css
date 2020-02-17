@@ -3,6 +3,7 @@
   width: 135px;
   height: 40px;
   border-radius: 6px;
+  z-index: -1;
 }
 .appStore:hover,
 .googlePlay:hover {

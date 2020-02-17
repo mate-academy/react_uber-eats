@@ -17,6 +17,7 @@ export const logo = (
 
 export const logoFooter = (
   <svg
+    className="logo_footer"
     width="145"
     height="24"
     viewBox="0 0 145 24"

@@ -181,6 +181,7 @@ input {
     align-items: center;
     border: 1px solid transparent;
     height: auto;
+    z-index: 1;
   }
 
   .search {
