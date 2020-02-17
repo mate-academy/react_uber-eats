@@ -1,0 +1,378 @@
+@import "../../styles/_vars";
+
+.appStore,
+.googlePlay {
+  width: 135px;
+  height: 40px;
+  border-radius: 6px;
+
+  &:hover {
+    box-shadow: 0 0 10px 5px rgba(250,247,250,0.86);
+  }
+}
+
+.appStore {
+  background: url("../../img/appStore.png") no-repeat;
+  background-size: cover;
+}
+
+.googlePlay {
+  background: url("../../img/googlePlay.png") no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  width: 100vw;
+  background-color: #262626;
+  border: 1px solid #262626;
+  margin-top: 82px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &:nth-child(2) {
+      margin-top: 80px;
+    }
+
+    &:after {
+      content: "";
+      height: 1px;
+      width: calc(100% - #{275px}*2);
+      position: absolute;
+      background-color: white;
+      top: 248px;
+      left: 265px;
+      z-index: 1;
+    }
+
+    &:nth-child(2):after {
+      display: none;
+    }
+  }
+
+  &__logo-language {
+    display: flex;
+    align-items: center;
+    padding-top: 62px;
+    margin-left: 275px;
+  }
+
+  &__applications {
+    display: flex;
+    margin-left: 264px;
+    margin-top: 65px;
+
+    & .appStore {
+      margin-right: 20px;
+    }
+  }
+
+  &__language {
+    margin-left: 39px;
+  }
+
+  &__info {
+    display: flex;
+    margin-right: 422px;
+    margin-top: 84px;
+  }
+  &__about,
+  &__help {
+    list-style: none;
+    padding: 0;
+
+    & .link {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      line-height: 1;
+
+      &:hover {
+        color: #62b80d;
+      }
+    }
+
+    & .networks {
+      margin-right: 789px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__about {
+    margin-right: 228px;
+  }
+
+  &__help {
+    & .first_letter {
+      position: relative;
+      bottom: 3px;
+    }
+
+    & .second_letter {
+      position: relative;
+      top: 2px;
+      right: 3px;
+      margin-right: 6px;
+    }
+  }
+
+  &__rights {
+    color: white;
+    line-height: 1;
+    margin-left: 264px;
+
+  }
+
+  &__privacy_socials {
+    margin-right: 504px;
+  }
+}
+
+.privacy {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  &__item {
+    margin-right: 48px;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+    height: content-box;
+
+    &:hover {
+      color: #62b80d;
+    }
+  }
+}
+
+.social {
+  padding-top: 56px;
+  padding-bottom: 96px;
+  justify-content: center;
+
+  &__link {
+    height: fit-content;
+    line-height: 0;
+    box-sizing: content-box;
+  }
+
+  &__item {
+    margin-right: 24px;
+  }
+}
+
+.facebook svg:hover {
+  stroke: #00acee;
+  fill: #00acee;
+  color: #00acee;
+}
+
+.facebook:hover {
+  stroke: #00acee;
+  fill: #00acee;
+  color: #00acee;
+}
+
+.twitter svg:hover {
+  stroke: #00acee;
+  fill: #00acee;
+  color: #00acee;
+}
+
+.twitter:hover {
+  stroke: #00acee;
+  fill: #00acee;
+  color: #00acee;
+}
+
+.instagramm svg:hover {
+  stroke: #c3094b;
+  fill: #c3094b;
+  color: #c3094b;
+}
+
+.instagramm:hover {
+  stroke: #c3094b;
+  fill: #c3094b;
+  color: #c3094b;
+}
+
+@media screen and (max-width: $max-widthFullHd) {
+  .footer {
+    &__logo-language,
+    &__applications,
+    &__rights {
+      margin-left: 98px;
+    }
+
+    &__info {
+      margin-right: 256px;
+    }
+
+    &__container {
+      &:after {
+        width: calc(100% - #{98px} * 2);
+        left: 98px;
+      }
+    }
+
+    &__privacy_socials {
+      margin-right: 288px;
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthIMac) {
+  .footer {
+    &__logo-language,
+    &__applications,
+    &__rights {
+      margin-left: 34px;
+    }
+
+    &__info {
+      margin-right: 34px;
+    }
+
+    &__container {
+      &:after {
+        width: calc(100% - #{34px} * 2);
+        left: 34px;
+        top: 346px;
+      }
+
+      &:nth-child(2) {
+        margin-top: 80px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &__privacy_socials {
+      margin-right: 288px;
+    }
+
+    &__about {
+      margin-right: 105px;
+    }
+
+    &__logo-language {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &__language {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    &__applications {
+      flex-direction: column;
+      margin-top: 40px;
+
+      & .appStore {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__privacy_socials {
+      margin-right: 70px;
+    }
+
+    & .networks {
+      margin-left: 34px;
+    }
+  }
+
+  .privacy {
+    &__item {
+      margin-right: 22px;
+    }
+  }
+
+  .social {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $max-widthIPad) {
+  .footer {
+    &__container,
+    &__info,
+    &__privacy {
+      flex-direction: column;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__applications {
+      flex-direction: row;
+      margin-right: 34px;
+    }
+
+    &__info,
+    &__privacy {
+      margin-left: 34px;
+    }
+
+    &__help {
+      margin-top: 23px;
+    }
+
+    &__container:last-child {
+      margin-top: 23px;
+
+      & > p {
+        order: 2;
+      }
+    }
+
+    &__info {
+      margin-top: 40px;
+    }
+
+    &__rights {
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  .privacy {
+    &__item {
+      margin-top: 23px;
+    }
+  }
+
+  .social {
+    padding-top: 33px;
+    width: 100vw;
+  }
+
+  .appStore {
+    width: 107px;
+    height: 34px;
+  }
+
+  .googlePlay {
+    width: 124px;
+    height: 34px;
+  }
+}

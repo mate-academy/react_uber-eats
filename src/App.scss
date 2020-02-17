@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 
   &__header {
     padding-bottom: 32px;
@@ -18,4 +19,18 @@
   }
 }
 
+svg .facebook,
+svg .twitter,
+svg .insta {
+  stroke: inherit;
+  stroke-width: inherit;
+  fill: inherit;
+}
 
+@media screen and (max-width: $max-widthIMac) {
+  .app {
+    &__restaurants_list--mobile {
+      margin-top: 233px;
+    }
+  }
+}

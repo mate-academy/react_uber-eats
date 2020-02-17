@@ -1,0 +1,55 @@
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 164px;
+  height: 40px;
+  border: 0.5px solid white;
+  box-sizing: border-box;
+  padding: 10px 16px 10px 10px;
+
+  &--active {
+    height: auto;
+    position: absolute;
+    margin-top: 4px;
+    border-top: none;
+    background-color: white;
+    z-index: 2;
+    cursor: default;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-top: 16px;
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #262626;
+    margin-left: 37px;
+
+    &:hover {
+      color: #5fb709;
+    }
+  }
+
+  &__chackbox {
+    display: none;
+  }
+
+  &__icon {
+    margin-right: -16px;
+    height: 21px;
+  }
+
+  &__arrow__down {
+    margin-right: 16px;
+  }
+}

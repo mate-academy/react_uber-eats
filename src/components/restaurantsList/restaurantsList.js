@@ -5,8 +5,6 @@ import { loadRestaurants } from '../../store/actions';
 import { selectRastaurantsList } from '../../store/selectors';
 import RestaurantCard from '../restaurantCard/restaurantCard';
 
-// categories, heroImageUrl, title, uuid, etaRange.text
-
 const RestaurantsList = ({ loadData, restaurants }) => {
   useEffect(() => {
     loadData();
@@ -14,6 +12,11 @@ const RestaurantsList = ({ loadData, restaurants }) => {
 
   return (
     <>
+      <h2
+        className="restaurants_list__heading"
+      >
+        London restaurants
+      </h2>
       {restaurants.map((restaurant) => {
         const {
           categories,

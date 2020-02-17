@@ -11,6 +11,7 @@
 }
 
 .search {
+  background-color: white;
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,7 +66,6 @@
   background-color: transparent;
   outline: none;
 
-
   &__city {
     font-size: 18px;
     font-weight: 400;
@@ -91,23 +91,92 @@
 }
 
 @media screen and (max-width: $max-widthIMac) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    height: auto;
+  }
   .search {
-    padding-left: 20px;
-    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+    max-width: 1192px;
+    box-sizing: border-box;
+
+    &__icons_for_mobile {
+      display: flex;
+    }
+
+    &__sign_in,
+    &__restaurant {
+      margin-left: 20px;
+    }
+
+    &__address {
+      cursor: pointer;
+    }
+
+    &__address--active {
+      display: flex;
+      box-sizing: border-box;
+      max-width: 1196px;
+      width: 100%;
+      margin-top: 145px;
+      padding: 0 35px;
+      position: relative;
+    }
 
     &__query_address {
-      margin-left: 10px;
-      display: none;
+      margin-left: 12px;
     }
 
     &__delivery_time {
-      display: none;
-    }
-
-    &__query_dish {
-      margin-left: 8px;
+      margin-left: 0;
     }
   }
 
+  .logo_header {
+    width: 87px;
+    height: 14px;
+  }
+}
 
+.close {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  right: 0;
+  margin-right: 39px;
+  bottom: 87px;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    left: 15px;
+    content: "";
+    height: 24px;
+    width: 2px;
+    background-color: #333;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: $max-widthIPad) {
+  .search {
+    &__query_address {
+      width: 190px;
+    }
+  }
 }

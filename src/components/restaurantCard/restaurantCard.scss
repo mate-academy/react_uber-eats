@@ -35,14 +35,11 @@ $height: 367px;
   }
 }
 
-//@media screen and (max-width: $max-widthIPhone2_1) {
-//  .restaurant_card {
-//    box-sizing: border-box;
-//
-//    &__image {
-//      width: 100%;
-//      height: 224px;
-//
-//    }
-//  }
-//}
+@media screen and (max-width: $max-widthIPad) {
+  .restaurant_card {
+
+    &__image {
+      height: 224px;
+    }
+  }
+}

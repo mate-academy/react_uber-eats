@@ -6,6 +6,10 @@
   justify-content: center;
   grid-template-columns: repeat(4, minmax(348px, 1fr));
   gap: 40px 20px;
+
+  &__heading {
+    display: none;
+  }
 }
 
 @media screen and (max-width: $max-widthFullHd) {
@@ -17,8 +21,18 @@
 
 @media screen and (max-width: $max-widthIMac) {
   .restaurants_list {
-    padding: 0 20px;
+    padding: 0 35px;
     grid-template-columns: repeat(2, minmax(340px, 1fr));
+
+    &__heading {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      display: block;
+      margin-top: 40px;
+
+    }
   }
 }
 
@@ -26,5 +40,9 @@
   .restaurants_list {
     padding: 0 20px;
     grid-template-columns: minmax(280px, 1fr);
+
+    &__heading {
+      grid-column-end: 2;
+    }
   }
 }
