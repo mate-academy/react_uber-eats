@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Select.scss';
-
+import { ISelect } from '../../types';
 const Select = ({
   name,
-}) => (
+}: ISelect) => (
   <div
     role="presentation"
     className="select"
@@ -31,10 +30,4 @@ const Select = ({
   </div>
 );
 
-Select.propTypes = {
-  name: PropTypes.string.isRequired,
-};
-
-Select.defaultProps = {
-};
 export default Select;

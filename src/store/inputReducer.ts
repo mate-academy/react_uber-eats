@@ -1,31 +1,15 @@
-const SET_ADDRESS = 'SET_ADDRESS';
-const SET_TIME = 'SET_TIME';
-const SET_SEARCH = 'SET_SEARCH';
-const TOGGLE_SEARCH = 'TOGGLE_SEARCH';
-const TOGGLE_DELIVERY = 'TOGGLE_DELIVERY';
-const CLOSE_MOBILE = 'CLOSE_MOBILE';
+import {
+  SET_ADDRESS,
+  SET_SEARCH,
+  SET_TIME,
+  TOGGLE_DELIVERY,
+  TOGGLE_SEARCH,
+  CLOSE_MOBILE,
+  IInputState,
+  Actions,
+} from '../types';
 
-export const toggleSearch = () => ({ type: TOGGLE_SEARCH });
-export const toggleDelivery = () => ({ type: TOGGLE_DELIVERY });
-
-export const getIsSearchVisible = state => state.isMobileSearchVisible;
-export const getIsDeliveryVisible = state => state.isMobileDeliveryVisible;
-
-export const setAddress = address => ({
-  type: SET_ADDRESS,
-  address,
-});
-export const setTime = time => ({
-  type: SET_TIME,
-  time,
-});
-export const setSearch = search => ({
-  type: SET_SEARCH,
-  search,
-});
-export const closeMobile = () => ({ type: CLOSE_MOBILE });
-
-const initialState = {
+const initialState: IInputState = {
   address: '',
   time: '',
   search: '',
@@ -33,7 +17,7 @@ const initialState = {
   isMobileDeliveryVisible: false,
 };
 
-const InputReducer = (state = initialState, action) => {
+const InputReducer = (state = initialState, action: Actions) => {
   switch (action.type) {
     case SET_ADDRESS:
       return {

@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { RestaurantCard } from '../RestaurantCard/RestaurantCard';
+import RestaurantCard from '../RestaurantCard/RestaurantCard';
 import './RestaurantsListPage.scss';
 import Loader from '../Loader/Loader';
-
+import { IRestaurantsListPage } from '../../types';
 const RestaurantsListPage = ({
-  restaurantsList,
+  restaurantsList = [],
   loadRestaurantsList,
   isLoading,
-}) => {
-  useState(
+}: IRestaurantsListPage) => {
+  useEffect(
     () => {
       loadRestaurantsList();
-    }, []
+    }, [loadRestaurantsList]
   );
 
   const location = useLocation();
@@ -22,6 +21,9 @@ const RestaurantsListPage = ({
   const filteredRestaurants = restaurantsList
     .filter(restaurant => (params.get('location')
       ? restaurant.citySlug === params.get('location')
+      : true))
+    .filter(restaurant => (params.get('title')
+      ? restaurant.slug.includes(params.get('title')!)
       : true));
 
   if (isLoading) {
@@ -44,13 +46,4 @@ const RestaurantsListPage = ({
   );
 };
 
-RestaurantsListPage.propTypes = {
-  restaurantsList: PropTypes.arrayOf(PropTypes.object),
-  loadRestaurantsList: PropTypes.func.isRequired,
-  isLoading: PropTypes.bool.isRequired,
-};
-
-RestaurantsListPage.defaultProps = {
-  restaurantsList: [],
-};
 export default RestaurantsListPage;

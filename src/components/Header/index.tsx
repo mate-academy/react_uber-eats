@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Header from './Header';
-import { getIsSearchVisible, getIsDeliveryVisible } from '../../store/index';
+import { ThunkDispatch } from 'redux-thunk';
+import { getIsSearchVisible, getIsDeliveryVisible } from '../../store/selectors';
 import {
   setAddress,
   setTime,
@@ -8,16 +9,17 @@ import {
   toggleDelivery,
   toggleSearch,
   closeMobile,
-} from '../../store/inputReducer';
+} from '../../store/actions';
+import { RootState, Actions } from '../../types';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: RootState) => ({
   isSearchVisible: getIsSearchVisible(state),
   isDeliveryVisible: getIsDeliveryVisible(state),
 });
-const mapDispatchToProps = dispatch => ({
-  setAddress: value => dispatch(setAddress(value)),
-  setTime: value => dispatch(setTime(value)),
-  setSearch: value => dispatch(setSearch(value)),
+const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
+  setAddress: (value:string) => dispatch(setAddress(value)),
+  setTime: (value: string | number) => dispatch(setTime(value)),
+  setSearch: (value: string) => dispatch(setSearch(value)),
   toggleSearch: () => dispatch(toggleSearch()),
   toggleDelivery: () => dispatch(toggleDelivery()),
   closeMobile: () => dispatch(closeMobile()),

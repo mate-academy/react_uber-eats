@@ -1,7 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Header.scss';
 import Input from '../Input/Input';
+import { IHeader, Handler } from '../../types';
+import { debounceWrapper } from '../../helpers';
 
 const Header = ({
   setAddress,
@@ -12,8 +13,8 @@ const Header = ({
   isSearchVisible,
   isDeliveryVisible,
   closeMobile,
-}) => {
-  const handleChange = (value, name) => {
+}: IHeader) => {
+  const handleChange: Handler = (value, name) => {
     switch (name) {
       case 'address': return setAddress(value);
       case 'time': return setTime(value);
@@ -22,16 +23,8 @@ const Header = ({
     }
   };
 
-  const debounce = (f, delay) => {
-    let timer;
 
-    return (...args) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => f(...args), delay);
-    };
-  };
-
-  const debouncedHandleChange = debounce(handleChange, 1000);
+  const debouncedHandleChange = debounceWrapper(handleChange, 1000);
 
   return (
     <header className="header">
@@ -145,14 +138,4 @@ const Header = ({
   );
 };
 
-Header.propTypes = {
-  setAddress: PropTypes.func.isRequired,
-  setTime: PropTypes.func.isRequired,
-  setSearch: PropTypes.func.isRequired,
-  toggleDelivery: PropTypes.func.isRequired,
-  toggleSearch: PropTypes.func.isRequired,
-  closeMobile: PropTypes.func.isRequired,
-  isSearchVisible: PropTypes.bool.isRequired,
-  isDeliveryVisible: PropTypes.bool.isRequired,
-};
 export default Header;
