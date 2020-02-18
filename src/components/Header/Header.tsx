@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import {useHistory, useLocation} from 'react-router-dom';
 import './Header.scss';
-import Input from '../Input/Input';
+import {Input} from '../Input/';
 import { IHeader, Handler } from '../../types';
 import { debounceWrapper } from '../../helpers';
 
@@ -13,12 +14,26 @@ const Header = ({
   isSearchVisible,
   isDeliveryVisible,
   closeMobile,
+  locationId
 }: IHeader) => {
+  const history = useHistory();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+
+  useEffect(()=>{
+    history.push('/restaurants'+ location.search)
+  },[locationId, history, location.search])
+
   const handleChange: Handler = (value, name) => {
     switch (name) {
-      case 'address': return setAddress(value);
       case 'time': return setTime(value);
-      case 'search': return setSearch(value);
+      case 'search': {
+        setSearch(value);
+        params.set('title', value.trim().toLowerCase());
+        !value.trim() && params.delete('title');
+        history.push({ search: `${params.toString()}` });
+        break;
+      }
       default: return undefined;
     }
   };
@@ -38,7 +53,6 @@ const Header = ({
           <div className="header__delivery-info">
             <Input
               name="address"
-              onChange={e => debouncedHandleChange(e.target.value, 'address')}
               placeholder="address"
               iconUrl="./images/place.svg"
             />
@@ -104,7 +118,6 @@ const Header = ({
               <Input
                 label="where"
                 name="address"
-                onChange={e => debouncedHandleChange(e.target.value, 'address')}
                 placeholder="address"
                 iconUrl="./images/place.svg"
                 isSmall={false}

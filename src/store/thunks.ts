@@ -1,4 +1,4 @@
-import {getRestaurantData, getMenuItemData, getRestaurantsData } from '../Api';
+import {getRestaurantData, getMenuItemData, getRestaurantsData, getLocationData } from '../Api';
 import { Thunks, addPrice } from '../types';
 import {
   addPriceToggle,
@@ -11,11 +11,20 @@ import {
   setRestaurant,
   setRestaurantsList,
   setCurrentUuid,
+  setLocationList,
+  setLocation,
 } from './actions';
 
-export const loadRestaurantsList = (): Thunks => async(dispatch) => {
+export const loadRestaurantsList = (location: string): Thunks => async(dispatch) => {
   dispatch(startLoading());
-  const restaurants = await getRestaurantsData();
+
+  const locationList = await getLocationData();
+  const defaultLocation = locationList.data.locations[0]
+
+  dispatch(setLocation(location || defaultLocation));
+  dispatch(setLocationList(locationList.data));
+
+  const restaurants = await getRestaurantsData(location);
 
   dispatch(setRestaurantsList(restaurants.data));
   dispatch(stopLoading());

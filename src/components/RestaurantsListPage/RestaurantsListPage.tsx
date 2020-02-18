@@ -8,20 +8,19 @@ const RestaurantsListPage = ({
   restaurantsList = [],
   loadRestaurantsList,
   isLoading,
+  locationId,
 }: IRestaurantsListPage) => {
-  useEffect(
-    () => {
-      loadRestaurantsList();
-    }, [loadRestaurantsList]
-  );
 
   const location = useLocation();
-  const params = new URLSearchParams(location.search);
 
+  useEffect(
+    () => {
+      loadRestaurantsList(locationId);
+    }, [loadRestaurantsList, locationId]
+  );
+
+  const params = new URLSearchParams(location.search);
   const filteredRestaurants = restaurantsList
-    .filter(restaurant => (params.get('location')
-      ? restaurant.citySlug === params.get('location')
-      : true))
     .filter(restaurant => (params.get('title')
       ? restaurant.slug.includes(params.get('title')!)
       : true));

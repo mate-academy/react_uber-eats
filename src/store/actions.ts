@@ -44,8 +44,21 @@ import {
   setRestaurantsListAction,
   setUuidAction,
   SET_UUID,
+  locationList,
+  setLocationListAction,
+  SET_LOCATION_LIST,
+  setLocationAction,
+  SET_LOCATION,
 } from '../types';
 
+export const setLocation = (location: string): setLocationAction => ({
+  type: SET_LOCATION,
+  location,
+})
+export const setLocationList = (locationList: locationList): setLocationListAction => ({
+  type: SET_LOCATION_LIST,
+  locationList,
+})
 export const setCurrentUuid  = (currentUuid: string): setUuidAction => ({
   type: SET_UUID,
   currentUuid,

@@ -4,7 +4,8 @@ import { RootState } from '../types';
 export const getRestaurantsList = ({ restaurantsList }: any) => (restaurantsList
   ? restaurantsList.feedItems.map(({ uuid }: any) => restaurantsList.storesMap[uuid])
   : undefined);
-
+export const getLocationList = (state: RootState) => state.location.locationList;
+export const getLocation = (state: RootState) => state.location.location;
 export const getRestaurant = (state: RootState)  => state.restaurant;
 
 export const getHasError = (state: RootState) => state.hasError;

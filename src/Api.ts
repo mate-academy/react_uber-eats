@@ -8,7 +8,17 @@ const restaurantsURL = 'https://mate-uber-eats-api.'
 const menuItemURL = 'https://mate-uber-eats-api.'
 + 'herokuapp.com/api/v1/menu-items/'
 
-export const getRestaurantsData = async() => {
+const locationURL = 'https://mate-uber-eats-api.herokuapp.com/api/v1/locations';
+export const getLocationData = async()  => {
+  const locationData = await fetch(locationURL);
+
+  return locationData.json();
+}
+export const getRestaurantsData = async(locationId: string) => {
+  if(locationId) {
+    const restaurantsData = await fetch(restaurantsURL + '?location=' + locationId);
+    return restaurantsData.json();
+  }
   const restaurantsData = await fetch(restaurantsURL);
 
   return restaurantsData.json();

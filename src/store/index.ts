@@ -9,6 +9,7 @@ import restaurantReducer from './restaurantReducer';
 import menuItemReducer from './menuItemReducer';
 import customizationReducer from './customizationReducer';
 import errorReducer from './errorReducer';
+import locationReducer from './locationReducer';
 
 export const reducer = combineReducers({
   restaurantsList: restaurantsListReducer,
@@ -19,6 +20,7 @@ export const reducer = combineReducers({
   menuItem: menuItemReducer,
   customization: customizationReducer,
   hasError: errorReducer,
+  location: locationReducer,
 });
 
 export const store = createStore(

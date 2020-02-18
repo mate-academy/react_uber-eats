@@ -17,7 +17,11 @@ const RestaurantCard = ({
       <img src={imageUrl} alt={title} className="restaurant-card__img" />
       <h2 className="restaurant-card__title">{title}</h2>
       <div className="restaurant-card__categories">
-        {categories.join(' • ')}
+        {categories.map((elem, i)=> {
+          if(i === 0) return elem[0]
+          return elem;
+        })
+          .join(' • ')}
       </div>
       <div className="restaurant-card__eta">
         {etaRange}

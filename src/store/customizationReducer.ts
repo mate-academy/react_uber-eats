@@ -5,10 +5,11 @@ import {
    INCREASE_COUNTER,
    DECREASE_COUNTER,
    SET_CURRENT_PRICE,
+   IcustomState
 } from '../types';
 
 
-const initialState: any = {
+const initialState: IcustomState = {
   counter: 1,
   currentPrice: 0,
   addPrice: [],

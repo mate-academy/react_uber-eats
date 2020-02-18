@@ -11,13 +11,17 @@ const Input = ({
   type,
   placeholder,
   name,
-  className,
   isSmall,
   label,
+  locationList,
+  setLocation,
 }: IInput) => {
+
+
+
   const wrapperClass = cn(
     'control__wrapper', {
-      className: !!className,
+      'address': name === 'address',
     }
   );
   const inputClass = cn(
@@ -27,32 +31,72 @@ const Input = ({
   );
 
   return (
-    <label
-      className="control"
-    >
-      {label && (
-        <p className="control__label">
-          {label}
-        </p>
-      )}
-      <div className={wrapperClass}>
-        {!!iconUrl && (
-          <img
-            src={iconUrl}
-            alt={placeholder}
-            className="control__icon"
-          />
+    <>
+      {name === "address" &&
+        <label
+        className="control"
+        >
+        {label && (
+          <p className="control__label">
+            {label}
+          </p>
         )}
-        <input
-          type={type}
-          value={value}
-          onChange={onChange}
-          name={name}
-          className={inputClass}
-          placeholder={placeholder}
-        />
-      </div>
-    </label>
+        <div className={wrapperClass}>
+          {!!iconUrl && (
+            <img
+              src={iconUrl}
+              alt={placeholder}
+              className="control__icon"
+            />
+          )}
+          <select
+            onChange={(e)=> setLocation(e.target.value)}
+            value={value}
+            name={name}
+            className={inputClass}
+            placeholder={placeholder}
+          >
+            {locationList && locationList.locations.map(elem => (
+              <option
+              key={elem}
+              value={locationList.locationsMap[elem].id}
+              >
+                {locationList.locationsMap[elem].title}
+              </option>
+            ))}
+          </select>
+        </div>
+      </label>
+    }
+    {name !== "address" &&
+      <label
+        className="control"
+      >
+        {label && (
+          <p className="control__label">
+            {label}
+          </p>
+        )}
+        <div className={wrapperClass}>
+          {!!iconUrl && (
+            <img
+              src={iconUrl}
+              alt={placeholder}
+              className="control__icon"
+            />
+          )}
+          <input
+            type={type}
+            value={value}
+            onChange={onChange}
+            name={name}
+            className={inputClass}
+            placeholder={placeholder}
+          />
+        </div>
+      </label>
+    }
+    </>
   );
 };
 

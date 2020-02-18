@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk'
+import { ThunkDispatch } from 'redux-thunk';
 import  MenuItem from './MenuItem';
 import {
   getMenuItem,

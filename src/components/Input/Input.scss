@@ -5,6 +5,7 @@
   &__wrapper {
     @extend %flex-row;
     padding: 11px 16px;
+    height: 48px;
     border: 1px solid $c-lightGray;
     transition: border-color 0.3s;
   }
@@ -14,12 +15,16 @@
     height: 14px;
     margin-right: 10px;
   }
-
+  &__wrapper.address {
+    min-width: 200px;
+  }
   &__input {
     display: flex;
+    width: 100%;
     line-height: 24px;
     max-height: 24px;
-
+    outline: none;
+    border: none;
   }
   &--focused {
     border-color: darken($c-lightGray, 20);

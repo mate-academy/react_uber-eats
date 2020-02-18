@@ -1,4 +1,4 @@
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, NavLink, useLocation, useHistory } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import React, { useEffect } from 'react';
 import './RestaurantPage.scss';
@@ -10,17 +10,23 @@ const RestaurantPage = ({
   isLoading,
   loadRestaurant,
 }: IRestaurantPage) => {
+
   const { uuid } = useParams<MatchParams>();
+  const history = useHistory();
+  const location = useLocation();
 
   useEffect(() => {
     loadRestaurant(uuid);
     window.scrollTo(0, 0);
-  }, [loadRestaurant, uuid]);
+  }, [loadRestaurant, uuid, history]);
+
+  useEffect(() => {
+    location.search !== '' && history.push('/restaurants'+ location.search);
+  }, [location.search, location, history]);
 
   if (isLoading) {
     return (<Loader />);
   }
-
   return (
     <>
       {restaurant && (
@@ -80,7 +86,7 @@ const RestaurantPage = ({
                             </div>
                             <div className="goods__good-description--price">
                               <span>{restaurant.entitiesMap[itemUuid].price}</span>
-                              <span>{restaurant.priceBucket}</span>
+                              <span>{restaurant.priceBucket[0]}</span>
                             </div>
                           </div>
                           {restaurant.entitiesMap[itemUuid].imageUrl

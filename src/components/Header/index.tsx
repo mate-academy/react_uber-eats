@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Header from './Header';
 import { ThunkDispatch } from 'redux-thunk';
-import { getIsSearchVisible, getIsDeliveryVisible } from '../../store/selectors';
+import { getIsSearchVisible, getIsDeliveryVisible, getLocation } from '../../store/selectors';
 import {
   setAddress,
   setTime,
@@ -15,9 +15,10 @@ import { RootState, Actions } from '../../types';
 const mapStateToProps = (state: RootState) => ({
   isSearchVisible: getIsSearchVisible(state),
   isDeliveryVisible: getIsDeliveryVisible(state),
+  locationId: getLocation(state),
 });
 const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
-  setAddress: (value:string) => dispatch(setAddress(value)),
+  setAddress: (value: string) => dispatch(setAddress(value)),
   setTime: (value: string | number) => dispatch(setTime(value)),
   setSearch: (value: string) => dispatch(setSearch(value)),
   toggleSearch: () => dispatch(toggleSearch()),

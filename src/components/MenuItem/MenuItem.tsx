@@ -120,7 +120,7 @@ const MenuItem = (
                   <div className="customization-block__items--name-price">
                     <span className="text-radio">{option.title}</span>
                     <span className="customization-block__items--price">
-                      +{restaurant.priceBucket}
+                      +{restaurant.priceBucket[0]}
                       {option.price}
                     </span>
                   </div>

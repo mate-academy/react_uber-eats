@@ -4,6 +4,7 @@ import RestaurantPage from '../RestaurantPage/RestaurantPage';
 import { getRestaurant,
   getIsLoading,
   getCurrentUuid,
+  getLocation,
 }
   from '../../store/selectors';
 import { loadRestaurant } from '../../store/thunks';
@@ -13,6 +14,7 @@ const mapStateToProps = (state: RootState) => ({
   restaurant: getRestaurant(state),
   isLoading: getIsLoading(state),
   currentUuid: getCurrentUuid(state),
+  locationId: getLocation(state),
 });
 
 const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({

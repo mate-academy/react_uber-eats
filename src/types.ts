@@ -2,6 +2,8 @@ import { ThunkAction } from 'redux-thunk';
 import { reducer } from './store/index';
 import { Action } from 'redux';
 
+export const SET_LOCATION = 'SET_LOCATION';
+export const SET_LOCATION_LIST = 'SET_LOCATION_LIST';
 export const SET_RESTAURANT = 'SET_RESTAURANT';
 export const SET_UUID = 'SET_UUID';
 export const SET_RESTAURANTS_LIST = 'SET_RESTAURANTS_LIST';
@@ -23,6 +25,24 @@ export const INCREASE_COUNTER = 'INCREASE_COUNTER';
 export const DECREASE_COUNTER = 'DECREASE_COUNTER';
 export const SET_CURRENT_PRICE = 'SET_CURRENT_PRICE';
 export const SET_HAS_ERROR = 'SET_HAS_ERROR';
+
+export type locationList = {
+  locations: Array<any>;
+  locationsMap:Array<{
+    title: string
+    id: string,
+  }>
+}
+
+export type setLocationAction = {
+  type: typeof SET_LOCATION;
+  location: string;
+};
+
+export type setLocationListAction = {
+  type: typeof SET_LOCATION_LIST;
+  locationList: locationList;
+};
 
 export type setHasErrorAction = {
   type: typeof SET_HAS_ERROR;
@@ -165,7 +185,8 @@ export interface IRestaurantsList {
 
 export interface IRestaurantsListPage {
   isLoading: boolean;
-  loadRestaurantsList (): void;
+  locationId: string | null;
+  loadRestaurantsList (value: string | null): void;
   restaurantsList: Array<IRestaurantsList>
 };
 
@@ -185,7 +206,7 @@ export interface IMenuItem {
 
 export interface IRestaurant {
   heroImageUrls: Array<{ url: string }>,
-  priceBucket: number,
+  priceBucket: string,
   title: string,
   categories: Array<String>
   location: {
@@ -209,18 +230,37 @@ export interface IRestaurantPage {
 isLoading: boolean;
 loadRestaurant (value: string): void;
 restaurant: IRestaurant;
+locationId: string | null;
 };
 
+export interface ILocationState {
+  locationList: locationList | null,
+  location: string | null,
+};
+
+export interface IcustomState {
+  counter: number
+  currentPrice: number
+  addPrice: any[],
+  isChecked: boolean,
+  subtitle: string,
+  customItem: string,
+};
 export interface IInput {
   iconUrl?: string,
   value?: string,
-  onChange (e: React.ChangeEvent<HTMLInputElement>): any,
+  onChange? (e: React.ChangeEvent<HTMLInputElement>): void,
+  setLocation (value: string): void,
   type?: string,
   placeholder?: string,
   name?: string,
   isSmall?: boolean,
   label?: string,
   className?: string,
+  locationList?: locationList | null,
+  location?:string,
+  restaurantsList?: Array<IRestaurantsList>,
+  isLoading?: boolean,
 };
 
 export interface IHeader {
@@ -232,6 +272,7 @@ export interface IHeader {
   isSearchVisible: boolean,
   isDeliveryVisible: boolean,
   closeMobile (): void,
+  locationId: string | null,
 };
 
 export interface IRestaurantCard {
@@ -258,7 +299,9 @@ export type Actions = setUuidAction |
   increaseCounterAction |
   decreaseCounterAction |
   setCurrentPriceAction |
-  setHasErrorAction;
+  setHasErrorAction |
+  setLocationListAction |
+  setLocationAction;
 
 export type RootState = ReturnType<typeof reducer>
 
