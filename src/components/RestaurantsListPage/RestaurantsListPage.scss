@@ -1,0 +1,26 @@
+@import '../../styles/utils.scss';
+
+.restaurants-list {
+  --card-width: 348px;
+  max-width: $breakpoint-notebook-hd;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  gap: 40px 20px;
+
+  @media (min-width: $breakpoint-notebook-hd) {
+    --card-width: 348px;
+    grid-template-columns: repeat(3, minmax(var(--card-width), 1fr));
+    margin: 0 auto;
+  }
+
+  @media(max-width: $breakpoint-tablet-lg) {
+    --card-width: 340px;
+    row-gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    --card-width: 280px;
+  }
+
+}
