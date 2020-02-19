@@ -108,6 +108,8 @@
 
     &__icons_for_mobile {
       display: flex;
+      align-items: center;
+      margin-left: 20px;
     }
 
     &__sign_in,
@@ -178,6 +180,10 @@
   .search {
     &__query_address {
       width: 190px;
+
+      & input {
+        width: 145px;
+      }
     }
   }
 }

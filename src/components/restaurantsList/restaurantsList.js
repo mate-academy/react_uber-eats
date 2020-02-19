@@ -33,6 +33,7 @@ const RestaurantsList = ({ loadData, restaurants }) => {
             title={title}
             uuid={uuid}
             etaRange={etaRange.text}
+            key={uuid}
           />
         );
       })}
@@ -50,8 +51,7 @@ const mapDispatch2Props = ({
 
 RestaurantsList.propTypes = {
   loadData: PropTypes.func.isRequired,
-  restaurants: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.string, PropTypes.bool], PropTypes.object)).isRequired,
+  restaurants: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default connect(mapState2Props, mapDispatch2Props)(RestaurantsList);

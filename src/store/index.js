@@ -1,9 +1,11 @@
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import { LOAD_SUCCESS } from './actions';
+import { LOAD_SUCCESS, SEARCH_ADDRESS, ACTIVATE_QUERY } from './actions';
 
 const initialState = {
   restaurants: null,
+  address: false,
+  queryIsActive: false,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -12,6 +14,18 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         restaurants: action.restaurants,
+      };
+
+    case SEARCH_ADDRESS:
+      return {
+        ...state,
+        address: action.bool,
+      };
+
+    case ACTIVATE_QUERY:
+      return {
+        ...state,
+        queryIsActive: action.bool,
       };
     default: return state;
   }

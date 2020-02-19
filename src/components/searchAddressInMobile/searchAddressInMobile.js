@@ -1,8 +1,11 @@
 import React from 'react';
-import { iconAddress, iconSearch, logo } from '../../icons';
+import PropTypes from 'prop-types';
+import connect from 'react-redux/es/connect/connect';
+import { iconAddress, logo } from '../../icons';
+import { setSearchAddress } from '../../store/actions';
+import QueryHeader from '../queryHeader/queryHeader';
 
-// eslint-disable-next-line react/prop-types
-const SearchAddressInMobile = ({ address, setAddress }) => (
+const SearchAddressInMobile = ({ searchAddress, address, queryIsActive }) => (
   <>
     {address ? (
       <>
@@ -11,19 +14,21 @@ const SearchAddressInMobile = ({ address, setAddress }) => (
             {logo}
           </h1>
           <div className="search__icons_for_mobile">
-            {/* eslint-disable-next-line max-len */}
-            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+
             <div
-              onClick={() => setAddress(false)}
+              onClick={() => searchAddress(false)}
+              onKeyDown={() => searchAddress(false)}
+              role="button"
+              tabIndex="0"
               className="search__address"
             >
               {iconAddress}
             </div>
-            <div className="search__restaurant">
-              {iconSearch}
-            </div>
+
+            <QueryHeader />
+
             <div
-              className="search__sign_in"
+              className={queryIsActive ? `non-active` : `search__sign_in`}
             >
               Sign in
             </div>
@@ -47,11 +52,12 @@ const SearchAddressInMobile = ({ address, setAddress }) => (
               placeholder="Address"
             />
           </div>
-          {/* eslint-disable-next-line max-len */}
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
           <div
             className="close"
-            onClick={() => setAddress(false)}
+            onClick={() => searchAddress(false)}
+            onKeyDown={() => searchAddress(false)}
+            role="button"
+            tabIndex="0"
           />
         </div>
       </>
@@ -61,19 +67,19 @@ const SearchAddressInMobile = ({ address, setAddress }) => (
           {logo}
         </h1>
         <div className="search__icons_for_mobile">
-          {/* eslint-disable-next-line max-len */}
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+
           <div
-            onClick={() => setAddress(true)}
+            onClick={() => searchAddress(true)}
             className="search__address"
+            onKeyDown={() => searchAddress(true)}
+            role="button"
+            tabIndex="0"
           >
             {iconAddress}
           </div>
-          <div className="search__restaurant">
-            {iconSearch}
-          </div>
+          <QueryHeader />
           <div
-            className="search__sign_in"
+            className={queryIsActive ? `non-active` : `search__sign_in`}
           >
             Sign in
           </div>
@@ -81,8 +87,24 @@ const SearchAddressInMobile = ({ address, setAddress }) => (
 
       </div>
     )}
-
   </>
 );
 
-export default SearchAddressInMobile;
+const mapState2Props = state => ({
+  address: state.address,
+  queryIsActive: state.queryIsActive,
+});
+
+const mapDispatch2Props = ({
+  searchAddress: setSearchAddress,
+});
+
+SearchAddressInMobile.propTypes = {
+  searchAddress: PropTypes.func.isRequired,
+  address: PropTypes.bool.isRequired,
+  queryIsActive: PropTypes.bool.isRequired,
+};
+
+export default connect(
+  mapState2Props, mapDispatch2Props
+)(SearchAddressInMobile);

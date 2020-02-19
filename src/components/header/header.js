@@ -4,8 +4,7 @@ import { logo, iconAddress, iconSearch } from '../../icons';
 import SearchAddressInMobile
   from '../searchAddressInMobile/searchAddressInMobile';
 
-// eslint-disable-next-line react/prop-types
-const Header = ({ address, setAddress }) => {
+const Header = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -21,10 +20,9 @@ const Header = ({ address, setAddress }) => {
   return (
     <>
       { width < 1279 ? (
-        <SearchAddressInMobile
-          address={address}
-          setAddress={setAddress}
-        />
+        <>
+          <SearchAddressInMobile />
+        </>
       ) : (
         <div className="header__search search">
           <h1>
