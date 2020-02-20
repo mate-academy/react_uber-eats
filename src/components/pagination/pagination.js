@@ -28,8 +28,12 @@ const Pagination = (
             className="pagination__item"
           >
             <a
-              onClick={() => paginate(pageNumber)}
-              href="!#"
+              onClick={(e) => {
+                e.preventDefault();
+
+                return paginate(pageNumber);
+              }}
+              href="/#"
               className={pageNumber === currentPage
                 ? 'pagination__link pagination__active'
                 : 'pagination__link'}
