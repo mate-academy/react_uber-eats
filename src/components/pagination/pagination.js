@@ -30,6 +30,12 @@ const Pagination = (
             <a
               onClick={(e) => {
                 e.preventDefault();
+                window.scrollTo(
+                  {
+                    top: 0,
+                    behavior: 'smooth',
+                  }
+                );
 
                 return paginate(pageNumber);
               }}
