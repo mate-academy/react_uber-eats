@@ -17,6 +17,11 @@ const Header = () => {
     };
   });
 
+  const [visibleQuery, setVisibleQuery] = useState('');
+  const handlerQuery = (event) => {
+    setVisibleQuery(event.target.value);
+  };
+
   return (
     <>
       { width < 1279 ? (
@@ -54,6 +59,8 @@ const Header = () => {
               type="text"
               className="search__input"
               placeholder="Search"
+              value={visibleQuery}
+              onChange={handlerQuery}
             />
           </div>
           <div

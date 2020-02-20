@@ -3,6 +3,7 @@
 @import "./components/restaurantsList/restaurantsList";
 @import "./components/header/header";
 @import "./components/queryHeader/queryHeader";
+@import "./components/pagination/pagination";
 
 .non-active {
   margin-left: 20px;
@@ -22,6 +23,12 @@
   &__restaurants_list {
     margin-top: 80px;
   }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 svg .facebook,
