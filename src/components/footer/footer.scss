@@ -1,11 +1,16 @@
 @import "../../styles/_vars";
 
+.scroll_to_top {
+  display: none;
+}
+
 .appStore,
 .googlePlay {
   width: 135px;
   height: 40px;
   border-radius: 6px;
   z-index: -1;
+  border: 1px solid silver;
 
   &:hover {
     box-shadow: 0 0 10px 5px rgba(250,247,250,0.86);
@@ -367,13 +372,23 @@
     width: 100vw;
   }
 
-  .appStore {
+  .appStore,
+  .googlePlay {
+    background-size: contain;
     width: 107px;
-    height: 34px;
+    height: 32px;
   }
 
-  .googlePlay {
-    width: 124px;
-    height: 34px;
+  .scroll_to_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #59bd5a;
+    position: absolute;
+    right: 40px;
+    bottom: 155px;
+    cursor: pointer;
   }
 }

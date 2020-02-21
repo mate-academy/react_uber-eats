@@ -9,17 +9,17 @@ import {
 import './footer.scss';
 
 import LanguageDropdown from '../languageDropdown/languageDropdown';
+import { arrowScrollToTop } from '../../img/icons';
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer__container">
       <div>
-        <div className="footer__logo-language">
-
+        <div
+          className="footer__logo-language"
+        >
           {logoFooter}
-
           <LanguageDropdown />
-
         </div>
         <div>
           <div className="applications footer__applications">
@@ -118,6 +118,25 @@ const Footer = () => (
             </a>
           </li>
         </ul>
+        <div
+          className="scroll_to_top"
+          onKeyDown={() => window.scrollTo(
+            {
+              top: 0,
+              behavior: 'smooth',
+            }
+          )}
+          role="button"
+          tabIndex="0"
+          onClick={() => window.scrollTo(
+            {
+              top: 0,
+              behavior: 'smooth',
+            }
+          )}
+        >
+          {arrowScrollToTop}
+        </div>
         <div>
           <ul className="footer__networks privacy social">
             <li className="social__item">
