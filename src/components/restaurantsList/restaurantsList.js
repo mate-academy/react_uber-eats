@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { loadRestaurants, setTotalRestaurants } from '../../store/actions';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { loadRestaurants,
+  setTotalRestaurants } from '../../store/actions';
 import { selectRastaurantsList } from '../../store/selectors';
 import RestaurantCard from '../restaurantCard/restaurantCard';
 
@@ -38,37 +40,47 @@ const RestaurantsList = (
 
   return (
     <>
-      <h2
-        className="restaurants_list__heading"
-      >
-        London restaurants
-      </h2>
-      {currentRestaurants.map((restaurant) => {
-        const {
-          categories,
-          heroImageUrl,
-          title,
-          uuid,
-          etaRange,
-        } = restaurant;
+      {restaurants.length === 0 ? (
+        <div className="spinner">
+          <CircularProgress />
+        </div>
+      ) : (
+        <>
+          <h2
+            className="restaurants_list__heading"
+          >
+            London restaurants
+          </h2>
+          {currentRestaurants.map((restaurant) => {
+            const {
+              categories,
+              heroImageUrl,
+              title,
+              uuid,
+              etaRange,
+            } = restaurant;
 
-        return (
-          <RestaurantCard
-            categories={categories}
-            heroImageUrl={heroImageUrl}
-            title={title}
-            uuid={uuid}
-            etaRange={etaRange.text}
-            key={uuid}
-          />
-        );
-      })}
+            return (
+              <RestaurantCard
+                categories={categories}
+                heroImageUrl={heroImageUrl}
+                title={title}
+                uuid={uuid}
+                etaRange={etaRange.text}
+                key={uuid}
+              />
+            );
+          })}
+        </>
+      )}
     </>
+
   );
 };
 
 const mapState2Props = state => ({
   restaurants: selectRastaurantsList(state),
+  loading: state.loading,
   query: state.query,
   currentPage: state.currentPage,
   restaurantsPerPage: state.restaurantsPerPage,

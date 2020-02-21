@@ -1,5 +1,13 @@
 @import "../../styles/vars";
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+}
+
 .restaurants_list {
   display: grid;
   padding: 0 264px;
