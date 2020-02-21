@@ -179,10 +179,15 @@
 @media screen and (max-width: $max-widthIPad) {
   .search {
     &__query_address {
-      width: 190px;
+      width: 150px;
+
+      & svg {
+        display: none;
+      }
 
       & input {
-        width: 145px;
+        width: 120px;
+        margin: 0;
       }
     }
   }
@@ -192,5 +197,15 @@
   .search {
     padding-left: 20px;
     padding-right: 20px;
+
+    &__address--active {
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .close {
+    margin-right: 20px;
   }
 }
