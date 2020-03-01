@@ -9,7 +9,7 @@ import {
 import './footer.scss';
 
 import LanguageDropdown from '../languageDropdown/languageDropdown';
-import { arrowScrollToTop } from '../../img/icons';
+import { arrowScrollToTop } from '../../images/icons';
 
 const Footer = () => (
   <footer className="footer">

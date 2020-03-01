@@ -5,7 +5,7 @@
   top: 0;
   background-color: white;
   height: 80px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -16,8 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 264px;
-  padding-right: 264px;
+  padding: 16px 264px;
 
   &__button {
     margin-left: 83px;
@@ -126,8 +125,8 @@
       box-sizing: border-box;
       max-width: 1196px;
       width: 100%;
-      margin-top: 145px;
-      padding: 0 35px;
+      margin-top: 100px;
+      padding: 35px 64px;
       position: relative;
     }
 
@@ -154,7 +153,7 @@
   opacity: 0.3;
   right: 0;
   margin-right: 39px;
-  bottom: 87px;
+  top: 0;
 
   &:hover {
     opacity: 1;

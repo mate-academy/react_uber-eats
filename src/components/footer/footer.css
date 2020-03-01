@@ -11,12 +11,12 @@
 }
 
 .appStore {
-  background: url("../../img/appStore.png") no-repeat;
+  background: url("../../images/appStore.png") no-repeat;
   background-size: cover;
 }
 
 .googlePlay {
-  background: url("../../img/googlePlay.png") no-repeat;
+  background: url("../../images/googlePlay.png") no-repeat;
   background-size: cover;
 }
 

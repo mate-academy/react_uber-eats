@@ -4,6 +4,18 @@
 @import "./components/header/header";
 @import "./components/queryHeader/queryHeader";
 @import "./components/pagination/pagination";
+@import "./components/restaurantPage/restaurantPage";
+@import "./components/restaurantMenu/restaurantMrnu.scss";
+@import "./components/restaurantNav/restaurantNav";
+@import "./components/modalWindow/modalWindow";
+
+body,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+}
 
 .non-active {
   margin-left: 20px;

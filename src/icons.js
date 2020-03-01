@@ -146,3 +146,18 @@ export const instagramm = (
     <path className="insta" d="M12.627 2.67383C12.3535 2.67383 12.0848 2.78456 11.8916 2.97857C11.6975 3.17163 11.5859 3.44041 11.5859 3.71487C11.5859 3.98847 11.6976 4.25715 11.8916 4.45116C12.0847 4.64423 12.3535 4.7559 12.627 4.7559C12.9014 4.7559 13.1693 4.64423 13.3633 4.45116C13.5573 4.25715 13.668 3.98838 13.668 3.71487C13.668 3.44041 13.5573 3.17163 13.3633 2.97857C13.1702 2.78456 12.9014 2.67383 12.627 2.67383Z" fill="white" />
   </svg>
 );
+
+export const minus = (
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="24" cy="24" r="24" fill="#F5F5F5" />
+    <rect x="14.7695" y="25.0258" width="2.05128" height="18.4615" transform="rotate(-90 14.7695 25.0258)" fill="black"/>
+  </svg>
+);
+
+export const plus = (
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="24" cy="24" r="24" fill="#F5F5F5" />
+    <rect x="22.9746" y="14.7692" width="2.05128" height="18.4615" fill="black" />
+    <rect x="14.7695" y="25.0256" width="2.05128" height="18.4615" transform="rotate(-90 14.7695 25.0256)" fill="black"/>
+  </svg>
+);

@@ -18,12 +18,12 @@
 }
 
 .appStore {
-  background: url("../../img/appStore.png") no-repeat;
+  background: url("../../images/appStore.png") no-repeat;
   background-size: cover;
 }
 
 .googlePlay {
-  background: url("../../img/googlePlay.png") no-repeat;
+  background: url("../../images/googlePlay.png") no-repeat;
   background-size: cover;
 }
 
@@ -39,7 +39,7 @@
     position: relative;
 
     &:nth-child(2) {
-      margin-top: 80px;
+      margin-top: 95px;
     }
 
     &:after {
@@ -48,7 +48,7 @@
       width: calc(100% - #{275px}*2);
       position: absolute;
       background-color: white;
-      top: 248px;
+      top: 260px;
       left: 265px;
       z-index: 1;
     }
@@ -82,7 +82,7 @@
   &__info {
     display: flex;
     margin-right: 422px;
-    margin-top: 84px;
+    margin-top: 54px;
   }
   &__about,
   &__help {
