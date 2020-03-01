@@ -15,6 +15,10 @@
   grid-template-columns: repeat(4, minmax(348px, 1fr));
   gap: 40px 20px;
 
+  & a {
+    text-decoration: none;
+  }
+
   &__heading {
     display: none;
   }

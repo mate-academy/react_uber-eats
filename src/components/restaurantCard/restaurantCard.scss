@@ -12,6 +12,8 @@ $height: 367px;
   }
 
   &__header {
+    color: #000;
+    text-decoration: none;
     font-weight: 500;
     line-height: 1.2;
     font-size: 16px;
@@ -26,6 +28,7 @@ $height: 367px;
   }
 
   &__time {
+    color: #000;
     display: inline-block;
     font-size: 14px;
     line-height: 24px;
