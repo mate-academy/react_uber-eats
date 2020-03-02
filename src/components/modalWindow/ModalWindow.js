@@ -62,6 +62,13 @@ const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
             {modalDish ? modalDish.description : ''}
 
           </DialogContentText>
+          <span className="cost">
+            Price:
+            {' '}
+            {modalDish ? modalDish.price / 10 : ''}
+            {' '}
+            UAH
+          </span>
         </DialogContent>
         <DialogActions>
           <div className="modal__add">
@@ -91,7 +98,10 @@ const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
             className="modal__add-basket"
             onClick={handleClose}
           >
-            <span>Add 1 to order</span>
+            <span>
+              Add
+              <span className="oder">1 to order</span>
+            </span>
             <span>
               {modalDish ? modalDish.price / 10 : ''}
               {' '}

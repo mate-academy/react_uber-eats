@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 
+.cost {
+  display: none;
+}
+
 .modal {
   background-color: #0c91e5;
   &__img {
@@ -89,10 +93,24 @@
   margin: 20px 24px 20px 0;
 }
 
-@media screen and (max-width: $max-widthIPad) {
+@media screen and (max-width: 560px) {
+  .cost {
+    display: block;
+  }
+
   .modal {
-    &__img {
-      height: 180px;
+    &__add-basket span:first-child {
+      padding: 0;
     }
+
+    &__add-basket span:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .oder {
+    display: none;
   }
 }
