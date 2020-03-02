@@ -1,0 +1,116 @@
+.MuiDialog-paperWidthSm {
+  padding-top: 40px;
+}
+
+.MuiDialogActions-root.MuiDialogActions-spacing {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cost {
+  display: none;
+}
+
+.modal {
+  background-color: #0c91e5;
+  &__img {
+    height: 380px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #626262;
+  }
+
+  &__actions,
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__actions {
+    padding: 34px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__add {
+    cursor: pointer;
+  }
+
+  &__add-basket {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #247a00;
+    width: 350px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #247a00;
+
+      & span {
+        color: #247a00;
+      }
+    }
+
+    & span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+      padding-left: 40px;
+
+    }
+  }
+
+  &__count {
+    width: 9px;
+    height: 24px;
+    margin: 0 17px;
+  }
+}
+
+.close {
+  margin: 20px 24px 20px 0;
+}
+
+@media screen and (max-width: 560px) {
+  .cost {
+    display: block;
+  }
+
+  .modal {
+    &__add-basket span:first-child {
+      padding: 0;
+    }
+
+    &__add-basket span:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .oder {
+    display: none;
+  }
+}

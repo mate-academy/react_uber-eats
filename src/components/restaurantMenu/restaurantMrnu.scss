@@ -1,0 +1,110 @@
+.menu {
+  box-sizing: border-box;
+  padding-right: 264px;
+  padding-left: 264px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+  }
+
+  &__subheading {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &__info {
+    flex-grow: 2;
+    width: 190px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__img {
+    overflow: hidden;
+    border-left: 1px solid #e0e0e0;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #626262;
+    margin: 4px 0 16px;
+  }
+}
+
+@media screen and (max-width: $max-widthFullHd) {
+  .menu {
+    padding: 0 98px;
+
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    &__info {
+      width: 170px;
+      height: 160px;
+    }
+
+    &__img {
+      width: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthIMac) {
+  .menu {
+    padding: 0 35px;
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthIPad) {
+  .menu {
+    padding: 0 20px;
+    &__items {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    &__info {
+      width: 140px;
+      height: 160px;
+    }
+
+    &__img {
+      width: 140px;
+    }
+  }
+}

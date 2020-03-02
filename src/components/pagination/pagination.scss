@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  padding-top: 40px;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid #b4e391;
+    }
+  }
+
+  &__active {
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to bottom,
+    #b4e391 0%,#61c419 50%,#b4e391 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b4e391",
+    endColorstr="#b4e391",GradientType=0); /* IE6-9 */
+    border: 1px solid #b4e391;
+  }
+}

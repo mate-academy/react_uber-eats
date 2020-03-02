@@ -1,0 +1,66 @@
+@import "./components/restaurantCard/restaurantCard";
+@import "./styles/index";
+@import "./components/restaurantsList/restaurantsList";
+@import "./components/header/header";
+@import "./components/queryHeader/queryHeader";
+@import "./components/pagination/pagination";
+@import "./components/restaurantPage/restaurantPage";
+@import "./components/restaurantMenu/restaurantMrnu.scss";
+@import "./components/restaurantNav/restaurantNav";
+@import "./components/modalWindow/modalWindow";
+
+body,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+}
+
+.non-active {
+  margin-left: 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  &__header {
+    padding-bottom: 32px;
+  }
+
+  &__restaurants_list {
+    margin-top: 80px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+svg .facebook,
+svg .twitter,
+svg .insta {
+  stroke: inherit;
+  stroke-width: inherit;
+  fill: inherit;
+}
+
+@media screen and (max-width: $max-widthIMac) {
+  .app {
+    &__restaurants_list--mobile {
+      margin-top: 233px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .non-active {
+    display: none;
+  }
+}

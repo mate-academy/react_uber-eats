@@ -1,0 +1,76 @@
+.toggle {
+  padding: 20px 264px 0;
+}
+
+.nav {
+  padding: 0 264px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  &__list {
+    display: grid;
+    list-style: none;
+    margin-top: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 20px;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: #5fb709;
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthFullHd) {
+  .toggle {
+    padding: 20px 98px 0;
+  }
+
+  .nav {
+    padding: 0 98px;
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthIMac) {
+  .toggle {
+    padding: 20px 35px 0;
+  }
+
+  .nav {
+    padding: 0 35px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $max-widthIPad) {
+
+  .toggle {
+    padding: 20px 20px 0;
+  }
+
+  .nav {
+    padding: 0 20px;
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
