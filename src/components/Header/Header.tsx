@@ -1,20 +1,24 @@
 import React, { useEffect } from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 import './Header.scss';
-import {Input} from '../Input/';
+import { Input } from '../Input/';
 import { IHeader, Handler } from '../../types';
 import { debounceWrapper } from '../../helpers';
+import { Basket } from '../Basket/';
 
 const Header = ({
-  setAddress,
   setTime,
   setSearch,
   toggleSearch,
   toggleDelivery,
   isSearchVisible,
   isDeliveryVisible,
+  showBasket,
+  isBasketShown,
   closeMobile,
-  locationId
+  locationId,
+  basket,
+  totalCount,
 }: IHeader) => {
   const history = useHistory();
   const location = useLocation();
@@ -22,7 +26,7 @@ const Header = ({
 
   useEffect(()=>{
     history.push('/restaurants'+ location.search)
-  },[locationId, history, location.search])
+  },[locationId, history])
 
   const handleChange: Handler = (value, name) => {
     switch (name) {
@@ -46,6 +50,7 @@ const Header = ({
       <div className="content">
         <div className="header__inner">
           <img
+            onClick={() => history.push('/restaurants')}
             src="./images/logo.svg"
             alt="Uber Eats"
             className="header__logo"
@@ -94,12 +99,29 @@ const Header = ({
               />
             </button>
           </div>
-          <a
-            className="header__link"
-            href="/"
-          >
-          Sign in
-          </a>
+          { basket.length === 0
+          ?(
+            <a
+              className="header__link"
+              href="/"
+            >
+            Sign in
+            </a>
+          ):(
+            <>
+              <img
+                src='./images/basket.svg'
+                className="header__link"
+                alt='basket'
+                onClick={() => showBasket()}
+              />
+               <span className="header__total-count">{totalCount}</span>
+            </>
+          )
+        }
+        {isBasketShown && (
+          <Basket />
+        )}
         </div>
         {(isSearchVisible || isDeliveryVisible) && (
           <div className="header__mobile-controls mobile-controls">

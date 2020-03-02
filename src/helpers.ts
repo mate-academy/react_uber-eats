@@ -18,3 +18,4 @@ export const handleChange: Handler = (value, name) => {
     default: return undefined;
   }
 };
+

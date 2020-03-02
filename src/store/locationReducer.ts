@@ -1,4 +1,9 @@
-import { Actions, SET_LOCATION_LIST, ILocationState, SET_LOCATION } from "../types";
+import {
+  Actions,
+  SET_LOCATION_LIST,
+  ILocationState,
+  SET_LOCATION
+} from "../types";
 
 const initialState: ILocationState = {
   locationList: null,

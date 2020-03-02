@@ -60,10 +60,19 @@
     justify-content: center;
     margin-bottom: 24px;
   }
+  &__delete-item {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+    color: $c-red;
+    font-size: 16px;
+    cursor: pointer;
+  }
 }
 
 .submit-block {
   &__submit {
+    height: 56px;
     cursor: pointer;
     position: relative;
     width: 100%;
@@ -96,11 +105,11 @@
     }
     &--plus,
     &--minus {
-      transition: stroke 0.5s;
+      transition: fill 0.5s;
     }
     &--plus:active,
     &--minus:active {
-      stroke: $c-darkGrayBackground;
+      fill: $c-darkGrayBackground;
     }
   }
 }
@@ -112,7 +121,7 @@
   }
   &__description {
     font-size: 14px;
-    color: #626262;
+    color: $c-font-lightgray;
     padding: 0 34px 31px;
   }
 }
@@ -120,7 +129,7 @@
 .customization-block {
   &__title {
     height: 76px;
-    background-color: #f5f5f5;
+    background-color: $c-lightGrayBackground;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -157,14 +166,16 @@
 .error-message {
   position: absolute;
   display: flex;
+  text-align: center;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 150px;
+  min-width: 300px;
+  min-height: 150px;
+  padding: 24px;
   background-color: $c-white;
   border: 1px solid $c-font-lightgray;
   border-radius: 20px;
@@ -173,9 +184,14 @@
     background-color: $c-green;
     color: $c-white;
     transition: background-color 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
   }
   &--button:active {
     background-color: $c-darkGrayBackground;
+  }
+  &--name {
+    color: $c-green;
   }
 }
 
@@ -231,7 +247,7 @@
     content: "";
     position: absolute;
     top: 7.5px;
-    left: -26.5px;
+    left: -27px;
     display: block;
     height: 10px;
     width: 10px;
@@ -261,6 +277,7 @@
     flex-flow: column;
     align-items: center;
   }
+
   .title-block {
     &__title {
       padding: 0 20px;
@@ -276,9 +293,11 @@
   .customization-block__items--item {
     padding: 0 20px;
   }
+
   .menu-item__submit-block {
     padding: 0 20px;
   }
+
   .submit-block__quantity {
     display: flex;
     width: 100%;

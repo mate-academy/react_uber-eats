@@ -1,0 +1,218 @@
+/* stylelint-disable max-line-length */
+
+@import "../../styles/variables.scss";
+
+.popup-basket {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.form-basket {
+  display: flex;
+  width: 430px;
+  height: 500px;
+  background-color: $c-lightGray;
+  overflow: auto;
+  margin-top: 50px;
+  margin-left: calc(100% - 430px - 80px);
+}
+
+.uberEats__basket {
+  width: 100%;
+  margin: 24px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submit--basket {
+  margin-bottom: 24px;
+}
+
+.basket {
+  &__title {
+    height: 76px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-size: 36px;
+    &--title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &--permission {
+      font-size: $smallFontSize;
+      color: $c-font-lightgray;
+    }
+  }
+
+  &-item {
+    &__remove-button {
+      position: relative;
+      cursor: pointer;
+      top: 40px;
+      left: -110px;
+      color: $c-red;
+      white-space: nowrap;
+      font-size: 16px;
+    }
+    &__counter {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: 140px;
+      margin: 0 5px;
+      align-self: center;
+    }
+    &__counter--counter {
+      margin: 0 10px;
+    }
+    &__counter--button {
+      min-width: 48px;
+      min-height: 48px;
+    }
+    &__item--price {
+      white-space: nowrap;
+    }
+    &__item--additional-info {
+      color: $c-font-lightgray;
+      font-size: 14px;
+    }
+  }
+
+  &__items {
+    margin: 11px 0;
+    &--item {
+      height: 56px;
+      margin-top: 46px;
+      background-color: $c-lightGrayBackground;
+      overflow: visible;
+    }
+
+    &--label {
+      display: flex;
+    }
+
+    &--name-price {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &--price {
+      cursor: pointer;
+      position: relative;
+      top: 15px;
+      padding-left: 13px;
+      white-space: nowrap;
+    }
+    &--note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background-color: $c-lightGrayBackground;
+    }
+    &--break {
+      margin: 16px 0;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__address {
+    margin-bottom: 24px;
+    color: $c-darkGrayBackground;
+  }
+
+  &__address--address {
+    color: $c-green;
+  }
+}
+
+.text-checkbox--basket {
+  position: relative;
+  display: inline-block;
+  margin-left: 34px;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $c-grayFooter;
+    top: 5px;
+    left: -33px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -26.5px;
+    display: block;
+    height: 10px;
+    width: 10px;
+    background-color: $c-green;
+    opacity: 0;
+    transition: 0.5s;
+  }
+}
+
+.checkbox--default:checked + .basket__items--name-price .text-checkbox--basket::after,
+.radio--default:checked + .basket__items--name-price .text-radio::after {
+  opacity: 1;
+}
+
+@media(max-width: $breakpointTabletM) {
+  .form-basket {
+    margin: 50px auto;
+  }
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .basket-items--price {
+    padding: 0;
+    margin: 0;
+  }
+
+  .basket-item {
+    &__item {
+      margin-top: 40px;
+    }
+    &__quantity--buttons {
+      margin-left: 14px;
+      margin-bottom: 30px;
+    }
+    &__item--price {
+      margin: 0;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    &__item--name {
+      font-size: 24px;
+    }
+  }
+}
+
+@media(max-width: $breakpointMobileL) {
+  .form-basket {
+    width: 95vw;
+  }
+  .uberEats__basket {
+    margin: 10px;
+  }
+}

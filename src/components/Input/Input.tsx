@@ -6,6 +6,7 @@ import { IInput } from '../../types';
 
 const Input = ({
   iconUrl,
+  locationId,
   value,
   onChange,
   type,
@@ -16,8 +17,6 @@ const Input = ({
   locationList,
   setLocation,
 }: IInput) => {
-
-
 
   const wrapperClass = cn(
     'control__wrapper', {
@@ -52,6 +51,7 @@ const Input = ({
           <select
             onChange={(e)=> setLocation(e.target.value)}
             value={value}
+            defaultValue={locationId!}
             name={name}
             className={inputClass}
             placeholder={placeholder}

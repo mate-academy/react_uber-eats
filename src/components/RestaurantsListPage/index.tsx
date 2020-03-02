@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
 import RestaurantsListPage from './RestaurantsListPage';
-import { getRestaurantsList, getIsLoading, getLocation } from '../../store/selectors';
+import {
+  getRestaurantsList,
+  getIsLoading,
+  getLocation,
+  getHash
+} from '../../store/selectors';
 import { loadRestaurantsList } from '../../store/thunks';
 import { ThunkDispatch } from 'redux-thunk';
 import { RootState, Actions } from '../../types';
@@ -9,9 +14,11 @@ const mapStateToProps = (state: RootState) => ({
   restaurantsList: getRestaurantsList(state),
   isLoading: getIsLoading(state),
   locationId: getLocation(state),
+  currentHash: getHash(state),
 });
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
   loadRestaurantsList: (value: string) => dispatch(loadRestaurantsList(value)),
 });
 

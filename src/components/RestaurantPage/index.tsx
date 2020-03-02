@@ -17,7 +17,8 @@ const mapStateToProps = (state: RootState) => ({
   locationId: getLocation(state),
 });
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
   loadRestaurant: (uuid: string) => dispatch(loadRestaurant(uuid)),
 });
 

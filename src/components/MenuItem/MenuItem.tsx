@@ -1,45 +1,129 @@
 import React, { useEffect, useRef } from 'react';
 import { useRouteMatch, useHistory } from 'react-router-dom';
-import { IMenuItem } from '../../types'
+import { IMenuItem, IRestaurant, addPrice, basket } from '../../types'
 import './MenuItem.scss';
 import Loader from '../Loader/Loader';
 
 const MenuItem = (
   {menuItem,
   loadMenuItem,
+  isEditable,
+  setIsEditable,
   isLoading,
   restaurant,
-  getCustomPrice,
+  setCustomPrice,
   increaseCounter,
   decreaseCounter,
   fullPrice,
   hasError,
   counter,
+  setHasWarning,
+  hasWarning,
+  setaddPrice,
+  setCounter,
+  removeItem,
+  basketItemId,
+  addItemToBasket,
+  editItemInBasket,
+  customInfo,
+  basket,
+  resetaddPrice,
 }: IMenuItem) => {
-
   const match = useRouteMatch<{ itemUuid: string }>();
   const history = useHistory();
   const modalRef = useRef<HTMLHeadingElement>(null!);
-  const radioRef = useRef(null!);
+  const radioRef = useRef<any>(null!);
+
+  const addToBasket = (
+    hasWarning: boolean,
+    uuid: string,
+    title: string,
+    restaurant: IRestaurant,
+    counter: number,
+    price: number,
+    basket: basket[],
+   ) => {
+    if(basket[0] && !basket[0].restaurantTitle.includes(restaurant.title)){
+      setHasWarning(true);
+    }
+    if((basket[0] && basket[0].restaurantTitle === restaurant.title)
+        || basket.length === 0
+        || hasWarning
+      ){
+      addItemToBasket(
+        hasWarning,
+        uuid,
+        title,
+        restaurant,
+        counter,
+        price,
+        customInfo,
+        basket);
+      history.goBack();
+    }
+  };
+
+  const editItem = (
+    uuid: string,
+    title: string,
+    restaurant: IRestaurant,
+    counter: number,
+    price: number
+    ) => {
+    resetaddPrice();
+    editItemInBasket(uuid, title, restaurant, counter, price, customInfo);
+    history.goBack();
+  };
+
+  const removeFromBasket = (basketItemId: number) => {
+    removeItem(basketItemId);
+    history.goBack();
+  };
 
   useEffect(()=>{
     loadMenuItem(match.params.itemUuid);
+    if(isEditable) {
+      setCounter(basket && basket
+        .find(elem => elem.itemUuid === menuItem.uuid)!.count
+      );
+      setaddPrice(basket && basket
+        .find(elem => elem.id === basketItemId)!.customInfo
+      );
+    };
+
     document.body.style.overflow = 'hidden';
 
-    return () =>{ document.body.style.overflow = 'auto' };
-
+    return () =>{
+      document.body.style.overflow = 'auto';
+      setaddPrice([]);
+      setCounter(1);
+      setIsEditable(false);
+    };
     },[loadMenuItem, match]
   );
+
   if (isLoading) {
     return (<Loader />);
-  }
+  };
+
   if (hasError) {
     return (
-      <div className='popup'>
-        <div className='error-message'>
+      <div
+        className='popup'
+        onClick={
+          (event: React.MouseEvent) =>(
+          modalRef.current
+          && !modalRef.current.contains(event.target as Node)
+          && history.goBack()
+          )}
+        >
+        <div
+          className='error-message'
+          ref={modalRef}
+        >
         <span>An error is occured</span>
         <button
-          className="error-message--button"
+          className='error-message--button'
           onClick={history.goBack}
         >
           Go back
@@ -47,14 +131,56 @@ const MenuItem = (
         </div>
       </div>
     )
-  }
+  };
+
+  if (hasWarning) {
+    return (
+      <div
+        className='popup'
+        onClick={
+          (event: React.MouseEvent) =>(
+          modalRef.current
+          && !modalRef.current.contains(event.target as Node)
+          && history.goBack()
+          )}
+      >
+        <div
+          className='error-message'
+          ref={modalRef}
+        >
+    <span>
+      Your order contains items from
+      <span className='error-message--name'> {basket[0].restaurantTitle}</span>
+    </span>
+    <span>
+      Create a new order to add items from
+      <span className='error-message--name'> {restaurant.title}</span>
+    </span>
+          <button
+            className='error-message--button'
+            onClick={() => addToBasket(
+              hasWarning,
+              menuItem.uuid,
+              menuItem.title,
+              restaurant,
+              counter,
+              fullPrice,
+              basket)}
+            >
+            create new order
+          </button>
+      </div>
+    </div>
+    )
+  };
+
   return (
     menuItem &&
     <div className='popup'
       onClick={
-        (event: any) =>(
+        (event: React.MouseEvent) =>(
         modalRef.current
-        && !modalRef.current.contains(event.target)
+        && !modalRef.current.contains(event.target as Node)
         && history.goBack()
         )}>
       <div
@@ -71,7 +197,7 @@ const MenuItem = (
           />
           }
           <img
-            src="./images/close-button.svg"
+            src="./images/close.svg"
             alt="close button"
             onClick={history.goBack}
             className="menu-item__close"
@@ -90,7 +216,7 @@ const MenuItem = (
           <React.Fragment key={sublist.title}>
           <div className="customization-block__title">
             <div className="customization-block__title--title">
-              {sublist.title}
+              {sublist.title.split('-')[0]}
             </div>
             <div className="customization-block__title--permission">
               Choose up to {sublist.maxPermitted}
@@ -98,7 +224,7 @@ const MenuItem = (
           </div>
           {sublist.maxPermitted === 1 &&
           <form className="customization-block__items">
-            {sublist.options.map((option: any) => (
+            {sublist.options.map((option) => (
               <div
                 key={option.title}
                 className="customization-block__items--item">
@@ -109,16 +235,28 @@ const MenuItem = (
                     name={sublist.title}
                     value={option.price}
                     className="radio--default"
+                    defaultChecked={
+                      isEditable && basket.some(elem => (
+                        elem.customInfo.some((customItem: addPrice) => (
+                          customItem.customItem === option.title
+                        &&
+                          elem.id === basketItemId))
+                        )
+                      )
+                    }
                     onChange={() =>
-                        getCustomPrice(
+                        setCustomPrice(
                           option.price,
                           sublist.title,
                           'radio',
-                          option.title
+                          option.title,
+                          option.uuid,
                         )}
                   />
                   <div className="customization-block__items--name-price">
-                    <span className="text-radio">{option.title}</span>
+                    <span className="text-radio">
+                      {option.title.split('-')[0]}
+                    </span>
                     <span className="customization-block__items--price">
                       +{restaurant.priceBucket[0]}
                       {option.price}
@@ -130,9 +268,9 @@ const MenuItem = (
           </form>}
           {sublist.maxPermitted > 1 &&
           <form className="customization-block__items">
-            {sublist.options.map((option: any) => (
+            {sublist.options.map((option) => (
               <div
-                key={option.title}
+                key={option.title.split('-')[0]}
                 className="customization-block__items--item"
               >
                 <label className="customization-block__items--lable">
@@ -141,15 +279,27 @@ const MenuItem = (
                     className="checkbox--default"
                     name={sublist.title}
                     value={option.price}
-                    onChange={() => getCustomPrice(
+                    defaultChecked={
+                      isEditable && basket.some(elem => (
+                        elem.customInfo.some((customItem: addPrice) => (
+                          customItem.customItem === option.title
+                          &&
+                          elem.id === basketItemId))
+                        )
+                      )
+                    }
+                    onChange={() => setCustomPrice(
                       option.price,
                       sublist.title,
                       'checkbox',
-                      option.title
+                      option.title,
+                      option.uuid,
                     )}
                   />
                   <div className="customization-block__items--name-price">
-                    <span className="text-checkbox">{option.title}</span>
+                    <span className="text-checkbox">
+                      {option.title.split('-')[0]}
+                    </span>
                     <span className="customization-block__items--price">
                       +{restaurant.priceBucket}
                       {option.price}
@@ -162,6 +312,14 @@ const MenuItem = (
           </React.Fragment>
         ))}
         </div>
+        {isEditable && (
+          <div
+          className="menu-item__delete-item"
+          onClick={() => removeFromBasket(basketItemId)}
+          >
+            Remove item
+          </div>
+        )}
         <div className="menu-item__submit-block">
           <div className="submit-block__quantity">
             <span className="submit-block__quantity--tag">Кiлькiсть:</span>
@@ -186,14 +344,43 @@ const MenuItem = (
               />
             </div>
           </div>
-          <div className="submit-block__submit">
-            <span className="submit-block__submit--count">
-              Add {counter} to order
-            </span>
-            <span className="submit-block__submit--price">
-              {fullPrice.toFixed(2)} UAH
-            </span>
-          </div>
+          {
+            isEditable
+          ? <div
+          className="submit-block__submit"
+          onClick={() => editItem(
+            menuItem.uuid,
+            menuItem.title,
+            restaurant,
+            counter,
+            fullPrice)}
+        >
+          <span className="submit-block__submit--count">
+            Add {counter} to order
+          </span>
+          <span className="submit-block__submit--price">
+            {(fullPrice * counter).toFixed(2)} UAH
+          </span>
+        </div>
+          : <div
+              className="submit-block__submit"
+              onClick={() => addToBasket(
+                hasWarning,
+                menuItem.uuid,
+                menuItem.title,
+                restaurant,
+                counter,
+                fullPrice,
+                basket)}
+            >
+              <span className="submit-block__submit--count">
+                Add {counter} to order
+              </span>
+              <span className="submit-block__submit--price">
+                {(fullPrice * counter).toFixed(2)} UAH
+              </span>
+            </div>
+          }
         </div>
       </div>
     </div>

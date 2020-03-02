@@ -11,6 +11,7 @@
 
   &__inner {
     @extend %flex-row;
+    cursor: pointer;
   }
 
   &__logo {
@@ -26,12 +27,15 @@
   &__search {
     margin-left: auto;
   }
-
+  &__total-count {
+    color: #247a00;
+  }
   &__link {
     margin-left: $styleDistance;
     color: $c-darkGrayText;
     padding: 12px 0;
     white-space: nowrap;
+    cursor: pointer;
     &:hover {
       text-decoration: underline;
     }

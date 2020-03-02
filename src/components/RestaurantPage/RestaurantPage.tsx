@@ -27,6 +27,7 @@ const RestaurantPage = ({
   if (isLoading) {
     return (<Loader />);
   }
+
   return (
     <>
       {restaurant && (
@@ -71,7 +72,10 @@ const RestaurantPage = ({
             <div className="sections__section">
               {restaurant.sections.map((section) => (
                 <React.Fragment key={section}>
-                  <div id={restaurant.sectionsMap[section].title} className="section__section-title">
+                  <div
+                    id={restaurant.sectionsMap[section].title}
+                    className="section__section-title"
+                  >
                     {restaurant.sectionsMap[section].title}
                   </div>
                   <div className="section__goods">
@@ -81,11 +85,19 @@ const RestaurantPage = ({
                         <div className="goods__good">
                           <div className="goods__good-description">
                             <div className="goods__good-description--info">
-                              <p className="goods__good-description--name">{restaurant.entitiesMap[itemUuid].title}</p>
-                              <p className="goods__good-description--ingridients">{restaurant.entitiesMap[itemUuid].description}</p>
+                              <p className="goods__good-description--name">
+                                {restaurant.entitiesMap[itemUuid].title}
+                              </p>
+                              <p
+                                className="goods__good-description--ingridients"
+                              >
+                                {restaurant.entitiesMap[itemUuid].description}
+                              </p>
                             </div>
                             <div className="goods__good-description--price">
-                              <span>{restaurant.entitiesMap[itemUuid].price}</span>
+                              <span>
+                                {restaurant.entitiesMap[itemUuid].price}
+                              </span>
                               <span>{restaurant.priceBucket[0]}</span>
                             </div>
                           </div>

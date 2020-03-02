@@ -1,0 +1,39 @@
+import { connect } from 'react-redux';
+import Basket from './Basket';
+import { ThunkDispatch } from 'redux-thunk';
+import { getBasket, getFullPrice, getIsUtensilsRequested } from '../../store/selectors'
+import { RootState, Actions } from '../../types';
+import { increaseItem, decreaseItem, requestUtensils } from '../../store/thunks';
+import { hideBasket,
+  setIsEditable,
+  removeItem,
+  setBasketItemId,
+  setRestaurantNotes,
+} from '../../store/actions';
+
+const mapStateToProos = (state: RootState) => ({
+  basket: getBasket(state),
+  fullPrice: getFullPrice(state),
+  isUtensilsRequested: getIsUtensilsRequested(state),
+});
+
+const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
+  setUtensils: (basketItemId: number) => dispatch(requestUtensils(basketItemId)),
+  increaseItem: (basketItemId: number) => dispatch(increaseItem(basketItemId)),
+  decreaseItem: (basketItemId: number, count: number) => (
+    dispatch(decreaseItem(basketItemId, count))
+  ),
+  hideBasket: () => dispatch(hideBasket()),
+  removeItem: (basketItemId: number) => dispatch(removeItem(basketItemId)),
+  setIsEditable: (value: boolean) => dispatch(setIsEditable(value)),
+  setBasketItemId: (basketItemId: number) => (
+    dispatch(setBasketItemId(basketItemId))
+  ),
+  setRestaurantNotes: (restaurantNotes: string, basketItemId: number) => (
+    dispatch(setRestaurantNotes(restaurantNotes, basketItemId))
+  ),
+});
+
+const connectedBasket = connect(mapStateToProos, mapDispatchToProps)(Basket);
+
+export { connectedBasket as Basket };

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import RestaurantCard from '../RestaurantCard/RestaurantCard';
 import './RestaurantsListPage.scss';
 import Loader from '../Loader/Loader';
@@ -9,8 +9,10 @@ const RestaurantsListPage = ({
   loadRestaurantsList,
   isLoading,
   locationId,
+  currentHash,
 }: IRestaurantsListPage) => {
 
+  const history = useHistory();
   const location = useLocation();
 
   useEffect(
@@ -18,6 +20,11 @@ const RestaurantsListPage = ({
       loadRestaurantsList(locationId);
     }, [loadRestaurantsList, locationId]
   );
+
+  useEffect(()=>{
+    history.push('/restaurants' + currentHash.replace('#/restaurants', ''));
+  },[])
+
 
   const params = new URLSearchParams(location.search);
   const filteredRestaurants = restaurantsList
