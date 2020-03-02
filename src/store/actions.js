@@ -10,6 +10,9 @@ export const CHANGE_CURRENT_NUMBER = 'CHANGE_CURRENT_NUMBER';
 export const ACTIVATE_MENU = 'ACTIVATE_MENU';
 export const TOGGLE_MODAL_WINDOW = 'TOGGLE_MODAL_WINDOW';
 export const UUID_MODAL = 'UUID_MODAL';
+export const ADD_DISH = 'ADD_DISH';
+export const MINUS_DISH = 'MINUS_DISH';
+export const DEFAULT_COUNT_DISH = 'DEFAULT_COUNT_DISH';
 
 const loadRestaurantsSuccess = restaurants => ({
   type: LOAD_SUCCESS, restaurants,
@@ -59,4 +62,16 @@ export const toggleModal = toggler => ({
 
 export const setUUIDModal = uuid => ({
   type: UUID_MODAL, uuid,
+});
+
+export const addDishInModal = () => ({
+  type: ADD_DISH,
+});
+
+export const minusDishInModal = () => ({
+  type: MINUS_DISH,
+});
+
+export const defaultCountDish = count => ({
+  type: DEFAULT_COUNT_DISH, count,
 });

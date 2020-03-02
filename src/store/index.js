@@ -11,6 +11,9 @@ import {
   ACTIVATE_MENU,
   TOGGLE_MODAL_WINDOW,
   UUID_MODAL,
+  ADD_DISH,
+  MINUS_DISH,
+  DEFAULT_COUNT_DISH,
 } from './actions';
 
 const initialState = {
@@ -26,6 +29,7 @@ const initialState = {
   toggleMenu: false,
   togglerModal: false,
   uuidModal: '',
+  countDishInModal: 1,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -88,6 +92,24 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         uuidModal: action.uuid,
+      };
+
+    case ADD_DISH:
+      return {
+        ...state,
+        countDishInModal: state.countDishInModal + 1,
+      };
+
+    case MINUS_DISH:
+      return {
+        ...state,
+        countDishInModal: state.countDishInModal - 1,
+      };
+
+    case DEFAULT_COUNT_DISH:
+      return {
+        ...state,
+        countDishInModal: action.count,
       };
 
     default: return state;

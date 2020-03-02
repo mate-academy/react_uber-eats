@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import DishCard from '../dishCard/dishCard';
 import ModalWindow from '../modalWindow/ModalWindow';
-import { toggleModal } from '../../store/actions';
-// import { HashLink as Link } from 'react-router-hash-link';
+import { defaultCountDish, toggleModal } from '../../store/actions';
 
-const RestaurantMenu = ({ restaurant, toggle, togglerModal }) => {
+const RestaurantMenu = (
+  { restaurant,
+    toggle,
+    togglerModal,
+    setDefaultCount }
+) => {
   const menu = {
     sectionsUUID: restaurant.sections,
     sectionsMenu: restaurant.sections.map(item => restaurant.sectionsMap[item])
@@ -31,7 +35,10 @@ const RestaurantMenu = ({ restaurant, toggle, togglerModal }) => {
 
       ))}
       <ModalWindow
-        handleClose={() => toggle(false)}
+        handleClose={() => {
+          toggle(false);
+          setDefaultCount(1);
+        }}
         togglerModal={togglerModal}
         allMenu={onlyDishes}
       />
@@ -46,6 +53,7 @@ const mapState2props = state => ({
 
 const mapDispatch2Props = ({
   toggle: toggleModal,
+  setDefaultCount: defaultCountDish,
 });
 
 RestaurantMenu.propTypes = {
@@ -58,12 +66,14 @@ RestaurantMenu.propTypes = {
   ])),
   toggle: PropTypes.func,
   togglerModal: PropTypes.bool,
+  setDefaultCount: PropTypes.func,
 };
 
 RestaurantMenu.defaultProps = {
   restaurant: {},
   toggle: '',
   togglerModal: false,
+  setDefaultCount: '',
 };
 
 export default connect(mapState2props, mapDispatch2Props)(RestaurantMenu);

@@ -8,8 +8,21 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { minus, plus } from '../../icons';
+import {
+  addDishInModal,
+  defaultCountDish,
+  minusDishInModal,
+} from '../../store/actions';
 
-const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
+const ModalWindow = (
+  { handleClose,
+    togglerModal,
+    uuidModal,
+    allMenu,
+    addDish,
+    minusDish,
+    countDishInModal }
+) => {
   const modalDish = allMenu.map(dish => dish.dishes)
     .flat().find(item => item.uuid === uuidModal);
 
@@ -65,7 +78,8 @@ const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
           <span className="cost">
             Price:
             {' '}
-            {modalDish ? modalDish.price / 10 : ''}
+            {modalDish ? (modalDish.price / 10 * countDishInModal)
+              .toFixed(2) : ''}
             {' '}
             UAH
           </span>
@@ -74,19 +88,24 @@ const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
           <div className="modal__add">
 
             <div
-              onKeyDown={handleClose}
+              onKeyDown={minusDish}
               role="button"
               tabIndex={0}
-              onClick={handleClose}
+              onClick={minusDish}
             >
               {minus}
             </div>
 
             <div className="modal__count">
-              1
+              {countDishInModal}
             </div>
 
-            <div>
+            <div
+              role="button"
+              tabIndex={0}
+              onKeyDown={addDish}
+              onClick={addDish}
+            >
               {plus}
             </div>
           </div>
@@ -100,10 +119,15 @@ const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
           >
             <span>
               Add
-              <span className="oder">1 to order</span>
+              <span className="oder">
+                {countDishInModal}
+                {' '}
+                to order
+              </span>
             </span>
             <span>
-              {modalDish ? modalDish.price / 10 : ''}
+              {modalDish ? (modalDish.price / 10 * countDishInModal)
+                .toFixed(2) : ''}
               {' '}
               UAH
             </span>
@@ -116,6 +140,13 @@ const ModalWindow = ({ handleClose, togglerModal, uuidModal, allMenu }) => {
 
 const mapState2props = state => ({
   uuidModal: state.uuidModal,
+  countDishInModal: state.countDishInModal,
+});
+
+const mapDispatch2Props = ({
+  addDish: addDishInModal,
+  minusDish: minusDishInModal,
+  setDefaultCount: defaultCountDish,
 });
 
 ModalWindow.propTypes = {
@@ -123,10 +154,16 @@ ModalWindow.propTypes = {
   togglerModal: PropTypes.bool.isRequired,
   uuidModal: PropTypes.string.isRequired,
   allMenu: PropTypes.arrayOf(PropTypes.object),
+  addDish: PropTypes.func,
+  minusDish: PropTypes.func,
+  countDishInModal: PropTypes.func,
 };
 
 ModalWindow.defaultProps = {
   allMenu: [],
+  addDish: '',
+  minusDish: '',
+  countDishInModal: '',
 };
 
-export default connect(mapState2props)(ModalWindow);
+export default connect(mapState2props, mapDispatch2Props)(ModalWindow);
