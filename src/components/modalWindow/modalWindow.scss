@@ -3,15 +3,19 @@
   box-sizing: border-box;
 }
 
+.MuiDialog-container.MuiDialog-scrollPaper {
+  display: flex;
+  justify-content: center;
+}
+
 .MuiDialog-container {
   overflow-y: scroll;
   right: 0;
 }
 
 .MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper {
+  margin-top: 120px;
   max-height: inherit;
-  position: relative;
-  top: 20px;
   overflow-y: hidden;
 }
 
@@ -95,3 +99,7 @@
     margin: 0 17px;
   }
 }
+
+//@media screen and (max-width: $max-widthIPad){
+//
+//}
