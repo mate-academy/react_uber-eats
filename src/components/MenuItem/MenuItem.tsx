@@ -3,6 +3,7 @@ import { useRouteMatch, useHistory } from 'react-router-dom';
 import { IMenuItem, IRestaurant, addPrice, basket } from '../../types'
 import './MenuItem.scss';
 import Loader from '../Loader/Loader';
+import { historyReplacer } from '../../helpers';
 
 const MenuItem = (
   {menuItem,
@@ -59,7 +60,7 @@ const MenuItem = (
         price,
         customInfo,
         basket);
-      history.goBack();
+      history.replace(historyReplacer(history));
     }
   };
 
@@ -72,12 +73,12 @@ const MenuItem = (
     ) => {
     resetaddPrice();
     editItemInBasket(uuid, title, restaurant, counter, price, customInfo);
-    history.goBack();
+    history.replace(historyReplacer(history));
   };
 
   const removeFromBasket = (basketItemId: number) => {
     removeItem(basketItemId);
-    history.goBack();
+    history.replace(historyReplacer(history));
   };
 
   useEffect(()=>{
@@ -114,7 +115,7 @@ const MenuItem = (
           (event: React.MouseEvent) =>(
           modalRef.current
           && !modalRef.current.contains(event.target as Node)
-          && history.goBack()
+          && history.replace(historyReplacer(history))
           )}
         >
         <div
@@ -124,7 +125,7 @@ const MenuItem = (
         <span>An error is occured</span>
         <button
           className='error-message--button'
-          onClick={history.goBack}
+          onClick={() => history.replace(historyReplacer(history))}
         >
           Go back
           </button>
@@ -141,7 +142,7 @@ const MenuItem = (
           (event: React.MouseEvent) =>(
           modalRef.current
           && !modalRef.current.contains(event.target as Node)
-          && history.goBack()
+          && history.replace(historyReplacer(history))
           )}
       >
         <div
@@ -181,7 +182,7 @@ const MenuItem = (
         (event: React.MouseEvent) =>(
         modalRef.current
         && !modalRef.current.contains(event.target as Node)
-        && history.goBack()
+        && history.replace(historyReplacer(history))
         )}>
       <div
         className='form'
@@ -199,7 +200,7 @@ const MenuItem = (
           <img
             src="./images/close.svg"
             alt="close button"
-            onClick={history.goBack}
+            onClick={()=> history.replace(historyReplacer(history))}
             className="menu-item__close"
           />
         </div>

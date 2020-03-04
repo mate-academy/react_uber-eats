@@ -1,5 +1,6 @@
-import { debounce, Handler } from './types';
+import { debounce, Handler, HistoryReplacer } from './types';
 import { setAddress, setTime, setSearch } from './store/actions';
+import { History } from 'history';
 
 export const debounceWrapper: debounce = (f, delay) => {
   let timer: any;
@@ -19,3 +20,10 @@ export const handleChange: Handler = (value, name) => {
   }
 };
 
+export const historyReplacer: HistoryReplacer = (history: History) => {
+
+  return history.location.pathname
+    .split('/')
+    .filter((elem, i, pathname) => i !== pathname.length - 1)
+    .join('/')
+}

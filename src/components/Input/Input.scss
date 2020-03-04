@@ -26,6 +26,7 @@
     max-height: 24px;
     outline: none;
     border: none;
+    background-color: transparent;
   }
   &--focused {
     border-color: darken($c-lightGray, 20);

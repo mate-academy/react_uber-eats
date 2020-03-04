@@ -3,7 +3,7 @@ import { load } from "redux-localstorage-simple";
 import { ConnectedRouter } from 'connected-react-router'
 import  configureStore, {history} from './store/index';
 import './styles/index.scss';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch } from 'react-router-dom';
 import './App.scss';
 import { Provider } from 'react-redux';
 import { Header } from './components/Header/index';
@@ -28,10 +28,6 @@ const App = () =>{
     </Switch>
     </HashRouter>
       }
-      <Switch>
-        <Route exact path="/" render={() => (<div>Match</div>)} />
-        <Route render={() => (<div>Miss</div>)} />
-      </Switch>
     </>
   </ConnectedRouter>
   </Provider>

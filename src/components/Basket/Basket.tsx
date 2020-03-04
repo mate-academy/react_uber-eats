@@ -16,7 +16,7 @@ const Basket = ({
   setUtensils,
  }: IBasket) => {
 
-  const modalRef = useRef<HTMLHeadingElement>(null!);
+  const modalRef = useRef<HTMLHeadingElement>(null);
   const editItem = (isEditable: boolean, basketItemId: number) => {
     setIsEditable!(isEditable);
     setBasketItemId!(basketItemId);
@@ -28,7 +28,7 @@ const Basket = ({
   }
    return (
     <div
-      className="popup-basket"
+      className="basket-popup"
       onClick={
         (event: React.MouseEvent) =>(
         modalRef.current
@@ -36,7 +36,7 @@ const Basket = ({
         && hideBasket!()
         )}>
       <div
-      className="form-basket"
+      className="basket-form"
       ref={modalRef}
       >
        <div className="uberEats__basket">

@@ -2,7 +2,7 @@
 
 @import "../../styles/variables.scss";
 
-.popup-basket {
+.basket-popup {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -14,7 +14,7 @@
   z-index: 1;
 }
 
-.form-basket {
+.basket-form {
   display: flex;
   width: 430px;
   height: 500px;
@@ -175,7 +175,7 @@
 }
 
 @media(max-width: $breakpointTabletM) {
-  .form-basket {
+  .basket-form {
     margin: 50px auto;
   }
   .wrapper {
@@ -209,7 +209,7 @@
 }
 
 @media(max-width: $breakpointMobileL) {
-  .form-basket {
+  .basket-form {
     width: 95vw;
   }
   .uberEats__basket {

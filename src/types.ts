@@ -1,6 +1,7 @@
 import { ThunkAction } from 'redux-thunk';
 import { reducer } from './store/index';
 import { Action } from 'redux';
+import { History } from 'history';
 
 export const SET_UTENSILS = 'SET_UTENSILS';
 export const SET_RESTAURANT_NOTES = 'SET_RESTAURANT_NOTES';
@@ -512,6 +513,11 @@ export type RootState = ReturnType<typeof reducer>
 export type Handler = {
   (value: any, name: string): any,
 };
+
+export type HistoryReplacer = {
+  (history: History): string
+};
+
 export type debounce = {
  (f: any, delay: number): any,
 };
