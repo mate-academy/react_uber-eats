@@ -28,6 +28,11 @@ const Input = ({
       'control__input--small': isSmall,
     }
   );
+  const selectClass = cn(
+    'control__select', {
+      'control__select--small': isSmall,
+    }
+  );
 
   return (
     <>
@@ -53,7 +58,7 @@ const Input = ({
             value={value}
             defaultValue={locationId!}
             name={name}
-            className={inputClass}
+            className={selectClass}
             placeholder={placeholder}
           >
             {locationList && locationList.locations.map(elem => (
