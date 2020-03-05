@@ -1,1 +1,1 @@
-[DEMO LINK](http://igorskiy.github.io/react_todo-ap/)
+[DEMO LINK](https://igorskiy.github.io/react_uber-eats/)
