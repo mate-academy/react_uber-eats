@@ -22,8 +22,8 @@ const mapDispatchToProps = (
   loadRestaurant: (uuid: string) => dispatch(loadRestaurant(uuid)),
 });
 
-const connectedRestaurantPage = connect(
-  mapStateToProps, mapDispatchToProps
-)(RestaurantPage);
+export const connector = connect(mapStateToProps, mapDispatchToProps);
+
+const connectedRestaurantPage = connector(RestaurantPage);
 
 export { connectedRestaurantPage as RestaurantPage };

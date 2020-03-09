@@ -123,7 +123,7 @@ const basketReducer = (state = initialState, action: Actions) => {
         return {
           ...state,
           basket: state.basket
-          .map((elem: any) => {
+          .map((elem: basket) => {
             return elem.id === state.basketItemId
             ? { ...elem, restaurantNotes: action.restaurantNotes }
             : elem;
@@ -132,7 +132,7 @@ const basketReducer = (state = initialState, action: Actions) => {
       case RESET_BASKET:
         return {
           ...state,
-          basket: []
+          basket: [] as basket[],
         }
     default: return state;
   }

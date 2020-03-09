@@ -22,9 +22,8 @@ const mapDispatchToProps = (
   loadRestaurantsList: (value: string) => dispatch(loadRestaurantsList(value)),
 });
 
-const connectedRestaurantsListPage = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(RestaurantsListPage);
+export const connector = connect(mapStateToProps, mapDispatchToProps);
+
+const connectedRestaurantsListPage = connector(RestaurantsListPage);
 
 export { connectedRestaurantsListPage as RestaurantsListPage };

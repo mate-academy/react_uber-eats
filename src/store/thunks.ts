@@ -3,7 +3,7 @@ import {getRestaurantData,
   getRestaurantsData,
   getLocationData
 } from '../Api';
-import { Thunks, addPrice, IRestaurant } from '../types';
+import { Thunks, addPrice, IRestaurant, locationList, IMenuItemState, basket } from '../types';
 import {
   addPriceToggle,
   addPriceCheckbox,
@@ -34,7 +34,7 @@ export const loadRestaurantsList = (
   dispatch(startLoading());
 
   const locationList = await getLocationData();
-  const defaultLocation = locationList.data.locations[0]
+  const defaultLocation: locationList & string = locationList.data.locations[0]
 
   dispatch(setLocation(location || defaultLocation));
   dispatch(setLocationList(locationList.data));
@@ -50,6 +50,7 @@ export const loadMenuItem = (
   ): Thunks => async(dispatch) => {
   dispatch(startLoading());
   let menuItem = await getMenuItemData(itemUuid);
+  const menuItemData: IMenuItemState = menuItem.data;
 
   if(menuItem === 'error') {
     dispatch(setHasError(true));
@@ -58,7 +59,7 @@ export const loadMenuItem = (
     menuItem = {
       ...menuItem,
       data: {
-        ...menuItem.data,
+        ...menuItemData,
         customizationsList: menuItem.data.customizationsList.map(
           (custom: any, i: number, customList: addPrice[]) => {
             if(
@@ -81,7 +82,7 @@ export const loadMenuItem = (
         })
       }
     };
-    dispatch(setMenuItem(menuItem.data));
+    dispatch(setMenuItem(menuItemData));
     dispatch(setCurrentPrice(menuItem.data.price));
     dispatch(setHasError(false));
     dispatch(stopLoading());
@@ -96,6 +97,7 @@ export const addItemToBasket = (
   customization: number,
   price: number,
   customInfo: addPrice[],
+  basket: basket[],
   ): Thunks => async(dispatch) => {
 
   const id = +new Date()
@@ -180,7 +182,8 @@ export const setCustomPrice = (
   price: number,
   subtitle: string,
   type: string,
-  customItem: string
+  customItem: string,
+  uuid: string,
   ): Thunks => async(dispatch) => {
   if (type === 'radio') {
     dispatch(addPriceToggle({price, subtitle, customItem}));

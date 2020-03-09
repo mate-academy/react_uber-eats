@@ -1,8 +1,8 @@
-import { Actions, SET_RESTAURANT, } from '../types';
+import { Actions, SET_RESTAURANT, IRestaurant, } from '../types';
 
 
 
-const restaurantReducer = (state = null, action: Actions) => {
+const restaurantReducer = (state = {} as IRestaurant, action: Actions) => {
   switch (action.type) {
     case SET_RESTAURANT:
       return action.restaurant;

@@ -2,14 +2,15 @@ import {
   Actions,
   SET_LOCATION_LIST,
   ILocationState,
-  SET_LOCATION
+  SET_LOCATION,
+  locationList
 } from "../types";
 
 const initialState: ILocationState = {
-  locationList: null,
-  location: null,
+  locationList: {} as locationList,
+  location: '',
 }
-const locationReducer = (state = initialState, action: Actions) => {
+const locationReducer = (state: ILocationState = initialState, action: Actions) => {
   switch (action.type) {
     case SET_LOCATION_LIST: return {
       ...state,

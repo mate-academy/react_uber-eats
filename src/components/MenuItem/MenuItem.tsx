@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { useRouteMatch, useHistory } from 'react-router-dom';
-import { IMenuItem, IRestaurant, addPrice, basket } from '../../types'
+import { IRestaurant, addPrice, basket, Customization } from '../../types'
 import './MenuItem.scss';
 import Loader from '../Loader/Loader';
 import { historyReplacer } from '../../helpers';
+import { ConnectedProps } from 'react-redux';
+import { connector } from '../MenuItem';
 
 const MenuItem = (
   {menuItem,
@@ -29,7 +31,7 @@ const MenuItem = (
   customInfo,
   basket,
   resetaddPrice,
-}: IMenuItem) => {
+}: ConnectedProps<typeof connector>) => {
   const match = useRouteMatch<{ itemUuid: string }>();
   const history = useHistory();
   const modalRef = useRef<HTMLHeadingElement>(null!);
@@ -213,8 +215,8 @@ const MenuItem = (
           </p>
         </div>
         <div className="menu-item__customization-block">
-          {menuItem.customizationsList.map((sublist) =>(
-          <React.Fragment key={sublist.title}>
+          { menuItem.customizationsList && menuItem.customizationsList.map((sublist: Customization, i: number) =>(
+          <React.Fragment key={sublist.title + i}>
           <div className="customization-block__title">
             <div className="customization-block__title--title">
               {sublist.title.split('-')[0]}
@@ -225,9 +227,9 @@ const MenuItem = (
           </div>
           {sublist.maxPermitted === 1 &&
           <form className="customization-block__items">
-            {sublist.options.map((option) => (
+            {sublist.options.map((option, i) => (
               <div
-                key={option.title}
+                key={option.title + i}
                 className="customization-block__items--item">
                 <label className="customization-block__items--lable">
                   <input
@@ -269,9 +271,9 @@ const MenuItem = (
           </form>}
           {sublist.maxPermitted > 1 &&
           <form className="customization-block__items">
-            {sublist.options.map((option) => (
+            {sublist.options.map((option, i) => (
               <div
-                key={option.title.split('-')[0]}
+                key={option.title.split('-')[0] + i}
                 className="customization-block__items--item"
               >
                 <label className="customization-block__items--lable">

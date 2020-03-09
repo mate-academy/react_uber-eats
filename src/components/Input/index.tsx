@@ -15,8 +15,8 @@ const mapDispatchToProps = (
     setLocation: (value: string) => dispatch(setLocation(value)),
 });
 
-const connectedInput = connect(
-  mapStateToProps, mapDispatchToProps
-)(Input);
+export const connector = connect(mapStateToProps, mapDispatchToProps);
+
+const connectedInput = connector(Input);
 
 export { connectedInput as Input };

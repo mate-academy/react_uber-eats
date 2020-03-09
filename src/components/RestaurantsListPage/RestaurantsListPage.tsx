@@ -3,14 +3,16 @@ import { useLocation, useHistory } from 'react-router-dom';
 import RestaurantCard from '../RestaurantCard/RestaurantCard';
 import './RestaurantsListPage.scss';
 import Loader from '../Loader/Loader';
-import { IRestaurantsListPage } from '../../types';
+import { connector } from '.';
+import { ConnectedProps } from 'react-redux';
+import { IRestaurantsList } from '../../types';
 const RestaurantsListPage = ({
   restaurantsList = [],
   loadRestaurantsList,
   isLoading,
   locationId,
   currentHash,
-}: IRestaurantsListPage) => {
+}: ConnectedProps<typeof connector>) => {
 
   const history = useHistory();
   const location = useLocation();
@@ -28,7 +30,7 @@ const RestaurantsListPage = ({
 
   const params = new URLSearchParams(location.search);
   const filteredRestaurants = restaurantsList
-    .filter(restaurant => (params.get('title')
+    .filter((restaurant: IRestaurantsList) => (params.get('title')
       ? restaurant.slug.includes(params.get('title')!)
       : true));
 
@@ -38,7 +40,8 @@ const RestaurantsListPage = ({
 
   return (
     <div className="restaurants-list">
-      {filteredRestaurants && filteredRestaurants.map(restaurant => (
+      {filteredRestaurants &&
+        filteredRestaurants.map((restaurant: IRestaurantsList) => (
         <RestaurantCard
           key={restaurant.uuid}
           uuid={restaurant.uuid}

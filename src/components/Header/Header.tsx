@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 import './Header.scss';
-import { Input } from '../Input/';
-import { IHeader, Handler } from '../../types';
+import { connector } from './';
+import { Handler } from '../../types';
 import { debounceWrapper } from '../../helpers';
 import { Basket } from '../Basket/';
+import { ConnectedProps } from 'react-redux';
+import { Input } from '../Input';
 
 const Header = ({
   setTime,
@@ -19,7 +21,7 @@ const Header = ({
   locationId,
   basket,
   totalCount,
-}: IHeader) => {
+}: ConnectedProps<typeof connector>) => {
   const history = useHistory();
   const location = useLocation();
   const params = new URLSearchParams(location.search);

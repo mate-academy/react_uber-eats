@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { IBasket, basket, addPrice } from '../../types';
+import { basket, addPrice } from '../../types';
 import './Basket.scss'
+import { ConnectedProps } from 'react-redux';
+import { connector } from '.';
 
 const Basket = ({
   basket,
@@ -14,7 +16,7 @@ const Basket = ({
   setBasketItemId,
   setRestaurantNotes,
   setUtensils,
- }: IBasket) => {
+ }: ConnectedProps<typeof connector> & any) => {
 
   const modalRef = useRef<HTMLHeadingElement>(null);
   const editItem = (isEditable: boolean, basketItemId: number) => {
@@ -115,7 +117,7 @@ const Basket = ({
                   <input
                     type="checkbox"
                     className="checkbox--default"
-                    checked={basket.find(elem => elem.id === item.id)?.utensils}
+                    checked={basket.find((elem: basket) => elem.id === item.id)?.utensils}
                     onChange={() => setUtensils!(item.id)}
                   />
                   <div className="basket__items--name-price">

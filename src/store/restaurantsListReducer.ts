@@ -1,6 +1,9 @@
-import {SET_RESTAURANTS_LIST, Actions} from '../types';
+import {SET_RESTAURANTS_LIST, Actions, IRestaurantsList} from '../types';
 
-const restaurantsListReducer = (state = null, action: Actions) => {
+const restaurantsListReducer = (
+  state: IRestaurantsList[] = [],
+  action: Actions
+) => {
   switch (action.type) {
     case SET_RESTAURANTS_LIST:
       return action.restaurantsList;

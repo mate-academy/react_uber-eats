@@ -3,6 +3,8 @@ import React from 'react';
 import cn from 'classnames';
 import './Input.scss';
 import { IInput } from '../../types';
+import { ConnectedProps } from 'react-redux';
+import { connector } from '.';
 
 const Input = ({
   iconUrl,
@@ -16,7 +18,7 @@ const Input = ({
   label,
   locationList,
   setLocation,
-}: IInput) => {
+}: ConnectedProps<typeof connector> & IInput) => {
 
   const wrapperClass = cn(
     'control__wrapper', {
@@ -53,23 +55,25 @@ const Input = ({
               className="control__icon"
             />
           )}
-          <select
-            onChange={(e)=> setLocation(e.target.value)}
-            value={value}
-            defaultValue={locationId!}
-            name={name}
-            className={selectClass}
-            placeholder={placeholder}
-          >
-            {locationList && locationList.locations.map(elem => (
-              <option
-              key={elem}
-              value={locationList.locationsMap[elem].id}
-              >
-                {locationList.locationsMap[elem].title}
-              </option>
-            ))}
-          </select>
+          {locationList!.locations && (
+            <select
+              onChange={(e)=> setLocation(e.target.value)}
+              value={value}
+              defaultValue={locationId!}
+              name={name}
+              className={selectClass}
+              placeholder={placeholder}
+            >
+              {locationList && locationList.locations.map(elem => (
+                <option
+                key={elem}
+                value={locationList.locationsMap[elem].id}
+                >
+                  {locationList.locationsMap[elem].title}
+                </option>
+              ))}
+            </select>
+          )}
         </div>
       </label>
     }

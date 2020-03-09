@@ -11,7 +11,7 @@ import { hideBasket,
   setRestaurantNotes,
 } from '../../store/actions';
 
-const mapStateToProos = (state: RootState) => ({
+const mapStateToProps = (state: RootState) => ({
   basket: getBasket(state),
   fullPrice: getFullPrice(state),
   isUtensilsRequested: getIsUtensilsRequested(state),
@@ -34,6 +34,9 @@ const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>
   ),
 });
 
-const connectedBasket = connect(mapStateToProos, mapDispatchToProps)(Basket);
+export const connector = connect(mapStateToProps, mapDispatchToProps);
+
+const connectedBasket = connector(Basket);
 
 export { connectedBasket as Basket };
+

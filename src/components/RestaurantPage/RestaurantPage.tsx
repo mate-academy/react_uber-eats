@@ -3,13 +3,15 @@ import { HashLink } from 'react-router-hash-link';
 import React, { useEffect } from 'react';
 import './RestaurantPage.scss';
 import Loader from '../Loader/Loader';
-import { IRestaurantPage, MatchParams } from '../../types';
+import { MatchParams } from '../../types';
+import { ConnectedProps } from 'react-redux';
+import { connector } from '.';
 
 const RestaurantPage = ({
   restaurant,
   isLoading,
   loadRestaurant,
-}: IRestaurantPage) => {
+}: ConnectedProps<typeof connector>) => {
 
   const { uuid } = useParams<MatchParams>();
   const history = useHistory();
@@ -30,7 +32,7 @@ const RestaurantPage = ({
 
   return (
     <>
-      {restaurant && (
+      {Object.keys(restaurant).length && (
         <>
           <div className="top-block">
             <img

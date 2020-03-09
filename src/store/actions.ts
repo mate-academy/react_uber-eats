@@ -86,6 +86,7 @@ import {
   setUtensilsAction,
   SET_UTENSILS,
   basket,
+  IMenuItemState,
 } from '../types';
 
 export const setUtensils = (basketItemId: number): setUtensilsAction => ({
@@ -210,27 +211,26 @@ export const setRestaurant = (
   restaurant,
 });
 
-export const setMenuItem = (menuItem: IRestaurant &
-  { imageUrl: string, itemDescription: string, customizationsList: any[] }
-  ): setMenuItemAction => ({
+export const setMenuItem = (menuItem: IMenuItemState): setMenuItemAction => ({
   type: SET_MENU_ITEM,
   menuItem,
 });
+
 
 export const startLoading = (): startLoadingAction => (
   { type: START_LOADING }
 );
 
 export const stopLoading = (): stopLoadingAction => (
-{ type: STOP_LOADING }
+  { type: STOP_LOADING }
 );
 
 export const toggleSearch = (): toggleSearchAction => (
-{ type: TOGGLE_SEARCH }
+  { type: TOGGLE_SEARCH }
 );
 
 export const toggleDelivery = (): toggleDeliveryAction => (
-{ type: TOGGLE_DELIVERY }
+  { type: TOGGLE_DELIVERY }
 );
 
 export const setAddress = (address: string): setAddressACtion => ({

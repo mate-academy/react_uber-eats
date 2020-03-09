@@ -1,10 +1,11 @@
 import { RootState, basket, addPrice, IRestaurantCard } from '../types';
 
-export const getRestaurantsList = ({ restaurantsList }: any) => (restaurantsList
-  ? restaurantsList.feedItems.map(({ uuid }: IRestaurantCard) => (
-      restaurantsList.storesMap[uuid])
-    )
-  : undefined);
+export const getRestaurantsList = ({ restaurantsList }: any) =>
+  restaurantsList.feedItems
+    ? restaurantsList.feedItems.map(
+        ({ uuid }: IRestaurantCard) => restaurantsList.storesMap[uuid],
+      )
+    : undefined;
 
 export const getLocationList = (state: RootState) => (
   state.location.locationList
@@ -29,15 +30,12 @@ export const getTotalCount = (state: RootState) => {
 };
 
 export const getFullPrice = (state: RootState) => {
-  return state.basket.basket.length > 1
-    ? state.basket.basket.reduce((accum: basket, curr: basket) =>{
-      return typeof accum === 'number'
-        ? accum + (curr.price * curr.count)
-        :(accum.price * accum.count) + (curr.price * curr.count)
-     })
-    : +state.basket.basket.map((item: basket) => item.price * item.count)
-        .join('');
-  }
+  return eval(
+    state.basket.basket
+      .map((item: basket) => item.price * item.count)
+      .join('+'),
+  );
+};
 
  export const getHash = (state: RootState) => state.router.location.hash;
 
@@ -79,11 +77,9 @@ export const getCustomInfo = (state: RootState) => (
   state.customization.addPrice
 );
 
-export const getCurrentPrice = (state: RootState) => (
-  (
-    state.customization.currentPrice
-      + state.customization.addPrice
-          .reduce((accum: number, current: addPrice) => (
-            accum + current.price)
-          , 0))
+export const getCurrentPrice = (state: RootState) =>
+  state.customization.currentPrice +
+  state.customization.addPrice.reduce(
+    (accum: number, current: addPrice) => accum + current.price,
+    0,
   );

@@ -37,6 +37,8 @@ const mapDispatchToProps = (
   showBasket: () => dispatch(showBasket()),
 });
 
-const connectedHeader = connect(mapStateToProps, mapDispatchToProps)(Header);
+export const connector = connect(mapStateToProps, mapDispatchToProps);
+
+const connectedHeader = connector(Header);
 
 export { connectedHeader as Header };
