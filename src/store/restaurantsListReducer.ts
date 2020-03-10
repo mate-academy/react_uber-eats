@@ -1,15 +1,16 @@
-import {SET_RESTAURANTS_LIST, Actions, IRestaurantsList} from '../types';
+import { SET_RESTAURANTS_LIST, Actions, IRestaurantsList } from "../types";
 
 const restaurantsListReducer = (
   state: IRestaurantsList[] = [],
-  action: Actions
+  action: Actions,
 ) => {
   switch (action.type) {
     case SET_RESTAURANTS_LIST:
       return action.restaurantsList;
 
-    default: return state;
+    default:
+      return state;
   }
-}
+};
 
 export default restaurantsListReducer;

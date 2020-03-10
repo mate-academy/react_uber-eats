@@ -1,14 +1,14 @@
-import { connect } from 'react-redux';
-import RestaurantsListPage from './RestaurantsListPage';
+import { connect } from "react-redux";
+import RestaurantsListPage from "./RestaurantsListPage";
 import {
   getRestaurantsList,
   getIsLoading,
   getLocation,
-  getHash
-} from '../../store/selectors';
-import { loadRestaurantsList } from '../../store/thunks';
-import { ThunkDispatch } from 'redux-thunk';
-import { RootState, Actions } from '../../types';
+  getHash,
+} from "../../store/selectors";
+import { loadRestaurantsList } from "../../store/thunks";
+import { ThunkDispatch } from "redux-thunk";
+import { RootState, Actions } from "../../types";
 
 const mapStateToProps = (state: RootState) => ({
   restaurantsList: getRestaurantsList(state),
@@ -18,7 +18,8 @@ const mapStateToProps = (state: RootState) => ({
 });
 
 const mapDispatchToProps = (
-  dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
+  dispatch: ThunkDispatch<RootState, unknown, Actions>,
+) => ({
   loadRestaurantsList: (value: string) => dispatch(loadRestaurantsList(value)),
 });
 

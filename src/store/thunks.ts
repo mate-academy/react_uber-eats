@@ -1,9 +1,17 @@
-import {getRestaurantData,
+import {
+  getRestaurantData,
   getMenuItemData,
   getRestaurantsData,
-  getLocationData
-} from '../Api';
-import { Thunks, addPrice, IRestaurant, locationList, IMenuItemState, basket } from '../types';
+  getLocationData,
+} from "../Api";
+import {
+  Thunks,
+  addPrice,
+  IRestaurant,
+  locationList,
+  IMenuItemState,
+  basket,
+} from "../types";
 import {
   addPriceToggle,
   addPriceCheckbox,
@@ -26,15 +34,15 @@ import {
   setHasWarning,
   setBasketItemCount,
   setUtensils,
-} from './actions';
+} from "./actions";
 
 export const loadRestaurantsList = (
-  location: string
-  ): Thunks => async(dispatch) => {
+  location: string,
+): Thunks => async dispatch => {
   dispatch(startLoading());
 
   const locationList = await getLocationData();
-  const defaultLocation: locationList & string = locationList.data.locations[0]
+  const defaultLocation: locationList & string = locationList.data.locations[0];
 
   dispatch(setLocation(location || defaultLocation));
   dispatch(setLocationList(locationList.data));
@@ -45,14 +53,12 @@ export const loadRestaurantsList = (
   dispatch(stopLoading());
 };
 
-export const loadMenuItem = (
-  itemUuid: string
-  ): Thunks => async(dispatch) => {
+export const loadMenuItem = (itemUuid: string): Thunks => async dispatch => {
   dispatch(startLoading());
   let menuItem = await getMenuItemData(itemUuid);
   const menuItemData: IMenuItemState = menuItem.data;
 
-  if(menuItem === 'error') {
+  if (menuItem === "error") {
     dispatch(setHasError(true));
     dispatch(stopLoading());
   } else {
@@ -62,11 +68,10 @@ export const loadMenuItem = (
         ...menuItemData,
         customizationsList: menuItem.data.customizationsList.map(
           (custom: any, i: number, customList: addPrice[]) => {
-            if(
-              i !== customList.indexOf(custom.title)
-            ||
+            if (
+              i !== customList.indexOf(custom.title) ||
               i !== customList.lastIndexOf(custom)
-              ) {
+            ) {
               return {
                 ...custom,
                 title: `${custom.title}-${i + 1}`,
@@ -74,13 +79,14 @@ export const loadMenuItem = (
                   return {
                     ...option,
                     title: `${option.title}-${i + 1}`,
-                  }
-                })
-              }
-          }
-          return custom
-        })
-      }
+                  };
+                }),
+              };
+            }
+            return custom;
+          },
+        ),
+      },
     };
     dispatch(setMenuItem(menuItemData));
     dispatch(setCurrentPrice(menuItem.data.price));
@@ -99,24 +105,22 @@ export const addItemToBasket = (
   customInfo: addPrice[],
   basket: basket[],
   restaurantLocation: string,
-  ): Thunks => async(dispatch) => {
-
-  const id = +new Date()
-  const item =
-    {
-      price: price,
-      count: customization,
-      restaurantTitle: restaurant.title,
-      restaurantUuid: restaurant.uuid,
-      itemTitle: title,
-      itemUuid: uuid,
-      customInfo,
-      id,
-      restaurantLocation,
-    }
-    if(hasWarning) {
-      dispatch(resetBasket());
-    }
+): Thunks => async dispatch => {
+  const id = +new Date();
+  const item = {
+    price: price,
+    count: customization,
+    restaurantTitle: restaurant.title,
+    restaurantUuid: restaurant.uuid,
+    itemTitle: title,
+    itemUuid: uuid,
+    customInfo,
+    id,
+    restaurantLocation,
+  };
+  if (hasWarning) {
+    dispatch(resetBasket());
+  }
   dispatch(addItemInBasket(item));
   dispatch(setHasWarning(false));
 };
@@ -127,51 +131,52 @@ export const editItemInBasket = (
   restaurant: IRestaurant,
   customization: number,
   price: number,
-  customInfo: addPrice[]
-  ): Thunks => async(dispatch) => {
-  const item =
-    {
-      price: price,
-      count: customization,
-      restaurantTitle: restaurant.title,
-      restaurantUuid: restaurant.uuid,
-      itemTitle: title,
-      itemUuid: uuid,
-      customInfo,
-    }
-    dispatch(editItem(item));
+  customInfo: addPrice[],
+): Thunks => async dispatch => {
+  const item = {
+    price: price,
+    count: customization,
+    restaurantTitle: restaurant.title,
+    restaurantUuid: restaurant.uuid,
+    itemTitle: title,
+    itemUuid: uuid,
+    customInfo,
+  };
+  dispatch(editItem(item));
 };
 
 export const requestUtensils = (
-  basketItemId: number
-  ): Thunks => async(dispatch) => {
+  basketItemId: number,
+): Thunks => async dispatch => {
   dispatch(setBasketItemId(basketItemId));
   dispatch(setUtensils(basketItemId));
 };
 
 export const increaseItem = (
-  basketItemId: number
-  ): Thunks => async(dispatch) => {
+  basketItemId: number,
+): Thunks => async dispatch => {
   dispatch(setBasketItemId(basketItemId));
   dispatch(increaseCounterBasket(basketItemId));
 };
 export const decreaseItem = (
-  basketItemId: number, count: number
-  ): Thunks => async(dispatch) => {
-  if(count > 1) {
+  basketItemId: number,
+  count: number,
+): Thunks => async dispatch => {
+  if (count > 1) {
     dispatch(setBasketItemId(basketItemId));
     dispatch(decreaseCounterBasket(basketItemId));
   }
 };
 
 export const countBasketItems = (
-  basketItemCout: string, basketItemId: number
-  ): Thunks => async(dispatch) => {
-    dispatch(setBasketItemId(basketItemId));
-    dispatch(setBasketItemCount(basketItemCout, basketItemId));
+  basketItemCout: string,
+  basketItemId: number,
+): Thunks => async dispatch => {
+  dispatch(setBasketItemId(basketItemId));
+  dispatch(setBasketItemCount(basketItemCout, basketItemId));
 };
 
-export const loadRestaurant = (uuid: string): Thunks => async(dispatch) => {
+export const loadRestaurant = (uuid: string): Thunks => async dispatch => {
   dispatch(startLoading());
   const restaurant = await getRestaurantData(uuid);
 
@@ -186,12 +191,12 @@ export const setCustomPrice = (
   type: string,
   customItem: string,
   uuid: string,
-  ): Thunks => async(dispatch) => {
-  if (type === 'radio') {
-    dispatch(addPriceToggle({price, subtitle, customItem}));
-  };
+): Thunks => async dispatch => {
+  if (type === "radio") {
+    dispatch(addPriceToggle({ price, subtitle, customItem }));
+  }
 
-  if (type === 'checkbox') {
-    dispatch(addPriceCheckbox({price, subtitle, customItem}));
-  };
+  if (type === "checkbox") {
+    dispatch(addPriceCheckbox({ price, subtitle, customItem }));
+  }
 };

@@ -1,14 +1,14 @@
-import { connect } from 'react-redux';
-import Header from './Header';
-import { ThunkDispatch } from 'redux-thunk';
+import { connect } from "react-redux";
+import Header from "./Header";
+import { ThunkDispatch } from "redux-thunk";
 import {
   getIsSearchVisible,
   getIsDeliveryVisible,
   getLocation,
   getBasket,
   getIsBasketShown,
-  getTotalCount
-} from '../../store/selectors';
+  getTotalCount,
+} from "../../store/selectors";
 import {
   setTime,
   setSearch,
@@ -16,8 +16,8 @@ import {
   toggleSearch,
   closeMobile,
   showBasket,
-} from '../../store/actions';
-import { RootState, Actions } from '../../types';
+} from "../../store/actions";
+import { RootState, Actions } from "../../types";
 
 const mapStateToProps = (state: RootState) => ({
   isSearchVisible: getIsSearchVisible(state),
@@ -28,7 +28,8 @@ const mapStateToProps = (state: RootState) => ({
   totalCount: getTotalCount(state),
 });
 const mapDispatchToProps = (
-  dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({
+  dispatch: ThunkDispatch<RootState, unknown, Actions>,
+) => ({
   setTime: (value: string | number) => dispatch(setTime(value)),
   setSearch: (value: string) => dispatch(setSearch(value)),
   toggleSearch: () => dispatch(toggleSearch()),

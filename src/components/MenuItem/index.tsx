@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
-import MenuItem from './MenuItem';
+import { connect } from "react-redux";
+import { ThunkDispatch } from "redux-thunk";
+import MenuItem from "./MenuItem";
 import {
   getMenuItem,
   getIsLoading,
@@ -14,14 +14,14 @@ import {
   getBasketItemId,
   getHasWarning,
   getLocation,
-} from '../../store/selectors';
+} from "../../store/selectors";
 import {
   loadMenuItem,
   setCustomPrice,
   addItemToBasket,
   editItemInBasket,
-} from '../../store/thunks';
-import { RootState, Actions, addPrice, IRestaurant, basket } from '../../types';
+} from "../../store/thunks";
+import { RootState, Actions, addPrice, IRestaurant, basket } from "../../types";
 import {
   increaseCounter,
   decreaseCounter,
@@ -32,7 +32,7 @@ import {
   removeItem,
   setHasWarning,
   resetaddPrice,
-} from '../../store/actions';
+} from "../../store/actions";
 
 const mapStateToProps = (state: RootState) => ({
   menuItem: getMenuItem(state),
@@ -109,7 +109,7 @@ const mapDispatchToProps = (
         price,
         customInfo,
         basket,
-        restaurantLocation
+        restaurantLocation,
       ),
     ),
 });

@@ -87,24 +87,26 @@ import {
   SET_UTENSILS,
   basket,
   IMenuItemState,
-} from '../types';
+} from "../types";
 
 export const setUtensils = (basketItemId: number): setUtensilsAction => ({
-type: SET_UTENSILS,
-basketItemId,
+  type: SET_UTENSILS,
+  basketItemId,
 });
 
 export const setRestaurantNotes = (
-  restaurantNotes: string, basketItemId: number
-  ): setRestaurantNotesAction => ({
+  restaurantNotes: string,
+  basketItemId: number,
+): setRestaurantNotesAction => ({
   type: SET_RESTAURANT_NOTES,
   restaurantNotes,
   basketItemId,
 });
 
 export const setBasketItemCount = (
-  basketItemCount: string, basketItemId: number
-  ): setBasketItemCountAction => ({
+  basketItemCount: string,
+  basketItemId: number,
+): setBasketItemCountAction => ({
   type: SET_BASKET_ITEM_COUNT,
   basketItemCount,
   basketItemId,
@@ -115,8 +117,8 @@ export const resetaddPrice = (): resetaddPriceAction => ({
 });
 
 export const setBasketItemId = (
-  basketItemId: number
-  ): setBasketItemIdAction => ({
+  basketItemId: number,
+): setBasketItemIdAction => ({
   type: SET_BASKET_ITEM_ID,
   basketItemId,
 });
@@ -128,7 +130,7 @@ export const setIsEditable = (isEditable: boolean): setIsEditableAction => ({
 
 export const editItem = (basket: any): editItemAction => ({
   type: EDIT_ITEM,
-  basket
+  basket,
 });
 
 export const removeItem = (basketItemId: number): removeItemAction => ({
@@ -137,22 +139,22 @@ export const removeItem = (basketItemId: number): removeItemAction => ({
 });
 
 export const setBasketItemTitle = (
-  basketItemTitle: string
-  ): setBasketItemTitleAction => ({
+  basketItemTitle: string,
+): setBasketItemTitleAction => ({
   type: SET_BASKET_ITEM_TITLE,
   basketItemTitle,
 });
 
 export const increaseCounterBasket = (
-  basketItemId: number
-  ): increaseCounterBasketAction => ({
+  basketItemId: number,
+): increaseCounterBasketAction => ({
   type: INCREASE_COUNTER_BASKET,
   basketItemId,
 });
 
 export const decreaseCounterBasket = (
-  basketItemId: number
-  ): decreaseCounterBasketAction => ({
+  basketItemId: number,
+): decreaseCounterBasketAction => ({
   type: DECREASE_COUNTER_BASKET,
   basketItemId,
 });
@@ -186,27 +188,27 @@ export const setLocation = (location: string): setLocationAction => ({
 });
 
 export const setLocationList = (
-  locationList: locationList
-  ): setLocationListAction => ({
+  locationList: locationList,
+): setLocationListAction => ({
   type: SET_LOCATION_LIST,
   locationList,
 });
 
-export const setCurrentUuid  = (currentUuid: string): setUuidAction => ({
+export const setCurrentUuid = (currentUuid: string): setUuidAction => ({
   type: SET_UUID,
   currentUuid,
 });
 
 export const setRestaurantsList = (
-  restaurantsList: IRestaurantsList
-  ): setRestaurantsListAction => ({
+  restaurantsList: IRestaurantsList,
+): setRestaurantsListAction => ({
   type: SET_RESTAURANTS_LIST,
   restaurantsList,
 });
 
 export const setRestaurant = (
-  restaurant: IRestaurant
-  ): setRestaurantAction => ({
+  restaurant: IRestaurant,
+): setRestaurantAction => ({
   type: SET_RESTAURANT,
   restaurant,
 });
@@ -216,22 +218,15 @@ export const setMenuItem = (menuItem: IMenuItemState): setMenuItemAction => ({
   menuItem,
 });
 
+export const startLoading = (): startLoadingAction => ({ type: START_LOADING });
 
-export const startLoading = (): startLoadingAction => (
-  { type: START_LOADING }
-);
+export const stopLoading = (): stopLoadingAction => ({ type: STOP_LOADING });
 
-export const stopLoading = (): stopLoadingAction => (
-  { type: STOP_LOADING }
-);
+export const toggleSearch = (): toggleSearchAction => ({ type: TOGGLE_SEARCH });
 
-export const toggleSearch = (): toggleSearchAction => (
-  { type: TOGGLE_SEARCH }
-);
-
-export const toggleDelivery = (): toggleDeliveryAction => (
-  { type: TOGGLE_DELIVERY }
-);
+export const toggleDelivery = (): toggleDeliveryAction => ({
+  type: TOGGLE_DELIVERY,
+});
 
 export const setAddress = (address: string): setAddressACtion => ({
   type: SET_ADDRESS,
@@ -255,19 +250,17 @@ export const setHasWarning = (hasWarning: boolean): setHasWarningAction => ({
   hasWarning,
 });
 
-export const setHasError = (hasError: boolean):setHasErrorAction  => ({
+export const setHasError = (hasError: boolean): setHasErrorAction => ({
   type: SET_HAS_ERROR,
-  hasError
+  hasError,
 });
 
 export const setCurrentPrice = (
-  currentPrice: number
-  ): setCurrentPriceAction => (
-  {
+  currentPrice: number,
+): setCurrentPriceAction => ({
   type: SET_CURRENT_PRICE,
   currentPrice,
-  }
-);
+});
 
 export const resetBasket = (): resetBasketAction => ({
   type: RESET_BASKET,
@@ -279,9 +272,10 @@ export const addPriceToggle = (addPrice: addPrice): addPriceToggleAction => ({
 });
 
 export const addPriceCheckbox = (
-  addPrice: addPrice): addPriceCheckboxAction => ({
-    type: ADD_PRICE_CHECKBOX,
-    addPrice,
+  addPrice: addPrice,
+): addPriceCheckboxAction => ({
+  type: ADD_PRICE_CHECKBOX,
+  addPrice,
 });
 
 export const setIsChecked = (isChecked: boolean): setIscheckedAction => ({
@@ -289,7 +283,7 @@ export const setIsChecked = (isChecked: boolean): setIscheckedAction => ({
   isChecked,
 });
 
-export const setSubtitle = (subtitle: string) : setSubtitleAction => ({
+export const setSubtitle = (subtitle: string): setSubtitleAction => ({
   type: SET_SUBTITLE,
   subtitle,
 });

@@ -1,6 +1,6 @@
-import React from 'react';
-import './Footer.scss';
-import Select from '../Select/Select';
+import React from "react";
+import "./Footer.scss";
+import Select from "../Select/Select";
 
 const Footer = () => (
   <footer className="footer">
@@ -17,26 +17,18 @@ const Footer = () => (
               name="language"
               options={[
                 {
-                  value: 'en', label: 'Engilsh',
+                  value: "en",
+                  label: "Engilsh",
                 },
               ]}
               iconUrl="./images/world.svg"
             />
           </div>
           <div className="footer__mobile-apps">
-            <a
-              href="/"
-              className="footer__mobile-app"
-            >
-              <img
-                src="./images/apple.png"
-                alt="app store"
-              />
+            <a href="/" className="footer__mobile-app">
+              <img src="./images/apple.png" alt="app store" />
             </a>
-            <a
-              href="/"
-              className="footer__mobile-app"
-            >
+            <a href="/" className="footer__mobile-app">
               <img
                 src="./images/google.png"
                 alt="google play"
@@ -72,19 +64,17 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer__bottom-part">
-        <p className="footer__copyright">
-        © 2019 Uber Technologies Inc.
-        </p>
+        <p className="footer__copyright">© 2019 Uber Technologies Inc.</p>
         <div className="footer__misc">
           <div className="footer__bottom-links links">
             <a href="/" className="links__link">
-            Privacy policy
+              Privacy policy
             </a>
             <a href="/" className="links__link">
-            Terms to use
+              Terms to use
             </a>
             <a href="/" className="links__link">
-            Pricing
+              Pricing
             </a>
           </div>
           <div className="footer__social social">

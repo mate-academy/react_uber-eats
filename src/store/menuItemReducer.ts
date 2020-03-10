@@ -1,10 +1,11 @@
-import { SET_MENU_ITEM, Actions, IMenuItemState } from '../types';
+import { SET_MENU_ITEM, Actions, IMenuItemState } from "../types";
 
-const menuItemReducer = ( state = <IMenuItemState>{}, action: Actions) => {
+const menuItemReducer = (state = <IMenuItemState>{}, action: Actions) => {
   switch (action.type) {
     case SET_MENU_ITEM:
       return action.menuItem;
-    default: return state;
+    default:
+      return state;
   }
 };
 

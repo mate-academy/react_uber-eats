@@ -7,12 +7,12 @@ import {
   CLOSE_MOBILE,
   IInputState,
   Actions,
-} from '../types';
+} from "../types";
 
 const initialState: IInputState = {
-  address: '',
-  time: '',
-  search: '',
+  address: "",
+  time: "",
+  search: "",
   isMobileSearchVisible: false,
   isMobileDeliveryVisible: false,
 };
@@ -52,7 +52,8 @@ const InputReducer = (state = initialState, action: Actions) => {
         isMobileDeliveryVisible: false,
         isMobileSearchVisible: false,
       };
-    default: return state;
+    default:
+      return state;
   }
 };
 

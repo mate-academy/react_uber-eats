@@ -1,11 +1,11 @@
-import { SET_UUID, Actions } from '../types';
+import { SET_UUID, Actions } from "../types";
 
-
-const uuidReducer = (state = '', action: Actions) => {
+const uuidReducer = (state = "", action: Actions) => {
   switch (action.type) {
     case SET_UUID:
       return action.currentUuid;
-    default: return state;
+    default:
+      return state;
   }
 };
 
