@@ -98,9 +98,17 @@ const RestaurantPage = ({
                             </div>
                             <div className="goods__good-description--price">
                               <span>
-                                {restaurant.entitiesMap[itemUuid].price}
+                                {(parseFloat(restaurant.entitiesMap[itemUuid].price) / 100).toFixed(2)}
                               </span>
-                              <span>{restaurant.priceBucket[0]}</span>
+                              {restaurant.location.country === 'GB'
+                              ? (
+                                <span>
+                                  &pound;
+                                </span>
+                                ):(
+                                  <span>{restaurant.priceBucket[0]}</span>
+                                )
+                              }
                             </div>
                           </div>
                           {restaurant.entitiesMap[itemUuid].imageUrl

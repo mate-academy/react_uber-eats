@@ -98,6 +98,7 @@ export const addItemToBasket = (
   price: number,
   customInfo: addPrice[],
   basket: basket[],
+  restaurantLocation: string,
   ): Thunks => async(dispatch) => {
 
   const id = +new Date()
@@ -111,6 +112,7 @@ export const addItemToBasket = (
       itemUuid: uuid,
       customInfo,
       id,
+      restaurantLocation,
     }
     if(hasWarning) {
       dispatch(resetBasket());

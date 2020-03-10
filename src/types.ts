@@ -201,6 +201,7 @@ export type basket = {
   id: number;
   restaurantNotes?: string;
   utensils?: boolean;
+  restaurantLocation?: string,
 };
 
 export type addPriceToggleAction = {

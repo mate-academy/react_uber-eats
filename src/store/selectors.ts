@@ -30,11 +30,11 @@ export const getTotalCount = (state: RootState) => {
 };
 
 export const getFullPrice = (state: RootState) => {
-  return eval(
+  return (eval(
     state.basket.basket
       .map((item: basket) => item.price * item.count)
       .join('+'),
-  );
+  ) / 100);
 };
 
  export const getHash = (state: RootState) => state.router.location.hash;

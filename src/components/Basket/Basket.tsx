@@ -4,6 +4,7 @@ import { basket, addPrice } from '../../types';
 import './Basket.scss'
 import { ConnectedProps } from 'react-redux';
 import { connector } from '.';
+import { locationLondon } from '../../helpers';
 
 const Basket = ({
   basket,
@@ -16,6 +17,7 @@ const Basket = ({
   setBasketItemId,
   setRestaurantNotes,
   setUtensils,
+  locationId,
  }: ConnectedProps<typeof connector> & any) => {
 
   const modalRef = useRef<HTMLHeadingElement>(null);
@@ -106,9 +108,9 @@ const Basket = ({
                     </div>
                   </div>
                   <div className="basket-item__item--price">
-                      {`UAH `}
-                      {item.price * item.count}
-                    </div>
+                  {basket.some((elem: basket)=> elem.restaurantLocation === 'GB' ) ? `GBP ` : `UAH ` }
+                      {(item.price * item.count / 100).toFixed(2)}
+                  </div>
                 </div>
                 <div
                 className="basket__items--item"
@@ -156,7 +158,8 @@ const Basket = ({
               Total Price
             </span>
             <span className="submit-block__submit--price">
-              {fullPrice && fullPrice.toFixed(2)} UAH
+              {fullPrice && fullPrice.toFixed(2)}
+              {basket.some((elem: basket)=> elem.restaurantLocation === 'GB' ) ? ` GBP` : ` UAH` }
             </span>
           </div>
         </div>

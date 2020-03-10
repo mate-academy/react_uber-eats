@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Basket from './Basket';
 import { ThunkDispatch } from 'redux-thunk';
-import { getBasket, getFullPrice, getIsUtensilsRequested } from '../../store/selectors'
+import { getBasket, getFullPrice, getIsUtensilsRequested, getLocation } from '../../store/selectors'
 import { RootState, Actions } from '../../types';
 import { increaseItem, decreaseItem, requestUtensils } from '../../store/thunks';
 import { hideBasket,
@@ -15,6 +15,7 @@ const mapStateToProps = (state: RootState) => ({
   basket: getBasket(state),
   fullPrice: getFullPrice(state),
   isUtensilsRequested: getIsUtensilsRequested(state),
+  locationId: getLocation(state),
 });
 
 const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, unknown, Actions>) => ({

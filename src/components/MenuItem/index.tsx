@@ -13,6 +13,7 @@ import {
   getBasket,
   getBasketItemId,
   getHasWarning,
+  getLocation,
 } from '../../store/selectors';
 import {
   loadMenuItem,
@@ -96,6 +97,7 @@ const mapDispatchToProps = (
     price: number,
     customInfo: addPrice[],
     basket: basket[],
+    restaurantLocation: string,
   ) =>
     dispatch(
       addItemToBasket(
@@ -107,6 +109,7 @@ const mapDispatchToProps = (
         price,
         customInfo,
         basket,
+        restaurantLocation
       ),
     ),
 });

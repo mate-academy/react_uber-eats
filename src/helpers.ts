@@ -2,6 +2,8 @@ import { debounce, Handler, HistoryReplacer } from './types';
 import { setAddress, setTime, setSearch } from './store/actions';
 import { History } from 'history';
 
+export const locationLondon = "d2c8cd41-8970-416c-b05b-a4418db2b2d3";
+
 export const debounceWrapper: debounce = (f, delay) => {
   let timer: any;
 

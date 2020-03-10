@@ -36,7 +36,6 @@ const MenuItem = (
   const history = useHistory();
   const modalRef = useRef<HTMLHeadingElement>(null!);
   const radioRef = useRef<any>(null!);
-
   const addToBasket = (
     hasWarning: boolean,
     uuid: string,
@@ -61,7 +60,9 @@ const MenuItem = (
         counter,
         price,
         customInfo,
-        basket);
+        basket,
+        restaurant.location.country
+        );
       history.replace(historyReplacer(history));
     }
   };
@@ -158,6 +159,7 @@ const MenuItem = (
     <span>
       Create a new order to add items from
       <span className='error-message--name'> {restaurant.title}</span>
+      ?
     </span>
           <button
             className='error-message--button'
@@ -261,8 +263,8 @@ const MenuItem = (
                       {option.title.split('-')[0]}
                     </span>
                     <span className="customization-block__items--price">
-                      +{restaurant.priceBucket[0]}
-                      {option.price}
+                    +{restaurant.location.country === 'GB' ? (<>&pound;</>) : restaurant.priceBucket[0]}
+                      {(parseFloat(option.price) / 100).toFixed(2)}
                     </span>
                   </div>
                 </label>
@@ -304,8 +306,8 @@ const MenuItem = (
                       {option.title.split('-')[0]}
                     </span>
                     <span className="customization-block__items--price">
-                      +{restaurant.priceBucket}
-                      {option.price}
+                      +{restaurant.location.country === 'GB' ? (<>&pound;</>) : restaurant.priceBucket[0]}
+                      {(parseFloat(option.price) / 100).toFixed(2)}
                     </span>
                   </div>
                 </label>
@@ -362,7 +364,9 @@ const MenuItem = (
             Add {counter} to order
           </span>
           <span className="submit-block__submit--price">
-            {(fullPrice * counter).toFixed(2)} UAH
+            {(fullPrice * counter / 100).toFixed(2)}
+            {restaurant.location.country === 'GB' ? ` GBP` : ` UAH`}
+
           </span>
         </div>
           : <div
@@ -380,7 +384,8 @@ const MenuItem = (
                 Add {counter} to order
               </span>
               <span className="submit-block__submit--price">
-                {(fullPrice * counter).toFixed(2)} UAH
+                {(fullPrice * counter / 100).toFixed(2)}
+                {restaurant.location.country === 'GB' ? ` GBP` : ` UAH`}
               </span>
             </div>
           }

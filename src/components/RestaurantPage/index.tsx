@@ -14,7 +14,6 @@ const mapStateToProps = (state: RootState) => ({
   restaurant: getRestaurant(state),
   isLoading: getIsLoading(state),
   currentUuid: getCurrentUuid(state),
-  locationId: getLocation(state),
 });
 
 const mapDispatchToProps = (
