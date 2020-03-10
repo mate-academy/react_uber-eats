@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.restaurants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+  gap: 40px 20px;
+}
+
+@media (max-width: $breakpointTabletM) {
+  .restaurants-list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}

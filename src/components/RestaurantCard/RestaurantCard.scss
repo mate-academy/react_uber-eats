@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.restaurant-card {
+
+  height: $cardHeight;
+  width: 100%;
+  cursor: pointer;
+
+  &__img {
+    height: $cardHeight * 0.7;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 12px 0 4px;
+  }
+
+  &__categories {
+    margin-bottom: 4px;
+    font-size: $smallFontSize;
+    color: $c-font-lightgray;
+  }
+
+  &__eta {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: $smallFontSize;
+    background-color: $c-lightGrayBackground ;
+  }
+}
+
+@media (max-width: $breakpointMobile) {
+  .restaurant-card {
+    height: $cardHeightMobile;
+
+    &__img {
+      height: $cardHeightMobile * 0.7;
+    }
+  }
+}

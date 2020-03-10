@@ -1,0 +1,7 @@
+@import "./styles/variables.scss";
+
+.page {
+  padding-top: $styleDistance;
+  min-height: 100vh;
+  margin-bottom: $styleDistance;
+}

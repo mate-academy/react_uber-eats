@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.select {
+  position: relative;
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background-color: $c-darkGrayBackground;
+    border: 1px solid $c-gray;
+    border-radius: 0;
+    padding: 10px $styleDistance;
+    color: $c-white;
+    cursor: pointer;
+  }
+  &__icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  &__arrow {
+    margin-left: -28px;
+  }
+}

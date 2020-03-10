@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+button,
+a,
+select,
+input {
+  font-family: Roboto, sans-serif;
+  font-size: $normalFontSize;
+  line-height: 1.5;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none ;
+}
+
+.content {
+  max-width: 1520px;
+  padding: 0 34px;
+  margin: 0 auto;
+}
+
+@media (max-width: $breakpointMobile) {
+  .content {
+    padding: 0 20px;
+  }
+}
