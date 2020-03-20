@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '',
+  extends: '@mate-academy/eslint-config-react',
 };
