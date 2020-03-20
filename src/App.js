@@ -1,9 +1,11 @@
 import React from 'react';
-import './App.css';
+import './styles/App.scss';
+import HomePage from './HomePage';
+
 
 const App = () => (
   <div className="App">
-    <h1>React Uber eats</h1>
+    <HomePage />
   </div>
 );
 

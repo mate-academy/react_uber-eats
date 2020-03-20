@@ -1,0 +1,83 @@
+.filter {
+  margin-right: 24px;
+}
+.filter__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.filter__input {
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  width: 60px;
+  transition: width 0.3s ease;
+}
+.filter__input::placeholder {
+  color: #000;
+}
+.filter__input:focus {
+  width: 200px;
+  cursor: initial;
+}
+.filter__close {
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #e0e0e0;
+}
+.filter__btn {
+  padding: 3px;
+  line-height: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: none;
+}
+.filter__form {
+  border-bottom: 2px solid transparent;
+}
+.filter__form:focus-within {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid;
+  display: block;
+}
+.filter__form:focus-within .filter__close {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__input:focus {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .filter {
+    margin: 0 0 20px;
+  }
+  .filter__form {
+    border-bottom: 1px solid transparent;
+  }
+  .filter__form:focus-within {
+    border-bottom: 1px solid;
+  }
+  .filter__input:focus {
+    width: 100%;
+  }
+  .filter__input::placeholder {
+    color: #626262;
+  }
+  .filter__close {
+    padding: 0;
+  }
+  .filter__search {
+    width: calc(100% - 34px);
+  }
+}
+
+/*# sourceMappingURL=filter.css.map */

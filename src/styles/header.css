@@ -1,0 +1,152 @@
+header {
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 999999;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+  min-height: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header * {
+  box-sizing: border-box;
+}
+.header__svg {
+  width: 20px;
+  margin-right: 6px;
+}
+.header__svg--time {
+  position: absolute;
+  left: 12px;
+  margin: auto;
+}
+.header__logo {
+  width: 120px;
+  display: flex;
+  flex-grow: 1;
+}
+.header__location-and-time {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+}
+.header__location {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.header__location-city-choice {
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  width: 130px;
+  transition: width 0.3s ease;
+}
+.header__location-city-choice:focus {
+  width: 250px;
+  cursor: initial;
+}
+.header__location-city-clear {
+  position: absolute;
+  right: 30px;
+}
+.header__location-city-close {
+  position: absolute;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #e0e0e0;
+}
+.header__form {
+  border-bottom: 2px solid transparent;
+}
+.header__form:focus-within {
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid;
+  display: block;
+}
+.header__form:focus-within .header__location-city-close, .header__form:focus-within .header__location-city-clear {
+  display: block;
+}
+.header__btn {
+  padding: 3px;
+  line-height: 0;
+  background: transparent;
+  font-size: 16px;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: none;
+}
+.header__time {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.header__time-deliver {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header__time-deliver-choice {
+  height: 42px;
+  padding: 8px 16px 8px 50px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: #fff;
+  font-size: 16px;
+  -webkit-appearance: none;
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+}
+.header__time-deliver-choice:focus, .header__time-deliver-choice:hover {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid;
+}
+.header__time-deliver:focus {
+  background-color: #f5f5f5;
+}
+.header__action {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.header__action-registration {
+  color: #000;
+  font-size: 16px;
+  height: 40px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__location-and-time {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    min-height: 60px;
+  }
+
+  .header__action-filter {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
