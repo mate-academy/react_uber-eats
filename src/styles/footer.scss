@@ -105,17 +105,17 @@ footer a {
 
   }
 
-  &__applications {
+  &__app {
     display: flex;
+    position: relative;
 
     &-link {
-      height: 40px;
-      margin-right: 20px;
+      height: 50px;
+      width: 150px;
+    }
 
-      &:hover {
-        box-shadow: 0 0 16px rgba(255, 235, 235, 0.66);
-        opacity: 0.8;
-      }
+    &-icon {
+      height: 40px;
     }
   }
 
@@ -146,11 +146,17 @@ footer a {
     width: 96px;
 
     &-link {
-      width: $width-svg;
+      width: $size-svg-link;
+      height: $size-svg-link;
 
       &:hover {
         opacity: 0.8;
       }
+    }
+
+    .social-icon {
+      width: $size-svg;
+      height: $size-svg;
     }
 
     &--mobile {
@@ -179,6 +185,29 @@ footer a {
   }
 }
 
+.animation {
+  &-link {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-icon {
+    transition: all 0.5s;
+    transform: scale(1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    object-fit: cover;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .footer {
     padding-top: 40px;
@@ -188,7 +217,7 @@ footer a {
       margin-bottom: $margin-footer;
     }
 
-    &__applications {
+    &__app {
       flex-direction: column;
 
       &-link {

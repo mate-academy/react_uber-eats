@@ -7,7 +7,7 @@ class Footer extends React.Component {
     scrollStepInPx: 150,
     delayInMs: 16.66,
     scroll: false,
-  }
+  };
 
   componentDidMount() {
     window.addEventListener('scroll', this.handlerScroll);
@@ -73,26 +73,28 @@ class Footer extends React.Component {
                     />
                   </div>
                 </label>
-                <button type="submit" className="visible-hidden" />
+                <button type="submit" className="visible-hidden"/>
               </form>
 
-              <div className="footer__applications">
+              <div className="footer__app">
                 <a
+                  className="footer__app-link animation-link"
                   href="https://apps.apple.com/app/id1058959277?my_keyword=ubereatscom_iOScta_footer&ref_id=1753866267.1566203921&sub1=01dc0a8d-63f7-4c76-a543-cca7242a9735"
                 >
                   <img
                     src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/d0558d91063038236b60e3ef71fdc1fd.svg"
                     alt="appStore"
-                    className="footer__applications-link"
+                    className="footer__app-icon animation-icon"
                   />
                 </a>
                 <a
+                  className="footer__app-link animation-link"
                   href="https://play.google.com/store/apps/details?id=com.ubercab.eats&my_keyword=ubereatscom_androidcta_footer&ref_id=1753866267.1566203921&sub1=01dc0a8d-63f7-4c76-a543-cca7242a9735"
                 >
                   <img
                     src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/cf6dad406fdfdcd290fd40de9008ae50.png"
                     alt="googlePlay"
-                    className="footer__applications-link"
+                    className="footer__app-icon animation-icon"
                   />
                 </a>
               </div>
@@ -155,22 +157,25 @@ class Footer extends React.Component {
             © 2019 Uber Technologies Inc.
               </span>
               <div className="footer__social footer__social--mobile">
-                <a href="#!" className="footer__social-link footer__link">
+                <a href="#!" className="footer__social-link footer__link animation-link">
                   <img
                     src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/ccfc8856107f17665b7c82df307d35ee.svg"
                     alt="facebook"
+                    className="animation-icon social-icon"
                   />
                 </a>
-                <a href="#!" className="footer__social-link footer__link">
+                <a href="#!" className="footer__social-link footer__link animation-link">
                   <img
                     src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/db07894edae0a7dde4b9f7477489eb3f.svg"
                     alt="twitter"
+                    className="animation-icon social-icon"
                   />
                 </a>
-                <a href="#!" className="footer__social-link footer__link">
+                <a href="#!" className="footer__social-link footer__link animation-link">
                   <img
                     src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/8c75d9d92274d2f1df48a02f35a7b1f0.svg"
                     alt="instagram"
+                    className="animation-icon social-icon"
                   />
                 </a>
               </div>

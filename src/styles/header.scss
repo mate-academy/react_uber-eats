@@ -125,7 +125,7 @@ header {
 
       &-choice {
         height: 42px;
-        padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $width-svg + $margin-svg;
+        padding: $padding-top-bottom $padding-left-right $padding-top-bottom $padding-left-right + $size-svg + $margin-svg;
         border: 0;
         border-bottom: 2px solid transparent;
         background: #fff;
