@@ -1,3 +1,4 @@
+https://nastyakpi1995.github.io/react_uber-eats/
 # React Uber Eats
 
 ## Task

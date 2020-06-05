@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.n__header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 23% 37% 41%;
+  grid-template-rows: 80px;
+  align-items: center;
+  justify-content: space-between;
+  &__container__deliverry {
+    display: flex;
+    align-items: center;
+  }
+  &__container__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  &__sign-delivery {
+    width: 50px;
+  }
+  &__form {
+    display: block;
+    margin-right: 20px;
+    padding: 0 10px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  &__img {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+  }
+  &__destination_input {
+    background-image: url('./img/search.svg');
+    background-repeat: no-repeat;
+    background-position: left 14px top 6px;
+    padding: 0 0 0 50px;
+  }
+  &__input {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 50px;
+    transition: width 0.3s ease;
+    cursor: pointer;
+  }
+  &__search_img {
+    margin-right: 13px;
+  }
+  &__local_img {
+    margin-right: 13px;
+  }
+
+  &__form:focus-within {
+    background: rgba(0,0,0,0.05);
+    border-bottom: 2px solid gray;
+  }
+  &__button {
+    padding: 3px;
+    line-height: 0;
+    background: transparent;
+    font-size: 16px;
+    color: #757575;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: none;
+  }
+  &__clear:focus,
+  &__clear:hover,
+  &__close:focus svg path,
+  &__close:hover svg path {
+    fill: #424242;
+    color: #424242;
+    transition: all 0.3s ease;
+  }
+
+
+  &__input:focus {
+    width: 200px;
+    cursor: initial;
+  }
+
+  &__bulkhead {
+    width: 1px;
+    height: 60%;
+    background: #757575;
+    margin: 0 5px;
+    display: none;
+  }
+  &__form:focus-within .n__header__clear, .n__header__form:focus-within .n__header__close,
+  &__form:focus-within .n__header__bulkhead{
+    display: block;
+  }
+  &__adress-delivery__bts {
+    display: flex;
+    align-items: center;
+  }
+  &__adress-delivery__bts img {
+    margin: 0 13px;
+  }
+  &__adress-delivery__bts:focus {
+    outline: none;
+  }
+  &__adress-delivery__bts:hover{
+    color: #5fb709;
+    cursor: pointer;
+  }
+  &__adress-delivery_option {
+    height: 260px;
+  }
+  &__adress-delivery__destination-details {
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+    background-size: 22px;
+    appearance: none;
+    border: none;
+    height: 30px;
+    background-image: url(./img/time.svg);
+    background-repeat: no-repeat;
+    background-position: left 16px top 4px;
+    padding-left: 46px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  &__sign-delivery__button {
+    text-decoration: none;
+    color: #757575;
+  }
+  &__search__container {
+    display: none;
+  }
+  // end important thinks
+}
+
+@media (min-width: 1020px) {
+  .n__header {
+    &__input:focus {
+      width: 70px;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .n__header {
+    grid-template-rows: 80px 100px;
+    grid-template-columns: 23% 78%;
+    padding: 0 30px;
+    &__container__deliverry {
+      grid-row: 2;
+    }
+    &__input:focus {
+      width: 170px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .n__header {
+    // width: 1200px;
+    &__input:focus {
+      width: 170px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .n__header {
+    grid-template-rows: 80px 79px 81px;
+    &__container__deliverry {
+      grid-row: 3;
+    }
+    &__search__container {
+      display: flex;
+      align-items: center;
+      grid-row: 2;
+      height: 78px;
+      border-bottom: 1px solid;
+      width: 328px;
+    }
+    &__dest_btn {
+      appearance: none;
+      border: none;
+    }
+    &__form__hiden {
+      display: none;
+    }
+    &__dest_btn {
+      border: none;
+      background: none;
+    }
+    &__dest_style {
+      border: none;
+      height: 30px;
+      width: 1000px;
+    }
+    &__input:focus {
+      width: 20px;
+    }
+  }
+}
