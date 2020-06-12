@@ -1,0 +1,14 @@
+.RestaurantsList {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px 20px;
+
+
+  &__NotFound {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

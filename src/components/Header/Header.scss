@@ -1,0 +1,197 @@
+@import "../../styles/utils/vars.scss";
+
+.Header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__Logo {
+    width: 9rem;
+    height: 1.5rem;
+
+    @media screen and (max-width: $screen-extra-small) {
+      width: 5rem;
+    }
+  }
+
+  &__Info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__Inputs {
+    display: flex;
+    margin-left: 20%;
+
+    @media screen and (max-width: $screen-max) {
+      display: none;
+    }
+  }
+
+  &__SearchContainer {
+    @media screen and (max-width: $screen-max) {
+      display: none;
+    }
+
+    &--open {
+      display: flex;
+      position: relative;
+
+      @media screen and (max-width: $screen-extra-small) {
+        width: 17.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+
+    &--close {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      outline: 0;
+      font-size: 1rem;
+      top: 50%;
+      right: 1px;
+      transform: translate(0, -50%);
+      background-color: #fff;
+      z-index: 5;
+
+      @media screen and (min-width: $screen-max) {
+        display: none;
+      }
+
+      @media screen and (max-width: $screen-extra-small) {
+        right: 14.2rem;
+      }
+    }
+  }
+
+  &__SearchMark {
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &--visible {
+      @media screen and (max-width: $screen-max) {
+        display: block;
+        position: relative;
+      }
+    }
+  }
+
+  &__SearchImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__SignAndSearch {
+    display: flex;
+    position: relative;
+    @media screen and (max-width: $screen-max) {
+      align-items: center;
+    }
+  }
+
+  &__Sign {
+    margin-left: 44px;
+    display: block;
+    line-height: 46px;
+  }
+
+  &__SignLink {
+    font-size: 1rem;
+    color: #1f1f1f;
+    text-decoration: none;
+  }
+
+  &__Menu {
+    display: none;
+
+    &--open {
+      display: flex;
+      margin: 2.5rem 0;
+    }
+
+    @media screen and (min-width: $screen-max) {
+      display: none;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      flex-direction: column;
+    }
+  }
+}
+
+.menu__span,
+.menu__span::before,
+.menu__span::after {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  transition-duration: 0.3s;
+}
+
+.menu-hamb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+  top: 50%;
+  right: 3.3rem;
+  transform: translate(0, -50%);
+
+  @media screen and (min-width: $screen-max) {
+    display: none;
+  }
+}
+
+.menu__span {
+  top: 50%;
+  right: 25%;
+  display: block;
+  transform: translate(0, -50%);
+  z-index: 1;
+  &::after {
+    content: "";
+    top: 8px;
+  }
+
+  &::before {
+    content: "";
+    top: -8px;
+  }
+}
+
+.nav__toggler {
+  display: none;
+}
+
+.nav__toggler:checked ~ .menu-hamb > .menu__span,
+.nav__toggler:checked ~ .menu-hamb > .menu__span::after,
+.nav__toggler:checked ~ .menu-hamb > .menu__span::before {
+  background-color: #000;
+}
+
+.nav__toggler:checked ~ .menu-hamb > .menu__span {
+  transform: rotate(45deg);
+}
+
+.nav__toggler:checked ~ .menu-hamb > .menu__span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.nav__toggler:checked ~ .menu-hamb > .menu__span::before {
+  transform: rotate(0);
+  top: 0;
+}

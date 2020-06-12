@@ -1,0 +1,63 @@
+@import '../../styles/utils/vars.scss';
+
+.Page {
+  @media screen and (max-width: $screen-max) {
+    margin-top: 10rem !important;
+  }
+
+  &__HeroContainer {
+    position: relative;
+    height: 23rem;
+    width: 100vw;
+
+    @media screen and (max-width: 1500px) {
+      width: calc(100vw - 50px);
+    }
+
+    @media screen and (max-width: $screen-max) {
+      width: calc(100vw - 17px);
+      margin-bottom: 7rem;
+    }
+  }
+
+  &__HeroImageDown {
+    position: absolute;
+    width: calc(100vw - 17px);
+    height: 23rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__HeroInfo {
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    width: 30rem;
+    height: 10rem;
+    background-color: #fff;
+
+    @media screen and (max-width: $screen-max) {
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      width: 17rem;
+      transform: translate(-50%, 70%);
+    }
+  }
+
+  &__HeroTitle {
+    font-size: 26px;
+    color: #1d1d1d;
+    margin-top: calc(24px - 1rem);
+  }
+
+  &__Badge {
+    margin-top: 1rem;
+  }
+}

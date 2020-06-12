@@ -1,0 +1,41 @@
+@import './utils/vars.scss';
+
+html,
+body,
+ul,
+h1,
+h2,
+h3,
+li,
+nav,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: #000;
+}
+
+.container {
+  max-width: $screen-full-hd;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media screen and (max-width: $screen-max) {
+    max-width: $container-width-screen-small;
+  }
+
+  @media screen and (max-width: $screen-extra-small) {
+    max-width: $container-width-screen-extra-small;
+  }
+}
+
+.Home {
+  min-height: calc(100vh - 5rem);
+}

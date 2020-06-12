@@ -1,0 +1,40 @@
+@import '../../styles/utils/vars.scss';
+
+.NavLinks {
+  &__Main {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__List {
+    margin-top: 1rem;
+  }
+
+  &__Item {
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+
+  &__Link {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.4s;
+
+    &:hover,
+    &:focus {
+      color: rgb(170, 170, 170);
+    }
+  }
+
+  &__LinksContainer {
+    margin-right: 8.5rem;
+
+    @media screen and (max-width: $screen-extra-small) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

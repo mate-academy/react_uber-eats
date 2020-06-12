@@ -1,0 +1,87 @@
+@import "../../styles/utils/vars.scss";
+
+.HeaderInput {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 12px 1rem;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.4s;
+  z-index: 5;
+  &:hover {
+    box-shadow: 2px -1px 22px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  &__Inp {
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #1d1d1d;
+
+    @media screen and (max-width: $screen-extra-small) {
+      width: 100%;
+    }
+  }
+
+  &__Img {
+    width: 12px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translate(0, -50%);
+  }
+
+  &__Time {
+    max-width: 10rem;
+    margin-left: 20px;
+
+    @media screen and (max-width: $screen-max) {
+      margin-left: 0;
+      margin-right: 12px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "When";
+        top: -1rem;
+        left: 0;
+        transform: translate(0, -50%);
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__Place {
+    @media screen and (max-width: $screen-max) {
+      margin-left: 0;
+      margin-right: 12px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "To";
+        top: -1rem;
+        left: 0;
+        transform: translate(0, -50%);
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      margin: 2rem 0 0;
+    }
+  }
+
+  &__Search {
+    @media screen and (max-width: $screen-extra-small) {
+      background-color: #fff;
+
+      max-width: 150px;
+      left: -94px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.MenuSection {
+  margin-top: 2.5rem;
+
+  &__Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px 20px;
+  }
+
+  &__Title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #010101;
+  }
+}

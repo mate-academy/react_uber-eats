@@ -1,0 +1,66 @@
+.Select {
+  width: 10rem;
+  max-height: 40px;
+
+  &__Container {
+    display: flex;
+    padding: 0.8rem 10px;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    max-height: 40px;
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__World {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  &__Arrow {
+    width: 0.7rem;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    transition: all 0.3s;
+
+    &--up {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__Item {
+    height: 2.5rem;
+    width: 100%;
+    background-color: #b4b4b4;
+    list-style-type: none;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #d6d4d4;
+    }
+  }
+
+  &__List {
+    opacity: 0;
+    transition: all 0.4s;
+    transform: translateY(-3rem), scale(-0.5, 1);
+    visibility: hidden;
+  }
+
+  &__Open {
+    visibility: visible;
+    transform: translateY(0.5rem);
+    opacity: 1;
+    z-index: 1;
+  }
+}

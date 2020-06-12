@@ -1,0 +1,35 @@
+.RestPageCard {
+  width: 100%;
+  height: 10rem;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
+  &__Title {
+    padding-top: 1rem;
+    max-width: 10rem;
+    font-size: 16px;
+    color: #010101;
+  }
+
+  &__Image {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__Info {
+    position: relative;
+  }
+
+  &__Price {
+    font-size: 1rem;
+    color: #010101;
+    position: absolute;
+    bottom: 1rem;
+  }
+}
