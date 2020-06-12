@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 import "./RestPage.scss";
 import { useRouteMatch } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,10 +25,9 @@ export const RestPage = () => {
   const info = useSelector(getRestInfo);
   const rest = useSelector(getRestaurants);
   const [restCard, setRestCard] = useState<RestaurantCard>();
-
-  const loadRestaurantInfo = () => {
+  const loadRestaurantInfo = useCallback(() => {
     dispatch(fetchRestaurantInfo(match.params.id));
-  };
+  }, [dispatch, match.params.id]);
 
   useEffect(() => {
     if (info) {
@@ -36,7 +35,7 @@ export const RestPage = () => {
     } else if (!rest.length) {
       dispatch(fetchRestaurantData());
     }
-  }, [info]);
+  }, [info, dispatch, rest]);
 
   useEffect(() => {
     loadRestaurantInfo();
@@ -45,7 +44,7 @@ export const RestPage = () => {
       dispatch(deleteRestaurantInfo());
       dispatch(errorMessage(""));
     };
-  }, []);
+  }, [dispatch, loadRestaurantInfo]);
 
   const getBadge = useMemo(() => {
     if (info && info.ratingBadge && info.ratingBadge.text) {
@@ -82,7 +81,7 @@ export const RestPage = () => {
         <>
           <img
             src={info ? info.heroImageUrls[heroNumber].url : ""}
-            alt="Hero image"
+            alt="Hero background"
             className="Page__HeroImageDown"
           />
           <div className="container Page__HeroContainer">
@@ -99,7 +98,13 @@ export const RestPage = () => {
 
           <div className="Page container Home">
             {sections.length > 0 &&
-              sections.map((section) => <MenuSection item={section} key={section.uuid} currency={info.categories[0]} />)}
+              sections.map((section) => (
+                <MenuSection
+                  item={section}
+                  key={section.uuid}
+                  currency={info.categories[0]}
+                />
+              ))}
           </div>
         </>
       )}

@@ -20,7 +20,7 @@ export const Header = () => {
     if (query !== search) {
       setSearch(query);
     }
-  }, [query]);
+  }, [query, search]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     switch (e.target.name) {
@@ -139,7 +139,7 @@ export const Header = () => {
               <span className="menu__span"></span>
             </label>
             <p className="Header__Sign">
-              <a href="#" className="Header__SignLink">
+              <a href="./#" className="Header__SignLink">
                 Sign in
               </a>
             </p>

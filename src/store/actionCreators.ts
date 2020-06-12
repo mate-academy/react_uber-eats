@@ -5,6 +5,9 @@ import {
   SET_MESSAGE,
   DELETE_RESTAURANT_INFO,
   SET_RESTAURANT_INFO,
+  OPEN_POPUP,
+  CLOSE_POPUP,
+  SET_POPUP_ID,
 } from "./actions";
 
 export const setRestaurants = (restaurants: RestaurantCard[]) => ({
@@ -34,4 +37,21 @@ export const setRestaurantInfo = (info: RestaurantInfo) => ({
 
 export const deleteRestaurantInfo = () => ({
   type: DELETE_RESTAURANT_INFO,
+});
+
+export const openPopup = () => ({
+  type: OPEN_POPUP,
+});
+
+export const closePopup = () => ({
+  type: CLOSE_POPUP,
+});
+
+export const setPopupId = (id: string) => ({
+  type: SET_POPUP_ID,
+  id,
+});
+
+export const deletePopupId = () => ({
+  type: CLOSE_POPUP,
 });

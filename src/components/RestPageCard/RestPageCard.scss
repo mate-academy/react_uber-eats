@@ -7,6 +7,12 @@
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.4s;
+  &:hover {
+    box-shadow: 2px -1px 22px -8px rgba(0, 0, 0, 0.75);
+
+  }
 
   &__Title {
     padding-top: 1rem;

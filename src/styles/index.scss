@@ -14,12 +14,12 @@ p {
   padding: 0;
 }
 
-
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
   color: #000;
+  position: relative;
 }
 
 .container {
@@ -38,4 +38,31 @@ html {
 
 .Home {
   min-height: calc(100vh - 5rem);
+}
+
+.Background__Dark {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  opacity: 0.3;
+}
+
+.Layout {
+  position: absolute;
+  z-index: -1;
+  background-color: rgba($color: #000, $alpha: 0);
+  transition: all 0.5s;
+
+  &--shadow {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgba($color: #000, $alpha: 0.3);
+  }
 }

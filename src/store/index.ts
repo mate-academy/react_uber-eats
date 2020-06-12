@@ -1,3 +1,4 @@
+import { Dispatch } from "react";
 import {
   setRestaurants,
   errorMessage,
@@ -15,7 +16,8 @@ import loadingReducer from "./loading";
 import loadedReducer from "./loaded";
 import errorMessageReducer from "./errorMessage";
 import restaurantInfoReducer from "./restaurantInfo";
-import { Dispatch } from "react";
+import popupStatusReducer from "./popup";
+import popupCurrentId from './popupCurrent';
 
 const rootReducer = combineReducers({
   restaurants: restaurantsReducer,
@@ -23,6 +25,8 @@ const rootReducer = combineReducers({
   isLoaded: loadedReducer,
   errorMessage: errorMessageReducer,
   restaurantInfo: restaurantInfoReducer,
+  popupStatus: popupStatusReducer,
+  popupId: popupCurrentId,
 });
 
 export const fetchRestaurantData = () => {

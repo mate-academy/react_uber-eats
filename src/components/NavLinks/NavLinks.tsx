@@ -12,7 +12,7 @@ export const NavLinks: React.FC<Props> = ({ info }) => {
       <ul className="NavLinks__List">
         {info[1].map((link) => (
           <li className="NavLinks__Item" key={link}>
-            <a href="#" className="NavLinks__Link">
+            <a href="./#" className="NavLinks__Link">
               {link}
             </a>
           </li>

@@ -62,17 +62,17 @@ export const Footer = () => {
               <nav className="Footer__Navigation">
                 <ul className="Footer__Nav">
                   <li className="Footer__Item">
-                    <a href="#" className="Footer__NavLink">
+                    <a href="./#" className="Footer__NavLink">
                       Privacy policy
                     </a>
                   </li>
                   <li className="Footer__Item">
-                    <a href="#" className="Footer__NavLink">
+                    <a href="./#" className="Footer__NavLink">
                       Terms of use
                     </a>
                   </li>
                   <li className="Footer__Item">
-                    <a href="#" className="Footer__NavLink">
+                    <a href="./#" className="Footer__NavLink">
                       Pricing
                     </a>
                   </li>

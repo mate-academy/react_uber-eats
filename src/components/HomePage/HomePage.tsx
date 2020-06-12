@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import "./HomePage.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRestaurantData } from "../../store";
@@ -17,13 +17,13 @@ export const HomePage = () => {
   const isLoaded = useSelector(getLoaded);
   const errorMessage = useSelector(getErrorMessage);
 
-  const loadRestaurantsData = () => {
+  const loadRestaurantsData = useCallback(() => {
     dispatch(fetchRestaurantData());
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     loadRestaurantsData();
-  }, []);
+  }, [loadRestaurantsData]);
 
   return (
     <>
