@@ -20,7 +20,7 @@ export const Header = () => {
     if (query !== search) {
       setSearch(query);
     }
-  }, [query, search]);
+  }, [query]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     switch (e.target.name) {

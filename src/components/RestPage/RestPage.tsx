@@ -1,20 +1,20 @@
-import React, { useEffect, useMemo, useState, useCallback } from "react";
-import "./RestPage.scss";
-import { useRouteMatch } from "react-router";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useRouteMatch } from "react-router";
+import { fetchRestaurantData, fetchRestaurantInfo } from "../../store";
 import { deleteRestaurantInfo, errorMessage } from "../../store/actionCreators";
-import { fetchRestaurantInfo, fetchRestaurantData } from "../../store";
 import {
-  getLoading,
-  getLoaded,
   getErrorMessage,
-  getRestInfo,
+  getLoaded,
+  getLoading,
   getRestaurants,
+  getRestInfo,
 } from "../../store/actionTypes";
 import { LoaderSpinner } from "../LoaderSpinner";
 import { LoadingError } from "../LoadingError";
-import { RestaurantCardInfo } from "../RestaurantCardInfo";
 import { MenuSection } from "../MenuSection";
+import { RestaurantCardInfo } from "../RestaurantCardInfo";
+import "./RestPage.scss";
 
 export const RestPage = () => {
   const match: Match = useRouteMatch();

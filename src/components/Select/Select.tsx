@@ -1,6 +1,6 @@
+import cn from "classnames";
 import React, { useState } from "react";
 import "./Select.scss";
-import cn from "classnames";
 
 interface Props {
   items: string[];

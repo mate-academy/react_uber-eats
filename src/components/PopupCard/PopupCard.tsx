@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
-import "./PopupCard.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { getPopupStatus, getPopupId } from "../../store/actionTypes";
-import { getMenuItems } from "../../helper/api";
 import cn from "classnames";
+import React, { useCallback, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getMenuItems } from "../../helper/api";
 import { closePopup, deletePopupId } from "../../store/actionCreators";
+import { getPopupId, getPopupStatus } from "../../store/actionTypes";
+import "./PopupCard.scss";
 
 export const PopupCard = () => {
   const dispatch = useDispatch();
