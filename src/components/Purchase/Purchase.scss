@@ -1,0 +1,17 @@
+.Purchase {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+
+  &__Link {
+    display: block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: rgb(139, 138, 138);
+    transition: all 0.5s;
+
+    &:hover {
+      color: rgb(73, 73, 73);
+    }
+  }
+}

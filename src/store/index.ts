@@ -18,6 +18,7 @@ import errorMessageReducer from "./errorMessage";
 import restaurantInfoReducer from "./restaurantInfo";
 import popupStatusReducer from "./popup";
 import popupCurrentId from './popupCurrent';
+import cartReducer from './cart';
 
 const rootReducer = combineReducers({
   restaurants: restaurantsReducer,
@@ -27,6 +28,7 @@ const rootReducer = combineReducers({
   restaurantInfo: restaurantInfoReducer,
   popupStatus: popupStatusReducer,
   popupId: popupCurrentId,
+  cartData: cartReducer,
 });
 
 export const fetchRestaurantData = () => {

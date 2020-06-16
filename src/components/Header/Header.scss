@@ -95,13 +95,10 @@
   &__SignAndSearch {
     display: flex;
     position: relative;
-    @media screen and (max-width: $screen-max) {
-      align-items: center;
-    }
+    align-items: center;
   }
 
   &__Sign {
-    margin-left: 44px;
     display: block;
     line-height: 46px;
   }
@@ -126,6 +123,23 @@
 
     @media screen and (max-width: $screen-extra-small) {
       flex-direction: column;
+    }
+  }
+
+  &__Cart {
+    margin: 0 1rem;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+
+    @media screen and (max-width: $screen-max) {
+      margin: 0 3rem 0 1rem;
+      padding: 0;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
 }

@@ -8,4 +8,7 @@ export const OPEN_POPUP = "OPEN_POPUP";
 export const CLOSE_POPUP = "CLOSE_POPUP";
 export const SET_POPUP_ID = "SET_POPUP_ID";
 export const DELETE_POPUP_ID = "DELETE_POPUP_ID";
-
+export const CHANGE_GOOD_COUNT = "CHANGE_GOOD_COUNT";
+export const DEL_FROM_CART = "DEL_FROM_CART";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const CLEAR_CART = "CLEAR_CART";

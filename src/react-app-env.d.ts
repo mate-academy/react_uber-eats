@@ -86,3 +86,8 @@ interface Section {
   title: string;
   uuid: string;
 }
+
+interface Cart {
+  id: string;
+  count: number;
+}

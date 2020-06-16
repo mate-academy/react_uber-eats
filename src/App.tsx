@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Route, Switch } from "react-router";
 import { Footer } from "./components/Footer";
@@ -7,10 +7,17 @@ import { Header } from "./components/Header";
 import { HomePage } from "./components/HomePage";
 import { PopupCard } from "./components/PopupCard";
 import { RestPage } from "./components/RestPage";
-import { getPopupStatus } from "./store/actionTypes";
+import { getPopupStatus, getCartData } from "./store/actionTypes";
+import { Cart } from "./components/Cart";
+import { Purchase } from "./components/Purchase";
 
 const App = () => {
   const popupStatus = useSelector(getPopupStatus);
+  const cart = useSelector(getCartData);
+
+  useEffect(() => {
+    localStorage.setItem('cartItem', JSON.stringify([...cart]));
+  }, [cart]);
 
   return (
     <>
@@ -24,6 +31,8 @@ const App = () => {
       />
       <Switch>
         <Route path="/" exact component={HomePage} />
+        <Route path="/cart" exact component={Cart} />
+        <Route path="/purchase" exact component={Purchase} />
         <Route path="/:id" exact component={RestPage} />
       </Switch>
       <Footer />

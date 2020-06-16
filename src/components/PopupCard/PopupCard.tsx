@@ -2,8 +2,17 @@ import cn from "classnames";
 import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMenuItems } from "../../helper/api";
-import { closePopup, deletePopupId } from "../../store/actionCreators";
-import { getPopupId, getPopupStatus } from "../../store/actionTypes";
+import {
+  closePopup,
+  deletePopupId,
+  addToCart,
+  delFromCart,
+} from "../../store/actionCreators";
+import {
+  getPopupId,
+  getPopupStatus,
+  getCartData,
+} from "../../store/actionTypes";
 import "./PopupCard.scss";
 
 export const PopupCard = () => {
@@ -11,11 +20,14 @@ export const PopupCard = () => {
 
   const popupStatus = useSelector(getPopupStatus);
   const popupId = useSelector(getPopupId);
+  const cart = useSelector(getCartData);
 
   const [currentPopupInfo, setCurrentPopupInfo] = useState<MenuItem>();
 
   const maxLengthOfDescription = 140;
-
+  const isAlreadyInCart = cart.some(
+    (good) => currentPopupInfo?.uuid === good.id
+  );
   const getItemFromServer = useCallback(async () => {
     const getItem = await getMenuItems(popupId as string);
     setCurrentPopupInfo(getItem);
@@ -35,6 +47,15 @@ export const PopupCard = () => {
   const handleClosePopupWindow = () => {
     dispatch(closePopup());
     dispatch(deletePopupId());
+  };
+
+  const addGoodToCart = () => {
+    dispatch(addToCart(currentPopupInfo?.uuid as string));
+  };
+
+  const removeGoodFromCart = () => {
+    dispatch(delFromCart(currentPopupInfo?.uuid as string));
+    handleClosePopupWindow();
   };
 
   return (
@@ -58,9 +79,18 @@ export const PopupCard = () => {
       <button
         type="button"
         className="PopupCard__AddToCart"
-        onClick={handleClosePopupWindow}
+        onClick={addGoodToCart}
+        disabled={isAlreadyInCart}
       >
         Add to cart
+      </button>
+      <button
+        type="button"
+        className="PopupCard__RemoveFromCart"
+        onClick={removeGoodFromCart}
+        disabled={!isAlreadyInCart}
+      >
+        Remove from cart
       </button>
     </div>
   );

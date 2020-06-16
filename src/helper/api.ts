@@ -29,3 +29,13 @@ export const getMenuItems = async (id: string): Promise<MenuItem> => {
 
   return json.data;
 };
+
+export const getCartItems = async (data: Cart[]): Promise<MenuItem[]> => {
+  const result: MenuItem[] = [];
+
+  for (const key of data) {
+    result.push(await getMenuItems(key.id));
+  }
+
+  return result;
+};

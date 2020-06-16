@@ -8,6 +8,10 @@ import {
   OPEN_POPUP,
   CLOSE_POPUP,
   SET_POPUP_ID,
+  CHANGE_GOOD_COUNT,
+  ADD_TO_CART,
+  DEL_FROM_CART,
+  CLEAR_CART,
 } from "./actions";
 
 export const setRestaurants = (restaurants: RestaurantCard[]) => ({
@@ -55,3 +59,23 @@ export const setPopupId = (id: string) => ({
 export const deletePopupId = () => ({
   type: CLOSE_POPUP,
 });
+
+export const addToCart = (id: string) => ({
+  type: ADD_TO_CART,
+  id,
+});
+
+export const delFromCart = (id: string) => ({
+  type: DEL_FROM_CART,
+  id,
+});
+
+export const changeGoodCount = (id: string, path: number) => ({
+  type: CHANGE_GOOD_COUNT,
+  id,
+  path,
+});
+
+export const clearAllCart = () => ({
+  type: CLEAR_CART,
+})

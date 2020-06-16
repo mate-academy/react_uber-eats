@@ -53,7 +53,7 @@ export const Header = () => {
       searchParams.set("query", query);
     }
     history.push({
-      pathname: '/',
+      pathname: "/",
       search: searchParams.toString(),
     });
   };
@@ -138,6 +138,13 @@ export const Header = () => {
             <label htmlFor="toggle" className="menu-hamb">
               <span className="menu__span"></span>
             </label>
+            <Link to="/cart">
+              <img
+                src="images/header/cart.svg"
+                alt="cart"
+                className="Header__Cart"
+              />
+            </Link>
             <p className="Header__Sign">
               <a href="./#" className="Header__SignLink">
                 Sign in
