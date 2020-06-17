@@ -1,4 +1,4 @@
-@import '../../styles/utils/vars.scss';
+@import "../../styles/utils/vars.scss";
 
 .PopupCard {
   position: fixed;
@@ -14,15 +14,14 @@
   overflow: hidden;
 
   @media screen and (max-width: $screen-max) {
-   width: 30rem;
-   height: 18rem;
+    width: 30rem;
+    height: 18rem;
   }
 
   @media screen and (max-width: $screen-extra-small) {
     width: 17.5rem;
-    height: 23rem;
-   }
-
+    height: 25rem;
+  }
 
   &--open {
     opacity: 1;
@@ -36,7 +35,7 @@
 
     @media screen and (max-width: $screen-max) {
       height: 8rem;
-     }
+    }
   }
 
   &__Title {
@@ -60,7 +59,7 @@
     transform: translateX(-50%);
     border: 0;
     outline: 0;
-    background-color: #247A00;
+    background-color: #247a00;
     color: #fff;
     font-size: 1rem;
     height: 2rem;
@@ -69,6 +68,14 @@
     border-radius: 2rem;
     cursor: pointer;
     transition: all 0.3s;
+
+    @media screen and (max-width: $screen-max) {
+      width: 7rem;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      font-size: 0.7rem;
+    }
 
     &:hover {
       background-color: #1d5306;
@@ -80,9 +87,20 @@
     }
   }
 
+  &__AddToCart {
+    @media screen and (max-width: $screen-extra-small) {
+      left: 75%;
+    }
+  }
+
   &__RemoveFromCart {
     background-color: #920404;
     left: 80%;
+
+    @media screen and (max-width: $screen-extra-small) {
+      left: 75%;
+      bottom: 3.5rem;
+    }
 
     &:hover {
       background-color: #520505;
@@ -128,5 +146,11 @@
     &::before {
       transform: translate(-50%, -50%) rotate(45deg);
     }
+  }
+
+  &__ChangeCountContainer {
+    position: absolute;
+    bottom: 1.3rem;
+    left: 2rem;
   }
 }

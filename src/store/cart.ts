@@ -31,14 +31,19 @@ if (localStorage.getItem("cartItem")) {
 
 const reducer = (cart = initState, actions: GeneralType) => {
   switch (actions.type) {
-    case ADD_TO_CART:
-      return [
-        ...cart,
-        {
-          id: actions.id,
-          count: 1,
-        },
-      ];
+    case ADD_TO_CART: {
+      if (actions.id) {
+        return [
+          ...cart,
+          {
+            id: actions.id,
+            count: 1,
+          },
+        ];
+      } else {
+        return cart;
+      }
+    }
 
     case DEL_FROM_CART:
       return cart.filter((good) => good.id !== actions.id);

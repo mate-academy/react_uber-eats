@@ -14,6 +14,7 @@ import {
   getCartData,
 } from "../../store/actionTypes";
 import "./PopupCard.scss";
+import { CartChangeCount } from "../CartChangeCount";
 
 export const PopupCard = () => {
   const dispatch = useDispatch();
@@ -76,6 +77,12 @@ export const PopupCard = () => {
         {currentPopupInfo?.title || "Title was wrong"}
       </p>
       <p className="PopupCard__Descr">{description}</p>
+      {isAlreadyInCart && (
+        <div className="PopupCard__ChangeCountContainer">
+          <CartChangeCount id={currentPopupInfo?.uuid as string} />
+
+        </div>
+      )}
       <button
         type="button"
         className="PopupCard__AddToCart"

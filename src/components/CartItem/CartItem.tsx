@@ -2,6 +2,7 @@ import React from "react";
 import "./CartItem.scss";
 import { useDispatch } from "react-redux";
 import { delFromCart } from "../../store/actionCreators";
+import { CartChangeCount } from "../CartChangeCount";
 
 interface Props {
   item: MenuItem;
@@ -23,6 +24,7 @@ export const CartItem: React.FC<Props> = ({ item }) => {
       />
       <div className="CartItem__Info">
         <p>{item.title}</p>
+        <CartChangeCount id={item.uuid} />
         <p className="CartItem__Price">price: {item.price}₴</p>
       </div>
       <img

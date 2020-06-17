@@ -4,6 +4,8 @@ import { HeaderInput } from "../HeaderInput";
 import cn from "classnames";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import { debounce } from "../../helper/debounce";
+import { useSelector } from "react-redux";
+import { getCartData } from "../../store/actionTypes";
 
 export const Header = () => {
   const [place, setPlace] = useState("");
@@ -11,6 +13,7 @@ export const Header = () => {
   const [search, setSearch] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const cartLengeth = useSelector(getCartData).length;
   const location = useLocation();
   const history = useHistory();
   const searchParams = new URLSearchParams(location.search);
@@ -138,7 +141,10 @@ export const Header = () => {
             <label htmlFor="toggle" className="menu-hamb">
               <span className="menu__span"></span>
             </label>
-            <Link to="/cart">
+            <Link to="/cart" className="Header__CartContainer">
+              {cartLengeth > 0 && (
+                <span className="Header__CartIcon">{cartLengeth}</span>
+              )}
               <img
                 src="images/header/cart.svg"
                 alt="cart"

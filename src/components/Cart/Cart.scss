@@ -2,19 +2,20 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
   &__Container {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   &__Total {
     padding: 1rem;
     margin-top: 3rem;
-    border: 0.5rem solid #ccc;
+    border: 0.2rem solid #ccc;
     border-radius: 20px;
-    width: 17rem;
+    width: 15rem;
     height: 8rem;
     position: relative;
   }
@@ -66,7 +67,7 @@
     text-decoration: none;
     color: rgb(105, 103, 103);
     transition: all 0.3s;
-  
+
     &:hover {
       color: rgb(63, 62, 62);
     }
