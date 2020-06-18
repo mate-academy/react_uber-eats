@@ -1,0 +1,205 @@
+@import "../../styles/utils/vars.scss";
+
+.Footer {
+  height: 30rem;
+  background: #262626;
+  padding: 63px 0 0;
+  margin-top: 2.5rem;
+  @media screen and (max-width: $screen-extra-small) {
+    height: 51rem;
+
+  }
+
+  &__ContainerInfo {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: $screen-extra-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__Container {
+    @media screen and (max-width: $screen-max) {
+      position: relative;
+    }
+  }
+
+  &__MainInfo {
+    display: flex;
+
+    @media screen and (max-width: $screen-max) {
+      flex-direction: column;
+    }
+  }
+
+  &__Logo {
+    display: block;
+    margin-right: 2.5rem;
+
+    @media screen and (max-width: $screen-max) {
+      margin: 0 0 2.5rem 0;
+      width: 150px;
+    }
+  }
+
+  &__StoreLink {
+    margin-top: 3.5rem;
+
+    @media screen and (max-width: $screen-max) {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__StoreApp {
+    @media screen and (max-width: $screen-extra-small) {
+      width: 124px;
+    }
+  }
+
+  &__AppStore {
+    margin-right: 20px;
+
+    @media screen and (max-width: $screen-max) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__MainLinks {
+    display: flex;
+    padding-right: 9.8rem;
+
+    @media screen and (max-width: $screen-max) {
+      padding: 3.5rem 0 0 0;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      flex-direction: column;
+      padding-top: 2.5rem;
+    }
+  }
+
+  &__BreakLine {
+    width: 100%;
+    height: 1px;
+    background-color: #c4c4c4;
+    margin: 2.5rem auto;
+
+    @media screen and (max-width: $screen-extra-small) {
+      display: none;
+    }
+  }
+
+  &__Copyright {
+    font-size: 14px;
+    color: #fff;
+
+    @media screen and (max-width: $screen-extra-small) {
+      margin: 1.5rem 0;
+      font-size: 11px;
+    }
+  }
+
+  &__SecondInfo-Links {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $screen-extra-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__Nav {
+    display: flex;
+    list-style-type: none;
+    padding-right: 17.5rem;
+
+    @media screen and (max-width: $screen-max) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__Item {
+    margin-left: 3rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      margin-left: 0;
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__NavLink {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: rgb(170, 170, 170);
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      font-size: 13px;
+    }
+  }
+
+  &__Navigation {
+    @media screen and (max-width: $screen-extra-small) {
+      padding: 3rem 0 1rem;
+    }
+  }
+
+  &__NavSocial {
+    display: flex;
+    margin-top: 3.5rem;
+    list-style-type: none;
+
+    @media screen and (max-width: $screen-max) {
+      margin-top: 2rem;
+      position: absolute;
+      left: 0;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      bottom: 9rem;
+    }
+  }
+
+  &__SocialItem {
+    margin-right: 1.5rem;
+    opacity: 0.6;
+    transition: all 0.4s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__SocialIcon {
+    @media screen and (max-width: $screen-max) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

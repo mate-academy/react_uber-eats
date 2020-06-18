@@ -1,0 +1,167 @@
+@import "../../styles/utils/vars.scss";
+
+.PopupCard {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40rem;
+  height: 25rem;
+  background-color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  opacity: 0;
+  transform: 0.5s;
+  overflow: hidden;
+
+  @media screen and (max-width: $screen-max) {
+    width: 30rem;
+    height: 18rem;
+  }
+
+  @media screen and (max-width: $screen-extra-small) {
+    width: 17.5rem;
+    height: 25rem;
+  }
+
+  &--open {
+    opacity: 1;
+  }
+
+  &__Img {
+    display: none;
+
+    &--visible {
+      display: block;
+      width: 100%;
+      height: 15rem;
+      object-fit: contain;
+      object-position: center;
+
+      @media screen and (max-width: $screen-max) {
+        height: 8rem;
+      }
+    }
+  }
+
+  &__Title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__Descr {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  &__Spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+  }
+
+  &__AddToCart,
+  &__RemoveFromCart {
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    outline: 0;
+    background-color: #247a00;
+    color: #fff;
+    font-size: 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    width: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @media screen and (max-width: $screen-max) {
+      width: 7rem;
+    }
+
+    @media screen and (max-width: $screen-extra-small) {
+      font-size: 0.7rem;
+    }
+
+    &:hover {
+      background-color: #1d5306;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__AddToCart {
+    @media screen and (max-width: $screen-extra-small) {
+      left: 75%;
+    }
+  }
+
+  &__RemoveFromCart {
+    background-color: #920404;
+    left: 80%;
+
+    @media screen and (max-width: $screen-extra-small) {
+      left: 75%;
+    }
+
+    &:hover {
+      background-color: #520505;
+    }
+  }
+
+  &__CloseButton {
+    display: none;
+  }
+
+  &__Close {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(161, 161, 161);
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      width: 1rem;
+      height: 3px;
+      content: "";
+      background-color: black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 1rem;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &__ChangeCountContainer {
+    position: absolute;
+    bottom: 1.3rem;
+    left: 2rem;
+  }
+}

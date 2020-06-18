@@ -1,0 +1,27 @@
+.RestaurantCardInfo {
+  &__Title {
+    font-size: 1rem;
+    color: #1d1d1d;
+    margin-bottom: 12px;
+  }
+
+  &__Categories {
+    font-size: 14px;
+    color: #626262;
+    margin-bottom: 4px;
+  }
+
+  &__TimeContainer {
+    text-align: center;
+    background-color: #f5f5f5;
+    width: 5.5rem;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+
+  &__TimeText {
+    font-size: 14px;
+    color: #010101;
+  }
+}

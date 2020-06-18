@@ -1,0 +1,31 @@
+.HomePage {
+  &__Catch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__ErrorMessage {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+  }
+
+  &__ButtonDownloadAgain {
+    $color-dark: #010101;
+    width: 17rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border: 0;
+    outline: 0;
+    background-color: $color-dark;
+    color: #fff;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      border: 1px solid $color-dark;
+      color: $color-dark;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.CartItem {
+  width: 30rem;
+  border: 1px dashed #ccc;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  padding-left: 1rem;
+  margin-top: 2rem;
+
+  &__Image {
+    width: 50%;
+    height: 13rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__Info {
+    padding-top: 1rem;
+  }
+
+  &__Trash {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__Price {
+    font-weight: bold;
+    position: absolute;
+    bottom: 1rem;
+  }
+}
