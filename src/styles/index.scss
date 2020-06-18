@@ -1,4 +1,10 @@
-@import './utils/vars.scss';
+@import "./utils/vars.scss";
+
+*,
+::after,
+::before {
+  box-sizing: unset;
+}
 
 html,
 body,
@@ -9,13 +15,15 @@ h3,
 li,
 nav,
 ul,
-p {
+p,
+a {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
   color: #000;
@@ -37,7 +45,7 @@ html {
 }
 
 .Home {
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5rem - 30rem);
 }
 
 .Background__Dark {

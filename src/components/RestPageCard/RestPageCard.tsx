@@ -43,7 +43,7 @@ export const RestPageCard: React.FC<Props> = ({ uuid, currency }) => {
             <p className="RestPageCard__Price">{`${currency}${item?.price}`}</p>
             {isAlreadyInCart && (
               <img
-                src="images/addedToCart.svg"
+                src="images/check.svg"
                 alt="Markdown"
                 className="RestPageCard__AddedToCart"
               />

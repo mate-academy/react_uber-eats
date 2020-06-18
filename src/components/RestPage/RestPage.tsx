@@ -76,7 +76,11 @@ export const RestPage = () => {
 
   return (
     <>
-      {isLoading && <LoaderSpinner />}
+      {isLoading && (
+        <div className="Home">
+          <LoaderSpinner />
+        </div>
+      )}
       {isLoaded && !isLoading && info && restCard && (
         <>
           <img
@@ -96,7 +100,7 @@ export const RestPage = () => {
             </div>
           </div>
 
-          <div className="Page container Home">
+          <div className="Page container">
             {sections.length > 0 &&
               sections.map((section) => (
                 <MenuSection

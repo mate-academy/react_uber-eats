@@ -25,7 +25,7 @@ export const Footer = () => {
                   alt="Logo"
                   className="Footer__Logo"
                 />
-                <Select items={['Russian', 'Endlish', 'Ukrainian']} />
+                <Select items={['Russian', 'English', 'Ukrainian']} />
               </div>
               <div className="Footer__StoreLink">
                 <a href="https://apps.apple.com/us/app/uber-eats-order-food-delivery/id1058959277">

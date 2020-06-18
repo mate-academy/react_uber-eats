@@ -39,10 +39,10 @@
       position: relative;
 
       @media screen and (max-width: $screen-extra-small) {
-        width: 17.5rem;
         position: absolute;
         left: 50%;
         transform: translate(-50%);
+        width: 10rem;
       }
     }
 
@@ -67,7 +67,7 @@
       }
 
       @media screen and (max-width: $screen-extra-small) {
-        right: 14.2rem;
+        right: 8.7rem;
       }
     }
   }

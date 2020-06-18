@@ -1,11 +1,30 @@
 .RestaurantCard {
+  width: 100%;
+  height: 100%;
   &__Image {
+    display: none;
+  }
+
+  &__ImageVisible {
+    display: block;
     width: 100%;
     object-fit: cover;
     object-position: center;
+    max-height: 17rem;
+  }
+
+  &__Spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 17rem;
   }
 
   &__Link {
-    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

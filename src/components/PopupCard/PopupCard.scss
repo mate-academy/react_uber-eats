@@ -28,13 +28,18 @@
   }
 
   &__Img {
-    width: 100%;
-    height: 15rem;
-    object-fit: cover;
-    object-position: center;
+    display: none;
 
-    @media screen and (max-width: $screen-max) {
-      height: 8rem;
+    &--visible {
+      display: block;
+      width: 100%;
+      height: 15rem;
+      object-fit: contain;
+      object-position: center;
+
+      @media screen and (max-width: $screen-max) {
+        height: 8rem;
+      }
     }
   }
 
@@ -48,6 +53,14 @@
   &__Descr {
     text-align: center;
     font-size: 1rem;
+  }
+
+  &__Spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
   }
 
   &__AddToCart,
@@ -65,7 +78,6 @@
     height: 2rem;
     line-height: 2rem;
     width: 10rem;
-    border-radius: 2rem;
     cursor: pointer;
     transition: all 0.3s;
 
@@ -99,7 +111,6 @@
 
     @media screen and (max-width: $screen-extra-small) {
       left: 75%;
-      bottom: 3.5rem;
     }
 
     &:hover {

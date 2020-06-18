@@ -10,12 +10,13 @@
     border: 0;
     outline: 0;
     background-color: rgb(150, 148, 148);
-    border-radius: 1rem;
     color: #fff;
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
     transition: all 0.3s;
+    line-height: 0.5rem;
+
     &:hover {
       background-color: rgb(172, 169, 169);
     }
