@@ -1,0 +1,21 @@
+.no-such-page {
+  max-width: 1920px;
+  padding: 10vh 4%;
+
+  &__p {
+    width: 65%;
+    font-size: 60px;
+    color: #262626;
+  }
+
+  &__button {
+    display: block;
+    width: 65%;
+    margin-top: 50px;
+    padding: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    background-color: #247a00;
+  }
+}

@@ -1,0 +1,138 @@
+.custom {
+
+  &__head {
+    padding: 17px 30px;
+    background-color: #f5f5f5;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__quantity {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  &__items {
+    padding: 12px 30px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 12px;
+
+    &--inactive {
+      opacity: 0.5;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d3d3d3;
+
+    &::after {
+      content: '';
+      display: none;
+
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      width: 6px;
+      height: 12px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__real-checkbox {
+    display: none;
+
+    &:checked + .custom__checkbox {
+      background-color: #247a00;
+      border-color: #247a00;
+    
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &__radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      display: none;
+
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &__real-radio {
+    display: none;
+
+    &:checked + .custom__radio {
+      background-color: #247a00;
+      border-color: #247a00;
+      
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    padding: 0 0 0 1px;
+    font-size: 20px;
+    line-height: 1;
+    border: 1px solid #d3d3d3;
+    border-radius: 50%;
+
+    &--plus::after {
+      content: "+";
+    }
+
+    &--minus::after {
+      content: "-";
+    }
+  }
+
+  &__amount {
+    margin: 0 8px;
+  }
+
+  &__item-name {
+    margin-left: 15px;
+  }
+
+  &__comment {
+    width: 100%;
+    padding: 22px 30px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+  }
+}

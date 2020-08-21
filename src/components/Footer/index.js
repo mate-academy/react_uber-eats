@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 
 import './footer.scss';
 import './social.scss';
@@ -17,12 +16,9 @@ const Footer = () => {
         <section className="footer__top">
           <section className="footer__top-left">
             <section className="footer__logo-select">
-              <HashLink to={{
-                pathname: '/restaurants', hash: 'top',
-              }}
-              >
+              <Link to="/restaurants">
                 <img src={logo} alt="Uber Eats logotype" />
-              </HashLink>
+              </Link>
 
               <select className="footer__select" name="" id="">
                 <option value="">English</option>
@@ -161,7 +157,11 @@ const Footer = () => {
               </nav>
             </section>
 
-            <HashLink className="footer__totop" to={{ hash: 'top' }} />
+            <button
+              type="button"
+              className="footer__totop"
+              onClick={() => window.scrollTo(0, 0)}
+            />
           </section>
 
           <section className="social footer__social">

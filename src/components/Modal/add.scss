@@ -1,0 +1,27 @@
+.add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-top: 1px solid #bebebe;
+
+  &__submit {
+    position: relative;
+    width: 485px;
+    padding: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #247a00;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &__total {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}

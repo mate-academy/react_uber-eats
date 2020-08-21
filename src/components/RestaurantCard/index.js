@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import './card.scss';
 
 const RestaurantCard = ({
+  uuid,
   image,
   title,
   categories,
@@ -13,7 +14,8 @@ const RestaurantCard = ({
   const history = useHistory();
 
   const openRestaurantPage = () => {
-    history.push(`/restaurants/${title.replace(/ /g, '-')}`);
+    // history.push(`/restaurants/${title.replace(/ /g, '-')}`);
+    history.push(`/restaurants/${uuid}`);
   };
 
   return (
@@ -39,6 +41,7 @@ const RestaurantCard = ({
 export default RestaurantCard;
 
 RestaurantCard.propTypes = {
+  uuid: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,

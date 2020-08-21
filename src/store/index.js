@@ -1,18 +1,22 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { combineReducers } from 'redux';
 
 import restaurantsReducer from './restaurants';
 import currentNameReducer from './currentName';
 import restaurantPageReducer from './restaurantPage';
+import isLoadingReducer from './isLoading';
 
-export const getRestaurants = ({ restaurants }) => {
+export const getIsLoading = ({ isLoading }) => isLoading;
+
+export const getRestaurants = ({ restaurants: { restaurants, query } }) => {
   if (!restaurants) {
     return [];
   }
 
   const { feedItems, storesMap } = restaurants;
 
-  return feedItems.map(({ uuid }) => storesMap[uuid]);
+  return feedItems.map(({ uuid }) => storesMap[uuid])
+    .filter(({ title, categories }) => title.toLowerCase().includes(query)
+      || categories.join('').toLowerCase().includes(query));
 };
 
 export const getCurrentUuid = (state) => {
@@ -67,18 +71,14 @@ export const getRestaurantItems = ({ restaurantPage }) => {
       title: entitiesMap[itemUuid].title,
       image: entitiesMap[itemUuid].imageUrl,
       price: entitiesMap[itemUuid].price,
-      description: entitiesMap[itemUuid].description
-          && (entitiesMap[itemUuid].description.length > 80
-            ? entitiesMap[itemUuid].description.slice(0, 60)
-            : entitiesMap[itemUuid].description),
+      description: entitiesMap[itemUuid].description,
     })),
   }));
 };
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   restaurants: restaurantsReducer,
   currentName: currentNameReducer,
   restaurantPage: restaurantPageReducer,
+  isLoading: isLoadingReducer,
 });
-
-export default createStore(rootReducer, applyMiddleware(thunk));

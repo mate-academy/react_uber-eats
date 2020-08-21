@@ -1,26 +1,37 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { getCurrentUuid } from '../../store';
-import { setCurrentName } from '../../store/currentName';
+import { getIsLoading } from '../../store';
+import { setIsLoading } from '../../store/isLoading';
 import { loadRestaurantPage } from '../../API/loadRestaurantPage';
 
 import './restaurant.scss';
+import Loading from '../Loading';
+import NoSuchPage from '../NoSuchPage';
 import RestaurantInfo from '../RestaurantInfo';
 import RestaurantPageNav from '../RestaurantPageNav';
 import RestaurantSections from '../RestaurantSections';
 
 const RestaurantPage = () => {
+  const [loaded, setLoaded] = useState(true);
   const dispatch = useDispatch();
-  const { currentName } = useParams();
-
-  dispatch(setCurrentName(currentName));
-  const currentUuid = useSelector(getCurrentUuid);
+  const isLoading = useSelector(getIsLoading);
+  const { currentUuid } = useParams();
 
   useEffect(() => {
-    dispatch(loadRestaurantPage(currentUuid));
+    dispatch(setIsLoading(true));
+    dispatch(loadRestaurantPage(currentUuid, setLoaded));
+    window.scrollTo(0, 0);
   }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (!loaded) {
+    return <NoSuchPage info="Seems there is no such restaurant" />;
+  }
 
   return (
     <main className="restaurant">

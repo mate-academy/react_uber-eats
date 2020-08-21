@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
+
+import { useDispatch } from 'react-redux';
+import { setRestaurantsQuery } from '../../store/restaurants';
 
 import './header.scss';
 import logo from './pics/logo-black.svg';
@@ -7,18 +10,15 @@ import closeIcon from './pics/close-icon.svg';
 
 const Header = () => {
   const [isToggled, toggle] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <div className="width width--header">
       <header className="header">
         <section className="header__logo">
-          <HashLink to={{
-            pathname: '/restaurants',
-            hash: 'top',
-          }}
-          >
+          <Link to="/restaurants">
             <img src={logo} alt="Uber Eats logotype" />
-          </HashLink>
+          </Link>
         </section>
 
         <form className="header__form">
@@ -40,6 +40,11 @@ const Header = () => {
               className="header__input header__input--query"
               type="text"
               placeholder="Search"
+              onChange={e => dispatch(setRestaurantsQuery(
+                e.target.value
+                  .toLowerCase()
+                  .trim()
+              ))}
             />
 
             <section className="header__toggle-btns">
