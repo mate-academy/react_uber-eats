@@ -1,0 +1,21 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 34px;
+
+  @media (max-width: 450px) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1520px;
+  }
+}
