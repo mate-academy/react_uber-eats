@@ -1,18 +1,18 @@
 import React, { useEffect, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import RestaurantCard from '../RestaurantCard/RestaurantCard';
-import { Loader } from '../Loader/Loader';
-import { Error } from '../Error/Error';
+import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
+import { Loader } from '../../components/Loader/Loader';
+import { Error } from '../../components/Error/Error';
 import styles from './RestaurantListPage.module.scss';
-import { setRestaurantListData } from '../../store/actions/restaurantActions';
+import { setRestaurantListData } from '../../store/actions/restaurantListActions';
 
 const ETA_RANGE = '15 - 20 min';
 
 const RestaurantsListPage = () => {
   const {
     restaurantListData, isLoading, isError,
-  } = useSelector(({ restaurant }) => restaurant);
+  } = useSelector(({ restaurantList }) => restaurantList);
   const dispatch = useDispatch();
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import { RESTAURANT_TYPES } from './actionTypes';
-import { getRestaurantsListData } from '../../utils/utils';
+import { getRestaurantsDataById } from '../../utils/utils';
 
 export const toggleLoader = data => ({
   type: RESTAURANT_TYPES.TOGGLE_IS_LOADING,
@@ -11,15 +11,13 @@ export const toggleError = data => ({
   payload: data,
 });
 
-export const setRestaurantListData = () => (dispatch) => {
+export const setRestaurantData = id => (dispatch) => {
   dispatch(toggleLoader(true));
-  getRestaurantsListData()
+  getRestaurantsDataById(id)
     .then(({ data }) => {
-      const storeData = Object.entries(data.data.storesMap);
-
       dispatch({
-        type: RESTAURANT_TYPES.SET_RESTAURANT_LIST_DATA,
-        payload: storeData,
+        type: RESTAURANT_TYPES.SET_RESTAURANT_DATA,
+        payload: data?.data,
       });
       dispatch(toggleLoader(false));
     })

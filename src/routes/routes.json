@@ -1,0 +1,4 @@
+{
+  "HOME_PAGE": "/",
+  "RESTAURANT": "/restaurant/:id"
+}

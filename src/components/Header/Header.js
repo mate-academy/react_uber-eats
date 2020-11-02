@@ -47,12 +47,12 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.headerWrapp}>
         <div className={styles.headerContainer}>
           <Link to="/">
             <img
               className={styles.headerLogo}
-              src="./img/Logo.svg"
+              src={require('../../assets/img/Logo.svg')}
               alt="Uber Eats"
             />
           </Link>
@@ -154,7 +154,10 @@ const Header = () => {
               className={styles.buttonsClose}
               onClick={closeMobileInfo}
             >
-              <img src="./img/close-icon.svg" alt="Close" />
+              <img
+                src={require('../../assets/img/close-icon.svg')}
+                alt="Close"
+              />
             </button>
           </div>
         )}

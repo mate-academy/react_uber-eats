@@ -71,3 +71,32 @@ input {
   background-color: #5fb70a !important;
   color: #262626 !important;
 }
+
+.ant-tabs-tab-active > .ant-tabs-tab-btn {
+  color: #5fb70a !important;
+}
+
+.ant-tabs-tab:hover {
+  color: #5fb70a !important;
+}
+
+.ant-tabs-tab-btn:active {
+  color: #5fb70a !important;
+}
+
+.ant-tabs-ink-bar {
+  height: 3px;
+  background: transparent;
+}
+
+.ant-tabs-ink-bar::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #5fb70a;
+  width: 100%;
+  transform: translateX(-50%);
+}

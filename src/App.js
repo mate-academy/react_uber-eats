@@ -1,27 +1,29 @@
 import React, { memo } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { store } from './store/index';
 import 'antd/dist/antd.css';
-import RestaurantsListPage
-  from './components/RestaurantsListPage/RestaurantsListPage';
 import './index.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import styles from './App.module.scss';
+import AppRouter from './routes/AppRouter';
+
+const history = createBrowserHistory();
 
 const App = () => (
-  <BrowserRouter>
-    <Provider store={store}>
+  <Provider store={store}>
+    <Router history={history}>
       <div className={styles.pageContainer}>
         <Header />
         <main className={styles.container}>
-          <RestaurantsListPage />
+          <AppRouter />
         </main>
         <Footer />
       </div>
-    </Provider>
-  </BrowserRouter>
+    </Router>
+  </Provider>
 );
 
 export default memo(App);

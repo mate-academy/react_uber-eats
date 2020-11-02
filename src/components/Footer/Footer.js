@@ -1,5 +1,6 @@
 import React from 'react';
 import { Select } from 'antd';
+import { Link } from 'react-router-dom';
 
 import styles from './Footer.module.scss';
 import {
@@ -8,11 +9,16 @@ import {
   InstagramOutlined,
   TwitterOutlined,
 } from '@ant-design/icons';
-import {Link} from 'react-router-dom';
+
+const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=ru&gl=US';
+const appStoreUrl = 'https://apps.apple.com/us/app/uber-eats-food-delivery/id1058959277';
+const facebookUrl = 'https://www.facebook.com/UberEats/';
+const instagramUrl = 'https://www.instagram.com/ubereats/?hl=ru';
+const twitterUrl = 'https://twitter.com/ubereats';
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.topPart}>
         <div className={styles.leftPart}>
           <div className={styles.main}>
@@ -21,7 +27,7 @@ const Footer = () => (
               className={styles.link}
             >
               <img
-                src="./img/footer-logo.svg"
+                src={require('../../assets/img/footer-logo.svg')}
                 alt="Uber Eats"
                 className={styles.logo}
               />
@@ -37,16 +43,28 @@ const Footer = () => (
             </Select>
           </div>
           <div className={styles.mobileApps}>
-            <img
-              src="./img/app-store.png"
-              alt="App Store"
-              className={styles.img}
-            />
-            <img
-              src="./img/google-play.png"
-              alt="Google Play"
-              className={styles.img}
-            />
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require('../../assets/img/app-store.png')}
+                alt="App Store"
+                className={styles.img}
+              />
+            </a>
+            <a
+              href={googlePlayUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require('../../assets/img/google-play.png')}
+                alt="Google Play"
+                className={styles.img}
+              />
+            </a>
           </div>
         </div>
         <div className={styles.rightPart}>
@@ -99,19 +117,31 @@ const Footer = () => (
           <div className={styles.bottomLinksMobile}>
             <ul className={styles.linksSocial}>
               <li>
-                <Link to="#">
+                <a
+                  href={facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FacebookFilled className={styles.socialIcon} />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#">
+                <a
+                  href={twitterUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TwitterOutlined className={styles.socialIcon} />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#">
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <InstagramOutlined className={styles.socialIcon} />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -137,19 +167,31 @@ const Footer = () => (
           <div className={styles.socialIcons}>
             <ul className={styles.linksSocial}>
               <li>
-                <Link to="#">
+                <a
+                  href={facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FacebookFilled className={styles.socialIcon} />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#">
+                <a
+                  href={twitterUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TwitterOutlined className={styles.socialIcon} />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="#">
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <InstagramOutlined className={styles.socialIcon} />
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

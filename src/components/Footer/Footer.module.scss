@@ -58,6 +58,8 @@
     display: flex;
     flex-direction: row;
     padding: 63px 50px 40px;
+    max-width: 1750px;
+    margin: 0 auto;
 
     border-bottom: 1px solid #c4c4c4;
 
@@ -82,6 +84,8 @@
     display: flex;
     flex-direction: row;
     padding: 40px 50px 92px;
+    max-width: 1750px;
+    margin: 0 auto;
 
     @media (max-width: 850px) {
       padding: 30px 50px 62px;
