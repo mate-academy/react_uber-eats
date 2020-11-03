@@ -94,10 +94,10 @@ const Header = () => {
                 />
               </div>
               <Link
-                to="/sign-in"
+                to="/react_uber-eats"
                 className={styles.link}
               >
-                Sign In
+                Увійти
               </Link>
             </div>
           </div>

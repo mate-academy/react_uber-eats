@@ -1,4 +1,4 @@
 {
-  "HOME_PAGE": "/",
+  "HOME_PAGE": "/react_uber-eats",
   "RESTAURANT": "/restaurant/:id"
 }
