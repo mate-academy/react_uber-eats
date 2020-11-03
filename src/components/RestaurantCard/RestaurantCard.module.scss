@@ -1,0 +1,51 @@
+.restaurantCard {
+  --card-height: 367px;
+
+  height: var(--card-height);
+  width: 100%;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    --card-height: 378px;
+  }
+
+  @media (max-width: 600px) {
+    --card-height: 330px;
+  }
+
+  .title {
+    margin: 12px 0 4px;
+  }
+
+  .img {
+    height: 70%;
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  .categories {
+    font-size: 14px;
+    color: #757575;
+
+    margin-bottom: 8px;
+  }
+
+  .etaRange {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 14px;
+    color: #262626;
+    background-color: #f5f5f5;
+  }
+
+  &:hover {
+    transform: translateY(5px);
+  }
+
+  &:hover img {
+    opacity: 0.8;
+  }
+}

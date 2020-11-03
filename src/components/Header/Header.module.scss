@@ -1,0 +1,221 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 16px 50px;
+  background-color: #fff;
+  z-index: 5;
+
+  .headerWrapp {
+    max-width: 1650px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 450px) {
+    padding: 16px 30px;
+  }
+
+  .headerLogo {
+    @media (max-width: 480px) {
+      height: 16px;
+      width: 95px;
+    }
+  }
+
+  .headerContainer {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 150px 1.5fr 1fr;
+    gap: 50px;
+
+    @media (max-width: 850px) {
+      grid-template-columns: 150px 1fr;
+    }
+
+    @media (max-width: 450px) {
+      grid-template-columns: 100px 1fr;
+      grid-gap: 0;
+    }
+  }
+
+  .headerDeliveryInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (max-width: 850px) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    padding-top: 20px;
+    width: 100%;
+
+    @media (min-width: 850px) {
+      display: none;
+    }
+  }
+
+  .headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+
+    .searchContainer {
+      display: flex;
+      align-items: center;
+      max-width: 450px;
+      width: 100%;
+
+      @media (max-width: 850px) {
+        justify-content: flex-end;
+        max-width: none;
+
+        .input {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .link {
+    white-space: nowrap;
+    color: #1f1f1f;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .headerButtons {
+    display: none;
+    margin-right: 25px;
+    padding-top: 5px;
+
+    @media (max-width: 850px) {
+      display: flex;
+    }
+
+    @media (max-width: 450px) {
+      margin-right: 10px;
+    }
+  }
+
+  :global {
+    .ant-btn-primary.ant-btn-sm {
+      background-color: #5fb70a !important;
+    }
+
+    .ant-picker-now-btn {
+      color: #5fb70a !important;
+    }
+  }
+}
+
+.input {
+  height: 42px;
+  min-width: 112px;
+  width: 100%;
+
+  &:hover {
+    border: 1px solid #5fb70a;
+  }
+
+  &:focus {
+    border: 1px solid #5fb70a !important;
+    box-shadow: 0 0 3px #5fb70a !important;
+  }
+
+  &:active {
+    border: 1px solid #5fb70a !important;
+    box-shadow: 0 0 3px #5fb70a !important;
+  }
+
+  &:focus-within {
+    border: 1px solid #5fb70a !important;
+    box-shadow: 0 0 3px #5fb70a !important;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.mobileHeaderContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.mobileInput {
+  width: 100%;
+}
+
+.buttonsClose {
+  position: absolute;
+  top: 5px;
+  right: 0;
+
+  @media (max-width: 450px) {
+    right: 15px;
+  }
+
+  @media (min-width: 850px) {
+    display: none;
+  }
+}
+
+.buttons {
+  .buttonsBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 7px;
+    border-radius: 100%;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #5fb709;
+    }
+
+    &:hover path {
+      stroke: #fff;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    & > svg {
+      height: 17px;
+      width: 14px;
+
+      & > path {
+        transition: stroke 0.25s ease-in-out;
+      }
+    }
+  }
+}
+
+.inputWrapper {
+  display: flex;
+}
+
+.inputContainer:last-child {
+  width: 100%;
+}
+
+.inputContainerText {
+  font-size: 14px;
+  line-height: 16px;
+  color: #626262;
+
+  margin-bottom: 8px;
+}
