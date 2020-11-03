@@ -6,6 +6,7 @@ import { Input, TimePicker } from 'antd';
 import classNames from 'classnames';
 
 import styles from './Header.module.scss';
+import routes from '../../routes/routes';
 import SearchIcon from '../../icons/SearchIcon';
 import MapIcon from '../../icons/MapIcon';
 import {
@@ -49,7 +50,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerWrapp}>
         <div className={styles.headerContainer}>
-          <Link to="/">
+          <Link to={routes.HOME_PAGE}>
             <img
               className={styles.headerLogo}
               src={require('../../assets/img/Logo.svg')}

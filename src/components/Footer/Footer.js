@@ -1,14 +1,15 @@
 import React from 'react';
 import { Select } from 'antd';
 import { Link } from 'react-router-dom';
-
-import styles from './Footer.module.scss';
 import {
   ArrowUpOutlined,
   FacebookFilled,
   InstagramOutlined,
   TwitterOutlined,
 } from '@ant-design/icons';
+
+import styles from './Footer.module.scss';
+import routes from '../../routes/routes';
 
 const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=ru&gl=US';
 const appStoreUrl = 'https://apps.apple.com/us/app/uber-eats-food-delivery/id1058959277';
@@ -22,8 +23,8 @@ const Footer = () => (
       <div className={styles.topPart}>
         <div className={styles.leftPart}>
           <div className={styles.main}>
-            <a
-              href="#"
+            <Link
+              to={routes.HOME_PAGE}
               className={styles.link}
             >
               <img
@@ -31,7 +32,7 @@ const Footer = () => (
                 alt="Uber Eats"
                 className={styles.logo}
               />
-            </a>
+            </Link>
             <Select
               defaultValue="en"
               className={styles.langSelect}
