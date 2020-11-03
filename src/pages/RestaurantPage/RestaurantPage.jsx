@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useMemo } from 'react';
+import React, { memo, useEffect, useMemo, useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Tabs } from 'antd';
@@ -7,6 +7,8 @@ import { setRestaurantData } from '../../store/actions/restaurantActions';
 import styles from './RestaurantPage.module.scss';
 import { Loader } from '../../components/Loader/Loader';
 import { Error } from '../../components/Error/Error';
+import MenuItemPage from '../MenuItemPage/MenuItemPage';
+import { toggleErrorMenuItem } from '../../store/actions/menuItemActions';
 
 const ETA_RANGE = '15 - 20 min';
 const { TabPane } = Tabs;
@@ -17,9 +19,12 @@ const RestaurantPage = () => {
   } = useSelector(({ restaurant }) => restaurant);
   const {
     heroImageUrls, title, categories, location, entitiesMap,
-    sectionsMap, sections,
+    sectionsMap, sections, etaRange,
   } = restaurantData;
   const dispatch = useDispatch();
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [productUuid, setProductUuid] = useState(null);
 
   const { id } = useParams();
 
@@ -34,6 +39,17 @@ const RestaurantPage = () => {
       .values(sectionsMap)
       .filter(({ uuid }) => sections?.includes(uuid));
   }, [sectionsMap, sections]);
+
+  const handleOpenModal = useCallback((productId) => {
+    setModalIsOpen(true);
+    setProductUuid(productId);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    dispatch(toggleErrorMenuItem(false));
+    setModalIsOpen(false);
+    setProductUuid(null);
+  }, [dispatch]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -50,6 +66,11 @@ const RestaurantPage = () => {
 
   return (
     <div className={styles.pageContainer}>
+      <MenuItemPage
+        visible={modalIsOpen}
+        handleClose={handleCloseModal}
+        productUuid={productUuid}
+      />
       <section className={styles.imgContainer}>
         <img
           src={heroImageUrls && heroImageUrls[5].url}
@@ -59,7 +80,7 @@ const RestaurantPage = () => {
         <div className={styles.descriptionContainer}>
           <h2 className={styles.descriptionTitle}>{title}</h2>
           <span className={styles.categories}>{categoriesJoinList}</span>
-          <span className={styles.etaRange}>{ETA_RANGE}</span>
+          <span className={styles.etaRange}>{etaRange?.text || ETA_RANGE}</span>
           <span className={styles.location}>{location?.address}</span>
         </div>
       </section>
@@ -76,7 +97,11 @@ const RestaurantPage = () => {
                       const currentProduct = entitiesMap[productId];
 
                       return (
-                        <div className={styles.productCard}>
+                        <div
+                          key={productId}
+                          className={styles.productCard}
+                          onClick={() => handleOpenModal(productId)}
+                        >
                           <div className={styles.cardDescriptionContainer}>
                             <h3>
                               {currentProduct?.title?.slice(0, 35)}

@@ -1,0 +1,127 @@
+.modalContainer {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuItemImg {
+  width: 100%;
+  height: 373px;
+  margin-bottom: 20px;
+}
+
+.menuItemDesc {
+  padding: 24px;
+
+  .title {
+    font-size: 30px;
+    color: #262626;
+  }
+
+  .description {
+    font-size: 14px;
+    color: #626262;
+  }
+}
+
+.subProductTitle {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  height: 70px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 0 34px;
+}
+
+.subProductContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 34px;
+
+  .subProductTitleContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .plusIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #d3d3d3;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.summaryContainer {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100px;
+  width: 100%;
+  padding: 20px 30px;
+  border-top: 1px solid #d3d3d3;
+
+  .subProductCounter {
+    display: flex;
+  }
+
+  .count {
+    font-size: 16px;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #d3d3d3;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .summaryButton {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    height: 50px;
+    width: 70%;
+    color: #fff;
+    justify-content: space-between;
+    background-color: #247a00;
+    cursor: pointer;
+
+    @media (max-width: 610px) {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 610px) {
+    height: 160px;
+    flex-direction: column;
+  }
+}

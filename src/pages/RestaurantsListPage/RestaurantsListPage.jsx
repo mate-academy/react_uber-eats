@@ -34,6 +34,7 @@ const RestaurantsListPage = () => {
 
         return (
           <RestaurantCard
+            key={item[0]}
             imageUrl={heroImageUrl}
             title={title}
             uuid={item[0]}
